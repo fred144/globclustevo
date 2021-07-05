@@ -23,7 +23,7 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 datadir=os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
 #----------------------------------------------------------------------------
 
-step = 1
+step = 110
 while step <= 227:
     infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (int(step),int(step)))
     print ("#Reading in info file: %s" %infofile)
@@ -53,6 +53,9 @@ while step <= 227:
     pos_SFCs=ad['SFC','particle_position']
     pos_PSCs=ad['PSC','particle_position']
 
+
+    p = yt.SlicePlot(ds, 'x', "density", width = width, center = ('max','density'))
+    
     if pos_SFCs.size > 0:
         center = pos_SFCs[0] #set the center of plot to the poisition of the first SFC, for example
         p = yt.SlicePlot(ds, 'x', "density", width = width, center = center )
@@ -60,7 +63,7 @@ while step <= 227:
         p.annotate_particles(width=width,ptype='SFC', p_size=100.0,marker='x',col='b') #star forming clouds (test particles)
         p.annotate_particles(width=width,ptype='PSC', p_size=100.0,marker='x',col='k') #passive stellar clusters (test particles)
 
-    p = yt.SlicePlot(ds, 'x', "density", width = width, center = ('max','density'))        
+    
     p.annotate_timestamp(corner='lower_left', time_format='t = {time:.3f} {units}', time_unit= 'Myr', redshift=True, draw_inset_box=True)
     p.annotate_scale(corner='lower_right', draw_inset_box= True)
 
@@ -72,6 +75,8 @@ while step <= 227:
     #---------------------------------------------------------------------------------------------------------
     p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/rerun_x_density_500pc/')
     
-    print (str(step) + " saved")
-    time.sleep(.001)
+    print ('saved frame #' + str(step) + ' to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/rerun_x_density_500pc/')
+
+    #time.sleep(.001)
+
     step += 1

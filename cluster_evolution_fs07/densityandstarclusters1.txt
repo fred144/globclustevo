@@ -11,94 +11,20 @@ in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
 of libcuda.so.1 to get passed this issue.
 --------------------------------------------------------------------------
 *** WARNING (KS MODIFIED) ****   particle_families is modified in yt/frontends/ramses/definitions.py
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00001/info_00001.txt
-1 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00002/info_00002.txt
-2 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00003/info_00003.txt
-3 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00004/info_00004.txt
-4 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00005/info_00005.txt
-5 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00006/info_00006.txt
-6 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00007/info_00007.txt
-7 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00008/info_00008.txt
-8 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00009/info_00009.txt
-9 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00010/info_00010.txt
-10 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00011/info_00011.txt
-11 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00012/info_00012.txt
-12 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00013/info_00013.txt
-13 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00014/info_00014.txt
-14 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00015/info_00015.txt
-15 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00016/info_00016.txt
-16 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00017/info_00017.txt
-17 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00018/info_00018.txt
-18 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00019/info_00019.txt
-19 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00020/info_00020.txt
-20 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00021/info_00021.txt
-21 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00022/info_00022.txt
-22 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00023/info_00023.txt
-23 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00024/info_00024.txt
-24 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00025/info_00025.txt
-25 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00026/info_00026.txt
-26 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00027/info_00027.txt
-27 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00028/info_00028.txt
-28 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00029/info_00029.txt
-29 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00030/info_00030.txt
-30 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00031/info_00031.txt
-31 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00032/info_00032.txt
-32 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00033/info_00033.txt
-33 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00034/info_00034.txt
-34 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00035/info_00035.txt
-35 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00036/info_00036.txt
-36 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00037/info_00037.txt
-37 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00038/info_00038.txt
-38 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00039/info_00039.txt
-39 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00040/info_00040.txt
-40 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00041/info_00041.txt
-41 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00042/info_00042.txt
-42 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00043/info_00043.txt
-43 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00044/info_00044.txt
-44 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00045/info_00045.txt
-45 saved
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00046/info_00046.txt
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00110/info_00110.txt
+saved frame #110 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/rerun_x_density_500pc/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00111/info_00111.txt
+saved frame #111 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/rerun_x_density_500pc/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00112/info_00112.txt
+saved frame #112 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/rerun_x_density_500pc/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00113/info_00113.txt
+saved frame #113 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/rerun_x_density_500pc/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00114/info_00114.txt
+saved frame #114 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/rerun_x_density_500pc/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00115/info_00115.txt
+saved frame #115 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/rerun_x_density_500pc/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00116/info_00116.txt
+saved frame #116 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/rerun_x_density_500pc/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00117/info_00117.txt
+saved frame #117 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/rerun_x_density_500pc/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00118/info_00118.txt
