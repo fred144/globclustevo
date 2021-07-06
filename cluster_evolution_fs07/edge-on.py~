@@ -1,0 +1,93 @@
+# import library
+import warnings
+import sys
+import os
+import matplotlib
+import yt
+
+import time
+import pylab as pl
+from IPython import display
+
+import numpy as np
+import glob
+import argparse
+import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1 import AxesGrid
+import shutil
+
+
+
+from yt.funcs import mylog
+mylog.setLevel(40)
+warnings.simplefilter(action = "ignore", category = RuntimeWarning)
+
+#data directory/info file
+datadir=os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun')
+
+startSlice = 113
+endSlice = 227
+for outputNum in range (startSlice, endSlice + 1):
+    infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (int(outputNum), int(outputNum)))
+    print ("#Reading in info file: %s" %infofile)
+
+    
+    '''
+    #create and move to analysis directory
+    anldir = os.path.abspath(datadir+"/analysis_%05d"%(int(step)))
+    if not os.path.isdir(anldir):
+        print ("create %s"%anldir)
+        os.makedirs(anldir)
+    print ("move to %s"%anldir)                          
+    os.chdir(anldir)                          
+    '''
+
+    #cell fields
+    FIELDS = ["Density",
+              "x-velocity", "y-velocity", "z-velocity",
+              "Pressure",
+              "Metallicity",
+              "dark_matter_density",
+              "xHI", "xHII", "xHeII", "xHeIII"]
+  
+    #extra particle fields
+    EPF= [('particle_family', 'b'),      #byte size
+          ('particle_tag', 'b'),         #byte size
+          ('particle_birth_epoch', 'd'), #double size
+          ('particle_metallicity', 'd')] #double size
+
+
+    ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
+
+    if outputNum < 100:
+        sp = ds.sphere('max', (25, "pc"))
+    else:
+        sp = ds.sphere('max', (15, "pc"))
+        
+    L = sp.quantities.angular_momentum_vector()
+    faceonVec = np.array(L) / np.linalg.norm(np.array(L))
+    
+    edgeonVec = np.random.randn(3) 
+    edgeonVec -= edgeonVec.dot(faceonVec) * faceonVec
+    edgeonVec /= np.linalg.norm(edgeonVec) 
+    
+    another_edgeonVec = np.cross (edgeonVec, faceonVec)
+    
+    #print(np.dot(faceonVec, edgeonVec))
+    print("Angular momentum vector: {0}".format(faceonVec))
+    print("Perpendicular vector: {0}".format(edgeonVec))
+    
+    p = yt.OffAxisSlicePlot( ds,  edgeonVec, "density", center = sp.center, width = (400, "pc"), north_vector = [0,1,0])
+
+    p.annotate_timestamp(corner='upper_left', time_format='t = {time:.3f} {units}', time_unit= 'Myr', 
+                         redshift=True, draw_inset_box=True)
+    p.annotate_scale(corner='lower_right', draw_inset_box= True)
+    p.annotate_title('Density Edge-on View | '+ str(outputNum) + " of 227")
+    
+    #p.annotate_particles((100, 'Mpc'),ptype='star', p_size=20.0,marker='.',col='r')
+    #p.show()
+
+    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/edge-on/' + str(outputNum).zfill(3) )
+
+    print('Plot ' + str(outputNum) + ' saved to ' + '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/edge-on/')
+    

@@ -1,0 +1,473 @@
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca mpi_cuda_support 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+*** WARNING (KS MODIFIED) ****   particle_families is modified in yt/frontends/ramses/definitions.py
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00113/info_00113.txt
+Angular momentum vector: [0.11442764 0.86774249 0.48366237]
+Perpendicular vector: [ 0.11182922 -0.49501702  0.86165676]
+Plot 113saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00114/info_00114.txt
+Angular momentum vector: [0.69392639 0.61252746 0.37851854]
+Perpendicular vector: [ 0.53448674 -0.08593458 -0.84079675]
+Plot 114saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00115/info_00115.txt
+Angular momentum vector: [0.81287409 0.51371201 0.27447346]
+Perpendicular vector: [ 0.4388341  -0.23033152 -0.86854592]
+Plot 115saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00116/info_00116.txt
+Angular momentum vector: [ 0.25485185  0.96335134 -0.08369421]
+Perpendicular vector: [ 0.1318163  -0.1203546  -0.98394067]
+Plot 116saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00117/info_00117.txt
+Angular momentum vector: [-0.75296264  0.62196853 -0.21494747]
+Perpendicular vector: [0.19419974 0.52210671 0.8304764 ]
+Plot 117saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00118/info_00118.txt
+Angular momentum vector: [-0.61576363  0.77638911 -0.13436929]
+Perpendicular vector: [-0.48267082 -0.23688736  0.84315672]
+Plot 118saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00119/info_00119.txt
+Angular momentum vector: [0.72493127 0.6888093  0.00404962]
+Perpendicular vector: [ 0.20563218 -0.22201928  0.95311219]
+Plot 119saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00120/info_00120.txt
+Angular momentum vector: [0.98883923 0.01354546 0.14836949]
+Perpendicular vector: [ 0.07596134  0.81086111 -0.58028797]
+Plot 120saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00121/info_00121.txt
+Angular momentum vector: [-0.61055281 -0.74786285 -0.26062696]
+Perpendicular vector: [ 0.24319086  0.13614668 -0.96037612]
+Plot 121saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00122/info_00122.txt
+Angular momentum vector: [ 0.45460808 -0.87383938 -0.17244195]
+Perpendicular vector: [ 0.11554863 -0.13410844  0.98420701]
+Plot 122saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00123/info_00123.txt
+Angular momentum vector: [ 0.85584796 -0.51716944 -0.00774866]
+Perpendicular vector: [-0.37175176 -0.60464652 -0.70441693]
+Plot 123saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00124/info_00124.txt
+Angular momentum vector: [-0.91428277  0.24669855 -0.32128934]
+Perpendicular vector: [-0.21704079  0.37135529  0.90276716]
+Plot 124saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00125/info_00125.txt
+Angular momentum vector: [-0.69342728 -0.71781062  0.06250221]
+Perpendicular vector: [ 0.71986357 -0.68645714  0.10282531]
+Plot 125saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00126/info_00126.txt
+Angular momentum vector: [ 0.42414558 -0.80915712  0.40665131]
+Perpendicular vector: [0.2771636  0.54348454 0.7923414 ]
+Plot 126saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00127/info_00127.txt
+Angular momentum vector: [0.4665159  0.79760708 0.38234259]
+Perpendicular vector: [ 0.78655998 -0.17637254 -0.59179061]
+Plot 127saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00128/info_00128.txt
+Angular momentum vector: [0.7326405  0.64524063 0.21656969]
+Perpendicular vector: [-0.41748658  0.67734478 -0.60573015]
+Plot 128saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00129/info_00129.txt
+Angular momentum vector: [-0.07249128  0.99697482 -0.02803965]
+Perpendicular vector: [-0.41811648 -0.00485381  0.90838045]
+Plot 129saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00130/info_00130.txt
+Angular momentum vector: [ 0.59855155 -0.75003468 -0.28139655]
+Perpendicular vector: [ 0.73811397  0.65287092 -0.17013917]
+Plot 130saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00131/info_00131.txt
+Angular momentum vector: [ 0.38782878 -0.71958914 -0.57600374]
+Perpendicular vector: [ 0.82384752 -0.00962588  0.56672975]
+Plot 131saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00132/info_00132.txt
+Angular momentum vector: [ 0.25165989 -0.86903585 -0.42596244]
+Perpendicular vector: [0.96316231 0.18177943 0.19817821]
+Plot 132saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00133/info_00133.txt
+Angular momentum vector: [-0.48168071 -0.30736209 -0.82067791]
+Perpendicular vector: [ 0.1285167  -0.95112657  0.28078767]
+Plot 133saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00134/info_00134.txt
+Angular momentum vector: [-0.33486972 -0.58525502 -0.7384706 ]
+Perpendicular vector: [ 0.93114953 -0.32556036 -0.16422853]
+Plot 134saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00135/info_00135.txt
+Angular momentum vector: [-0.5468623   0.55705347 -0.62500645]
+Perpendicular vector: [0.17202627 0.80535817 0.56727876]
+Plot 135saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00136/info_00136.txt
+Angular momentum vector: [-0.50340271  0.25012598 -0.82705665]
+Perpendicular vector: [0.43637954 0.89973923 0.00649716]
+Plot 136saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00137/info_00137.txt
+Angular momentum vector: [ 0.62041983 -0.52705824 -0.58076574]
+Perpendicular vector: [ 0.52013517  0.83075038 -0.19827558]
+Plot 137saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00138/info_00138.txt
+Angular momentum vector: [0.9369606  0.00814607 0.34934005]
+Perpendicular vector: [-0.23526377  0.75390257  0.61341819]
+Plot 138saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00139/info_00139.txt
+Angular momentum vector: [ 0.92664098 -0.20518209  0.31501874]
+Perpendicular vector: [-0.14396668  0.58039036  0.80151147]
+Plot 139saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00140/info_00140.txt
+Angular momentum vector: [-0.63946376  0.69488191 -0.32897603]
+Perpendicular vector: [-0.53464246 -0.09442595  0.83978639]
+Plot 140saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00141/info_00141.txt
+Angular momentum vector: [-0.42615602 -0.86224014 -0.27373889]
+Perpendicular vector: [ 0.06744107  0.27146871 -0.96008148]
+Plot 141saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00142/info_00142.txt
+Angular momentum vector: [ 0.15462943 -0.96999727  0.18760338]
+Perpendicular vector: [ 0.57292202 -0.06666158 -0.81689448]
+Plot 142saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00143/info_00143.txt
+Angular momentum vector: [0.89864112 0.090655   0.42921533]
+Perpendicular vector: [-0.27840859  0.8739803   0.39830527]
+Plot 143saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00144/info_00144.txt
+Angular momentum vector: [ 0.8563826  -0.44680286  0.25879731]
+Perpendicular vector: [-0.51234319 -0.67305362  0.53338849]
+Plot 144saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00145/info_00145.txt
+Angular momentum vector: [ 0.87085595 -0.26729692  0.41250731]
+Perpendicular vector: [ 0.38860107 -0.13950579 -0.91078392]
+Plot 145saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00146/info_00146.txt
+Angular momentum vector: [ 0.72347996 -0.55122986  0.41559883]
+Perpendicular vector: [-0.6701499  -0.70533719  0.23108128]
+Plot 146saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00147/info_00147.txt
+Angular momentum vector: [ 0.79322419 -0.60724062  0.04532343]
+Perpendicular vector: [0.07600933 0.17258831 0.98205695]
+Plot 147saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00148/info_00148.txt
+Angular momentum vector: [0.74224388 0.60334647 0.29162829]
+Perpendicular vector: [ 0.06917529  0.36387326 -0.92887622]
+Plot 148saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00149/info_00149.txt
+Angular momentum vector: [0.91582419 0.3160934  0.24769136]
+Perpendicular vector: [-0.00935962 -0.59982407  0.80007717]
+Plot 149saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00150/info_00150.txt
+Angular momentum vector: [ 0.95289847 -0.29398605 -0.07454328]
+Perpendicular vector: [-0.11876004 -0.13552767 -0.98363017]
+Plot 150saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00151/info_00151.txt
+Angular momentum vector: [ 0.82741634 -0.54717677  0.12641117]
+Perpendicular vector: [ 0.07993503 -0.10805391 -0.9909262 ]
+Plot 151saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00152/info_00152.txt
+Angular momentum vector: [0.88816667 0.29204965 0.35477735]
+Perpendicular vector: [-0.02412778 -0.74135475  0.67067949]
+Plot 152saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00153/info_00153.txt
+Angular momentum vector: [0.92200473 0.25728796 0.28932712]
+Perpendicular vector: [-0.36903922  0.35793768  0.85772412]
+Plot 153saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00154/info_00154.txt
+Angular momentum vector: [0.93817277 0.2474949  0.24202918]
+Perpendicular vector: [-0.26794403  0.07650623  0.960392  ]
+Plot 154saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00155/info_00155.txt
+Angular momentum vector: [0.79795736 0.57648372 0.1758709 ]
+Perpendicular vector: [-0.58936802  0.68526413  0.42785326]
+Plot 155saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00156/info_00156.txt
+Angular momentum vector: [-0.27092738  0.96255536 -0.00924872]
+Perpendicular vector: [-0.91288652 -0.25387575  0.31966435]
+Plot 156saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00157/info_00157.txt
+Angular momentum vector: [-0.78148247  0.60084354 -0.16814336]
+Perpendicular vector: [-0.02753908 -0.30244646 -0.95276846]
+Plot 157saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00158/info_00158.txt
+Angular momentum vector: [-0.57120906 -0.7433831  -0.3479968 ]
+Perpendicular vector: [ 0.51475591 -0.6546711   0.5535631 ]
+Plot 158saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00159/info_00159.txt
+Angular momentum vector: [-0.5056535   0.86180198  0.04014835]
+Perpendicular vector: [-0.84475047 -0.48512254 -0.2259486 ]
+Plot 159saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00160/info_00160.txt
+Angular momentum vector: [-0.22317618  0.53847516 -0.81254963]
+Perpendicular vector: [-0.03431292  0.82871763  0.5586141 ]
+Plot 160saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00161/info_00161.txt
+Angular momentum vector: [-0.63984106 -0.06133072 -0.76605611]
+Perpendicular vector: [-0.27722779 -0.91127338  0.30450874]
+Plot 161saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00162/info_00162.txt
+Angular momentum vector: [-0.78546036 -0.11024894 -0.60901329]
+Perpendicular vector: [ 0.25930209  0.83486021 -0.48556242]
+Plot 162saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00163/info_00163.txt
+Angular momentum vector: [-0.73343575  0.45630906 -0.5038393 ]
+Perpendicular vector: [0.24775302 0.86966358 0.42697036]
+Plot 163saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00164/info_00164.txt
+Angular momentum vector: [-0.60492252  0.74311763 -0.28608554]
+Perpendicular vector: [-0.62040559 -0.66506026 -0.41568227]
+Plot 164saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00165/info_00165.txt
+Angular momentum vector: [-0.43987104  0.80395797 -0.40020626]
+Perpendicular vector: [ 0.14086109 -0.37835347 -0.91488076]
+Plot 165saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00166/info_00166.txt
+Angular momentum vector: [-0.15408903  0.9059     -0.39446388]
+Perpendicular vector: [ 0.96830877  0.05903244 -0.24267943]
+Plot 166saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00167/info_00167.txt
+Angular momentum vector: [-0.8093748  -0.51266574 -0.28650701]
+Perpendicular vector: [-0.1102912   0.61184736 -0.78324878]
+Plot 167saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00168/info_00168.txt
+Angular momentum vector: [ 0.12188422 -0.99081851 -0.0585057 ]
+Perpendicular vector: [-0.98968724 -0.11685277 -0.0828529 ]
+Plot 168saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00169/info_00169.txt
+Angular momentum vector: [-0.1449395  -0.95881586  0.24426358]
+Perpendicular vector: [-0.9437151   0.20814338  0.25705668]
+Plot 169saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00170/info_00170.txt
+Angular momentum vector: [0.91408844 0.18402947 0.36135229]
+Perpendicular vector: [-0.27684581 -0.36791601  0.88769037]
+Plot 170saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00171/info_00171.txt
+Angular momentum vector: [ 0.7098104  -0.58608188  0.39073935]
+Perpendicular vector: [-0.0920371  -0.62712978 -0.77345809]
+Plot 171saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00172/info_00172.txt
+Angular momentum vector: [ 0.85750784 -0.33140422  0.39351181]
+Perpendicular vector: [-0.21464828  0.46466913  0.85907434]
+Plot 172saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00173/info_00173.txt
+Angular momentum vector: [0.75773841 0.53091583 0.37942178]
+Perpendicular vector: [-0.04179582  0.61972904 -0.78370213]
+Plot 173saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00174/info_00174.txt
+Angular momentum vector: [ 0.2335657  -0.93314047 -0.27330555]
+Perpendicular vector: [-0.77059444 -0.00622419 -0.63729543]
+Plot 174saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00175/info_00175.txt
+Angular momentum vector: [ 0.1780455  -0.98189952 -0.06459977]
+Perpendicular vector: [ 0.10703202 -0.04593498  0.9931939 ]
+Plot 175saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00176/info_00176.txt
+Angular momentum vector: [-0.19197828 -0.91838544 -0.34599499]
+Perpendicular vector: [-0.03958941 -0.34501868  0.93776052]
+Plot 176saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00177/info_00177.txt
+Angular momentum vector: [-0.09621203 -0.97435928 -0.20338937]
+Perpendicular vector: [-0.99129915  0.11223865 -0.06876399]
+Plot 177saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00178/info_00178.txt
+Angular momentum vector: [-0.43004606 -0.88190139 -0.1931588 ]
+Perpendicular vector: [-0.50111318  0.05520586  0.86361907]
+Plot 178saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00179/info_00179.txt
+Angular momentum vector: [-0.38692187 -0.91114017 -0.14182754]
+Perpendicular vector: [ 0.86939388 -0.3091995  -0.38542178]
+Plot 179saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00180/info_00180.txt
+Angular momentum vector: [-0.47711679 -0.84235753 -0.25058602]
+Perpendicular vector: [ 0.64739254 -0.1440458  -0.74842081]
+Plot 180saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00181/info_00181.txt
+Angular momentum vector: [-0.67298956 -0.60278049 -0.4286499 ]
+Perpendicular vector: [ 0.01128705 -0.58783107  0.80890496]
+Plot 181saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00182/info_00182.txt
+Angular momentum vector: [-0.29696366 -0.94488946 -0.13782778]
+Perpendicular vector: [-0.35885798  0.24419212 -0.90088354]
+Plot 182saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00183/info_00183.txt
+Angular momentum vector: [-0.2042927  -0.94446601 -0.25738773]
+Perpendicular vector: [-0.59432414  0.32859529 -0.73403266]
+Plot 183saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00184/info_00184.txt
+Angular momentum vector: [-0.56887324 -0.79405679 -0.21414257]
+Perpendicular vector: [ 0.46854648 -0.09892426 -0.87788279]
+Plot 184saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00185/info_00185.txt
+Angular momentum vector: [ 0.51174756  0.73191137 -0.44991131]
+Perpendicular vector: [0.27698811 0.35515897 0.8928268 ]
+Plot 185saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00186/info_00186.txt
+Angular momentum vector: [-0.57287246 -0.67485402 -0.46517652]
+Perpendicular vector: [-0.77647842  0.2650852   0.57167395]
+Plot 186saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00187/info_00187.txt
+Angular momentum vector: [-0.56311986 -0.66880465 -0.4853827 ]
+Perpendicular vector: [ 0.20330883 -0.68143491  0.70307325]
+Plot 187saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00188/info_00188.txt
+Angular momentum vector: [-0.51483448 -0.39365698 -0.76156394]
+Perpendicular vector: [-0.69174667  0.7154875   0.09779664]
+Plot 188saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00189/info_00189.txt
+Angular momentum vector: [-0.6925275   0.20982684 -0.69020168]
+Perpendicular vector: [0.18119512 0.97668669 0.11511488]
+Plot 189saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00190/info_00190.txt
+Angular momentum vector: [-0.41144671 -0.80261443 -0.43188157]
+Perpendicular vector: [-0.28847075  0.5641647  -0.77362964]
+Plot 190saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00191/info_00191.txt
+Angular momentum vector: [-0.47459978 -0.85847076 -0.19437849]
+Perpendicular vector: [ 0.49683672 -0.0789876  -0.864242  ]
+Plot 191saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00192/info_00192.txt
+Angular momentum vector: [-0.01339262 -0.99902474 -0.04207382]
+Perpendicular vector: [ 0.96037046 -0.02456729  0.27764192]
+Plot 192saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00193/info_00193.txt
+Angular momentum vector: [-0.91603803 -0.09331333 -0.39008583]
+Perpendicular vector: [-0.39925228  0.30516706  0.86456387]
+Plot 193saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00194/info_00194.txt
+Angular momentum vector: [-0.92059113 -0.22632958 -0.31825602]
+Perpendicular vector: [ 0.23388302 -0.97215181  0.0148185 ]
+Plot 194saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00195/info_00195.txt
+Angular momentum vector: [-0.89834543 -0.36180336 -0.24914617]
+Perpendicular vector: [ 0.32947352 -0.17979518 -0.92688775]
+Plot 195saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00196/info_00196.txt
+Angular momentum vector: [-0.86139411 -0.49271356 -0.12342423]
+Perpendicular vector: [-0.49916994  0.77620227  0.38514855]
+Plot 196saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00197/info_00197.txt
+Angular momentum vector: [-0.62754103 -0.77155626 -0.10437048]
+Perpendicular vector: [ 0.35775659 -0.16668848 -0.91881727]
+Plot 197saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00198/info_00198.txt
+Angular momentum vector: [-0.64287236 -0.76528689 -0.03242075]
+Perpendicular vector: [-0.25639503  0.25488105 -0.93236111]
+Plot 198saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00199/info_00199.txt
+Angular momentum vector: [-0.47009807 -0.87744848  0.09535184]
+Perpendicular vector: [ 0.70879727 -0.43968624 -0.55161803]
+Plot 199saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00200/info_00200.txt
+Angular momentum vector: [-0.13680022 -0.97482303  0.17608452]
+Perpendicular vector: [ 0.7144556  -0.22022343 -0.6641196 ]
+Plot 200saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00201/info_00201.txt
+Angular momentum vector: [ 0.26731713 -0.9110343   0.31393957]
+Perpendicular vector: [ 0.74610574 -0.01049006 -0.66574483]
+Plot 201saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00202/info_00202.txt
+Angular momentum vector: [ 0.56670641 -0.74110708  0.36000576]
+Perpendicular vector: [-0.81292254 -0.57409426  0.09784035]
+Plot 202saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00203/info_00203.txt
+Angular momentum vector: [-0.32625201  0.77070678  0.54733051]
+Perpendicular vector: [-0.94524886 -0.27089841 -0.18198529]
+Plot 203saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00204/info_00204.txt
+Angular momentum vector: [-0.9612195  -0.21855569 -0.16819773]
+Perpendicular vector: [-0.01786952  0.65796478 -0.75283665]
+Plot 204saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00205/info_00205.txt
+Angular momentum vector: [-0.98334322 -0.05758636 -0.17239468]
+Perpendicular vector: [-0.17956329  0.45475271  0.87232849]
+Plot 205saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00206/info_00206.txt
+Angular momentum vector: [-0.42831589  0.90353964 -0.0127133 ]
+Perpendicular vector: [ 0.13343695  0.0493273  -0.98982897]
+Plot 206saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00207/info_00207.txt
+Angular momentum vector: [-0.93972712 -0.19468298 -0.28108981]
+Perpendicular vector: [-0.32807293  0.7450016   0.58081044]
+Plot 207saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00208/info_00208.txt
+Angular momentum vector: [-0.87046054 -0.39093576 -0.29911148]
+Perpendicular vector: [ 0.40401928 -0.22030164 -0.88782634]
+Plot 208saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00209/info_00209.txt
+Angular momentum vector: [-0.78690655 -0.60954979 -0.096058  ]
+Perpendicular vector: [-0.08437235  0.26048758 -0.96178351]
+Plot 209saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00210/info_00210.txt
+Angular momentum vector: [-0.54220634 -0.71136007  0.44719028]
+Perpendicular vector: [-0.10885826 -0.4682578  -0.8768606 ]
+Plot 210saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00211/info_00211.txt
+Angular momentum vector: [-0.99727743 -0.03569256 -0.06452727]
+Perpendicular vector: [-0.07254195  0.31770361  0.94541107]
+Plot 211saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00212/info_00212.txt
+Angular momentum vector: [-0.94830316 -0.26800868 -0.16997786]
+Perpendicular vector: [ 0.2773712  -0.43962449 -0.85428071]
+Plot 212saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00213/info_00213.txt
+Angular momentum vector: [-0.98206266  0.03830461 -0.18462307]
+Perpendicular vector: [ 0.14616451 -0.46391118 -0.87374044]
+Plot 213saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00214/info_00214.txt
+Angular momentum vector: [-0.9565879  -0.23437071 -0.17323384]
+Perpendicular vector: [-0.16426186  0.92456148 -0.34380824]
+Plot 214saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00215/info_00215.txt
+Angular momentum vector: [-0.98511945 -0.04071298 -0.16697941]
+Perpendicular vector: [-0.06572703  0.9869306   0.14713245]
+Plot 215saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00216/info_00216.txt
+Angular momentum vector: [-9.84856035e-01  1.10308680e-04 -1.73374099e-01]
+Perpendicular vector: [ 0.15903494  0.39878678 -0.90314838]
+Plot 216saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00217/info_00217.txt
+Angular momentum vector: [-0.97423263 -0.07538599 -0.21257405]
+Perpendicular vector: [ 0.00119431 -0.94419957  0.32937176]
+Plot 217saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00218/info_00218.txt
+Angular momentum vector: [-0.98245681 -0.00571132 -0.18640279]
+Perpendicular vector: [ 0.1562631  -0.57075502 -0.80611448]
+Plot 218saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00219/info_00219.txt
+Angular momentum vector: [-0.97872601 -0.03331911 -0.2024481 ]
+Perpendicular vector: [-0.0078985  -0.9798754   0.19945381]
+Plot 219saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00220/info_00220.txt
+Angular momentum vector: [-0.95746486  0.26406683 -0.11631742]
+Perpendicular vector: [ 0.26855804  0.66808262 -0.69393241]
+Plot 220saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00221/info_00221.txt
+Angular momentum vector: [-0.95419335  0.14618194 -0.2610477 ]
+Perpendicular vector: [ 0.26515696  0.81733641 -0.51152026]
+Plot 221saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00222/info_00222.txt
+Angular momentum vector: [-0.80958496  0.49460684 -0.31612698]
+Perpendicular vector: [-0.5078959  -0.86023137 -0.04520792]
+Plot 222saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00223/info_00223.txt
+Angular momentum vector: [-0.68588272 -0.55464061 -0.47110369]
+Perpendicular vector: [ 0.70377765 -0.34090024 -0.62328489]
+Plot 223saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00224/info_00224.txt
+Angular momentum vector: [-0.71462665  0.64704629 -0.26578157]
+Perpendicular vector: [ 0.69846919  0.63937278 -0.32147043]
+Plot 224saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00225/info_00225.txt
+Angular momentum vector: [-0.81697513  0.53289651 -0.22039269]
+Perpendicular vector: [-0.47228014 -0.83759654 -0.27456058]
+Plot 225saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00226/info_00226.txt
+Angular momentum vector: [-0.71785436  0.64020729 -0.27353198]
+Perpendicular vector: [-0.55144706 -0.76270516 -0.33791563]
+Plot 226saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00227/info_00227.txt
+Angular momentum vector: [-0.67353827 -0.65852998 -0.33568507]
+Perpendicular vector: [ 0.49902743 -0.74015288  0.45071647]
+Plot 227saved to /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/face-on-v2/
