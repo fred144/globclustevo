@@ -24,11 +24,21 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 datadir=os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
 #----------------------------------------------------------------------------
 
-step = 1
-while step <= 227:
-    infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (int(step),int(step)))
-    print ("#Reading in info file: %s" %infofile)
-
+startSlice = 75
+endSlice = 227
+for outputNum in range (startSlice, endSlice + 1):
+    
+    infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (int(outputNum), int(outputNum)))
+    print ("#Reading in info file: %s" %infofile)    
+    '''
+    #create and move to analysis directory
+    anldir = os.path.abspath(datadir+"/analysis_%05d"%(int(step)))
+    if not os.path.isdir(anldir):
+        print ("create %s"%anldir)
+        os.makedirs(anldir)
+    print ("move to %s"%anldir)                          
+    os.chdir(anldir)                          
+    '''
     #cell fields
     FIELDS = ["Density",
               "x-velocity", "y-velocity", "z-velocity",
@@ -38,45 +48,63 @@ while step <= 227:
               "xHI", "xHII", "xHeII", "xHeIII"]
   
     #extra particle fields
-    EPF = [('particle_family', 'b'),      #byte size
+    EPF= [('particle_family', 'b'),      #byte size
           ('particle_tag', 'b'),         #byte size
           ('particle_birth_epoch', 'd'), #double size
           ('particle_metallicity', 'd')] #double size
 
 
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
-        #plot                                                                                                                                                                                                     
-    width = (500,'pc') #plot width                                                                                                                                                                                
     
+    #plot                                                                                                                                                                                                     
+    width = (300,'pc') #plot width                                                                                                                                                                                
+    
+    from yt.analysis_modules.halo_analysis.api import HaloCatalog
+
+    hc = HaloCatalog(data_ds=ds, finder_method='fof',
+                 finder_kwargs={"ptype": "star",
+                                 "padding": .2,
+                                "link": 0.0002,
+                                 "dm_only":False})
     
     #get SFC/PSC positions
     ad = ds.all_data()
-    pos_SFCs=ad['SFC','particle_position']
-    pos_PSCs=ad['PSC','particle_position']
-
+    pos_SFCs = ad['SFC', 'particle_position']
+    pos_PSCs = ad['PSC', 'particle_position']
 
     p = yt.SlicePlot(ds, 'z', "density", width = width, center = ('max','density'))
     
-    if pos_SFCs.size > 0:
-        center = pos_SFCs[0] #set the center of plot to the poisition of the first SFC, for example
-        p = yt.SlicePlot(ds, 'z', "density", width = width, center = center )
-        p.annotate_particles(width=width,ptype='star', p_size=20.0,marker='.',col='r') #Pop II stars
+    if pos_SFCs.size > 0 or pos_PSCs.size > 0:
+        #center = pos_SFCs[0] #set the center of plot to the poisition of the first SFC, for example
+        
+        p = yt.SlicePlot(ds, 'z', "density", width = width, center = ('max','density'))
+        p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') #Pop II stars
         p.annotate_particles(width=width,ptype='SFC', p_size=100.0,marker='x',col='b') #star forming clouds (test particles)
-        p.annotate_particles(width=width,ptype='PSC', p_size=100.0,marker='x',col='k') #passive stellar clusters (test particles)
-
+        
+        if pos_PSCs.size > 0: 
+            p.annotate_particles(width=width,ptype='PSC', p_size=100.0,marker='x',col='k') #passive stellar clusters (test particles)
+        
+        hc.create()
+        hc_ad = hc.halos_ds.all_data()
+        p.annotate_halos(hc, width=width)
+        p.annotate_text((0.175, 0.2), str( len(hc_ad['particle_mass'])) + " Halos", coord_system="figure")
+        
+               
     p.annotate_timestamp(corner='lower_left', time_format='t = {time:.3f} {units}', time_unit= 'Myr', redshift=True, draw_inset_box=True)
     p.annotate_scale(corner='lower_right', draw_inset_box= True)
 
     #p.set_cmap("density", "viridis")
 
-    p.annotate_title(' Z Density and Star Clusters | '  + str(step) + ' of 227 ' +
-                     ' | [Red = Pop II, BlackX = PSC, BlueX = SFC]')
+    p.annotate_title(' Z Density and Star Clusters | '  + str(outputNum) + ' of ' + str(endSlice) + 
+                     ' | Red = Pop II, Blue = SFC, Black = PSC ')
+    
+
     
     #---------------------------------------------------------------------------------------------------------
-    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/rerun_z_density_500pc/')
+    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/halos_z_density_300pc/')
+    print ('saved frame #' + str(outputNum) + ' to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/halos_z_density_300pc/')
+    #---------------------------------------------------------------------------------------------------------
     
-    print ('saved frame #' + str(step) + ' to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/rerun_z_density_500pc/')
-
-    #time.sleep(.001)
-
-    step += 1
+    
+    
+    
