@@ -49,7 +49,7 @@ ivory = np.array([255,255,240])/255.; ivory = ivory .reshape(1,-1)
 azure = np.array([240,255,255])/255.; azure = azure .reshape(1,-1)
 mintcream = np.array([245,255,250])/255.; mintcream = mintcream .reshape(1,-1)
 
-startSlice = 1
+startSlice = 116
 endSlice = 227
 for outputNum in range (startSlice, endSlice + 1):
     
@@ -150,7 +150,7 @@ for outputNum in range (startSlice, endSlice + 1):
     p.annotate_scale(corner='lower_right', draw_inset_box= True)
     #p.set_cmap("density", "viridis")
     p.annotate_title(' Z Density and Star Clusters | '  + str(outputNum) + ' of ' + str(endSlice) + 
-                     ' | Red = Pop II, Blue = SFC, Black = PSC ')
+                     ' | Dots = Pop II, Blue = SFC, Black = PSC ')
     p.set_buff_size(5000)
     #---------------------------------------------------------------------------------------------------------
     p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/', mpl_kwargs=dict(dpi=200))
