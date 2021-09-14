@@ -49,7 +49,7 @@ ivory = np.array([255,255,240])/255.; ivory = ivory .reshape(1,-1)
 azure = np.array([240,255,255])/255.; azure = azure .reshape(1,-1)
 mintcream = np.array([245,255,250])/255.; mintcream = mintcream .reshape(1,-1)
 
-startSlice = 116
+startSlice = 141
 endSlice = 227
 for outputNum in range (startSlice, endSlice + 1):
     
@@ -74,7 +74,7 @@ for outputNum in range (startSlice, endSlice + 1):
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
     clump_filters(ds)
     #plot                                                                                                                                                                                                     
-    width = (410,'pc') #plot width                                                                                                                                                                                
+    width = (610,'pc') #plot width                                                                                                                                                                                
     
     from yt.analysis_modules.halo_analysis.api import HaloCatalog
 
@@ -89,24 +89,9 @@ for outputNum in range (startSlice, endSlice + 1):
     pos_SFCs = ad['SFC', 'particle_position']
     pos_PSCs = ad['PSC', 'particle_position']
 
-    p = yt.SlicePlot(ds, 'z', "density", width = width, center = ('max','density'))
+    p = yt.SlicePlot(ds, 'x', "density", width = width, center = ('max','density'))
     
     if pos_SFCs.size > 0 or pos_PSCs.size > 0:
-
-        if pos_PSCs.size > 0:
-            #center = pos_PSCs[0]
-            #p = yt.SlicePlot(ds, 'z', "density", width = width, center = center)
-
-            p.annotate_particles(width=width,ptype='PSC', p_size=100.0,marker='x',col='k') #passive stellar clusters (test particles)
-            p.annotate_particles(width=width,ptype='SFC', p_size=100.0,marker='x',col='b') #star forming clouds (test particles)
-        
-        if pos_SFCs.size > 0: 
-            #center = pos_SFCs[0]
-            #p = yt.SlicePlot(ds, 'z', "density", width = width, center = center)
-
-            p.annotate_particles(width=width,ptype='PSC', p_size=100.0,marker='x',col='k') #passive stellar clusters (test particles)
-            p.annotate_particles(width=width,ptype='SFC', p_size=100.0,marker='x',col='b') #star forming clouds (test particles)      
-        
         #annotate the star clumps
         p.annotate_particles(width=width, ptype="clump1", p_size=20.0, marker='.',col='b') 
         p.annotate_particles(width=width, ptype="clump2", p_size=20.0, marker='.',col='g') 
@@ -138,6 +123,21 @@ for outputNum in range (startSlice, endSlice + 1):
         p.annotate_particles(width=width, ptype='clump28', p_size=20.0, marker='.',col=azure) 
         p.annotate_particles(width=width, ptype='clump29', p_size=20.0, marker='.',col=mintcream) 
         
+        if pos_PSCs.size > 0:
+            #center = pos_PSCs[0]
+            #p = yt.SlicePlot(ds, 'z', "density", width = width, center = center)
+
+            p.annotate_particles(width=width,ptype='PSC', p_size=100.0,marker='x',col='k') #passive stellar clusters (test particles)
+            p.annotate_particles(width=width,ptype='SFC', p_size=100.0,marker='x',col='b') #star forming clouds (test particles)
+        
+        if pos_SFCs.size > 0: 
+            #center = pos_SFCs[0]
+            #p = yt.SlicePlot(ds, 'z', "density", width = width, center = center)
+
+            p.annotate_particles(width=width,ptype='PSC', p_size=100.0,marker='x',col='k') #passive stellar clusters (test particles)
+            p.annotate_particles(width=width,ptype='SFC', p_size=100.0,marker='x',col='b') #star forming clouds (test particles)      
+        
+        
         hc.create()
         hc_ad = hc.halos_ds.all_data()
         #p.annotate_halos(hc, width=width)
@@ -153,7 +153,7 @@ for outputNum in range (startSlice, endSlice + 1):
                      ' | Dots = Pop II, Blue = SFC, Black = PSC ')
     p.set_buff_size(5000)
     #---------------------------------------------------------------------------------------------------------
-    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/', mpl_kwargs=dict(dpi=200))
+    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked_x_610pc/', mpl_kwargs=dict(dpi=200))
     print ('saved frame #' + str(outputNum) + ' to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/')
     #---------------------------------------------------------------------------------------------------------
     
