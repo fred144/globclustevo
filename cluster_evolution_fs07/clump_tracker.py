@@ -22,7 +22,7 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 from clump_filters import clump_filters
 #----------------------------------------------------------------------------
 #data directory/info file
-datadir=os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
+datadir=os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 #----------------------------------------------------------------------------
 
 #some colors https://www.rapidtables.com/web/color/RGB_Color.html
@@ -49,8 +49,8 @@ ivory = np.array([255,255,240])/255.; ivory = ivory .reshape(1,-1)
 azure = np.array([240,255,255])/255.; azure = azure .reshape(1,-1)
 mintcream = np.array([245,255,250])/255.; mintcream = mintcream .reshape(1,-1)
 
-startSlice = 141
-endSlice = 227
+startSlice = 125
+endSlice = 125
 for outputNum in range (startSlice, endSlice + 1):
     
     infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (int(outputNum), int(outputNum)))
@@ -153,8 +153,8 @@ for outputNum in range (startSlice, endSlice + 1):
                      ' | Dots = Pop II, Blue = SFC, Black = PSC ')
     p.set_buff_size(5000)
     #---------------------------------------------------------------------------------------------------------
-    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked_x_610pc/', mpl_kwargs=dict(dpi=200))
-    print ('saved frame #' + str(outputNum) + ' to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/')
+    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked_x_610pc/', mpl_kwargs=dict(dpi=200))
+    print ('saved frame #' + str(outputNum) + ' to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked_x_610pc/')
     #---------------------------------------------------------------------------------------------------------
     
     

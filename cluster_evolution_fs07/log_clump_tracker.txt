@@ -11,614 +11,12 @@ in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
 of libcuda.so.1 to get passed this issue.
 --------------------------------------------------------------------------
 *** WARNING (KS MODIFIED) ****   particle_families is modified in yt/frontends/ramses/definitions.py
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00141/info_00141.txt
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
 clump_tracker.py:79: VisibleDeprecationWarning: Development of the HaloCatalog module has been moved to the yt_astro_analysis package. This version is deprecated and will be removed from yt in a future release. See https://github.com/yt-project/yt_astro_analysis for further information.
   from yt.analysis_modules.halo_analysis.api import HaloCatalog
 Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:36
-Number of groups:2
-FOF CPU TIME: 0.000302 secs
-Creating catalog:   0%|          | 0/2 [00:00<?, ?it/s]saved frame #141 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00142/info_00142.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:23
-Number of groups:2
-FOF CPU TIME: 0.001821 secs
-Creating catalog:   0%|          | 0/2 [00:00<?, ?it/s]saved frame #142 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00143/info_00143.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:20
-Number of groups:2
-FOF CPU TIME: 0.001995 secs
-Creating catalog:   0%|          | 0/2 [00:00<?, ?it/s]saved frame #143 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00144/info_00144.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:17
-Number of groups:2
-FOF CPU TIME: 0.001476 secs
-Creating catalog:   0%|          | 0/2 [00:00<?, ?it/s]saved frame #144 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00145/info_00145.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:20
-Number of groups:3
-FOF CPU TIME: 0.000731 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #145 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00146/info_00146.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:20
-Number of groups:2
-FOF CPU TIME: 0.001292 secs
-Creating catalog:   0%|          | 0/2 [00:00<?, ?it/s]saved frame #146 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00147/info_00147.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:21
-Number of groups:2
-FOF CPU TIME: 0.001603 secs
-Creating catalog:   0%|          | 0/2 [00:00<?, ?it/s]saved frame #147 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00148/info_00148.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:15
-Number of groups:3
-FOF CPU TIME: 0.000769 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #148 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00149/info_00149.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:16
-Number of groups:2
-FOF CPU TIME: 0.000773 secs
-Creating catalog:   0%|          | 0/2 [00:00<?, ?it/s]saved frame #149 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00150/info_00150.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:21
-Number of groups:2
-FOF CPU TIME: 0.000663 secs
-Creating catalog:   0%|          | 0/2 [00:00<?, ?it/s]saved frame #150 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00151/info_00151.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:20
-Number of groups:2
-FOF CPU TIME: 0.001178 secs
-Creating catalog:   0%|          | 0/2 [00:00<?, ?it/s]saved frame #151 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00152/info_00152.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:21
-Number of groups:2
-FOF CPU TIME: 0.000314 secs
-Creating catalog:   0%|          | 0/2 [00:00<?, ?it/s]saved frame #152 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00153/info_00153.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:21
-Number of groups:3
-FOF CPU TIME: 0.000647 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #153 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00154/info_00154.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:24
-Number of groups:4
-FOF CPU TIME: 0.000618 secs
-Creating catalog:   0%|          | 0/4 [00:00<?, ?it/s]saved frame #154 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00155/info_00155.txt
-Link length is 0.000001
-Filling in 705 particles
-Number of initial groups:25
-Number of groups:3
-FOF CPU TIME: 0.000296 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #155 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00156/info_00156.txt
-Link length is 0.000001
-Filling in 1228 particles
-Number of initial groups:30
-Number of groups:4
-FOF CPU TIME: 0.000992 secs
-Creating catalog:   0%|          | 0/4 [00:00<?, ?it/s]saved frame #156 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00157/info_00157.txt
-Link length is 0.000001
-Filling in 1663 particles
-Number of initial groups:30
-Number of groups:3
-FOF CPU TIME: 0.002485 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #157 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00158/info_00158.txt
-Link length is 0.000001
-Filling in 1663 particles
-Number of initial groups:30
-Number of groups:4
-FOF CPU TIME: 0.003327 secs
-Creating catalog:   0%|          | 0/4 [00:00<?, ?it/s]saved frame #158 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00159/info_00159.txt
-Link length is 0.000001
-Filling in 2571 particles
-Number of initial groups:28
-Number of groups:5
-FOF CPU TIME: 0.006454 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #159 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00160/info_00160.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:30
-Number of groups:6
-FOF CPU TIME: 0.005392 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #160 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00161/info_00161.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:28
-Number of groups:6
-FOF CPU TIME: 0.006036 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #161 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00162/info_00162.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:25
-Number of groups:5
-FOF CPU TIME: 0.005345 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #162 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00163/info_00163.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:23
-Number of groups:4
-FOF CPU TIME: 0.006036 secs
-Creating catalog:   0%|          | 0/4 [00:00<?, ?it/s]saved frame #163 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00164/info_00164.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:22
-Number of groups:4
-FOF CPU TIME: 0.005327 secs
-Creating catalog:   0%|          | 0/4 [00:00<?, ?it/s]saved frame #164 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00165/info_00165.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:17
-Number of groups:3
-FOF CPU TIME: 0.005457 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #165 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00166/info_00166.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:10
-Number of groups:3
-FOF CPU TIME: 0.005145 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #166 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00167/info_00167.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:9
-Number of groups:3
-FOF CPU TIME: 0.004918 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #167 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00168/info_00168.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:15
-Number of groups:5
-FOF CPU TIME: 0.004620 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #168 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00169/info_00169.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:17
-Number of groups:3
-FOF CPU TIME: 0.004520 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #169 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00170/info_00170.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:14
-Number of groups:3
-FOF CPU TIME: 0.004941 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #170 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00171/info_00171.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:20
-Number of groups:4
-FOF CPU TIME: 0.004371 secs
-Creating catalog:   0%|          | 0/4 [00:00<?, ?it/s]saved frame #171 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00172/info_00172.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:25
-Number of groups:4
-FOF CPU TIME: 0.004774 secs
-Creating catalog:   0%|          | 0/4 [00:00<?, ?it/s]saved frame #172 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00173/info_00173.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:29
-Number of groups:6
-FOF CPU TIME: 0.004946 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #173 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00174/info_00174.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:34
-Number of groups:6
-FOF CPU TIME: 0.004928 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #174 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00175/info_00175.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:36
-Number of groups:6
-FOF CPU TIME: 0.005096 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #175 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00176/info_00176.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:32
-Number of groups:6
-FOF CPU TIME: 0.004918 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #176 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00177/info_00177.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:33
-Number of groups:6
-FOF CPU TIME: 0.004323 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #177 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00178/info_00178.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:23
-Number of groups:5
-FOF CPU TIME: 0.004660 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #178 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00179/info_00179.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:30
-Number of groups:5
-FOF CPU TIME: 0.004257 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #179 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00180/info_00180.txt
-Link length is 0.000001
-Filling in 2888 particles
-Number of initial groups:26
-Number of groups:5
-FOF CPU TIME: 0.004220 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #180 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00181/info_00181.txt
-Link length is 0.000001
-Filling in 3191 particles
-Number of initial groups:22
-Number of groups:6
-FOF CPU TIME: 0.004308 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #181 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00182/info_00182.txt
-Link length is 0.000001
-Filling in 3191 particles
-Number of initial groups:24
-Number of groups:5
-FOF CPU TIME: 0.004279 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #182 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00183/info_00183.txt
-Link length is 0.000001
-Filling in 3191 particles
-Number of initial groups:26
-Number of groups:4
-FOF CPU TIME: 0.005007 secs
-Creating catalog:   0%|          | 0/4 [00:00<?, ?it/s]saved frame #183 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00184/info_00184.txt
-Link length is 0.000001
-Filling in 3191 particles
-Number of initial groups:25
-Number of groups:3
-FOF CPU TIME: 0.005052 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #184 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00185/info_00185.txt
-Link length is 0.000001
-Filling in 3634 particles
-Number of initial groups:33
-Number of groups:5
-FOF CPU TIME: 0.005099 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #185 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00186/info_00186.txt
-Link length is 0.000001
-Filling in 4574 particles
-Number of initial groups:33
-Number of groups:6
-FOF CPU TIME: 0.008178 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #186 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00187/info_00187.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:32
-Number of groups:5
-FOF CPU TIME: 0.012990 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #187 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00188/info_00188.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:34
-Number of groups:7
-FOF CPU TIME: 0.012806 secs
-Creating catalog:   0%|          | 0/7 [00:00<?, ?it/s]saved frame #188 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00189/info_00189.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:41
-Number of groups:5
-FOF CPU TIME: 0.015097 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #189 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00190/info_00190.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:40
-Number of groups:6
-FOF CPU TIME: 0.015627 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #190 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00191/info_00191.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:40
-Number of groups:5
-FOF CPU TIME: 0.016303 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #191 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00192/info_00192.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:48
-Number of groups:6
-FOF CPU TIME: 0.015058 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #192 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00193/info_00193.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:58
-Number of groups:9
-FOF CPU TIME: 0.014126 secs
-Creating catalog:   0%|          | 0/9 [00:00<?, ?it/s]saved frame #193 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00194/info_00194.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:71
-Number of groups:11
-FOF CPU TIME: 0.014107 secs
-Creating catalog:   0%|          | 0/11 [00:00<?, ?it/s]saved frame #194 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00195/info_00195.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:82
-Number of groups:14
-FOF CPU TIME: 0.012077 secs
-Creating catalog:   0%|          | 0/14 [00:00<?, ?it/s]saved frame #195 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00196/info_00196.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:96
-Number of groups:11
-FOF CPU TIME: 0.011955 secs
-Creating catalog:   0%|          | 0/11 [00:00<?, ?it/s]saved frame #196 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00197/info_00197.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:93
-Number of groups:11
-FOF CPU TIME: 0.011332 secs
-Creating catalog:   0%|          | 0/11 [00:00<?, ?it/s]saved frame #197 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00198/info_00198.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:106
-Number of groups:7
-FOF CPU TIME: 0.011274 secs
-Creating catalog:   0%|          | 0/7 [00:00<?, ?it/s]saved frame #198 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00199/info_00199.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:112
-Number of groups:10
-FOF CPU TIME: 0.011734 secs
-Creating catalog:   0%|          | 0/10 [00:00<?, ?it/s]saved frame #199 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00200/info_00200.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:121
-Number of groups:5
-FOF CPU TIME: 0.011728 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #200 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00201/info_00201.txt
-Link length is 0.000001
-Filling in 5868 particles
-Number of initial groups:105
-Number of groups:6
-FOF CPU TIME: 0.012253 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #201 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00202/info_00202.txt
-Link length is 0.000001
-Filling in 6255 particles
-Number of initial groups:97
-Number of groups:6
-FOF CPU TIME: 0.012429 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #202 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00203/info_00203.txt
-Link length is 0.000001
-Filling in 6255 particles
-Number of initial groups:97
-Number of groups:7
-FOF CPU TIME: 0.012991 secs
-Creating catalog:   0%|          | 0/7 [00:00<?, ?it/s]saved frame #203 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00204/info_00204.txt
-Link length is 0.000001
-Filling in 6255 particles
-Number of initial groups:99
-Number of groups:6
-FOF CPU TIME: 0.012695 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #204 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00205/info_00205.txt
-Link length is 0.000001
-Filling in 6255 particles
-Number of initial groups:97
-Number of groups:7
-FOF CPU TIME: 0.012917 secs
-Creating catalog:   0%|          | 0/7 [00:00<?, ?it/s]saved frame #205 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00206/info_00206.txt
-Link length is 0.000001
-Filling in 6404 particles
-Number of initial groups:98
-Number of groups:7
-FOF CPU TIME: 0.013254 secs
-Creating catalog:   0%|          | 0/7 [00:00<?, ?it/s]saved frame #206 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00207/info_00207.txt
-Link length is 0.000001
-Filling in 6404 particles
-Number of initial groups:94
-Number of groups:6
-FOF CPU TIME: 0.012657 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #207 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00208/info_00208.txt
-Link length is 0.000001
-Filling in 6404 particles
-Number of initial groups:85
-Number of groups:6
-FOF CPU TIME: 0.013177 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #208 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00209/info_00209.txt
-Link length is 0.000001
-Filling in 6404 particles
-Number of initial groups:79
-Number of groups:3
-FOF CPU TIME: 0.012730 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #209 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00210/info_00210.txt
-Link length is 0.000001
-Filling in 7125 particles
-Number of initial groups:73
-Number of groups:3
-FOF CPU TIME: 0.013581 secs
-Creating catalog:   0%|          | 0/3 [00:00<?, ?it/s]saved frame #210 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00211/info_00211.txt
-Link length is 0.000001
-Filling in 7125 particles
-Number of initial groups:62
-Number of groups:2
-FOF CPU TIME: 0.014806 secs
-Creating catalog:   0%|          | 0/2 [00:00<?, ?it/s]saved frame #211 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00212/info_00212.txt
-Link length is 0.000001
-Filling in 7125 particles
-Number of initial groups:62
-Number of groups:2
-FOF CPU TIME: 0.015166 secs
-Creating catalog:   0%|          | 0/2 [00:00<?, ?it/s]saved frame #212 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00213/info_00213.txt
-Link length is 0.000001
-Filling in 7125 particles
-Number of initial groups:68
-Number of groups:5
-FOF CPU TIME: 0.014713 secs
-Creating catalog:   0%|          | 0/5 [00:00<?, ?it/s]saved frame #213 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00214/info_00214.txt
-Link length is 0.000001
-Filling in 7125 particles
-Number of initial groups:76
-Number of groups:6
-FOF CPU TIME: 0.014202 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #214 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00215/info_00215.txt
-Link length is 0.000001
-Filling in 7665 particles
-Number of initial groups:71
-Number of groups:8
-FOF CPU TIME: 0.014018 secs
-Creating catalog:   0%|          | 0/8 [00:00<?, ?it/s]saved frame #215 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00216/info_00216.txt
-Link length is 0.000001
-Filling in 7665 particles
-Number of initial groups:80
-Number of groups:6
-FOF CPU TIME: 0.014487 secs
-Creating catalog:   0%|          | 0/6 [00:00<?, ?it/s]saved frame #216 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00217/info_00217.txt
-Link length is 0.000001
-Filling in 7900 particles
-Number of initial groups:96
-Number of groups:8
-FOF CPU TIME: 0.013951 secs
-Creating catalog:   0%|          | 0/8 [00:00<?, ?it/s]saved frame #217 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00218/info_00218.txt
-Link length is 0.000001
-Filling in 8416 particles
-Number of initial groups:108
-Number of groups:9
-FOF CPU TIME: 0.016281 secs
-Creating catalog:   0%|          | 0/9 [00:00<?, ?it/s]saved frame #218 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00219/info_00219.txt
-Link length is 0.000001
-Filling in 8416 particles
-Number of initial groups:106
-Number of groups:11
-FOF CPU TIME: 0.016514 secs
-Creating catalog:   0%|          | 0/11 [00:00<?, ?it/s]saved frame #219 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00220/info_00220.txt
-Link length is 0.000001
-Filling in 8908 particles
-Number of initial groups:107
-Number of groups:10
-FOF CPU TIME: 0.022026 secs
-Creating catalog:   0%|          | 0/10 [00:00<?, ?it/s]saved frame #220 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00221/info_00221.txt
-Link length is 0.000001
-Filling in 8908 particles
-Number of initial groups:117
-Number of groups:11
-FOF CPU TIME: 0.022214 secs
-Creating catalog:   0%|          | 0/11 [00:00<?, ?it/s]saved frame #221 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00222/info_00222.txt
-Link length is 0.000001
-Filling in 8908 particles
-Number of initial groups:125
-Number of groups:11
-FOF CPU TIME: 0.021863 secs
-Creating catalog:   0%|          | 0/11 [00:00<?, ?it/s]saved frame #222 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00223/info_00223.txt
-Link length is 0.000001
-Filling in 8908 particles
-Number of initial groups:110
-Number of groups:8
-FOF CPU TIME: 0.022333 secs
-Creating catalog:   0%|          | 0/8 [00:00<?, ?it/s]saved frame #223 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00224/info_00224.txt
-Link length is 0.000001
-Filling in 8908 particles
-Number of initial groups:116
-Number of groups:12
-FOF CPU TIME: 0.021328 secs
-Creating catalog:   0%|          | 0/12 [00:00<?, ?it/s]saved frame #224 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00225/info_00225.txt
-Link length is 0.000001
-Filling in 8908 particles
-Number of initial groups:124
-Number of groups:15
-FOF CPU TIME: 0.020695 secs
-Creating catalog:   0%|          | 0/15 [00:00<?, ?it/s]saved frame #225 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00226/info_00226.txt
-Link length is 0.000001
-Filling in 8908 particles
-Number of initial groups:130
-Number of groups:16
-FOF CPU TIME: 0.020046 secs
-Creating catalog:   0%|          | 0/16 [00:00<?, ?it/s]saved frame #226 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00227/info_00227.txt
-Link length is 0.000001
-Filling in 8908 particles
-Number of initial groups:126
-Number of groups:14
-FOF CPU TIME: 0.019771 secs
-Creating catalog:   0%|          | 0/14 [00:00<?, ?it/s]saved frame #227 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/clump_tracked/
+Filling in 165 particles
+Number of initial groups:3
+Number of groups:1
+FOF CPU TIME: 0.000081 secs
+saved frame #125 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked_x_610pc/
