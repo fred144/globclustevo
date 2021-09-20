@@ -18,5 +18,5 @@ Link length is 0.000001
 Filling in 165 particles
 Number of initial groups:3
 Number of groups:1
-FOF CPU TIME: 0.000081 secs
+FOF CPU TIME: 0.000073 secs
 saved frame #125 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked_x_610pc/

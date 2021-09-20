@@ -89,7 +89,7 @@ for outputNum in range (startSlice, endSlice + 1):
     pos_SFCs = ad['SFC', 'particle_position']
     pos_PSCs = ad['PSC', 'particle_position']
 
-    p = yt.SlicePlot(ds, 'x', "density", width = width, center = ('max','density'))
+    p = yt.SlicePlot(ds, 'z', "density", width = width, center = ('max','density'))
     
     if pos_SFCs.size > 0 or pos_PSCs.size > 0:
         #annotate the star clumps
@@ -153,8 +153,8 @@ for outputNum in range (startSlice, endSlice + 1):
                      ' | Dots = Pop II, Blue = SFC, Black = PSC ')
     p.set_buff_size(5000)
     #---------------------------------------------------------------------------------------------------------
-    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked_x_610pc/', mpl_kwargs=dict(dpi=200))
-    print ('saved frame #' + str(outputNum) + ' to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked_x_610pc/')
+    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked_z_610pc/', mpl_kwargs=dict(dpi=200))
+    print ('saved frame #' + str(outputNum) + ' to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked_z_610pc/')
     #---------------------------------------------------------------------------------------------------------
     
     
