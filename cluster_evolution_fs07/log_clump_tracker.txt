@@ -11,20 +11,68 @@ in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
 of libcuda.so.1 to get passed this issue.
 --------------------------------------------------------------------------
 *** WARNING (KS MODIFIED) ****   particle_families is modified in yt/frontends/ramses/definitions.py
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00001/info_00001.txt
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00120/info_00120.txt
 clump_tracker.py:79: VisibleDeprecationWarning: Development of the HaloCatalog module has been moved to the yt_astro_analysis package. This version is deprecated and will be removed from yt in a future release. See https://github.com/yt-project/yt_astro_analysis for further information.
   from yt.analysis_modules.halo_analysis.api import HaloCatalog
-saved frame #1 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00002/info_00002.txt
-saved frame #2 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00003/info_00003.txt
-saved frame #3 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00004/info_00004.txt
-saved frame #4 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00005/info_00005.txt
-saved frame #5 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00006/info_00006.txt
-saved frame #6 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00007/info_00007.txt
-saved frame #7 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00008/info_00008.txt
+Link length is 0.000001
+Filling in 165 particles
+Number of initial groups:2
+Number of groups:1
+FOF CPU TIME: 0.000072 secs
+Traceback (most recent call last):
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_window.py", line 1131, in run_callbacks
+    callback(cbw)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_modifications.py", line 77, in _check_geometry
+    return func(self, plot)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_modifications.py", line 1803, in __call__
+    particle_x, particle_y = self._enforce_periodic(self.region[pt, field_x],
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/data_objects/data_containers.py", line 256, in __getitem__
+    self.get_data(f)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/data_objects/data_containers.py", line 1525, in get_data
+    with f.apply(self):
+  File "/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/data_objects/particle_filters.py", line 45, in apply
+    filter = self.function(self, dobj)
+  File "/homes/fgarcia4/analysis/cluster_evolution_fs07/clump_filters.py", line 31, in clump1
+    relative_ages = star_age_myr - star_age_myr.min()
+  File "/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib/python3.7/site-packages/numpy/core/_methods.py", line 34, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/units/yt_array.py", line 1396, in __array_ufunc__
+    out_arr = func(np.asarray(inp), out=out, **kwargs)
+ValueError: zero-size array to reduction operation minimum which has no identity
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "clump_tracker.py", line 156, in <module>
+    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/', mpl_kwargs=dict(dpi=200))
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_container.py", line 93, in newfunc
+    args[0]._setup_plots()
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_window.py", line 1080, in _setup_plots
+    self.run_callbacks()
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_window.py", line 1137, in run_callbacks
+    sys.exc_info()[2])
+  File "/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib/python3.7/site-packages/six.py", line 702, in reraise
+    raise value.with_traceback(tb)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_window.py", line 1131, in run_callbacks
+    callback(cbw)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_modifications.py", line 77, in _check_geometry
+    return func(self, plot)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_modifications.py", line 1803, in __call__
+    particle_x, particle_y = self._enforce_periodic(self.region[pt, field_x],
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/data_objects/data_containers.py", line 256, in __getitem__
+    self.get_data(f)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/data_objects/data_containers.py", line 1525, in get_data
+    with f.apply(self):
+  File "/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/data_objects/particle_filters.py", line 45, in apply
+    filter = self.function(self, dobj)
+  File "/homes/fgarcia4/analysis/cluster_evolution_fs07/clump_filters.py", line 31, in clump1
+    relative_ages = star_age_myr - star_age_myr.min()
+  File "/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib/python3.7/site-packages/numpy/core/_methods.py", line 34, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/units/yt_array.py", line 1396, in __array_ufunc__
+    out_arr = func(np.asarray(inp), out=out, **kwargs)
+yt.utilities.exceptions.YTPlotCallbackError: annotate_particles callback failed with the following error: zero-size array to reduction operation minimum which has no identity

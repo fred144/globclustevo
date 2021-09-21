@@ -49,7 +49,7 @@ ivory = np.array([255,255,240])/255.; ivory = ivory .reshape(1,-1)
 azure = np.array([240,255,255])/255.; azure = azure .reshape(1,-1)
 mintcream = np.array([245,255,250])/255.; mintcream = mintcream .reshape(1,-1)
 
-startSlice = 1
+startSlice = 120
 endSlice = 131
 for outputNum in range (startSlice, endSlice + 1):
     
