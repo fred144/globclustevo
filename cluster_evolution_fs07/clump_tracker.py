@@ -49,8 +49,8 @@ ivory = np.array([255,255,240])/255.; ivory = ivory .reshape(1,-1)
 azure = np.array([240,255,255])/255.; azure = azure .reshape(1,-1)
 mintcream = np.array([245,255,250])/255.; mintcream = mintcream .reshape(1,-1)
 
-startSlice = 125
-endSlice = 125
+startSlice = 1
+endSlice = 131
 for outputNum in range (startSlice, endSlice + 1):
     
     infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (int(outputNum), int(outputNum)))
@@ -74,7 +74,7 @@ for outputNum in range (startSlice, endSlice + 1):
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
     clump_filters(ds)
     #plot                                                                                                                                                                                                     
-    width = (610,'pc') #plot width                                                                                                                                                                                
+    width = (410,'pc') #plot width                                                                                                                                                                                
     
     from yt.analysis_modules.halo_analysis.api import HaloCatalog
 
@@ -148,13 +148,13 @@ for outputNum in range (startSlice, endSlice + 1):
            
     p.annotate_timestamp(corner='lower_left', time_format='t = {time:.3f} {units}', time_unit= 'Myr', redshift=True, draw_inset_box=True)
     p.annotate_scale(corner='lower_right', draw_inset_box= True)
-    #p.set_cmap("density", "viridis")
+    p.set_cmap("density", "gnuplot2")
     p.annotate_title(' Z Density and Star Clusters | '  + str(outputNum) + ' of ' + str(endSlice) + 
                      ' | Dots = Pop II, Blue = SFC, Black = PSC ')
     p.set_buff_size(5000)
     #---------------------------------------------------------------------------------------------------------
-    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked_z_610pc/', mpl_kwargs=dict(dpi=200))
-    print ('saved frame #' + str(outputNum) + ' to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked_z_610pc/')
+    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/', mpl_kwargs=dict(dpi=200))
+    print ('saved frame #' + str(outputNum) + ' to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/')
     #---------------------------------------------------------------------------------------------------------
     
     

@@ -11,12 +11,20 @@ in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
 of libcuda.so.1 to get passed this issue.
 --------------------------------------------------------------------------
 *** WARNING (KS MODIFIED) ****   particle_families is modified in yt/frontends/ramses/definitions.py
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00001/info_00001.txt
 clump_tracker.py:79: VisibleDeprecationWarning: Development of the HaloCatalog module has been moved to the yt_astro_analysis package. This version is deprecated and will be removed from yt in a future release. See https://github.com/yt-project/yt_astro_analysis for further information.
   from yt.analysis_modules.halo_analysis.api import HaloCatalog
-Link length is 0.000001
-Filling in 165 particles
-Number of initial groups:3
-Number of groups:1
-FOF CPU TIME: 0.000073 secs
-saved frame #125 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked_x_610pc/
+saved frame #1 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00002/info_00002.txt
+saved frame #2 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00003/info_00003.txt
+saved frame #3 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00004/info_00004.txt
+saved frame #4 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00005/info_00005.txt
+saved frame #5 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00006/info_00006.txt
+saved frame #6 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00007/info_00007.txt
+saved frame #7 to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_clump_tracked/
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00008/info_00008.txt
