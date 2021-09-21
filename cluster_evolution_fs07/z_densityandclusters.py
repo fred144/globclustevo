@@ -21,11 +21,11 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 
 #----------------------------------------------------------------------------
 #data directory/info file
-datadir=os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
+datadir=os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 #----------------------------------------------------------------------------
 
-startSlice = 75
-endSlice = 227
+startSlice = 100
+endSlice = 131
 for outputNum in range (startSlice, endSlice + 1):
     
     infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (int(outputNum), int(outputNum)))
@@ -57,7 +57,7 @@ for outputNum in range (startSlice, endSlice + 1):
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
     
     #plot                                                                                                                                                                                                     
-    width = (300,'pc') #plot width                                                                                                                                                                                
+    width = (610,'pc') #plot width                                                                                                                                                                                
     
     from yt.analysis_modules.halo_analysis.api import HaloCatalog
 
@@ -93,16 +93,16 @@ for outputNum in range (startSlice, endSlice + 1):
     p.annotate_timestamp(corner='lower_left', time_format='t = {time:.3f} {units}', time_unit= 'Myr', redshift=True, draw_inset_box=True)
     p.annotate_scale(corner='lower_right', draw_inset_box= True)
 
-    #p.set_cmap("density", "viridis")
+    p.set_cmap("density", "magma")
 
-    p.annotate_title(' Z Density and Star Clusters | '  + str(outputNum) + ' of ' + str(endSlice) + 
+    p.annotate_title(' New Refinment condition | '  + str(outputNum) + ' of ' + str(endSlice) + 
                      ' | Red = Pop II, Blue = SFC, Black = PSC ')
     
 
     
     #---------------------------------------------------------------------------------------------------------
-    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/halos_z_density_300pc/')
-    print ('saved frame #' + str(outputNum) + ' to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/halos_z_density_300pc/')
+    p.save('/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_z_density_610pc/')
+    print ('saved frame #' + str(outputNum) + ' to: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refine_z_density_610pc/')
     #---------------------------------------------------------------------------------------------------------
     
     
