@@ -59,13 +59,13 @@ for outputNum in range (startSlice, endSlice + 1):
     #plot                                                                                                                                                                                                     
     width = (610,'pc') #plot width                                                                                                                                                                                
     
-    from yt.analysis_modules.halo_analysis.api import HaloCatalog
+    # from yt.analysis_modules.halo_analysis.api import HaloCatalog
 
-    hc = HaloCatalog(data_ds=ds, finder_method='fof',
-                 finder_kwargs={"ptype": "star",
-                                 "padding": .2,
-                                "link": 0.0002,
-                                 "dm_only":False})
+    # hc = HaloCatalog(data_ds=ds, finder_method='fof',
+    #              finder_kwargs={"ptype": "star",
+    #                              "padding": .2,
+    #                             "link": 0.0002,
+    #                              "dm_only":False})
     
     #get SFC/PSC positions
     ad = ds.all_data()
@@ -84,10 +84,10 @@ for outputNum in range (startSlice, endSlice + 1):
         if pos_PSCs.size > 0: 
             p.annotate_particles(width=width,ptype='PSC', p_size=100.0,marker='x',col='k') #passive stellar clusters (test particles)
         
-        hc.create()
-        hc_ad = hc.halos_ds.all_data()
-        p.annotate_halos(hc, width=width)
-        p.annotate_text((0.175, 0.2), str( len(hc_ad['particle_mass'])) + " Halos", coord_system="figure")
+        # hc.create()
+        # hc_ad = hc.halos_ds.all_data()
+        # p.annotate_halos(hc, width=width)
+        # p.annotate_text((0.175, 0.2), str( len(hc_ad['particle_mass'])) + " Halos", coord_system="figure")
         
                
     p.annotate_timestamp(corner='lower_left', time_format='t = {time:.3f} {units}', time_unit= 'Myr', redshift=True, draw_inset_box=True)
