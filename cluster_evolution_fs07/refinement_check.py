@@ -13,9 +13,9 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 #datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
 datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
-parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/'
+parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences'
 sequence_folder = "refinement_check"
-sequence_title = "New Refinement"
+sequence_title = "New Refinement Low Density"
 width = (20,'pc')
 start_step = 125
 end_step = 125
@@ -76,18 +76,18 @@ for output_num in range (start_step, end_step + 1):
 
     p.annotate_cell_edges() 
     p.set_cmap("density", "magma")
+
+    plot_title = str(sequence_title) + str(output_num) + '| Red = Pop II, Blue = SFC, Black = PSC '
+
+    p.annotate_title(plot_title)
     
-    p.annotate_title(sequence_title, 
-                     str(output_num), 
-                     '| Red = Pop II, Blue = SFC, Black = PSC ')
-    
-    save_path = str ("{}{}/output-{}-z-{}-{}.png".format(parent_folder,
+    save_path = str ("{}/{}/output-{}-z-{}-{}.png".format(parent_folder,
                                                 sequence_folder,
                                                 str(output_num).zfill(5),
                                                 str(round(z, 2)).replace('.', '_'),
-                                                sequence_title )
+                                                sequence_title.replace(' ','-'))
                      )
-    #p.save(save_path, mpl_kwargs=dict(dpi=200))
+    p.save(save_path, mpl_kwargs=dict(dpi=200))
     print('Saved:', save_path)
 
 
