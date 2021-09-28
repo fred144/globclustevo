@@ -7,15 +7,19 @@ from yt.funcs import mylog
 mylog.setLevel(40)
 warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 
-#----------------------------------------------------------------------------
+
 #data directory/info file
+#datadir = os.path.expanduser('G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster') 
 #datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
 datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
-#datadir = os.path.expanduser('G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster') 
-#----------------------------------------------------------------------------
 
+parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/'
+sequence_folder = "refinement_check"
+sequence_title = "New Refinement"
+width = (20,'pc')
 start_step = 125
 end_step = 125
+
 for output_num in range (start_step, end_step + 1):
     
     infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (output_num,output_num))
@@ -42,7 +46,6 @@ for output_num in range (start_step, end_step + 1):
     pos_SFCs = ad['SFC', 'particle_position']
     pos_PSCs = ad['PSC', 'particle_position']
     
-    width = (20,'pc')
     p = yt.SlicePlot(ds, 'z', "density", width = width, center = ('max','density'))
     
     if pos_SFCs.size > 0:
@@ -72,10 +75,6 @@ for output_num in range (start_step, end_step + 1):
 
     p.annotate_cell_edges() 
     p.set_cmap("density", "magma")
-
-    sequence_folder = "refinement_check"
-    sequence_title = "New Refinement"
-    parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/'
     
     p.annotate_title(sequence_title, 
                      str(output_num), 
@@ -86,7 +85,7 @@ for output_num in range (start_step, end_step + 1):
                                                 str(output_num).zfill(5),
                                                 str(round(z, 2)).replace('.', '_'),
                                                 sequence_title )
-    p.save(save_path)
+    p.save(save_path, mpl_kwargs=dict(dpi=200))
     print('Saved:', save_path)
 
 
