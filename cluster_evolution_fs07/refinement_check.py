@@ -16,7 +16,7 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences'
 sequence_folder = "refinement_check"
 sequence_title = "New Refinement Low Density"
-width = (20,'pc')
+width = (100,'pc')
 start_step = 125
 end_step = 125
 
@@ -64,7 +64,8 @@ for output_num in range (start_step, end_step + 1):
         if pos_SFCs.size == 0: 
             first_psc_center = pos_PSCs[0] 
             p = yt.SlicePlot(ds, 'z', "density", width = width, center = first_psc_center)
-    
+        
+            
     p.annotate_particles(width=width, ptype='star', p_size=20.0,marker='.',col='r')    
     
     p.annotate_timestamp(corner='lower_left', 
