@@ -11,5 +11,5 @@ in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
 of libcuda.so.1 to get passed this issue.
 --------------------------------------------------------------------------
 *** WARNING (KS MODIFIED) ****   particle_families is modified in yt/frontends/ramses/definitions.py
-#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00131/info_00131.txt
-Saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refinement_check/output-00131-z-12_57-New-Refinement-High-Density.png
+#Reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00116/info_00116.txt
+Saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/refinement_check/output-00116-z-12_87-Old-Refinement-Low-Density.png

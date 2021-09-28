@@ -10,15 +10,15 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 
 #data directory/info file
 #datadir = os.path.expanduser('G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster') 
-#datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
-datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
+datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
+#datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences'
 sequence_folder = "refinement_check"
-sequence_title = "New Refinement High Density"
-width = (100,'pc')
-start_step = 131
-end_step = 131
+sequence_title = "Old Refinement High Density"
+width = (50,'pc')
+start_step = 122
+end_step = 122
 
 for output_num in range (start_step, end_step + 1):
     
@@ -76,7 +76,7 @@ for output_num in range (start_step, end_step + 1):
     p.annotate_scale(corner='lower_right', draw_inset_box= True)
 
     p.annotate_cell_edges() 
-    p.set_cmap("density", "magma")
+    #p.set_cmap("density", "magma")
 
     plot_title = str(sequence_title) + str(output_num) + '| Red = Pop II, Blue = SFC, Black = PSC '
 
