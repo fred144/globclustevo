@@ -55,14 +55,15 @@ for output_num in range (start_step, end_step + 1):
                              ptype='SFC', 
                              p_size=100.0,
                              marker='x',col='b') 
-    else:
-        p = yt.SlicePlot(ds, 'z', "density", width = width, center = ('max','density'))
         
     if pos_PSCs.size > 0: 
         p.annotate_particles(width = width,
                              ptype='PSC', 
                              p_size=100.0,
-                             marker='x',col='k')   
+                             marker='x',col='k')
+        if pos_SFCs.size == 0: 
+            first_psc_center = pos_PSCs[0] 
+            p = yt.SlicePlot(ds, 'z', "density", width = width, center = first_psc_center)
     
     p.annotate_particles(width=width, ptype='star', p_size=20.0,marker='.',col='r')    
     
@@ -80,12 +81,13 @@ for output_num in range (start_step, end_step + 1):
                      str(output_num), 
                      '| Red = Pop II, Blue = SFC, Black = PSC ')
     
-    save_path = "{}{}/output-{}-z-{}-{}.png".format(parent_folder,
+    save_path = str ("{}{}/output-{}-z-{}-{}.png".format(parent_folder,
                                                 sequence_folder,
                                                 str(output_num).zfill(5),
                                                 str(round(z, 2)).replace('.', '_'),
                                                 sequence_title )
-    p.save(save_path, mpl_kwargs=dict(dpi=200))
+                     )
+    #p.save(save_path, mpl_kwargs=dict(dpi=200))
     print('Saved:', save_path)
 
 
