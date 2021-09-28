@@ -15,10 +15,10 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences'
 sequence_folder = "refinement_check"
-sequence_title = "New Refinement Low Density"
+sequence_title = "New Refinement High Density"
 width = (100,'pc')
-start_step = 125
-end_step = 125
+start_step = 131
+end_step = 131
 
 for output_num in range (start_step, end_step + 1):
     
