@@ -15,16 +15,16 @@ def succ_distance (current, previous):
 
 #data directory/info file
 #datadir = os.path.expanduser('G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/') 
-datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
-#datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
+#datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
+datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences'
-sequence_folder = 're_centered_rerun'
-sequence_title = 'New Centering, Z Density'
+sequence_folder = 're_centered_refine'
+sequence_title = 'New Centering - Z Density'
 width = (310,'pc')
 slice_axis = 'z'
 start_step = 90
-end_step = 227
+end_step = 164
 
 ctr_shift_thresh = 10000 #pc
 
@@ -51,7 +51,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     print('reading fields...')
     
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
-    z = ds.current_redshift
+    redshft = ds.current_redshift
     
     #get SFC/PSC positions and other important fields
     ad = ds.all_data()
@@ -111,7 +111,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     p.annotate_scale(corner='lower_right', draw_inset_box= True)
 
     #p.annotate_cell_edges() 
-    #p.set_cmap("density", "magma")
+    p.set_cmap("density", "magma")
 
     plot_title = str( "{} {}| Red = Pop II, Blue = SFC, Black = PSC ".format(sequence_title, output_num) ) 
 
@@ -120,7 +120,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     save_path = str ("{}/{}/output-{}-z-{}-{}.png".format(parent_folder,
                                                 sequence_folder,
                                                 str(output_num).zfill(5),
-                                                str(np.round_(z, 2)).replace('.', '_'),
+                                                str(np.around(redshft, 2)).replace('.', '_'),
                                                 sequence_title.replace(' ','-'))
                       )
     p.save(save_path, mpl_kwargs=dict(dpi=200))
