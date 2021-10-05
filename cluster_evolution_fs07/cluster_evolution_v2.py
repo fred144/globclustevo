@@ -26,7 +26,7 @@ slice_axis = 'z'
 start_step = 90
 end_step = 164
 
-ctr_shift_thresh = 10000 #pc
+ctr_shift_thresh = 200000 #pc
 
 max_density_coords = []
 
