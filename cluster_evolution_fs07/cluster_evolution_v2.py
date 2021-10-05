@@ -120,7 +120,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     save_path = str ("{}/{}/output-{}-z-{}-{}.png".format(parent_folder,
                                                 sequence_folder,
                                                 str(output_num).zfill(5),
-                                                str(round(z, 2)).replace('.', '_'),
+                                                str(np.round_(z, 2)).replace('.', '_'),
                                                 sequence_title.replace(' ','-'))
                       )
     p.save(save_path, mpl_kwargs=dict(dpi=200))

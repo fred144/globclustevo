@@ -1,0 +1,51 @@
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca mpi_cuda_support 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+*** WARNING (KS MODIFIED) ****   particle_families is modified in yt/frontends/ramses/definitions.py
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00090/info_00090.txt
+reading fields...
+distance b/w current and previously used max density: 0.0
+centered at (1564055.5159797468 pc, 1618780.0466528095 pc, 1626251.1592432677 pc)
+annotating 0 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/re_centered_rerun/output-00090-z-1626251_16-New-Centering,-Z-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00091/info_00091.txt
+reading fields...
+distance b/w current and previously used max density: 3192.7565435859087
+centered at (1563538.5035485246 pc, 1619058.3038171513 pc, 1629389.4653856102 pc)
+annotating 0 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/re_centered_rerun/output-00091-z-1629389_47-New-Centering,-Z-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00092/info_00092.txt
+reading fields...
+distance b/w current and previously used max density: 30250.247614476004
+centered at (1563538.5035485246 pc, 1619058.3038171513 pc, 1629389.4653856102 pc)
+annotating 0 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/re_centered_rerun/output-00092-z-1646984_17-New-Centering,-Z-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00093/info_00093.txt
+reading fields...
+distance b/w current and previously used max density: 60816.50247738552
+centered at (1563538.5035485246 pc, 1619058.3038171513 pc, 1629389.4653856102 pc)
+annotating 0 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/re_centered_rerun/output-00093-z-1664757_89-New-Centering,-Z-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00094/info_00094.txt
+reading fields...
+distance b/w current and previously used max density: 67170.190685664
+centered at (1563538.5035485246 pc, 1619058.3038171513 pc, 1629389.4653856102 pc)
+annotating 0 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/re_centered_rerun/output-00094-z-1668452_13-New-Centering,-Z-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun/output_00095/info_00095.txt
+reading fields...
