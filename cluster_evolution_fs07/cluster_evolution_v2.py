@@ -19,12 +19,12 @@ def succ_distance (current, previous):
 datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences'
-sequence_folder = 'wide_re_centered_refine'
+sequence_folder = 'cl_re_centered_refine'
 sequence_title = 'New Centering - Z Density'
-width = (5,'kpc')
+width = (310,'pc')
 slice_axis = 'z'
 start_step = 116
-end_step = 124
+end_step = 130
 
 ctr_shift_thresh = 200000 #pc
 
@@ -59,11 +59,12 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     pos_PSCs = ad['PSC', 'particle_position']
     be_star = ad['star', 'particle_birth_epoch']
     
-    x, y, z = ad.argmax(('gas', 'density'))
-    x = x.in_units('pc')
-    y = y.in_units('pc')
-    z = z.in_units('pc') 
-    max_density_coord = (x, y, z) 
+    # x, y, z = ad.argmax(('gas', 'density'))
+    # x = x.in_units('pc')
+    # y = y.in_units('pc')
+    # z = z.in_units('pc')
+    max_density_coord = yt.YTArray(ad.argmax('density')).in_units('code_length')
+    #max_density_coord = (x, y, z) 
 
     #keep center of plots relatively stable
     if loop_num == 0:
