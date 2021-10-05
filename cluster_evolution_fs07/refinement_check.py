@@ -9,21 +9,21 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 
 
 #data directory/info file
-#datadir = os.path.expanduser('G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster') 
-datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
+datadir = os.path.expanduser('G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine') 
+#datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
 #datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences'
 sequence_folder = "refinement_check"
 sequence_title = "Old Refinement High Density"
-width = (50,'pc')
-start_step = 122
-end_step = 122
+width = (240,'pc')
+start_step = 125
+end_step = 125
 
 for output_num in range (start_step, end_step + 1):
     
     infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (output_num,output_num))
-    print ("#Reading in info file: %s" %infofile)    
+    print ("#reading in info file: %s" %infofile)    
 
     #cell fields
     FIELDS = ["Density",
@@ -47,6 +47,8 @@ for output_num in range (start_step, end_step + 1):
     pos_PSCs = ad['PSC', 'particle_position']
     
     p = yt.SlicePlot(ds, 'z', "density", width = width, center = ('max','density'))
+    
+    print('#annotating particles...')
     
     if pos_SFCs.size > 0:
         first_sfc_center = pos_SFCs[0]  
@@ -75,23 +77,20 @@ for output_num in range (start_step, end_step + 1):
                          draw_inset_box=True)
     p.annotate_scale(corner='lower_right', draw_inset_box= True)
 
-    p.annotate_cell_edges() 
-    #p.set_cmap("density", "magma")
+    #p.annotate_cell_edges() 
+    p.set_cmap("density", "magma")
 
     plot_title = str(sequence_title) + str(output_num) + '| Red = Pop II, Blue = SFC, Black = PSC '
 
     p.annotate_title(plot_title)
     
-    save_path = str ("{}/{}/output-{}-z-{}-{}.png".format(parent_folder,
-                                                sequence_folder,
-                                                str(output_num).zfill(5),
-                                                str(round(z, 2)).replace('.', '_'),
-                                                sequence_title.replace(' ','-'))
-                     )
-    p.save(save_path, mpl_kwargs=dict(dpi=200))
-    print('Saved:', save_path)
+    # save_path = str ("{}/{}/output-{}-z-{}-{}.png".format(parent_folder,
+    #                                             sequence_folder,
+    #                                             str(output_num).zfill(5),
+    #                                             str(round(z, 2)).replace('.', '_'),
+    #                                             sequence_title.replace(' ','-'))
+    #                  )
+    # p.save(save_path, mpl_kwargs=dict(dpi=200))
+    # print('Saved:', save_path)
 
-
-    
-    
-    
+    p.show()
