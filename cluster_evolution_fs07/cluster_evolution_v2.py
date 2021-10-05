@@ -19,12 +19,12 @@ def succ_distance (current, previous):
 datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences'
-sequence_folder = 're_centered_refine'
+sequence_folder = 'projection_re_centered_refine'
 sequence_title = 'New Centering - Z Density'
 width = (310,'pc')
 slice_axis = 'z'
-start_step = 90
-end_step = 164
+start_step = 116
+end_step = 124
 
 ctr_shift_thresh = 200000 #pc
 
@@ -74,12 +74,12 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     print('distance b/w current and previously used max density:', succ_distance_pc)
     
     if succ_distance_pc < ctr_shift_thresh: 
-        p = yt.SlicePlot(ds, slice_axis, "density", width = width, center = max_density_coord)
+        p = yt.ProjectionPlot(ds, slice_axis, "density", width = width, center = max_density_coord)
         max_density_coords.append(max_density_coord)
         print('centered at {}'. format(max_density_coord)) 
     else: 
         center = max_density_coords[-1] 
-        p = yt.SlicePlot(ds, slice_axis, "density", width = width, center = center)
+        p = yt.ProjectionPlot(ds, slice_axis, "density", width = width, center = center)
         print('centered at {}'. format(center)) 
         
         
