@@ -20,10 +20,10 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences'
 sequence_folder = 'cl_enforced_refine'
 sequence_title = 'New Centering Z Density'
-width = (310,'pc')
+width = (510,'pc')
 slice_axis = 'z'
-start_step = 116
-end_step = 128
+start_step = 100
+end_step = 167
 
 ctr_shift_thresh = 0.0011 #code length
 
