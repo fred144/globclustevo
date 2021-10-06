@@ -7,10 +7,13 @@ from yt.funcs import mylog
 mylog.setLevel(40)
 warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 
-def succ_distance (current, previous): 
-    current = np.array(current) 
-    previous = np.array(previous) 
-    dist = np.linalg.norm(current - previous) 
+def succ_distance (current, previous):
+    c = np.array(current) 
+    p = np.array(previous)
+    #print('previous array', previous)
+    #print('current array', current)
+    print(c,p)
+    dist = np.linalg.norm(c - p) 
     return dist 
 
 #data directory/info file
@@ -19,14 +22,14 @@ def succ_distance (current, previous):
 datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences'
-sequence_folder = 'cl_re_centered_refine'
-sequence_title = 'New Centering - Z Density'
+sequence_folder = 'cl_enforced_refine'
+sequence_title = 'New Centering Z Density'
 width = (310,'pc')
 slice_axis = 'z'
 start_step = 116
 end_step = 130
 
-ctr_shift_thresh = 200000 #pc
+ctr_shift_thresh = 0.0001 #code length
 
 max_density_coords = []
 
@@ -59,28 +62,32 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     pos_PSCs = ad['PSC', 'particle_position']
     be_star = ad['star', 'particle_birth_epoch']
     
-    # x, y, z = ad.argmax(('gas', 'density'))
+    max_den = ad.argmax(('gas', 'density'))
     # x = x.in_units('pc')
     # y = y.in_units('pc')
     # z = z.in_units('pc')
-    max_density_coord = yt.YTArray(ad.argmax('density')).in_units('code_length')
-    #max_density_coord = (x, y, z) 
+    max_density_coord = yt.YTArray(max_den).in_units('code_length') 
+    #max_density_coord = np.array(max_density_coord)
+    max_density_coord = np.array(max_density_coord)
+    print('coords', max_density_coord)
+    
 
     #keep center of plots relatively stable
     if loop_num == 0:
         max_density_coords.append(max_density_coord)
     
-    succ_distance_pc = succ_distance(max_density_coord, max_density_coords[-1])
+    succ_distance = succ_distance(max_density_coord, max_density_coords[-1])
     
-    print('distance b/w current and previously used max density:', succ_distance_pc)
+    print('distance b/w current and previously used max density:', succ_distance)
     
-    if succ_distance_pc < ctr_shift_thresh: 
+    if succ_distance < ctr_shift_thresh: 
         p = yt.SlicePlot(ds, slice_axis, "density", width = width, center = max_density_coord)
         max_density_coords.append(max_density_coord)
         print('centered at {}'. format(max_density_coord)) 
     else: 
-        center = max_density_coords[-1] 
-        p = yt.SlicePlot(ds, slice_axis, "density", width = width, center = center)
+        center = max_density_coords[-1]
+        print('using previous center: {}'.format (center))
+        p = yt.SlicePlot(ds, slice_axis, "density", width = width, center = max_density_coords[-1])
         print('centered at {}'. format(center)) 
         
         
