@@ -2,18 +2,14 @@ import warnings
 import os
 import yt
 import numpy as np
+import scipy as sc
 from yt.funcs import mylog
 
 mylog.setLevel(40)
 warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 
 def succ_distance (current, previous):
-    c = np.array(current) 
-    p = np.array(previous)
-    #print('previous array', previous)
-    #print('current array', current)
-    print(c,p)
-    dist = np.linalg.norm(c - p) 
+    dist = np.linalg.norm(np.array(current) - np.array(previous)) 
     return dist 
 
 #data directory/info file
@@ -27,7 +23,7 @@ sequence_title = 'New Centering Z Density'
 width = (310,'pc')
 slice_axis = 'z'
 start_step = 116
-end_step = 130
+end_step = 125
 
 ctr_shift_thresh = 0.0001 #code length
 
@@ -69,26 +65,25 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     max_density_coord = yt.YTArray(max_den).in_units('code_length') 
     #max_density_coord = np.array(max_density_coord)
     max_density_coord = np.array(max_density_coord)
-    print('coords', max_density_coord)
+    #print('coords', max_density_coord)
     
 
     #keep center of plots relatively stable
     if loop_num == 0:
         max_density_coords.append(max_density_coord)
     
-    succ_distance = succ_distance(max_density_coord, max_density_coords[-1])
+    distance = succ_distance(max_density_coord, max_density_coords[-1])
     
-    print('distance b/w current and previously used max density:', succ_distance)
+    print('> distance b/w current and previously used max density:', distance)
     
-    if succ_distance < ctr_shift_thresh: 
+    if distance < ctr_shift_thresh: 
         p = yt.SlicePlot(ds, slice_axis, "density", width = width, center = max_density_coord)
         max_density_coords.append(max_density_coord)
-        print('centered at {}'. format(max_density_coord)) 
+        print('> plot centered at {}'. format(max_density_coord)) 
     else: 
         center = max_density_coords[-1]
-        print('using previous center: {}'.format (center))
         p = yt.SlicePlot(ds, slice_axis, "density", width = width, center = max_density_coords[-1])
-        print('centered at {}'. format(center)) 
+        print('> using old center at {}'. format(center)) 
         
         
     print('annotating', np.array(be_star).size, 'star particles')
