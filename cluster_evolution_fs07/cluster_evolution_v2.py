@@ -23,9 +23,9 @@ sequence_title = 'New Centering Z Density'
 width = (510,'pc')
 slice_axis = 'z'
 start_step = 100
-end_step = 167
+end_step = 171
 
-ctr_shift_thresh = 0.0011 #code length
+ctr_shift_thresh = 0.001 #code length
 
 max_density_coords = []
 
