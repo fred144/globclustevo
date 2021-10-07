@@ -190,328 +190,328 @@ annotating 165 star particles
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
 reading fields...
 > distance b/w current and previously used max density: 0.000110255640145464
-> using old center at [0.4755168  0.49246264 0.49511766]
+> plot centered at [0.47547674 0.49253988 0.49504995]
 annotating 165 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00125-z-12_73-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00011916255034655265
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 2.2703658785064633e-05
+> plot centered at [0.47549343 0.49255466 0.49504566]
 annotating 165 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00126-z-12_7-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00012453759733234502
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.0566005614304547e-05
+> plot centered at [0.47549677 0.49255419 0.49503565]
 annotating 165 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00127-z-12_68-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0001312783878020111
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.0873560191238763e-05
+> plot centered at [0.47549963 0.49255419 0.49502516]
 annotating 165 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00128-z-12_65-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00013617082566633778
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.0190825592595343e-05
+> plot centered at [0.47550321 0.49255204 0.49501586]
 annotating 165 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00129-z-12_62-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00130/info_00130.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0001428652091392362
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.0770478496309532e-05
+> plot centered at [0.47550738 0.49255121 0.49500597]
 annotating 165 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00130-z-12_6-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00131/info_00131.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00015088094958421995
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.0905369796453341e-05
+> plot centered at [0.47551125 0.49255139 0.49499577]
 annotating 165 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00131-z-12_57-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00132/info_00132.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00015964980320322422
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.323491576165626e-05
+> plot centered at [0.47551733 0.49255008 0.49498409]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00132-z-12_54-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00133/info_00133.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0011163807016202304
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.0010724655154649917
+> using old center at [0.47551733 0.49255008 0.49498409]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00133-z-12_52-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00134/info_00134.txt
 reading fields...
-> distance b/w current and previously used max density: 0.001116761245773746
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.001072108550062985
+> using old center at [0.47551733 0.49255008 0.49498409]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00134-z-12_5-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00135/info_00135.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0011168854863560676
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.0010718709932099949
+> using old center at [0.47551733 0.49255008 0.49498409]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00135-z-12_49-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00136/info_00136.txt
 reading fields...
-> distance b/w current and previously used max density: 0.001117472808081059
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.001071392193290681
+> using old center at [0.47551733 0.49255008 0.49498409]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00136-z-12_46-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00137/info_00137.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00111754970329058
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.0010704818240399288
+> using old center at [0.47551733 0.49255008 0.49498409]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00137-z-12_44-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00138/info_00138.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0002094156752126464
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 5.3092283189970144e-05
+> plot centered at [0.47553301 0.49256468 0.49493551]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00138-z-12_41-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00139/info_00139.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00021744610954379484
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.0576759821338572e-05
+> plot centered at [0.47553968 0.49257135 0.49493074]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00139-z-12_39-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00140/info_00140.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0002285816290127354
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.194950493446374e-05
+> plot centered at [0.47554255 0.49257326 0.4949193 ]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00140-z-12_36-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00141/info_00141.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0002391445313453794
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.1431667418228963e-05
+> plot centered at [0.47554612 0.49257493 0.49490857]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00141-z-12_34-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00142/info_00142.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0002484402819968805
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.031556494366688e-05
+> plot centered at [0.47554994 0.49257588 0.49489903]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00142-z-12_31-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00143/info_00143.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0002582357184943393
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.0757936642433661e-05
+> plot centered at [0.47555375 0.49257684 0.49488902]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00143-z-12_29-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00144/info_00144.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0002677478592570559
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.0234657302805654e-05
+> plot centered at [0.47555697 0.49257791 0.49487936]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00144-z-12_26-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00145/info_00145.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0002754698157477936
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 8.324189305298834e-06
+> plot centered at [0.47555959 0.49257863 0.4948715 ]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00145-z-12_24-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00146/info_00146.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00028610415756090196
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.1667904189319189e-05
+> plot centered at [0.47556412 0.49257934 0.49486077]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00146-z-12_22-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00147/info_00147.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00029618005606035146
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.0805386727910418e-05
+> plot centered at [0.47556746 0.49258006 0.49485052]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00147-z-12_19-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00148/info_00148.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0003064105163298324
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.0993623908422653e-05
+> plot centered at [0.47557122 0.49258071 0.4948402 ]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00148-z-12_17-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00149/info_00149.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00031641476521730266
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.0657851764324708e-05
+> plot centered at [0.47557451 0.49258132 0.49483009]
 annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00149-z-12_15-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00150/info_00150.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00032840363510515245
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.2956600359766806e-05
+> plot centered at [0.47558033 0.49258244 0.49481857]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00150-z-12_12-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00151/info_00151.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0003404855010272318
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 1.2874603271552222e-05
+> plot centered at [0.47558606 0.49258387 0.49480712]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00151-z-12_1-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00152/info_00152.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0009808307587801993
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.0008825885475382298
+> using old center at [0.47558606 0.49258387 0.49480712]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00152-z-12_07-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00153/info_00153.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0009817149755709483
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.0008798034848023981
+> using old center at [0.47558606 0.49258387 0.49480712]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00153-z-12_05-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00154/info_00154.txt
 reading fields...
-> distance b/w current and previously used max density: 0.000982860977107702
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.0008771766160660928
+> using old center at [0.47558606 0.49258387 0.49480712]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00154-z-12_03-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00155/info_00155.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0009840997741148644
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.000874854476777539
+> using old center at [0.47558606 0.49258387 0.49480712]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00155-z-12_0-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00156/info_00156.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0009842914958846302
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.0008743171333142584
+> using old center at [0.47558606 0.49258387 0.49480712]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00156-z-12_0-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00157/info_00157.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0009849558145597823
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.0008731006792895165
+> using old center at [0.47558606 0.49258387 0.49480712]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00157-z-11_99-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00158/info_00158.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0009854759859947416
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.0008717789608221141
+> using old center at [0.47558606 0.49258387 0.49480712]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00158-z-11_98-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00159/info_00159.txt
 reading fields...
-> distance b/w current and previously used max density: 0.000986294293620046
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.0008712257499678643
+> using old center at [0.47558606 0.49258387 0.49480712]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00159-z-11_96-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00160/info_00160.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0009881450075598576
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 0.0008718214320008139
+> using old center at [0.47558606 0.49258387 0.49480712]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00160-z-11_95-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00161/info_00161.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0004179996522469642
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 9.10455437205039e-05
+> plot centered at [0.47557735 0.49265575 0.49475193]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00161-z-11_94-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00162/info_00162.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0004232925647096121
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 6.03156597169567e-06
+> plot centered at [0.47557926 0.49265575 0.49474621]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00162-z-11_93-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00163/info_00163.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00042692746261520587
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 4.26496119973521e-06
+> plot centered at [0.47558117 0.49265575 0.49474239]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00163-z-11_92-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00164/info_00164.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00043057392062198664
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 4.264961199809687e-06
+> plot centered at [0.47558308 0.49265575 0.49473858]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00164-z-11_91-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00165/info_00165.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0004345352427089245
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 5.3947966093944364e-06
+> plot centered at [0.47558689 0.49265575 0.49473476]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00165-z-11_89-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00166/info_00166.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0004398938438527639
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 6.031565971607899e-06
+> plot centered at [0.4755888  0.49265575 0.49472904]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00166-z-11_88-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00167/info_00167.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00044390312593814684
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 5.394796609355184e-06
+> plot centered at [0.47559261 0.49265575 0.49472523]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00167-z-11_87-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00168/info_00168.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0004476063571768246
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 4.264961199784861e-06
+> plot centered at [0.47559452 0.49265575 0.49472141]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00168-z-11_86-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00169/info_00169.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00045455238364826024
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 8.740569486449018e-06
+> plot centered at [0.47559071 0.49265766 0.49471378]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00169-z-11_85-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00170/info_00170.txt
 reading fields...
-> distance b/w current and previously used max density: 0.00045857630561939815
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 5.3947966093944364e-06
+> plot centered at [0.47559452 0.49265766 0.49470997]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00170-z-11_84-New-Centering-Z-Density.png
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00171/info_00171.txt
 reading fields...
-> distance b/w current and previously used max density: 0.0004626018432175959
-> using old center at [0.4755168  0.49246264 0.49511766]
+> distance b/w current and previously used max density: 4.932441917800834e-06
+> plot centered at [0.4755969  0.49265718 0.49470568]
 annotating 601 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/cl_enforced_refine/output-00171-z-11_83-New-Centering-Z-Density.png
