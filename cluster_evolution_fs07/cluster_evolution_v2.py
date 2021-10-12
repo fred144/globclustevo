@@ -23,7 +23,7 @@ sequence_title = 'New Centering Z Density'
 width = (610,'pc')
 slice_axis = 'z'
 start_step = 100
-end_step = 177
+end_step = 204
 
 ctr_shift_thresh =  0.0007 #code length
 
