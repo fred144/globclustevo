@@ -78,12 +78,17 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     
     if distance < ctr_shift_thresh: 
         p = yt.SlicePlot(ds, slice_axis, "density", width = width, center = max_density_coord)
-        max_density_coords.append(max_density_coord)
+        
+        # if the plot center migrates, annotate previous center
         p.annotate_marker(
             max_density_coords[-1],
-            marker="o",
+            marker="X",
             coord_system="data",
-            plot_args={"color": "yellow", "s": 200},)
+            plot_args={"color": "lime", "s": 40},)
+
+        # appen new center to list
+        max_density_coords.append(max_density_coord)
+
         print('> plot centered at {}'. format(max_density_coord)) 
     else: 
         center = max_density_coords[-1]
