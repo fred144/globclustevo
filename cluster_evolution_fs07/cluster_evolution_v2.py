@@ -17,13 +17,13 @@ def succ_distance (current, previous):
 #datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
 datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
-parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences'
-sequence_folder = 'cl_enforced_refine'
-sequence_title = 'New Centering Z Density'
-width = (610,'pc')
-slice_axis = 'z'
+parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
+sequence_folder = 'y_proj_den'
+sequence_title = 'Y Projected Density'
+width = (690,'pc')
+axis = 'y'
 start_step = 100
-end_step = 204
+end_step = 224
 
 ctr_shift_thresh =  0.0007 #code length
 
@@ -77,14 +77,14 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     print('> distance b/w current and previously used max density:', distance)
     
     if distance < ctr_shift_thresh: 
-        p = yt.SlicePlot(ds, slice_axis, "density", width = width, center = max_density_coord)
+        p = yt.ProjectionPlot(ds, axis, "density", width = width, center = max_density_coord)
         
         # if the plot center migrates, annotate previous center
         p.annotate_marker(
             max_density_coords[-1],
-            marker="X",
+            marker="x",
             coord_system="data",
-            plot_args={"color": "lime", "s": 40},)
+            plot_args={"color": "lime", "s": 30},)
 
         # appen new center to list
         max_density_coords.append(max_density_coord)
@@ -92,7 +92,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         print('> plot centered at {}'. format(max_density_coord)) 
     else: 
         center = max_density_coords[-1]
-        p = yt.SlicePlot(ds, slice_axis, "density", width = width, center = max_density_coords[-1])
+        p = yt.ProjectionPlot(ds, axis, "density", width = width, center = max_density_coords[-1])
         print('> using old center at {}'. format(center)) 
         
         
