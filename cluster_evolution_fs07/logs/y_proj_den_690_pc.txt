@@ -630,3 +630,129 @@ annotating 601 star particles
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00188/info_00188.txt
 reading fields...
+> distance b/w current and previously used max density: 5.478441854990033e-06
+> plot centered at [0.47563601 0.49265528 0.49462557]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00188-z-11_64-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00189/info_00189.txt
+reading fields...
+> distance b/w current and previously used max density: 5.56082906236192e-06
+> plot centered at [0.47563887 0.49265528 0.4946208 ]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00189-z-11_62-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00190/info_00190.txt
+reading fields...
+> distance b/w current and previously used max density: 5.642013342942979e-06
+> plot centered at [0.47564363 0.49265432 0.49461794]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00190-z-11_61-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00191/info_00191.txt
+reading fields...
+> distance b/w current and previously used max density: 5.135693366178993e-06
+> plot centered at [0.47564554 0.49265432 0.49461317]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00191-z-11_6-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00192/info_00192.txt
+reading fields...
+> distance b/w current and previously used max density: 6.1805159553003205e-06
+> plot centered at [0.47564936 0.49265337 0.4946084 ]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00192-z-11_59-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00193/info_00193.txt
+reading fields...
+> distance b/w current and previously used max density: 5.893329188484877e-06
+> plot centered at [0.4756515  0.49265361 0.49460292]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00193-z-11_58-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00194/info_00194.txt
+reading fields...
+> distance b/w current and previously used max density: 5.179777379546934e-06
+> plot centered at [0.47565436 0.49265313 0.49459863]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00194-z-11_57-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00195/info_00195.txt
+reading fields...
+> distance b/w current and previously used max density: 5.5812358431237995e-06
+> plot centered at [0.47565722 0.49265265 0.49459386]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00195-z-11_56-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00196/info_00196.txt
+reading fields...
+> distance b/w current and previously used max density: 5.179777379608257e-06
+> plot centered at [0.47566009 0.49265218 0.49458957]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00196-z-11_55-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00197/info_00197.txt
+reading fields...
+> distance b/w current and previously used max density: 5.3312014996752194e-06
+> plot centered at [0.47566247 0.49265218 0.4945848 ]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00197-z-11_53-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00198/info_00198.txt
+reading fields...
+> distance b/w current and previously used max density: 5.78134329466694e-06
+> plot centered at [0.47566485 0.4926517  0.49457955]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00198-z-11_52-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00199/info_00199.txt
+reading fields...
+> distance b/w current and previously used max density: 5.601568281308385e-06
+> plot centered at [0.47566676 0.49265122 0.49457431]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00199-z-11_51-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00200/info_00200.txt
+reading fields...
+> distance b/w current and previously used max density: 6.1378315267102635e-06
+> plot centered at [0.47566974 0.4926511  0.49456894]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00200-z-11_5-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00201/info_00201.txt
+reading fields...
+> distance b/w current and previously used max density: 9.569469566559976e-06
+> plot centered at [0.47567475 0.49264896 0.49456108]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00201-z-11_49-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00202/info_00202.txt
+reading fields...
+> distance b/w current and previously used max density: 7.266879393638692e-06
+> plot centered at [0.47567594 0.49264944 0.49455392]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00202-z-11_47-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00203/info_00203.txt
+reading fields...
+> distance b/w current and previously used max density: 5.761645304486548e-06
+> plot centered at [0.47567642 0.49264991 0.4945482 ]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00203-z-11_46-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00204/info_00204.txt
+reading fields...
+> distance b/w current and previously used max density: 5.855530694507716e-06
+> plot centered at [0.47567707 0.49265057 0.49454242]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00204-z-11_45-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00205/info_00205.txt
+reading fields...
+> distance b/w current and previously used max density: 5.9017628643302894e-06
+> plot centered at [0.47567695 0.4926514  0.49453658]
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/y_proj_den/output-00205-z-11_44-Y-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00206/info_00206.txt
+reading fields...

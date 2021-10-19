@@ -854,3 +854,35 @@ annotating 4186 star particles
 -
 #reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00220/info_00220.txt
 reading fields...
+> distance b/w current and previously used max density: 5.6117068748352255e-06
+> plot centered at [0.47569907 0.49266756 0.49445808]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/z_proj_den/output-00220-z-11_27-Z-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00221/info_00221.txt
+reading fields...
+> distance b/w current and previously used max density: 5.611706874811641e-06
+> plot centered at [0.47569978 0.49266851 0.4944526 ]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/z_proj_den/output-00221-z-11_26-Z-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00222/info_00222.txt
+reading fields...
+> distance b/w current and previously used max density: 5.657105692687548e-06
+> plot centered at [0.4757005  0.4926697  0.49444711]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/z_proj_den/output-00222-z-11_25-Z-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00223/info_00223.txt
+reading fields...
+> distance b/w current and previously used max density: 5.039325091415115e-06
+> plot centered at [0.47570109 0.49267077 0.49444222]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/z_proj_den/output-00223-z-11_24-Z-Projected-Density.png
+-
+#reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00224/info_00224.txt
+reading fields...
+> distance b/w current and previously used max density: 5.457650729254668e-06
+> plot centered at [0.47570157 0.4926722  0.49443698]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/z_proj_den/output-00224-z-11_23-Z-Projected-Density.png
