@@ -18,14 +18,20 @@ def succ_distance (current, previous):
 datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'y_proj_den'
-sequence_title = 'Y Projected Density'
-width = (690,'pc')
-axis = 'y'
-start_step = 100
-end_step = 224
+sequence_folder = 'z_proj_den_cmap'
 
-ctr_shift_thresh =  0.0007 #code length
+#make new folder
+newpath = parent_folder + '/' + sequence_folder
+if not os.path.exists(newpath):
+    os.makedirs(newpath)
+
+sequence_title = 'Z Projected Density'
+width = (690,'pc')
+axis = 'z'
+start_step = 100
+end_step = 235
+
+ctr_shift_thresh =  0.00065 #code length
 
 max_density_coords = []
 
@@ -119,12 +125,13 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     p.annotate_timestamp(corner='lower_left', 
                          time_format='t = {time:.2f} {units}', 
                          time_unit= 'Myr', 
-                         redshift=True, 
-                         draw_inset_box=True)
-    p.annotate_scale(corner='lower_right', draw_inset_box= True)
+                         redshift=True) 
+                         #draw_inset_box=True)
+    p.annotate_scale(corner='lower_right')#, draw_inset_box= True)
 
     #p.annotate_cell_edges() 
-    p.set_cmap("density", "magma")
+    p.set_cmap('density', 'magma')
+    p.set_zlim('density', 0.01, 1)
 
     plot_title = str( "{} {}| Red = Pop II, Blue = SFC, Black = PSC ".format(sequence_title, output_num) ) 
 
