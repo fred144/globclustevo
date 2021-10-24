@@ -18,7 +18,7 @@ def succ_distance (current, previous):
 datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'z_proj_den_cmap_2'
+sequence_folder = 'z_proj_den_cmap_3'
 
 #make new folder
 newpath = parent_folder + '/' + sequence_folder
@@ -131,7 +131,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 
     #p.annotate_cell_edges() 
     p.set_cmap('density', 'magma')
-    p.set_zlim('density', 0.01, .5)
+    p.set_zlim('density', 0.01, .1)
 
     plot_title = str( "{} {}| Red = Pop II, Blue = SFC, Black = PSC ".format(sequence_title, output_num) ) 
 
