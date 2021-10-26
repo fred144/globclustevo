@@ -30,6 +30,7 @@ def code_age_to_yr (all_star_ages, hubble_const, unique = True):
         be_star_processed = np.array(sorted( list( set(all_star_ages.to_ndarray()) ) ) ) 
         star_age_myr = be_star_processed * h_0inv_yr/1e6
         relative_ages = star_age_myr - star_age_myr.min()
+        print(relative_ages)
     else: 
         all_stars  =  np.array(list( all_star_ages.to_ndarray()) )
         star_age_myr = all_stars * h_0inv_yr/1e6
@@ -50,7 +51,7 @@ def clump_tracker(ds, birth_epochs, plot_object, width):
             relative_ages = code_age_to_yr(all_star_ages=code_ages, 
                                            hubble_const=h,
                                            unique=False)
-            print(relative_ages)
+            #print(relative_ages)
             print(be)
             filter = relative_ages != be
             #filter = 
