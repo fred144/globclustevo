@@ -2,7 +2,7 @@ import warnings
 import os
 import yt
 import numpy as np
-import scipy as sc
+#import scipy as sc
 from yt.funcs import mylog
 
 mylog.setLevel(40)
