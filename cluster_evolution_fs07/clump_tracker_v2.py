@@ -117,7 +117,7 @@ if not os.path.exists(newpath):
 sequence_title = 'Z Projected Density'
 width = (690,'pc')
 axis = 'z'
-start_step = 113
+start_step = 163
 end_step = 254
 ctr_shift_thresh =  0.00060 #code length
 
