@@ -36,7 +36,7 @@ ctr_shift_thresh =  0.00060 #code length
 max_density_coords = []
 
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
-    print ("-")
+    print ("----------------------------------")
     infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (output_num,output_num))
     print ("#reading in info file: %s" %infofile)  
 
