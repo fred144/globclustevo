@@ -2,12 +2,14 @@ import warnings
 import os
 import yt
 import numpy as np
-#import scipy as sc
+import sys
+import functools
 from yt.funcs import mylog
 from clump_filters import clump_filters
 
 mylog.setLevel(40)
 warnings.simplefilter(action = "ignore", category = RuntimeWarning)
+namespace = sys._getframe(0).f_globals
 
 def succ_distance (current, previous):
     dist = np.linalg.norm(np.array(current) - np.array(previous)) 
@@ -39,99 +41,108 @@ def code_age_to_yr (all_star_ages, hubble_const, unique = True):
     #print(relative_ages)
     return relative_ages
 
-def clump_tracker(ds, birth_epochs, plot_object, width): 
-    print (birth_epochs)
-    for clump_num, be in enumerate(list(birth_epochs)):
+# def clump_tracker(ds, birth_epochs, width): 
+#     print (birth_epochs)
+    
+#     for clump_num, be in enumerate(list(birth_epochs)):
         
-        #clump_name = 'clump_' + str(clump_num)
+#         clump_name = 'clump_' + str(clump_num)
         
-        @yt.particle_filter(requires=['particle_birth_epoch'], filtered_type='star')
+#         @yt.particle_filter(requires=['particle_birth_epoch'], filtered_type='star')
+#         def clump(pfilter, data):
+#             h = ds.hubble_constant
+#             code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+#             relative_ages = code_age_to_yr(all_star_ages=code_ages, 
+#                                            hubble_const=h,
+#                                            unique=False)
+#             #print(relative_ages)
+#             print(clump_num)
+#             print(be)
+#             filter = relative_ages == be
+#             #filter = 
+#             return filter
+#         # yt.add_particle_filter( 
+#         #     "clump1", function = clump1, filtered_type="star", requires=["particle_birth_epoch"]
+#         #     )
+#         ds.add_particle_filter('clump') 
+#         # 
+#         # plot_object.annotate_particles( 
+#         #     width=width, ptype='clump', p_size=10.0, marker='.', col=np.random.rand(3,1).T  
+#         #     ) 
+#         del clump
+        
+def clump_tracker(ds, birth_epochs, width): 
+    birth_epochs = np.array(birth_epochs)
+    
+    for clump_num, be in enumerate(birth_epochs, start=1):
+        
+        clump_name = 'clump_' + str(clump_num)
+        #print(be)
+       # @yt.particle_filter(requires=['particle_birth_epoch'], filtered_type='star')
+       
         def clump(pfilter, data):
             h = ds.hubble_constant
+            
             code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+            
             relative_ages = code_age_to_yr(all_star_ages=code_ages, 
                                            hubble_const=h,
                                            unique=False)
-            #print(relative_ages)
-            print(clump_num)
-            print(be)
-            filter = relative_ages == be
-            #filter = 
+            test = birth_epochs[clump_num-1]
+            print(test)
+            filter = relative_ages == test 
             return filter
-        # yt.add_particle_filter( 
-        #     "clump1", function = clump1, filtered_type="star", requires=["particle_birth_epoch"]
-        #     )
-        ds.add_particle_filter('clump') 
-        # 
-        plot_object.annotate_particles( 
-            width=width, ptype='clump', p_size=10.0, marker='.', col=np.random.rand(3,1).T  
-            ) 
-        del clump
         
+        clump()
         
+        namespace['clump_%s'%str(clump_num)] = functools.partial(clump)
         
-#some colors https://www.rapidtables.com/web/color/RGB_Color.html
-maroon = np.array([128,0,0])/255.; maroon = maroon.reshape(1,-1)
-tomato = np.array([255,99,71])/255.; tomato = tomato.reshape(1,-1)
-orange_red = np.array([255,69,0])/255.; orange_red = orange_red.reshape(1,-1)
-dark_orange = np.array([255,140,0])/255.; dark_orange = dark_orange.reshape(1,-1)
-dark_golden_rod =  np.array([184,134,11])/255.; dark_golden_rod = dark_golden_rod.reshape(1,-1)
-olive =  np.array([128,128,0])/255.; olive = olive.reshape(1,-1)
-lime  =  np.array([0,255,0])/255.; lime  = lime .reshape(1,-1)     
-teal =  np.array([0,128,128])/255.; teal  = teal .reshape(1,-1)              
-indigo = np.array([75,0,130])/255.; indigo  = indigo .reshape(1,-1)  
-thistle = np.array([216,191,216])/255.; thistle  = thistle .reshape(1,-1)  
-plum = np.array([221,160,221])/255.; plum  = plum .reshape(1,-1)  
-violet = np.array([238,130,238])/255.; violet  = violet .reshape(1,-1)  
-deep_pink = np.array([255,20,147])/255.; deep_pink  = deep_pink .reshape(1,-1) 
-light_pink = np.array([255,182,193])/255.; light_pink   = light_pink  .reshape(1,-1) 
-chocolate = np.array([210,105,30])/255.; chocolate    = chocolate   .reshape(1,-1) 
-beige = np.array([245,245,220])/255.; beige= beige.reshape(1,-1) 
-wheat = np.array([245,222,179])/255.; wheat= wheat.reshape(1,-1) 
-saddle_brown = np.array([139,69,19])/255.; saddle_brown= saddle_brown.reshape(1,-1)
-honeydew = np.array([240,255,240])/255.; honeydew = honeydew .reshape(1,-1)
-ivory = np.array([255,255,240])/255.; ivory = ivory .reshape(1,-1)
-azure = np.array([240,255,255])/255.; azure = azure .reshape(1,-1)
-mintcream = np.array([245,255,250])/255.; mintcream = mintcream .reshape(1,-1)
+        yt.add_particle_filter(clump_name, 
+                                function=namespace['clump_%s'%str(clump_num)], 
+                                filtered_type='star', 
+                                requires=['particle_birth_epoch'],
+                                )
+        ds.add_particle_filter(clump_name)         
+        
       
 #---------------------------------data directory/info file---------------------
-#datadir = os.path.expanduser(
-#    'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine') 
+datadir = os.path.expanduser(
+    'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine') 
 
 #datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
-datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
+#datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 # local save path 
-#parent_folder = 'G:/My Drive/Research/AstrophysicsSimulation/' + \
-#                'ClusterEnvironment/AstroSimulationResearch/cluster_evolution_fs07'
-#sequence_folder = 'test_frames'
+parent_folder = 'C:/Users/1.44/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
+sequence_folder = 'test_frames'
 #---------------------------------save path---------------------
 ##### cluster save path ######
-parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'z_proj_den_old_clump_tracking'
+# parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
+# sequence_folder = 'z_proj_den_old_clump_tracking'
 # make new folder
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 #plot params
-sequence_title = 'Z Projected Density'
+sequence_title = 'test'
 width = (690,'pc')
 axis = 'z'
-start_step = 163
-end_step = 254
+start_step = 250
+end_step = 250
 ctr_shift_thresh =  0.00060 #code length
 
 max_density_coords = []
 
 #generate colors test
-#colors = np.zeros([13,3])
-#for i in range (0,10):
-#    #color = np.random.rand(3,1).T 
-#    
-#    color =  np.array([np.random.rand(),np.random.rand(),np.random.rand()])/255.
-#    color= color.reshape(1,-1)
-#    colors[i,:]= color
+colors = np.zeros([50,3])
+for i in range (0,np.shape(colors)[0]):
+    #color = np.random.rand(3,1).T 
     
+    color = np.random.rand(3,1).T
+    colors[i,:]= color
+colors = list(colors)
+
+
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     print ("-")
@@ -154,7 +165,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     print('reading fields...')
     
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
-    clump_filters(ds)###################
+    #clump_filters(ds)###################
     redshft = ds.current_redshift
     current_hubble = ds.hubble_constant  
     
@@ -176,6 +187,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     unique_birth_epochs = code_age_to_yr(raw_birth_epochs, current_hubble)
     print('> clumps:', len(unique_birth_epochs))
     #keep center of plots relatively stable
+    
     if loop_num == 0:
         max_density_coords.append(max_density_coord)
     
@@ -202,51 +214,39 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         p = yt.ProjectionPlot(ds, axis, "density", width = width, center = max_density_coords[-1])
         print('> using old center at {}'. format(center)) 
         
-        
+    #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
+    
+    clump_tracker(ds=ds, birth_epochs=unique_birth_epochs, width=width)
+    
     print('annotating', np.array(be_star).size, 'star particles')
+    for clumpnum in range(1, len(unique_birth_epochs) - 1):
+        clumpname = 'clump_' + str(clumpnum) 
+        color = colors[clumpnum]
+        color = color.reshape(1,-1)
+        p.annotate_particles(width=width, ptype=clumpname, p_size=20.0, marker='.',col=color) 
+        
+
     if pos_SFCs.size > 0:
 #         first_sfc_center = pos_SFCs[0]  
-#         p = yt.SlicePlot(ds, 'z', "density", width = width, center = first_sfc_center) #turn this on to track center of sfc
+
         p.annotate_particles(width = width,
                              ptype='SFC', 
-                             p_size=100.0,
+                             p_size=30,
                              marker='x',col='b') 
     if pos_PSCs.size > 0: 
         p.annotate_particles(width = width,
                              ptype='PSC', 
-                             p_size=100.0,
-                             marker='x',col='k')
+                             p_size=30,
+                             marker='x',col='r')
 #         if pos_SFCs.size == 0: 
 #             first_psc_center = pos_PSCs[0] 
-#             p = yt.SlicePlot(ds, 'z', "density", width = width, center = first_psc_center) #turn this on to track center of psc
-        
-            
-    #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r')    
-    #for clumpnum, color in enumerate(colors, start = 1):
-    #    clumpname = 'clump'+str(clumpnum) 
-     #   print(color)
-     #   p.annotate_particles(width=width, ptype=clumpname, p_size=20.0, marker='.',col=color) 
-    p.annotate_particles(width=width, ptype="clump1", p_size=10.0, marker='.',col='b') 
-    p.annotate_particles(width=width, ptype="clump2", p_size=10.0, marker='.',col='g') 
-    p.annotate_particles(width=width, ptype="clump3", p_size=10.0, marker='.',col='r') 
-    p.annotate_particles(width=width, ptype="clump4", p_size=10.0, marker='.',col='c') 
-    p.annotate_particles(width=width, ptype="clump5", p_size=10.0, marker='.',col='m') 
-    p.annotate_particles(width=width, ptype="clump6", p_size=10.0, marker='.',col='y') 
-    p.annotate_particles(width=width, ptype="clump7", p_size=10.0, marker='.',col='k') 
-    p.annotate_particles(width=width, ptype="clump8", p_size=10.0, marker='.',col=maroon) 
-    p.annotate_particles(width=width, ptype="clump9", p_size=10.0, marker='.',col=tomato) 
-    p.annotate_particles(width=width, ptype="clump10", p_size=10.0, marker='.',col=orange_red) 
-    p.annotate_particles(width=width, ptype="clump11", p_size=10.0, marker='.',col=dark_orange) 
-    p.annotate_particles(width=width, ptype="clump12", p_size=10.0, marker='.',col=dark_golden_rod) 
-    p.annotate_particles(width=width, ptype="clump13", p_size=10.0, marker='.',col=olive) 
-#    clump_tracker(ds=ds, birth_epochs=unique_birth_epochs , plot_object=p, width=width)
     
     p.annotate_timestamp(corner='lower_left', 
                          time_format='t = {time:.2f} {units}', 
                          time_unit= 'Myr', 
                          redshift=True) 
-                         #draw_inset_box=True)
-    p.annotate_scale(corner='lower_right') #, draw_inset_box= True)
+    p.annotate_scale(corner='lower_right') 
+   
     p.set_cmap('density', 'magma')
     p.set_zlim('density', 0.01, .05)
 
