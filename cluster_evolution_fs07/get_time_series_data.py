@@ -73,7 +73,6 @@ data = np.array(data)
 
 name = clust_save_path + '/timeseriesdata.txt'
 np.savetxt(fname=name, X=data)
-    
 
 
     

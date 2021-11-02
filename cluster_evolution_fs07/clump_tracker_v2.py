@@ -193,7 +193,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # get halos 
     hc = HaloCatalog(data_ds=ds, finder_method='fof',
                      finder_kwargs={"ptype": 'DM',
-                                    "padding": 0.6,
+                                    "padding": 0.02,
                                     "link": 0.0002,
                                     "dm_only":False})
     hc.create()
