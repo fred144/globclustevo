@@ -1,0 +1,673 @@
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca mpi_cuda_support 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+*** WARNING (KS MODIFIED) ****   particle_families is modified in yt/frontends/ramses/definitions.py
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00245/info_00245.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501]
+
+> distance b/w current and previously used max density: 0.0
+> plot centered at [0.47570643 0.49269918 0.49437436]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00245-z-11_08-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00246/info_00246.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501]
+
+> distance b/w current and previously used max density: 2.5711304863479862e-06
+> plot centered at [0.4757064  0.49270099 0.49437255]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00246-z-11_07-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00247/info_00247.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501]
+
+> distance b/w current and previously used max density: 3.7949428231308843e-06
+> plot centered at [0.47570573 0.49270178 0.4943689 ]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00247-z-11_07-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00248/info_00248.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501]
+
+> distance b/w current and previously used max density: 2.348613515707491e-05
+> plot centered at [0.47572076 0.49268401 0.49436581]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00248-z-11_07-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00249/info_00249.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501]
+
+> distance b/w current and previously used max density: 2.2492363767464645e-06
+> plot centered at [0.47572124 0.49268448 0.49436367]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00249-z-11_06-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00250/info_00250.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501]
+
+> distance b/w current and previously used max density: 2.644189955382193e-06
+> plot centered at [0.47572148 0.49268472 0.49436104]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00250-z-11_06-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00251/info_00251.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501]
+
+> distance b/w current and previously used max density: 2.168003735468816e-06
+> plot centered at [0.4757219  0.49268514 0.49435896]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00251-z-11_05-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00252/info_00252.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501]
+
+> distance b/w current and previously used max density: 2.088715489866133e-06
+> plot centered at [0.47572225 0.4926855  0.49435693]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00252-z-11_05-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00253/info_00253.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501]
+
+> distance b/w current and previously used max density: 2.468875543602195e-06
+> plot centered at [0.47572257 0.49268599 0.49435453]
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00253-z-11_04-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00254/info_00254.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775]
+
+> distance b/w current and previously used max density: 2.7661227451729462e-06
+> plot centered at [0.47572261 0.49268645 0.4943518 ]
+annotating 4568 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00254-z-11_04-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00255/info_00255.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775]
+
+> distance b/w current and previously used max density: 1.440411326089478e-06
+> plot centered at [0.47572368 0.49268657 0.49435085]
+annotating 4568 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00255-z-11_04-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00256/info_00256.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775]
+
+> distance b/w current and previously used max density: 1.8659205248950158e-06
+> plot centered at [0.47572416 0.49268681 0.49434906]
+annotating 4568 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00256-z-11_03-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00257/info_00257.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775]
+
+> distance b/w current and previously used max density: 3.373854565167751e-06
+> plot centered at [0.47572547 0.49268991 0.4943493 ]
+annotating 4568 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00257-z-11_03-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00258/info_00258.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775]
+
+> distance b/w current and previously used max density: 2.41062841511661e-06
+> plot centered at [0.47572614 0.49268974 0.49434699]
+annotating 4568 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00258-z-11_02-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00259/info_00259.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823]
+
+> distance b/w current and previously used max density: 2.3850703833631167e-06
+> plot centered at [0.47572634 0.49268994 0.49434462]
+annotating 5433 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00259-z-11_02-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00260/info_00260.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823]
+
+> distance b/w current and previously used max density: 2.631394869655322e-06
+> plot centered at [0.47572693 0.49268994 0.49434206]
+annotating 5433 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00260-z-11_02-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00261/info_00261.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823]
+
+> distance b/w current and previously used max density: 1.900584550317921e-06
+> plot centered at [0.47572738 0.49269027 0.49434024]
+annotating 5433 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00261-z-11_01-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00262/info_00262.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823]
+
+> distance b/w current and previously used max density: 2.0887154898914786e-06
+> plot centered at [0.47572774 0.49269062 0.49433821]
+annotating 5433 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00262-z-11_01-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00263/info_00263.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823]
+
+> distance b/w current and previously used max density: 2.082540569384187e-06
+> plot centered at [0.47572818 0.49269101 0.49433622]
+annotating 5433 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00263-z-11_0-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00264/info_00264.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 1.6060106260321809e-06
+> plot centered at [0.47572878 0.49269095 0.49433473]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00264-z-11_0-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00265/info_00265.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 4.3392836387637365e-07
+> plot centered at [0.4757289  0.49269095 0.49433431]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00265-z-11_0-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00266/info_00266.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 1.7487133267510062e-06
+> plot centered at [0.47572929 0.4926911  0.49433261]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00266-z-10_99-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00267/info_00267.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.1883916557652735e-06
+> plot centered at [0.47573036 0.4926911  0.4943307 ]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00267-z-10_99-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00268/info_00268.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 1.8419667649000615e-06
+> plot centered at [0.47573125 0.49269116 0.49432909]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00268-z-10_99-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00269/info_00269.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.037049232881496e-06
+> plot centered at [0.47573197 0.49269116 0.49432719]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00269-z-10_98-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00270/info_00270.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 1.114718411207195e-05
+> plot centered at [0.47572458 0.49269783 0.49432218]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00270-z-10_98-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00271/info_00271.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 1.1154830517967909e-05
+> plot centered at [0.4757334  0.49269116 0.49432361]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00271-z-10_97-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00272/info_00272.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 1.998454054803058e-05
+> plot centered at [0.47572029 0.4927007  0.49431193]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00272-z-10_97-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00273/info_00273.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.3481506828268387e-06
+> plot centered at [0.47572029 0.49270165 0.49430978]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00273-z-10_97-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00274/info_00274.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.6656007498500226e-06
+> plot centered at [0.47572029 0.49270284 0.4943074 ]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00274-z-10_96-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00275/info_00275.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.348150682900111e-06
+> plot centered at [0.47572029 0.4927038  0.49430525]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00275-z-10_96-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00276/info_00276.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.0370492328295197e-06
+> plot centered at [0.47572029 0.49270451 0.49430335]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00276-z-10_95-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00277/info_00277.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.3602235166100658e-06
+> plot centered at [0.47572052 0.49270546 0.4943012 ]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00277-z-10_95-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00278/info_00278.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.1324805997807166e-06
+> plot centered at [0.47572052 0.49270642 0.49429929]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00278-z-10_95-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00279/info_00279.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.1457672120374206e-06
+> plot centered at [0.47572076 0.49270737 0.49429739]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00279-z-10_94-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00280/info_00280.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 1.936921692876837e-06
+> plot centered at [0.475721   0.49270833 0.49429572]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00280-z-10_94-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00281/info_00281.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.274368289534351e-06
+> plot centered at [0.47572124 0.49270904 0.49429357]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00281-z-10_94-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00282/info_00282.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.145767211889391e-06
+> plot centered at [0.47572148 0.49270999 0.49429166]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00282-z-10_93-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00283/info_00283.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.1457672120004133e-06
+> plot centered at [0.47572172 0.49271095 0.49428976]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00283-z-10_93-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00284/info_00284.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 1.7950797493960837e-06
+> plot centered at [0.4757219  0.49271172 0.49428815]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00284-z-10_92-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00285/info_00285.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.1457672119140625e-06
+> plot centered at [0.47572213 0.49271268 0.49428624]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00285-z-10_92-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00286/info_00286.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277]
+
+> distance b/w current and previously used max density: 2.1562963680852542e-06
+> plot centered at [0.47572234 0.4927136  0.4942843 ]
+annotating 5829 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00286-z-10_92-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00287/info_00287.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 1.6614627676724553e-06
+> plot centered at [0.4757224  0.4927142  0.49428275]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00287-z-10_91-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00288/info_00288.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 2.7590899288182002e-06
+> plot centered at [0.47572237 0.4927147  0.49428004]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00288-z-10_91-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00289/info_00289.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 2.1157550036446684e-06
+> plot centered at [0.47572249 0.4927153  0.49427801]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00289-z-10_9-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00290/info_00290.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 2.525296230839705e-06
+> plot centered at [0.47572339 0.49271572 0.49427569]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00290-z-10_9-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00291/info_00291.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 2.0230487284705773e-06
+> plot centered at [0.47572386 0.49271619 0.49427378]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00291-z-10_9-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00292/info_00292.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 2.3115538870889327e-06
+> plot centered at [0.47572434 0.49271691 0.49427164]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00292-z-10_89-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00293/info_00293.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 1.8773097691634608e-06
+> plot centered at [0.47572505 0.49271739 0.49426997]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00293-z-10_89-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00294/info_00294.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 2.0370492327450574e-06
+> plot centered at [0.47572505 0.4927181  0.49426806]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00294-z-10_89-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00295/info_00295.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 1.831327855100523e-06
+> plot centered at [0.47572529 0.49271882 0.49426639]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00295-z-10_88-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00296/info_00296.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 1.7520115919191103e-06
+> plot centered at [0.47572553 0.49271929 0.49426472]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00296-z-10_88-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00297/info_00297.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 2.3602235166773554e-06
+> plot centered at [0.47572577 0.49272025 0.49426258]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00297-z-10_87-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00298/info_00298.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 1.8000207985387102e-06
+> plot centered at [0.47572625 0.49272072 0.49426091]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00298-z-10_87-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00299/info_00299.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 2.3564574003899768e-06
+> plot centered at [0.47572666 0.49272174 0.49425882]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00299-z-10_87-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00300/info_00300.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249]
+
+> distance b/w current and previously used max density: 1.8436536583410797e-06
+> plot centered at [0.47572687 0.49272242 0.49425712]
+annotating 6185 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00300-z-10_86-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00301/info_00301.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249 98.17317232]
+
+> distance b/w current and previously used max density: 2.3990406748650203e-06
+> plot centered at [0.47572687 0.49272349 0.49425498]
+annotating 6749 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00301-z-10_86-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00302/info_00302.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249 98.17317232]
+
+> distance b/w current and previously used max density: 1.0674890691275818e-06
+> plot centered at [0.47572666 0.49272341 0.49425393]
+annotating 6749 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00302-z-10_86-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00303/info_00303.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249 98.17317232]
+
+> distance b/w current and previously used max density: 1.8848643661022344e-06
+> plot centered at [0.47572666 0.492724   0.49425215]
+annotating 6749 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00303-z-10_85-clump_tracking.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00304/info_00304.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952 68.6774688  68.96389576 69.09889334
+ 69.34419314 70.17392563 70.19719182 70.2027757  70.30222356 70.41787201
+ 70.79423501 88.28128775 89.38194823 90.51360277 95.28010249 98.17317232]
+
+> distance b/w current and previously used max density: 1.968758650415175e-06
+> plot centered at [0.47572672 0.49272406 0.49425018]
+annotating 6749 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/clump_tracking_11_02_21/output-00304-z-10_85-clump_tracking.png
