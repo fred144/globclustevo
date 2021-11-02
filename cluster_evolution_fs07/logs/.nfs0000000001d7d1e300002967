@@ -1,0 +1,317 @@
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca mpi_cuda_support 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+*** WARNING (KS MODIFIED) ****   particle_families is modified in yt/frontends/ramses/definitions.py
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00150/info_00150.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 0.0
+> plot centered at [0.47558033 0.49258244 0.49481857]
+annotating 601 star particles
+clump_tracker_v2.py:238: VisibleDeprecationWarning: Development of the HaloCatalog module has been moved to the yt_astro_analysis package. This version is deprecated and will be removed from yt in a future release. See https://github.com/yt-project/yt_astro_analysis for further information.
+  from yt.analysis_modules.halo_analysis.api import HaloCatalog
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829895
+Number of groups:113
+FOF CPU TIME: 1.398803 secs
+Creating catalog:   0%|          | 0/113 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00150-z-12_12-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00151/info_00151.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 1.2874603271552222e-05
+> plot centered at [0.47558606 0.49258387 0.49480712]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829720
+Number of groups:101
+FOF CPU TIME: 1.383209 secs
+Creating catalog:   0%|          | 0/101 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00151-z-12_1-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00152/info_00152.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 0.0008825885475382298
+> using old center at [0.47558606 0.49258387 0.49480712]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829938
+Number of groups:108
+FOF CPU TIME: 1.318003 secs
+Creating catalog:   0%|          | 0/108 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00152-z-12_07-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00153/info_00153.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 0.0008798034848023981
+> using old center at [0.47558606 0.49258387 0.49480712]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829769
+Number of groups:103
+FOF CPU TIME: 1.427957 secs
+Creating catalog:   0%|          | 0/103 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00153-z-12_05-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00154/info_00154.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 0.0008771766160660928
+> using old center at [0.47558606 0.49258387 0.49480712]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829729
+Number of groups:88
+FOF CPU TIME: 1.405142 secs
+Creating catalog:   0%|          | 0/88 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00154-z-12_03-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00155/info_00155.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 0.000874854476777539
+> using old center at [0.47558606 0.49258387 0.49480712]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829770
+Number of groups:89
+FOF CPU TIME: 1.339245 secs
+Creating catalog:   0%|          | 0/89 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00155-z-12_0-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00156/info_00156.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 0.0008743171333142584
+> using old center at [0.47558606 0.49258387 0.49480712]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829754
+Number of groups:91
+FOF CPU TIME: 1.386724 secs
+Creating catalog:   0%|          | 0/91 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00156-z-12_0-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00157/info_00157.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 0.0008731006792895165
+> using old center at [0.47558606 0.49258387 0.49480712]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829768
+Number of groups:97
+FOF CPU TIME: 1.350296 secs
+Creating catalog:   0%|          | 0/97 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00157-z-11_99-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00158/info_00158.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 0.0008717789608221141
+> using old center at [0.47558606 0.49258387 0.49480712]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829899
+Number of groups:99
+FOF CPU TIME: 1.345176 secs
+Creating catalog:   0%|          | 0/99 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00158-z-11_98-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00159/info_00159.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 0.0008712257499678643
+> using old center at [0.47558606 0.49258387 0.49480712]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829856
+Number of groups:97
+FOF CPU TIME: 1.267299 secs
+Creating catalog:   0%|          | 0/97 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00159-z-11_96-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00160/info_00160.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 0.0008718214320008139
+> using old center at [0.47558606 0.49258387 0.49480712]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829685
+Number of groups:90
+FOF CPU TIME: 1.414816 secs
+Creating catalog:   0%|          | 0/90 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00160-z-11_95-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00161/info_00161.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 9.10455437205039e-05
+> plot centered at [0.47557735 0.49265575 0.49475193]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829696
+Number of groups:97
+FOF CPU TIME: 1.369470 secs
+Creating catalog:   0%|          | 0/97 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00161-z-11_94-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00162/info_00162.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 6.03156597169567e-06
+> plot centered at [0.47557926 0.49265575 0.49474621]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829789
+Number of groups:103
+FOF CPU TIME: 1.339705 secs
+Creating catalog:   0%|          | 0/103 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00162-z-11_93-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00163/info_00163.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 4.26496119973521e-06
+> plot centered at [0.47558117 0.49265575 0.49474239]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829591
+Number of groups:88
+FOF CPU TIME: 1.278686 secs
+Creating catalog:   0%|          | 0/88 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00163-z-11_92-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00164/info_00164.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 4.264961199809687e-06
+> plot centered at [0.47558308 0.49265575 0.49473858]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829605
+Number of groups:99
+FOF CPU TIME: 1.383824 secs
+Creating catalog:   0%|          | 0/99 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00164-z-11_91-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00165/info_00165.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 5.3947966093944364e-06
+> plot centered at [0.47558689 0.49265575 0.49473476]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829450
+Number of groups:91
+FOF CPU TIME: 1.408702 secs
+Creating catalog:   0%|          | 0/91 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00165-z-11_89-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00166/info_00166.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 6.031565971607899e-06
+> plot centered at [0.4755888  0.49265575 0.49472904]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829432
+Number of groups:99
+FOF CPU TIME: 1.406920 secs
+Creating catalog:   0%|          | 0/99 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00166-z-11_88-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00167/info_00167.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 5.394796609355184e-06
+> plot centered at [0.47559261 0.49265575 0.49472523]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829361
+Number of groups:114
+FOF CPU TIME: 1.428685 secs
+Creating catalog:   0%|          | 0/114 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00167-z-11_87-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00168/info_00168.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 4.264961199784861e-06
+> plot centered at [0.47559452 0.49265575 0.49472141]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829339
+Number of groups:98
+FOF CPU TIME: 1.392597 secs
+Creating catalog:   0%|          | 0/98 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00168-z-11_86-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00169/info_00169.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 8.740569486449018e-06
+> plot centered at [0.47559071 0.49265766 0.49471378]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829454
+Number of groups:90
+FOF CPU TIME: 1.376801 secs
+Creating catalog:   0%|          | 0/90 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00169-z-11_85-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00170/info_00170.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 5.3947966093944364e-06
+> plot centered at [0.47559452 0.49265766 0.49470997]
+annotating 601 star particles
+Link length is 0.000001
+Filling in 2842260 particles
+Number of initial groups:2829283
+Number of groups:101
+FOF CPU TIME: 1.425568 secs
+Creating catalog:   0%|          | 0/101 [00:00<?, ?it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_fof/output-00170-z-11_84-halo_annotations_fof.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00171/info_00171.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 4.932441917800834e-06
+> plot centered at [0.4755969  0.49265718 0.49470568]
+annotating 601 star particles
