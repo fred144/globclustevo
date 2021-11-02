@@ -123,7 +123,7 @@ if not os.path.exists(newpath):
     os.makedirs(newpath)
     
 #plot params
-sequence_title = 'halo_annotations_hop'
+sequence_title = 'halo_annotations_fof'
 width = (690,'pc')
 axis = 'z'
 start_step = 150
@@ -237,10 +237,16 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 
     from yt.analysis_modules.halo_analysis.api import HaloCatalog
     # from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
-    hc = HaloCatalog(data_ds=ds, finder_method='hop',
-                      finder_kwargs={"threshold": 160,
-                                     "ptype":'DM',
-                                     "dm_only":False})
+    # hc = HaloCatalog(data_ds=ds, finder_method='hop',
+    #                   finder_kwargs={"threshold": 160,
+    #                                  "ptype":'DM',
+    #                                  "dm_only":False})
+    
+    hc = HaloCatalog(data_ds=ds, finder_method='fof',
+                      finder_kwargs={"ptype": 'DM',
+                                    "padding": 0.02,
+                                    "link": 0.0002,
+                                    "dm_only":False})
     
     hc.create()
     hc_ad = hc.halos_ds.all_data()
