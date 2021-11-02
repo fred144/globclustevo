@@ -239,7 +239,8 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
     hc = HaloCatalog(data_ds=ds, finder_method='hop',
                       finder_kwargs={"threshold": 160,
-                                    "ptype":'DM'})
+                                     "ptype":'DM',
+                                     "dm_only":False})
     
     hc.create()
     hc_ad = hc.halos_ds.all_data()
