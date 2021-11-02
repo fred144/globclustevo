@@ -117,17 +117,17 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 #---------------------------------save path---------------------
 ##### cluster save path ######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'halo_annotations_fof'
+sequence_folder = 'clump_tracking_11_02_21'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
     
 #plot params
-sequence_title = 'halo_annotations_fof'
+sequence_title = 'clump_tracking'
 width = (690,'pc')
 axis = 'z'
-start_step = 299
-end_step = 299
+start_step = 245
+end_step = 304
 ctr_shift_thresh =  0.00060 #code length
 
 max_density_coords = []
@@ -217,30 +217,30 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     #clump_tracker(ds=ds, birth_epochs=unique_birth_epochs, width=width)
     
     print('annotating', np.array(be_star).size, 'star particles')
-    p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
+    #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
     
-    # # for clumpnum in range(1, len(unique_birth_epochs) - 1):
-    # #     clumpname = 'clump' + str(clumpnum) 
-    # #     color = colors[clumpnum]
-    # #     color = color.reshape(1,-1)
-    # #     p.annotate_particles(width=width, ptype=clumpname, p_size=20.0, marker='.',col=color) 
+    for clumpnum in range(1, len(unique_birth_epochs) - 1):
+        clumpname = 'clump' + str(clumpnum) 
+        color = colors[clumpnum]
+        color = color.reshape(1,-1)
+        p.annotate_particles(width=width, ptype=clumpname, p_size=20.0, marker='.',col=color) 
     
     
-    # # annotate halos
-    # # get halos 
-    # # hc = HaloCatalog(data_ds=ds, finder_method='fof',
-    # #                   finder_kwargs={"ptype": 'DM',
-    # #                                 "padding": 0.02,
-    # #                                 "link": 0.0002,
-    # #                                 "dm_only":False})
+    # annotate halos
+    # get halos 
+    # hc = HaloCatalog(data_ds=ds, finder_method='fof',
+    #                   finder_kwargs={"ptype": 'DM',
+    #                                 "padding": 0.02,
+    #                                 "link": 0.0002,
+    #                                 "dm_only":False})
 
 
     # from yt.analysis_modules.halo_analysis.api import HaloCatalog
-    # # from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
-    # # hc = HaloCatalog(data_ds=ds, finder_method='hop',
-    # #                   finder_kwargs={"threshold": 160,
-    # #                                  "ptype":'DM',
-    # #                                  "dm_only":False})
+    # from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
+    # hc = HaloCatalog(data_ds=ds, finder_method='hop',
+    #                   finder_kwargs={"threshold": 160,
+    #                                  "ptype":'DM',
+    #                                  "dm_only":False})
     
     # hc = HaloCatalog(data_ds=ds, finder_method='fof',
     #                   finder_kwargs={"ptype": 'DM',
@@ -252,36 +252,36 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # hc_ad = hc.halos_ds.all_data()
     # p.annotate_halos(hc, width=width) 
 
-    # if pos_SFCs.size > 0:
-    #     p.annotate_particles(width = width,
-    #                          ptype='SFC', 
-    #                          p_size=30,
-    #                          marker='x',col='b') 
-    # if pos_PSCs.size > 0: 
-    #     p.annotate_particles(width = width,
-    #                          ptype='PSC', 
-    #                          p_size=30,
-    #                          marker='x',col='r')
+    if pos_SFCs.size > 0:
+        p.annotate_particles(width = width,
+                              ptype='SFC', 
+                              p_size=30,
+                              marker='x',col='b') 
+    if pos_PSCs.size > 0: 
+        p.annotate_particles(width = width,
+                              ptype='PSC', 
+                              p_size=30,
+                              marker='x',col='r')
 
     
-    # p.annotate_timestamp(corner='lower_left', 
-    #                      time_format='t = {time:.2f} {units}', 
-    #                      time_unit= 'Myr', 
-    #                      redshift=True) 
-    # p.annotate_scale(corner='lower_right')
-    # p.set_cmap('density', 'magma')
-    # p.set_zlim('density', 0.01, .05)
+    p.annotate_timestamp(corner='lower_left', 
+                          time_format='t = {time:.2f} {units}', 
+                          time_unit= 'Myr', 
+                          redshift=True) 
+    p.annotate_scale(corner='lower_right')
+    p.set_cmap('density', 'magma')
+    p.set_zlim('density', 0.01, .05)
 
-    # # plot_title = str( 
-    # #     "{} {}| Red = Pop II, Blue = SFC, Black = PSC ".format(sequence_title, output_num) ) 
-    # #p.annotate_title(plot_title)
+    # plot_title = str( 
+    #     "{} {}| Red = Pop II, Blue = SFC, Black = PSC ".format(sequence_title, output_num) ) 
+    #p.annotate_title(plot_title)
     
-    # save_path = str ("{}/{}/output-{}-z-{}-{}.png".format(parent_folder,
-    #                                             sequence_folder,
-    #                                             str(output_num).zfill(5),
-    #                                             str(np.around(redshft, 2)).replace('.', '_'),
-    #                                             sequence_title.replace(' ','-'))
-    #                   )
-    # p.save(save_path, mpl_kwargs=dict(dpi=200))
-    # print('#saved:', save_path)
+    save_path = str ("{}/{}/output-{}-z-{}-{}.png".format(parent_folder,
+                                                sequence_folder,
+                                                str(output_num).zfill(5),
+                                                str(np.around(redshft, 2)).replace('.', '_'),
+                                                sequence_title.replace(' ','-'))
+                      )
+    p.save(save_path, mpl_kwargs=dict(dpi=200))
+    print('#saved:', save_path)
 

@@ -231,69 +231,69 @@ def clump_filters(ds):
     yt.add_particle_filter("clump13",function=clump13,filtered_type="star",requires=["particle_birth_epoch"])
     ds.add_particle_filter("clump13") 
         
-#    def clump14(pfilter, data):
-#        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
-#        hubble = ds.hubble_constant     #hubble = H0/100
-#        cgs_yr = 3.1556926e7          # 1yr (in s)
-#        cgs_pc = 3.08568e18           # pc (in cm)
-#        H0=  hubble*100 #hubble parameter (km/s/Mpc)
-#        H0_invsec = H0*1e5/(1e6*cgs_pc) #hubble constant h [km/s Mpc-1] -> [1/sec]
-#        H0inv_yr = 1/H0_invsec/cgs_yr   #1/H0 [yr]
-#        star_age_myr = code_ages*H0inv_yr/1e6
-#        relative_ages = star_age_myr - star_age_myr.min()
-#        wanted_age = 74.07321298 #0 corresponds to the oldest star clump
-#        filter = np.logical_and(np.isclose(relative_ages, wanted_age), relative_ages >= 0)
-#        return filter
-#    yt.add_particle_filter("clump14",function=clump14,filtered_type="star",requires=["particle_birth_epoch"])
-#    ds.add_particle_filter("clump14") 
-#     
-#    def clump15(pfilter, data):
-#        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
-#        hubble = ds.hubble_constant     #hubble = H0/100
-#        cgs_yr = 3.1556926e7          # 1yr (in s)
-#        cgs_pc = 3.08568e18           # pc (in cm)
-#        H0=  hubble*100 #hubble parameter (km/s/Mpc)
-#        H0_invsec = H0*1e5/(1e6*cgs_pc) #hubble constant h [km/s Mpc-1] -> [1/sec]
-#        H0inv_yr = 1/H0_invsec/cgs_yr   #1/H0 [yr]
-#        star_age_myr = code_ages*H0inv_yr/1e6
-#        relative_ages = star_age_myr - star_age_myr.min()
-#        wanted_age = 74.15449704 #0 corresponds to the oldest star clump
-#        filter = np.logical_and(np.isclose(relative_ages, wanted_age), relative_ages >= 0)
-#        return filter
-#    yt.add_particle_filter("clump15",function=clump15,filtered_type="star",requires=["particle_birth_epoch"])
-#    ds.add_particle_filter("clump15") 
-#         
-#    def clump16(pfilter, data):
-#        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
-#        hubble = ds.hubble_constant     #hubble = H0/100
-#        cgs_yr = 3.1556926e7          # 1yr (in s)
-#        cgs_pc = 3.08568e18           # pc (in cm)
-#        H0=  hubble*100 #hubble parameter (km/s/Mpc)
-#        H0_invsec = H0*1e5/(1e6*cgs_pc) #hubble constant h [km/s Mpc-1] -> [1/sec]
-#        H0inv_yr = 1/H0_invsec/cgs_yr   #1/H0 [yr]
-#        star_age_myr = code_ages*H0inv_yr/1e6
-#        relative_ages = star_age_myr - star_age_myr.min()
-#        wanted_age = 74.71621663 #0 corresponds to the oldest star clump
-#        filter = np.logical_and(np.isclose(relative_ages, wanted_age), relative_ages >= 0)
-#        return filter
-#    yt.add_particle_filter("clump16",function=clump16,filtered_type="star",requires=["particle_birth_epoch"])
-#    ds.add_particle_filter("clump16") 
-#   
-#    def clump17(pfilter, data):
-#        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
-#        hubble = ds.hubble_constant     #hubble = H0/100
-#        cgs_yr = 3.1556926e7          # 1yr (in s)
-#        cgs_pc = 3.08568e18           # pc (in cm)
-#        H0=  hubble*100 #hubble parameter (km/s/Mpc)
-#        H0_invsec = H0*1e5/(1e6*cgs_pc) #hubble constant h [km/s Mpc-1] -> [1/sec]
-#        H0inv_yr = 1/H0_invsec/cgs_yr   #1/H0 [yr]
-#        star_age_myr = code_ages*H0inv_yr/1e6
-#        relative_ages = star_age_myr - star_age_myr.min()
-#        wanted_age = 74.80178142 #0 corresponds to the oldest star clump
-#        filter = np.logical_and(np.isclose(relative_ages, wanted_age), relative_ages >= 0)
-#        return filter
-#    yt.add_particle_filter("clump17",function=clump17,filtered_type="star",requires=["particle_birth_epoch"])
-#    ds.add_particle_filter("clump17") 
+    def clump14(pfilter, data):
+        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+        hubble = ds.hubble_constant     #hubble = H0/100
+        cgs_yr = 3.1556926e7          # 1yr (in s)
+        cgs_pc = 3.08568e18           # pc (in cm)
+        H0=  hubble*100 #hubble parameter (km/s/Mpc)
+        H0_invsec = H0*1e5/(1e6*cgs_pc) #hubble constant h [km/s Mpc-1] -> [1/sec]
+        H0inv_yr = 1/H0_invsec/cgs_yr   #1/H0 [yr]
+        star_age_myr = code_ages*H0inv_yr/1e6
+        relative_ages = star_age_myr - star_age_myr.min()
+        wanted_age = 88.28128775 #0 corresponds to the oldest star clump
+        filter = np.logical_and(np.isclose(relative_ages, wanted_age), relative_ages >= 0)
+        return filter
+    yt.add_particle_filter("clump14",function=clump14,filtered_type="star",requires=["particle_birth_epoch"])
+    ds.add_particle_filter("clump14") 
+    
+    def clump15(pfilter, data):
+        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+        hubble = ds.hubble_constant     #hubble = H0/100
+        cgs_yr = 3.1556926e7          # 1yr (in s)
+        cgs_pc = 3.08568e18           # pc (in cm)
+        H0=  hubble*100 #hubble parameter (km/s/Mpc)
+        H0_invsec = H0*1e5/(1e6*cgs_pc) #hubble constant h [km/s Mpc-1] -> [1/sec]
+        H0inv_yr = 1/H0_invsec/cgs_yr   #1/H0 [yr]
+        star_age_myr = code_ages*H0inv_yr/1e6
+        relative_ages = star_age_myr - star_age_myr.min()
+        wanted_age = 89.38194823 #0 corresponds to the oldest star clump
+        filter = np.logical_and(np.isclose(relative_ages, wanted_age), relative_ages >= 0)
+        return filter
+    yt.add_particle_filter("clump15",function=clump15,filtered_type="star",requires=["particle_birth_epoch"])
+    ds.add_particle_filter("clump15") 
+        
+    def clump16(pfilter, data):
+        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+        hubble = ds.hubble_constant     #hubble = H0/100
+        cgs_yr = 3.1556926e7          # 1yr (in s)
+        cgs_pc = 3.08568e18           # pc (in cm)
+        H0=  hubble*100 #hubble parameter (km/s/Mpc)
+        H0_invsec = H0*1e5/(1e6*cgs_pc) #hubble constant h [km/s Mpc-1] -> [1/sec]
+        H0inv_yr = 1/H0_invsec/cgs_yr   #1/H0 [yr]
+        star_age_myr = code_ages*H0inv_yr/1e6
+        relative_ages = star_age_myr - star_age_myr.min()
+        wanted_age = 90.51360277 #0 corresponds to the oldest star clump
+        filter = np.logical_and(np.isclose(relative_ages, wanted_age), relative_ages >= 0)
+        return filter
+    yt.add_particle_filter("clump16",function=clump16,filtered_type="star",requires=["particle_birth_epoch"])
+    ds.add_particle_filter("clump16") 
+  
+    def clump17(pfilter, data):
+        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+        hubble = ds.hubble_constant     #hubble = H0/100
+        cgs_yr = 3.1556926e7          # 1yr (in s)
+        cgs_pc = 3.08568e18           # pc (in cm)
+        H0=  hubble*100 #hubble parameter (km/s/Mpc)
+        H0_invsec = H0*1e5/(1e6*cgs_pc) #hubble constant h [km/s Mpc-1] -> [1/sec]
+        H0inv_yr = 1/H0_invsec/cgs_yr   #1/H0 [yr]
+        star_age_myr = code_ages*H0inv_yr/1e6
+        relative_ages = star_age_myr - star_age_myr.min()
+        wanted_age = 95.28010249 #0 corresponds to the oldest star clump
+        filter = np.logical_and(np.isclose(relative_ages, wanted_age), relative_ages >= 0)
+        return filter
+    yt.add_particle_filter("clump17",function=clump17,filtered_type="star",requires=["particle_birth_epoch"])
+    ds.add_particle_filter("clump17") 
 #    
 #     
 #    def clump18(pfilter, data):
