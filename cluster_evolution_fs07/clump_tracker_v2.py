@@ -14,6 +14,7 @@ namespace = sys._getframe(0).f_globals
 def succ_distance (current, previous):
     dist = np.linalg.norm(np.array(current) - np.array(previous)) 
     return dist 
+
 def code_age_to_yr (all_star_ages, hubble_const, unique = True): 
     r"""
     Returns an array with unique birth epochs in Myr given  
@@ -106,29 +107,27 @@ def code_age_to_yr (all_star_ages, hubble_const, unique = True):
         
       
 #---------------------------------data directory/info file---------------------
-datadir = os.path.expanduser(
-    'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine') 
-
-#datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
-#datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
+# datadir = os.path.expanduser(
+#     'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine')  
+datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 # local save path 
-parent_folder = 'C:/Users/1.44/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
-sequence_folder = 'test_frames'
+# parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
+# sequence_folder = 'test_frames'
 #---------------------------------save path---------------------
 ##### cluster save path ######
-# parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-# sequence_folder = 'z_proj_den_old_clump_tracking'
-# make new folder
+parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
+sequence_folder = 'halo_annotations_hop'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
+    
 #plot params
-sequence_title = 'test'
+sequence_title = 'halo_annotations_hop'
 width = (690,'pc')
 axis = 'z'
-start_step = 100
-end_step = 250
+start_step = 150
+end_step = 299
 ctr_shift_thresh =  0.00060 #code length
 
 max_density_coords = []
@@ -142,12 +141,12 @@ for i in range (0,np.shape(colors)[0]):
     colors[i,:]= color
 colors = list(colors)
 
-from yt.analysis_modules.halo_analysis.api import HaloCatalog
+
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     print ("----------------------------------------------------------------------------------")
     infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (output_num,output_num))
-    print ("#reading in info file: %s" %infofile)  
+    print ("# reading in info file: %s" %infofile)  
     
     #cell fields
     FIELDS = ["Density",
@@ -162,7 +161,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
           ('particle_birth_epoch', 'd'), 
           ('particle_metallicity', 'd')] 
     
-    print('reading fields...')
+    print('# reading fields...')
     
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
     
@@ -190,14 +189,8 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     print('> clumps ages:', unique_birth_epochs)
     # keep center of plots relatively stable
     
-    # get halos 
-    hc = HaloCatalog(data_ds=ds, finder_method='fof',
-                     finder_kwargs={"ptype": 'DM',
-                                    "padding": 0.02,
-                                    "link": 0.0002,
-                                    "dm_only":False})
-    hc.create()
-    hc_ad = hc.halos_ds.all_data()
+
+
     
     # keep center at density max
     if loop_num == 0:
@@ -220,18 +213,36 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         p = yt.ProjectionPlot(ds, axis, "density", width = width, center = max_density_coords[-1])
         print('> using old center at {}'. format(center)) 
         
-    #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
+    
     #clump_tracker(ds=ds, birth_epochs=unique_birth_epochs, width=width)
     
     print('annotating', np.array(be_star).size, 'star particles')
+    p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
     
-    for clumpnum in range(1, len(unique_birth_epochs) - 1):
-        clumpname = 'clump' + str(clumpnum) 
-        color = colors[clumpnum]
-        color = color.reshape(1,-1)
-        p.annotate_particles(width=width, ptype=clumpname, p_size=20.0, marker='.',col=color) 
+    # for clumpnum in range(1, len(unique_birth_epochs) - 1):
+    #     clumpname = 'clump' + str(clumpnum) 
+    #     color = colors[clumpnum]
+    #     color = color.reshape(1,-1)
+    #     p.annotate_particles(width=width, ptype=clumpname, p_size=20.0, marker='.',col=color) 
+    
     
     # annotate halos
+    # get halos 
+    # hc = HaloCatalog(data_ds=ds, finder_method='fof',
+    #                   finder_kwargs={"ptype": 'DM',
+    #                                 "padding": 0.02,
+    #                                 "link": 0.0002,
+    #                                 "dm_only":False})
+
+
+    from yt.analysis_modules.halo_analysis.api import HaloCatalog
+    # from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
+    hc = HaloCatalog(data_ds=ds, finder_method='hop',
+                      finder_kwargs={"threshold": 160,
+                                    "ptype":'DM'})
+    
+    hc.create()
+    hc_ad = hc.halos_ds.all_data()
     p.annotate_halos(hc, width=width) 
 
     if pos_SFCs.size > 0:
