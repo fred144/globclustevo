@@ -71,38 +71,38 @@ def code_age_to_yr (all_star_ages, hubble_const, unique = True):
 #         #     ) 
 #         del clump
         
-def clump_tracker(ds, birth_epochs, width): 
-    birth_epochs = np.array(birth_epochs)
+# def clump_tracker(ds, birth_epochs, width): 
+#     birth_epochs = np.array(birth_epochs)
     
-    for clump_num, be in enumerate(birth_epochs, start=1):
+#     for clump_num, be in enumerate(birth_epochs, start=1):
         
-        clump_name = 'clump_' + str(clump_num)
-        #print(be)
-       # @yt.particle_filter(requires=['particle_birth_epoch'], filtered_type='star')
+#         clump_name = 'clump_' + str(clump_num)
+#         #print(be)
+#        # @yt.particle_filter(requires=['particle_birth_epoch'], filtered_type='star')
        
-        def clump(pfilter, data):
-            h = ds.hubble_constant
+#         def clump(pfilter, data):
+#             h = ds.hubble_constant
             
-            code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+#             code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
             
-            relative_ages = code_age_to_yr(all_star_ages=code_ages, 
-                                           hubble_const=h,
-                                           unique=False)
-            test = birth_epochs[clump_num-1]
-            print(test)
-            filter = relative_ages == test 
-            return filter
+#             relative_ages = code_age_to_yr(all_star_ages=code_ages, 
+#                                            hubble_const=h,
+#                                            unique=False)
+#             test = birth_epochs[clump_num-1]
+#             print(test)
+#             filter = relative_ages == test 
+#             return filter
         
-        clump()
         
-        namespace['clump_%s'%str(clump_num)] = functools.partial(clump)
         
-        yt.add_particle_filter(clump_name, 
-                                function=namespace['clump_%s'%str(clump_num)], 
-                                filtered_type='star', 
-                                requires=['particle_birth_epoch'],
-                                )
-        ds.add_particle_filter(clump_name)         
+#         namespace['clump_%s'%str(clump_num)] = functools.partial(clump)
+        
+#         yt.add_particle_filter(clump_name, 
+#                                 function=namespace['clump_%s'%str(clump_num)], 
+#                                 filtered_type='star', 
+#                                 requires=['particle_birth_epoch'],
+#                                 )
+#         ds.add_particle_filter(clump_name)         
         
       
 #---------------------------------data directory/info file---------------------
@@ -142,13 +142,13 @@ for i in range (0,np.shape(colors)[0]):
     colors[i,:]= color
 colors = list(colors)
 
-
+from yt.analysis_modules.halo_analysis.api import HaloCatalog
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
-    print ("-")
+    print ("----------------------------------------------------------------------------------")
     infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (output_num,output_num))
     print ("#reading in info file: %s" %infofile)  
-
+    
     #cell fields
     FIELDS = ["Density",
               "x-velocity", "y-velocity", "z-velocity",
@@ -165,7 +165,9 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     print('reading fields...')
     
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
-    #clump_filters(ds)###################
+    
+    clump_filters(ds)
+    
     redshft = ds.current_redshift
     current_hubble = ds.hubble_constant  
     
@@ -185,29 +187,33 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 
     # particle clumps by age 
     unique_birth_epochs = code_age_to_yr(raw_birth_epochs, current_hubble)
-    print('> clumps:', len(unique_birth_epochs))
-    #keep center of plots relatively stable
+    print('> clumps ages:', unique_birth_epochs)
+    # keep center of plots relatively stable
     
+    # get halos 
+    hc = HaloCatalog(data_ds=ds, finder_method='fof',
+                     finder_kwargs={"ptype": 'DM',
+                                    "padding": 0.6,
+                                    "link": 0.0002,
+                                    "dm_only":False})
+    hc.create()
+    hc_ad = hc.halos_ds.all_data()
+    
+    # keep center at density max
     if loop_num == 0:
         max_density_coords.append(max_density_coord)
-    
     distance = succ_distance(max_density_coord, max_density_coords[-1])
-    
-    print('> distance b/w current and previously used max density:', distance)
-    
+    print('\n> distance b/w current and previously used max density:', distance)
     if distance < ctr_shift_thresh: 
         p = yt.ProjectionPlot(ds, axis, "density", width = width, center = max_density_coord)
-        
         # if the plot center migrates, annotate previous center
         p.annotate_marker(
             max_density_coords[-1],
             marker="x",
             coord_system="data",
             plot_args={"color": "lime", "s": 30},)
-
         # appened new center to list
         max_density_coords.append(max_density_coord)
-
         print('> plot centered at {}'. format(max_density_coord)) 
     else: 
         center = max_density_coords[-1]
@@ -215,20 +221,20 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         print('> using old center at {}'. format(center)) 
         
     #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
-    
-    clump_tracker(ds=ds, birth_epochs=unique_birth_epochs, width=width)
+    #clump_tracker(ds=ds, birth_epochs=unique_birth_epochs, width=width)
     
     print('annotating', np.array(be_star).size, 'star particles')
+    
     for clumpnum in range(1, len(unique_birth_epochs) - 1):
-        clumpname = 'clump_' + str(clumpnum) 
+        clumpname = 'clump' + str(clumpnum) 
         color = colors[clumpnum]
         color = color.reshape(1,-1)
         p.annotate_particles(width=width, ptype=clumpname, p_size=20.0, marker='.',col=color) 
-        
+    
+    # annotate halos
+    p.annotate_halos(hc, width=width) 
 
     if pos_SFCs.size > 0:
-#         first_sfc_center = pos_SFCs[0]  
-
         p.annotate_particles(width = width,
                              ptype='SFC', 
                              p_size=30,
@@ -238,15 +244,13 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
                              ptype='PSC', 
                              p_size=30,
                              marker='x',col='r')
-#         if pos_SFCs.size == 0: 
-#             first_psc_center = pos_PSCs[0] 
+
     
     p.annotate_timestamp(corner='lower_left', 
                          time_format='t = {time:.2f} {units}', 
                          time_unit= 'Myr', 
                          redshift=True) 
-    p.annotate_scale(corner='lower_right') 
-   
+    p.annotate_scale(corner='lower_right')
     p.set_cmap('density', 'magma')
     p.set_zlim('density', 0.01, .05)
 
@@ -262,15 +266,4 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
                       )
     p.save(save_path, mpl_kwargs=dict(dpi=200))
     print('#saved:', save_path)
-##
-##%%
-#colors = np.zeros([500,3])
-#
-#for i in range (0,10):
-#    color = np.random.rand(3,1).T 
-#    colors[i,:]= color
-#
-##%%
-#for i in range(0, np.size(colors)[0]):
-#    print (colors[i,:])
-#    
+
