@@ -127,7 +127,7 @@ if not os.path.exists(newpath):
 sequence_title = 'test'
 width = (690,'pc')
 axis = 'z'
-start_step = 250
+start_step = 100
 end_step = 250
 ctr_shift_thresh =  0.00060 #code length
 

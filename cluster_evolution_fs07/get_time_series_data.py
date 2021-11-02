@@ -67,7 +67,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     
     time_step_data = np.array([redshft, current_time, total_pop2_mass, total_dm_mass])
     data.append(time_step_data)
-    print(data)
+    print(loop_num)
 
 data = np.array(data)
 
