@@ -201,3 +201,18 @@ Writing Output...
 All Done!Calling regroup...
 No minimum group size specified.  Assuming 10 particles.
 ngroups = 8390
+Creating catalog:   0%|          | 0/594 [00:00<?, ?it/s]Creating catalog:  61%|██████    | 362/594 [00:00<00:00, 3613.61it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/halo_annotations_hop/output-00158-z-11_98-halo_annotations_hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00159/info_00159.txt
+# reading fields...
+> clumps ages: [ 0.         18.52773269 35.60895952]
+
+> distance b/w current and previously used max density: 0.0008712257499678643
+> using old center at [0.47558606 0.49258387 0.49480712]
+annotating 601 star particles
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.600e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
