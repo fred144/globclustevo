@@ -8,17 +8,20 @@ from clump_filters import clump_filters
 import h5py 
 
 
+# path = 'halo_catalogs/catalog/catalog.0.h5'
+# data = h5py.File(path, 'r')
+# particle_id = np.array(data.get('particle_identifier'))
+# particle_mass = np.array(data.get('particle_mass'))
 
-
-datadir = os.path.expanduser(
-    'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine') 
+#datadir = os.path.expanduser(
+#    'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine') 
 
 #datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
-#datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
+datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 # local save path 
-parent_folder = 'C:/Users/1.44/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
-sequence_folder = 'test_frames'
+#parent_folder = 'C:/Users/1.44/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
+#sequence_folder = 'test_frames'
 #---------------------------------save path---------------------
 ##### cluster save path ######
 clust_save_path = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/data'
@@ -65,63 +68,20 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     time_step_data = np.array([redshft, current_time, total_pop2_mass, total_dm_mass])
     data.append(time_step_data)
     print(data)
-    
 
 data = np.array(data)
 
-name = clust_save_path + 'timeseriesdata.txt'
-np.savetxt(fname=clust_save_path, X=data)
+name = clust_save_path + '/timeseriesdata.txt'
+np.savetxt(fname=name, X=data)
     
 
-def code_age_to_yr (all_star_ages, hubble_const, unique = True): 
-    r"""
-    Returns an array with unique birth epochs in Myr given  
-    raw_birth_epochs = ad['star', 'particle_birth_epoch'] 
-    AND 
-    hubble = ds.hubble_constant  
-    Youngest is 0 Myr, all others are relative to the youngest.
-    """
-    cgs_yr = 3.1556926e7          # 1yr (in s)
-    cgs_pc = 3.08568e18           # pc (in cm)
-    h_0 =  hubble_const*100 #hubble parameter (km/s/Mpc)
-    h_0_invsec = h_0*1e5/(1e6*cgs_pc) #hubble constant h [km/s Mpc-1] -> [1/sec]
-    h_0inv_yr = 1/h_0_invsec/cgs_yr   #1/h_0 [yr]
+
     
-    if unique == True:
-        #process to unique birth epochs only
-        be_star_processed = np.array(sorted( list( set(all_star_ages.to_ndarray()) ) ) ) 
-        star_age_myr = be_star_processed * h_0inv_yr/1e6
-        relative_ages = star_age_myr - star_age_myr.min()
-        #print(relative_ages)
-    else: 
-        all_stars  =  np.array(list( all_star_ages.to_ndarray()) )
-        star_age_myr = all_stars * h_0inv_yr/1e6
-        relative_ages = star_age_myr - star_age_myr.min()
-    #print(relative_ages)
-    return relative_ages
 
 
-redshft = ds.current_redshift
-current_hubble = ds.hubble_constant  
 
-# extract all data fields
-ad = ds.all_data()
-
-# get SFC/PSC positions and other important fields
-pos_SFCs = ad['SFC', 'particle_position']
-pos_PSCs = ad['PSC', 'particle_position']
-be_star = ad['star', 'particle_birth_epoch']
-raw_birth_epochs = ad['star', 'particle_birth_epoch'] 
-
-# centering using max density 
-max_den = ad.argmax(('gas', 'density'))
-max_density_coord = yt.YTArray(max_den).in_units('code_length') 
-max_density_coord = np.array(max_density_coord)
-
-# particle clumps by age 
-unique_birth_epochs = code_age_to_yr(raw_birth_epochs, current_hubble)
-print('> clumps ages:', unique_birth_epochs)   
     
+
     
 
   
