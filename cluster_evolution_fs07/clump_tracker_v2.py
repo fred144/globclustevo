@@ -84,9 +84,6 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     max_den = ad.argmax(('gas', 'density'))
     max_density_coord = yt.YTArray(max_den).in_units('code_length') 
     max_density_coord = np.array(max_density_coord)
-
-    # particle clumps by age 
-    unique_birth_epochs = code_age_to_yr(raw_birth_epochs, current_hubble)
    
     # keep center at density max
     if loop_num == 0:
@@ -115,18 +112,24 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     #               width=width, 
     #               plot_object=p)
     
-    print('annotating', np.array(be_star).size, 'star particles')
-    #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
-    for clumpnum,age in enumerate(unique_birth_epochs, start=1):
-        print('> annotating clump', age)
-        clumpname = 'clump' + str(clumpnum) 
-        color = cmap[clumpnum]
-        color = color.reshape(1,-1)
-        p.annotate_particles(width=width, 
-                              ptype=clumpname, 
-                              p_size=5.0, 
-                              marker='.',
-                              col=color) 
+    try:
+        # particle clumps by age 
+        unique_birth_epochs = code_age_to_yr(raw_birth_epochs, current_hubble)
+        print('annotating', np.array(be_star).size, 'star particles')
+        #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
+        for clumpnum,age in enumerate(unique_birth_epochs, start=1):
+            print('> annotating clump', age)
+            clumpname = 'clump' + str(clumpnum) 
+            color = cmap[clumpnum]
+            color = color.reshape(1,-1)
+            p.annotate_particles(width=width, 
+                                  ptype=clumpname, 
+                                  p_size=5.0, 
+                                  marker='.',
+                                  col=color) 
+    except: 
+        print('> no stars')
+        pass
     
     
 
