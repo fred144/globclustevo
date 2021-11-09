@@ -51,6 +51,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
           ('particle_tag', 'b'),         
           ('particle_birth_epoch', 'd'), 
           ('particle_metallicity', 'd')] 
+
     
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
     ad = ds.all_data()
@@ -66,14 +67,14 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         )
     
     raw_birth_epochs = ad['star', 'particle_birth_epoch'] 
-    
+    star_num = np.array(raw_birth_epochs).size
     unique_birth_epochs = np.array(
         code_age_to_yr(raw_birth_epochs, current_hubble))
     unique_birth_epochs.resize(25)
     
 
     time_step_mass_data = np.array(
-        [redshft, current_time, total_pop2_mass, total_dm_mass]
+        [redshft, current_time, total_pop2_mass, star_num, total_dm_mass]
         )
     
     mass_data.append(time_step_mass_data)
