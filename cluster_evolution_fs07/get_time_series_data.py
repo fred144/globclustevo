@@ -69,14 +69,16 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     
     unique_birth_epochs = np.array(
         code_age_to_yr(raw_birth_epochs, current_hubble))
+    unique_birth_epochs.resize(25)
+    
     print(unique_birth_epochs)
+
     time_step_mass_data = np.array(
         [redshft, current_time, total_pop2_mass, total_dm_mass]
         )
     
     mass_data.append(time_step_mass_data)
-    print(unique_birth_epochs.resize(25))
-    ages.append(unique_birth_epochs.resize(25))
+    ages.append(unique_birth_epochs)
     
 
 
