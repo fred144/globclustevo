@@ -5015,3 +5015,4 @@ Writing Output...
 All Done!Calling regroup...
 No minimum group size specified.  Assuming 10 particles.
 ngroups = 8560
+Creating catalog:   0%|          | 0/740 [00:00<?, ?it/s]Creating catalog:  41%|████      | 304/740 [00:00<00:00, 3037.24it/s]Creating catalog:  84%|████████▍ | 623/740 [00:00<00:00, 3080.93it/s]
