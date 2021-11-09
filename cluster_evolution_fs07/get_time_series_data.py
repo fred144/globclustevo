@@ -71,7 +71,6 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         code_age_to_yr(raw_birth_epochs, current_hubble))
     unique_birth_epochs.resize(25)
     
-    print(unique_birth_epochs)
 
     time_step_mass_data = np.array(
         [redshft, current_time, total_pop2_mass, total_dm_mass]
@@ -86,7 +85,7 @@ mass_data = np.array(mass_data)
 ages = np.array(ages)
 
 name = clust_save_path + '/timeseries_mass_data_11_09.txt'
-name_1 = clust_save_path + '/timeseries_age_data_11_09.txt'
+name_1 = clust_save_path + '/timeseries_birth_data_11_09.txt'
 
 np.savetxt(fname=name, X=mass_data)
 np.savetxt(fname=name_1, X=ages)
