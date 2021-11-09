@@ -64,10 +64,12 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     total_dm_mass = float(
         ad.quantities.total_quantity([('DM', 'particle_mass')]).in_units("Msun") 
         )
+    
     raw_birth_epochs = ad['star', 'particle_birth_epoch'] 
+    
     unique_birth_epochs = np.array(
         code_age_to_yr(raw_birth_epochs, current_hubble))
-    
+    print(unique_birth_epochs)
     time_step_mass_data = np.array(
         [redshft, current_time, total_pop2_mass, total_dm_mass]
         )
