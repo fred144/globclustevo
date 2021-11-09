@@ -100,7 +100,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
             plot_args={"color": "lime", "s": 30},)
         # annotate current center for reference
         p.annotate_marker(
-            max_density_coords,
+            max_density_coord,
             marker="x",
             coord_system="data",
             plot_args={"color": "white", "s": 30},)
