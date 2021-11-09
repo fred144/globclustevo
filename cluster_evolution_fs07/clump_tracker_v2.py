@@ -34,7 +34,7 @@ if not os.path.exists(newpath):
 sequence_title = 'hop'
 width = (610,'pc')
 axis = 'z'
-start_step = 100
+start_step = 216
 end_step = 310
 ctr_shift_thresh = 0.00060 #code length
 
