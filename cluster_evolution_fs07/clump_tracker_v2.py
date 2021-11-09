@@ -25,14 +25,14 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 #---------------------------------save path---------------------
 ##### cluster save path ######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'hop_halo_annotated_1kpc'
+sequence_folder = 'hop_halo_annotated_600pc'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
     
 #plot params
 sequence_title = 'hop'
-width = (1000,'pc')
+width = (610,'pc')
 axis = 'z'
 start_step = 100
 end_step = 310
