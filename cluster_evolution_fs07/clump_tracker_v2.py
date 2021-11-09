@@ -25,22 +25,22 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 #---------------------------------save path---------------------
 ##### cluster save path ######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'clump_tracked_110921'
+sequence_folder = 'hop_halo_annotated_600pc'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
     
 #plot params
-sequence_title = 'clumps'
-width = (400,'pc')
+sequence_title = 'hop'
+width = (610,'pc')
 axis = 'z'
-start_step = 250
+start_step = 310
 end_step = 345
 ctr_shift_thresh = 0.00060 #code length
 
 max_density_coords = []
 
-star_map = cm.get_cmap('gist_rainbow')
+star_map = cm.get_cmap('rainbow')
 cmap = star_map (np.linspace(0, 1, 25))
 
 #---------------------------------MAIN LOOP-----------------------------------
@@ -145,23 +145,23 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     
     
 
-    # from yt.analysis_modules.halo_analysis.api import HaloCatalog
+    from yt.analysis_modules.halo_analysis.api import HaloCatalog
 
-    # hc = HaloCatalog(data_ds=ds, finder_method='hop',
-    #                   finder_kwargs={"threshold": 100,
-    #                                   "ptype":'DM',
-    #                                   "dm_only":False})
+    hc = HaloCatalog(data_ds=ds, finder_method='hop',
+                      finder_kwargs={"threshold": 100,
+                                      "ptype":'DM',
+                                      "dm_only":False})
     
-    # # hc = HaloCatalog(data_ds=ds, finder_method='fof',
-    # #                   finder_kwargs={"ptype": 'DM',
-    # #                                 "link": 0.2,
-    # #                                 "dm_only":False})
+    # hc = HaloCatalog(data_ds=ds, finder_method='fof',
+    #                   finder_kwargs={"ptype": 'DM',
+    #                                 "link": 0.2,
+    #                                 "dm_only":False})
     
-    # hc.create()
-    # hc_ad = hc.halos_ds.all_data()
-    # p.annotate_halos(hc, 
-    #                  width=width,
-    #                  factor = 0.03) 
+    hc.create()
+    hc_ad = hc.halos_ds.all_data()
+    p.annotate_halos(hc, 
+                      width=width,
+                      factor = 0.03) 
 
 
 
