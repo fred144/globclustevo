@@ -28,7 +28,7 @@ if not os.path.exists(clust_save_path ):
 
 
 start_step = 250
-end_step = 255 #345
+end_step = 345
 
 mass_data = []
 ages = []
