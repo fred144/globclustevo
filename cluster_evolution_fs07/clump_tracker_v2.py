@@ -34,7 +34,7 @@ if not os.path.exists(newpath):
 sequence_title = 'clumps'
 width = (400,'pc')
 axis = 'z'
-start_step = 200
+start_step = 250
 end_step = 345
 ctr_shift_thresh = 0.00060 #code length
 
