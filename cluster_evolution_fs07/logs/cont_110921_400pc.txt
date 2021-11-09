@@ -14,3 +14,53 @@ of libcuda.so.1 to get passed this issue.
 ----------------------------------------------------------------------------------
 # reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00250/info_00250.txt
 # reading fields...
+
+> distance b/w current and previously used max density: 0.0
+> plot centered at [0.47572148 0.49268472 0.49436104]
+annotating 4186 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+Traceback (most recent call last):
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_window.py", line 1131, in run_callbacks
+    callback(cbw)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_modifications.py", line 77, in _check_geometry
+    return func(self, plot)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_modifications.py", line 1305, in __call__
+    coord_system=self.coord_system)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_modifications.py", line 230, in _sanitize_coord_system
+    raise SyntaxError("Coordinates in 'data' coordinate system "
+SyntaxError: Coordinates in 'data' coordinate system need to be in 3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "clump_tracker_v2.py", line 197, in <module>
+    p.save(save_path, mpl_kwargs=dict(dpi=200))
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_container.py", line 93, in newfunc
+    args[0]._setup_plots()
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_window.py", line 1080, in _setup_plots
+    self.run_callbacks()
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_window.py", line 1137, in run_callbacks
+    sys.exc_info()[2])
+  File "/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib/python3.7/site-packages/six.py", line 702, in reraise
+    raise value.with_traceback(tb)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_window.py", line 1131, in run_callbacks
+    callback(cbw)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_modifications.py", line 77, in _check_geometry
+    return func(self, plot)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_modifications.py", line 1305, in __call__
+    coord_system=self.coord_system)
+  File "/homes/fgarcia4/.local/lib/python3.7/site-packages/yt/visualization/plot_modifications.py", line 230, in _sanitize_coord_system
+    raise SyntaxError("Coordinates in 'data' coordinate system "
+yt.utilities.exceptions.YTPlotCallbackError: annotate_marker callback failed with the following error: Coordinates in 'data' coordinate system need to be in 3D
