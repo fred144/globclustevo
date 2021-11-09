@@ -1,11 +1,7 @@
-import warnings
 import os
 import yt
 import numpy as np
-#import scipy as sc
-from yt.funcs import mylog
-from clump_filters import clump_filters
-import h5py 
+
 
 
 # path = 'halo_catalogs/catalog/catalog.0.h5'

@@ -9,13 +9,15 @@ be = np.array(
     )
 birth_epochs = be + 339.562
 
-   
-    
+#mass return by SN 
+#number of super novas = total mass over 150
+    # efficiency is total stellar mass over  largest dm halo mass
 plt.figure(figsize = (12,8))
 plt.scatter(time_series_data[:,1], time_series_data[:,2])
 for birth_epoch in birth_epochs:
     plt.axvline(x=birth_epoch, color = 'k', linestyle='--') 
+plt.xlim(435,400)
 plt.xlabel('Time (Myr)')
 plt.ylabel('Total Pop 2 Mass (Msun)')
 plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
-plt.legend()
+#plt.legend()
