@@ -52,7 +52,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
           ('particle_metallicity', 'd')] 
     
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
-    ad = ds.all_mass_data()
+    ad = ds.all_data()
     current_hubble = ds.hubble_constant
     
     current_time = float(ds.current_time.in_units('Myr')) 
