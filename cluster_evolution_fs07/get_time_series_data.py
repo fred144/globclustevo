@@ -70,11 +70,14 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     time_step_mass_data = np.array(
         [redshft, current_time, total_pop2_mass, total_dm_mass]
         )
+    
     mass_data.append(time_step_mass_data)
-    ages.append(unique_birth_epochs)
+    ages.append(unique_birth_epochs.resize(25))
+    
     print('> reading output:', output_num)
 
 mass_data = np.array(mass_data)
+ages = np.array(ages)
 
 name = clust_save_path + '/timeseries_mass_data_11_09.txt'
 name_1 = clust_save_path + '/timeseries_age_data_11_09.txt'
