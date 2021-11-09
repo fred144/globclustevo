@@ -1,7 +1,7 @@
 import os
 import yt
 import numpy as np
-
+from macros import code_age_to_yr
 
 
 # path = 'halo_catalogs/catalog/catalog.0.h5'
@@ -27,10 +27,11 @@ if not os.path.exists(clust_save_path ):
     os.makedirs(clust_save_path)
 
 
-start_step = 100
-end_step = 299
+start_step = 250
+end_step = 255 #345
 
-data = []
+mass_data = []
+ages = []
 
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
@@ -49,8 +50,10 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
           ('particle_tag', 'b'),         
           ('particle_birth_epoch', 'd'), 
           ('particle_metallicity', 'd')] 
+    
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
-    ad = ds.all_data()
+    ad = ds.all_mass_data()
+    current_hubble = ds.hubble_constant
     
     current_time = float(ds.current_time.in_units('Myr')) 
     redshft = ds.current_redshift
@@ -60,15 +63,24 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     total_dm_mass = float(
         ad.quantities.total_quantity([('DM', 'particle_mass')]).in_units("Msun") 
         )
+    raw_birth_epochs = ad['star', 'particle_birth_epoch'] 
+    unique_birth_epochs = np.array(
+        code_age_to_yr(raw_birth_epochs, current_hubble))
     
-    time_step_data = np.array([redshft, current_time, total_pop2_mass, total_dm_mass])
-    data.append(time_step_data)
-    print(loop_num)
+    time_step_mass_data = np.array(
+        [redshft, current_time, total_pop2_mass, total_dm_mass]
+        )
+    mass_data.append(time_step_mass_data)
+    ages.append(unique_birth_epochs)
+    print('> reading output:', output_num)
 
-data = np.array(data)
+mass_data = np.array(mass_data)
 
-name = clust_save_path + '/timeseriesdata.txt'
-np.savetxt(fname=name, X=data)
+name = clust_save_path + '/timeseries_mass_data_11_09.txt'
+name_1 = clust_save_path + '/timeseries_age_data_11_09.txt'
+
+np.savetxt(fname=name, X=mass_data)
+np.savetxt(fname=name_1, X=ages)
 
 
     
