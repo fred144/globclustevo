@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt 
 
-time_series_data = np.loadtxt('timeseriesdata.txt')
+time_series_data = np.loadtxt(r'sequences\new_refine\data\timeseries_birth_data_11_09.txt')
 be = np.array(
     [ 0., 18.52773269, 35.60895952, 68.6774688,  68.96389576, 69.09889334,
      69.34419314, 70.17392563, 70.19719182, 70.2027757,  70.30222356, 70.41787201,

@@ -247,10 +247,106 @@ def clump_filters(ds):
             )  
         return filter
     yt.add_particle_filter(
-        "clump18",function=clump17,filtered_type="star",requires=["particle_birth_epoch"])
+        "clump18",function=clump18,filtered_type="star",requires=["particle_birth_epoch"])
     ds.add_particle_filter("clump18")
- 
-     
+    
+    def clump19(pfilter, data):
+        h = ds.hubble_constant
+        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+        relative_ages = code_age_to_yr(all_star_ages=code_ages, 
+                                        hubble_const=h,
+                                        unique=False)
+        filter = np.logical_and(
+            np.isclose(relative_ages, 1.019477468059758394e+02), relative_ages >= 0
+            )  
+        return filter
+    yt.add_particle_filter(
+        "clump19",function=clump19,filtered_type="star",requires=["particle_birth_epoch"])
+    ds.add_particle_filter("clump19")
+    
+    def clump20(pfilter, data):
+        h = ds.hubble_constant
+        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+        relative_ages = code_age_to_yr(all_star_ages=code_ages, 
+                                        hubble_const=h,
+                                        unique=False)
+        filter = np.logical_and(
+            np.isclose(relative_ages, 1.028853825185906317e+02), relative_ages >= 0
+            )  
+        return filter
+    yt.add_particle_filter(
+        "clump20",function=clump20,filtered_type="star",requires=["particle_birth_epoch"])
+    ds.add_particle_filter("clump20")
+
+    def clump21(pfilter, data):
+        h = ds.hubble_constant
+        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+        relative_ages = code_age_to_yr(all_star_ages=code_ages, 
+                                        hubble_const=h,
+                                        unique=False)
+        filter = np.logical_and(
+            np.isclose(relative_ages, 1.052811917126273329e+02), relative_ages >= 0
+            )  
+        return filter
+    yt.add_particle_filter(
+        "clump21",function=clump21,filtered_type="star",requires=["particle_birth_epoch"])
+    ds.add_particle_filter("clump21")
+    
+    def clump22(pfilter, data):
+        h = ds.hubble_constant
+        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+        relative_ages = code_age_to_yr(all_star_ages=code_ages, 
+                                        hubble_const=h,
+                                        unique=False)
+        filter = np.logical_and(
+            np.isclose(relative_ages, 1.054715165007200994e+02), relative_ages >= 0
+            )  
+        return filter
+    yt.add_particle_filter(
+        "clump22",function=clump22,filtered_type="star",requires=["particle_birth_epoch"])
+    ds.add_particle_filter("clump22")
+
+    def clump23(pfilter, data):
+        h = ds.hubble_constant
+        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+        relative_ages = code_age_to_yr(all_star_ages=code_ages, 
+                                        hubble_const=h,
+                                        unique=False)
+        filter = np.logical_and(
+            np.isclose(relative_ages,  1.057067251156258862e+02), relative_ages >= 0
+            )  
+        return filter
+    yt.add_particle_filter(
+        "clump23",function=clump23,filtered_type="star",requires=["particle_birth_epoch"])
+    ds.add_particle_filter("clump23")
+    
+    def clump24(pfilter, data):
+        h = ds.hubble_constant
+        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+        relative_ages = code_age_to_yr(all_star_ages=code_ages, 
+                                        hubble_const=h,
+                                        unique=False)
+        filter = np.logical_and(
+            np.isclose(relative_ages,  1.069630712185007724e+02), relative_ages >= 0
+            )  
+        return filter
+    yt.add_particle_filter(
+        "clump24",function=clump24,filtered_type="star",requires=["particle_birth_epoch"])
+    ds.add_particle_filter("clump24")
+
+    def clump25(pfilter, data):
+        h = ds.hubble_constant
+        code_ages = data[pfilter.filtered_type, 'particle_birth_epoch'] 
+        relative_ages = code_age_to_yr(all_star_ages=code_ages, 
+                                        hubble_const=h,
+                                        unique=False)
+        filter = np.logical_and(
+            np.isclose(relative_ages,  1.071015287857280782e+02), relative_ages >= 0
+            )  
+        return filter
+    yt.add_particle_filter(
+        "clump25",function=clump25,filtered_type="star",requires=["particle_birth_epoch"])
+    ds.add_particle_filter("clump25")
 
 # def clump_tracker(ds, birth_epochs, width): 
 #     print (birth_epochs)

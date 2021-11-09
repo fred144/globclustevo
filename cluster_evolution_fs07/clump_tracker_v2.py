@@ -25,23 +25,23 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 #---------------------------------save path---------------------
 ##### cluster save path ######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'hop_halo_annotated_600pc'
+sequence_folder = 'clump_tracked_110921'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
     
 #plot params
-sequence_title = 'hop'
-width = (610,'pc')
+sequence_title = 'clumps'
+width = (400,'pc')
 axis = 'z'
-start_step = 216
-end_step = 310
+start_step = 200
+end_step = 345
 ctr_shift_thresh = 0.00060 #code length
 
 max_density_coords = []
 
-star_map = cm.get_cmap('rainbow')
-cmap = star_map (np.linspace(0, 1, 20))
+star_map = cm.get_cmap('gist_rainbow')
+cmap = star_map (np.linspace(0, 1, 25))
 
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
@@ -98,12 +98,24 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
             marker="x",
             coord_system="data",
             plot_args={"color": "lime", "s": 30},)
+        # annotate current center for reference
+        p.annotate_marker(
+            max_density_coords,
+            marker="x",
+            coord_system="data",
+            plot_args={"color": "white", "s": 30},)
         # appened new center to list
         max_density_coords.append(max_density_coord)
         print('> plot centered at {}'. format(max_density_coord)) 
     else: 
         center = max_density_coords[-1]
         p = yt.ProjectionPlot(ds, axis, "density", width = width, center = max_density_coords[-1])
+        # annotate current center for reference
+        p.annotate_marker(
+            max_density_coords[-1],
+            marker="x",
+            coord_system="data",
+            plot_args={"color": "white", "s": 30},)
         print('> using old center at {}'. format(center)) 
         
     
@@ -124,7 +136,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
             color = color.reshape(1,-1)
             p.annotate_particles(width=width, 
                                   ptype=clumpname, 
-                                  p_size=5.0, 
+                                  p_size=8.0, 
                                   marker='.',
                                   col=color) 
     except: 
@@ -133,23 +145,23 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     
     
 
-    from yt.analysis_modules.halo_analysis.api import HaloCatalog
+    # from yt.analysis_modules.halo_analysis.api import HaloCatalog
 
-    hc = HaloCatalog(data_ds=ds, finder_method='hop',
-                      finder_kwargs={"threshold": 100,
-                                      "ptype":'DM',
-                                      "dm_only":False})
+    # hc = HaloCatalog(data_ds=ds, finder_method='hop',
+    #                   finder_kwargs={"threshold": 100,
+    #                                   "ptype":'DM',
+    #                                   "dm_only":False})
     
-    # hc = HaloCatalog(data_ds=ds, finder_method='fof',
-    #                   finder_kwargs={"ptype": 'DM',
-    #                                 "link": 0.2,
-    #                                 "dm_only":False})
+    # # hc = HaloCatalog(data_ds=ds, finder_method='fof',
+    # #                   finder_kwargs={"ptype": 'DM',
+    # #                                 "link": 0.2,
+    # #                                 "dm_only":False})
     
-    hc.create()
-    hc_ad = hc.halos_ds.all_data()
-    p.annotate_halos(hc, 
-                     width=width,
-                     factor = 0.03) 
+    # hc.create()
+    # hc_ad = hc.halos_ds.all_data()
+    # p.annotate_halos(hc, 
+    #                  width=width,
+    #                  factor = 0.03) 
 
 
 
