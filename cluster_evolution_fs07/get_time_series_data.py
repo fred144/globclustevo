@@ -35,6 +35,7 @@ ages = []
 
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
+    print('> reading output:', output_num)
     infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (output_num,output_num))
     #print ("#reading in info file: %s" %infofile)  
     
@@ -72,9 +73,10 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         )
     
     mass_data.append(time_step_mass_data)
+    print(unique_birth_epochs.resize(25))
     ages.append(unique_birth_epochs.resize(25))
     
-    print('> reading output:', output_num)
+
 
 mass_data = np.array(mass_data)
 ages = np.array(ages)
