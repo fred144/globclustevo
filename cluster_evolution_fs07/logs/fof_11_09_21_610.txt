@@ -4547,3 +4547,471 @@ Writing Output...
 All Done!Calling regroup...
 No minimum group size specified.  Assuming 10 particles.
 ngroups = 8523
+Creating catalog:   0%|          | 0/734 [00:00<?, ?it/s]Creating catalog:  53%|█████▎    | 391/734 [00:00<00:00, 3900.99it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00271-z-10_97-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00272/info_00272.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 1.998454054803058e-05
+> plot centered at [0.47572029 0.4927007  0.49431193]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8540
+Creating catalog:   0%|          | 0/732 [00:00<?, ?it/s]Creating catalog:  46%|████▌     | 336/732 [00:00<00:00, 3353.27it/s]Creating catalog:  93%|█████████▎| 684/732 [00:00<00:00, 3390.73it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00272-z-10_97-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00273/info_00273.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.3481506828268387e-06
+> plot centered at [0.47572029 0.49270165 0.49430978]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8543
+Creating catalog:   0%|          | 0/737 [00:00<?, ?it/s]Creating catalog:  47%|████▋     | 346/737 [00:00<00:00, 3455.02it/s]Creating catalog:  96%|█████████▌| 708/737 [00:00<00:00, 3502.01it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00273-z-10_97-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00274/info_00274.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.6656007498500226e-06
+> plot centered at [0.47572029 0.49270284 0.4943074 ]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8524
+Creating catalog:   0%|          | 0/734 [00:00<?, ?it/s]Creating catalog:  46%|████▋     | 341/734 [00:00<00:00, 3402.21it/s]Creating catalog:  94%|█████████▎| 687/734 [00:00<00:00, 3413.65it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00274-z-10_96-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00275/info_00275.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.348150682900111e-06
+> plot centered at [0.47572029 0.4927038  0.49430525]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8562
+Creating catalog:   0%|          | 0/736 [00:00<?, ?it/s]Creating catalog:  43%|████▎     | 314/736 [00:00<00:00, 3135.71it/s]Creating catalog:  90%|████████▉ | 659/736 [00:00<00:00, 3228.43it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00275-z-10_96-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00276/info_00276.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.0370492328295197e-06
+> plot centered at [0.47572029 0.49270451 0.49430335]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8553
+Creating catalog:   0%|          | 0/739 [00:00<?, ?it/s]Creating catalog:  47%|████▋     | 349/739 [00:00<00:00, 3483.94it/s]Creating catalog:  94%|█████████▍| 697/739 [00:00<00:00, 3479.82it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00276-z-10_95-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00277/info_00277.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.3602235166100658e-06
+> plot centered at [0.47572052 0.49270546 0.4943012 ]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8554
+Creating catalog:   0%|          | 0/741 [00:00<?, ?it/s]Creating catalog:  42%|████▏     | 308/741 [00:00<00:00, 3079.41it/s]Creating catalog:  82%|████████▏ | 610/741 [00:00<00:00, 3059.13it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00277-z-10_95-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00278/info_00278.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.1324805997807166e-06
+> plot centered at [0.47572052 0.49270642 0.49429929]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8567
+Creating catalog:   0%|          | 0/741 [00:00<?, ?it/s]Creating catalog:  45%|████▌     | 337/741 [00:00<00:00, 3367.02it/s]Creating catalog:  91%|█████████ | 675/741 [00:00<00:00, 3368.71it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00278-z-10_95-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00279/info_00279.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.1457672120374206e-06
+> plot centered at [0.47572076 0.49270737 0.49429739]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8566
+Creating catalog:   0%|          | 0/737 [00:00<?, ?it/s]Creating catalog:  41%|████      | 302/737 [00:00<00:00, 3010.07it/s]Creating catalog:  82%|████████▏ | 605/737 [00:00<00:00, 3013.28it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00279-z-10_94-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00280/info_00280.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 1.936921692876837e-06
+> plot centered at [0.475721   0.49270833 0.49429572]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8563
+Creating catalog:   0%|          | 0/740 [00:00<?, ?it/s]Creating catalog:  45%|████▍     | 332/740 [00:00<00:00, 3318.20it/s]Creating catalog:  91%|█████████ | 675/740 [00:00<00:00, 3349.75it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00280-z-10_94-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00281/info_00281.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.274368289534351e-06
+> plot centered at [0.47572124 0.49270904 0.49429357]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8565
+Creating catalog:   0%|          | 0/739 [00:00<?, ?it/s]Creating catalog:  37%|███▋      | 272/739 [00:00<00:00, 2711.48it/s]Creating catalog:  75%|███████▍  | 551/739 [00:00<00:00, 2733.31it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00281-z-10_94-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00282/info_00282.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.145767211889391e-06
+> plot centered at [0.47572148 0.49270999 0.49429166]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8552
+Creating catalog:   0%|          | 0/739 [00:00<?, ?it/s]Creating catalog:  44%|████▍     | 327/739 [00:00<00:00, 3269.23it/s]Creating catalog:  89%|████████▉ | 660/739 [00:00<00:00, 3285.77it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00282-z-10_93-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00283/info_00283.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.1457672120004133e-06
+> plot centered at [0.47572172 0.49271095 0.49428976]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8576
+Creating catalog:   0%|          | 0/740 [00:00<?, ?it/s]Creating catalog:  36%|███▌      | 266/740 [00:00<00:00, 2659.30it/s]Creating catalog:  73%|███████▎  | 541/740 [00:00<00:00, 2686.05it/s]Creating catalog:  99%|█████████▉| 731/740 [00:00<00:00, 2448.98it/s]#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/hop_halo_annotated_600pc/output-00283-z-10_93-hop.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00284/info_00284.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 1.7950797493960837e-06
+> plot centered at [0.4757219  0.49271172 0.49428815]
+annotating 5829 star particles
+> annotating clump 0.0
+> annotating clump 18.52773269136378
+> annotating clump 35.60895951612838
+> annotating clump 68.67746879893275
+> annotating clump 68.96389576150068
+> annotating clump 69.09889333737374
+> annotating clump 69.34419313912076
+> annotating clump 70.17392563404428
+> annotating clump 70.19719181704022
+> annotating clump 70.20277570095823
+> annotating clump 70.30222355644946
+> annotating clump 70.41787201248735
+> annotating clump 70.79423500940175
+> annotating clump 88.2812877506949
+> annotating clump 89.38194822809965
+> annotating clump 90.51360276534797
+Copying arrays for 2842260 particles
+Calling hop... 2842260 1.000e+02
+nSmooth = 65 kd->nActive = 2842260
+Building Tree...
+Finding Densities...
+Finding Densest Neighbors...
+Grouping...
+Merging Groups...
+Writing Output...
+All Done!Calling regroup...
+No minimum group size specified.  Assuming 10 particles.
+ngroups = 8560
