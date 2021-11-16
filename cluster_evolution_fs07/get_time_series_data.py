@@ -27,8 +27,8 @@ if not os.path.exists(clust_save_path ):
     os.makedirs(clust_save_path)
 
 
-start_step = 250
-end_step = 345
+start_step = 130
+end_step = 371
 
 mass_data = []
 ages = []
@@ -37,7 +37,7 @@ ages = []
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     print('> reading output:', output_num)
     infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (output_num,output_num))
-    #print ("#reading in info file: %s" %infofile)  
+    print ("#reading in info file: %s" %infofile)  
     
     #cell fields
     FIELDS = ["Density",
@@ -70,7 +70,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     star_num = np.array(raw_birth_epochs).size
     unique_birth_epochs = np.array(
         code_age_to_yr(raw_birth_epochs, current_hubble))
-    unique_birth_epochs.resize(25)
+    unique_birth_epochs.resize(100)
     
 
     time_step_mass_data = np.array(
@@ -85,8 +85,8 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 mass_data = np.array(mass_data)
 ages = np.array(ages)
 
-name = clust_save_path + '/timeseries_mass_data_11_09.txt'
-name_1 = clust_save_path + '/timeseries_birth_data_11_09.txt'
+name = clust_save_path + '/timeseries_mass_data_11_15.txt'
+name_1 = clust_save_path + '/timeseries_birth_data_11_15.txt'
 
 np.savetxt(fname=name, X=mass_data)
 np.savetxt(fname=name_1, X=ages)
