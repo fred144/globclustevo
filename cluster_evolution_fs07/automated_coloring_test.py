@@ -23,7 +23,7 @@ datadir = os.path.expanduser(
 # datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 # local save path 
-parent_folder = 'C:/Users/1.44/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
+parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
 sequence_folder = 'test_frames'
 
 #---------------------------------save path---------------------
@@ -34,18 +34,18 @@ sequence_folder = 'test_frames'
 # if not os.path.exists(newpath):
 #     os.makedirs(newpath)
     
-#plot params
-sequence_title = 'c'
+# plot params
+sequence_title = 'test'
 width = (610,'pc')
 axis = 'z'
-start_step = 250
-end_step = 250
-ctr_shift_thresh = 0.00060 #code length
+start_step = 346
+end_step = 373
+ctr_shift_thresh = 0.00055 #code length
 
 max_density_coords = []
 
 star_map = cm.get_cmap('jet')
-cmap = star_map (np.linspace(0, 1, 25))
+cmap = star_map (np.linspace(0, 1, 30))
 
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
@@ -121,16 +121,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
             plot_args={"color": "white", "s": 30},)
         print('> using old center at {}'. format(center)) 
         
-    if pos_SFCs.size > 0:
-        p.annotate_particles(width = width,
-                              ptype='SFC', 
-                              p_size=10,
-                              marker='x', col='b') 
-    if pos_PSCs.size > 0: 
-        p.annotate_particles(width = width,
-                              ptype='PSC', 
-                              p_size=10,
-                              marker='x', col='r')
+
  
     p.annotate_timestamp(corner='lower_left', 
                           time_format='t = {time:.2f} {units}', 
@@ -149,19 +140,36 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     converted_unfiltered = code_age_to_yr(
         ad['star', 'particle_birth_epoch'], current_hubble, unique=False
         )
+    x_pos = np.array(ad['star', 'particle_position_x']) - max_density_coord[0]
+    y_pos = np.array(ad['star', 'particle_position_y']) - max_density_coord[1]
+    
     for i,unique_age in enumerate(unique_birth_epochs):
-        mask = converted_unfiltered == unique_age 
-        filtered_x = ds.arr(ad['star', 'particle_position_x'], "code_length").to('pc') [mask] 
-        filtered_y = ds.arr(ad['star', 'particle_position_y'], "code_length").to('pc') [mask]
-        print(np.size(filtered_x ), np.size(filtered_y ))
+        print(unique_age)
+        mask = np.array(converted_unfiltered) == unique_age 
+        filtered_x = ds.arr(x_pos, "code_length").to('pc') [mask] 
+        filtered_y = ds.arr(y_pos, "code_length").to('pc') [mask]
         color = cmap[i]
         color = color.reshape(1,-1)
-        p["gas", "density"].axes.scatter(filtered_x, filtered_y, marker=".", c=color) 
+        p["gas", "density"].axes.scatter(filtered_x, 
+                                         filtered_y, 
+                                         marker=".", 
+                                         c=color,
+                                         s=.5) 
         
+    # if pos_SFCs.size > 0:
+    #     p.annotate_particles(width = width,
+    #                           ptype='SFC', 
+    #                           p_size=10,
+    #                           marker='x', col='b') 
+    # if pos_PSCs.size > 0: 
+    #     p.annotate_particles(width = width,
+    #                           ptype='PSC', 
+    #                           p_size=10,
+    #                           marker='x', col='r')
     # clump_tracker(ds=ds, 
-    #               birth_epochs=unique_birth_epochs, 
-    #               width=width, 
-    #               plot_object=p)
+                  # birth_epochs=unique_birth_epochs, 
+                  # width=width, 
+                  # plot_object=p)
     
     # try:
     #     # particle clumps by age 

@@ -3,11 +3,8 @@ import os
 import yt
 import numpy as np
 import sys
-import functools
 from yt.funcs import mylog
-from clump_filters import clump_filters
 from macros import code_age_to_yr, succ_distance
-import matplotlib.pyplot as plt
 from matplotlib import cm
 
 
@@ -16,34 +13,34 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 namespace = sys._getframe(0).f_globals
 
 #---------------------------------data directory/info file---------------------
-datadir = os.path.expanduser(
-    'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine')  
-# datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
+# datadir = os.path.expanduser(
+#     'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine')  
+datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 # local save path 
-parent_folder = 'C:/Users/1.44/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
-sequence_folder = 'test_frames'
+# parent_folder = 'C:/Users/1.44/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
+# sequence_folder = 'test_frames'
 
 #---------------------------------save path---------------------
 ##### cluster save path ######
-# parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-# sequence_folder = 'hop_halo_annotated_600pc'
-# newpath = parent_folder + '/' + sequence_folder
-# if not os.path.exists(newpath):
-#     os.makedirs(newpath)
+parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
+sequence_folder = '11-23-21-automated-coloring'
+newpath = parent_folder + '/' + sequence_folder
+if not os.path.exists(newpath):
+    os.makedirs(newpath)
     
 #plot params
-sequence_title = 'a'
-width = (610,'pc')
+sequence_title = '11-23-21-automated-coloring'
+width = (200,'pc')
 axis = 'z'
-start_step = 250
-end_step = 250
+start_step = 346
+end_step = 373
 ctr_shift_thresh = 0.00060 #code length
 
 max_density_coords = []
 
 star_map = cm.get_cmap('jet')
-cmap = star_map (np.linspace(0, 1, 25))
+cmap = star_map (np.linspace(0, 1, 30))
 
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
@@ -68,7 +65,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
     
-    clump_filters(ds)
+    #clump_filters(ds)
     
     redshft = ds.current_redshift
     current_hubble = ds.hubble_constant  
@@ -80,7 +77,6 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     pos_SFCs = ad['SFC', 'particle_position']
     pos_PSCs = ad['PSC', 'particle_position']
     be_star = ad['star', 'particle_birth_epoch']
-    raw_birth_epochs = ad['star', 'particle_birth_epoch'] 
     
     # centering using max density 
     max_den = ad.argmax(('gas', 'density'))
@@ -90,10 +86,15 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # keep center at density max
     if loop_num == 0:
         max_density_coords.append(max_density_coord)
+        
     distance = succ_distance(max_density_coord, max_density_coords[-1])
     print('\n> distance b/w current and previously used max density:', distance)
+    
     if distance < ctr_shift_thresh: 
-        p = yt.ProjectionPlot(ds, axis, "density", width = width, center = max_density_coord)
+        ctr = max_density_coord
+        part_x_pos = np.array(ad['star', 'particle_position_x']) - ctr[0]
+        part_y_pos = np.array(ad['star', 'particle_position_y']) - ctr[1]
+        p = yt.ProjectionPlot(ds, axis, "density", width = width, center = ctr)
         # if the plot center migrates, annotate previous center
         p.annotate_marker(
             max_density_coords[-1],
@@ -109,41 +110,59 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         # appened new center to list
         max_density_coords.append(max_density_coord)
         print('> plot centered at {}'. format(max_density_coord)) 
+        
     else: 
-        center = max_density_coords[-1]
-        p = yt.ProjectionPlot(ds, axis, "density", width = width, center = max_density_coords[-1])
+        ctr = max_density_coords[-1]
+        part_x_pos = np.array(ad['star', 'particle_position_x']) - ctr[0]
+        part_y_pos = np.array(ad['star', 'particle_position_y']) - ctr[1]
+        p = yt.ProjectionPlot(ds, axis, "density", width = width, center = ctr)
         # annotate current center for reference
         p.annotate_marker(
             max_density_coords[-1],
             marker="x",
             coord_system="data",
             plot_args={"color": "white", "s": 30},)
-        print('> using old center at {}'. format(center)) 
+        print('> using old center at {}'. format(ctr)) 
+          
+    unique_birth_epochs = code_age_to_yr(be_star, current_hubble) 
+    converted_unfiltered = code_age_to_yr(be_star, current_hubble, unique=False)
+    
+    print('annotating', len(converted_unfiltered), 'star particles')
+    
+    for i,unique_age in enumerate(unique_birth_epochs):
+        mask = np.array(converted_unfiltered) == unique_age 
+        filtered_x = ds.arr(part_x_pos, "code_length").to('pc') [mask] 
+        filtered_y = ds.arr(part_y_pos, "code_length").to('pc') [mask]
+        print(unique_age)
+        print(filtered_x)
+        
+        color = cmap[i]
+        color = color.reshape(1,-1)
+        p["gas", "density"].axes.scatter(filtered_x, 
+                                         filtered_y, 
+                                         marker=".", 
+                                         c=color,
+                                         s=.5) 
         
     
-    # clump_tracker(ds=ds, 
-    #               birth_epochs=unique_birth_epochs, 
-    #               width=width, 
-    #               plot_object=p)
-    
-    try:
-        # particle clumps by age 
-        unique_birth_epochs = code_age_to_yr(raw_birth_epochs, current_hubble)
-        print('annotating', np.array(be_star).size, 'star particles')
-        #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
-        for clumpnum,age in enumerate(unique_birth_epochs, start=1):
-            print('> annotating clump', age)
-            clumpname = 'clump' + str(clumpnum) 
-            color = cmap[clumpnum]
-            color = color.reshape(1,-1)
-            p.annotate_particles(width=width, 
-                                  ptype=clumpname, 
-                                  p_size=8.0, 
-                                  marker='.',
-                                  col=color) 
-    except: 
-        print('> no stars')
-        pass
+    # try:
+    #     # particle clumps by age 
+    #     unique_birth_epochs = code_age_to_yr(raw_birth_epochs, current_hubble)
+    #     print('annotating', np.array(be_star).size, 'star particles')
+    #     #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
+    #     for clumpnum,age in enumerate(unique_birth_epochs, start=1):
+    #         print('> annotating clump', age)
+    #         clumpname = 'clump' + str(clumpnum) 
+    #         color = cmap[clumpnum]
+    #         color = color.reshape(1,-1)
+    #         p.annotate_particles(width=width, 
+    #                               ptype=clumpname, 
+    #                               p_size=8.0, 
+    #                               marker='.',
+    #                               col=color) 
+    # except: 
+    #     print('> no stars')
+    #     pass
 
 
     
@@ -168,16 +187,16 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 
 
 
-    if pos_SFCs.size > 0:
-        p.annotate_particles(width = width,
-                              ptype='SFC', 
-                              p_size=10,
-                              marker='x', col='b') 
-    if pos_PSCs.size > 0: 
-        p.annotate_particles(width = width,
-                              ptype='PSC', 
-                              p_size=10,
-                              marker='x', col='r')
+    # if pos_SFCs.size > 0:
+    #     p.annotate_particles(width = width,
+    #                           ptype='SFC', 
+    #                           p_size=10,
+    #                           marker='x', col='b') 
+    # if pos_PSCs.size > 0: 
+    #     p.annotate_particles(width = width,
+    #                           ptype='PSC', 
+    #                           p_size=10,
+    #                           marker='x', col='r')
  
     p.annotate_timestamp(corner='lower_left', 
                           time_format='t = {time:.2f} {units}', 
@@ -191,11 +210,13 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # "{} {}| Red = Pop II, Blue = SFC, Black = PSC ".format(sequence_title, output_num) ) 
     #p.annotate_title(plot_title)
     
-    save_path = str ("{}/{}/out-{}-z-{}-{}.png".format(parent_folder,
-                                                sequence_folder,
-                                                str(output_num).zfill(5),
-                                                str(np.around(redshft, 4)).replace('.', '_'),
-                                                sequence_title.replace(' ','-'))
+    save_path = str (
+        "{}/{}/out-{}-z-{}-{}.png".format(parent_folder,
+                                          sequence_folder,
+                                          str(output_num).zfill(5),
+                                          str(np.around(redshft, 4)).replace('.', '_'),
+                                          sequence_title.replace(' ','-')
+                                          )
                       )
     p.save(save_path, mpl_kwargs=dict(dpi=200))
     print('#saved:', save_path)
