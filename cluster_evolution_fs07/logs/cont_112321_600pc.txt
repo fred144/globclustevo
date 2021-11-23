@@ -1,0 +1,199 @@
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca mpi_cuda_support 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+*** WARNING (KS MODIFIED) ****   particle_families is modified in yt/frontends/ramses/definitions.py
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00350/info_00350.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 0.0
+> plot centered at [0.47575369 0.49274185 0.49415484]
+annotating 13253 star particles
+0.0
+18.52773269136378
+35.60895951612838
+68.67746879893275
+68.96389576150068
+69.09889333737374
+69.34419313912076
+70.17392563404428
+70.19719181704022
+70.20277570095823
+70.30222355644946
+70.41787201248735
+70.79423500940175
+88.2812877506949
+89.38194822809965
+90.51360276534797
+95.28010249430918
+98.17317231791276
+101.94774680597584
+102.88538251859063
+105.28119171262733
+105.4715165007201
+105.70672511562589
+106.96307121850077
+107.10152878572808
+107.22647285344465
+107.3272931843876
+107.85326324282323
+108.11326883559741
+108.12045297500663
+108.16460257377003
+108.2490954495097
+108.25065368909418
+108.27451671999916
+108.29233658841076
+108.5213798929417
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/automated-coloring-test/out-00350-z-10_6707-test.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00351/info_00351.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.4408811604787422e-06
+> plot centered at [0.47575453 0.49274281 0.49415275]
+annotating 13443 star particles
+0.0
+18.52773269136378
+35.60895951612838
+68.67746879893275
+68.96389576150068
+69.09889333737374
+69.34419313912076
+70.17392563404428
+70.19719181704022
+70.20277570095823
+70.30222355644946
+70.41787201248735
+70.79423500940175
+88.2812877506949
+89.38194822809965
+90.51360276534797
+95.28010249430918
+98.17317231791276
+101.94774680597584
+102.88538251859063
+105.28119171262733
+105.4715165007201
+105.70672511562589
+106.96307121850077
+107.10152878572808
+107.22647285344465
+107.3272931843876
+107.85326324282323
+108.11326883559741
+108.12045297500663
+108.16460257377003
+108.2490954495097
+108.25065368909418
+108.27451671999916
+108.29233658841076
+108.5213798929417
+109.06335908776418
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/automated-coloring-test/out-00351-z-10_6672-test.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00352/info_00352.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.538626127163305e-06
+> plot centered at [0.47575554 0.49274334 0.49415049]
+annotating 14062 star particles
+0.0
+18.52773269136378
+35.60895951612838
+68.67746879893275
+68.96389576150068
+69.09889333737374
+69.34419313912076
+70.17392563404428
+70.19719181704022
+70.20277570095823
+70.30222355644946
+70.41787201248735
+70.79423500940175
+88.2812877506949
+89.38194822809965
+90.51360276534797
+95.28010249430918
+98.17317231791276
+101.94774680597584
+102.88538251859063
+105.28119171262733
+105.4715165007201
+105.70672511562589
+106.96307121850077
+107.10152878572808
+107.22647285344465
+107.3272931843876
+107.85326324282323
+108.11326883559741
+108.12045297500663
+108.16460257377003
+108.2490954495097
+108.25065368909418
+108.27451671999916
+108.29233658841076
+108.5213798929417
+109.06335908776418
+109.19240558657475
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/automated-coloring-test/out-00352-z-10_6634-test.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00353/info_00353.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 7.001199227751528e-06
+> plot centered at [0.47575882 0.49274072 0.49415609]
+annotating 14766 star particles
+0.0
+18.52773269136378
+35.60895951612838
+68.67746879893275
+68.96389576150068
+69.09889333737374
+69.34419313912076
+70.17392563404428
+70.19719181704022
+70.20277570095823
+70.30222355644946
+70.41787201248735
+70.79423500940175
+88.2812877506949
+89.38194822809965
+90.51360276534797
+95.28010249430918
+98.17317231791276
+101.94774680597584
+102.88538251859063
+105.28119171262733
+105.4715165007201
+105.70672511562589
+106.96307121850077
+107.10152878572808
+107.22647285344465
+107.3272931843876
+107.85326324282323
+108.11326883559741
+108.12045297500663
+108.16460257377003
+108.2490954495097
+108.25065368909418
+108.27451671999916
+108.29233658841076
+108.5213798929417
+109.06335908776418
+109.19240558657475
+109.47480995116348
+109.49557297753381
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/automated-coloring-test/out-00353-z-10_6597-test.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00354/info_00354.txt
+# reading fields...
