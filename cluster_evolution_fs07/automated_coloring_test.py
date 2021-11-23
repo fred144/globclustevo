@@ -45,7 +45,7 @@ ctr_shift_thresh = 0.00060 #code length
 max_density_coords = []
 
 star_map = cm.get_cmap('jet')
-cmap = star_map (np.linspace(0, 1, 30))
+cmap = star_map (np.linspace(0, 1, 50))
 
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
