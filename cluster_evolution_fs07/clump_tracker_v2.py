@@ -13,28 +13,27 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 namespace = sys._getframe(0).f_globals
 
 #---------------------------------data directory/info file---------------------
-# datadir = os.path.expanduser(
-#     'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine')  
-datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
-
-# local save path 
-# parent_folder = 'C:/Users/1.44/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
-# sequence_folder = 'test_frames'
+datadir = os.path.expanduser(
+    'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine')  
+# datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 #---------------------------------save path---------------------
+# local save path 
+parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
+sequence_folder = 'test_frames'
 ##### cluster save path ######
-parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = '11-23-21-automated-coloring'
-newpath = parent_folder + '/' + sequence_folder
-if not os.path.exists(newpath):
-    os.makedirs(newpath)
-    
+# parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
+# sequence_folder = '11-23-21-automated-coloring'
+# newpath = parent_folder + '/' + sequence_folder
+# if not os.path.exists(newpath):
+#     os.makedirs(newpath)
+ #--------------------------------------------------------------   
 #plot params
 sequence_title = '11-23-21-automated-coloring'
 width = (200,'pc')
 axis = 'z'
-start_step = 346
-end_step = 373
+start_step = 250
+end_step = 250
 ctr_shift_thresh = 0.00060 #code length
 
 max_density_coords = []
@@ -101,12 +100,12 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
             marker="x",
             coord_system="data",
             plot_args={"color": "lime", "s": 30},)
-        # annotate current center for reference
-        p.annotate_marker(
-            max_density_coord,
-            marker="x",
-            coord_system="data",
-            plot_args={"color": "white", "s": 30},)
+        # # annotate current center for reference
+        # p.annotate_marker(
+        #     max_density_coord,
+        #     marker="x",
+        #     coord_system="data",
+        #     plot_args={"color": "white", "s": 30},)
         # appened new center to list
         max_density_coords.append(max_density_coord)
         print('> plot centered at {}'. format(max_density_coord)) 
@@ -133,8 +132,6 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         mask = np.array(converted_unfiltered) == unique_age 
         filtered_x = ds.arr(part_x_pos, "code_length").to('pc') [mask] 
         filtered_y = ds.arr(part_y_pos, "code_length").to('pc') [mask]
-        print(unique_age)
-        print(filtered_x)
         
         color = cmap[i]
         color = color.reshape(1,-1)
@@ -142,7 +139,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
                                          filtered_y, 
                                          marker=".", 
                                          c=color,
-                                         s=.5) 
+                                         s=1) 
         
     
     # try:
@@ -210,13 +207,11 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # "{} {}| Red = Pop II, Blue = SFC, Black = PSC ".format(sequence_title, output_num) ) 
     #p.annotate_title(plot_title)
     
-    save_path = str (
-        "{}/{}/out-{}-z-{}-{}.png".format(parent_folder,
-                                          sequence_folder,
-                                          str(output_num).zfill(5),
-                                          str(np.around(redshft, 4)).replace('.', '_'),
-                                          sequence_title.replace(' ','-')
-                                          )
+    save_path = str ("{}/{}/out-{}-z-{}-{}.png".format(
+        parent_folder, sequence_folder, str(output_num).zfill(5), 
+        str(np.around(redshft, 4)).replace('.', '_'),
+        sequence_title.replace(' ','-')
+        )
                       )
     p.save(save_path, mpl_kwargs=dict(dpi=200))
     print('#saved:', save_path)

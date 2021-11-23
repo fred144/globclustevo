@@ -23,24 +23,24 @@ datadir = os.path.expanduser(
 # datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 # local save path 
-parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
-sequence_folder = 'test_frames'
+# parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
+# sequence_folder = 'test_frames'
 
 #---------------------------------save path---------------------
 ##### cluster save path ######
-# parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-# sequence_folder = 'hop_halo_annotated_600pc'
-# newpath = parent_folder + '/' + sequence_folder
-# if not os.path.exists(newpath):
-#     os.makedirs(newpath)
+parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
+sequence_folder = 'automated-coloring-test'
+newpath = parent_folder + '/' + sequence_folder
+if not os.path.exists(newpath):
+    os.makedirs(newpath)
     
 # plot params
 sequence_title = 'test'
 width = (610,'pc')
 axis = 'z'
-start_step = 346
+start_step = 350
 end_step = 373
-ctr_shift_thresh = 0.00055 #code length
+ctr_shift_thresh = 0.00060 #code length
 
 max_density_coords = []
 
@@ -95,30 +95,23 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     print('\n> distance b/w current and previously used max density:', distance)
     if distance < ctr_shift_thresh: 
         p = yt.ProjectionPlot(ds, axis, "density", width = width, center = max_density_coord)
+        x_pos = np.array(ad['star', 'particle_position_x']) - max_density_coord[0]
+        y_pos = np.array(ad['star', 'particle_position_y']) - max_density_coord[1]
         # if the plot center migrates, annotate previous center
         p.annotate_marker(
             max_density_coords[-1],
             marker="x",
             coord_system="data",
             plot_args={"color": "lime", "s": 30},)
-        # annotate current center for reference
-        p.annotate_marker(
-            max_density_coord,
-            marker="x",
-            coord_system="data",
-            plot_args={"color": "white", "s": 30},)
+
         # appened new center to list
         max_density_coords.append(max_density_coord)
         print('> plot centered at {}'. format(max_density_coord)) 
     else: 
         center = max_density_coords[-1]
         p = yt.ProjectionPlot(ds, axis, "density", width = width, center = max_density_coords[-1])
-        # annotate current center for reference
-        p.annotate_marker(
-            max_density_coords[-1],
-            marker="x",
-            coord_system="data",
-            plot_args={"color": "white", "s": 30},)
+        x_pos = np.array(ad['star', 'particle_position_x']) - max_density_coords[-1] [0]
+        y_pos = np.array(ad['star', 'particle_position_y']) - max_density_coords[-1] [1]
         print('> using old center at {}'. format(center)) 
         
 
@@ -140,8 +133,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     converted_unfiltered = code_age_to_yr(
         ad['star', 'particle_birth_epoch'], current_hubble, unique=False
         )
-    x_pos = np.array(ad['star', 'particle_position_x']) - max_density_coord[0]
-    y_pos = np.array(ad['star', 'particle_position_y']) - max_density_coord[1]
+
     
     for i,unique_age in enumerate(unique_birth_epochs):
         print(unique_age)
