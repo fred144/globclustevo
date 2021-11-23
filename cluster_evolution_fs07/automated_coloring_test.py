@@ -18,9 +18,9 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 namespace = sys._getframe(0).f_globals
 
 #---------------------------------data directory/info file---------------------
-datadir = os.path.expanduser(
-    'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine')  
-# datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
+# datadir = os.path.expanduser(
+#     'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine')  
+datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 # local save path 
 # parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
