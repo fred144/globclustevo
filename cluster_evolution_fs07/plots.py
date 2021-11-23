@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt 
 
-births = np.loadtxt(r'sequences\new_refine\data\timeseries_birth_data_11_09.txt')
-masses = np.loadtxt(r'sequences\new_refine\data\timeseries_mass_data_11_09.txt') 
+births = np.loadtxt(r'sequences\new_refine\data\timeseries_birth_data_11_15.txt')
+masses = np.loadtxt(r'sequences\new_refine\data\timeseries_mass_data_11_15.txt') 
 
 time_z = masses[:,0]
 time_myr = masses[:,1]

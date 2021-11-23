@@ -9,6 +9,8 @@ from clump_filters import clump_filters
 from macros import code_age_to_yr, succ_distance
 import matplotlib.pyplot as plt
 from matplotlib import cm
+import matplotlib.gridspec as gridspec
+from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 
 
 mylog.setLevel(40)
@@ -33,7 +35,7 @@ sequence_folder = 'test_frames'
 #     os.makedirs(newpath)
     
 #plot params
-sequence_title = 'a'
+sequence_title = 'c'
 width = (610,'pc')
 axis = 'z'
 start_step = 250
@@ -68,7 +70,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
     
-    clump_filters(ds)
+    #clump_filters(ds)
     
     redshft = ds.current_redshift
     current_hubble = ds.hubble_constant  
@@ -80,7 +82,6 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     pos_SFCs = ad['SFC', 'particle_position']
     pos_PSCs = ad['PSC', 'particle_position']
     be_star = ad['star', 'particle_birth_epoch']
-    raw_birth_epochs = ad['star', 'particle_birth_epoch'] 
     
     # centering using max density 
     max_den = ad.argmax(('gas', 'density'))
@@ -120,33 +121,83 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
             plot_args={"color": "white", "s": 30},)
         print('> using old center at {}'. format(center)) 
         
+    if pos_SFCs.size > 0:
+        p.annotate_particles(width = width,
+                              ptype='SFC', 
+                              p_size=10,
+                              marker='x', col='b') 
+    if pos_PSCs.size > 0: 
+        p.annotate_particles(width = width,
+                              ptype='PSC', 
+                              p_size=10,
+                              marker='x', col='r')
+ 
+    p.annotate_timestamp(corner='lower_left', 
+                          time_format='t = {time:.2f} {units}', 
+                          time_unit= 'Myr', 
+                          redshift=True) 
+    p.annotate_scale(corner='lower_right')
+    p.set_cmap('density', 'magma')
+    p.set_zlim('density', 0.01, .05)
     
+    print('annotating', np.array(be_star).size, 'star particles')
+    #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
+    
+    # particle clumps by age 
+    # converts code age to relative ages 
+    unique_birth_epochs = code_age_to_yr(ad['star', 'particle_birth_epoch'], current_hubble) 
+    converted_unfiltered = code_age_to_yr(
+        ad['star', 'particle_birth_epoch'], current_hubble, unique=False
+        )
+    for i,unique_age in enumerate(unique_birth_epochs):
+        mask = converted_unfiltered == unique_age 
+        filtered_x = ds.arr(ad['star', 'particle_position_x'], "code_length").to('pc') [mask] 
+        filtered_y = ds.arr(ad['star', 'particle_position_y'], "code_length").to('pc') [mask]
+        print(np.size(filtered_x ), np.size(filtered_y ))
+        color = cmap[i]
+        color = color.reshape(1,-1)
+        p["gas", "density"].axes.scatter(filtered_x, filtered_y, marker=".", c=color) 
+        
     # clump_tracker(ds=ds, 
     #               birth_epochs=unique_birth_epochs, 
     #               width=width, 
     #               plot_object=p)
     
-    try:
-        # particle clumps by age 
-        unique_birth_epochs = code_age_to_yr(raw_birth_epochs, current_hubble)
-        print('annotating', np.array(be_star).size, 'star particles')
-        #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
-        for clumpnum,age in enumerate(unique_birth_epochs, start=1):
-            print('> annotating clump', age)
-            clumpname = 'clump' + str(clumpnum) 
-            color = cmap[clumpnum]
-            color = color.reshape(1,-1)
-            p.annotate_particles(width=width, 
-                                  ptype=clumpname, 
-                                  p_size=8.0, 
-                                  marker='.',
-                                  col=color) 
-    except: 
-        print('> no stars')
-        pass
-
-
+    # try:
+    #     # particle clumps by age 
+    #     print('annotating', np.array(be_star).size, 'star particles')
+    #     #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
+    #     for clumpnum,age in enumerate(unique_birth_epochs, start=1):
+    #         print('> annotating clump', age)
+    #         clumpname = 'be_' + str(clumpnum) 
+    #         color = cmap[clumpnum]
+    #         color = color.reshape(1,-1)
+    #         p.annotate_particles(width=width, 
+    #                               ptype=clumpname, 
+    #                               p_size=8.0, 
+    #                               marker='.',
+    #                               col=color) 
+    # except: 
+    #     print('> no stars')
+    #     pass
     
+    
+    
+    
+    # import matplotlib as mpl
+    
+    # cmap = mpl.cm.cool
+    # norm = mpl.colors.Normalize(vmin=5, vmax=10)
+    # cbaxes = inset_axes(p["gas", "density"].axes, width="30%", height="3%", loc=3)  
+    # p["gas", "density"].colorbar(mpl.cm.ScalarMappable(norm=norm, cmap=cmap),
+    #              cax=cbaxes, orientation='horizontal', label='Some Units')
+    
+    # cbaxes = inset_axes(p["gas", "density"].axes, width="30%", height="3%", loc=3) 
+    # plt.colorbar(cax=cbaxes, ticks=[0.,1], orientation='horizontal')
+
+    # fig, ax = plt.subplots()
+    # cax = fig.add_axes([0.27, 0.8, 0.5, 0.05])
+    # fig.colorbar(p["gas", "density"].axes, cax=cax, orientation='horizontal')
 
     # from yt.analysis_modules.halo_analysis.api import HaloCatalog
 
@@ -168,29 +219,12 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 
 
 
-    if pos_SFCs.size > 0:
-        p.annotate_particles(width = width,
-                              ptype='SFC', 
-                              p_size=10,
-                              marker='x', col='b') 
-    if pos_PSCs.size > 0: 
-        p.annotate_particles(width = width,
-                              ptype='PSC', 
-                              p_size=10,
-                              marker='x', col='r')
- 
-    p.annotate_timestamp(corner='lower_left', 
-                          time_format='t = {time:.2f} {units}', 
-                          time_unit= 'Myr', 
-                          redshift=True) 
-    p.annotate_scale(corner='lower_right')
-    p.set_cmap('density', 'magma')
-    p.set_zlim('density', 0.01, .05)
+
 
     # plot_title = str( 
     # "{} {}| Red = Pop II, Blue = SFC, Black = PSC ".format(sequence_title, output_num) ) 
     #p.annotate_title(plot_title)
-    
+
     save_path = str ("{}/{}/out-{}-z-{}-{}.png".format(parent_folder,
                                                 sequence_folder,
                                                 str(output_num).zfill(5),
