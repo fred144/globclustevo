@@ -340,3 +340,204 @@ annotating 16579 star particles
 # reading fields...
 
 > distance b/w current and previously used max density: 2.7216080629994775e-05
+> using old center at [0.47575369 0.49274185 0.49415484]
+annotating 16579 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/continued-zlim-changed-113021/out-00362-z-10_6252-continued.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00363/info_00363.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.3578816995000353e-05
+> using old center at [0.47575369 0.49274185 0.49415484]
+annotating 16579 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/continued-zlim-changed-113021/out-00363-z-10_6217-continued.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00364/info_00364.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.5367414002571872e-05
+> using old center at [0.47575369 0.49274185 0.49415484]
+annotating 17130 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/continued-zlim-changed-113021/out-00364-z-10_6182-continued.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00365/info_00365.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 2.675277641640728e-05
+> using old center at [0.47575369 0.49274185 0.49415484]
+annotating 17237 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/continued-zlim-changed-113021/out-00365-z-10_6145-continued.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00366/info_00366.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 3.1271143888446886e-05
+> using old center at [0.47575369 0.49274185 0.49415484]
+annotating 17237 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/continued-zlim-changed-113021/out-00366-z-10_6109-continued.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00367/info_00367.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 3.177106487256479e-05
+> using old center at [0.47575369 0.49274185 0.49415484]
+annotating 17350 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/continued-zlim-changed-113021/out-00367-z-10_6073-continued.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00368/info_00368.txt
+# reading fields...
+
+> distance b/w current and previously used max density: 3.244369843074911e-05
+> using old center at [0.47575369 0.49274185 0.49415484]
+annotating 17350 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/continued-zlim-changed-113021/out-00368-z-10_6035-continued.png
+----------------------------------------------------------------------------------
+# reading in info file: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00369/info_00369.txt
+# reading fields...
