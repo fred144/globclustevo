@@ -3,14 +3,14 @@ import os
 import yt
 import numpy as np
 import sys
-import functools
+#import functools
 from yt.funcs import mylog
-from clump_filters import clump_filters
+#from clump_filters import clump_filters
 from macros import code_age_to_yr, succ_distance
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from matplotlib import cm
-import matplotlib.gridspec as gridspec
-from mpl_toolkits.axes_grid1.inset_locator import inset_axes
+#import matplotlib.gridspec as gridspec
+#from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 
 
 mylog.setLevel(40)
@@ -18,28 +18,28 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 namespace = sys._getframe(0).f_globals
 
 #---------------------------------data directory/info file---------------------
-# datadir = os.path.expanduser(
-#     'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine')  
-datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
+datadir = os.path.expanduser(
+    'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine')  
+# datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 # local save path 
-# parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
-# sequence_folder = 'test_frames'
+parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
+sequence_folder = 'test_frames'
 
 #---------------------------------save path---------------------
 ##### cluster save path ######
-parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'continued-350-end-113021-stable-moregradient'
-newpath = parent_folder + '/' + sequence_folder
-if not os.path.exists(newpath):
-    os.makedirs(newpath)
+# parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
+# sequence_folder = 'continued-350-end-113021-stable-moregradient'
+# newpath = parent_folder + '/' + sequence_folder
+# if not os.path.exists(newpath):
+#     os.makedirs(newpath)
     
 # plot params
 sequence_title = 'continued'
 width = (610,'pc')
 axis = 'z'
-start_step = 350
-end_step = 381
+start_step = 250
+end_step = 250
 #ctr_shift_thresh = 0.00060 #code length
 ctr_shift_thresh = 0.000001 #code length
 max_density_coords = []
@@ -122,8 +122,8 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
                           redshift=True) 
     p.annotate_scale(corner='lower_right')
     p.set_cmap('density', 'magma')
-    p.set_zlim('density', 0.01, .05)
-    
+    p.set_zlim('density', 0.01, .15)
+    p.set_log(("gas", "density"), False)
     print('annotating', np.array(be_star).size, 'star particles')
     #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
     
