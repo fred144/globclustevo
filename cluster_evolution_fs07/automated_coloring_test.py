@@ -29,23 +29,23 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 #---------------------------------save path---------------------
 ##### cluster save path ######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'automated-coloring-test'
+sequence_folder = 'continued-350-end-113021'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
     
 # plot params
-sequence_title = 'test'
+sequence_title = 'continued'
 width = (610,'pc')
 axis = 'z'
 start_step = 350
-end_step = 373
-ctr_shift_thresh = 0.00060 #code length
-
+end_step = 350
+#ctr_shift_thresh = 0.00060 #code length
+ctr_shift_thresh = 0.00020 #code length
 max_density_coords = []
 
 star_map = cm.get_cmap('jet')
-cmap = star_map (np.linspace(0, 1, 50))
+cmap = star_map (np.linspace(0, 1, 21))
 
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
@@ -129,11 +129,19 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     
     # particle clumps by age 
     # converts code age to relative ages 
-    unique_birth_epochs = code_age_to_yr(ad['star', 'particle_birth_epoch'], current_hubble) 
+    unique_birth_epochs = code_age_to_yr(
+        ad['star', 'particle_birth_epoch'], current_hubble
+        ) 
+    unique_birth_epochs = np.unique(np.round_(unique_birth_epochs, 0))
     converted_unfiltered = code_age_to_yr(
         ad['star', 'particle_birth_epoch'], current_hubble, unique=False
         )
-
+    converted_unfiltered = np.round_(converted_unfiltered, 0)
+    
+    
+    p.annotate_text((0.68, 0.92), 
+                    "Birth Epochs: {}".format(len(unique_birth_epochs)), 
+                    coord_system="figure")
     
     for i,unique_age in enumerate(unique_birth_epochs):
         print(unique_age)
@@ -147,7 +155,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
                                          marker=".", 
                                          c=color,
                                          s=.5) 
-        
+      
     # if pos_SFCs.size > 0:
     #     p.annotate_particles(width = width,
     #                           ptype='SFC', 
@@ -202,7 +210,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # from yt.analysis_modules.halo_analysis.api import HaloCatalog
 
     # hc = HaloCatalog(data_ds=ds, finder_method='hop',
-    #                   finder_kwargs={"threshold": 100,
+    #                   finder_kwargs={"threshold": 100, #default: 160
     #                                   "ptype":'DM',
     #                                   "dm_only":False})
     
