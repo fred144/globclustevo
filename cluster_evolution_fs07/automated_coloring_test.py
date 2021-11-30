@@ -39,13 +39,13 @@ sequence_title = 'continued'
 width = (610,'pc')
 axis = 'z'
 start_step = 350
-end_step = 350
+end_step = 380
 #ctr_shift_thresh = 0.00060 #code length
 ctr_shift_thresh = 0.00020 #code length
 max_density_coords = []
 
 star_map = cm.get_cmap('jet')
-cmap = star_map (np.linspace(0, 1, 21))
+cmap = star_map (np.linspace(0, 1, 30))
 
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
