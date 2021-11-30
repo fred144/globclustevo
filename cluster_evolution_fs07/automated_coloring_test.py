@@ -29,7 +29,7 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 #---------------------------------save path---------------------
 ##### cluster save path ######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'continued-350-end-113021-stable'
+sequence_folder = 'continued-350-end-113021-stable-moregradient'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
@@ -45,7 +45,7 @@ ctr_shift_thresh = 0.00005 #code length
 max_density_coords = []
 
 star_map = cm.get_cmap('jet')
-cmap = star_map (np.linspace(0, 1, 30))
+cmap = star_map (np.linspace(0, 1, 25))
 
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
