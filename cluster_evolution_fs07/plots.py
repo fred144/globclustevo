@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt 
 
-births = np.loadtxt(r'sequences\new_refine\data\timeseries_birth_data_11_15.txt')
-masses = np.loadtxt(r'sequences\new_refine\data\timeseries_mass_data_11_15.txt') 
+births = np.loadtxt(r'sequences\new_refine\data\timeseries_birth_data_12_05.txt')
+masses = np.loadtxt(r'sequences\new_refine\data\timeseries_mass_data_12_05.txt') 
 
 time_z = masses[:,0]
 time_myr = masses[:,1]
@@ -22,14 +22,15 @@ birth_epochs = be + 339.562
 #number of super novas = total mass over 150
     # efficiency is total stellar mass over  largest dm halo mass
 plt.figure(figsize = (12,8))
-plt.scatter(time_myr, total_pop_2)
+plt.plot(time_myr, total_pop_2, label ="Pop II")
 # for birth_epoch in birth_epochs:
 #     plt.axvline(x=birth_epoch, color = 'k', linestyle='--') 
 #plt.xlim(435,400)
+plt.title('Total Masses Inside Simulation Box')
 plt.xlabel('Time (Myr)')
-plt.ylabel('Total Pop 2 Mass (Msun)')
+plt.ylabel('Mass (M $\odot$)')
 plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
-#plt.legend()
+plt.legend()
 #%%
 time_series_data = np.loadtxt(r'timeseriesdata.txt')
 be = np.array(
