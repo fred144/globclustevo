@@ -10,24 +10,24 @@ mylog.setLevel(40)
 warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 
 #---------------------------------data directory/info file---------------------
-datadir = os.path.expanduser(
-    "G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine")  
-# datadir = os.path.expanduser("/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine") 
+# datadir = os.path.expanduser(
+#     "G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine")  
+datadir = os.path.expanduser("/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine") 
 
 # local save path 
-parent_folder = "C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07"
-sequence_folder = "test_frames"
+# parent_folder = "C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07"
+# sequence_folder = "test_frames"
 
 #---------------------------------save path---------------------
 ##### cluster save path ######
-# parent_folder = "/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine"
-# sequence_folder = "continued-zlim-changed-113021"
-# newpath = parent_folder + "/" + sequence_folder
-# if not os.path.exists(newpath):
-#     os.makedirs(newpath)
+parent_folder = "/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine"
+sequence_folder = "sfc-psc-tracking"
+newpath = parent_folder + "/" + sequence_folder
+if not os.path.exists(newpath):
+    os.makedirs(newpath)
     
 # plot params
-sequence_title = "test"
+sequence_title = "sfc_psc"
 width = (610,"pc")
 axis = "z"
 start_step = 200
@@ -36,9 +36,6 @@ end_step = 400
 ctr_shift_thresh =  0.00005 #code length
 max_density_coords = []
 
-star_map = cm.get_cmap("jet")
-cmap = star_map(np.linspace(0, 1, 25))
-cmap = np.flip(cmap, axis=0)
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     print ("----------------------------------------------------------------------------------")
@@ -123,16 +120,6 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     p.set_log(("gas", "density"), False)
 
     
-    # particle clumps by age; converts code age to relative ages  
-    unique_birth_epochs = code_age_to_yr(
-        ad["star", "particle_birth_epoch"], current_hubble
-        ) 
-    unique_birth_epochs = np.unique(np.round_(unique_birth_epochs, 0))
-    converted_unfiltered = code_age_to_yr(
-        ad["star", "particle_birth_epoch"], current_hubble, unique=False
-        )
-    # treats all clusters within 1 Myr birth epoch as same birth epoch
-    converted_unfiltered = np.round_(converted_unfiltered, 0)
     
     p.annotate_text(
                 (0.73, 0.92), 

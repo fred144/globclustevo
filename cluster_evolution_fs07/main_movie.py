@@ -12,7 +12,7 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 #---------------------------------data directory/info file---------------------
 # datadir = os.path.expanduser(
 #     'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine')  
-datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
+datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_ms5') 
 
 # local save path 
 # parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
@@ -20,18 +20,18 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 
 #---------------------------------save path---------------------
 ##### cluster save path ######
-parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'continued-zlim-changed-113021'
+parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/ms05'
+sequence_folder = 'ms05-200-209'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 #----------------------------------------------------------------
 # plot params
-sequence_title = 'fs07-200-208'
+sequence_title = 'ms05-200-209'
 width = (610,'pc')
 axis = 'z'
 start_step = 200
-end_step = 208
+end_step = 209
 #ctr_shift_thresh = 0.00060 #code length
 ctr_shift_thresh =  0.000005 #code length
 max_density_coords = []

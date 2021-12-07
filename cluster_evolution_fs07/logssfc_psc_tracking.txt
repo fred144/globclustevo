@@ -1,0 +1,54 @@
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca mpi_cuda_support 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+*** WARNING (KS MODIFIED) ****   particle_families is modified in yt/frontends/ramses/definitions.py
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00200/info_00200.txt
+
+> distance b/w current and previously used max density: 0.0
+> plot centered at [0.47566974 0.4926511  0.49456894]
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/sfc-psc-tracking/out-00200-z-11_4986-sfc_psc.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00201/info_00201.txt
+
+> distance b/w current and previously used max density: 9.569469566559976e-06
+> plot centered at [0.47567475 0.49264896 0.49456108]
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/sfc-psc-tracking/out-00201-z-11_4865-sfc_psc.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00202/info_00202.txt
+
+> distance b/w current and previously used max density: 7.266879393638692e-06
+> plot centered at [0.47567594 0.49264944 0.49455392]
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/sfc-psc-tracking/out-00202-z-11_4732-sfc_psc.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00203/info_00203.txt
+
+> distance b/w current and previously used max density: 5.761645304486548e-06
+> plot centered at [0.47567642 0.49264991 0.4945482 ]
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/sfc-psc-tracking/out-00203-z-11_4624-sfc_psc.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00204/info_00204.txt
+
+> distance b/w current and previously used max density: 5.855530694507716e-06
+> plot centered at [0.47567707 0.49265057 0.49454242]
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/sfc-psc-tracking/out-00204-z-11_4503-sfc_psc.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00205/info_00205.txt
+
+> distance b/w current and previously used max density: 5.9017628643302894e-06
+> plot centered at [0.47567695 0.4926514  0.49453658]
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/sfc-psc-tracking/out-00205-z-11_4396-sfc_psc.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00206/info_00206.txt
+
+> distance b/w current and previously used max density: 7.046153949709906e-06
+> plot centered at [0.47567478 0.49265316 0.49453011]
