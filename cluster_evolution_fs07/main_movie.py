@@ -30,10 +30,10 @@ if not os.path.exists(newpath):
 sequence_title = 'cont'
 width = (610,'pc')
 axis = 'z'
-start_step = 307
+start_step = 350
 end_step = 400
 #ctr_shift_thresh = 0.00060 #code length
-ctr_shift_thresh =  0.0000005 #code length
+ctr_shift_thresh =  0.00001 #code length
 max_density_coords = []
 
 star_map = cm.get_cmap('jet')
