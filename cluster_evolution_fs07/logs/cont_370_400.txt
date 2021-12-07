@@ -699,3 +699,309 @@ annotating 31737 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00391-z-10_5220-cont.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00392/info_00392.txt
+
+> distance b/w current and previously used max density: 2.9128488644843436e-05
+> using old center at [0.47576746 0.49275425 0.49411324]
+annotating 31737 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00392-z-10_5186-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00393/info_00393.txt
+
+> distance b/w current and previously used max density: 3.185536489527386e-05
+> using old center at [0.47576746 0.49275425 0.49411324]
+annotating 31737 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00393-z-10_5152-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00394/info_00394.txt
+
+> distance b/w current and previously used max density: 3.401822507787105e-05
+> using old center at [0.47576746 0.49275425 0.49411324]
+annotating 32569 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00394-z-10_5117-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00395/info_00395.txt
+
+> distance b/w current and previously used max density: 4.4267796256152174e-05
+> using old center at [0.47576746 0.49275425 0.49411324]
+annotating 32569 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00395-z-10_5081-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00396/info_00396.txt
+
+> distance b/w current and previously used max density: 3.633570472872618e-05
+> using old center at [0.47576746 0.49275425 0.49411324]
+annotating 32569 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00396-z-10_5045-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00397/info_00397.txt
+
+> distance b/w current and previously used max density: 3.880463798559196e-05
+> using old center at [0.47576746 0.49275425 0.49411324]
+annotating 33490 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+119.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00397-z-10_5008-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00398/info_00398.txt
+
+> distance b/w current and previously used max density: 3.936013602099738e-05
+> using old center at [0.47576746 0.49275425 0.49411324]
+annotating 33490 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+119.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00398-z-10_4998-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00399/info_00399.txt
+
+> distance b/w current and previously used max density: 4.085352476062595e-05
+> using old center at [0.47576746 0.49275425 0.49411324]
+annotating 34322 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+119.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00399-z-10_4973-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00400/info_00400.txt
+
+> distance b/w current and previously used max density: 4.286278546045712e-05
+> using old center at [0.47576746 0.49275425 0.49411324]
+annotating 34861 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+119.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00400-z-10_4940-cont.png
