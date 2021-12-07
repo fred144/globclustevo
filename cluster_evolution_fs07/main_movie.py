@@ -12,7 +12,7 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 #---------------------------------data directory/info file---------------------
 # datadir = os.path.expanduser(
 #     'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine')  
-datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_ms5') 
+datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
 # local save path 
 # parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
@@ -20,24 +20,24 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 
 #---------------------------------save path---------------------
 ##### cluster save path ######
-parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/ms05'
-sequence_folder = 'ms05-200-209'
+parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
+sequence_folder = 'movie_200_to_400'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 #----------------------------------------------------------------
 # plot params
-sequence_title = 'ms05-200-209'
+sequence_title = 'cont'
 width = (610,'pc')
 axis = 'z'
 start_step = 200
-end_step = 209
+end_step = 400
 #ctr_shift_thresh = 0.00060 #code length
-ctr_shift_thresh =  0.000005 #code length
+ctr_shift_thresh =  0.00005 #code length
 max_density_coords = []
 
 star_map = cm.get_cmap('jet')
-cmap = star_map(np.linspace(0, 1, 10))
+cmap = star_map(np.linspace(0, 1, 30))
 cmap = np.flip(cmap, axis=0)
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
