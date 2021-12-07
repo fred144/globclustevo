@@ -33,7 +33,7 @@ axis = 'z'
 start_step = 307
 end_step = 400
 #ctr_shift_thresh = 0.00060 #code length
-ctr_shift_thresh =  0.000005 #code length
+ctr_shift_thresh =  0.0000005 #code length
 max_density_coords = []
 
 star_map = cm.get_cmap('jet')

@@ -30,7 +30,7 @@ if not os.path.exists(newpath):
 sequence_title = "sfc_psc"
 width = (610,"pc")
 axis = "z"
-start_step = 240
+start_step = 260
 end_step = 400
 #ctr_shift_thresh = 0.00060 #code length
 ctr_shift_thresh =  0.00005 #code length

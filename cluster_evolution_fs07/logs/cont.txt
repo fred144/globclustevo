@@ -1,0 +1,2420 @@
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca mpi_cuda_support 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+*** WARNING (KS MODIFIED) ****   particle_families is modified in yt/frontends/ramses/definitions.py
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00307/info_00307.txt
+
+> distance b/w current and previously used max density: 0.0
+> plot centered at [0.47572911 0.49272001 0.49424994]
+annotating 6749 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00307-z-10_8354-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00308/info_00308.txt
+
+> distance b/w current and previously used max density: 2.407909616978536e-06
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6749 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00308-z-10_8314-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00309/info_00309.txt
+
+> distance b/w current and previously used max density: 4.874479365373001e-06
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6749 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00309-z-10_8277-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00310/info_00310.txt
+
+> distance b/w current and previously used max density: 2.4586030915365033e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6749 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00310-z-10_8239-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00311/info_00311.txt
+
+> distance b/w current and previously used max density: 2.5237482210765705e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6749 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00311-z-10_8201-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00312/info_00312.txt
+
+> distance b/w current and previously used max density: 2.6038976557723552e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6749 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00312-z-10_8161-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00313/info_00313.txt
+
+> distance b/w current and previously used max density: 2.701997609698971e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6749 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00313-z-10_8121-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00314/info_00314.txt
+
+> distance b/w current and previously used max density: 2.7778258539151592e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6749 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00314-z-10_8083-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00315/info_00315.txt
+
+> distance b/w current and previously used max density: 2.8815671179874897e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6749 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00315-z-10_8044-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00316/info_00316.txt
+
+> distance b/w current and previously used max density: 2.982405525770997e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6749 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00316-z-10_8007-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00317/info_00317.txt
+
+> distance b/w current and previously used max density: 3.0814549314785235e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6749 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00317-z-10_7968-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00318/info_00318.txt
+
+> distance b/w current and previously used max density: 3.231972207413252e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6816 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00318-z-10_7929-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00319/info_00319.txt
+
+> distance b/w current and previously used max density: 3.377322461661525e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6816 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00319-z-10_7891-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00320/info_00320.txt
+
+> distance b/w current and previously used max density: 3.164479019523063e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6816 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00320-z-10_7854-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00321/info_00321.txt
+
+> distance b/w current and previously used max density: 3.416707263212092e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6816 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00321-z-10_7817-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00322/info_00322.txt
+
+> distance b/w current and previously used max density: 3.6691545896653285e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 6816 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00322-z-10_7778-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00323/info_00323.txt
+
+> distance b/w current and previously used max density: 3.8673574767757986e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7330 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00323-z-10_7741-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00324/info_00324.txt
+
+> distance b/w current and previously used max density: 4.0756460151650196e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7330 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00324-z-10_7704-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00325/info_00325.txt
+
+> distance b/w current and previously used max density: 4.2865644923091057e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7330 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00325-z-10_7666-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00326/info_00326.txt
+
+> distance b/w current and previously used max density: 4.116502349885673e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7330 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00326-z-10_7627-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00327/info_00327.txt
+
+> distance b/w current and previously used max density: 4.551797198971791e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7330 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00327-z-10_7588-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00328/info_00328.txt
+
+> distance b/w current and previously used max density: 4.7216510753335896e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7330 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00328-z-10_7551-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00329/info_00329.txt
+
+> distance b/w current and previously used max density: 4.898849151469969e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7330 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00329-z-10_7513-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00330/info_00330.txt
+
+> distance b/w current and previously used max density: 4.95561992407601e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7330 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00330-z-10_7475-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00331/info_00331.txt
+
+> distance b/w current and previously used max density: 5.1007952428263706e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7330 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00331-z-10_7436-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00332/info_00332.txt
+
+> distance b/w current and previously used max density: 5.2639127552344895e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7330 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00332-z-10_7396-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00333/info_00333.txt
+
+> distance b/w current and previously used max density: 5.4477640628312436e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7330 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00333-z-10_7358-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00334/info_00334.txt
+
+> distance b/w current and previously used max density: 5.656913165410006e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7510 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00334-z-10_7320-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00335/info_00335.txt
+
+> distance b/w current and previously used max density: 5.876525845670013e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7598 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00335-z-10_7281-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00336/info_00336.txt
+
+> distance b/w current and previously used max density: 6.0660165605220575e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7711 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00336-z-10_7242-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00337/info_00337.txt
+
+> distance b/w current and previously used max density: 6.27158701452367e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7711 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00337-z-10_7202-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00338/info_00338.txt
+
+> distance b/w current and previously used max density: 7.273017275471172e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7711 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00338-z-10_7163-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00339/info_00339.txt
+
+> distance b/w current and previously used max density: 7.498906290775752e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7711 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00339-z-10_7125-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00340/info_00340.txt
+
+> distance b/w current and previously used max density: 7.739030788676604e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7711 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00340-z-10_7089-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00341/info_00341.txt
+
+> distance b/w current and previously used max density: 7.996569422594894e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 7711 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00341-z-10_7050-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00342/info_00342.txt
+
+> distance b/w current and previously used max density: 8.168561051863283e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 8781 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00342-z-10_7012-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00343/info_00343.txt
+
+> distance b/w current and previously used max density: 8.422312946414994e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 9802 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00343-z-10_6975-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00344/info_00344.txt
+
+> distance b/w current and previously used max density: 8.634022764250961e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 9802 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00344-z-10_6939-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00345/info_00345.txt
+
+> distance b/w current and previously used max density: 8.859854525645688e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 9802 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00345-z-10_6901-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00346/info_00346.txt
+
+> distance b/w current and previously used max density: 9.109393066377634e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 10238 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00346-z-10_6864-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00347/info_00347.txt
+
+> distance b/w current and previously used max density: 9.407301568635359e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 12065 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00347-z-10_6823-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00348/info_00348.txt
+
+> distance b/w current and previously used max density: 8.085841169519722e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 13074 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00348-z-10_6785-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00349/info_00349.txt
+
+> distance b/w current and previously used max density: 9.828289023010362e-05
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 13253 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00349-z-10_6745-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00350/info_00350.txt
+
+> distance b/w current and previously used max density: 0.00010062596491483324
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 13253 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00350-z-10_6707-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00351/info_00351.txt
+
+> distance b/w current and previously used max density: 0.00010300984230704886
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 13443 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00351-z-10_6672-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00352/info_00352.txt
+
+> distance b/w current and previously used max density: 0.00010551632927242253
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 14062 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00352-z-10_6634-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00353/info_00353.txt
+
+> distance b/w current and previously used max density: 0.00010059436096302425
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 14766 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00353-z-10_6597-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00354/info_00354.txt
+
+> distance b/w current and previously used max density: 0.00010997861352045937
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 15194 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00354-z-10_6559-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00355/info_00355.txt
+
+> distance b/w current and previously used max density: 0.00010466689332391303
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 15194 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00355-z-10_6519-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00356/info_00356.txt
+
+> distance b/w current and previously used max density: 0.00010744730034511475
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 15715 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00356-z-10_6478-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00357/info_00357.txt
+
+> distance b/w current and previously used max density: 0.0001026790092196432
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 15715 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00357-z-10_6440-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00358/info_00358.txt
+
+> distance b/w current and previously used max density: 0.00011222626712439502
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 16579 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00358-z-10_6401-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00359/info_00359.txt
+
+> distance b/w current and previously used max density: 0.0027357011970137756
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 16579 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00359-z-10_6364-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00360/info_00360.txt
+
+> distance b/w current and previously used max density: 0.002734684908444671
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 16579 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00360-z-10_6324-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00361/info_00361.txt
+
+> distance b/w current and previously used max density: 0.0027335667904285522
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 16579 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00361-z-10_6290-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00362/info_00362.txt
+
+> distance b/w current and previously used max density: 0.00012750818365498708
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 16579 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00362-z-10_6252-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00363/info_00363.txt
+
+> distance b/w current and previously used max density: 0.00012007294295139954
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 16579 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00363-z-10_6217-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00364/info_00364.txt
+
+> distance b/w current and previously used max density: 0.00012231121458076882
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 17130 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00364-z-10_6182-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00365/info_00365.txt
+
+> distance b/w current and previously used max density: 0.0001242414033843689
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 17237 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00365-z-10_6145-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00366/info_00366.txt
+
+> distance b/w current and previously used max density: 0.000127487281484481
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 17237 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00366-z-10_6109-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00367/info_00367.txt
+
+> distance b/w current and previously used max density: 0.00012839466885373197
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 17350 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00367-z-10_6073-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00368/info_00368.txt
+
+> distance b/w current and previously used max density: 0.0001294048959938177
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 17350 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00368-z-10_6035-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00369/info_00369.txt
+
+> distance b/w current and previously used max density: 0.00014382494567590244
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 17350 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00369-z-10_6000-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00370/info_00370.txt
+
+> distance b/w current and previously used max density: 0.0001460530881656774
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 17350 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00370-z-10_5964-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00371/info_00371.txt
+
+> distance b/w current and previously used max density: 0.00013304390932759402
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 17968 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00371-z-10_5929-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00372/info_00372.txt
+
+> distance b/w current and previously used max density: 0.00013522780302771702
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 17968 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00372-z-10_5894-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00373/info_00373.txt
+
+> distance b/w current and previously used max density: 0.0001358486056360163
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 18330 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00373-z-10_5857-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00374/info_00374.txt
+
+> distance b/w current and previously used max density: 0.00013970417964365695
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 18919 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00374-z-10_5821-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00375/info_00375.txt
+
+> distance b/w current and previously used max density: 0.0001409727684091445
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 20138 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00375-z-10_5785-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00376/info_00376.txt
+
+> distance b/w current and previously used max density: 0.00014413015270732377
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 20799 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00376-z-10_5749-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00377/info_00377.txt
+
+> distance b/w current and previously used max density: 0.00015650728901295472
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 22361 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00377-z-10_5712-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00378/info_00378.txt
+
+> distance b/w current and previously used max density: 0.0001465840367534434
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 23714 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00378-z-10_5678-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00379/info_00379.txt
+
+> distance b/w current and previously used max density: 0.00015236752901445807
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 23714 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00379-z-10_5644-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00380/info_00380.txt
+
+> distance b/w current and previously used max density: 0.00015361539066079165
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 23714 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00380-z-10_5609-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00381/info_00381.txt
+
+> distance b/w current and previously used max density: 0.00015515139125293404
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 24542 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00381-z-10_5575-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00382/info_00382.txt
+
+> distance b/w current and previously used max density: 0.00015919797741471609
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 24693 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00382-z-10_5538-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00383/info_00383.txt
+
+> distance b/w current and previously used max density: 0.00015537922302526972
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 27489 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00383-z-10_5504-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00384/info_00384.txt
+
+> distance b/w current and previously used max density: 0.0001583955585784226
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 27635 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00384-z-10_5468-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00385/info_00385.txt
+
+> distance b/w current and previously used max density: 0.00016871992737295115
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 27635 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00385-z-10_5433-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00386/info_00386.txt
+
+> distance b/w current and previously used max density: 0.00017074868371531483
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 29084 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00386-z-10_5398-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00387/info_00387.txt
+
+> distance b/w current and previously used max density: 0.00016377551864330198
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 29084 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00387-z-10_5364-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00388/info_00388.txt
+
+> distance b/w current and previously used max density: 0.00016581267369533695
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 30798 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00388-z-10_5330-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00389/info_00389.txt
+
+> distance b/w current and previously used max density: 0.00016770214339567618
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 31737 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00389-z-10_5294-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00390/info_00390.txt
+
+> distance b/w current and previously used max density: 0.00016882968022491834
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 31737 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00390-z-10_5259-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00391/info_00391.txt
+
+> distance b/w current and previously used max density: 0.00017180779085817162
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 31737 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00391-z-10_5220-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00392/info_00392.txt
+
+> distance b/w current and previously used max density: 0.00017402305645300022
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 31737 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00392-z-10_5186-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00393/info_00393.txt
+
+> distance b/w current and previously used max density: 0.0001768449922069688
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 31737 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00393-z-10_5152-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00394/info_00394.txt
+
+> distance b/w current and previously used max density: 0.00017894019943945512
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 32569 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00394-z-10_5117-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00395/info_00395.txt
+
+> distance b/w current and previously used max density: 0.0001884889505365339
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 32569 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00395-z-10_5081-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00396/info_00396.txt
+
+> distance b/w current and previously used max density: 0.00018140625411124648
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 32569 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00396-z-10_5045-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00397/info_00397.txt
+
+> distance b/w current and previously used max density: 0.00018393586560864727
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 33490 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+119.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00397-z-10_5008-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00398/info_00398.txt
+
+> distance b/w current and previously used max density: 0.00018450081282846007
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 33490 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+119.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00398-z-10_4998-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00399/info_00399.txt
+
+> distance b/w current and previously used max density: 0.0001860400629725809
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 34322 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+119.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00399-z-10_4973-cont.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00400/info_00400.txt
+
+> distance b/w current and previously used max density: 0.00018811560880959728
+> using old center at [0.47572911 0.49272001 0.49424994]
+annotating 34861 star particles
+0.0
+19.0
+36.0
+69.0
+70.0
+71.0
+88.0
+89.0
+91.0
+95.0
+98.0
+102.0
+103.0
+105.0
+106.0
+107.0
+108.0
+109.0
+110.0
+111.0
+112.0
+113.0
+114.0
+115.0
+116.0
+117.0
+118.0
+119.0
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_200_to_400/out-00400-z-10_4940-cont.png
