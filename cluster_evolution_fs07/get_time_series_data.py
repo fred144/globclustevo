@@ -69,7 +69,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     raw_birth_epochs = ad['star', 'particle_birth_epoch'] 
     star_num = np.array(raw_birth_epochs).size
     unique_birth_epochs = np.array(
-        code_age_to_yr(raw_birth_epochs, current_hubble))
+        code_age_to_yr(raw_birth_epochs, current_hubble, ))
     unique_birth_epochs.resize(200)
     
 

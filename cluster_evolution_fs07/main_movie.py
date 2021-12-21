@@ -30,7 +30,7 @@ if not os.path.exists(newpath):
 sequence_title = 'cont'
 width = (610,'pc')
 axis = 'z'
-start_step = 370
+start_step = 400
 end_step = 400
 #ctr_shift_thresh = 0.00060 #code length
 ctr_shift_thresh =  0.000001 #code length
@@ -128,12 +128,17 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     unique_birth_epochs = code_age_to_yr(
         ad['star', 'particle_birth_epoch'], current_hubble
         ) 
+    
+    # gets the clump ages, treats all clumps within 1 Myr as the from same  
     unique_birth_epochs = np.unique(np.round_(unique_birth_epochs, 0))
+    
+    # all the ages of the stars 
     converted_unfiltered = code_age_to_yr(
         ad['star', 'particle_birth_epoch'], current_hubble, unique=False
         )
+    
     # treats all clusters within 1 Myr birth epoch as same birth epoch
-    converted_unfiltered = np.round_(converted_unfiltered, 0)
+    converted_unfiltered_rounded = np.round_(converted_unfiltered, 0)
     
     p.annotate_text((0.68, 0.92), 
                     "Birth Epochs: {}".format(len(unique_birth_epochs)), 
@@ -141,7 +146,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     
     for i,unique_age in enumerate(unique_birth_epochs):
         print(unique_age)
-        mask = np.array(converted_unfiltered) == unique_age 
+        mask = np.array(converted_unfiltered_rounded) == unique_age 
         filtered_x = ds.arr(x_pos, "code_length").to('pc') [mask] 
         filtered_y = ds.arr(y_pos, "code_length").to('pc') [mask]
         color = cmap[i]
@@ -152,7 +157,17 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
                                           c=color,
                                           s=.25) 
 
-  
+    # get star positons 
+    star_positions = np.array(
+        [converted_unfiltered, ds.arr(x_pos, "code_length").to('pc'), ds.arr(y_pos, "code_length").to('pc') ]
+        )
+    
+    star_positions = np.array(star_positions)
+    
+    save_name = '/homes/fgarcia4/analysis/luminosity_mapping/' \
+    + '/star_positions_out400.txt'
+    
+    np.savetxt(fname= save_name , X=star_positions )
     # if pos_SFCs.size > 0:
     #     p.annotate_particles(width = width,
     #                           ptype='SFC', 
