@@ -160,7 +160,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # get star positons 
     current_time = float(ds.current_time.in_units('Myr'))
     star_positions = np.array(
-        [converted_unfiltered + current_time, ds.arr(x_pos, "code_length").to('pc'), ds.arr(y_pos, "code_length").to('pc') ]
+        [converted_unfiltered + 339.562, ds.arr(x_pos, "code_length").to('pc'), ds.arr(y_pos, "code_length").to('pc') ]
         )
     
     star_positions = np.array(star_positions).T
