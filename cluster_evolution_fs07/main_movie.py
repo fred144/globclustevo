@@ -132,7 +132,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # gets the clump ages, treats all clumps within 1 Myr as the from same  
     unique_birth_epochs = np.unique(np.round_(unique_birth_epochs, 0))
     
-    # all the ages of the stars 
+    # all the birth epochs of the stars 
     converted_unfiltered = code_age_to_yr(
         ad['star', 'particle_birth_epoch'], current_hubble, unique=False
         )
@@ -159,14 +159,18 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 
     # get star positons 
     current_time = float(ds.current_time.in_units('Myr'))
+    current_ages = converted_unfiltered + 339.562 - current_time
     star_positions = np.array(
-        [converted_unfiltered + 339.562, ds.arr(x_pos, "code_length").to('pc'), ds.arr(y_pos, "code_length").to('pc') ]
+        [converted_unfiltered + 339.562, 
+         ds.arr(x_pos, "code_length").to('pc'), 
+         ds.arr(y_pos, "code_length").to('pc'), 
+         ds.arr(z_pos, "code_length").to('pc')]
         )
     
     star_positions = np.array(star_positions).T
     
     save_name = '/homes/fgarcia4/analysis/luminosity_mapping/' \
-    + '/star_positions_out400.txt'
+    + '/star_positions_out_00400.txt'
     
     np.savetxt(fname= save_name , X=star_positions )
     # if pos_SFCs.size > 0:
