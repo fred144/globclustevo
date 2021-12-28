@@ -159,7 +159,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 
     # get star positons 
     current_time = float(ds.current_time.in_units('Myr'))
-    abs_birth_epochs = converted_unfiltered + 339.562
+    abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
     current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
     star_positions = np.array(
         [abs_birth_epochs,
