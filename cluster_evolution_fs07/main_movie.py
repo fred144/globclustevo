@@ -159,7 +159,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 
     # get star positons 
     current_time = float(ds.current_time.in_units('Myr'))
-    birth_epochs = converted_unfiltered + 339.562
+    birth_epochs = converted_unfiltered #+ 339.562
     current_ages = current_time - birth_epochs
     star_positions = np.array(
         [birth_epochs,
@@ -172,7 +172,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     star_positions = np.array(star_positions).T
     
     save_name = '/homes/fgarcia4/analysis/luminosity_mapping/' \
-    + '/star_positions_out_00400.txt'
+    + '/test_out_00400.txt'
     
     np.savetxt(fname= save_name , X=star_positions )
     # if pos_SFCs.size > 0:
