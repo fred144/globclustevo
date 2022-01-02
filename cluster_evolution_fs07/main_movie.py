@@ -183,15 +183,18 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     current_time = float(ds.current_time.in_units('Myr'))
     abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
     current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
-    t_myr = np.array([current_time])
+    t_myr = np.array([current_time]) 
+    t_myr.resize(np.size(current_ages))
     star_info = np.array(
-        [abs_birth_epochs,
+        [
+         abs_birth_epochs,
          current_ages,
          ds.arr(x_pos, 'code_length').to('pc'), 
          ds.arr(y_pos, 'code_length').to('pc'), 
-         ds.arr(z_pos, 'code_length').to('pc')], 
+         ds.arr(z_pos, 'code_length').to('pc'), 
          ds.arr(ad['star', 'particle_mass'], 'code_mass').to('msun'),
-         t_myr.resize(np.size(current_ages))
+         t_myr
+         ]
         )
 
     # luminosity mappping save
