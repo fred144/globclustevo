@@ -1,5 +1,6 @@
 import warnings
-import os
+import os  
+import pathlib
 import yt
 import numpy as np
 from yt.funcs import mylog
@@ -10,55 +11,60 @@ mylog.setLevel(40)
 warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 
 #---------------------------------data directory/info file---------------------
-# datadir = os.path.expanduser(
-#     'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine')  
+# datadir = os.path.realpath('/home/fabg/cosm_test_data/refine')
 datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
 
+#---------------------------------save path------------------------------------
 # local save path 
-# parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
+#parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
+# parent_folder = '.'
 # sequence_folder = 'test_frames'
 
-#---------------------------------save path---------------------
-##### cluster save path ######
+##### DT2 save path ######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'movie_200_to_400'
+sequence_folder = 'movie_115_to_452'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 #----------------------------------------------------------------
 # plot params
-sequence_title = 'cont'
-width = (610,'pc')
+sequence_title = 'avgctr'
+width = (500,'pc')
 axis = 'z'
-start_step = 400
-end_step = 400
+start_step = 115
+end_step = 452
 #ctr_shift_thresh = 0.00060 #code length
 ctr_shift_thresh =  0.000001 #code length
 max_density_coords = []
 
 star_map = cm.get_cmap('jet')
-cmap = star_map(np.linspace(0, 1, 30))
+cmap = star_map(np.linspace(0, 1, 55))
 cmap = np.flip(cmap, axis=0)
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     print ("----------------------------------------------------------------------------------")
-    infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (output_num,output_num))
-    print ("# reading in: %s" %infofile)  
-    
+    infofile = os.path.abspath(datadir + f"/output_{output_num:05}/info_{output_num:05}.txt")
+    print ("# reading in", infofile )  
+
     #cell fields
-    FIELDS = ["Density",
-              "x-velocity", 
-              "y-velocity", 
-              "z-velocity",
-              "Pressure",
-              "Metallicity",
-              "dark_matter_density",
-              "xHI", "xHII", "xHeII", "xHeIII"]
+    FIELDS = ['Density',
+              'x-velocity', 
+              'y-velocity', 
+              'z-velocity',
+              'Pressure',
+              'Metallicity',
+              'dark_matter_density',
+              'xHI', 
+              'xHII', 
+              'xHeII', 
+              'xHeIII'
+              ]
     #extra particle fields
     EPF= [('particle_family', 'b'),      
           ('particle_tag', 'b'),         
           ('particle_birth_epoch', 'd'), 
-          ('particle_metallicity', 'd')] 
+          ('particle_metallicity', 'd')
+          ] 
     
     ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
 
@@ -79,39 +85,52 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     max_density_coord = np.array(max_density_coord)
    
     # keep center at density max
-    if loop_num == 0:
-        max_density_coords.append(max_density_coord)
-    distance = succ_distance(max_density_coord, max_density_coords[-1])
-    print('\n> distance b/w current and previously used max density:', distance)
-    if distance < ctr_shift_thresh: 
-        p = yt.ProjectionPlot(
-            ds, axis, "density", width = width, center = max_density_coord
-            )
-        x_pos = np.array(ad['star', 'particle_position_x']) - max_density_coord[0]
-        y_pos = np.array(ad['star', 'particle_position_y']) - max_density_coord[1]
-        z_pos = np.array(ad['star', 'particle_position_z']) - max_density_coord[2]
-        # if the plot center migrates, annotate previous center
-        # p.annotate_marker(
-        #     max_density_coords[-1],
-        #     marker="x",
-        #     coord_system="data",
-        #     plot_args={"color": "lime", "s": 30},)
-        # appened new center to list
-        max_density_coords.append(max_density_coord)
+    # if loop_num == 0:
+    #     max_density_coords.append(max_density_coord)
+    # distance = succ_distance(max_density_coord, max_density_coords[-1])
+    # print('\n> distance b/w current and previously used max density:', distance)
+    # if distance < ctr_shift_thresh: 
+    #     p = yt.ProjectionPlot(
+    #         ds, axis, "density", width = width, center = max_density_coord
+    #         )
+    #     x_pos = np.array(ad['star', 'particle_position_x']) - max_density_coord[0]
+    #     y_pos = np.array(ad['star', 'particle_position_y']) - max_density_coord[1]
+    #     z_pos = np.array(ad['star', 'particle_position_z']) - max_density_coord[2]
+    #     # if the plot center migrates, annotate previous center
+    #     # p.annotate_marker(
+    #     #     max_density_coords[-1],
+    #     #     marker="x",
+    #     #     coord_system="data",
+    #     #     plot_args={"color": "lime", "s": 30},)
+    #     # appened new center to list
+    #     max_density_coords.append(max_density_coord)
         
-        print('> plot centered at {}'. format(max_density_coord)) 
-    else: 
-        center = max_density_coords[-1]
-        p = yt.ProjectionPlot(
-            ds, axis, "density", width = width, center = max_density_coords[-1]
-            )
-        x_pos = np.array(ad['star', 'particle_position_x']) - max_density_coords[-1] [0]
-        y_pos = np.array(ad['star', 'particle_position_y']) - max_density_coords[-1] [1]
-        z_pos = np.array(ad['star', 'particle_position_z']) - max_density_coords[-1] [2]
+    #     print('> plot centered at {}'. format(max_density_coord)) 
+    # else: 
+    #     center = max_density_coords[-1]
+    #     p = yt.ProjectionPlot(
+    #         ds, axis, "density", width = width, center = max_density_coords[-1]
+    #         )
+    #     x_pos = np.array(ad['star', 'particle_position_x']) - max_density_coords[-1] [0]
+    #     y_pos = np.array(ad['star', 'particle_position_y']) - max_density_coords[-1] [1]
+    #     z_pos = np.array(ad['star', 'particle_position_z']) - max_density_coords[-1] [2]
         
-        print('> using old center at {}'. format(center)) 
-        
-
+    #     print('> using old center at {}'. format(center)) 
+    
+    # keep centered at mean particle positons
+    x_pos = np.array(ad['star', 'particle_position_x']) 
+    y_pos = np.array(ad['star', 'particle_position_y']) 
+    z_pos = np.array(ad['star', 'particle_position_z']) 
+    
+    x_center = np.mean(x_pos)
+    y_center = np.mean(y_pos)
+    z_center = np.mean(z_pos)
+    
+    plt_ctr = np.array([x_center, y_center, z_center])
+    
+    p = yt.ProjectionPlot(
+        ds, axis, "density", width = width, center = plt_ctr
+        )
  
     p.annotate_timestamp(corner='lower_left', 
                           time_format='t = {time:.2f} {units}', 
@@ -121,6 +140,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     p.set_cmap('density', 'magma')
     p.set_zlim('density', 0.01, .15)
     p.set_log(("gas", "density"), False)
+    
     print('annotating', np.array(be_star).size, 'star particles')
     #p.annotate_particles(width=width, ptype='star', p_size=10.0,marker='.',col='r') 
     
@@ -142,39 +162,47 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     
     p.annotate_text((0.68, 0.92), 
                     "Birth Epochs: {}".format(len(unique_birth_epochs)), 
-                    coord_system="figure")
-    
+                    coord_system='figure'
+                    )
+    # pop II annotate loop
+    x_pos = x_pos - plt_ctr[0]
+    y_pos = y_pos - plt_ctr[1]
+    z_pos = z_pos - plt_ctr[2]
     for i,unique_age in enumerate(unique_birth_epochs):
-        print(unique_age)
+        # print(unique_age)
         mask = np.array(converted_unfiltered_rounded) == unique_age 
-        filtered_x = ds.arr(x_pos, "code_length").to('pc') [mask] 
-        filtered_y = ds.arr(y_pos, "code_length").to('pc') [mask]
+        filtered_x = ds.arr(x_pos, 'code_length').to('pc') [mask] 
+        filtered_y = ds.arr(y_pos, 'code_length').to('pc') [mask]
         color = cmap[i]
         color = color.reshape(1,-1)
-        p["gas", "density"].axes.scatter(filtered_x, 
-                                          filtered_y, 
-                                          marker=".", 
-                                          c=color,
-                                          s=.25) 
+        p['gas', 'density'].axes.scatter(
+            filtered_x, filtered_y, marker='.', c=color, s=.25
+            ) 
 
     # get star positons 
     current_time = float(ds.current_time.in_units('Myr'))
     abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
     current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
-    star_positions = np.array(
+    t_myr = np.array([current_time])
+    star_info = np.array(
         [abs_birth_epochs,
          current_ages,
-         ds.arr(x_pos, "code_length").to('pc'), 
-         ds.arr(y_pos, "code_length").to('pc'), 
-         ds.arr(z_pos, "code_length").to('pc')]
+         ds.arr(x_pos, 'code_length').to('pc'), 
+         ds.arr(y_pos, 'code_length').to('pc'), 
+         ds.arr(z_pos, 'code_length').to('pc')], 
+         ds.arr(ad['star', 'particle_mass'], 'code_mass').to('msun'),
+         t_myr.resize(np.size(current_ages))
         )
+
+    # luminosity mappping save
+    star_info = np.array(star_info).T
+    save_path_star_pos = str(pathlib.Path(os.getcwd()).parents[0])
+    save_time = str(format(current_time, '.2f')).replace('.', '_')
+    save_name = "/luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
+        output_num,save_time)
     
-    star_positions = np.array(star_positions).T
     
-    save_name = '/homes/fgarcia4/analysis/luminosity_mapping/' \
-    + '/star_positions_out_00400.txt'
-    
-    np.savetxt(fname= save_name , X=star_positions )
+    np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
     # if pos_SFCs.size > 0:
     #     p.annotate_particles(width = width,
     #                           ptype='SFC', 
