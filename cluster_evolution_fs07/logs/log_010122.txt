@@ -113,3 +113,340 @@ annotating 384 star particles
 #saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00139-z-12_3853-avgctr.png
 ----------------------------------------------------------------------------------
 # reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00140/info_00140.txt
+annotating 384 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00140-z-12_3602-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00141/info_00141.txt
+annotating 384 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00141-z-12_3355-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00142/info_00142.txt
+annotating 384 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00142-z-12_3107-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00143/info_00143.txt
+annotating 384 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00143-z-12_2866-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00144/info_00144.txt
+annotating 384 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00144-z-12_2626-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00145/info_00145.txt
+annotating 384 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00145-z-12_2434-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00146/info_00146.txt
+annotating 384 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00146-z-12_2187-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00147/info_00147.txt
+annotating 384 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00147-z-12_1941-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00148/info_00148.txt
+annotating 384 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00148-z-12_1701-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00149/info_00149.txt
+annotating 384 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00149-z-12_1464-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00150/info_00150.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00150-z-12_1226-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00151/info_00151.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00151-z-12_0989-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00152/info_00152.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00152-z-12_0748-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00153/info_00153.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00153-z-12_0507-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00154/info_00154.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00154-z-12_0276-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00155/info_00155.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00155-z-12_0046-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00156/info_00156.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00156-z-11_9997-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00157/info_00157.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00157-z-11_9879-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00158/info_00158.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00158-z-11_9760-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00159/info_00159.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00159-z-11_9641-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00160/info_00160.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00160-z-11_9526-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00161/info_00161.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00161-z-11_9406-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00162/info_00162.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00162-z-11_9291-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00163/info_00163.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00163-z-11_9179-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00164/info_00164.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00164-z-11_9066-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00165/info_00165.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00165-z-11_8948-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00166/info_00166.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00166-z-11_8833-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00167/info_00167.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00167-z-11_8717-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00168/info_00168.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00168-z-11_8601-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00169/info_00169.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00169-z-11_8488-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00170/info_00170.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00170-z-11_8374-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00171/info_00171.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00171-z-11_8257-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00172/info_00172.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00172-z-11_8137-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00173/info_00173.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00173-z-11_8026-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00174/info_00174.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00174-z-11_7913-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00175/info_00175.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00175-z-11_7802-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00176/info_00176.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00176-z-11_7693-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00177/info_00177.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00177-z-11_7580-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00178/info_00178.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00178-z-11_7469-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00179/info_00179.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00179-z-11_7361-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00180/info_00180.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00180-z-11_7247-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00181/info_00181.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00181-z-11_7134-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00182/info_00182.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00182-z-11_7019-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00183/info_00183.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00183-z-11_6907-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00184/info_00184.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00184-z-11_6800-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00185/info_00185.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00185-z-11_6693-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00186/info_00186.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00186-z-11_6585-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00187/info_00187.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00187-z-11_6467-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00188/info_00188.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00188-z-11_6354-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00189/info_00189.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00189-z-11_6238-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00190/info_00190.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00190-z-11_6129-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00191/info_00191.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00191-z-11_6021-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00192/info_00192.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00192-z-11_5901-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00193/info_00193.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00193-z-11_5775-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00194/info_00194.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00194-z-11_5669-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00195/info_00195.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00195-z-11_5560-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00196/info_00196.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00196-z-11_5452-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00197/info_00197.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00197-z-11_5346-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00198/info_00198.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00198-z-11_5225-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00199/info_00199.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00199-z-11_5110-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00200/info_00200.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00200-z-11_4986-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00201/info_00201.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00201-z-11_4865-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00202/info_00202.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00202-z-11_4732-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00203/info_00203.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00203-z-11_4624-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00204/info_00204.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00204-z-11_4503-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00205/info_00205.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00205-z-11_4396-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00206/info_00206.txt
+annotating 601 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00206-z-11_4270-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00207/info_00207.txt
+annotating 1760 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00207-z-11_4142-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00208/info_00208.txt
+annotating 2062 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00208-z-11_4013-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00209/info_00209.txt
+annotating 3358 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00209-z-11_3899-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00210/info_00210.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00210-z-11_3788-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00211/info_00211.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00211-z-11_3654-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00212/info_00212.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00212-z-11_3530-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00213/info_00213.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00213-z-11_3424-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00214/info_00214.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00214-z-11_3313-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00215/info_00215.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00215-z-11_3207-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00216/info_00216.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00216-z-11_3106-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00217/info_00217.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00217-z-11_3003-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00218/info_00218.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00218-z-11_2901-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00219/info_00219.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00219-z-11_2797-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00220/info_00220.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00220-z-11_2696-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00221/info_00221.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00221-z-11_2597-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00222/info_00222.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00222-z-11_2498-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00223/info_00223.txt
+annotating 4186 star particles
+#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/movie_115_to_452/out-00223-z-11_2399-avgctr.png
+----------------------------------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00224/info_00224.txt
+annotating 4186 star particles
