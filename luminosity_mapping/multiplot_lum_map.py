@@ -54,7 +54,8 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
     sub_plots = [131, 132, 133]
     
     fig = plt.figure(figsize=(16,19))
-
+    plt.style.use('dark_background') 
+    
     for (proj,sub_plot) in zip(projections,sub_plots):
         
         if proj == 'x':
@@ -86,7 +87,9 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
                extent=[-200, 200,-200, 200],
                norm=LogNorm(vmin=3e+32, vmax=3e+36)
                )
-        ax.set_axis_off()
+        #ax.set_axis_off()
+        ax.axes.xaxis.set_ticklabels([])
+        ax.axes.yaxis.set_ticklabels([])
         ax.add_artist(ax.patch)
         ax.patch.set_zorder(-1) 
         
@@ -102,10 +105,9 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
                 facecolor='white')
             ax.add_patch(rect)
             ax.text(0, -180, '200 pc', size=12, ha='center', va='center', color='white')
-            ax.set_axis_off()
-            ax.add_artist(ax.patch)
-            ax.patch.set_zorder(-1) 
-            
+         
+
+        
     fig.subplots_adjust(wspace=0, hspace=0, bottom=.1)
     cbar_ax = fig.add_axes([.125, .373, 0.774, 0.008])
     cbar = fig.colorbar(p, 
@@ -115,11 +117,11 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
                 )
     cbar.set_label(label=r'Monochromatic Luminosity at $\lambda = 150$ nm', size=12)
     
-    plt.savefig('./sequences/multi_plt/lums_{}_{}.png'.format(
+    plt.savefig('./sequences/multi_plt_rev1/lums_{}_{}.png'.format(
         str(frame).zfill(3), str(time).ljust(6, '0').replace('.','_') ), 
         dpi=200,
         bbox_inches='tight',
-        pad_inches=0.05
+        pad_inches=0.01
         )
     
-    #plt.show() 
+    plt.show() 
