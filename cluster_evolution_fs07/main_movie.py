@@ -198,15 +198,15 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         
         if slice_axis == 'z': 
             p['gas', 'density'].axes.scatter(
-                filtered_x, filtered_y, marker='.', c=color, s=.25, alpha=0.1
+                filtered_x, filtered_y, marker='.', c=color, s=.2, alpha=0.05
                 ) 
         elif slice_axis == 'x':
             p['gas', 'density'].axes.scatter(
-                filtered_y, filtered_z, marker='.', c=color, s=.25, alpha=0.1
+                filtered_y, filtered_z, marker='.', c=color, s=.2, alpha=0.05
                 ) 
         elif slice_axis == 'y':
             p['gas', 'density'].axes.scatter(
-                filtered_z, filtered_x, marker='.', c=color, s=.25, alpha=0.1
+                filtered_z, filtered_x, marker='.', c=color, s=.2, alpha=0.05
                 ) 
         else:
             print('Invalid slice axis.')

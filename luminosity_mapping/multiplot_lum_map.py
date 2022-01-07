@@ -78,7 +78,7 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
                         )
         lums = lums.T
     
-        ax = fig.add_subplot(sub_plot, title=proj, facecolor=cm.magma(0))
+        ax = fig.add_subplot(sub_plot, facecolor=cm.magma(0))
         p = ax.imshow(
                lums, 
                cmap='inferno',
@@ -90,26 +90,120 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
         #ax.set_axis_off()
         ax.axes.xaxis.set_ticklabels([])
         ax.axes.yaxis.set_ticklabels([])
+        # ax.spines['top'].set_linewidth(.5)
+        # ax.spines['bottom'].set_linewidth(.5) 
+        # ax.spines['left'].set_linewidth(.5)
+        # ax.spines['right'].set_linewidth(.5) 
         ax.add_artist(ax.patch)
         ax.patch.set_zorder(-1) 
         
         if sub_plot == 131:
-            ax.text(-120, 180, 't = %.2f Myr'%(time), size=12, ha='center', va='center', color='white')
+            ax.text(-120, 180, 
+                    't = %.2f Myr'%(time), 
+                    size=12, 
+                    ha='center', 
+                    va='center', 
+                    color='white')
+
+            plt.arrow(-180, -180, 30, 0,    
+                      head_width=3, 
+                      head_length=3, 
+                      linewidth=0.5, 
+                      color='w', 
+                      length_includes_head=True)
+            plt.arrow(-180, -180, 0, 30,    
+                      head_width=3, 
+                      head_length=3, 
+                      linewidth=0.5, 
+                      color='w', 
+                      length_includes_head=True) 
+            ax.text(-140, -180, 
+                    'y', 
+                    size=6, 
+                    ha='center', 
+                    va='center', 
+                    color='white')
+            ax.text(-180, -140, 
+                    'z', 
+                    size=6, 
+                    ha='center', 
+                    va='center', 
+                    color='white')
+            
+        if sub_plot == 132: 
+            plt.arrow(-180, -180, 30, 0,    
+                      head_width=3, 
+                      head_length=3, 
+                      linewidth=0.5, 
+                      color='w', 
+                      length_includes_head=True)
+ 
+            plt.arrow(-180, -180, 0, 30,    
+                      head_width=3, 
+                      head_length=3, 
+                      linewidth=0.5, 
+                      color='w', 
+                      length_includes_head=True) 
+            ax.text(-140, -180, 
+                    'x', 
+                    size=6, 
+                    ha='center', 
+                    va='center', 
+                    color='white')
+            ax.text(-180, -140, 
+                    'z', 
+                    size=6, 
+                    ha='center', 
+                    va='center', 
+                    color='white')
+            
         if sub_plot == 133:
             rect = patches.Rectangle(
-                xy=(-100, -160), 
+                xy=(-100, 170), 
                 width=200, 
-                height=3, 
+                height=2, 
                 linewidth=0, 
                 edgecolor='white', 
                 facecolor='white')
             ax.add_patch(rect)
-            ax.text(0, -180, '200 pc', size=12, ha='center', va='center', color='white')
+            ax.text(0, 
+                    185, 
+                    '200 pc', 
+                    size=10, 
+                    ha='center', 
+                    va='center', 
+                    color='white')
+            
+            plt.arrow(-180, -180, 30, 0,    
+                      head_width=3, 
+                      head_length=3, 
+                      linewidth=0.5, 
+                      color='w', 
+                      length_includes_head=True)
+
+            plt.arrow(-180, -180, 0, 30,    
+                      head_width=3, 
+                      head_length=3, 
+                      linewidth=0.5, 
+                      color='w', 
+                      length_includes_head=True) 
+            ax.text(-140, -180, 
+                    'x', 
+                    size=6, 
+                    ha='center', 
+                    va='center', 
+                    color='white')
+            ax.text(-180, -140, 
+                    'y', 
+                    size=6, 
+                    ha='center', 
+                    va='center', 
+                    color='white')
          
 
         
     fig.subplots_adjust(wspace=0, hspace=0, bottom=.1)
-    cbar_ax = fig.add_axes([.125, .373, 0.774, 0.008])
+    cbar_ax = fig.add_axes([.125, .3775, 0.775, 0.004])
     cbar = fig.colorbar(p, 
                  cax=cbar_ax, 
                  orientation='horizontal', 
@@ -121,7 +215,7 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
         str(frame).zfill(3), str(time).ljust(6, '0').replace('.','_') ), 
         dpi=200,
         bbox_inches='tight',
-        pad_inches=0.01
+        pad_inches=0.1 
         )
     
-    plt.show() 
+    #plt.show() 
