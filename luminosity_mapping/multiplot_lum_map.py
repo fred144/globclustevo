@@ -88,8 +88,7 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
                norm=LogNorm(vmin=3e+32, vmax=3e+36)
                )
         #ax.set_axis_off()
-        ax.axes.xaxis.set_ticklabels([])
-        ax.axes.yaxis.set_ticklabels([])
+
         # ax.spines['top'].set_linewidth(.5)
         # ax.spines['bottom'].set_linewidth(.5) 
         # ax.spines['left'].set_linewidth(.5)
@@ -104,19 +103,6 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
                     ha='center', 
                     va='center', 
                     color='white')
-
-            plt.arrow(-180, -180, 30, 0,    
-                      head_width=3, 
-                      head_length=3, 
-                      linewidth=0.5, 
-                      color='w', 
-                      length_includes_head=True)
-            plt.arrow(-180, -180, 0, 30,    
-                      head_width=3, 
-                      head_length=3, 
-                      linewidth=0.5, 
-                      color='w', 
-                      length_includes_head=True) 
             ax.text(-140, -180, 
                     'y', 
                     size=6, 
@@ -131,19 +117,6 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
                     color='white')
             
         if sub_plot == 132: 
-            plt.arrow(-180, -180, 30, 0,    
-                      head_width=3, 
-                      head_length=3, 
-                      linewidth=0.5, 
-                      color='w', 
-                      length_includes_head=True)
- 
-            plt.arrow(-180, -180, 0, 30,    
-                      head_width=3, 
-                      head_length=3, 
-                      linewidth=0.5, 
-                      color='w', 
-                      length_includes_head=True) 
             ax.text(-140, -180, 
                     'x', 
                     size=6, 
@@ -174,19 +147,7 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
                     va='center', 
                     color='white')
             
-            plt.arrow(-180, -180, 30, 0,    
-                      head_width=3, 
-                      head_length=3, 
-                      linewidth=0.5, 
-                      color='w', 
-                      length_includes_head=True)
 
-            plt.arrow(-180, -180, 0, 30,    
-                      head_width=3, 
-                      head_length=3, 
-                      linewidth=0.5, 
-                      color='w', 
-                      length_includes_head=True) 
             ax.text(-140, -180, 
                     'x', 
                     size=6, 
@@ -200,7 +161,22 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
                     va='center', 
                     color='white')
          
+        plt.arrow(-180, -180, 30, 0,    
+                  head_width=3, 
+                  head_length=3, 
+                  linewidth=0.5, 
+                  color='w', 
+                  length_includes_head=True)
 
+        plt.arrow(-180, -180, 0, 30,    
+                  head_width=3, 
+                  head_length=3, 
+                  linewidth=0.5, 
+                  color='w', 
+                  length_includes_head=True) 
+        ax.axes.xaxis.set_ticklabels([])
+        ax.axes.yaxis.set_ticklabels([])
+        
         
     fig.subplots_adjust(wspace=0, hspace=0, bottom=.1)
     cbar_ax = fig.add_axes([.125, .3775, 0.775, 0.004])
@@ -211,6 +187,8 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
                 )
     cbar.set_label(label=r'Monochromatic Luminosity at $\lambda = 150$ nm', size=12)
     
+    plt.show() 
+    
     plt.savefig('./sequences/multi_plt_rev1/lums_{}_{}.png'.format(
         str(frame).zfill(3), str(time).ljust(6, '0').replace('.','_') ), 
         dpi=200,
@@ -218,4 +196,4 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
         pad_inches=0.1 
         )
     
-    #plt.show() 
+   
