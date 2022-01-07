@@ -187,7 +187,7 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
                 )
     cbar.set_label(label=r'Monochromatic Luminosity at $\lambda = 150$ nm', size=12)
     
-    plt.show() 
+    # plt.show() 
     
     plt.savefig('./sequences/multi_plt_rev1/lums_{}_{}.png'.format(
         str(frame).zfill(3), str(time).ljust(6, '0').replace('.','_') ), 
