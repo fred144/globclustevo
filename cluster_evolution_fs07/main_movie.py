@@ -28,7 +28,7 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 
 ##### DT2 save path ######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'new_113_to_455_z_gas_density'
+sequence_folder = 'new_113_to_461_z_gas_density'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
@@ -38,7 +38,7 @@ sequence_title = 'no_ax_z_proj_den'
 width = (500,'pc')
 slice_axis = 'z'
 start_step = 113
-end_step = 455
+end_step = 461
 #ctr_shift_thresh = 0.00060 #code length
 ctr_shift_thresh =  0.000001 #code length
 max_density_coords = []
@@ -202,15 +202,15 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         
         if slice_axis == 'z': 
             p['gas', 'density'].axes.scatter(
-                filtered_x, filtered_y, marker='.', c=color, s=.2, alpha=0.05
+                filtered_x, filtered_y, marker='.', c=color, s=.2, alpha=0.02
                 ) 
         elif slice_axis == 'x':
             p['gas', 'density'].axes.scatter(
-                filtered_y, filtered_z, marker='.', c=color, s=.2, alpha=0.05
+                filtered_y, filtered_z, marker='.', c=color, s=.2, alpha=0.02
                 ) 
         elif slice_axis == 'y':
             p['gas', 'density'].axes.scatter(
-                filtered_z, filtered_x, marker='.', c=color, s=.2, alpha=0.05
+                filtered_z, filtered_x, marker='.', c=color, s=.2, alpha=0.02
                 ) 
         else:
             print('Invalid slice axis.')
@@ -241,31 +241,33 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # luminosity mappping
     
     # get star positons 
-    # abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
-    # current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
-    # t_myr = np.array([current_time]) 
-    # t_myr.resize(np.size(current_ages))
-    # star_info = np.array(
-    #     [
-    #      abs_birth_epochs,
-    #      current_ages,
-    #      ds.arr(x_pos, 'code_length').to('pc'), 
-    #      ds.arr(y_pos, 'code_length').to('pc'), 
-    #      ds.arr(z_pos, 'code_length').to('pc'), 
-    #      ds.arr(ad['star', 'particle_mass'], 'code_mass').to('msun'),
-    #      t_myr
-    #      ]
-    #     )
+     abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
+     current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
+     t_myr = np.array([current_time]) 
+     t_myr.resize(np.size(current_ages))
+     star_info = np.array(
+         [
+          abs_birth_epochs,
+          current_ages,
+          ds.arr(x_pos, 'code_length').to('pc'), 
+          ds.arr(y_pos, 'code_length').to('pc'), 
+          ds.arr(z_pos, 'code_length').to('pc'), 
+          ds.arr(ad['star', 'particle_mass'], 'code_mass').to('msun'),
+          t_myr
+          ]
+         )
     
     # luminosity mappping save
-    # star_info = np.array(star_info).T
-    # save_path_star_pos = str(pathlib.Path(os.getcwd()).parents[0])
-    # save_time = str(format(current_time, '.2f')).replace('.', '_')
-    # save_name = "/luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
-    #     output_num,save_time)
+     star_info = np.array(star_info).T
+     save_path_star_pos = str(pathlib.Path(os.getcwd()).parents[0])
+     save_time = str(format(current_time, '.2f')).replace('.', '_')
+     save_name = "/luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
+         output_num,save_time)
+    
+     np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
     
     
-    # np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
+    
     # if pos_SFCs.size > 0:
     #     p.annotate_particles(width = width,
     #                           ptype='SFC', 
