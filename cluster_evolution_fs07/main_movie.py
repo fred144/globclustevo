@@ -1,3 +1,7 @@
+import sys
+sys.path.insert(
+    1, "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages"
+    )
 import warnings
 import os  
 import pathlib
@@ -39,7 +43,7 @@ end_step = 455
 ctr_shift_thresh =  0.000001 #code length
 max_density_coords = []
 # snapshot 115 to 452 roughly spans 340 to 470 myr
-star_map = cm.get_cmap('gist_rainbow')
+star_map = cm.get_cmap('jet_r')
 time_range = (339,473) #Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1]  + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
@@ -221,7 +225,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         norm = mpl.colors.Normalize(340,470),
         #ticks = [340,405,470], 
         orientation='horizontal', 
-        cmap='gist_rainbow', 
+        cmap='jet_r', 
         label='Birth Epoch (Myr)'
         ) 
     cb.ax.tick_params(colors='white', labelsize=6)
