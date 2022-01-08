@@ -202,15 +202,15 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         
         if slice_axis == 'z': 
             p['gas', 'density'].axes.scatter(
-                filtered_x, filtered_y, marker='.', c=color, s=.2, alpha=0.02
+                filtered_x, filtered_y, marker='.', c=color, s=.2, alpha=0.1
                 ) 
         elif slice_axis == 'x':
             p['gas', 'density'].axes.scatter(
-                filtered_y, filtered_z, marker='.', c=color, s=.2, alpha=0.02
+                filtered_y, filtered_z, marker='.', c=color, s=.2, alpha=0.1
                 ) 
         elif slice_axis == 'y':
             p['gas', 'density'].axes.scatter(
-                filtered_z, filtered_x, marker='.', c=color, s=.2, alpha=0.02
+                filtered_z, filtered_x, marker='.', c=color, s=.2, alpha=0.1
                 ) 
         else:
             print('Invalid slice axis.')
@@ -241,11 +241,11 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # luminosity mappping
     
     # get star positons 
-     abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
-     current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
-     t_myr = np.array([current_time]) 
-     t_myr.resize(np.size(current_ages))
-     star_info = np.array(
+    abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
+    current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
+    t_myr = np.array([current_time]) 
+    t_myr.resize(np.size(current_ages))
+    star_info = np.array(
          [
           abs_birth_epochs,
           current_ages,
@@ -258,13 +258,13 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
          )
     
     # luminosity mappping save
-     star_info = np.array(star_info).T
-     save_path_star_pos = str(pathlib.Path(os.getcwd()).parents[0])
-     save_time = str(format(current_time, '.2f')).replace('.', '_')
-     save_name = "/luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
+    star_info = np.array(star_info).T
+    save_path_star_pos = str(pathlib.Path(os.getcwd()).parents[0])
+    save_time = str(format(current_time, '.2f')).replace('.', '_')
+    save_name = "/luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
          output_num,save_time)
     
-     np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
+    np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
     
     
     
