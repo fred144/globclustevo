@@ -1,7 +1,7 @@
 import sys
 sys.path.insert(
     1, "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages"
-    )
+    ) 
 import warnings
 import os  
 import pathlib
@@ -26,31 +26,35 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 # parent_folder = '.'
 # sequence_folder = 'test_frames'
 
-##### DT2 save path ######
+#####------------------------DT2 save path-------------------------------######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'new_113_to_461_z_gas_density'
+sequence_folder = 'projden_z_rev2_463_113'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
-#----------------------------------------------------------------
-# plot params
-sequence_title = 'no_ax_z_proj_den'
-width = (500,'pc')
+    
+#------------------------------------plot params-------------------------------
+
+sequence_title = 'z_proj_rev2'
+width = (400,'pc')
 slice_axis = 'z'
 start_step = 113
-end_step = 461
+end_step = 463
 #ctr_shift_thresh = 0.00060 #code length
 ctr_shift_thresh =  0.000001 #code length
 max_density_coords = []
 # snapshot 115 to 452 roughly spans 340 to 470 myr
 star_map = cm.get_cmap('jet_r')
-time_range = (339,473) #Myr
+time_range = (339,475) #Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1]  + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
+
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
-    print ("----------------------------------------------------------------------------------")
-    infofile = os.path.abspath(datadir + f"/output_{output_num:05}/info_{output_num:05}.txt")
+    print ("-------------------------------------------------------")
+    infofile = os.path.abspath(
+        datadir + f"/output_{output_num:05}/info_{output_num:05}.txt"
+        )
     print ("# reading in", infofile )  
 
     #cell fields
@@ -123,8 +127,8 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     #     z_pos = np.array(ad['star', 'particle_position_z']) - max_density_coords[-1] [2]
         
     #     print('> using old center at {}'. format(center)) 
-    
-    
+
+ 
     # keep centered at mean particle positons
     x_pos = np.array(ad['star', 'particle_position_x']) 
     y_pos = np.array(ad['star', 'particle_position_y']) 
@@ -136,11 +140,17 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     
     plt_ctr = np.array([x_center, y_center, z_center])
 
-    p = yt.ProjectionPlot(ds, slice_axis, "density", width = width, center = plt_ctr)
+    p = yt.ProjectionPlot(
+                          ds, 
+                          slice_axis, 
+                          ('gas', 'density'), 
+                          width = width, 
+                          center = plt_ctr
+                          )
 
     #aesthetics
-    p.set_font({"family": "serif", "size": 14,})
-    p.annotate_timestamp(corner='lower_left', 
+    p.set_font({'family': 'serif', 'size': 14,})
+    p.annotate_timestamp(corner='upper_left', 
                           time_format='t = {time:.2f} {units}', 
                           time_unit= 'Myr', 
                           redshift=True) 
@@ -149,10 +159,12 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
                      unit='pc',
                      text_args={'size':12, 'family':'serif'}
                      )
-    p.set_cmap('density', 'magma')
-    p.set_zlim('density', 0.01, .15)
+    p.set_cmap('density', 'inferno') 
+    p.set_zlim('density', 0.005, .34)       
     p.set_log(('gas', 'density'), False)
-    p.set_colorbar_label(('gas', 'density'), r'Projected z Gas Density (g cm$^{-2}$)')
+    p.set_colorbar_label(
+        ('gas', 'density'), r'Projected Gas Density (g cm$^{-2}$)'
+        )
     p.hide_axes(draw_frame=True)
     # width = (1.0, "unitary")
     # res = [1000, 1000]
@@ -167,11 +179,6 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         ) 
     # gets the clump ages, treats all clumps within 1 Myr as the from same  
     unique_birth_epochs = np.unique(np.round_(unique_birth_epochs, 0))
-
-    # p.annotate_text((0.70, 0.90), 
-    #             "Birth Epochs: {}".format(len(unique_birth_epochs)), 
-    #             coord_system='figure'
-    #             )
     
     # all the birth epochs of the stars 
     converted_unfiltered = code_age_to_yr(
@@ -215,18 +222,19 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         else:
             print('Invalid slice axis.')
             
-        
-        
+   
+    #cbar_fig.style.use('dark_background') 
+    
     # pop II age color bar 
     cbar_fig = p.plots[('gas', 'density')].figure
-    ax = cbar_fig.add_axes([0.305, 0.91, 0.3, 0.015])
+    ax = cbar_fig.add_axes([0.31, 0.91, 0.3, 0.015])
     cb = mpl.colorbar.ColorbarBase(
         ax,  
         norm = mpl.colors.Normalize(340,470),
         #ticks = [340,405,470], 
         orientation='horizontal', 
         cmap='jet_r', 
-        label='Birth Epoch (Myr)'
+        #label='Birth Epoch (Myr)'
         ) 
     cb.ax.tick_params(colors='white', labelsize=6)
     for t in cb.ax.xaxis.get_ticklabels():
@@ -234,11 +242,68 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     ax.set_title(
         "Pop II Birth Time (Myr) | Epochs: {}".format(len(unique_birth_epochs)),                 
         c='white', 
-        fontsize=8,
+        fontsize=9,
         fontfamily='serif'
         )
     
-    # luminosity mappping
+    # axis guide
+    p_ax = p.plots[('gas', 'density')].axes 
+    if slice_axis == 'z':
+        p_ax.text(-150, -185, 
+                'x', 
+                size=7, 
+                ha='center', 
+                va='center', 
+                color='white')
+        p_ax.text(-185, -150, 
+                'y', 
+                size=7, 
+                ha='center', 
+                va='center', 
+                color='white')   
+    elif slice_axis == 'x': 
+        p_ax.text(-150, -185, 
+                'y', 
+                size=7, 
+                ha='center', 
+                va='center', 
+                color='white')
+        p_ax.text(-185, -150, 
+                'z', 
+                size=7, 
+                ha='center', 
+                va='center', 
+                color='white') 
+    elif slice_axis == 'y':
+        p_ax.text(-150, -185, 
+                'z', 
+                size=7, 
+                ha='center', 
+                va='center', 
+                color='white')
+        p_ax.text(-185, -150, 
+                'x', 
+                size=8, 
+                ha='center', 
+                va='center', 
+                color='white')
+    else:
+        print('Invalid slice axis.')
+    p_ax.arrow(-185, -185, 30, 0,    
+              head_width=3, 
+              head_length=3, 
+              linewidth=0.5, 
+              color='w', 
+              length_includes_head=True)
+    p_ax.arrow(-185, -185, 0, 30,    
+              head_width=3, 
+              head_length=3, 
+              linewidth=0.5, 
+              color='w', 
+              length_includes_head=True) 
+    
+    
+    # luminosity mappping data extraction 
     
     # get star positons 
     abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
@@ -246,7 +311,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     t_myr = np.array([current_time]) 
     t_myr.resize(np.size(current_ages))
     star_info = np.array(
-         [
+          [
           abs_birth_epochs,
           current_ages,
           ds.arr(x_pos, 'code_length').to('pc'), 
@@ -255,15 +320,14 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
           ds.arr(ad['star', 'particle_mass'], 'code_mass').to('msun'),
           t_myr
           ]
-         )
+          )
     
     # luminosity mappping save
     star_info = np.array(star_info).T
     save_path_star_pos = str(pathlib.Path(os.getcwd()).parents[0])
     save_time = str(format(current_time, '.2f')).replace('.', '_')
     save_name = "/luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
-         output_num,save_time)
-    
+          output_num,save_time)
     np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
     
     
@@ -307,5 +371,13 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
             sequence_title.replace(' ','-')
             )
                       )
-    p.save(save_path, mpl_kwargs=dict(dpi=250))
+    p.save(save_path, 
+           mpl_kwargs={
+                       'bbox_inches': 'tight', 
+                       'dpi':250, 
+                       'pad_inches':0.1
+                       #'facecolor': 'black'
+                       }
+           )
+    
     print('# saved:', save_path)
