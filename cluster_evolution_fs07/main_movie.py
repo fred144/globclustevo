@@ -28,17 +28,17 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 
 #####------------------------DT2 save path-------------------------------######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'projden_y_rev2_463_113'
+sequence_folder = 'projden_z_rev2_463_113'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
     
 #------------------------------------plot params-------------------------------
 
-sequence_title = 'y_proj_rev2'
+sequence_title = 'z_proj_rev2'
 width = (400,'pc')
-slice_axis = 'y'
-start_step = 113
+slice_axis = 'z'
+start_step = 399
 end_step = 463
 #ctr_shift_thresh = 0.00060 #code length
 ctr_shift_thresh =  0.000001 #code length
@@ -306,29 +306,29 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # luminosity mappping data extraction 
     
     # get star positons 
-    # abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
-    # current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
-    # t_myr = np.array([current_time]) 
-    # t_myr.resize(np.size(current_ages))
-    # star_info = np.array(
-    #       [
-    #       abs_birth_epochs,
-    #       current_ages,
-    #       ds.arr(x_pos, 'code_length').to('pc'), 
-    #       ds.arr(y_pos, 'code_length').to('pc'), 
-    #       ds.arr(z_pos, 'code_length').to('pc'), 
-    #       ds.arr(ad['star', 'particle_mass'], 'code_mass').to('msun'),
-    #       t_myr
-    #       ]
-    #       )
+    abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
+    current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
+    t_myr = np.array([current_time]) 
+    t_myr.resize(np.size(current_ages))
+    star_info = np.array(
+          [
+          abs_birth_epochs,
+          current_ages,
+          ds.arr(x_pos, 'code_length').to('pc'), 
+          ds.arr(y_pos, 'code_length').to('pc'), 
+          ds.arr(z_pos, 'code_length').to('pc'), 
+          ds.arr(ad['star', 'particle_mass'], 'code_mass').to('msun'),
+          t_myr
+          ]
+          )
     
-    # # luminosity mappping save
-    # star_info = np.array(star_info).T
-    # save_path_star_pos = str(pathlib.Path(os.getcwd()).parents[0])
-    # save_time = str(format(current_time, '.2f')).replace('.', '_')
-    # save_name = "/luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
-    #       output_num,save_time)
-    # np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
+    # luminosity mappping save
+    star_info = np.array(star_info).T
+    save_path_star_pos = str(pathlib.Path(os.getcwd()).parents[0])
+    save_time = str(format(current_time, '.2f')).replace('.', '_')
+    save_name = "/luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
+          output_num,save_time)
+    np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
      
     
     
