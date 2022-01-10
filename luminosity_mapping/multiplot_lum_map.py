@@ -31,7 +31,7 @@ mpl.rc('font', family='serif')
 
 
 directory = r"./pop_2_data/"
-for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
+for frame,entry in enumerate(sorted(os.listdir(directory)), start=113):
 
     file_name = entry
     #print(file_name)
@@ -196,4 +196,4 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
         pad_inches=0.1 
         )
     
-    plt.close()   
+    #plt.close()   
