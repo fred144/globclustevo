@@ -196,4 +196,4 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=115):
         pad_inches=0.1 
         )
     
-   
+    plt.close()   
