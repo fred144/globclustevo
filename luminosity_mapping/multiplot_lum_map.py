@@ -185,7 +185,7 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=113):
                  orientation='horizontal', 
                  pad=0
                 )
-    cbar.set_label(label=r'Monochromatic Luminosity at $\lambda = 150$ nm', size=12)
+    cbar.set_label(label=r'Monochromatic Luminosity at $\lambda = 1500 \AA$  ($erg s^{-1} \AA^{-1}$)', size=12)
     
     # plt.show() 
     
