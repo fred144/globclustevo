@@ -28,16 +28,16 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 
 #####------------------------DT2 save path-------------------------------######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'projden_z_rev3_113_475'
+sequence_folder = 'projden_x_rev3_113_475'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
     
 #------------------------------------plot params-------------------------------
 
-sequence_title = 'z_proj_rev3'
+sequence_title = 'x_proj_rev3'
 width = (400,'pc')
-slice_axis = 'z'
+slice_axis = 'x'
 start_step = 113
 end_step = 475
 #ctr_shift_thresh = 0.00060 #code length
@@ -45,7 +45,7 @@ ctr_shift_thresh =  0.000001 #code length
 max_density_coords = []
 
 # snapshot 115 to 452 roughly spans 340 to 470 myr
-star_map = cm.get_cmap('autumn')
+star_map = cm.get_cmap('cool_r')
 time_range = (339,480) #Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1]  + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
@@ -229,7 +229,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
    
     #cbar_fig.style.use('dark_background') 
     
-    # pop II age color bar 
+    # pop II birth epoch color bar
     cbar_fig = p.plots[('gas', 'density')].figure
     ax = cbar_fig.add_axes([0.31, 0.91, 0.3, 0.015])
     cb = mpl.colorbar.ColorbarBase(
@@ -237,7 +237,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         norm = mpl.colors.Normalize(time_range[0], time_range[1]),
         #ticks = [340,405,470], 
         orientation='horizontal', 
-        cmap='autumn', 
+        cmap='cool_r', 
         #label='Birth Epoch (Myr)'
         ) 
     cb.ax.tick_params(colors='white', labelsize=6)
@@ -310,29 +310,29 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # luminosity mappping data extraction 
     
     # get star positons 
-    abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
-    current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
-    t_myr = np.array([current_time]) 
-    t_myr.resize(np.size(current_ages))
-    star_info = np.array(
-          [
-          abs_birth_epochs,
-          current_ages,
-          ds.arr(x_pos, 'code_length').to('pc'), 
-          ds.arr(y_pos, 'code_length').to('pc'), 
-          ds.arr(z_pos, 'code_length').to('pc'), 
-          ds.arr(ad['star', 'particle_mass'], 'code_mass').to('msun'),
-          t_myr
-          ]
-          )
+    # abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
+    # current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
+    # t_myr = np.array([current_time]) 
+    # t_myr.resize(np.size(current_ages))
+    # star_info = np.array(
+    #       [
+    #       abs_birth_epochs,
+    #       current_ages,
+    #       ds.arr(x_pos, 'code_length').to('pc'), 
+    #       ds.arr(y_pos, 'code_length').to('pc'), 
+    #       ds.arr(z_pos, 'code_length').to('pc'), 
+    #       ds.arr(ad['star', 'particle_mass'], 'code_mass').to('msun'),
+    #       t_myr
+    #       ]
+    #       )
     
-    # luminosity mappping save
-    star_info = np.array(star_info).T
-    save_path_star_pos = str(pathlib.Path(os.getcwd()).parents[0])
-    save_time = str(format(current_time, '.2f')).replace('.', '_')
-    save_name = "/luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
-          output_num,save_time)
-    np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
+    # # luminosity mappping save
+    # star_info = np.array(star_info).T
+    # save_path_star_pos = str(pathlib.Path(os.getcwd()).parents[0])
+    # save_time = str(format(current_time, '.2f')).replace('.', '_')
+    # save_name = "/luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
+    #       output_num,save_time)
+    # np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
      
     
     
