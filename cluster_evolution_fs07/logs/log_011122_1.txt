@@ -59,3 +59,6619 @@ Warning: particle_families are modified at
 # reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00121/info_00121.txt
 > annotating 165 star particles
 339.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00121-z-12_8352-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00122/info_00122.txt
+> annotating 165 star particles
+339.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00122-z-12_8081-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00123/info_00123.txt
+> annotating 165 star particles
+339.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00123-z-12_7816-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+> annotating 165 star particles
+339.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00124-z-12_7546-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+> annotating 165 star particles
+339.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00125-z-12_7284-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+> annotating 165 star particles
+339.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00126-z-12_7017-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+> annotating 165 star particles
+339.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00127-z-12_6754-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+> annotating 165 star particles
+339.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00128-z-12_6491-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+> annotating 165 star particles
+339.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00129-z-12_6219-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00130/info_00130.txt
+> annotating 165 star particles
+339.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00130-z-12_5959-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00131/info_00131.txt
+> annotating 165 star particles
+339.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00131-z-12_5692-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00132/info_00132.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00132-z-12_5412-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00133/info_00133.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00133-z-12_5160-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00134/info_00134.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00134-z-12_4981-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00135/info_00135.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00135-z-12_4885-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00136/info_00136.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00136-z-12_4631-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00137/info_00137.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00137-z-12_4368-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00138/info_00138.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00138-z-12_4113-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00139/info_00139.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00139-z-12_3853-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00140/info_00140.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00140-z-12_3602-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00141/info_00141.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00141-z-12_3355-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00142/info_00142.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00142-z-12_3107-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00143/info_00143.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00143-z-12_2866-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00144/info_00144.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00144-z-12_2626-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00145/info_00145.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00145-z-12_2434-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00146/info_00146.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00146-z-12_2187-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00147/info_00147.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00147-z-12_1941-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00148/info_00148.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00148-z-12_1701-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00149/info_00149.txt
+> annotating 384 star particles
+339.562
+358.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00149-z-12_1464-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00150/info_00150.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00150-z-12_1226-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00151/info_00151.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00151-z-12_0989-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00152/info_00152.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00152-z-12_0748-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00153/info_00153.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00153-z-12_0507-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00154/info_00154.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00154-z-12_0276-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00155/info_00155.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00155-z-12_0046-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00156/info_00156.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00156-z-11_9997-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00157/info_00157.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00157-z-11_9879-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00158/info_00158.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00158-z-11_9760-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00159/info_00159.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00159-z-11_9641-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00160/info_00160.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00160-z-11_9526-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00161/info_00161.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00161-z-11_9406-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00162/info_00162.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00162-z-11_9291-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00163/info_00163.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00163-z-11_9179-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00164/info_00164.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00164-z-11_9066-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00165/info_00165.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00165-z-11_8948-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00166/info_00166.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00166-z-11_8833-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00167/info_00167.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00167-z-11_8717-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00168/info_00168.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00168-z-11_8601-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00169/info_00169.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00169-z-11_8488-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00170/info_00170.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00170-z-11_8374-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00171/info_00171.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00171-z-11_8257-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00172/info_00172.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00172-z-11_8137-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00173/info_00173.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00173-z-11_8026-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00174/info_00174.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00174-z-11_7913-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00175/info_00175.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00175-z-11_7802-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00176/info_00176.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00176-z-11_7693-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00177/info_00177.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00177-z-11_7580-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00178/info_00178.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00178-z-11_7469-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00179/info_00179.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00179-z-11_7361-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00180/info_00180.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00180-z-11_7247-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00181/info_00181.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00181-z-11_7134-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00182/info_00182.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00182-z-11_7019-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00183/info_00183.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00183-z-11_6907-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00184/info_00184.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00184-z-11_6800-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00185/info_00185.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00185-z-11_6693-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00186/info_00186.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00186-z-11_6585-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00187/info_00187.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00187-z-11_6467-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00188/info_00188.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00188-z-11_6354-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00189/info_00189.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00189-z-11_6238-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00190/info_00190.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00190-z-11_6129-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00191/info_00191.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00191-z-11_6021-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00192/info_00192.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00192-z-11_5901-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00193/info_00193.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00193-z-11_5775-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00194/info_00194.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00194-z-11_5669-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00195/info_00195.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00195-z-11_5560-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00196/info_00196.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00196-z-11_5452-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00197/info_00197.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00197-z-11_5346-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00198/info_00198.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00198-z-11_5225-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00199/info_00199.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00199-z-11_5110-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00200/info_00200.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00200-z-11_4986-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00201/info_00201.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00201-z-11_4865-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00202/info_00202.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00202-z-11_4732-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00203/info_00203.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00203-z-11_4624-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00204/info_00204.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00204-z-11_4503-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00205/info_00205.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00205-z-11_4396-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00206/info_00206.txt
+> annotating 601 star particles
+339.562
+358.562
+375.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00206-z-11_4270-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00207/info_00207.txt
+> annotating 1760 star particles
+339.562
+358.562
+375.562
+408.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00207-z-11_4142-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00208/info_00208.txt
+> annotating 2062 star particles
+339.562
+358.562
+375.562
+408.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00208-z-11_4013-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00209/info_00209.txt
+> annotating 3358 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00209-z-11_3899-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00210/info_00210.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00210-z-11_3788-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00211/info_00211.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00211-z-11_3654-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00212/info_00212.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00212-z-11_3530-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00213/info_00213.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00213-z-11_3424-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00214/info_00214.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00214-z-11_3313-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00215/info_00215.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00215-z-11_3207-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00216/info_00216.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00216-z-11_3106-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00217/info_00217.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00217-z-11_3003-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00218/info_00218.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00218-z-11_2901-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00219/info_00219.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00219-z-11_2797-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00220/info_00220.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00220-z-11_2696-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00221/info_00221.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00221-z-11_2597-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00222/info_00222.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00222-z-11_2498-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00223/info_00223.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00223-z-11_2399-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00224/info_00224.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00224-z-11_2300-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00225/info_00225.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00225-z-11_2201-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00226/info_00226.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00226-z-11_2102-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00227/info_00227.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00227-z-11_2001-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00228/info_00228.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00228-z-11_1899-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00229/info_00229.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00229-z-11_1797-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00230/info_00230.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00230-z-11_1700-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00231/info_00231.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00231-z-11_1603-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00232/info_00232.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00232-z-11_1504-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00233/info_00233.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00233-z-11_1406-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00234/info_00234.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00234-z-11_1306-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00235/info_00235.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00235-z-11_1209-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00236/info_00236.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00236-z-11_1167-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00237/info_00237.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00237-z-11_1121-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00238/info_00238.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00238-z-11_1082-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00239/info_00239.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00239-z-11_1044-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00240/info_00240.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00240-z-11_1004-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00241/info_00241.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00241-z-11_0962-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00242/info_00242.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00242-z-11_0922-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00243/info_00243.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00243-z-11_0880-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00244/info_00244.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00244-z-11_0837-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00245/info_00245.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00245-z-11_0788-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00246/info_00246.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00246-z-11_0741-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00247/info_00247.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00247-z-11_0698-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00248/info_00248.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00248-z-11_0660-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00249/info_00249.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00249-z-11_0613-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00250/info_00250.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00250-z-11_0567-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00251/info_00251.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00251-z-11_0524-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00252/info_00252.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00252-z-11_0485-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00253/info_00253.txt
+> annotating 4186 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00253-z-11_0439-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00254/info_00254.txt
+> annotating 4568 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00254-z-11_0399-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00255/info_00255.txt
+> annotating 4568 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00255-z-11_0355-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00256/info_00256.txt
+> annotating 4568 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00256-z-11_0318-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00257/info_00257.txt
+> annotating 4568 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00257-z-11_0277-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00258/info_00258.txt
+> annotating 4568 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00258-z-11_0235-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00259/info_00259.txt
+> annotating 5433 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00259-z-11_0195-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00260/info_00260.txt
+> annotating 5433 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00260-z-11_0152-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00261/info_00261.txt
+> annotating 5433 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00261-z-11_0112-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00262/info_00262.txt
+> annotating 5433 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00262-z-11_0071-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00263/info_00263.txt
+> annotating 5433 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00263-z-11_0033-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00264/info_00264.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00264-z-10_9998-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00265/info_00265.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00265-z-10_9987-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00266/info_00266.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00266-z-10_9947-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00267/info_00267.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00267-z-10_9908-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00268/info_00268.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00268-z-10_9866-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00269/info_00269.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00269-z-10_9827-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00270/info_00270.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00270-z-10_9789-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00271/info_00271.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00271-z-10_9747-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00272/info_00272.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00272-z-10_9708-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00273/info_00273.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00273-z-10_9668-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00274/info_00274.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00274-z-10_9624-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00275/info_00275.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00275-z-10_9586-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00276/info_00276.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00276-z-10_9549-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00277/info_00277.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00277-z-10_9509-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00278/info_00278.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00278-z-10_9471-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00279/info_00279.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00279-z-10_9431-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00280/info_00280.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00280-z-10_9394-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00281/info_00281.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00281-z-10_9353-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00282/info_00282.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00282-z-10_9312-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00283/info_00283.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00283-z-10_9274-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00284/info_00284.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00284-z-10_9237-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00285/info_00285.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00285-z-10_9198-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00286/info_00286.txt
+> annotating 5829 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00286-z-10_9157-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00287/info_00287.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00287-z-10_9121-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00288/info_00288.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00288-z-10_9081-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00289/info_00289.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00289-z-10_9045-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00290/info_00290.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00290-z-10_9006-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00291/info_00291.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00291-z-10_8966-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00292/info_00292.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00292-z-10_8927-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00293/info_00293.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00293-z-10_8890-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00294/info_00294.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00294-z-10_8853-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00295/info_00295.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00295-z-10_8816-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00296/info_00296.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00296-z-10_8780-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00297/info_00297.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00297-z-10_8739-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00298/info_00298.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00298-z-10_8702-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00299/info_00299.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00299-z-10_8663-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00300/info_00300.txt
+> annotating 6185 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00300-z-10_8625-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00301/info_00301.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00301-z-10_8589-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00302/info_00302.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00302-z-10_8552-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00303/info_00303.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00303-z-10_8513-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00304/info_00304.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00304-z-10_8475-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00305/info_00305.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00305-z-10_8435-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00306/info_00306.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00306-z-10_8395-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00307/info_00307.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00307-z-10_8354-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00308/info_00308.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00308-z-10_8314-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00309/info_00309.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00309-z-10_8277-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00310/info_00310.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00310-z-10_8239-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00311/info_00311.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00311-z-10_8201-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00312/info_00312.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00312-z-10_8161-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00313/info_00313.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00313-z-10_8121-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00314/info_00314.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00314-z-10_8083-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00315/info_00315.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00315-z-10_8044-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00316/info_00316.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00316-z-10_8007-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00317/info_00317.txt
+> annotating 6749 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00317-z-10_7968-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00318/info_00318.txt
+> annotating 6816 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00318-z-10_7929-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00319/info_00319.txt
+> annotating 6816 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00319-z-10_7891-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00320/info_00320.txt
+> annotating 6816 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00320-z-10_7854-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00321/info_00321.txt
+> annotating 6816 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00321-z-10_7817-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00322/info_00322.txt
+> annotating 6816 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00322-z-10_7778-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00323/info_00323.txt
+> annotating 7330 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00323-z-10_7741-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00324/info_00324.txt
+> annotating 7330 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00324-z-10_7704-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00325/info_00325.txt
+> annotating 7330 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00325-z-10_7666-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00326/info_00326.txt
+> annotating 7330 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00326-z-10_7627-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00327/info_00327.txt
+> annotating 7330 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00327-z-10_7588-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00328/info_00328.txt
+> annotating 7330 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00328-z-10_7551-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00329/info_00329.txt
+> annotating 7330 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00329-z-10_7513-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00330/info_00330.txt
+> annotating 7330 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00330-z-10_7475-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00331/info_00331.txt
+> annotating 7330 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00331-z-10_7436-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00332/info_00332.txt
+> annotating 7330 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00332-z-10_7396-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00333/info_00333.txt
+> annotating 7330 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00333-z-10_7358-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00334/info_00334.txt
+> annotating 7510 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00334-z-10_7320-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00335/info_00335.txt
+> annotating 7598 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00335-z-10_7281-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00336/info_00336.txt
+> annotating 7711 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00336-z-10_7242-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00337/info_00337.txt
+> annotating 7711 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00337-z-10_7202-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00338/info_00338.txt
+> annotating 7711 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00338-z-10_7163-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00339/info_00339.txt
+> annotating 7711 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00339-z-10_7125-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00340/info_00340.txt
+> annotating 7711 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00340-z-10_7089-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00341/info_00341.txt
+> annotating 7711 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00341-z-10_7050-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00342/info_00342.txt
+> annotating 8781 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00342-z-10_7012-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00343/info_00343.txt
+> annotating 9802 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00343-z-10_6975-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00344/info_00344.txt
+> annotating 9802 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00344-z-10_6939-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00345/info_00345.txt
+> annotating 9802 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00345-z-10_6901-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00346/info_00346.txt
+> annotating 10238 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00346-z-10_6864-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00347/info_00347.txt
+> annotating 12065 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00347-z-10_6823-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00348/info_00348.txt
+> annotating 13074 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00348-z-10_6785-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00349/info_00349.txt
+> annotating 13253 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00349-z-10_6745-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00350/info_00350.txt
+> annotating 13253 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00350-z-10_6707-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00351/info_00351.txt
+> annotating 13443 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00351-z-10_6672-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00352/info_00352.txt
+> annotating 14062 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00352-z-10_6634-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00353/info_00353.txt
+> annotating 14766 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00353-z-10_6597-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00354/info_00354.txt
+> annotating 15194 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00354-z-10_6559-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00355/info_00355.txt
+> annotating 15194 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00355-z-10_6519-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00356/info_00356.txt
+> annotating 15715 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00356-z-10_6478-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00357/info_00357.txt
+> annotating 15715 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00357-z-10_6440-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00358/info_00358.txt
+> annotating 16579 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00358-z-10_6401-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00359/info_00359.txt
+> annotating 16579 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00359-z-10_6364-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00360/info_00360.txt
+> annotating 16579 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00360-z-10_6324-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00361/info_00361.txt
+> annotating 16579 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00361-z-10_6290-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00362/info_00362.txt
+> annotating 16579 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00362-z-10_6252-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00363/info_00363.txt
+> annotating 16579 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00363-z-10_6217-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00364/info_00364.txt
+> annotating 17130 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00364-z-10_6182-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00365/info_00365.txt
+> annotating 17237 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00365-z-10_6145-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00366/info_00366.txt
+> annotating 17237 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00366-z-10_6109-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00367/info_00367.txt
+> annotating 17350 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00367-z-10_6073-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00368/info_00368.txt
+> annotating 17350 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00368-z-10_6035-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00369/info_00369.txt
+> annotating 17350 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00369-z-10_6000-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00370/info_00370.txt
+> annotating 17350 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00370-z-10_5964-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00371/info_00371.txt
+> annotating 17968 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00371-z-10_5929-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00372/info_00372.txt
+> annotating 17968 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00372-z-10_5894-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00373/info_00373.txt
+> annotating 18330 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00373-z-10_5857-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00374/info_00374.txt
+> annotating 18919 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00374-z-10_5821-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00375/info_00375.txt
+> annotating 20138 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00375-z-10_5785-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00376/info_00376.txt
+> annotating 20799 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00376-z-10_5749-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00377/info_00377.txt
+> annotating 22361 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00377-z-10_5712-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00378/info_00378.txt
+> annotating 23714 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00378-z-10_5678-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00379/info_00379.txt
+> annotating 23714 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00379-z-10_5644-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00380/info_00380.txt
+> annotating 23714 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00380-z-10_5609-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00381/info_00381.txt
+> annotating 24542 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00381-z-10_5575-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00382/info_00382.txt
+> annotating 24693 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00382-z-10_5538-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00383/info_00383.txt
+> annotating 27489 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00383-z-10_5504-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00384/info_00384.txt
+> annotating 27635 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00384-z-10_5468-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00385/info_00385.txt
+> annotating 27635 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00385-z-10_5433-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00386/info_00386.txt
+> annotating 29084 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00386-z-10_5398-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00387/info_00387.txt
+> annotating 29084 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00387-z-10_5364-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00388/info_00388.txt
+> annotating 30798 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00388-z-10_5330-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00389/info_00389.txt
+> annotating 31737 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00389-z-10_5294-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00390/info_00390.txt
+> annotating 31737 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00390-z-10_5259-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00391/info_00391.txt
+> annotating 31737 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00391-z-10_5220-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00392/info_00392.txt
+> annotating 31737 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00392-z-10_5186-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00393/info_00393.txt
+> annotating 31737 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00393-z-10_5152-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00394/info_00394.txt
+> annotating 32569 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00394-z-10_5117-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00395/info_00395.txt
+> annotating 32569 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00395-z-10_5081-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00396/info_00396.txt
+> annotating 32569 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00396-z-10_5045-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00397/info_00397.txt
+> annotating 33490 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00397-z-10_5008-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00398/info_00398.txt
+> annotating 33490 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00398-z-10_4998-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00399/info_00399.txt
+> annotating 34322 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00399-z-10_4973-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00400/info_00400.txt
+> annotating 34861 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00400-z-10_4940-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00401/info_00401.txt
+> annotating 36391 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00401-z-10_4906-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00402/info_00402.txt
+> annotating 37304 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00402-z-10_4869-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00403/info_00403.txt
+> annotating 37735 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00403-z-10_4834-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00404/info_00404.txt
+> annotating 38082 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00404-z-10_4799-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00405/info_00405.txt
+> annotating 38082 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00405-z-10_4765-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00406/info_00406.txt
+> annotating 38404 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00406-z-10_4729-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00407/info_00407.txt
+> annotating 38404 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00407-z-10_4695-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00408/info_00408.txt
+> annotating 38626 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00408-z-10_4660-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00409/info_00409.txt
+> annotating 39864 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00409-z-10_4625-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00410/info_00410.txt
+> annotating 40055 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00410-z-10_4589-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00411/info_00411.txt
+> annotating 40055 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00411-z-10_4554-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00412/info_00412.txt
+> annotating 40413 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00412-z-10_4520-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00413/info_00413.txt
+> annotating 40413 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00413-z-10_4486-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00414/info_00414.txt
+> annotating 40413 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00414-z-10_4452-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00415/info_00415.txt
+> annotating 40413 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00415-z-10_4418-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00416/info_00416.txt
+> annotating 40722 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00416-z-10_4385-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00417/info_00417.txt
+> annotating 40722 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00417-z-10_4352-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00418/info_00418.txt
+> annotating 40924 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00418-z-10_4318-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00419/info_00419.txt
+> annotating 40924 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00419-z-10_4284-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00420/info_00420.txt
+> annotating 40924 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00420-z-10_4248-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00421/info_00421.txt
+> annotating 40924 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00421-z-10_4215-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00422/info_00422.txt
+> annotating 40924 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00422-z-10_4180-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00423/info_00423.txt
+> annotating 41457 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00423-z-10_4145-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00424/info_00424.txt
+> annotating 41457 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00424-z-10_4110-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00425/info_00425.txt
+> annotating 41457 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00425-z-10_4074-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00426/info_00426.txt
+> annotating 41457 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00426-z-10_4041-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00427/info_00427.txt
+> annotating 41739 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00427-z-10_4008-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00428/info_00428.txt
+> annotating 41739 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00428-z-10_3974-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00429/info_00429.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00429-z-10_3940-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00430/info_00430.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00430-z-10_3906-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00431/info_00431.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00431-z-10_3871-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00432/info_00432.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00432-z-10_3837-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00433/info_00433.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00433-z-10_3802-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00434/info_00434.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00434-z-10_3768-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00435/info_00435.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00435-z-10_3734-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00436/info_00436.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00436-z-10_3701-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00437/info_00437.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00437-z-10_3667-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00438/info_00438.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00438-z-10_3634-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00439/info_00439.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00439-z-10_3600-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00440/info_00440.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00440-z-10_3567-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00441/info_00441.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00441-z-10_3534-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00442/info_00442.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00442-z-10_3501-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00443/info_00443.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00443-z-10_3468-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00444/info_00444.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00444-z-10_3436-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00445/info_00445.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00445-z-10_3402-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00446/info_00446.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00446-z-10_3367-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00447/info_00447.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00447-z-10_3333-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00448/info_00448.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00448-z-10_3299-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00449/info_00449.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00449-z-10_3265-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00450/info_00450.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00450-z-10_3231-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00451/info_00451.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00451-z-10_3196-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00452/info_00452.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00452-z-10_3161-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00453/info_00453.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00453-z-10_3129-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00454/info_00454.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00454-z-10_3095-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00455/info_00455.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00455-z-10_3062-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00456/info_00456.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00456-z-10_3030-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00457/info_00457.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00457-z-10_2998-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00458/info_00458.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00458-z-10_2965-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00459/info_00459.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00459-z-10_2933-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00460/info_00460.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00460-z-10_2899-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00461/info_00461.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00461-z-10_2866-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00462/info_00462.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00462-z-10_2833-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00463/info_00463.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00463-z-10_2800-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00464/info_00464.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00464-z-10_2766-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00465/info_00465.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00465-z-10_2732-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00466/info_00466.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00466-z-10_2697-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00467/info_00467.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00467-z-10_2665-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00468/info_00468.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00468-z-10_2633-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00469/info_00469.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00469-z-10_2599-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00470/info_00470.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00470-z-10_2566-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00471/info_00471.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00471-z-10_2533-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00472/info_00472.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00472-z-10_2501-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00473/info_00473.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00473-z-10_2467-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00474/info_00474.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00474-z-10_2434-x_proj_rev3.png
+-------------------------------------------------------
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00475/info_00475.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/projden_x_rev3_113_475/out-00475-z-10_2402-x_proj_rev3.png
