@@ -28,26 +28,30 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 
 #####------------------------DT2 save path-------------------------------######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'projden_z_rev2_463_113'
+sequence_folder = 'projden_z_rev3_113_475'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
     
 #------------------------------------plot params-------------------------------
 
-sequence_title = 'z_proj_rev2'
+sequence_title = 'z_proj_rev3'
 width = (400,'pc')
 slice_axis = 'z'
-start_step = 399
-end_step = 463
+start_step = 113
+end_step = 475
 #ctr_shift_thresh = 0.00060 #code length
 ctr_shift_thresh =  0.000001 #code length
 max_density_coords = []
+
 # snapshot 115 to 452 roughly spans 340 to 470 myr
-star_map = cm.get_cmap('jet_r')
-time_range = (339,475) #Myr
+star_map = cm.get_cmap('autumn')
+time_range = (339,480) #Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1]  + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
+
+#cosmetics
+mpl.rc('font', family='serif') 
 
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
@@ -230,10 +234,10 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     ax = cbar_fig.add_axes([0.31, 0.91, 0.3, 0.015])
     cb = mpl.colorbar.ColorbarBase(
         ax,  
-        norm = mpl.colors.Normalize(340,470),
+        norm = mpl.colors.Normalize(time_range[0], time_range[1]),
         #ticks = [340,405,470], 
         orientation='horizontal', 
-        cmap='jet_r', 
+        cmap='autumn', 
         #label='Birth Epoch (Myr)'
         ) 
     cb.ax.tick_params(colors='white', labelsize=6)
