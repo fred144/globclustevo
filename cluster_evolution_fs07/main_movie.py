@@ -28,16 +28,16 @@ datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evoluti
 
 #####------------------------DT2 save path-------------------------------######
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine'
-sequence_folder = 'projden_x_rev3_113_475'
+sequence_folder = 'projden_y_rev3_113_475'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
     
 #------------------------------------plot params-------------------------------
 
-sequence_title = 'x_proj_rev3'
+sequence_title = 'y_proj_rev3'
 width = (400,'pc')
-slice_axis = 'x'
+slice_axis = 'y'
 start_step = 113
 end_step = 475
 #ctr_shift_thresh = 0.00060 #code length
@@ -45,8 +45,8 @@ ctr_shift_thresh =  0.000001 #code length
 max_density_coords = []
 
 # snapshot 115 to 452 roughly spans 340 to 470 myr
-star_map = cm.get_cmap('cool_r')
-time_range = (339,480) #Myr
+star_map = cm.get_cmap('hot')
+time_range = (339,475) #Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1]  + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
 
@@ -237,7 +237,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         norm = mpl.colors.Normalize(time_range[0], time_range[1]),
         #ticks = [340,405,470], 
         orientation='horizontal', 
-        cmap='cool_r', 
+        cmap='hot', 
         #label='Birth Epoch (Myr)'
         ) 
     cb.ax.tick_params(colors='white', labelsize=6)
