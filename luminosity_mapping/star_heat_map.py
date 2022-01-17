@@ -160,9 +160,8 @@ for i,file_name in enumerate(files, start=0):
         bbox_inches='tight',
         pad_inches=0.05
         )
-    plt.show() 
+    #plt.show() 
     print(save_name)   
-
     #plt.close() 
     
     # after rotating as the stars are forming, rotate the rest of the set
