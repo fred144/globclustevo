@@ -8,7 +8,7 @@ import pandas as pd
 import matplotlib.cm as cm
 import matplotlib as mpl
 import matplotlib.patches as patches
-from scipy.ndimage.filters import gaussian_filter
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 from matplotlib.colors import LogNorm 
 from scipy.spatial.transform import Rotation as R 
 
@@ -30,10 +30,15 @@ lum_imf_2_35_m_up_30msun = 10**data[:,3]
 
 
 mpl.rc('font', family='serif') 
+plt.style.use('dark_background') 
 
 directory = r"./pop_2_data/"
-files = sorted(os.listdir(directory))  
-for frame,file_name in enumerate(files[-2:-1], start=115):
+files = sorted(os.listdir(directory))   
+
+#rotation_interval = np.arange(0,2,.005) 
+rotation_interval = np.linspace(0,2,np.size(files))
+
+for frame,(file_name,pi_multiple) in enumerate(zip(files,rotation_interval), start=113):
 
     print(file_name)
     time_str = file_name[10:16].replace('_','.') #in myr
@@ -49,79 +54,102 @@ for frame,file_name in enumerate(files[-2:-1], start=115):
     # x_pos = pop_2_data[:,2]
     # y_pos = pop_2_data[:,3] 
     # z_pos = pop_2_data[:,4]
-    rotation_interval = np.arange(0,2,.005) 
+
+    #for i,angle_multiple in enumerate(rotation_interval):
+        
+    star_positions = pop_2_data[:,2:5] 
+    #counter clockwise along y axis
+    r = R.from_rotvec(pi_multiple*np.pi * np.array([0, 1, 0]))
+    rotation_matrix = r.as_matrix()
+    rot_star_positions = np.dot(star_positions, rotation_matrix .T)
     
-    for i,angle_multiple in enumerate(rotation_interval):
-        star_positions = pop_2_data[:,2:5] 
-        
-        r = R.from_rotvec(angle_multiple*np.pi * np.array([0, 1, 0]))
-        rotation_matrix = r.as_matrix()
-        
-        star_positions = np.dot(star_positions, rotation_matrix .T)
-        
-        stellar_lums = look_up_table(ages, lookuptime, lum_imf_2_35_m_up_100msun) 
-        
-        lums, xedges, yedges = np.histogram2d(
-            star_positions[:,0], 
-            star_positions[:,1], 
-            bins=2000, 
-            weights=stellar_lums*1e-5, 
-            normed=False, 
-            range= [[-200, 200], [-200, 200]]
+    stellar_lums = look_up_table(ages, lookuptime, lum_imf_2_35_m_up_100msun) 
+    scaled_stellar_lums = stellar_lums*1e-5 
+    
+    lums, xedges, yedges = np.histogram2d(
+        rot_star_positions[:,0], 
+        rot_star_positions[:,1], 
+        bins=2000, 
+        weights=scaled_stellar_lums, 
+        normed=False, 
+        range= [[-200, 200], [-200, 200]]
+    )
+    lums = lums.T
+    
+    fig = plt.figure(figsize=(14,12),dpi=200) 
+    ax = fig.add_subplot(111, facecolor=cm.inferno(0))
+    rectbin = plt.imshow(
+               lums, 
+               cmap='inferno',
+               interpolation='gaussian', 
+               origin='lower',
+               extent=[-200, 200,-200, 200],
+               norm=LogNorm(vmin=3e+32, vmax=3e+36)
+               )
+    # annotate with time 
+    ax.text(
+        -150, 
+        -180, 
+        't = %.2f Myr'%(time), 
+        size=12, 
+        ha='center', 
+        va='center', 
+        color='white')
+    
+    # and color bar 
+    #divider = make_axes_locatable(ax) 
+    #cax = divider.append_axes('bottom', size='1%', pad=0.0)
+    cbar = fig.colorbar(
+        rectbin, 
+        pad = 0,
+        aspect=60,
+        #orientation='horizontal',
+        #cax=cax
         )
-        lums = lums.T
-        
-        fig = plt.figure(figsize=(12,10)) 
-        ax = fig.add_subplot(111, facecolor=cm.magma(0))
-        rectbin = plt.imshow(
-                   lums, 
-                   cmap='inferno',
-                   interpolation='gaussian', 
-                   origin='lower',
-                   extent=[-200, 200,-200, 200],
-                   norm=LogNorm(vmin=3e+32, vmax=3e+36)
-                   )
-        # annotate with time 
-        ax.text(
-            -150, 
-            -180, 
-            't = %.2f Myr'%(time), 
-            size=12, 
-            ha='center', 
-            va='center', 
-            color='white')
-        # and color bar 
-        cbar = plt.colorbar(
-            rectbin, 
-            pad = 0,
-            aspect=40
-            )
-        cbar.set_label(
-            label=r'z Projected Monochromatic Luminosity at $\lambda = 150$ nm', size=12
-            )
-        # and scale bar 
-        rect = patches.Rectangle(   
-                xy=(75, 180), 
-                width=100, 
-                height=2, 
-                linewidth=0, 
-                edgecolor='white', 
-                facecolor='white')
-        ax.add_patch(rect)
-        ax.text(
-            125, 190, '100 pc', size=12, ha='center', va='center', color='white'
-            )
-        ax.set_axis_off()
-        ax.add_artist(ax.patch)
-        ax.patch.set_zorder(-1) 
-        
-        plt.savefig('./test_sequence/z_projection/z_lums_{}_{}_{}.png'.format(
-            str(frame).zfill(3), 
-            str(time).ljust(6, '0').replace('.','_'),
-            str(i).zfill(4), 
-            ), 
-            dpi=200,
-            bbox_inches='tight',
-            pad_inches=0.05
-            )
-        plt.close() 
+    cbar.set_label(
+        label=r"$\lambda = 1500\;\AA$ Projected Monochromatic Luminosity" +
+        r" $\left(erg\;s^{-1}\AA^{-1} \right)$", 
+        size=12
+        )
+    # fig.suptitle(
+    #     r"$\lambda = 1500\;\AA$ Projected Monochromatic Luminosity" +
+    #     r" $\left(erg\;s^{-1}\AA^{-1} \right)$",
+    #     y=.91,
+    #     size=12)
+    
+    # and scale bar 
+    rect = patches.Rectangle(   
+            xy=(75, 180), 
+            width=100, 
+            height=2, 
+            linewidth=0, 
+            edgecolor='white', 
+            facecolor='white')
+    ax.add_patch(rect)
+    ax.text(
+        125, 190, '100 pc', size=12, ha='center', va='center', color='white'
+        )
+    # ax.set_axis_off()
+    ax.axes.xaxis.set_ticklabels([])
+    ax.axes.yaxis.set_ticklabels([])
+    ax.xaxis.set_ticks_position('none') 
+    ax.yaxis.set_ticks_position('none')
+    ax.add_artist(ax.patch)
+    ax.patch.set_zorder(-1) 
+    #plt.show() 
+    
+    save_name = './test_sequence/rotation/rot_{}_{}_pi{}.png'.format(
+        str(frame).zfill(3), 
+        str(time).ljust(6, '0').replace('.','_'),
+        str(np.round(pi_multiple,3)).ljust(5, '0').replace('.','_'))
+    
+    plt.savefig( 
+        save_name, 
+        dpi=200,
+        bbox_inches='tight',
+        pad_inches=0.05
+        )
+    
+    print(save_name)   
+    
+    plt.close() 
