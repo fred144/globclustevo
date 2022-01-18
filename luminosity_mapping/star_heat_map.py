@@ -170,7 +170,7 @@ for i,file_name in enumerate(files, start=0):
     if (np.size(files) - 1) == i:
         print('# Time Frozen')
         # frozen rotation 
-        frozen_rotation_interval = np.linspace(0,2,np.size(files)) 
+        frozen_rotation_interval = np.linspace(2,4,np.size(files)) 
         for remaining_pi_multiple in frozen_rotation_interval: 
         # for remaining_pi_multiple in rotation_interval[i+1:]: 
             
