@@ -8,7 +8,7 @@ import pandas as pd
 import matplotlib.cm as cm
 import matplotlib as mpl
 import matplotlib.patches as patches
-from mpl_toolkits.axes_grid1 import make_axes_locatable
+#from mpl_toolkits.axes_grid1 import make_axes_locatable
 from matplotlib.colors import LogNorm 
 from scipy.spatial.transform import Rotation as R 
 
@@ -39,8 +39,8 @@ plt.style.use('dark_background')
 directory = r"./pop_2_data/"
 files = sorted(os.listdir(directory))   
 
-rotation_interval = np.arange(0,4,.002) # times pi
-#rotation_interval = np.linspace(0,4,.001) 
+#rotation_interval = np.arange(0,2,.002) # times pi
+rotation_interval = np.linspace(0,2,np.size(files)) 
 
 for i,file_name in enumerate(files, start=0):
     
@@ -162,14 +162,17 @@ for i,file_name in enumerate(files, start=0):
         )
     #plt.show() 
     print(save_name)   
-    #plt.close() 
+    plt.close() 
     
     # after rotating as the stars are forming, rotate the rest of the set
     # rotation interval vector using the last snapshot-- frozen in time
     
     if (np.size(files) - 1) == i:
-        print(file_name)
-        for remaining_pi_multiple in rotation_interval[i+1:]: 
+        print('# Time Frozen')
+        # frozen rotation 
+        frozen_rotation_interval = np.linspace(0,2,np.size(files)) 
+        for remaining_pi_multiple in frozen_rotation_interval: 
+        # for remaining_pi_multiple in rotation_interval[i+1:]: 
             
             #pi_multiple = remaining_pi_multiple
             rotation_angle = remaining_pi_multiple*np.pi
@@ -223,7 +226,7 @@ for i,file_name in enumerate(files, start=0):
             #     )
             # to the bottom 
             fig.subplots_adjust(wspace=0, hspace=0, bottom=.1)
-            cbar_ax = fig.add_axes([.178, .085, 0.67, 0.015])
+            cbar_ax = fig.add_axes([.178, .090, 0.67, 0.010])
             cbar = fig.colorbar(rectbin, 
                          cax=cbar_ax, 
                          orientation='horizontal', 
@@ -260,13 +263,11 @@ for i,file_name in enumerate(files, start=0):
             ax.add_artist(ax.patch)
             ax.patch.set_zorder(-1)    
     
-
             save_name = './test_sequence/rotation/rot_{}_t_{}_pi_{}.png'.format(
                 str(snapshot_num).zfill(4), 
                 str(time).ljust(6, '0').replace('.','_'),
                 str(np.round(remaining_pi_multiple,3)).ljust(5, '0').replace('.','_')
                 )
-            
             plt.savefig( 
                 save_name, 
                 dpi=200,
@@ -276,4 +277,4 @@ for i,file_name in enumerate(files, start=0):
             
             print(save_name)   
     
-            #plt.close() 
+            plt.close() 
