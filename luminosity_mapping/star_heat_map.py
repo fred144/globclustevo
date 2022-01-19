@@ -65,7 +65,7 @@ for i,file_name in enumerate(files, start=0):
         
     star_positions = pop_2_data[:,2:5] 
     #counter clockwise along y axis
-    r = R.from_rotvec( rotation_angle * np.array([0, 1, 0]))
+    r = R.from_rotvec( rotation_angle * np.array([1, 0, 0]))
     rotation_matrix = r.as_matrix()
     rot_star_positions = np.dot(star_positions, rotation_matrix .T)
     
@@ -150,7 +150,7 @@ for i,file_name in enumerate(files, start=0):
     ax.patch.set_zorder(-1) 
     
     
-    save_name = './test_sequence/rotation/rot_{}_t_{}_pi_{}.png'.format(
+    save_name = './sequences/rot_x_axis/rot_{}_t_{}_pi_{}.png'.format(
         str(snapshot_num).zfill(4), 
         str(time).ljust(6, '0').replace('.','_'),
         str(np.round(pi_multiple,3)).ljust(5, '0').replace('.','_'))
@@ -179,7 +179,7 @@ for i,file_name in enumerate(files, start=0):
                 
             star_positions = pop_2_data[:,2:5] 
             #counter clockwise along y axis
-            r = R.from_rotvec( rotation_angle * np.array([0, 1, 0]))
+            r = R.from_rotvec( rotation_angle * np.array([1, 0, 0]))
             rotation_matrix = r.as_matrix()
             rot_star_positions = np.dot(star_positions, rotation_matrix .T)
             
@@ -263,7 +263,7 @@ for i,file_name in enumerate(files, start=0):
             ax.add_artist(ax.patch)
             ax.patch.set_zorder(-1)    
     
-            save_name = './test_sequence/rotation/rot_{}_t_{}_pi_{}.png'.format(
+            save_name = './sequences/rot_x_axis/rot_{}_t_{}_pi_{}.png'.format(
                 str(snapshot_num).zfill(4), 
                 str(time).ljust(6, '0').replace('.','_'),
                 str(np.round(remaining_pi_multiple,3)).ljust(5, '0').replace('.','_')
