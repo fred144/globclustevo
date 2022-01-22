@@ -27,7 +27,7 @@ datadir = os.path.expanduser(
     '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
     ) 
 # save path
-sequence_folder = 'gas_projden_z'
+sequence_folder = 'gas_projected_density_z'
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
@@ -49,7 +49,7 @@ mpl.rc('font', family='serif')
 star_map = cm.get_cmap('hot') 
 
 # snapshot 115 to 452 roughly spans 340 to 470 myr
-time_range = (325,485) #Myr
+time_range = (325,480) #Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1]  + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
 
@@ -109,9 +109,9 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     z_pos = np.array(ad['star', 'particle_position_z']) 
     
     # center based on star position distribution
-    x_center = np.median(x_pos)
-    y_center = np.median(y_pos)
-    z_center = np.median(z_pos)
+    x_center = np.mean(x_pos)
+    y_center = np.mean(y_pos)
+    z_center = np.mean(z_pos)
     plt_ctr = np.array([x_center, y_center, z_center])
     # translate points to center
     x_pos = x_pos - plt_ctr[0] 
@@ -182,15 +182,15 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         
         if slice_axis == 'z': 
             p['gas', 'density'].axes.scatter(
-                filtered_x, filtered_y, marker='.', c=color, s=.1, alpha=0.1
+                filtered_x, filtered_y, marker='.', c=color, s=.2, alpha=0.08
                 ) 
         elif slice_axis == 'x':
             p['gas', 'density'].axes.scatter(
-                filtered_y, filtered_z, marker='.', c=color, s=.1, alpha=0.1
+                filtered_y, filtered_z, marker='.', c=color, s=.2, alpha=0.08
                 ) 
         elif slice_axis == 'y':
             p['gas', 'density'].axes.scatter(
-                filtered_z, filtered_x, marker='.', c=color, s=.1, alpha=0.1
+                filtered_z, filtered_x, marker='.', c=color, s=.2, alpha=0.08
                 ) 
         else:
             print('Invalid slice axis.')
@@ -294,6 +294,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
           ])
     
     # star positions save
+    
     # star_info = np.array(star_info).T
     # save_path_star_pos = str(pathlib.Path(os.getcwd()).parents[0])
     # save_time = str(format(current_time, '.2f')).replace('.', '_')
@@ -301,9 +302,10 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     #       output_num,save_time
     #       )
     # np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
+    
     star_info = np.array(star_info).T
     save_time = str(format(current_time, '.2f')).replace('.', '_')
-    save_name = "../luminosity_mapping/pop_2_data_med_ctr/pos_{:05d}_{}_myr.txt".format(
+    save_name = "../luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
           output_num,save_time
           )
     np.savetxt(save_name, X=star_info)
@@ -352,7 +354,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     p.save(save_path, 
            mpl_kwargs={
                        'bbox_inches': 'tight', 
-                       'dpi':250, 
+                       'dpi':200, 
                        'pad_inches':0.1
                        #'facecolor': 'black'
                        }

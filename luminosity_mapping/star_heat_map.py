@@ -37,7 +37,7 @@ mpl.rc('font', family='serif')
 plt.style.use('dark_background') 
 
 directory = r"./pop_2_data/"
-files = sorted(os.listdir(directory))   
+files = sorted(os.listdir(directory)) [-2:-1]  
 
 #rotation_interval = np.arange(0,2,.002) # times pi
 rotation_interval = np.linspace(0,2,np.size(files)) 
@@ -78,7 +78,7 @@ for i,file_name in enumerate(files, start=0):
         bins=2000, 
         weights=scaled_stellar_lums, 
         normed=False, 
-        range= [[-200, 200], [-200, 200]]
+        range= [[-75, 75], [-75, 75]]
     )
     lums = lums.T
     
@@ -142,10 +142,10 @@ for i,file_name in enumerate(files, start=0):
         125, 190, '100 pc', size=12, ha='center', va='center', color='white'
         )
     # ax.set_axis_off()
-    ax.axes.xaxis.set_ticklabels([])
-    ax.axes.yaxis.set_ticklabels([])
-    ax.xaxis.set_ticks_position('none') 
-    ax.yaxis.set_ticks_position('none')
+    # ax.axes.xaxis.set_ticklabels([])
+    # ax.axes.yaxis.set_ticklabels([])
+    # ax.xaxis.set_ticks_position('none') 
+    # ax.yaxis.set_ticks_position('none')
     ax.add_artist(ax.patch)
     ax.patch.set_zorder(-1) 
     
@@ -154,15 +154,15 @@ for i,file_name in enumerate(files, start=0):
         str(snapshot_num).zfill(4), 
         str(time).ljust(6, '0').replace('.','_'),
         str(np.round(pi_multiple,3)).ljust(5, '0').replace('.','_'))
-    plt.savefig( 
-        save_name, 
-        dpi=200,
-        bbox_inches='tight',
-        pad_inches=0.05
-        )
-    #plt.show() 
+    # plt.savefig( 
+    #     save_name, 
+    #     dpi=200,
+    #     bbox_inches='tight',
+    #     pad_inches=0.05
+    #     )
+    plt.show() 
     print(save_name)   
-    plt.close() 
+    #plt.close() 
     
     # after rotating as the stars are forming, rotate the rest of the set
     # rotation interval vector using the last snapshot-- frozen in time
@@ -268,12 +268,12 @@ for i,file_name in enumerate(files, start=0):
                 str(time).ljust(6, '0').replace('.','_'),
                 str(np.round(remaining_pi_multiple,3)).ljust(5, '0').replace('.','_')
                 )
-            plt.savefig( 
-                save_name, 
-                dpi=200,
-                bbox_inches='tight',
-                pad_inches=0.05
-                )
+            # plt.savefig( 
+            #     save_name, 
+            #     dpi=200,
+            #     bbox_inches='tight',
+            #     pad_inches=0.05
+            #     )
             
             print(save_name)   
     
