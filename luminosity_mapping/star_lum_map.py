@@ -15,7 +15,7 @@ mpl.rc('font', family='serif')
 plt.style.use('dark_background') 
 
 directory = r"./pop_2_data/"
-files = sorted(os.listdir(directory)) [-5:-1]  
+files = sorted(os.listdir(directory)) #[-5:-1]  
 
 #rotation_interval = np.arange(0,2,.002) # times pi
 rotating_timelapse = True
