@@ -18,7 +18,8 @@ directory = r"./pop_2_data/"
 files = sorted(os.listdir(directory)) #[-5:-1]  
 
 #rotation_interval = np.arange(0,2,.002) # times pi
-rotating_timelapse = True
+seq_folder_name = "half_rot_z_axis"
+rotating_timelapse = False
 rotation_interval = np.linspace(0,2,np.size(files)) 
 
 for i,file_name in enumerate(files, start=0):
@@ -68,7 +69,8 @@ for i,file_name in enumerate(files, start=0):
                          snapshot_num=snapshot_num, 
                          pi_multiple=pi_multiple) 
     
-    save_name = './sequences/rot_z_axis/rot_{}_t_{}_pi_{}.png'.format(
+    save_name = './sequences/{}/rot_{}_t_{}_pi_{}.png'.format(
+        seq_folder_name,
         str(snapshot_num).zfill(4), 
         str(time).ljust(6, '0').replace('.','_'),
         str(np.round(pi_multiple,3)).ljust(5, '0').replace('.','_'))
@@ -116,7 +118,8 @@ for i,file_name in enumerate(files, start=0):
                                  snapshot_num=snapshot_num, 
                                  pi_multiple=remaining_pi_multiple)
             
-            save_name = './sequences/rot_z_axis/rot_{}_t_{}_pi_{}.png'.format(
+            save_name = './sequences/{}/rot_{}_t_{}_pi_{}.png'.format(
+                seq_folder_name,
                 str(snapshot_num).zfill(4), 
                 str(time).ljust(6, '0').replace('.','_'),
                 str(np.round(remaining_pi_multiple,3)).ljust(5, '0').replace('.','_'))
