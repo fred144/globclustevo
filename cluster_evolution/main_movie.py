@@ -27,15 +27,15 @@ datadir = os.path.expanduser(
     '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
     ) 
 # save path
-sequence_folder = 'gas_projected_density_z'
+sequence_folder = 'gas_projected_density_x'
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 #---------------------------------plot params----------------------------------
-sequence_title = 'z_gas'
+sequence_title = 'x_gas'
 width = (400,'pc')
-slice_axis = 'z'
+slice_axis = 'x'
 start_step = 113
 end_step = 506
 
@@ -294,22 +294,13 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
           ])
     
     # star positions save
-    
     # star_info = np.array(star_info).T
-    # save_path_star_pos = str(pathlib.Path(os.getcwd()).parents[0])
     # save_time = str(format(current_time, '.2f')).replace('.', '_')
-    # save_name = "/luminosity_mapping/pop_2_data_med_ctr/pos_{:05d}_{}_myr.txt".format(
+    # save_name = "../luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
     #       output_num,save_time
     #       )
-    # np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
-    star_info = np.array(star_info).T
-    save_time = str(format(current_time, '.2f')).replace('.', '_')
-    save_name = "../luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
-          output_num,save_time
-          )
-    np.savetxt(save_name, X=star_info)
-     
-    print('# saved:', save_name)
+    # np.savetxt(save_name, X=star_info)
+    # print('# saved:', save_name)
     
     # if pos_SFCs.size > 0:
     #     p.annotate_particles(width = width,
