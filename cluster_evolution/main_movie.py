@@ -302,7 +302,6 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     #       output_num,save_time
     #       )
     # np.savetxt(fname=save_path_star_pos+save_name, X=star_info)
-    
     star_info = np.array(star_info).T
     save_time = str(format(current_time, '.2f')).replace('.', '_')
     save_name = "../luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
