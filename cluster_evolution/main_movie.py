@@ -49,7 +49,7 @@ mpl.rc('font', family='serif')
 star_map = cm.get_cmap('hot') 
 
 # snapshot 115 to 452 roughly spans 340 to 470 myr
-time_range = (340, 380) #(240,480) #Myr
+time_range = (240,480) #Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1]  + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
 
