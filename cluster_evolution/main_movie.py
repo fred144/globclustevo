@@ -28,7 +28,7 @@ datadir = os.path.expanduser(
     ) 
 # save path
 sequence_folder = 'gas_projected_density_x'
-parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
+parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/ms05'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
@@ -36,8 +36,8 @@ if not os.path.exists(newpath):
 sequence_title = 'x_gas'
 width = (400,'pc')
 slice_axis = 'x'
-start_step = 113
-end_step = 506
+start_step = 201
+end_step = 292
 
 #ctr_shift_thresh = 0.00060 #code length
 #ctr_shift_thresh =  0.000001 #code length
@@ -49,7 +49,7 @@ mpl.rc('font', family='serif')
 star_map = cm.get_cmap('hot') 
 
 # snapshot 115 to 452 roughly spans 340 to 470 myr
-time_range = (325,480) #Myr
+time_range = (340, 380) #(240,480) #Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1]  + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
 
