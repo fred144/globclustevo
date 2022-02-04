@@ -22,22 +22,23 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 # parent_folder = '.'
 # sequence_folder = 'test_frames'
 
-#---------------------------------DT2 save path--------------------------------
+#---------------------------------DT2 Paths------------------------------------
+# lstre data path
 datadir = os.path.expanduser(
     '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
-    ) 
+    )
 # save path
-sequence_folder = 'gas_projected_density_x'
-parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/ms05'
+sequence_folder = 'gas_projected_density_z'
+parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 #---------------------------------plot params----------------------------------
-sequence_title = 'x_gas'
+sequence_title = 'z_gas'
 width = (400,'pc')
-slice_axis = 'x'
-start_step = 201
-end_step = 292
+slice_axis = 'z'
+start_step = 113
+end_step = 534
 
 #ctr_shift_thresh = 0.00060 #code length
 #ctr_shift_thresh =  0.000001 #code length
@@ -49,7 +50,7 @@ mpl.rc('font', family='serif')
 star_map = cm.get_cmap('hot') 
 
 # snapshot 115 to 452 roughly spans 340 to 470 myr
-time_range = (240,480) #Myr
+time_range = (300,500) #Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1]  + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
 
@@ -182,15 +183,15 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         
         if slice_axis == 'z': 
             p['gas', 'density'].axes.scatter(
-                filtered_x, filtered_y, marker='.', c=color, s=.2, alpha=0.08
+                filtered_x, filtered_y, marker='.', c=color, s=.1, alpha=0.1
                 ) 
         elif slice_axis == 'x':
             p['gas', 'density'].axes.scatter(
-                filtered_y, filtered_z, marker='.', c=color, s=.2, alpha=0.08
+                filtered_y, filtered_z, marker='.', c=color, s=.1, alpha=0.1
                 ) 
         elif slice_axis == 'y':
             p['gas', 'density'].axes.scatter(
-                filtered_z, filtered_x, marker='.', c=color, s=.2, alpha=0.08
+                filtered_z, filtered_x, marker='.', c=color, s=.1, alpha=0.1
                 ) 
         else:
             print('Invalid slice axis.')
@@ -294,13 +295,13 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
           ])
     
     # star positions save
-    # star_info = np.array(star_info).T
-    # save_time = str(format(current_time, '.2f')).replace('.', '_')
-    # save_name = "../luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
-    #       output_num,save_time
-    #       )
-    # np.savetxt(save_name, X=star_info)
-    # print('# saved:', save_name)
+    star_info = np.array(star_info).T
+    save_time = str(format(current_time, '.2f')).replace('.', '_')
+    save_name = "../luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
+          output_num,save_time
+          )
+    np.savetxt(save_name, X=star_info)
+    print('# saved:', save_name)
     
     # if pos_SFCs.size > 0:
     #     p.annotate_particles(width = width,
