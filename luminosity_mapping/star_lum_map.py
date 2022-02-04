@@ -9,7 +9,7 @@ from scipy.spatial.transform import Rotation as R
 from lum_funcs import star_luminosity_plot, look_up_table
 
 
-proj_width = 200
+proj_width = 200 # pc
 
 mpl.rc('font', family='serif') 
 plt.style.use('dark_background') 
@@ -18,8 +18,8 @@ directory = r"./pop_2_data/"
 files = sorted(os.listdir(directory)) #[-5:-1]  
 
 #rotation_interval = np.arange(0,2,.002) # times pi
-seq_folder_name = "half_rot_z_axis"
-rotating_timelapse = False
+rotating_timelapse = True
+seq_folder_name = "rot_about_y_axis"
 rotation_interval = np.linspace(0,2,np.size(files)) 
 
 for i,file_name in enumerate(files, start=0):
@@ -55,7 +55,7 @@ for i,file_name in enumerate(files, start=0):
         pi_multiple = rotation_interval[i]
         rotation_angle = pi_multiple*np.pi
         # along (x,y,z) axis
-        r = R.from_rotvec(rotation_angle * np.array([0,-1,0]))
+        r = R.from_rotvec(rotation_angle * np.array([0,1,0]))
         rotation_matrix = r.as_matrix()
         rotated_star_positions = np.dot(star_positions, rotation_matrix .T)
         star_positions = rotated_star_positions 
@@ -107,7 +107,7 @@ for i,file_name in enumerate(files, start=0):
             star_positions = pop_2_data[:,2:5] 
             
             # along (x,y,z) axis
-            r = R.from_rotvec(rotation_angle * np.array([0,-1,0]))
+            r = R.from_rotvec(rotation_angle * np.array([0,1,0]))
             rotation_matrix = r.as_matrix()
             rot_star_positions = np.dot(star_positions, rotation_matrix .T)
             
