@@ -25,6 +25,9 @@ def star_luminosity_plot(
         normed=False, 
         range= [[-proj_width/2, proj_width/2], [-proj_width/2, proj_width/2]]
     )
+    """
+    currently makes prjection plot along projected on z axis
+    """
     lums = lums.T
     
     fig = plt.figure(figsize=(14,12),dpi=200) 
