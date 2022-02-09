@@ -352,3 +352,6 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
            )
     
     print('# saved:', save_path)
+#%% sfc psc testing
+for field in dir(ds.fields.PSC): 
+    print(field)
