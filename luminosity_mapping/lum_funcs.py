@@ -25,6 +25,9 @@ def star_luminosity_plot(
         normed=False, 
         range= [[-proj_width/2, proj_width/2], [-proj_width/2, proj_width/2]]
     )
+    """
+    currently makes prjection plot along projected on z axis
+    """
     lums = lums.T
     
     fig = plt.figure(figsize=(14,12),dpi=200) 
@@ -125,11 +128,86 @@ def look_up_table(stellar_ages, table_link, column_idx:int, log=True):
     luminosities = look_up_lumi[closest_match_idxs]
     return luminosities
 
-def spherical_mask(xpos, ypos, zpos, ctr_at, cluster_radius, lums):
+def get_cluster(
+        xpos, 
+        ypos, 
+        zpos, 
+        ctr_at, 
+        cluster_radius, 
+        lums, 
+        masses,
+        trns_coord
+        ):
     all_positions = np.vstack((xpos, ypos, zpos)).T 
     distances = np.sqrt(np.sum(np.square(all_positions - ctr_at), axis=1)) 
     mask = distances <= cluster_radius
     #print(distances.size)
     masked_positions = all_positions[mask]
     masked_lums = lums[mask]
-    return masked_positions[:,0], masked_positions[:,1], masked_positions[:,2], masked_lums
+    masked_masses = masses[mask]
+    
+    x,y,z = (masked_positions[:,0], masked_positions[:,1], masked_positions[:,2])
+    
+    if trns_coord is True: 
+        x_recentered = masked_positions[:,0] - np.median(x)
+        y_recentered = masked_positions[:,1] - np.median(y)
+        z_recentered = masked_positions[:,2] - np.median(z)
+        
+        return x_recentered, y_recentered, z_recentered, masked_lums, masked_masses
+    else: 
+        return x, y, z, masked_lums, masked_masses
+
+def ring_2d_mask(xpos, ypos, ctr_at, lums, masses, outer_radius, dr):
+    """
+    Gets stars within a 2d ring. 
+    """
+    all_positions = np.vstack((xpos, ypos)).T 
+    distances = np.sqrt(np.sum(np.square(all_positions - ctr_at), axis=1)) 
+    
+    mask = ((outer_radius - dr) <= distances) & (distances <= outer_radius)
+    
+    ring_positions = all_positions[mask]
+    ring_lums = lums[mask]
+    ring_masses = masses[mask]
+    
+    x =  ring_positions[:,0]
+    y =  ring_positions[:,1]
+    return x, y,  ring_lums, ring_masses 
+
+def surface_2d_brightness(xpos, ypos, lums, masses, dr, clust_radius):
+    rings = np.arange(dr,clust_radius+dr ,dr)
+    
+    surface_lums_per_ring = []
+    counts_per_ring = [] 
+    masses_per_ring = []
+    
+    for i,outer_r in enumerate(rings):
+        x, y, masked_lums, masked_masses = ring_2d_mask( 
+            xpos, 
+            ypos, 
+            ctr_at=np.array([0,0]), 
+            lums=lums, 
+            masses=masses,
+            outer_radius=outer_r, 
+            dr=dr 
+            )
+        # total luminosity in a given ring
+        surface_lums_per_ring.append(np.sum(masked_lums)) 
+        # count of stars in a given ring
+        counts_per_ring.append(len(masked_lums))
+        # mass in a given 2d ring
+        masses_per_ring.append(np.sum(masked_masses))
+        #plt.figure(figsize = (8,8), )
+        # plt.scatter(x,y,s=1)
+        # plt.xlim(-20,20)
+        # plt.ylim(-20,20)
+        #plt.savefig('test_sequence/dr_05_flat/{:05d}.png'.format(i))
+        #print(i)
+        # plt.clf() 
+        
+    return (
+        rings, 
+        np.array(surface_lums_per_ring), 
+        np.array(counts_per_ring), 
+        np.array(masses_per_ring)
+            )
