@@ -17,28 +17,28 @@ mylog.setLevel(40)
 warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 
 #---------------------------------local test-----------------------------------
-datadir = os.path.realpath('/home/fabg/cosm_test_data/refine')
-parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution'
-parent_folder = '.'
-sequence_folder = 'test_frames'
+# datadir = os.path.realpath('/home/fabg/cosm_test_data/refine')
+# parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution'
+# parent_folder = '.'
+# sequence_folder = 'test_frames'
 
 #---------------------------------DT2 Paths------------------------------------
-# lustre data path
-# datadir = os.path.expanduser(
-#     '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
-#     )
-# # save path
-# sequence_folder = 'gas_projected_density_z'
-# parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
-# newpath = parent_folder + '/' + sequence_folder
-# if not os.path.exists(newpath):
-#     os.makedirs(newpath)
+lustre data path
+datadir = os.path.expanduser(
+    '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
+    )
+# save path
+sequence_folder = 'gas_projected_density_z'
+parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
+newpath = parent_folder + '/' + sequence_folder
+if not os.path.exists(newpath):
+    os.makedirs(newpath)
 #---------------------------------plot params----------------------------------
 sequence_title = 'z_gas'
 width = (400,'pc')
 slice_axis = 'z'
-start_step = 500#113
-end_step = 500 #534
+start_step = 113
+end_step = 534
 
 #ctr_shift_thresh = 0.00060 #code length
 #ctr_shift_thresh =  0.000001 #code length
