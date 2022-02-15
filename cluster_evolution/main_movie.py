@@ -23,7 +23,7 @@ warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 # sequence_folder = 'test_frames'
 
 #---------------------------------DT2 Paths------------------------------------
-lustre data path
+#lustre data path
 datadir = os.path.expanduser(
     '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
     )
@@ -38,7 +38,7 @@ sequence_title = 'z_gas'
 width = (400,'pc')
 slice_axis = 'z'
 start_step = 113
-end_step = 534
+end_step = 563
 
 #ctr_shift_thresh = 0.00060 #code length
 #ctr_shift_thresh =  0.000001 #code length
@@ -100,8 +100,8 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     
     # get SFC/PSC positions and other important fields, 
     # need to modify definitions to get these sinks 
-    pos_sfcs = ad['SFC', 'particle_position']
-    pos_pscs = ad['PSC', 'particle_position']
+    pos_sfcs = np.array(ad['SFC', 'particle_position'])
+    pos_pscs = np.array(ad['PSC', 'particle_position'])
     
     # read POPII star info
     be_star = ad['star', 'particle_birth_epoch']
@@ -112,12 +112,15 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # center based on star position distribution
     x_center = np.mean(x_pos)
     y_center = np.mean(y_pos)
-    z_center = np.mean(z_pos)
+    z_center = np.mean(z_pos) 
     plt_ctr = np.array([x_center, y_center, z_center])
     # translate points to center
     x_pos = x_pos - plt_ctr[0] 
     y_pos = y_pos - plt_ctr[1] 
     z_pos = z_pos - plt_ctr[2] 
+
+    pos_sfcs = pos_sfcs - plt_ctr
+    pos_pscs = pos_pscs - plt_ctr
 
     p = yt.ProjectionPlot(
                           ds, 
@@ -277,7 +280,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
               length_includes_head=True) 
     
     
-    # luminosity mappping data extraction 
+    #                   luminosity mappping data extraction 
     
     # get star positons 
     abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
@@ -302,6 +305,34 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
           )
     np.savetxt(save_name, X=star_info)
     print('# saved:', save_name)
+
+    # psc sfc save
+    psc_kazu_radii = np.abs(
+        ds.arr(ad['PSC','particle_metallicity'], 'code_length').to('pc')
+        )
+    sfc_kazu_radii = np.abs(
+        ds.arr(ad['SFC','particle_metallicity'], 'code_length').to('pc')
+        )
+    # particle tags, see if unique
+    psc_tag = np.array(ad['PSC','particle_index'])
+    sfc_tag = np.array(ad['SFC','particle_index'])
+    # save paths
+    psc_path = "../luminosity_mapping/psc_data/psc_{:05d}_{}_myr.txt".format(
+          output_num,save_time
+          )
+    sfc_path = "../luminosity_mapping/sfc_data/psc_{:05d}_{}_myr.txt".format(
+          output_num,save_time
+          )
+    # x,y,z,radii at birth (pc), particle tag
+    psc_save_data = np.concatenate(
+        (pos_pscs, psc_kazu_radii[:,None], psc_tag[:,None]), axis=1
+        )
+    sfc_save_data = np.concatenate(
+        (pos_sfcs, sfc_kazu_radii[:,None], sfc_tag[:,None]), axis=1
+        )
+    
+    np.savetxt(psc_path, X=psc_save_data)
+    np.savetxt(sfc_path, X=sfc_save_data)
     
     # if pos_SFCs.size > 0:
     #     p.annotate_particles(width = width,
@@ -352,6 +383,6 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
            )
     
     print('# saved:', save_path)
-#%% sfc psc testing
-for field in dir(ds.fields.PSC): 
-    print(field)
+# #%% sfc psc testing
+# for field in dir(ds.fields.PSC): 
+#     print(field)
