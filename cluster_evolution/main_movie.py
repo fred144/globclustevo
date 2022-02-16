@@ -28,15 +28,15 @@ datadir = os.path.expanduser(
     '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
     )
 # save path
-sequence_folder = 'gas_projected_density_z'
+sequence_folder = 'gas_projected_density_x'
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 #---------------------------------plot params----------------------------------
-sequence_title = 'z_gas'
-width = (400,'pc')
-slice_axis = 'z'
+sequence_title = 'x_gas'
+width = (200,'pc')
+slice_axis = 'x'
 start_step = 113
 end_step = 563
 
