@@ -138,6 +138,11 @@ def get_cluster(
         masses,
         trns_coord
         ):
+    """
+    Mask out a cluster based on its center, radius.
+    Returns luminosities masses and transformed coordinates,
+    the ctr_at becomes the origin. 
+    """
     all_positions = np.vstack((xpos, ypos, zpos)).T 
     distances = np.sqrt(np.sum(np.square(all_positions - ctr_at), axis=1)) 
     mask = distances <= cluster_radius
@@ -164,6 +169,7 @@ def ring_2d_mask(xpos, ypos, ctr_at, lums, masses, outer_radius, dr):
     all_positions = np.vstack((xpos, ypos)).T 
     distances = np.sqrt(np.sum(np.square(all_positions - ctr_at), axis=1)) 
     
+    # get the points within [outer radius - dr, outer radius]
     mask = ((outer_radius - dr) <= distances) & (distances <= outer_radius)
     
     ring_positions = all_positions[mask]
@@ -174,14 +180,26 @@ def ring_2d_mask(xpos, ypos, ctr_at, lums, masses, outer_radius, dr):
     y =  ring_positions[:,1]
     return x, y,  ring_lums, ring_masses 
 
-def surface_2d_brightness(xpos, ypos, lums, masses, dr, clust_radius):
-    rings = np.arange(dr,clust_radius+dr ,dr)
+def surface_2d_brightness(
+        xpos, ypos, lums, masses, clust_radius, dr, log_bins=True, num_bins=None, 
+        ):
+    
+    if log_bins == True and num_bins!= None:
+        # returns log spaces outer rings, the width of each concentric ring
+        # will be preserved and is handled by ring_2d_mask
+        outer_rings = np.geomspace(dr, clust_radius+dr, num=num_bins, endpoint=False)
+    elif log_bins == False:
+        outer_rings = np.arange(dr,clust_radius+dr, dr)
+    else: 
+        print('If log_bins is true, please set a desired # of bins.')
+    
+    print(outer_rings)
     
     surface_lums_per_ring = []
     counts_per_ring = [] 
     masses_per_ring = []
     
-    for i,outer_r in enumerate(rings):
+    for i,outer_r in enumerate(outer_rings):
         x, y, masked_lums, masked_masses = ring_2d_mask( 
             xpos, 
             ypos, 
@@ -197,17 +215,39 @@ def surface_2d_brightness(xpos, ypos, lums, masses, dr, clust_radius):
         counts_per_ring.append(len(masked_lums))
         # mass in a given 2d ring
         masses_per_ring.append(np.sum(masked_masses))
-        #plt.figure(figsize = (8,8), )
+        
+        # test the binning image save
+        # plt.figure(figsize = (8,8), )
         # plt.scatter(x,y,s=1)
         # plt.xlim(-20,20)
         # plt.ylim(-20,20)
-        #plt.savefig('test_sequence/dr_05_flat/{:05d}.png'.format(i))
-        #print(i)
+        # plt.savefig('test_sequence/dr_05_flat/{:05d}.png'.format(i))
+        # print(i)
         # plt.clf() 
+    
+    # reformat lists as arrays
+    surface_lums_per_ring = np.array(surface_lums_per_ring), 
+    counts_per_ring = np.array(counts_per_ring), 
+    masses_per_ring = np.array(masses_per_ring)
+    
+    # take two circles bigger is charcterized by outer radius,
+    # other is this radius minus the ring dr, and calculates area of ring
+    ring_areas = np.pi * ( outer_rings**2 - (outer_rings - dr)**2)
+
+    # find quntatity densities
+    surface_lum_density = surface_lums_per_ring / ring_areas 
+    surface_number_density =  counts_per_ring / ring_areas 
+    surface_mass_density = masses_per_ring / ring_areas 
+    
+    avg_star_mass_per_ring = masses_per_ring / counts_per_ring
+    print(counts_per_ring)
+    # not
+    err_surface_mass_density = np.sqrt(counts_per_ring) * (avg_star_mass_per_ring  / ring_areas )
+    #err_surface_mass_density = np.sqrt(counts_per_ring*avg_star_mass_per_ring / ring_areas )
         
     return (
-        rings, 
-        np.array(surface_lums_per_ring), 
-        np.array(counts_per_ring), 
-        np.array(masses_per_ring)
+        outer_rings, 
+        surface_mass_density,
+        err_surface_mass_density 
             )
+
