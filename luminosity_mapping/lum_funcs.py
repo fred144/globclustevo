@@ -208,7 +208,7 @@ def get_cluster(
     else:
         return x, y, z, masked_lums, masked_masses
 
-def ring_2d_mask(xpos, ypos, ctr_at, lums, masses, outer_radius, dr):
+def ring_2d_mask(xpos, ypos, ctr_at, lums, masses, outer_radius, inner_radius):
     """
     Gets stars within a 2d ring.
     """
@@ -216,7 +216,7 @@ def ring_2d_mask(xpos, ypos, ctr_at, lums, masses, outer_radius, dr):
     distances = np.sqrt(np.sum(np.square(all_positions - ctr_at), axis=1))
 
     # get the points within [outer radius - dr, outer radius]
-    mask = ((outer_radius - dr) <= distances) & (distances <= outer_radius)
+    mask = ((inner_radius) <= distances) & (distances <= outer_radius)
 
     ring_positions = all_positions[mask]
     ring_lums = lums[mask]
@@ -252,8 +252,9 @@ def surface_2d_brightness(
             ctr_at=np.array([0,0]),
             lums=lums,
             masses=masses,
-            outer_radius=outer_r,
-            dr=dr
+            outer_radius=outer_rings[i],
+            inner_radius=outer_rings[i-1],
+            #dr=dr
             )
         # total luminosity in a given ring
         surface_lums_per_ring.append(np.sum(masked_lums))
