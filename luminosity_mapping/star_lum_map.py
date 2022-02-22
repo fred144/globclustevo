@@ -9,7 +9,7 @@ from scipy.spatial.transform import Rotation as R
 from lum_funcs import star_luminosity_plot, look_up_table
 
 
-proj_width = 200 # pc
+proj_width = 400 # pc
 
 mpl.rc('font', family='serif')
 plt.style.use('dark_background')
@@ -18,9 +18,9 @@ directory = r"./pop_2_data/"
 sfc_dir = r"./sfc_data/"
 psc_dir = r"./psc_data/"
 
-files = sorted(os.listdir(directory))   [300:400:20]
-sfc_files = sorted(os.listdir(sfc_dir)) [300:400:20]
-psc_files = sorted(os.listdir(psc_dir)) [300:400:20]
+files = sorted(os.listdir(directory))   [300:400:2]
+sfc_files = sorted(os.listdir(sfc_dir)) [300:400:2]
+psc_files = sorted(os.listdir(psc_dir)) [300:400:2]
 
 plot_test_parts = True
 
