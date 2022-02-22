@@ -18,9 +18,9 @@ directory = r"./pop_2_data/"
 sfc_dir = r"./sfc_data/"
 psc_dir = r"./psc_data/"
 
-files = sorted(os.listdir(directory))   [387:400]
-sfc_files = sorted(os.listdir(sfc_dir)) [387:400]
-psc_files = sorted(os.listdir(psc_dir)) [387:400]
+files = sorted(os.listdir(directory))   [300:400:20]
+sfc_files = sorted(os.listdir(sfc_dir)) [300:400:20]
+psc_files = sorted(os.listdir(psc_dir)) [300:400:20]
 
 plot_test_parts = True
 
