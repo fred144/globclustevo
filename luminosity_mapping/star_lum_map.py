@@ -92,10 +92,10 @@ for i,file_name in enumerate(files, start=0):
         # rotate test particles
         if psc_exists is True:
            psc_pos = np.dot(psc_pos, rotation_matrix.T)
-           psc_pos = np.hstack((psc_pos,psc_tags))
+           psc_pos = np.hstack((psc_pos, np.expand_dims(psc_tags,axis=1)))
         if sfc_exists is True:
            sfc_pos = np.dot(sfc_pos, rotation_matrix.T)
-           sfc_pos = np.hstack((sfc_pos,sfc_tags))
+           sfc_pos = np.hstack((psc_pos, np.expand_dims(psc_tags,axis=1)))
     else:
         pi_multiple = 0
 #%%
