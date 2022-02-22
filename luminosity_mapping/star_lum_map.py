@@ -92,13 +92,13 @@ for i,file_name in enumerate(files, start=0):
         # rotate test particles
         if psc_exists is True:
            psc_pos = np.dot(psc_pos, rotation_matrix.T)
-           psc_pos = np.array([psc_pos, psc_tags])
+           psc_pos = np.hstack((psc_pos,psc_tags))
         if sfc_exists is True:
            sfc_pos = np.dot(sfc_pos, rotation_matrix.T)
-           sfc_pos = np.array([sfc_pos, sfc_tags])
+           sfc_pos = np.hstack((sfc_pos,sfc_tags))
     else:
         pi_multiple = 0
-
+#%%
     if plot_test_parts is True:
         if sfc_exists is True:
            star_luminosity_plot(proj_width=proj_width ,
