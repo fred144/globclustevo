@@ -50,25 +50,28 @@ def star_luminosity_plot(
         sfc_y = sfc_positions[:,1]
         sfc_tags = sfc_positions[:,3]
 
-        ax.scatter(
+        plt.scatter(
             sfc_x,
             sfc_y,
             marker='.',
             s=5
             )
 
-        for i, txt in enumerate(sfc_tags):
-            ax.annotate(int(txt), (sfc_x[i], sfc_y [i]), fontsize=7, ha='center')
 
-        ax.set_xlim(-proj_width/2, proj_width/2)
-        ax.set_ylim(-proj_width/2, proj_width/2)
+        for i, txt in enumerate(sfc_tags):
+            plt.annotate(int(txt), (sfc_x[i], sfc_y [i]), fontsize=7, ha='center')
+
+
+        plt.xlim(-proj_width/2, proj_width/2)
+        plt.ylim(-proj_width/2, proj_width/2)
+
 
     if psc_positions is not None:
         psc_x = psc_positions[:,0]
         psc_y = psc_positions[:,1]
         psc_tags = psc_positions[:,3]
 
-        ax.scatter(
+        plt.scatter(
             psc_positions[:,0],
             psc_positions[:,1],
             marker='.',
@@ -76,11 +79,13 @@ def star_luminosity_plot(
             c='lime'
             )
 
-        for i, txt in enumerate(psc_tags):
-            ax.annotate(int(txt), (psc_x[i], psc_y [i]), fontsize=7, ha='center')
 
-        ax.set_xlim(-proj_width/2, proj_width/2)
-        ax.set_ylim(-proj_width/2, proj_width/2)
+        for i, txt in enumerate(psc_tags):
+            plt.annotate(int(txt), (psc_x[i], psc_y [i]), fontsize=7, ha='center')
+
+        plt.xlim(-proj_width/2, proj_width/2)
+        plt.ylim(-proj_width/2, proj_width/2)
+
 
 
     # annotate with time
