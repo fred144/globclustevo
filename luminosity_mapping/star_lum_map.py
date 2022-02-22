@@ -92,8 +92,10 @@ for i,file_name in enumerate(files, start=0):
         # rotate test particles
         if psc_exists is True:
            psc_pos = np.dot(psc_pos, rotation_matrix.T)
+           psc_pos = np.array([psc_pos, psc_tags])
         if sfc_exists is True:
            sfc_pos = np.dot(sfc_pos, rotation_matrix.T)
+           sfc_pos = np.array([sfc_pos, sfc_tags])
     else:
         pi_multiple = 0
 
@@ -105,7 +107,7 @@ for i,file_name in enumerate(files, start=0):
                                  time=time,
                                  snapshot_num=snapshot_num,
                                  pi_multiple=pi_multiple,
-                                 sfc_positions=np.vstack((sfc_pos, sfc_tags))
+                                 sfc_positions=sfc_pos
                                  #need the tag, untrimmed array
                                  )
         if psc_exists is True:
@@ -115,7 +117,7 @@ for i,file_name in enumerate(files, start=0):
                                  time=time,
                                  snapshot_num=snapshot_num,
                                  pi_multiple=pi_multiple,
-                                 psc_positions=np.vstack((psc_pos, psc_tags))
+                                 psc_positions=psc_pos
                                  )
     else:
         star_luminosity_plot(proj_width=proj_width ,
