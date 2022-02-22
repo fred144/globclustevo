@@ -105,7 +105,7 @@ for i,file_name in enumerate(files, start=0):
                                  time=time,
                                  snapshot_num=snapshot_num,
                                  pi_multiple=pi_multiple,
-                                 sfc_positions=psc_data #need the tag, untrimmed array
+                                 sfc_positions=psc_pos #need the tag, untrimmed array
                                  )
         if psc_exists is True:
            star_luminosity_plot(proj_width=proj_width ,
@@ -114,7 +114,7 @@ for i,file_name in enumerate(files, start=0):
                                  time=time,
                                  snapshot_num=snapshot_num,
                                  pi_multiple=pi_multiple,
-                                 psc_positions=psc_data
+                                 psc_positions=psc_pos
                                  )
     else:
         star_luminosity_plot(proj_width=proj_width ,
