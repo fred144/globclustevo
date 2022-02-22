@@ -16,6 +16,8 @@ def star_luminosity_plot(
         time,
         snapshot_num, 
         pi_multiple,
+        sfc_positions=None,
+        psc_positions=None,
         ):
     lums, xedges, yedges = np.histogram2d(
         star_positions[:,0], 
@@ -42,7 +44,45 @@ def star_luminosity_plot(
                        -proj_width/2, 
                        proj_width/2],
                norm=LogNorm(vmin=3e+32, vmax=3e+36)
-               )
+               ) 
+    if sfc_positions is not None:
+        sfc_x = sfc_positions[:,0] 
+        sfc_y = sfc_positions[:,1]
+        sfc_tags = sfc_positions[:,4]
+        
+        ax.scatter(
+            sfc_x, 
+            sfc_y,
+            marker='.',
+            s=5
+            )
+        
+        for i, txt in enumerate(sfc_tags):
+            ax.annotate(int(txt), (sfc_x[i], sfc_y [i]), fontsize=7, ha='center')
+            
+        ax.set_xlim(-proj_width/2, proj_width/2)
+        ax.set_ylim(-proj_width/2, proj_width/2)
+        
+    if psc_positions is not None:
+        psc_x = psc_positions[:,0] 
+        psc_y = psc_positions[:,1]
+        psc_tags = psc_positions[:,4]
+        
+        ax.scatter(
+            psc_positions[:,0], 
+            psc_positions[:,1],
+            marker='.',
+            s=5,
+            c='lime'
+            )
+        
+        for i, txt in enumerate(psc_tags):
+            ax.annotate(int(txt), (psc_x[i], psc_y [i]), fontsize=7, ha='center')
+            
+        ax.set_xlim(-proj_width/2, proj_width/2)
+        ax.set_ylim(-proj_width/2, proj_width/2)
+
+    
     # annotate with time 
     ax.text(
         -proj_width*0.375, 
@@ -98,6 +138,7 @@ def star_luminosity_plot(
         va='center', 
         color='white'
         )
+    
     #ax.set_axis_off()
     ax.axes.xaxis.set_ticklabels([])
     ax.axes.yaxis.set_ticklabels([])
@@ -193,7 +234,7 @@ def surface_2d_brightness(
     else: 
         print('If log_bins is true, please set a desired # of bins.')
     
-    print(outer_rings)
+    #print(outer_rings)
     
     surface_lums_per_ring = []
     counts_per_ring = [] 
@@ -240,14 +281,17 @@ def surface_2d_brightness(
     surface_mass_density = masses_per_ring / ring_areas 
     
     avg_star_mass_per_ring = masses_per_ring / counts_per_ring
-    print(counts_per_ring)
-    # not
+    #print(counts_per_ring)
+
     err_surface_mass_density = np.sqrt(counts_per_ring) * (avg_star_mass_per_ring  / ring_areas )
     #err_surface_mass_density = np.sqrt(counts_per_ring*avg_star_mass_per_ring / ring_areas )
-        
+    
+    clstr_mass = np.sum(masses_per_ring)
+    
     return (
         outer_rings, 
         surface_mass_density,
-        err_surface_mass_density 
-            )
+        np.squeeze(err_surface_mass_density.T),
+        clstr_mass
+        )
 
