@@ -6167,3 +6167,6356 @@ Warning: particle_families are modified at
 # saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00436-z-10_3701-y_gas.png
 #________________________________________________________________
 # reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00437/info_00437.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00437_466_07_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00437_466_07_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00437_466_07_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00437-z-10_3667-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00438/info_00438.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00438_466_27_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00438_466_27_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00438_466_27_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00438-z-10_3634-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00439/info_00439.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00439_466_48_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00439_466_48_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00439_466_48_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00439-z-10_3600-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00440/info_00440.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00440_466_68_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00440_466_68_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00440_466_68_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00440-z-10_3567-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00441/info_00441.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00441_466_88_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00441_466_88_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00441_466_88_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00441-z-10_3534-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00442/info_00442.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00442_467_09_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00442_467_09_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00442_467_09_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00442-z-10_3501-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00443/info_00443.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00443_467_29_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00443_467_29_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00443_467_29_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00443-z-10_3468-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00444/info_00444.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00444_467_49_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00444_467_49_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00444_467_49_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00444-z-10_3436-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00445/info_00445.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00445_467_70_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00445_467_70_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00445_467_70_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00445-z-10_3402-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00446/info_00446.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00446_467_92_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00446_467_92_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00446_467_92_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00446-z-10_3367-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00447/info_00447.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00447_468_13_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00447_468_13_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00447_468_13_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00447-z-10_3333-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00448/info_00448.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00448_468_34_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00448_468_34_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00448_468_34_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00448-z-10_3299-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00449/info_00449.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00449_468_55_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00449_468_55_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00449_468_55_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00449-z-10_3265-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00450/info_00450.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00450_468_77_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00450_468_77_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00450_468_77_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00450-z-10_3231-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00451/info_00451.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00451_468_98_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00451_468_98_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00451_468_98_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00451-z-10_3196-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00452/info_00452.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00452_469_19_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00452_469_19_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00452_469_19_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00452-z-10_3161-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00453/info_00453.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00453_469_40_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00453_469_40_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00453_469_40_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00453-z-10_3129-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00454/info_00454.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00454_469_61_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00454_469_61_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00454_469_61_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00454-z-10_3095-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00455/info_00455.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00455_469_81_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00455_469_81_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00455_469_81_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00455-z-10_3062-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00456/info_00456.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00456_470_01_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00456_470_01_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00456_470_01_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00456-z-10_3030-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00457/info_00457.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00457_470_21_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00457_470_21_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00457_470_21_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00457-z-10_2998-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00458/info_00458.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00458_470_42_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00458_470_42_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00458_470_42_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00458-z-10_2965-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00459/info_00459.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00459_470_62_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00459_470_62_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00459_470_62_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00459-z-10_2933-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00460/info_00460.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00460_470_83_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00460_470_83_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00460_470_83_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00460-z-10_2899-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00461/info_00461.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00461_471_04_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00461_471_04_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00461_471_04_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00461-z-10_2866-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00462/info_00462.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00462_471_24_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00462_471_24_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00462_471_24_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00462-z-10_2833-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00463/info_00463.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00463_471_45_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00463_471_45_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00463_471_45_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00463-z-10_2800-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00464/info_00464.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00464_471_67_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00464_471_67_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00464_471_67_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00464-z-10_2766-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00465/info_00465.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00465_471_88_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00465_471_88_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00465_471_88_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00465-z-10_2732-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00466/info_00466.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00466_472_10_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00466_472_10_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00466_472_10_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00466-z-10_2697-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00467/info_00467.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00467_472_30_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00467_472_30_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00467_472_30_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00467-z-10_2665-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00468/info_00468.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00468_472_51_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00468_472_51_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00468_472_51_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00468-z-10_2633-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00469/info_00469.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00469_472_72_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00469_472_72_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00469_472_72_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00469-z-10_2599-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00470/info_00470.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00470_472_93_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00470_472_93_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00470_472_93_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00470-z-10_2566-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00471/info_00471.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00471_473_13_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00471_473_13_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00471_473_13_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00471-z-10_2533-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00472/info_00472.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00472_473_34_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00472_473_34_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00472_473_34_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00472-z-10_2501-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00473/info_00473.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00473_473_55_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00473_473_55_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00473_473_55_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00473-z-10_2467-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00474/info_00474.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00474_473_75_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00474_473_75_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00474_473_75_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00474-z-10_2434-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00475/info_00475.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00475_473_96_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00475_473_96_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00475_473_96_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00475-z-10_2402-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00476/info_00476.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00476_474_16_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00476_474_16_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00476_474_16_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00476-z-10_2370-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00477/info_00477.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00477_474_37_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00477_474_37_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00477_474_37_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00477-z-10_2337-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00478/info_00478.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00478_474_59_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00478_474_59_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00478_474_59_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00478-z-10_2303-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00479/info_00479.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00479_474_80_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00479_474_80_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00479_474_80_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00479-z-10_2270-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00480/info_00480.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00480_475_01_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00480_475_01_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00480_475_01_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00480-z-10_2237-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00481/info_00481.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00481_475_21_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00481_475_21_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00481_475_21_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00481-z-10_2206-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00482/info_00482.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00482_475_41_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00482_475_41_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00482_475_41_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00482-z-10_2174-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00483/info_00483.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00483_475_62_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00483_475_62_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00483_475_62_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00483-z-10_2141-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00484/info_00484.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00484_475_82_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00484_475_82_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00484_475_82_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00484-z-10_2109-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00485/info_00485.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00485_476_03_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00485_476_03_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00485_476_03_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00485-z-10_2077-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00486/info_00486.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00486_476_23_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00486_476_23_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00486_476_23_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00486-z-10_2045-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00487/info_00487.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00487_476_43_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00487_476_43_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00487_476_43_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00487-z-10_2013-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00488/info_00488.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00488_476_64_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00488_476_64_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00488_476_64_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00488-z-10_1981-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00489/info_00489.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00489_476_84_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00489_476_84_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00489_476_84_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00489-z-10_1950-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00490/info_00490.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00490_477_05_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00490_477_05_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00490_477_05_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00490-z-10_1916-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00491/info_00491.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00491_477_26_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00491_477_26_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00491_477_26_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00491-z-10_1884-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00492/info_00492.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00492_477_47_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00492_477_47_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00492_477_47_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00492-z-10_1851-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00493/info_00493.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00493_477_67_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00493_477_67_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00493_477_67_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00493-z-10_1819-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00494/info_00494.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00494_477_89_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00494_477_89_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00494_477_89_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00494-z-10_1786-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00495/info_00495.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00495_478_10_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00495_478_10_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00495_478_10_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00495-z-10_1753-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00496/info_00496.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00496_478_31_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00496_478_31_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00496_478_31_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00496-z-10_1720-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00497/info_00497.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00497_478_52_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00497_478_52_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00497_478_52_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00497-z-10_1688-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00498/info_00498.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00498_478_73_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00498_478_73_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00498_478_73_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00498-z-10_1655-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00499/info_00499.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00499_478_94_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00499_478_94_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00499_478_94_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00499-z-10_1622-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00500/info_00500.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00500_479_16_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00500_479_16_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00500_479_16_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00500-z-10_1588-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00501/info_00501.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00501_479_37_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00501_479_37_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00501_479_37_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00501-z-10_1556-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00502/info_00502.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00502_479_57_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00502_479_57_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00502_479_57_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00502-z-10_1524-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00503/info_00503.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00503_479_79_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00503_479_79_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00503_479_79_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00503-z-10_1491-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00504/info_00504.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00504_479_99_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00504_479_99_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00504_479_99_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00504-z-10_1459-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00505/info_00505.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00505_480_20_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00505_480_20_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00505_480_20_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00505-z-10_1426-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00506/info_00506.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00506_480_41_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00506_480_41_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00506_480_41_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00506-z-10_1394-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00507/info_00507.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00507_480_62_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00507_480_62_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00507_480_62_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00507-z-10_1361-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00508/info_00508.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00508_480_83_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00508_480_83_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00508_480_83_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00508-z-10_1329-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00509/info_00509.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00509_481_04_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00509_481_04_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00509_481_04_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00509-z-10_1297-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00510/info_00510.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00510_481_25_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00510_481_25_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00510_481_25_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00510-z-10_1264-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00511/info_00511.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00511_481_46_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00511_481_46_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00511_481_46_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00511-z-10_1232-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00512/info_00512.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00512_481_67_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00512_481_67_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00512_481_67_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00512-z-10_1199-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00513/info_00513.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00513_481_88_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00513_481_88_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00513_481_88_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00513-z-10_1168-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00514/info_00514.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00514_482_09_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00514_482_09_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00514_482_09_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00514-z-10_1136-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00515/info_00515.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00515_482_30_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00515_482_30_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00515_482_30_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00515-z-10_1103-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00516/info_00516.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00516_482_50_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00516_482_50_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00516_482_50_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00516-z-10_1072-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00517/info_00517.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00517_482_71_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00517_482_71_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00517_482_71_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00517-z-10_1041-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00518/info_00518.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00518_482_91_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00518_482_91_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00518_482_91_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00518-z-10_1011-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00519/info_00519.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00519_483_11_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00519_483_11_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00519_483_11_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00519-z-10_0980-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00520/info_00520.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00520_483_31_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00520_483_31_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00520_483_31_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00520-z-10_0948-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00521/info_00521.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00521_483_52_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00521_483_52_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00521_483_52_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00521-z-10_0917-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00522/info_00522.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00522_483_72_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00522_483_72_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00522_483_72_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00522-z-10_0886-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00523/info_00523.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00523_483_92_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00523_483_92_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00523_483_92_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00523-z-10_0855-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00524/info_00524.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00524_484_13_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00524_484_13_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00524_484_13_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00524-z-10_0824-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00525/info_00525.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00525_484_33_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00525_484_33_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00525_484_33_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00525-z-10_0793-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00526/info_00526.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00526_484_53_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00526_484_53_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00526_484_53_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00526-z-10_0762-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00527/info_00527.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00527_484_73_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00527_484_73_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00527_484_73_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00527-z-10_0731-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00528/info_00528.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00528_484_93_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00528_484_93_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00528_484_93_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00528-z-10_0701-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00529/info_00529.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00529_485_14_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00529_485_14_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00529_485_14_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00529-z-10_0669-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00530/info_00530.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00530_485_35_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00530_485_35_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00530_485_35_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00530-z-10_0638-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00531/info_00531.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00531_485_55_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00531_485_55_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00531_485_55_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00531-z-10_0608-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00532/info_00532.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00532_485_75_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00532_485_75_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00532_485_75_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00532-z-10_0576-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00533/info_00533.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00533_485_96_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00533_485_96_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00533_485_96_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00533-z-10_0545-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00534/info_00534.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00534_486_17_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00534_486_17_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00534_486_17_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00534-z-10_0513-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00535/info_00535.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00535_486_38_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00535_486_38_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00535_486_38_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00535-z-10_0481-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00536/info_00536.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00536_486_59_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00536_486_59_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00536_486_59_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00536-z-10_0450-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00537/info_00537.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00537_486_81_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00537_486_81_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00537_486_81_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00537-z-10_0417-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00538/info_00538.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00538_487_01_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00538_487_01_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00538_487_01_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00538-z-10_0387-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00539/info_00539.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00539_487_22_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00539_487_22_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00539_487_22_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00539-z-10_0355-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00540/info_00540.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00540_487_43_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00540_487_43_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00540_487_43_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00540-z-10_0323-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00541/info_00541.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00541_487_64_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00541_487_64_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00541_487_64_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00541-z-10_0292-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00542/info_00542.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00542_487_85_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00542_487_85_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00542_487_85_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00542-z-10_0260-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00543/info_00543.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00543_488_05_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00543_488_05_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00543_488_05_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00543-z-10_0229-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00544/info_00544.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00544_488_26_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00544_488_26_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00544_488_26_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00544-z-10_0197-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00545/info_00545.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00545_488_47_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00545_488_47_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00545_488_47_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00545-z-10_0165-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00546/info_00546.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00546_488_68_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00546_488_68_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00546_488_68_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00546-z-10_0134-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00547/info_00547.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00547_488_89_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00547_488_89_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00547_488_89_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00547-z-10_0103-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00548/info_00548.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00548_489_10_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00548_489_10_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00548_489_10_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00548-z-10_0072-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00549/info_00549.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00549_489_31_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00549_489_31_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00549_489_31_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00549-z-10_0041-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00550/info_00550.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00550_489_51_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00550_489_51_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00550_489_51_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00550-z-10_0010-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00551/info_00551.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00551_489_58_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00551_489_58_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00551_489_58_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00551-z-9_9999-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00552/info_00552.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00552_489_72_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00552_489_72_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00552_489_72_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00552-z-9_9978-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00553/info_00553.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00553_489_93_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00553_489_93_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00553_489_93_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00553-z-9_9947-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00554/info_00554.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00554_490_14_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00554_490_14_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00554_490_14_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00554-z-9_9916-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00555/info_00555.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00555_490_36_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00555_490_36_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00555_490_36_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00555-z-9_9884-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00556/info_00556.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00556_490_57_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00556_490_57_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00556_490_57_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00556-z-9_9852-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00557/info_00557.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00557_490_77_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00557_490_77_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00557_490_77_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00557-z-9_9821-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00558/info_00558.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00558_490_99_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00558_490_99_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00558_490_99_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00558-z-9_9789-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00559/info_00559.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00559_491_20_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00559_491_20_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00559_491_20_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00559-z-9_9758-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00560/info_00560.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00560_491_41_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00560_491_41_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00560_491_41_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00560-z-9_9726-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00561/info_00561.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00561_491_62_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00561_491_62_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00561_491_62_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00561-z-9_9695-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00562/info_00562.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00562_491_82_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00562_491_82_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00562_491_82_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00562-z-9_9665-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00563/info_00563.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00563_492_02_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00563_492_02_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00563_492_02_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00563-z-9_9635-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00564/info_00564.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00564_492_23_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00564_492_23_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00564_492_23_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00564-z-9_9605-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00565/info_00565.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00565_492_44_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00565_492_44_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00565_492_44_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00565-z-9_9574-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00566/info_00566.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00566_492_65_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00566_492_65_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00566_492_65_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00566-z-9_9543-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00567/info_00567.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00567_492_85_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00567_492_85_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00567_492_85_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00567-z-9_9512-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00568/info_00568.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00568_493_07_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00568_493_07_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00568_493_07_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00568-z-9_9480-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00569/info_00569.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00569_493_27_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00569_493_27_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00569_493_27_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00569-z-9_9450-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00570/info_00570.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00570_493_49_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00570_493_49_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00570_493_49_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00570-z-9_9419-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00571/info_00571.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00571_493_69_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00571_493_69_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00571_493_69_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00571-z-9_9389-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00572/info_00572.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00572_493_89_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00572_493_89_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00572_493_89_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00572-z-9_9359-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00573/info_00573.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00573_494_09_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00573_494_09_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00573_494_09_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00573-z-9_9329-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00574/info_00574.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00574_494_29_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00574_494_29_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00574_494_29_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00574-z-9_9300-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00575/info_00575.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00575_494_49_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00575_494_49_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00575_494_49_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00575-z-9_9270-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00576/info_00576.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00576_494_71_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00576_494_71_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00576_494_71_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00576-z-9_9239-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00577/info_00577.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00577_494_91_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00577_494_91_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00577_494_91_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00577-z-9_9209-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00578/info_00578.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00578_495_11_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00578_495_11_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00578_495_11_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00578-z-9_9179-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00579/info_00579.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00579_495_31_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00579_495_31_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00579_495_31_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00579-z-9_9149-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00580/info_00580.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00580_495_52_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00580_495_52_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00580_495_52_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00580-z-9_9118-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00581/info_00581.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00581_495_72_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00581_495_72_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00581_495_72_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00581-z-9_9089-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00582/info_00582.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00582_495_93_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00582_495_93_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00582_495_93_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00582-z-9_9059-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00583/info_00583.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00583_496_15_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00583_496_15_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00583_496_15_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00583-z-9_9027-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00584/info_00584.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00584_496_37_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00584_496_37_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00584_496_37_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00584-z-9_8995-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00585/info_00585.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00585_496_57_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00585_496_57_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00585_496_57_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00585-z-9_8965-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00586/info_00586.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00586_496_78_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00586_496_78_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00586_496_78_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00586-z-9_8935-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00587/info_00587.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00587_496_99_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00587_496_99_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00587_496_99_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00587-z-9_8904-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00588/info_00588.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00588_497_22_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00588_497_22_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00588_497_22_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00588-z-9_8871-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00589/info_00589.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00589_497_44_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00589_497_44_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00589_497_44_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00589-z-9_8839-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00590/info_00590.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00590_497_65_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00590_497_65_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00590_497_65_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00590-z-9_8809-y_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00591/info_00591.txt
+> annotating 42037 star particles
+339.562
+358.562
+375.562
+408.562
+409.562
+410.562
+427.562
+428.562
+430.562
+434.562
+437.562
+441.562
+442.562
+444.562
+445.562
+446.562
+447.562
+448.562
+449.562
+450.562
+451.562
+452.562
+453.562
+454.562
+455.562
+456.562
+457.562
+458.562
+459.562
+460.562
+461.562
+462.562
+463.562
+464.562
+# saved: ../luminosity_mapping/pop_2_data/pos_00591_497_87_myr.txt
+# saved: ../luminosity_mapping/psc_data/psc_00591_497_87_myr.txt
+# saved: ../luminosity_mapping/sfc_data/sfc_00591_497_87_myr.txt
+# saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine/gas_projected_density_y/out-00591-z-9_8776-y_gas.png
