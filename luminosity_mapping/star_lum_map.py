@@ -25,7 +25,7 @@ psc_files = sorted(os.listdir(psc_dir)) [387:400]
 plot_test_parts = True
 
 #rotation_interval = np.arange(0,2,.002) # times pi
-rotating_timelapse = True
+rotating_timelapse = False
 seq_folder_name = "test"
 rotation_interval = np.linspace(0,2,np.size(files))
 
@@ -107,7 +107,7 @@ for i,file_name in enumerate(files, start=0):
                                  time=time,
                                  snapshot_num=snapshot_num,
                                  pi_multiple=pi_multiple,
-                                 sfc_positions=sfc_pos
+                                 sfc_positions=sfc_data[:,[0,1,2,4]]
                                  #need the tag, untrimmed array
                                  )
         if psc_exists is True:
@@ -117,7 +117,7 @@ for i,file_name in enumerate(files, start=0):
                                  time=time,
                                  snapshot_num=snapshot_num,
                                  pi_multiple=pi_multiple,
-                                 psc_positions=psc_pos
+                                 psc_positions=psc_data[:,[0,1,2,4]]
                                  )
     else:
         star_luminosity_plot(proj_width=proj_width ,
