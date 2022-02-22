@@ -98,7 +98,7 @@ for i,file_name in enumerate(files, start=0):
            sfc_pos = np.hstack((psc_pos, np.expand_dims(psc_tags,axis=1)))
     else:
         pi_multiple = 0
-#%%
+
     if plot_test_parts is True:
         if sfc_exists is True:
            star_luminosity_plot(proj_width=proj_width ,
