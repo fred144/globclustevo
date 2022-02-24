@@ -62,9 +62,9 @@ r, surface_mass_dens, err_surface_mass_dens, tot_mass =  surface_2d_brightness(
 #%% Fitting
 fit_params, cov_matrix = curve_fit(
     f=king_model,
-    xdata=r[1:],
-    ydata=surface_mass_dens[1:],
-    sigma=err_surface_mass_dens[1:],
+    xdata=r[2:],
+    ydata=surface_mass_dens[2:],
+    sigma=err_surface_mass_dens[2:],
     absolute_sigma=True,
     p0 = [1e4, 0.2, 10],
     bounds=([0,0,0], [np.inf,np.inf,np.inf]),
