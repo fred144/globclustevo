@@ -35,10 +35,10 @@ if not os.path.exists(newpath):
     os.makedirs(newpath)
 #---------------------------------plot params----------------------------------
 sequence_title = 'y_gas'
-width = (400,'pc')
+width = (400,'pc') # fancy annotations currently optimized for 400 pc width
 slice_axis = 'y'
-start_step = 113
-end_step = 591
+start_step = 148
+end_step = 600
 
 #ctr_shift_thresh = 0.00060 #code length
 #ctr_shift_thresh =  0.000001 #code length
