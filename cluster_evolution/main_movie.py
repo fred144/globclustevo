@@ -11,7 +11,7 @@ from yt.funcs import mylog
 from matplotlib import cm
 import matplotlib as mpl
 #import matplotlib.pyplot as plt
-from macros import code_age_to_yr, succ_distance
+from macros import code_age_to_yr#, succ_distance
 
 mylog.setLevel(40)
 warnings.simplefilter(action = "ignore", category = RuntimeWarning)
@@ -28,15 +28,15 @@ datadir = os.path.expanduser(
     '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
     )
 # save path
-sequence_folder = 'gas_projected_density_y'
+sequence_folder = 'gas_projected_density_x'
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 #---------------------------------plot params----------------------------------
-sequence_title = 'y_gas'
-width = (400,'pc') # fancy annotations currently optimized for 400 pc width
-slice_axis = 'y'
+sequence_title = 'x_gas'
+width = (200,'pc') 
+slice_axis = 'x'
 start_step = 148
 end_step = 600
 
@@ -137,7 +137,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
                           time_unit= 'Myr',
                           redshift=True)
     p.annotate_scale(corner='lower_right',
-                     coeff=100,
+                     coeff=width[0]/4,
                      unit='pc',
                      text_args={'size':12, 'family':'serif'}
                      )
@@ -186,15 +186,15 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 
         if slice_axis == 'z':
             p['gas', 'density'].axes.scatter(
-                filtered_x, filtered_y, marker='.', c=color, s=.1, alpha=0.1
+                filtered_x, filtered_y, marker='.', c=color, s=.0005, alpha=1
                 )
         elif slice_axis == 'x':
             p['gas', 'density'].axes.scatter(
-                filtered_y, filtered_z, marker='.', c=color, s=.1, alpha=0.1
+                filtered_y, filtered_z, marker='.', c=color, s=.0005, alpha=1
                 )
         elif slice_axis == 'y':
             p['gas', 'density'].axes.scatter(
-                filtered_z, filtered_x, marker='.', c=color, s=.1, alpha=0.1
+                filtered_z, filtered_x, marker='.', c=color, s=.0005, alpha=1
                 )
         else:
             print('Invalid slice axis.')
@@ -217,7 +217,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     for t in cb.ax.xaxis.get_ticklabels():
         t.set_family("serif")
     ax.set_title(
-        "Pop II Birth Time (Myr) | Epochs: {}".format(len(unique_birth_epochs)),
+        "Pop II Birth Time (Myr) | Count: {:.2e}".format(np.size(be_star)),
         c='white',
         fontsize=9,
         fontfamily='serif'
@@ -226,56 +226,56 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
     # axis guide
     p_ax = p.plots[('gas', 'density')].axes
     if slice_axis == 'z':
-        p_ax.text(-150, -185,
-                'x',
+        p_ax.text(-width[0]*0.375, -width[0]*0.4625,
+                'X',
                 size=7,
                 ha='center',
                 va='center',
                 color='white')
-        p_ax.text(-185, -150,
-                'y',
+        p_ax.text(-width[0]*0.4625, -width[0]*0.375,
+                'Y',
                 size=7,
                 ha='center',
                 va='center',
                 color='white')
     elif slice_axis == 'x':
-        p_ax.text(-150, -185,
-                'y',
+        p_ax.text(-width[0]*0.375, -width[0]*0.4625,
+                'Y',
                 size=7,
                 ha='center',
                 va='center',
                 color='white')
-        p_ax.text(-185, -150,
-                'z',
+        p_ax.text(-width[0]*0.4625, -width[0]*0.375,
+                'Z',
                 size=7,
                 ha='center',
                 va='center',
                 color='white')
     elif slice_axis == 'y':
-        p_ax.text(-150, -185,
-                'z',
+        p_ax.text(-width[0]*0.375, -width[0]*0.4625,
+                'Z',
                 size=7,
                 ha='center',
                 va='center',
                 color='white')
-        p_ax.text(-185, -150,
-                'x',
+        p_ax.text(-width[0]*0.4625, -width[0]*0.375,
+                'X',
                 size=8,
                 ha='center',
                 va='center',
                 color='white')
     else:
         print('Invalid slice axis.')
-    p_ax.arrow(-185, -185, 30, 0,
-              head_width=3,
-              head_length=3,
-              linewidth=0.5,
+    p_ax.arrow(-width[0]*0.4625, -width[0]*0.4625, width[0]*0.075, 0,
+              head_width=width[0]*0.0075,
+              head_length=width[0]*0.0075,
+              linewidth=width[0]*0.00125, 
               color='w',
               length_includes_head=True)
-    p_ax.arrow(-185, -185, 0, 30,
-              head_width=3,
-              head_length=3,
-              linewidth=0.5,
+    p_ax.arrow(-width[0]*0.4625, -width[0]*0.4625, 0, width[0]*0.075,
+              head_width=width[0]*0.0075,
+              head_length=width[0]*0.0075,
+              linewidth=width[0]*0.00125,
               color='w',
               length_includes_head=True)
 

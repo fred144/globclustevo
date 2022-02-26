@@ -22,7 +22,7 @@ files = sorted(os.listdir(directory))   [300:400:2]
 sfc_files = sorted(os.listdir(sfc_dir)) [300:400:2]
 psc_files = sorted(os.listdir(psc_dir)) [300:400:2]
 
-plot_test_parts = True
+plot_test_parts = False
 
 #rotation_interval = np.arange(0,2,.002) # times pi
 rotating_timelapse = False
@@ -145,53 +145,51 @@ for i,file_name in enumerate(files, start=0):
 
     # after rotating as the stars are forming, rotate the rest of the set
     # rotation interval vector using the last snapshot-- frozen in time
-# =============================================================================
-#
-#     if (np.size(files) - 1) == i:
-#         print("# time frozen")
-#
-#         # frozen rotation
-#         frozen_rotation_interval = np.linspace(2,4,np.size(files))
-#
-#         for remaining_pi_multiple in frozen_rotation_interval[1:]: # stutter
-#             # for remaining_pi_multiple in rotation_interval[i+1:]:
-#
-#             stellar_lums = look_up_table(
-#                 stellar_ages=ages,
-#                 table_link='https://www.stsci.edu/science/starburst99/data/l1500_inst_e.dat',
-#                 column_idx=1)
-#             scaled_stellar_lums = stellar_lums*1e-5
-#
-#             #pi_multiple = remaining_pi_multiple
-#             rotation_angle = remaining_pi_multiple*np.pi
-#             star_positions = pop_2_data[:,2:5]
-#
-#             # along (x,y,z) axis
-#             r = R.from_rotvec(rotation_angle * np.array([0,1,0]))
-#             rotation_matrix = r.as_matrix()
-#             rot_star_positions = np.dot(star_positions, rotation_matrix .T)
-#
-#             star_luminosity_plot(proj_width=proj_width ,
-#                                  star_positions=rot_star_positions,
-#                                  scaled_stellar_lums=scaled_stellar_lums,
-#                                  time=time,
-#                                  snapshot_num=snapshot_num,
-#                                  pi_multiple=remaining_pi_multiple)
-#
-#             save_name = './sequences/{}/rot_{}_t_{}_pi_{}.png'.format(
-#                 seq_folder_name,
-#                 str(snapshot_num).zfill(4),
-#                 str(time).ljust(6, '0').replace('.','_'),
-#                 str(np.round(remaining_pi_multiple,3)).ljust(5, '0').replace('.','_'))
-#             plt.savefig(
-#                 save_name,
-#                 dpi=200,
-#                 bbox_inches='tight',
-#                 pad_inches=0.05
-#                 )
-#             # plt.show()
-#             plt.close()
-#             print("# saved:", save_name)
-# =============================================================================
+
+    if (np.size(files) - 1) == i:
+        print("# time frozen")
+
+        # frozen rotation
+        frozen_rotation_interval = np.linspace(2,4,np.size(files))
+
+        for remaining_pi_multiple in frozen_rotation_interval[1:]: # stutter
+            # for remaining_pi_multiple in rotation_interval[i+1:]:
+
+            stellar_lums = look_up_table(
+                stellar_ages=ages,
+                table_link='https://www.stsci.edu/science/starburst99/data/l1500_inst_e.dat',
+                column_idx=1)
+            scaled_stellar_lums = stellar_lums*1e-5
+
+            #pi_multiple = remaining_pi_multiple
+            rotation_angle = remaining_pi_multiple*np.pi
+            star_positions = pop_2_data[:,2:5]
+
+            # along (x,y,z) axis
+            r = R.from_rotvec(rotation_angle * np.array([0,1,0]))
+            rotation_matrix = r.as_matrix()
+            rot_star_positions = np.dot(star_positions, rotation_matrix .T)
+
+            star_luminosity_plot(proj_width=proj_width ,
+                                 star_positions=rot_star_positions,
+                                 scaled_stellar_lums=scaled_stellar_lums,
+                                 time=time,
+                                 snapshot_num=snapshot_num,
+                                 pi_multiple=remaining_pi_multiple)
+
+            save_name = './sequences/{}/rot_{}_t_{}_pi_{}.png'.format(
+                seq_folder_name,
+                str(snapshot_num).zfill(4),
+                str(time).ljust(6, '0').replace('.','_'),
+                str(np.round(remaining_pi_multiple,3)).ljust(5, '0').replace('.','_'))
+            plt.savefig(
+                save_name,
+                dpi=200,
+                bbox_inches='tight',
+                pad_inches=0.05
+                )
+            # plt.show()
+            plt.close()
+            print("# saved:", save_name)
 
 
