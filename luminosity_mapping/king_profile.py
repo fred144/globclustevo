@@ -32,7 +32,7 @@ scaled_stellar_lums = stellar_lums*1e-5
 star_positions = pop_2_data[:,2:5] # (x,y,z)
 
 #gc_ctr = np.array([3.781448, 14.74236, 25.41285]) # pc
-epsilon = .5
+epsilon = 0.05
 gc_ctr = np.array([0.8662809-epsilon, -78.50676, -66.55415])
 ring_width = .05
 gc_rad = 10
@@ -47,7 +47,7 @@ cluster_x, cluster_y, cluster_z, cluster_lums, cluster_masses = get_cluster(
     lums=scaled_stellar_lums,
     trns_coord = True
     )
-
+#%%
 r, surface_mass_dens, err_surface_mass_dens, tot_mass =  surface_2d_brightness(
     xpos=cluster_x,
     ypos=cluster_y,
@@ -59,7 +59,7 @@ r, surface_mass_dens, err_surface_mass_dens, tot_mass =  surface_2d_brightness(
     num_bins=50
 
 )
-#%% Fitting
+
 fit_params, cov_matrix = curve_fit(
     f=king_model,
     xdata=r[2:],

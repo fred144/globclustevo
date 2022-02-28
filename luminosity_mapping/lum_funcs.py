@@ -19,6 +19,7 @@ def star_luminosity_plot(
         sfc_positions=None,
         psc_positions=None,
         ):
+    
     lums, xedges, yedges = np.histogram2d(
         star_positions[:,0],
         star_positions[:,1],
