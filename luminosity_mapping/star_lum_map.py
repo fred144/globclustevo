@@ -16,8 +16,8 @@ plt.style.use('dark_background')
 
 directory = r"./pop_2_data/"
 
-
-files = sorted(os.listdir(directory))   [-92:-91] #[300:400:2]
+ 
+files = sorted(os.listdir(directory)) [-2:-1] #[-92:-91] #[300:400:2]
 
 
 #rotation_interval = np.arange(0,2,.002) # times pi
@@ -27,7 +27,7 @@ rotation_interval = np.linspace(0,2,np.size(files))
 
 for i,file_name in enumerate(files, start=0):
 
-    print("# read in:", file_name)
+    print("# read in:", r"./pop_2_data/pos_00446_467_92_myr.txt")
     time_str = file_name[10:16].replace('_','.') #in myr
     time = float(time_str)
     snapshot_num = int(file_name[4:9])
@@ -68,13 +68,15 @@ for i,file_name in enumerate(files, start=0):
 
 
     peak_x, peak_y = star_luminosity_plot(
-        proj_width=proj_width ,
+        proj_width=proj_width,
         star_positions=star_positions,
         scaled_stellar_lums=scaled_stellar_lums,
         time=time,
         snapshot_num=snapshot_num,
         pi_multiple=pi_multiple,
-        bins=5000
+        bins=4000,
+        plt_type='luminosity',
+        annotate_ctrs=True
         )
 
     save_name = './sequences/{}/rot_{}_t_{}_pi_{}.png'.format(

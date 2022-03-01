@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import pandas as pd
-from lum_funcs import look_up_table, get_cluster
+from lum_funcs import look_up_table, get_cluster, star_luminosity_plot
 from scipy.optimize import curve_fit
 
 mpl.rc('font', family='serif')
@@ -104,7 +104,7 @@ def projected_surf_densities(
     return bin_ctrs, surf_mass_density, err_surf_mass_density, total_clust_m
     
         
-def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, bins=50):
+def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, bins=25):
     """
     depends on projected_surf_densities
     """
@@ -145,6 +145,17 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, bins=50):
         dr=None        
         )
     
+    # plot the data
+    plt.figure(figsize = (8,8), )
+    plt.errorbar(
+        r,
+        rho,
+        yerr=err,
+        fmt='.',
+        capsize=4,
+        label= r'$M = {:.1e} \: M_{{\odot}}$'.format(tot_m)
+        )
+    
     # do the fit
     # fit_params, cov_matrix = curve_fit(
     #     f=king_model,
@@ -157,16 +168,6 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, bins=50):
 
     #     )
     # fit_sigma = np.sqrt(np.diag(cov_matrix))
-    
-    # plot the data
-    plt.figure(figsize = (8,8), )
-    plt.errorbar(
-        r,
-        rho,
-        yerr=err,
-        fmt='.',
-        capsize=4,
-        )
     
     # plot the fit
     # legend = [item for sublist in zip(fit_params[:-1], fit_sigma[:-1]) for item in sublist]
@@ -188,19 +189,37 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, bins=50):
     plt.xlabel('Radius (pc)', fontsize=14)
     #plt.xlim(.9*ring_width,gc_rad)
     plt.grid(visible=True, which='both', axis='y', ls='--')
-    #plt.legend(fontsize=12)
+    plt.legend(fontsize=12)
     
     return r, rho, err, tot_m
     
 #%%
+
 #test_ctr = np.array([0.8662, -78.5067])
 #test_ctr = np.array([peak_x, peak_y])
 #test_ctr = np.array([3.781448, 14.74236, 25.41285])
 test_rad = 10
-
+test_proj_width = 200
+bins = 4000
 star_positions, scaled_stellar_lums, masses, t_myr= unpack_pop_ii_data(
-    r"./pop_2_data/pos_00500_479_16_myr.txt")
-for ctr in test_ctr.T:
+    r"./pop_2_data/pos_00446_467_92_myr.txt"
+    )
+# generate luminosity plot and get peaks based on counts
+peak_x, peak_y = star_luminosity_plot(
+    proj_width=test_proj_width ,
+    star_positions=star_positions,
+    scaled_stellar_lums=scaled_stellar_lums,
+    time=t_myr,
+    snapshot_num=590,
+    pi_multiple=0,
+    bins=bins,
+    plt_type='luminosity',
+    annotate_ctrs=True
+    )
+
+test_ctrs = np.array([peak_x, peak_y]).T
+# iterate over x,y maximas and plot
+for ctr in test_ctrs:
     print(ctr)
     r, rho, err, tot_m = king_profiler(
                 star_pos=star_positions, 
@@ -210,3 +229,20 @@ for ctr in test_ctr.T:
                 gc_rad=test_rad, 
                 bins=50
                 )
+
+#%% sigma = bg + (peak)/( 1 + (r/r_c)^alpha) scale background by half the peak, etc.
+# =============================================================================
+# modify the king profile rt-> inf
+# add free power and constant background
+# total mass from 100 to 600 myr for pop2
+# increase radius
+# multiplot, rotationnot zoomed in.
+# 
+# set to 1.5bg =  bg + (peak)/( 1 + (r/r_c)^alpha)
+# # play with threshold
+# #count mass up to the radius
+# #mass is 2pi r_core^2 sigma_peak ln(rt/rc) from core radius out. 
+# # Mcore = pi r_core^2 sigma_peak
+# # integrate sigma
+#mass as function of trunc radius 
+# =============================================================================

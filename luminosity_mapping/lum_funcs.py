@@ -20,11 +20,13 @@ def star_luminosity_plot(
         snapshot_num,
         pi_multiple,
         bins=2000,
+        plt_type=None,
+        annotate_ctrs=False,
         sfc_positions=None,
         psc_positions=None,
         ):
     """
-    currently makes prjection plot along projected on z axis
+    currently makes projection plot along projected on z axis
     """
     # 2d histogram using luminosities
     lums, xedges, yedges = np.histogram2d(
@@ -51,7 +53,7 @@ def star_luminosity_plot(
     y_ctr = 0.5*(yedges[1:] + yedges[:-1])
     # find peaks, returns indeces in the matrix
     print('finding_peaks')
-    peaks = peak_local_max(counts, threshold_rel=.5) 
+    peaks = peak_local_max(counts, threshold_rel=.2, min_distance=20) 
     col_idx = peaks[:,1]
     row_idx = peaks[:,0]
     # translate indeces to coordinates
@@ -60,20 +62,39 @@ def star_luminosity_plot(
 
     fig = plt.figure(figsize=(14,12),dpi=200)
     ax = fig.add_subplot(111, facecolor=cm.inferno(0))
-    rectbin = plt.imshow(
-               lums,
-               cmap='inferno',
-               #interpolation='gaussian',
-               origin='lower',
-               extent=[-proj_width/2,
-                       proj_width/2,
-                       -proj_width/2,
-                       proj_width/2],
-               norm=LogNorm(vmin=3e+32, vmax=3e+36)
-               )
-    plt.scatter(x_peak, y_peak, color='green',s=1)
-    plt.xlim(-proj_width/2, proj_width/2)
-    plt.ylim(-proj_width/2, proj_width/2)
+    if plt_type == 'luminosity':
+        rectbin = plt.imshow(
+                   lums,
+                   cmap='inferno',
+                   #interpolation='gaussian',
+                   origin='lower',
+                   extent=[-proj_width/2,
+                           proj_width/2,
+                           -proj_width/2,
+                           proj_width/2],
+                   norm=LogNorm(vmin=3e+32, vmax=3e+36)
+                   )
+        print('lum plot')
+        plt_label = (r"$\lambda = 1500\;\AA$ Projected Monochromatic Luminosity" 
+        r" $\left(erg\;s^{-1}\AA^{-1} \right)$")
+    elif plt_type == 'counts':
+        rectbin = plt.imshow(
+                   counts,
+                   cmap='inferno',
+                   origin='lower',
+                   extent=[-proj_width/2,
+                           proj_width/2,
+                           -proj_width/2,
+                           proj_width/2],
+                   )
+        plt_label = "Counts"
+    else:
+        pass
+    
+    if annotate_ctrs is True:
+        plt.scatter(x_peak, y_peak, color='green',marker='x',s=5)
+        plt.xlim(-proj_width/2, proj_width/2)
+        plt.ylim(-proj_width/2, proj_width/2)
 
 # =============================================================================
 #     if sfc_positions is not None:
@@ -112,55 +133,54 @@ def star_luminosity_plot(
 #         plt.ylim(-proj_width/2, proj_width/2)
 # =============================================================================
 
+    if plt_type is not None:
 
-
-    # annotate with time
-    ax.text(
-        -proj_width*0.375,
-        -proj_width*0.45,
-        't = %.2f Myr'%(time),
-        size=12,
-        ha='center',
-        va='center',
-        color='white')
-    # add color bar to the bottom
-    fig.subplots_adjust(wspace=0, hspace=0, bottom=.1)
-    cbar_ax = fig.add_axes([.178, .090, 0.67, 0.010])
-    cbar = fig.colorbar(rectbin,
-                 cax=cbar_ax,
-                 orientation='horizontal',
-                 pad=0
-                )
-    cbar.set_label(
-        label=r"$\lambda = 1500\;\AA$ Projected Monochromatic Luminosity" +
-        r" $\left(erg\;s^{-1}\AA^{-1} \right)$",
-        size=12
-        )
-    # add scale bar
-    rect = patches.Rectangle(
-            xy=(-proj_width*0.125, proj_width*0.45),
-            width=proj_width*0.25,
-            height=proj_width*0.005,
-            linewidth=0,
-            edgecolor='white',
-            facecolor='white')
-    ax.add_patch(rect)
-    ax.text(
-        0,
-        proj_width*0.475,
-        '{}pc'.format(int(proj_width/4)),
-        size=12,
-        ha='center',
-        va='center',
-        color='white'
-        )
-    #ax.set_axis_off()
-    ax.axes.xaxis.set_ticklabels([])
-    ax.axes.yaxis.set_ticklabels([])
-    ax.xaxis.set_ticks_position('none')
-    ax.yaxis.set_ticks_position('none')
-    ax.add_artist(ax.patch)
-    ax.patch.set_zorder(-1)
+        # annotate with time
+        ax.text(
+            -proj_width*0.375,
+            -proj_width*0.45,
+            't = %.2f Myr'%(time),
+            size=12,
+            ha='center',
+            va='center',
+            color='white')
+        # add color bar to the bottom
+        fig.subplots_adjust(wspace=0, hspace=0, bottom=.1)
+        cbar_ax = fig.add_axes([.178, .090, 0.67, 0.010])
+        cbar = fig.colorbar(rectbin,
+                     cax=cbar_ax,
+                     orientation='horizontal',
+                     pad=0
+                    )
+        cbar.set_label(
+            label=plt_label,
+            size=12
+            )
+        # add scale bar
+        rect = patches.Rectangle(
+                xy=(-proj_width*0.125, proj_width*0.45),
+                width=proj_width*0.25,
+                height=proj_width*0.005,
+                linewidth=0,
+                edgecolor='white',
+                facecolor='white')
+        ax.add_patch(rect)
+        ax.text(
+            0,
+            proj_width*0.475,
+            '{}pc'.format(int(proj_width/4)),
+            size=12,
+            ha='center',
+            va='center',
+            color='white'
+            )
+        #ax.set_axis_off()
+        ax.axes.xaxis.set_ticklabels([])
+        ax.axes.yaxis.set_ticklabels([])
+        ax.xaxis.set_ticks_position('none')
+        ax.yaxis.set_ticks_position('none')
+        ax.add_artist(ax.patch)
+        ax.patch.set_zorder(-1)
     
     return x_peak, y_peak
 
@@ -215,15 +235,14 @@ def get_cluster(
         
     distances = np.sqrt(np.sum(np.square(all_positions - ctr_at), axis=1))
     mask = distances <= cluster_radius
-    #print(distances.size)
     masked_positions = all_positions[mask]
     masked_lums = lums[mask]
     masked_masses = masses[mask]
     
     x = masked_positions[:,0]
     y = masked_positions[:,1]
-    x_recentered = masked_positions[:,0] - ctr_at[0]
-    y_recentered = masked_positions[:,1] - ctr_at[1]
+    x_recentered = masked_positions[:,0] - ctr_at[0] #np.mean(x)
+    y_recentered = masked_positions[:,1] - ctr_at[1] #np.mean(y)
     
     if zpos is not None:
         z = masked_positions[:,2]
