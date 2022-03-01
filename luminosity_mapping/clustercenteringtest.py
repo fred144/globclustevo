@@ -9,7 +9,8 @@ from scipy.spatial.transform import Rotation as R
 from lum_funcs import star_luminosity_plot, look_up_table
 from matplotlib.colors import LogNorm
 import matplotlib.cm as cm
-proj_width = 400 # pc
+
+
 
 mpl.rc('font', family='serif')
 plt.style.use('default')
@@ -18,10 +19,14 @@ directory = r"./pop_2_data/"
 sfc_dir = r"./sfc_data/"
 psc_dir = r"./psc_data/" 
 
-files = sorted(os.listdir(directory))   [-2:-1] #[310:315:5]
-sfc_files = sorted(os.listdir(sfc_dir)) [-2:-1] #[310:315:5]
-psc_files = sorted(os.listdir(psc_dir)) [-2:-1] #[310:315:5]
+files = sorted(os.listdir(directory))   [-111:-110] #[310:315:5]
+sfc_files = sorted(os.listdir(sfc_dir)) [-111:-110] #[310:315:5]
+psc_files = sorted(os.listdir(psc_dir)) [-111:-110] #[310:315:5]
+
 test_widht = 200 
+test_bins =  6000
+
+
 for i,file_name in enumerate(files, start=0):
     
     print("# read in:", file_name)
@@ -48,7 +53,7 @@ for i,file_name in enumerate(files, start=0):
     counts, xedges, yedges = np.histogram2d(
         x_star,
         y_star,
-        bins=4000,
+        bins=test_bins,
         normed=False,
         range= [[-test_widht,test_widht], [-test_widht,test_widht]]
     )
@@ -82,10 +87,10 @@ for i,file_name in enumerate(files, start=0):
 # # fp.plot()
 
 from skimage.feature import peak_local_max
-from scipy.ndimage.measurements import center_of_mass, label
+from scipy.ndimage import center_of_mass, label
 
 # peaks returns (row_idx,col_idx)
-peaks = peak_local_max(counts, threshold_abs=20) 
+peaks = peak_local_max(counts, threshold_rel=.5) 
 
 col_idx =  peaks[:,1]
 row_idx = peaks[:,0]
