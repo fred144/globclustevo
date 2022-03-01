@@ -20,8 +20,8 @@ sfc_dir = r"./sfc_data/"
 psc_dir = r"./psc_data/" 
 
 files = sorted(os.listdir(directory))   [-111:-110] #[310:315:5]
-sfc_files = sorted(os.listdir(sfc_dir)) [-111:-110] #[310:315:5]
-psc_files = sorted(os.listdir(psc_dir)) [-111:-110] #[310:315:5]
+# sfc_files = sorted(os.listdir(sfc_dir)) [-111:-110] #[310:315:5]
+# psc_files = sorted(os.listdir(psc_dir)) [-111:-110] #[310:315:5]
 
 test_widht = 200 
 test_bins =  6000
@@ -33,12 +33,12 @@ for i,file_name in enumerate(files, start=0):
     time_str = file_name[10:16].replace('_','.') #in myr
     time = float(time_str)
     snapshot_num = int(file_name[4:9])
-    sfc_filepath = sfc_dir + sfc_files[i]
-    psc_filepath = psc_dir + psc_files[i]
+    # sfc_filepath = sfc_dir + sfc_files[i]
+    # psc_filepath = psc_dir + psc_files[i]
     
     pop_2_data = np.loadtxt(directory + file_name)
-    sfc_data = np.loadtxt(sfc_filepath)
-    psc_data = np.loadtxt(psc_filepath)
+    # sfc_data = np.loadtxt(sfc_filepath)
+    # psc_data = np.loadtxt(psc_filepath)
     
     x_star = pop_2_data[:,2]
     y_star = pop_2_data[:,3]

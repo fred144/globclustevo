@@ -27,7 +27,7 @@ stellar_lums = look_up_table(
     table_link='https://www.stsci.edu/science/starburst99/data/l1500_inst_e.dat',
     column_idx=1,
     log=True)
-
+#%%
 scaled_stellar_lums = stellar_lums*1e-5
 star_positions = pop_2_data[:,2:5] # (x,y,z)
 
@@ -47,7 +47,7 @@ cluster_x, cluster_y, cluster_z, cluster_lums, cluster_masses = get_cluster(
     lums=scaled_stellar_lums,
     trns_coord = True
     )
-#%%
+
 r, surface_mass_dens, err_surface_mass_dens, tot_mass =  surface_2d_brightness(
     xpos=cluster_x,
     ypos=cluster_y,
@@ -84,7 +84,7 @@ plt.figure(figsize = (8,8), )
 plt.plot(
     r,
     king_model(r,*fit_params),
-    '--k',
+    'cyan',
     label=(r'$k = {:.0f} \pm {:.0f}$'
            '\n'
            r'$r_c = {:.2f} \pm {:.2f}$ pc'
