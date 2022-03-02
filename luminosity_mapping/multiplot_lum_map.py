@@ -31,7 +31,7 @@ mpl.rc('font', family='serif')
 
 
 directory = r"./pop_2_data/"
-for frame,entry in enumerate(sorted(os.listdir(directory)), start=113):
+for frame,entry in enumerate(sorted(os.listdir(directory)), start=130):
 
     file_name = entry
     #print(file_name)
@@ -189,9 +189,9 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=113):
         label=r'$\lambda = 1500\;\AA$ Monochromatic Luminosity $\left(erg\;s^{-1}\AA^{-1} \right)$', 
         size=12)
     
-    # plt.show() 
+    plt.close()
     
-    plt.savefig('./sequences/multi_plt_rev1/lums_{}_{}.png'.format(
+    plt.savefig('./sequences/three_panel/mult_panel_lums_{}_{}.png'.format(
         str(frame).zfill(3), str(time).ljust(6, '0').replace('.','_') ), 
         dpi=200,
         bbox_inches='tight',
