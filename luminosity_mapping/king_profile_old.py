@@ -27,12 +27,12 @@ stellar_lums = look_up_table(
     table_link='https://www.stsci.edu/science/starburst99/data/l1500_inst_e.dat',
     column_idx=1,
     log=True)
-
+#%%
 scaled_stellar_lums = stellar_lums*1e-5
 star_positions = pop_2_data[:,2:5] # (x,y,z)
 
 #gc_ctr = np.array([3.781448, 14.74236, 25.41285]) # pc
-epsilon = .5
+epsilon = 0.05
 gc_ctr = np.array([0.8662809-epsilon, -78.50676, -66.55415])
 ring_width = .05
 gc_rad = 10
@@ -59,7 +59,7 @@ r, surface_mass_dens, err_surface_mass_dens, tot_mass =  surface_2d_brightness(
     num_bins=50
 
 )
-#%% Fitting
+
 fit_params, cov_matrix = curve_fit(
     f=king_model,
     xdata=r[2:],
@@ -84,7 +84,7 @@ plt.figure(figsize = (8,8), )
 plt.plot(
     r,
     king_model(r,*fit_params),
-    '--k',
+    'cyan',
     label=(r'$k = {:.0f} \pm {:.0f}$'
            '\n'
            r'$r_c = {:.2f} \pm {:.2f}$ pc'

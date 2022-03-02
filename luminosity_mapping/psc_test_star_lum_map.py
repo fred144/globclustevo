@@ -9,16 +9,20 @@ from scipy.spatial.transform import Rotation as R
 from lum_funcs import star_luminosity_plot, look_up_table
 
 
-proj_width = 200 # pc
+proj_width = 400 # pc
 
 mpl.rc('font', family='serif')
 plt.style.use('dark_background')
 
 directory = r"./pop_2_data/"
+sfc_dir = r"./sfc_data/"
+psc_dir = r"./psc_data/"
 
- 
-files = sorted(os.listdir(directory)) [-2:-1] #[-92:-91] #[300:400:2]
+files = sorted(os.listdir(directory))   [300:400:2]
+sfc_files = sorted(os.listdir(sfc_dir)) [300:400:2]
+psc_files = sorted(os.listdir(psc_dir)) [300:400:2]
 
+plot_test_parts = False
 
 #rotation_interval = np.arange(0,2,.002) # times pi
 rotating_timelapse = False
@@ -27,7 +31,7 @@ rotation_interval = np.linspace(0,2,np.size(files))
 
 for i,file_name in enumerate(files, start=0):
 
-    print("# read in:", r"./pop_2_data/pos_00446_467_92_myr.txt")
+    print("# read in:", file_name)
     time_str = file_name[10:16].replace('_','.') #in myr
     time = float(time_str)
     snapshot_num = int(file_name[4:9])
@@ -38,6 +42,30 @@ for i,file_name in enumerate(files, start=0):
     ages = pop_2_data[:,1] *1e6
     # if the age <10^6 yr, set the age to 10^6 year.
     ages [ages < 1e6 ] = 1e6
+
+    # read in the psc and sfc files if not empty
+    sfc_filepath = sfc_dir + sfc_files[i]
+    if os.stat(sfc_filepath).st_size != 0:
+        sfc_exists = True
+        sfc_data = np.loadtxt(sfc_filepath)
+        sfc_pos = sfc_data[:,0:3]
+        sfc_tags = sfc_data[:,4]
+    else:
+        sfc_exists = False
+
+    psc_filepath = psc_dir + psc_files[i]
+    if os.stat(psc_filepath).st_size != 0:
+        psc_exists = True
+        psc_data = np.loadtxt(psc_filepath)
+        psc_pos = psc_data[:,0:3]
+        psc_tags = psc_data[:,4]
+    else:
+        psc_exists = False
+
+    # if sfc_exists is True and psc_exists is True:
+    #     test_particles_pos = np.vstack((sfc_pos, psc_pos))
+    # elif sfc_exits is True and psc_exists is not True:
+    #     test_particles_pos = sfc_pos
 
     stellar_lums = look_up_table(
         stellar_ages=ages,
@@ -62,22 +90,43 @@ for i,file_name in enumerate(files, start=0):
         rotated_star_positions = np.dot(star_positions, rotation_matrix.T)
         star_positions = rotated_star_positions
         # rotate test particles
-        
+        if psc_exists is True:
+           psc_pos = np.dot(psc_pos, rotation_matrix.T)
+           psc_pos = np.hstack((psc_pos, np.expand_dims(psc_tags,axis=1)))
+        if sfc_exists is True:
+           sfc_pos = np.dot(sfc_pos, rotation_matrix.T)
+           sfc_pos = np.hstack((psc_pos, np.expand_dims(psc_tags,axis=1)))
     else:
         pi_multiple = 0
 
-
-    peak_x, peak_y = star_luminosity_plot(
-        proj_width=proj_width,
-        star_positions=star_positions,
-        scaled_stellar_lums=scaled_stellar_lums,
-        time=time,
-        snapshot_num=snapshot_num,
-        pi_multiple=pi_multiple,
-        bins=4000,
-        plt_type='luminosity',
-        annotate_ctrs=True
-        )
+    if plot_test_parts is True:
+        if sfc_exists is True:
+           star_luminosity_plot(proj_width=proj_width ,
+                                 star_positions=star_positions,
+                                 scaled_stellar_lums=scaled_stellar_lums,
+                                 time=time,
+                                 snapshot_num=snapshot_num,
+                                 pi_multiple=pi_multiple,
+                                 sfc_positions=sfc_data[:,[0,1,2,4]]
+                                 #need the tag, untrimmed array
+                                 )
+        if psc_exists is True:
+           star_luminosity_plot(proj_width=proj_width ,
+                                 star_positions=star_positions,
+                                 scaled_stellar_lums=scaled_stellar_lums,
+                                 time=time,
+                                 snapshot_num=snapshot_num,
+                                 pi_multiple=pi_multiple,
+                                 psc_positions=psc_data[:,[0,1,2,4]]
+                                 )
+    else:
+        star_luminosity_plot(proj_width=proj_width ,
+                              star_positions=star_positions,
+                              scaled_stellar_lums=scaled_stellar_lums,
+                              time=time,
+                              snapshot_num=snapshot_num,
+                              pi_multiple=pi_multiple
+                              )
 
     save_name = './sequences/{}/rot_{}_t_{}_pi_{}.png'.format(
         seq_folder_name,
