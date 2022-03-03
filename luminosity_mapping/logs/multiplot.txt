@@ -36,3 +36,15 @@ multiplot_lum_map.py:56: RuntimeWarning: More than 20 figures have been opened. 
 pos_00138_363_58_myr.txt
 multiplot_lum_map.py:56: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
   fig = plt.figure(figsize=(16,19), dpi=300)
+pos_00139_364_64_myr.txt
+multiplot_lum_map.py:56: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig = plt.figure(figsize=(16,19), dpi=300)
+pos_00140_365_67_myr.txt
+multiplot_lum_map.py:56: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig = plt.figure(figsize=(16,19), dpi=300)
+pos_00141_366_68_myr.txt
+multiplot_lum_map.py:56: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig = plt.figure(figsize=(16,19), dpi=300)
+pos_00142_367_71_myr.txt
+multiplot_lum_map.py:56: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig = plt.figure(figsize=(16,19), dpi=300)

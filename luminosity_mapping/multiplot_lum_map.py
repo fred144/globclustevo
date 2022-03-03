@@ -186,8 +186,10 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=113):
                  pad=0
                 )
     cbar.set_label(
-        label=r'$\lambda = 1500\;\AA$ Monochromatic Luminosity $\left(erg\;s^{-1}\AA^{-1} \right)$', 
-        size=12)
+        label= (r"$\lambda = 1500\;\AA$ Projected Monochromatic Luminosity" 
+                r" $\left(erg\;s^{-1}\AA^{-1} \right)$"),
+        size=12
+        )
     
     #plt.show()
     
