@@ -31,7 +31,7 @@ mpl.rc('font', family='serif')
 
 
 directory = r"./pop_2_data/"
-for frame,entry in enumerate(sorted(os.listdir(directory)), start=200):
+for frame,entry in enumerate(sorted(os.listdir(directory)), start=113):
 
     file_name = entry
     #print(file_name)
@@ -53,7 +53,7 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=200):
     projections = ['x', 'y', 'z']
     sub_plots = [131, 132, 133]
     
-    fig = plt.figure(figsize=(16,19))
+    fig = plt.figure(figsize=(16,19), dpi=300)
     plt.style.use('dark_background') 
     
     for (proj,sub_plot) in zip(projections,sub_plots):
@@ -193,9 +193,9 @@ for frame,entry in enumerate(sorted(os.listdir(directory)), start=200):
     
     plt.savefig('./sequences/three_panel/mult_panel_lums_{}_{}.png'.format(
         str(frame).zfill(3), str(time).ljust(6, '0').replace('.','_') ), 
-        dpi=200,
+        dpi=300,
         bbox_inches='tight',
         pad_inches=0.1 
         )
     
-    plt.close()   
+    #plt.close()   
