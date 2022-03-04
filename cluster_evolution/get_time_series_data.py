@@ -4,14 +4,10 @@ sys.path.insert(
     )
 import warnings
 import os
-#import pathlib
 import yt
 import numpy as np
 from yt.funcs import mylog
-from matplotlib import cm
-import matplotlib as mpl
-#import matplotlib.pyplot as plt
-from macros import code_age_to_yr#, succ_distance
+
 
 mylog.setLevel(40)
 warnings.simplefilter(action = "ignore", category = RuntimeWarning)

@@ -17,39 +17,41 @@ mylog.setLevel(40)
 warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 
 #---------------------------------local test-----------------------------------
-# datadir = os.path.realpath('/home/fabg/cosm_test_data/refine')
-# parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution'
-# parent_folder = '.'
-# sequence_folder = 'test_frames'
+datadir = os.path.realpath('/home/fabg/cosm_test_data/refine')
+parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution'
+parent_folder = '.'
+sequence_folder = 'test_frames'
 
 #---------------------------------DT2 Paths------------------------------------
 # lustre data path
-datadir = os.path.expanduser(
-    '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
-    )
-# save path
-sequence_folder = 'gas_projected_density_x'
-parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
-newpath = parent_folder + '/' + sequence_folder
-if not os.path.exists(newpath):
-    os.makedirs(newpath)
+# datadir = os.path.expanduser(
+#     '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
+#     )
+# # save path
+# sequence_folder = 'gas_projected_density_x'
+# parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
+# newpath = parent_folder + '/' + sequence_folder
+# if not os.path.exists(newpath):
+#     os.makedirs(newpath)
 #---------------------------------plot params----------------------------------
-sequence_title = 'x_gas'
-width = (200,'pc') 
-slice_axis = 'x'
-start_step = 148
-end_step = 600
+sequence_title = 'z_gas'
+width = (400,'pc') 
+slice_axis = 'z'
+start_step = 373
+end_step = 373
 
 #ctr_shift_thresh = 0.00060 #code length
 #ctr_shift_thresh =  0.000001 #code length
 #max_density_coords = []
 
 # cosmetics
+clrmap = 'YlOrRd_r' # for the pop II ages
 mpl.rc('font', family='serif')
 # https://matplotlib.org/stable/tutorials/colors/colormaps.html
-star_map = cm.get_cmap('hot')
+star_map = cm.get_cmap(clrmap)
 
 # snapshot 115 to 452 roughly spans 340 to 470 myr
+# pop II birth color bar kwargs
 time_range = (300,510) #Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1]  + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
@@ -121,7 +123,8 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 
     pos_sfcs_recentered = pos_sfcs - plt_ctr
     pos_pscs_recentered = pos_pscs - plt_ctr
-
+#%%
+    width = (400,'pc') 
     p = yt.ProjectionPlot(
                           ds,
                           slice_axis,
@@ -142,7 +145,8 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
                      text_args={'size':12, 'family':'serif'}
                      )
     p.set_cmap('density', 'inferno')
-    p.set_zlim('density', 0.005, .34)
+    p.set_zlim('density', 0.005, .34) 
+    # p.set_zlim('density', 0.015, 3)
     p.set_log(('gas', 'density'), False)
     p.set_colorbar_label(
         ('gas', 'density'), r'Projected Gas Density (g cm$^{-2}$)'
@@ -210,7 +214,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
         norm = mpl.colors.Normalize(time_range[0], time_range[1]),
         #ticks = [340,405,470],
         orientation='horizontal',
-        cmap='hot',
+        cmap=clrmap,
         #label='Birth Epoch (Myr)'
         )
     cb.ax.tick_params(colors='white', labelsize=6)
@@ -388,7 +392,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
                        #'facecolor': 'black'
                        }
            )
-
+    #p.show() 
     print('# saved:', save_path)
     
     
