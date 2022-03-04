@@ -30,12 +30,26 @@ newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 
+
+# datadir = os.path.expanduser(
+#     '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10'
+#     )
+# # save path
+# sequence_folder = 'data'
+# parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10'
+# newpath = parent_folder + '/' + sequence_folder
+# if not os.path.exists(newpath):
+#     os.makedirs(newpath)
+
+
+
+
 ctr_at_max_den = False
 radius = (500, 'pc')
 
 
-start_step = 101
-end_step = 200
+start_step = 659
+end_step = 660
 
 total_counts = []
 total_masses = []

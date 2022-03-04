@@ -76,34 +76,43 @@ for i,file_name in enumerate(files, start=0):
    
 star_positions = pop_2_data[:,2:5]
 masses = pop_2_data[:,5]
-
+#%%
 from pytreegrav import Accel, Potential
 phi = Potential(pos=star_positions, m=masses, method='bruteforce')
+#%%
 grav, xedges, yedges = np.histogram2d(
     x_star,
     y_star,
-    bins=100,
+    bins=10000,
     weights=np.abs(phi),
     normed=False,
     range= [[-test_widht,test_widht], [-test_widht,test_widht]]
 )
+x_ctr = 0.5*(xedges[1:] + xedges[:-1])
+y_ctr = 0.5*(yedges[1:] + yedges[:-1])
+plt.hist(phi )
+#%%
 grav = grav.T
 plt.imshow(
-           grav,
-           cmap='inferno',
-           #interpolation='gaussian',
-           origin='lower',
-           extent=[-test_widht,
-                   test_widht,
-                   -test_widht,
-                   test_widht],
-           #norm=LogNorm(np.min(counts),np.max(counts))
-           )
+            grav,
+            cmap='inferno',
+            #interpolation='gaussian',
+            origin='lower',
+            extent=[-test_widht,
+                    test_widht,
+                    -test_widht,
+                    test_widht],
+            #norm=LogNorm(np.min(counts),np.max(counts))
+            )
 #ind = np.argpartition(np.abs(phi), -4)[-4:]
 #top_phi = star_positions[ind]
 # x_peak = top_phi[:,0]
 # y_peak = top_phi[:,1]
 #%%
+from skimage.feature import peak_local_max
+from scipy.ndimage import center_of_mass, label 
+
+
 # from findpeaks import findpeaks
 # # Initialize
 # fp = findpeaks(method='topology')
@@ -114,20 +123,19 @@ plt.imshow(
 # # # Plot all
 # # fp.plot()
 
-from skimage.feature import peak_local_max
-from scipy.ndimage import center_of_mass, label
+
 
 # peaks returns (row_idx,col_idx)
-peaks = peak_local_max(grav, threshold_rel=.5) 
-
+peaks = peak_local_max(grav, num_peaks=90, min_distance=55, threshold_rel=.15) 
 col_idx =  peaks[:,1]
-row_idx = peaks[:,0]
+row_idx = peaks[:,0] 
 
-
-#%%
 
 x = x_ctr[col_idx] 
 y = y_ctr[row_idx]
+#%%
+
+
 
 plt.figure(figsize=(8,8))
 plt.imshow(
@@ -141,8 +149,12 @@ plt.imshow(
                    test_widht],
            #norm=LogNorm(np.min(counts),np.max(counts))
            )
+#%%
+test_widht = 100
+plt.figure(figsize=(8,8),dpi=400)
+plt.scatter(x_star,y_star,s=.5,alpha=.05,c='red')
 
-plt.scatter(x,y, color='green',s=1)
+plt.scatter(x,y, color='lime',s=.8)
 plt.xlim(-test_widht, test_widht)
 plt.ylim(-test_widht, test_widht)
 
