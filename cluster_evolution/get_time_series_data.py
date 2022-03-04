@@ -1,103 +1,191 @@
+import sys
+sys.path.insert(
+    1, "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages"
+    )
+import warnings
 import os
+#import pathlib
 import yt
 import numpy as np
-from macros import code_age_to_yr
+from yt.funcs import mylog
+from matplotlib import cm
+import matplotlib as mpl
+#import matplotlib.pyplot as plt
+from macros import code_age_to_yr#, succ_distance
+
+mylog.setLevel(40)
+warnings.simplefilter(action = "ignore", category = RuntimeWarning)
+
+#---------------------------------local test-----------------------------------
+# datadir = os.path.realpath('/home/fabg/cosm_test_data/refine')
+# parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution'
+# parent_folder = '.'
+# sequence_folder = 'test_frames'
+
+#---------------------------------DT2 Paths------------------------------------
+# lustre data path
+datadir = os.path.expanduser(
+    '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
+    )
+# save path
+sequence_folder = 'data'
+parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
+newpath = parent_folder + '/' + sequence_folder
+if not os.path.exists(newpath):
+    os.makedirs(newpath)
+
+ctr_at_max_den = False
+radius = (500, 'pc')
 
 
-# path = 'halo_catalogs/catalog/catalog.0.h5'
-# data = h5py.File(path, 'r')
-# particle_id = np.array(data.get('particle_identifier'))
-# particle_mass = np.array(data.get('particle_mass'))
+start_step = 1
+end_step = 654
 
-#datadir = os.path.expanduser(
-#    'G:/My Drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/refine') 
-
-#datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_rerun') 
-datadir = os.path.expanduser('/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine') 
-
-# local save path 
-#parent_folder = 'C:/Users/1.44/Desktop/AstroSimulationResearch/cluster_evolution_fs07'
-#sequence_folder = 'test_frames'
-#---------------------------------save path---------------------
-##### cluster save path ######
-clust_save_path = '/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/new_refine/data'
-
-# make new folder
-if not os.path.exists(clust_save_path ):
-    os.makedirs(clust_save_path)
-
-
-start_step = 150
-end_step = 394
-
-mass_data = []
-ages = []
+total_counts = []
+total_masses = []
 
 #---------------------------------MAIN LOOP-----------------------------------
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
-    print('> reading output:', output_num)
-    infofile = os.path.abspath (datadir + "/output_%05d/info_%05d.txt" % (output_num,output_num))
-    print ("#reading in info file: %s" %infofile)  
-    
-    #cell fields
-    FIELDS = ["Density",
-              "x-velocity", "y-velocity", "z-velocity",
-              "Pressure",
-              "Metallicity",
-              "dark_matter_density",
-              "xHI", "xHII", "xHeII", "xHeIII"]
-    #extra particle fields
-    EPF= [('particle_family', 'b'),      
-          ('particle_tag', 'b'),         
-          ('particle_birth_epoch', 'd'), 
-          ('particle_metallicity', 'd')] 
+    print ("#________________________________________________________________")
+    infofile = os.path.abspath(
+        datadir + f"/output_{output_num:05}/info_{output_num:05}.txt"
+        )
+    print ("# reading in", infofile )
 
-    
-    ds = yt.load(infofile, fields=FIELDS, extra_particle_fields=EPF)
-    ad = ds.all_data()
-    current_hubble = ds.hubble_constant
-    
-    current_time = float(ds.current_time.in_units('Myr')) 
+    # read fields explicitly, not recognized by YT from this ver of RAMSES
+    cell_fields = [
+        'Density',
+        'x-velocity',
+        'y-velocity',
+        'z-velocity',
+        'Pressure',
+        'Metallicity',
+        'dark_matter_density',
+        'xHI',
+        'xHII',
+        'xHeII',
+        'xHeIII'
+        ]
+    epf = [
+        ('particle_family', 'b'),
+        ('particle_tag', 'b'),
+        ('particle_birth_epoch', 'd'),
+        ('particle_metallicity', 'd')
+        ]
+
+    # read in RAMSES data set
+    ds = yt.load(
+        infofile, fields=cell_fields, extra_particle_fields=epf
+        )
     redshft = ds.current_redshift
-    total_pop2_mass = float(
-        ad.quantities.total_quantity([('star', 'particle_mass')]).in_units("Msun")
-        )
-    total_dm_mass = float(
-        ad.quantities.total_quantity([('DM', 'particle_mass')]).in_units("Msun") 
-        )
+    current_time = float(ds.current_time.in_units('Myr'))
     
-    raw_birth_epochs = ad['star', 'particle_birth_epoch'] 
-    star_num = np.array(raw_birth_epochs).size
-    unique_birth_epochs = np.array(
-        code_age_to_yr(raw_birth_epochs, current_hubble, ))
-    unique_birth_epochs.resize(200)
-    
-
-    time_step_mass_data = np.array(
-        [redshft, current_time, total_pop2_mass, star_num, total_dm_mass]
-        )
-    
-    mass_data.append(time_step_mass_data)
-    ages.append(unique_birth_epochs)
-    
-
-
-mass_data = np.array(mass_data)
-ages = np.array(ages)
-
-name = clust_save_path + '/timeseries_mass_data_12_05.txt'
-name_1 = clust_save_path + '/timeseries_birth_data_12_05.txt'
-
-np.savetxt(fname=name, X=mass_data)
-np.savetxt(fname=name_1, X=ages)
-
+    if ctr_at_max_den is True:
+        ad = ds.all_data()
+        max_den = ad.argmax(('gas', 'density'))
+        max_density_coord = yt.YTArray(max_den).in_units('code_length') 
+        region = ds.sphere(max_density_coord, radius)
+        ad = region
+    else:
+        ad = ds.all_data()
+        
 
     
-
-
-
+    # get indivudual masses
+    dark_matter = ad['DM','particle_mass'].in_units('Msun')       
+    pop_ii = ad['star','particle_mass'].in_units('Msun')    
+    # living  pop three stars    
+    pop_iii = ad['POPIII','particle_mass'].in_units('Msun')     
+    # Pop III stars taking place SNe
+    sn = ad['supernova','particle_mass'].in_units('Msun')  
+    # Pop III stars after SNe
+    dead = ad['dead','particle_mass'].in_units('Msun') 
+    # Pop III remnant BHs           
+    black_hole = ad['BH','particle_mass'].in_units('Msun') 
+    # Star-Forming Clouds test particles, should be 0               
+    star_forming = ad['SFC','particle_mass'].in_units('Msun')      
+    # Passive Stellar Clusters, should be 0               
+    passive = ad['PSC','particle_mass'].in_units('Msun')               
+    
+    # gas 
+    m_gas = ad['gas','mass'].in_units('Msun').sum()         
+    
+    # number of particles
+    n_dark_matter = len(dark_matter)
+    n_pop_ii = len(pop_ii)
+    n_pop_iii = len(pop_iii)
+    n_sn = len(sn)
+    n_dead = len(dead)
+    n_black_hole = len(black_hole)
+    n_star_forming = len(star_forming)
+    n_passive = len(passive)    
+    
+    # total mass
+    m_dark_matter = dark_matter.sum()
+    m_pop_ii = pop_ii.sum()
+    m_pop_iii = pop_iii.sum()
+    m_sn = sn.sum()
+    m_dead = dead.sum()
+    m_black_hole = black_hole.sum() 
+    m_star_forming = star_forming.sum()
+    m_passive = passive.sum() 
     
 
+    # save format
+    # [redshift, current_time, dm, pop2, pop3, sn, dead, BH, sfc, psc]
+    counts = np.array(
+    [redshft,current_time,n_dark_matter,n_pop_ii,n_pop_iii,n_sn,n_dead,n_black_hole,n_star_forming,n_passive]
+    )
+    # [redshift, current_time, dm, pop2, pop3, sn, dead, BH, sfc, psc,gas mass]
+    masses = np.array(
+    [redshft,current_time,m_dark_matter,m_pop_ii,m_pop_iii,m_sn,m_dead,m_black_hole,m_star_forming,m_passive,m_gas]
+    )
+    
+    total_counts.append(counts)
+    total_masses.append(masses)
     
 
-  
+total_counts = np.array(total_counts)
+total_masses = np.array(total_masses)
+
+if ctr_at_max_den is True:
+    n_save_path = str (
+        "{}/{}/n_maxden-{}-{}.txt".format(
+            parent_folder,
+            sequence_folder,
+            str(start_step).zfill(5),
+            str(end_step).zfill(5),
+            )
+        ) 
+    m_save_path = str (
+        "{}/{}/m_maxden-{}-{}.txt".format(
+            parent_folder,
+            sequence_folder,
+            str(start_step).zfill(5),
+            str(end_step).zfill(5),
+            )
+        )  
+else:
+    n_save_path = str (
+        "{}/{}/n_tot-{}-{}.txt".format(
+            parent_folder,
+            sequence_folder,
+            str(start_step).zfill(5),
+            str(end_step).zfill(5),
+            )
+        ) 
+    m_save_path = str (
+        "{}/{}/m_tot-{}-{}.txt".format(
+            parent_folder,
+            sequence_folder,
+            str(start_step).zfill(5),
+            str(end_step).zfill(5),
+            )
+        )  
+
+    
+np.savetxt(fname=n_save_path, X=total_counts)
+np.savetxt(fname=m_save_path, X=total_masses) 
+#%% sfc psc testing
+# for field in dir(ds.fields.BH):
+#     print(field)

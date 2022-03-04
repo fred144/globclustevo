@@ -9,7 +9,7 @@ from scipy.spatial.transform import Rotation as R
 from lum_funcs import star_luminosity_plot, look_up_table
 
 
-proj_width = 200 # pc
+proj_width = 400 # pc
 
 mpl.rc('font', family='serif')
 plt.style.use('dark_background')
