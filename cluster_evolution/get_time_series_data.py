@@ -34,8 +34,8 @@ ctr_at_max_den = False
 radius = (500, 'pc')
 
 
-start_step = 1
-end_step = 100
+start_step = 101
+end_step = 200
 
 total_counts = []
 total_masses = []
