@@ -74,7 +74,35 @@ for i,file_name in enumerate(files, start=0):
                #norm=LogNorm(np.min(counts),np.max(counts))
                )
    
-    
+star_positions = pop_2_data[:,2:5]
+masses = pop_2_data[:,5]
+
+from pytreegrav import Accel, Potential
+phi = Potential(pos=star_positions, m=masses, method='bruteforce')
+grav, xedges, yedges = np.histogram2d(
+    x_star,
+    y_star,
+    bins=100,
+    weights=np.abs(phi),
+    normed=False,
+    range= [[-test_widht,test_widht], [-test_widht,test_widht]]
+)
+grav = grav.T
+plt.imshow(
+           grav,
+           cmap='inferno',
+           #interpolation='gaussian',
+           origin='lower',
+           extent=[-test_widht,
+                   test_widht,
+                   -test_widht,
+                   test_widht],
+           #norm=LogNorm(np.min(counts),np.max(counts))
+           )
+#ind = np.argpartition(np.abs(phi), -4)[-4:]
+#top_phi = star_positions[ind]
+# x_peak = top_phi[:,0]
+# y_peak = top_phi[:,1]
 #%%
 # from findpeaks import findpeaks
 # # Initialize
@@ -90,7 +118,7 @@ from skimage.feature import peak_local_max
 from scipy.ndimage import center_of_mass, label
 
 # peaks returns (row_idx,col_idx)
-peaks = peak_local_max(counts, threshold_rel=.5) 
+peaks = peak_local_max(grav, threshold_rel=.5) 
 
 col_idx =  peaks[:,1]
 row_idx = peaks[:,0]
