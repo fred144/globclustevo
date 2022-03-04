@@ -123,8 +123,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 
     pos_sfcs_recentered = pos_sfcs - plt_ctr
     pos_pscs_recentered = pos_pscs - plt_ctr
-#%%
-    width = (400,'pc') 
+
     p = yt.ProjectionPlot(
                           ds,
                           slice_axis,
@@ -146,7 +145,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
                      )
     p.set_cmap('density', 'inferno')
     p.set_zlim('density', 0.005, .34) 
-    # p.set_zlim('density', 0.015, 3)
+    #p.set_zlim('density', 0.015, 3)
     p.set_log(('gas', 'density'), False)
     p.set_colorbar_label(
         ('gas', 'density'), r'Projected Gas Density (g cm$^{-2}$)'

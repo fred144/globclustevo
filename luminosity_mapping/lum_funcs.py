@@ -11,7 +11,7 @@ from matplotlib.colors import LogNorm
 from skimage.feature import peak_local_max
 from scipy.ndimage import center_of_mass, label
 
-
+from pytreegrav import Accel, Potential
 def star_luminosity_plot(
         proj_width,
         star_positions,
@@ -20,6 +20,7 @@ def star_luminosity_plot(
         snapshot_num,
         pi_multiple,
         bins=2000,
+        masses=None,
         plt_type=None,
         annotate_ctrs=False,
         sfc_positions=None,
@@ -53,12 +54,20 @@ def star_luminosity_plot(
     y_ctr = 0.5*(yedges[1:] + yedges[:-1])
     # find peaks, returns indeces in the matrix
     print('finding_peaks')
-    peaks = peak_local_max(counts, threshold_rel=.2, min_distance=20) 
+    peaks = peak_local_max(counts, threshold_rel=.5, min_distance=20) 
     col_idx = peaks[:,1]
     row_idx = peaks[:,0]
     # translate indeces to coordinates
-    x_peak = x_ctr[col_idx] 
-    y_peak = y_ctr[row_idx]
+    #x_peak = x_ctr[col_idx] 
+    #y_peak = y_ctr[row_idx]
+    
+    if masses is not None:
+        phi = Potential(pos=star_positions, m=masses, method='bruteforce')
+        ind = np.argpartition(np.abs(phi), -4)[-4:]
+        top_phi = star_positions[ind]
+        x_peak = top_phi[:,0]
+        y_peak = top_phi[:,1]
+        
 
     fig = plt.figure(figsize=(14,12),dpi=200)
     ax = fig.add_subplot(111, facecolor=cm.inferno(0))
@@ -92,7 +101,7 @@ def star_luminosity_plot(
         pass
     
     if annotate_ctrs is True:
-        plt.scatter(x_peak, y_peak, color='green',marker='x',s=5)
+        plt.scatter(x_peak, y_peak, color='green',marker='.',s=2)
         plt.xlim(-proj_width/2, proj_width/2)
         plt.ylim(-proj_width/2, proj_width/2)
 
