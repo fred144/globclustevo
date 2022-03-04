@@ -35,7 +35,7 @@ radius = (500, 'pc')
 
 
 start_step = 1
-end_step = 654
+end_step = 100
 
 total_counts = []
 total_masses = []
