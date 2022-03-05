@@ -43,39 +43,11 @@ for i,file_name in enumerate(files, start=0):
     x_star = pop_2_data[:,2]
     y_star = pop_2_data[:,3]
     
-    # plt.figure(figsize=(8,8), dpi=200)
-    # plt.scatter(x_star, y_star, s=.2, alpha=.2)
-    # plt.scatter(sfc_data[:,0], sfc_data[:,1], s=5, c='red')
-    # plt.scatter(psc_data[:,0], psc_data[:,1], s=5, c='red')
-    # plt.xlim(-100,100)
-    # plt.ylim(-100,100)
-    
-    counts, xedges, yedges = np.histogram2d(
-        x_star,
-        y_star,
-        bins=test_bins,
-        normed=False,
-        range= [[-test_widht,test_widht], [-test_widht,test_widht]]
-    )
-    counts = counts.T 
-    x_ctr = 0.5*(xedges[1:] + xedges[:-1])
-    y_ctr = 0.5*(yedges[1:] + yedges[:-1])
-    
-    plt.figure(figsize=(8,8))
-    plt.imshow(
-               counts,
-               cmap='inferno',
-               #interpolation='gaussian',
-               origin='lower',
-               extent=[-test_widht,
-                       test_widht,
-                       -test_widht,
-                       test_widht],
-               #norm=LogNorm(np.min(counts),np.max(counts))
-               )
+    star_positions = pop_2_data[:,2:5]
+    masses = pop_2_data[:,5]
    
-star_positions = pop_2_data[:,2:5]
-masses = pop_2_data[:,5]
+   
+
 #%%
 from pytreegrav import Accel, Potential
 phi = Potential(pos=star_positions, m=masses, method='bruteforce')
@@ -157,6 +129,8 @@ plt.scatter(x_star,y_star,s=.5,alpha=.05,c='red')
 plt.scatter(x,y, color='lime',s=.8)
 plt.xlim(-test_widht, test_widht)
 plt.ylim(-test_widht, test_widht)
+
+#%%
 
 
 

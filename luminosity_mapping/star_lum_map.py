@@ -1,14 +1,12 @@
 import numpy as np
 import os
-#import yt
-#from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-#from mpl_toolkits.axes_grid1 import make_axes_locatable
 from scipy.spatial.transform import Rotation as R
-from lum_funcs import star_luminosity_plot, look_up_table
+from lum_funcs import look_up_table
+from lum_plotting_lib import star_luminosity_plot
 
-
+# =============================================================================
 proj_width = 400 # pc
 
 mpl.rc('font', family='serif')
@@ -19,7 +17,7 @@ seq_folder_name = "test/test1"
 
 # enable descrete selection of time range based on snapshot number
 strt_snapshot = "00400"
-end_snapshot = "00401"
+end_snapshot = "00410"
 files = sorted(os.listdir(directory))  #[-2:-1]  [300:400:2]
 strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
 end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
@@ -30,15 +28,17 @@ rotating_timelapse = False
 rotate_at_the_end = False
 pause_and_rotate = True
 
-
 timelapse_rotation_interval = np.linspace(0,2,np.size(files))
 frozen_rotation_interval = np.linspace(2,4,np.size(files))
 mid_pause_rotation_interval = np.linspace(0,2,100)
 
 # pause at a specific frame and rotate
-pause_at = 415
+pause_at = 405
 
+# gc centering 
+annotate_gc = True
 
+# =============================================================================
 for i,file_name in enumerate(filtered_files, start=0):
 
     print("# read in:", file_name)
@@ -96,14 +96,13 @@ for i,file_name in enumerate(filtered_files, start=0):
                 proj_width=proj_width,
                 star_positions=star_positions,
                 scaled_stellar_lums=scaled_stellar_lums,
-                masses=masses,
                 time=time,
                 snapshot_num=snapshot_num,
                 pi_multiple=pause_rot_angle,
-                bins=4000,
-                plt_type='luminosity',
-                annotate_ctrs=True
-            ) 
+                plt_bins=4000,
+                get_ctr=(True, 'potential', 0.04, annotate_gc),
+                masses=masses,
+                ) 
             save_name = './sequences/{}/rot_{}_t_{}_pi_{}.png'.format(
                 seq_folder_name,
                 str(snapshot_num).zfill(4),
@@ -126,14 +125,13 @@ for i,file_name in enumerate(filtered_files, start=0):
         proj_width=proj_width,
         star_positions=star_positions,
         scaled_stellar_lums=scaled_stellar_lums,
-        masses=masses,
         time=time,
         snapshot_num=snapshot_num,
         pi_multiple=pi_multiple,
-        bins=4000,
-        plt_type='luminosity',
-        annotate_ctrs=True
-        )
+        plt_bins=4000,
+        get_ctr=(True, 'potential', 0.04, annotate_gc),
+        masses=masses,
+    ) 
 
     save_name = './sequences/{}/rot_{}_t_{}_pi_{}.png'.format(
         seq_folder_name,
@@ -176,17 +174,16 @@ for i,file_name in enumerate(filtered_files, start=0):
             rotated_star_positions = np.dot(star_positions, rotation_matrix .T)
 
             _, _ = star_luminosity_plot(
-               proj_width=proj_width,
-               star_positions=rotated_star_positions,
-               scaled_stellar_lums=scaled_stellar_lums,
-               masses=masses,
-               time=time,
-               snapshot_num=snapshot_num,
-               pi_multiple=end_rot_angle,
-               bins=4000,
-               plt_type='luminosity',
-               annotate_ctrs=True
-               )
+                proj_width=proj_width,
+                star_positions=star_positions,
+                scaled_stellar_lums=scaled_stellar_lums,
+                time=time,
+                snapshot_num=snapshot_num,
+                pi_multiple=pause_rot_angle,
+                plt_bins=4000,
+                get_ctr=(True, 'potential', 0.01, annotate_gc),
+                masses=masses,
+            ) 
 
             save_name = './sequences/{}/rot_{}_t_{}_pi_{}.png'.format(
                 seq_folder_name,
