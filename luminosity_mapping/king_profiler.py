@@ -2,12 +2,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import pandas as pd
-from lum_funcs import look_up_table, get_cluster, star_luminosity_plot
+from lum_funcs import look_up_table, get_cluster 
 from scipy.optimize import curve_fit
 
 mpl.rc('font', family='serif')
 plt.style.use('dark_background')
-
+# plt.rcParams.update({
+#     "text.usetex": True,
+#     "font.family": "serif",
+#     "font.serif": ["Palatino"],
+# })
 
 def king_model(r, k, r_c, r_t):
     """
@@ -15,6 +19,20 @@ def king_model(r, k, r_c, r_t):
     """
     f = k *( (1 / np.sqrt(1 + (r / r_c)**2)) - (1 / np.sqrt(1 + (r_t /r_c )**2)) )**2
     return f
+
+def modified_king_model(r, sigma_naught, r_c, alpha, bg):
+
+    sigma = bg + (sigma_naught / (1 + (r/r_c)**alpha) )
+    return sigma
+
+def trunc_radius(sigma_naught, r_c, alpha, sigma_bg):
+    """
+    set to 1.5bg =  bg + (peak)/( 1 + (r/r_c)^alpha)
+    0.5bg = (peak)/( 1 + (r/r_c)^alpha)
+    """
+    trunc_r = (r_c**alpha * ((sigma_naught/(.5*sigma_bg)) - 1) )**(1/alpha)
+    return trunc_r
+    
 
 def unpack_pop_ii_data(
         path:str, 
@@ -84,17 +102,27 @@ def projected_surf_densities(
     mass_per_bin, bin_edges = np.histogram(distances, bins=r, weights=masses)
     lum_per_bin, _ = np.histogram(distances, bins=r, weights=lums)
     count_per_bin, _ = np.histogram(distances, bins=r)
+    #print(mass_per_bin.size, lum_per_bin.size, count_per_bin.size)
+    # mask zero count bins
+    mask = count_per_bin > 0
+    count_per_bin = count_per_bin[mask]
+    mass_per_bin = mass_per_bin[mask]
+    lum_per_bin = lum_per_bin[mask]
     
     # getting bin properties
-    right_edges = bin_edges[1:]
+    right_edges = bin_edges[1:] 
     left_edges = bin_edges[:-1]
-    bin_ctrs = 0.5*( left_edges + right_edges)
-    ring_areas = np.pi * (right_edges**2 - left_edges**2)
+    bin_ctrs = 0.5*( left_edges + right_edges)[mask]
+    ring_areas = np.pi * (right_edges**2 - left_edges**2)[mask]
+    
+
     
     # calculate densities
     surf_mass_density = mass_per_bin / ring_areas
     surf_lum_density = lum_per_bin / ring_areas
     surf_number_density =  count_per_bin / ring_areas
+    
+
     
     # characterize what the tupical mass is for a bin 
     avg_star_masses = mass_per_bin / count_per_bin
@@ -151,84 +179,123 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, bins=25):
         r,
         rho,
         yerr=err,
-        fmt='.',
-        capsize=4,
-        label= r'$M = {:.1e} \: M_{{\odot}}$'.format(tot_m)
+        fmt='o',
+        capsize=5,
+        elinewidth=2,
+        label= r'$M_{{total}}= {:.2e} \: M_{{\odot}}$'.format(tot_m) 
         )
     
     # do the fit
-    # fit_params, cov_matrix = curve_fit(
-    #     f=king_model,
-    #     xdata=r,
-    #     ydata=rho,
-    #     sigma=err,
-    #     absolute_sigma=True,
-    #     p0 = [1e4, 0.2, 10],
-    #     bounds=([0,0,0], [np.inf,np.inf,np.inf]),
-
-    #     )
-    # fit_sigma = np.sqrt(np.diag(cov_matrix))
+    try:
+        fit_params, cov_matrix = curve_fit(
+            f=modified_king_model,
+            xdata=r,
+            ydata=rho,
+            sigma=err,
+            absolute_sigma=True,
+            p0 = [1e4, 0.2, 2, 10],
+            bounds=([0,0,0,0], [np.inf,np.inf,100,np.inf]),
+            )
+        #r, sigma_naught, r_c, alpha, bg
+        fit_sigma = np.sqrt(np.diag(cov_matrix))
+        # print(fit_params)
+        # print(fit_sigma)
+        
+        fit_sigma_naught = fit_params[0]
+        fit_r_c = fit_params[1]
+        fit_alpha = fit_params[2]
+        fit_sigma_bg = fit_params[3]
+        
+        truncation_radius = trunc_radius(
+            r_c=fit_r_c, 
+            alpha=fit_alpha, 
+            sigma_naught=fit_sigma_naught,
+            sigma_bg=fit_sigma_bg
+            )
+        # set to 1.5bg =  bg + (peak)/( 1 + (r/r_c)^alpha)
+        
+        #plot the fit
     
-    # plot the fit
-    # legend = [item for sublist in zip(fit_params[:-1], fit_sigma[:-1]) for item in sublist]
-    # legend.append(tot_m)
-    # plt.plot(
-    #     r,
-    #     king_model(r,*fit_params),
-    #     label=(r'$k = {:.0f} \pm {:.0f}$'
-    #            '\n'
-    #            r'$r_c = {:.2f} \pm {:.2f}$ pc'
-    #            '\n'
-    #            r'$M = {:.1e} \: M_{{\odot}}$'.format(*legend)
-    #            )
-    #     )
+        plt.plot(
+            r,
+            modified_king_model(r,*fit_params),
+            linewidth=2,
+            label=(r'$R_{{trunc}} = {:.2f} \: pc$'
+                   '\n'
+                   r'$R_{{core}} = {:.2f} \: pc$').format(truncation_radius,fit_r_c)
+            )
+        
+    except:
+        plt.title("can't fit")
     
     plt.xscale('log')
     plt.yscale('log')
-    plt.ylabel(r'Surface Mass Density ($M_{\odot} \; pc^{-2}$)', fontsize=14)
-    plt.xlabel('Radius (pc)', fontsize=14)
+    plt.ylabel(r'Surface Mass Density ($M_{\odot} \; pc^{-2}$)', fontsize=16)
+    plt.xlabel(r'Radius ($pc$)', fontsize=16)
     #plt.xlim(.9*ring_width,gc_rad)
     plt.grid(visible=True, which='both', axis='y', ls='--')
-    plt.legend(fontsize=12)
-    
+    plt.legend(fontsize=16)
+
     return r, rho, err, tot_m
     
 #%%
+from lum_plotting_lib import star_luminosity_plot
 
-#test_ctr = np.array([0.8662, -78.5067])
-#test_ctr = np.array([peak_x, peak_y])
-#test_ctr = np.array([3.781448, 14.74236, 25.41285])
+# test_ctr = np.array([0.8662, -78.5067])
+# #test_ctr = np.array([peak_x, peak_y])
+# test_ctr = np.array([3.781448, 14.74236, 25.41285])
 test_rad = 10
-test_proj_width = 200
+test_proj_width = 400
 bins = 4000
 star_positions, scaled_stellar_lums, masses, t_myr= unpack_pop_ii_data(
     r"./pop_2_data/pos_00446_467_92_myr.txt"
     )
+
 # generate luminosity plot and get peaks based on counts
+# peak_x, peak_y = star_luminosity_plot(
+#     proj_width=test_proj_width ,
+#     star_positions=star_positions,
+#     scaled_stellar_lums=scaled_stellar_lums,
+#     time=t_myr,
+#     snapshot_num=590,
+#     pi_multiple=0,
+#     bins=bins,
+#     plt_type='luminosity',
+#     annotate_ctrs=True
+#     )
+
+
+
 peak_x, peak_y = star_luminosity_plot(
-    proj_width=test_proj_width ,
+    proj_width=test_proj_width,
     star_positions=star_positions,
     scaled_stellar_lums=scaled_stellar_lums,
     time=t_myr,
-    snapshot_num=590,
+    snapshot_num=446,
     pi_multiple=0,
-    bins=bins,
-    plt_type='luminosity',
-    annotate_ctrs=True
-    )
+    plt_bins=bins,
+    get_ctr=(True, 'potential', 0.04, True),
+    masses=masses,
+    ) 
 
+gc_masses = []
 test_ctrs = np.array([peak_x, peak_y]).T
 # iterate over x,y maximas and plot
 for ctr in test_ctrs:
     print(ctr)
     r, rho, err, tot_m = king_profiler(
-                star_pos=star_positions, 
+                star_pos=star_positions,
                 lums=scaled_stellar_lums, 
                 masses=masses, 
                 gc_ctr=ctr, 
                 gc_rad=test_rad, 
-                bins=50
+                bins=25
                 )
+    gc_masses.append(tot_m)
+#%%
+plt.hist(np.gc_masses, bins=10) 
+#plt.xscale('log')
+      
 
 #%% sigma = bg + (peak)/( 1 + (r/r_c)^alpha) scale background by half the peak, etc.
 # =============================================================================
