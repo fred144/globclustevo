@@ -1,3 +1,7 @@
+import sys
+sys.path.insert(
+    1, "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages"
+    )
 import numpy as np
 import os
 import matplotlib.pyplot as plt
@@ -13,11 +17,11 @@ mpl.rc('font', family='serif')
 plt.style.use('dark_background')
 
 directory = r"./pop_2_data/"
-seq_folder_name = "test/test1"
+seq_folder_name = "mid_pause"
 
 # enable descrete selection of time range based on snapshot number
-strt_snapshot = "00400"
-end_snapshot = "00410"
+strt_snapshot = "00113"
+end_snapshot = "00591"
 files = sorted(os.listdir(directory))  #[-2:-1]  [300:400:2]
 strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
 end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
@@ -36,7 +40,7 @@ mid_pause_rotation_interval = np.linspace(0,2,100)
 pause_at = 405
 
 # gc centering 
-annotate_gc = True
+annotate_gc = False
 
 # =============================================================================
 for i,file_name in enumerate(filtered_files, start=0):
