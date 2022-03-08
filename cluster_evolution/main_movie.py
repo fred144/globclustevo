@@ -17,8 +17,8 @@ mylog.setLevel(40)
 warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 
 #---------------------------------local test-----------------------------------
-datadir = os.path.realpath('/home/fabg/cosm_test_data/refine')
-parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution'
+datadir = os.path.relpath('/home/fabg/cosm_test_data/refine')
+#parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution'
 parent_folder = '.'
 sequence_folder = 'test_frames'
 
@@ -37,8 +37,8 @@ sequence_folder = 'test_frames'
 sequence_title = 'z_gas'
 width = (400,'pc') 
 slice_axis = 'z'
-start_step = 373
-end_step = 373
+start_step = 373 
+end_step = 373 #690
 
 #ctr_shift_thresh = 0.00060 #code length
 #ctr_shift_thresh =  0.000001 #code length
@@ -123,7 +123,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
 
     pos_sfcs_recentered = pos_sfcs - plt_ctr
     pos_pscs_recentered = pos_pscs - plt_ctr
-
+#%%
     p = yt.ProjectionPlot(
                           ds,
                           slice_axis,

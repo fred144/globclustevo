@@ -73,7 +73,9 @@ def star_luminosity_plot(
         )
     # need to transpose for some reason
     lums = lums.T
-    
+# =============================================================================
+#              get GC centers based on potential or density counts
+# =============================================================================
     if get_ctr is not None:
         print("> calculating centers")
         if  get_ctr[1] == 'counts':
