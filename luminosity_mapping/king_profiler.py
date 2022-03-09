@@ -296,21 +296,4 @@ for ctr in test_ctrs:
 #%%
 plt.hist(np.gc_masses, bins=10) 
 #plt.xscale('log')
-      
 
-#%% sigma = bg + (peak)/( 1 + (r/r_c)^alpha) scale background by half the peak, etc.
-# =============================================================================
-# modify the king profile rt-> inf
-# add free power and constant background
-# total mass from 100 to 600 myr for pop2
-# increase radius
-# multiplot, rotationnot zoomed in.
-# 
-# set to 1.5bg =  bg + (peak)/( 1 + (r/r_c)^alpha)
-# # play with threshold
-# #count mass up to the radius
-# #mass is 2pi r_core^2 sigma_peak ln(rt/rc) from core radius out. 
-# # Mcore = pi r_core^2 sigma_peak
-# # integrate sigma
-#mass as function of trunc radius 
-# =============================================================================
