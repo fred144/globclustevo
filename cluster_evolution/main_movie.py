@@ -32,6 +32,7 @@ sequence_folder = 'newcmap_gas_projected_density_x'
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
+    print("# Creating new sequence directory",newpath) 
     os.makedirs(newpath)
 #---------------------------------plot params----------------------------------
 sequence_title = 'x_gas'

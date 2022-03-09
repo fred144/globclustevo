@@ -1,23 +1,28 @@
 import sys
 sys.path.insert(
     1, "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages"
-    )
+    ) 
 import numpy as np
-import os
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+import os 
 from scipy.spatial.transform import Rotation as R
 from lum_funcs import look_up_table
 from lum_plotting_lib import star_luminosity_plot
 
-# =============================================================================
+# ==========================Render Parameters==================================
 proj_width = 400 # pc
 
 mpl.rc('font', family='serif')
 plt.style.use('dark_background')
 
-directory = r"./pop_2_data/"
-seq_folder_name = "test/test1"
+data_directory = r"./pop_2_data/"
+# seq_parent = r"./test/"
+seq_parent = r"./test_sequence/"
+seq_folder_name = "dynamic_pause_rotate"
+if not os.path.exists(seq_parent+seq_folder_name):
+    print("# Creating new sequence directory",seq_parent+seq_folder_name)
+    os.makedirs(seq_parent+seq_folder_name)
 # test is 
 # num_ctr=50, 
 # ctr_dist_thresh=100, 
@@ -28,28 +33,29 @@ seq_folder_name = "test/test1"
 # ctr_dist_thresh=10, 
 # ctr_rel_thresh=.1,
 
-# enable descrete selection of time range based on snapshot number
-strt_snapshot = "00680"
-end_snapshot = "00690"
-files = sorted(os.listdir(directory))  #[-2:-1]  [300:400:2]
+# enable discrete selection of time range based on snapshot number
+strt_snapshot = "00113"
+end_snapshot = "00694"
+files = sorted(os.listdir(data_directory))  #[-2:-1]  [300:400:2]
 strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
 end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
 filtered_files = files [strt_idx:end_idx]
 
-#rotation_interval = np.arange(0,2,.002) # times pi
+# rotate flags
 rotating_timelapse = False
 rotate_at_the_end = False
-pause_and_rotate = False
+pause_and_rotate = True
 
+# rate of rotation times pi
 timelapse_rotation_interval = np.linspace(0,2,np.size(files))
 frozen_rotation_interval = np.linspace(2,4,np.size(files))
 mid_pause_rotation_interval = np.linspace(0,2,100)
 
 # pause at a specific frame and rotate
-pause_at = 405
+pause_at = [405,500]
 
 # gc centering 
-annotate_gc = True
+annotate_gc = False 
 
 # =============================================================================
 for i,file_name in enumerate(filtered_files, start=0):
@@ -60,7 +66,7 @@ for i,file_name in enumerate(filtered_files, start=0):
     snapshot_num = int(file_name[4:9])
     #print(file_name)
 
-    pop_2_data = np.loadtxt(directory + file_name)
+    pop_2_data = np.loadtxt(data_directory+file_name)
     birth_epochs = pop_2_data[:,0] *1e6
     ages = pop_2_data[:,1] *1e6
     # if the age <10^6 yr, set the age to 10^6 year.
@@ -90,7 +96,7 @@ for i,file_name in enumerate(filtered_files, start=0):
         rotated_star_positions = np.dot(star_positions, rotation_matrix.T)
         star_positions = rotated_star_positions
         # rotate test particles 
-    elif pause_and_rotate is True and snapshot_num==pause_at:
+    elif pause_and_rotate is True and snapshot_num in pause_at:
         # pause the movie at a snapshot and rotate it 
         for pause_rot_angle in mid_pause_rotation_interval:
             # reset the star positions every loop
@@ -104,7 +110,7 @@ for i,file_name in enumerate(filtered_files, start=0):
             # rotate stars
             rotated_star_positions = np.dot(star_positions, rotation_matrix.T)
             star_positions = rotated_star_positions
-            
+# =============================================================================            
             _, _ = star_luminosity_plot(
                 proj_width=proj_width,
                 star_positions=star_positions,
@@ -113,17 +119,20 @@ for i,file_name in enumerate(filtered_files, start=0):
                 snapshot_num=snapshot_num,
                 pi_multiple=pause_rot_angle,
                 plt_bins=4000,
+                lum_scale=('dynamic', 3e+32, 3e+36),
                 get_ctr=(True, 'potential', 0.04, annotate_gc),
                 masses=masses,
                 ) 
-            save_name = './sequences/{}/rot_{}_t_{}_pi_{}.png'.format(
+# =============================================================================
+            save_name = '{}{}/rot_{}_t_{}_pi_{}.png'.format(
+                seq_parent,
                 seq_folder_name,
                 str(snapshot_num).zfill(4),
                 str(time).ljust(6, '0').replace('.','_'),
                 str(np.round(pause_rot_angle,3)).ljust(5, '0').replace('.','_'))
             plt.savefig(
                 save_name,
-                dpi=200,
+                dpi=300,
                 bbox_inches='tight',
                 pad_inches=0.05
                 )
@@ -133,7 +142,8 @@ for i,file_name in enumerate(filtered_files, start=0):
     else:
         pi_multiple = 0
 
-
+# =============================================================================
+ 
     _, _ = star_luminosity_plot(
         proj_width=proj_width,
         star_positions=star_positions,
@@ -143,17 +153,19 @@ for i,file_name in enumerate(filtered_files, start=0):
         pi_multiple=pi_multiple,
         plt_bins=4000,
         get_ctr=(True, 'potential', 0.04, annotate_gc),
+        lum_scale=('dynamic', 3e+32, 3e+36),
         masses=masses,
     ) 
-
-    save_name = './sequences/{}/rot_{}_t_{}_pi_{}.png'.format(
+# =============================================================================
+    save_name = '{}{}/rot_{}_t_{}_pi_{}.png'.format(
+        seq_parent,
         seq_folder_name,
         str(snapshot_num).zfill(4),
         str(time).ljust(6, '0').replace('.','_'),
         str(np.round(pi_multiple,3)).ljust(5, '0').replace('.','_'))
     plt.savefig(
         save_name,
-        dpi=200,
+        dpi=300,
         bbox_inches='tight',
         pad_inches=0.05
         )
@@ -185,7 +197,7 @@ for i,file_name in enumerate(filtered_files, start=0):
             r = R.from_rotvec(rotation_angle * np.array([0,1,0]))
             rotation_matrix = r.as_matrix()
             rotated_star_positions = np.dot(star_positions, rotation_matrix .T)
-
+# =============================================================================
             _, _ = star_luminosity_plot(
                 proj_width=proj_width,
                 star_positions=star_positions,
@@ -194,20 +206,22 @@ for i,file_name in enumerate(filtered_files, start=0):
                 snapshot_num=snapshot_num,
                 pi_multiple=pause_rot_angle,
                 plt_bins=4000,
+                lum_scale=('dynamic', 3e+32, 3e+36),
                 get_ctr=(True, 'potential', 0.01, annotate_gc),
                 masses=masses,
             ) 
-
-            save_name = './sequences/{}/rot_{}_t_{}_pi_{}.png'.format(
+# =============================================================================
+            save_name = '{}{}/rot_{}_t_{}_pi_{}.png'.format(
+                seq_parent,
                 seq_folder_name,
                 str(snapshot_num).zfill(4),
                 str(time).ljust(6, '0').replace('.','_'),
                 str(np.round(end_rot_angle,3)).ljust(5, '0').replace('.','_'))
             plt.savefig(
                 save_name,
-                dpi=200,
+                dpi=300,
                 bbox_inches='tight',
-                pad_inches=0.05
+                pad_inches=0.5
                 )
             # plt.show()
             plt.close()

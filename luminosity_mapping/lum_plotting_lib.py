@@ -18,7 +18,7 @@ def star_luminosity_plot(
         lum_scale=('static', 3e+32, 3e+36), 
         get_ctr=(True, 'potential', 0.01, False),
         num_ctr=50, 
-        ctr_dist_thresh=10, 
+        ctr_dist_thresh=100, 
         ctr_rel_thresh=.1,
         masses=None,
         sfc_positions=None,
@@ -46,6 +46,13 @@ def star_luminosity_plot(
         pi multiple of the rotation matrix, can be 0
     plt_bins
         number of bins along the axis of the luminosity map
+    lum_scale: tuple (log_scale_type, min, max
+        log_scale_type - static or dynamic
+        
+        min - minimum value color scale
+        
+        max- maximum value color scale
+        
     get_ctr : tuple  (get_ctr, method, resolution, overplot)
         get_ctr - gets centers of GCs 
         
@@ -156,8 +163,8 @@ def star_luminosity_plot(
             print("Found Centers for", x_peak.size)
             
         else:
-            print("Centering method not supported")
-            pass
+            print("!centering method not supported!")
+            exit
              
     else:
         pass
@@ -166,20 +173,38 @@ def star_luminosity_plot(
     fig = plt.figure(figsize=(14,12),dpi=200)
     ax = fig.add_subplot(111, facecolor=cm.inferno(0))
     
-    rectbin = plt.imshow(
-               lums,
-               cmap='inferno',
-               interpolation='gaussian',
-               origin='lower',
-               extent=[-proj_width/2,
-                       proj_width/2,
-                       -proj_width/2,
-                       proj_width/2],
-               norm=LogNorm(vmin=lum_scale[0], vmax=lum_scale[1])
-               )
+    # color maps
+    if lum_scale[0] == 'static':
+        rectbin = plt.imshow(
+                   lums,
+                   cmap='inferno',
+                   interpolation='gaussian',
+                   origin='lower',
+                   extent=[-proj_width/2,
+                           proj_width/2,
+                           -proj_width/2,
+                           proj_width/2],
+                   norm=LogNorm(vmin=lum_scale[1], vmax=lum_scale[2])
+                   )
+    elif lum_scale[0] == 'dynamic':
+        rectbin = plt.imshow(
+                   lums,
+                   cmap='inferno',
+                   interpolation='gaussian',
+                   origin='lower',
+                   extent=[-proj_width/2,
+                           proj_width/2,
+                           -proj_width/2,
+                           proj_width/2],
+                   norm=LogNorm()
+                   )
+    else:
+        print("!not a valid color scale!")
+        exit
+    
+
     #print('lum plot')
-    plt_label = (r"$\lambda = 1500\;\AA$ Projected Monochromatic Luminosity" 
-    r" $\left(erg\;s^{-1}\AA^{-1} \right)$")
+
     
 # =============================================================================
 #                            Optionally plot test particles
@@ -228,6 +253,42 @@ def star_luminosity_plot(
 #                            plot aesthetics
 # =============================================================================
     
+    plt_label = (r"$\lambda = 1500\;\AA$ Projected Monochromatic Luminosity" 
+    r" $\left(erg\;s^{-1}\AA^{-1} \right)$")
+    
+    # add color bar to the bottom
+    # fig.subplots_adjust(wspace=0, hspace=0, bottom=.1)
+    # cbar_ax = fig.add_axes([.178, .090, 0.67, 0.010])
+    # cbar = fig.colorbar(
+    #              rectbin,
+    #              cax=cbar_ax,
+    #              orientation='horizontal',
+    #              pad=0
+    #             )
+    # cbar.set_label(
+    #     label=plt_label,
+    #     size=12
+    #     ) 
+    
+    # add color bar inside 
+    fig.subplots_adjust(wspace=0, hspace=0, bottom=.1)
+    # [left, bottom, width, height]
+    cbar_ax = fig.add_axes([0.319, 0.835, 0.39, 0.008])
+    cbar = fig.colorbar(
+                  rectbin,
+                  cax=cbar_ax,
+                  orientation='horizontal',
+                  pad=0
+                )
+    cbar_ax.xaxis.set_label_position('top')
+    cbar.set_label(
+        label=plt_label,
+        labelpad=8,
+        size=12
+        )
+
+
+    
     # annotate with time
     ax.text(
         -proj_width*0.375,
@@ -237,21 +298,10 @@ def star_luminosity_plot(
         ha='center',
         va='center',
         color='white')
-    # add color bar to the bottom
-    fig.subplots_adjust(wspace=0, hspace=0, bottom=.1)
-    cbar_ax = fig.add_axes([.178, .090, 0.67, 0.010])
-    cbar = fig.colorbar(rectbin,
-                 cax=cbar_ax,
-                 orientation='horizontal',
-                 pad=0
-                )
-    cbar.set_label(
-        label=plt_label,
-        size=12
-        )
+    
     # add scale bar
     rect = patches.Rectangle(
-            xy=(-proj_width*0.125, proj_width*0.45),
+            xy=(-proj_width*0.125, -proj_width*0.45),
             width=proj_width*0.25,
             height=proj_width*0.005,
             linewidth=0,
@@ -260,8 +310,8 @@ def star_luminosity_plot(
     ax.add_patch(rect)
     ax.text(
         0,
-        proj_width*0.475,
-        '{}pc'.format(int(proj_width/4)),
+        -proj_width*0.475,
+        '{} pc'.format(int(proj_width/4)),
         size=12,
         ha='center',
         va='center',

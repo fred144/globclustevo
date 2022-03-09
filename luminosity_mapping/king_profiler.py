@@ -5,8 +5,8 @@ import pandas as pd
 from lum_funcs import look_up_table, get_cluster 
 from scipy.optimize import curve_fit
 
-mpl.rc('font', family='serif')
-plt.style.use('dark_background')
+# mpl.rc('font', family='serif')
+# plt.style.use('dark_background')
 # plt.rcParams.update({
 #     "text.usetex": True,
 #     "font.family": "serif",
@@ -34,6 +34,9 @@ def trunc_radius(sigma_0, r_c, alpha, sigma_bg):
     r_trunc = (r_c**alpha * ((sigma_0/ ((1.5-1)*sigma_bg ) - 1 ) ) )**(1/alpha)
     return r_trunc
     
+def get_masses():
+    
+
 
 def unpack_pop_ii_data(
         path:str, 
@@ -122,9 +125,7 @@ def projected_surf_densities(
     surf_mass_density = mass_per_bin / ring_areas
     surf_lum_density = lum_per_bin / ring_areas
     surf_number_density =  count_per_bin / ring_areas
-    
-
-    
+     
     # characterize what the tupical mass is for a bin 
     avg_star_masses = mass_per_bin / count_per_bin
     err_surf_mass_density = np.sqrt(count_per_bin)*(avg_star_masses/ring_areas)
