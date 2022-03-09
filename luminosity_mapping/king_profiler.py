@@ -31,7 +31,7 @@ def trunc_radius(sigma_0, r_c, alpha, sigma_bg):
     0.5bg = (peak)/( 1 + (r/r_c)^alpha)
     """
     #trunc_r = (r_c**alpha * ((sigma_0/(.5*sigma_bg)) - 1) )**(1/alpha)
-    r_trunc = (r_c**alpha * ((sigma_0/ ((1.5-1)*sigma_bg ) - 1 ) ) )**(1/alpha)
+    r_trunc = (r_c**alpha * ((sigma_0/ ((2-1)*sigma_bg ) - 1 ) ) )**(1/alpha)
     return r_trunc
     
 def get_masses(x_coord, y_coord, masses, r_characteristic):
@@ -216,7 +216,7 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, bins=25):
         truncation_radius = trunc_radius(
             r_c=fit_r_c, 
             alpha=fit_alpha, 
-            sigma_naught=fit_sigma_naught,
+            sigma_0=fit_sigma_naught,
             sigma_bg=fit_sigma_bg
             )
         # set to 1.5bg =  bg + (peak)/( 1 + (r/r_c)^alpha)
@@ -255,7 +255,10 @@ test_rad = 10
 test_proj_width = 400
 bins = 4000
 star_positions, scaled_stellar_lums, masses, t_myr= unpack_pop_ii_data(
-    r"./pop_2_data/pos_00446_467_92_myr.txt"
+    #r"./pop_2_data/pos_00660_516_05_myr.txt"
+    #r"./pop_2_data/pos_00694_523_92_myr.txt"
+    r"./pop_2_data/pos_00481_475_21_myr.txt"
+    
     )
 
 # generate luminosity plot and get peaks based on counts
@@ -272,15 +275,15 @@ star_positions, scaled_stellar_lums, masses, t_myr= unpack_pop_ii_data(
 #     )
 
 
-
 peak_x, peak_y = star_luminosity_plot(
     proj_width=test_proj_width,
     star_positions=star_positions,
     scaled_stellar_lums=scaled_stellar_lums,
     time=t_myr,
-    snapshot_num=446,
+    snapshot_num=660,
     pi_multiple=0,
     plt_bins=bins,
+    lum_scale=('dynamic',0,0),
     get_ctr=(True, 'potential', 0.04, True),
     masses=masses,
     ) 
