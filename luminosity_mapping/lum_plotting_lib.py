@@ -245,10 +245,12 @@ def star_luminosity_plot(
 # =============================================================================
 #                              plot centers of max values if true
 # =============================================================================
-    if get_ctr[3] is True:
-        plt.scatter(x_peak, y_peak, color='green',marker='.',s=.5)
-        plt.xlim(-proj_width/2, proj_width/2)
-        plt.ylim(-proj_width/2, proj_width/2)
+    if get_ctr is not None: 
+        # can't put in the same line since it will check the tuple regardless
+        if get_ctr[3] is True:
+            plt.scatter(x_peak, y_peak, color='green',marker='.',s=.5)
+            plt.xlim(-proj_width/2, proj_width/2)
+            plt.ylim(-proj_width/2, proj_width/2)
 # =============================================================================
 #                            plot aesthetics
 # =============================================================================
