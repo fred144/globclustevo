@@ -38,8 +38,8 @@ if not os.path.exists(newpath):
 sequence_title = 'x_gas'
 width = (400,'pc') 
 slice_axis = 'x'
-start_step = 113 
-end_step = 694
+start_step = 694 
+end_step = 710
 
 #ctr_shift_thresh = 0.00060 #code length
 #ctr_shift_thresh =  0.000001 #code length
@@ -283,67 +283,65 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)) :
               color='w',
               length_includes_head=True)
 
-# =============================================================================
-# 
-#     #                   luminosity mappping data extraction
-# 
-#     # get star positons
-#     abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
-#     current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
-#     t_myr = np.array([current_time])
-#     t_myr.resize(np.size(current_ages))
-#     star_info = np.array([
-#           abs_birth_epochs,
-#           current_ages,
-#           ds.arr(x_pos, 'code_length').to('pc'),
-#           ds.arr(y_pos, 'code_length').to('pc'),
-#           ds.arr(z_pos, 'code_length').to('pc'),
-#           ds.arr(ad['star', 'particle_mass'], 'code_mass').to('msun'),
-#           t_myr
-#           ])
-# 
-#     # star positions save
-#     star_info = np.array(star_info).T
-#     save_time = str(format(current_time, '.2f')).replace('.', '_')
-#     save_name = "../luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
-#           output_num,save_time
-#           )
-#     np.savetxt(save_name, X=star_info)
-#     print('# saved:', save_name)
-# 
-#     # psc sfc save
-#     psc_kazu_radii = np.abs(
-#         ds.arr(ad['PSC','particle_metallicity'], 'code_length').to('pc')
-#         )
-#     sfc_kazu_radii = np.abs(
-#         ds.arr(ad['SFC','particle_metallicity'], 'code_length').to('pc')
-#         )
-#     pos_pscs = ds.arr(pos_pscs_recentered , 'code_length').to('pc')
-#     pos_sfcs = ds.arr(pos_sfcs_recentered , 'code_length').to('pc')
-# 
-#     # particle tags, see if unique
-#     psc_tag = np.array(ad['PSC','particle_index'])
-#     sfc_tag = np.array(ad['SFC','particle_index'])
-# 
-#     # save paths
-#     psc_path = "../luminosity_mapping/psc_data/psc_{:05d}_{}_myr.txt".format(
-#           output_num,save_time
-#           )
-#     sfc_path = "../luminosity_mapping/sfc_data/sfc_{:05d}_{}_myr.txt".format(
-#           output_num,save_time
-#           )
-#     # x,y,z,radii at birth (pc), particle tag
-#     psc_save_data = np.concatenate(
-#         (pos_pscs, psc_kazu_radii[:,None], psc_tag[:,None]), axis=1
-#         )
-#     sfc_save_data = np.concatenate(
-#         (pos_sfcs, sfc_kazu_radii[:,None], sfc_tag[:,None]), axis=1
-#         )
-#     print('# saved:', psc_path)
-#     print('# saved:', sfc_path)
-#     np.savetxt(psc_path, X=psc_save_data)
-#     np.savetxt(sfc_path, X=sfc_save_data)
-# =============================================================================
+
+    #                   luminosity mappping data extraction
+
+    # get star positons
+    abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
+    current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
+    t_myr = np.array([current_time])
+    t_myr.resize(np.size(current_ages))
+    star_info = np.array([
+          abs_birth_epochs,
+          current_ages,
+          ds.arr(x_pos, 'code_length').to('pc'),
+          ds.arr(y_pos, 'code_length').to('pc'),
+          ds.arr(z_pos, 'code_length').to('pc'),
+          ds.arr(ad['star', 'particle_mass'], 'code_mass').to('msun'),
+          t_myr
+          ])
+
+    # star positions save
+    star_info = np.array(star_info).T
+    save_time = str(format(current_time, '.2f')).replace('.', '_')
+    save_name = "../luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
+          output_num,save_time
+          )
+    np.savetxt(save_name, X=star_info)
+    print('# saved:', save_name)
+
+    # psc sfc save
+    psc_kazu_radii = np.abs(
+        ds.arr(ad['PSC','particle_metallicity'], 'code_length').to('pc')
+        )
+    sfc_kazu_radii = np.abs(
+        ds.arr(ad['SFC','particle_metallicity'], 'code_length').to('pc')
+        )
+    pos_pscs = ds.arr(pos_pscs_recentered , 'code_length').to('pc')
+    pos_sfcs = ds.arr(pos_sfcs_recentered , 'code_length').to('pc')
+
+    # particle tags, see if unique
+    psc_tag = np.array(ad['PSC','particle_index'])
+    sfc_tag = np.array(ad['SFC','particle_index'])
+
+    # save paths
+    psc_path = "../luminosity_mapping/psc_data/psc_{:05d}_{}_myr.txt".format(
+          output_num,save_time
+          )
+    sfc_path = "../luminosity_mapping/sfc_data/sfc_{:05d}_{}_myr.txt".format(
+          output_num,save_time
+          )
+    # x,y,z,radii at birth (pc), particle tag
+    psc_save_data = np.concatenate(
+        (pos_pscs, psc_kazu_radii[:,None], psc_tag[:,None]), axis=1
+        )
+    sfc_save_data = np.concatenate(
+        (pos_sfcs, sfc_kazu_radii[:,None], sfc_tag[:,None]), axis=1
+        )
+    print('# saved:', psc_path)
+    print('# saved:', sfc_path)
+    np.savetxt(psc_path, X=psc_save_data)
+    np.savetxt(sfc_path, X=sfc_save_data)
 
     # if pos_SFCs.size > 0:
     #     p.annotate_particles(width = width,

@@ -323,6 +323,8 @@ def star_luminosity_plot(
     ax.add_artist(ax.patch)
     ax.patch.set_zorder(-1)
 
-    
-    return x_peak, y_peak
+    if get_ctr is not None:
+        return x_peak, y_peak
+    else:
+        pass
     
