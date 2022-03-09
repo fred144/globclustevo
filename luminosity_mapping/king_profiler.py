@@ -25,13 +25,14 @@ def modified_king_model(r, sigma_naught, r_c, alpha, bg):
     sigma = bg + (sigma_naught / (1 + (r/r_c)**alpha) )
     return sigma
 
-def trunc_radius(sigma_naught, r_c, alpha, sigma_bg):
+def trunc_radius(sigma_0, r_c, alpha, sigma_bg):
     """
     set to 1.5bg =  bg + (peak)/( 1 + (r/r_c)^alpha)
     0.5bg = (peak)/( 1 + (r/r_c)^alpha)
     """
-    trunc_r = (r_c**alpha * ((sigma_naught/(.5*sigma_bg)) - 1) )**(1/alpha)
-    return trunc_r
+    #trunc_r = (r_c**alpha * ((sigma_0/(.5*sigma_bg)) - 1) )**(1/alpha)
+    r_trunc = (r_c**alpha * ((sigma_0/ ((1.5-1)*sigma_bg ) - 1 ) ) )**(1/alpha)
+    return r_trunc
     
 
 def unpack_pop_ii_data(

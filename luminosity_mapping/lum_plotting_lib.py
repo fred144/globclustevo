@@ -16,6 +16,10 @@ def star_luminosity_plot(
         pi_multiple,
         plt_bins=2000,
         get_ctr=(True, 'potential', 0.01, False),
+        num_ctr=50, 
+        ctr_dist_thresh=10, 
+        ctr_rel_thresh=.1,
+        lum_scale=(3e+32,3e+36), 
         masses=None,
         sfc_positions=None,
         psc_positions=None,
@@ -50,7 +54,7 @@ def star_luminosity_plot(
         resolution - produces bins for centering using width/resolution
         
         overplot - True or false, overplots found centers
-
+        
     Returns
     -------
     x_peak
@@ -100,7 +104,12 @@ def star_luminosity_plot(
             x_ctr = 0.5*(xedges[1:] + xedges[:-1])
             y_ctr = 0.5*(yedges[1:] + yedges[:-1])
             
-            peaks = peak_local_max(counts, threshold_rel=.5, min_distance=20) 
+            peaks = peak_local_max(
+                counts, 
+                threshold_rel=ctr_rel_thresh, 
+                min_distance=ctr_dist_thresh
+                ) 
+            
             col_idx = peaks[:,1]
             row_idx = peaks[:,0]
             # translate indeces to coordinates
@@ -131,7 +140,13 @@ def star_luminosity_plot(
             x_ctr = 0.5*(xedges[1:] + xedges[:-1])
             y_ctr = 0.5*(yedges[1:] + yedges[:-1])
             
-            peaks = peak_local_max(grav, num_peaks=50, min_distance=100, threshold_rel=.08) 
+            peaks = peak_local_max(
+                grav, 
+                num_peaks=num_ctr,
+                min_distance=ctr_dist_thresh, 
+                threshold_rel=ctr_rel_thresh
+                ) 
+            
             col_idx =  peaks[:,1]
             row_idx = peaks[:,0] 
             
@@ -160,7 +175,7 @@ def star_luminosity_plot(
                        proj_width/2,
                        -proj_width/2,
                        proj_width/2],
-               norm=LogNorm(vmin=3e+32, vmax=3e+36)
+               norm=LogNorm(vmin=lum_scale[0], vmax=lum_scale[1])
                )
     #print('lum plot')
     plt_label = (r"$\lambda = 1500\;\AA$ Projected Monochromatic Luminosity" 

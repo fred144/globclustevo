@@ -17,11 +17,20 @@ mpl.rc('font', family='serif')
 plt.style.use('dark_background')
 
 directory = r"./pop_2_data/"
-seq_folder_name = "mid_pause"
+seq_folder_name = "test/test1"
+# test is 
+# num_ctr=50, 
+# ctr_dist_thresh=100, 
+# ctr_rel_thresh=.08,
+
+# test 1 is
+# num_ctr=50, 
+# ctr_dist_thresh=10, 
+# ctr_rel_thresh=.1,
 
 # enable descrete selection of time range based on snapshot number
-strt_snapshot = "00113"
-end_snapshot = "00591"
+strt_snapshot = "00680"
+end_snapshot = "00690"
 files = sorted(os.listdir(directory))  #[-2:-1]  [300:400:2]
 strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
 end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
@@ -30,7 +39,7 @@ filtered_files = files [strt_idx:end_idx]
 #rotation_interval = np.arange(0,2,.002) # times pi
 rotating_timelapse = False
 rotate_at_the_end = False
-pause_and_rotate = True
+pause_and_rotate = False
 
 timelapse_rotation_interval = np.linspace(0,2,np.size(files))
 frozen_rotation_interval = np.linspace(2,4,np.size(files))
@@ -40,7 +49,7 @@ mid_pause_rotation_interval = np.linspace(0,2,100)
 pause_at = 405
 
 # gc centering 
-annotate_gc = False
+annotate_gc = True
 
 # =============================================================================
 for i,file_name in enumerate(filtered_files, start=0):
