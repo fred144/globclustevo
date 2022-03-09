@@ -1,0 +1,42 @@
+# read in: pos_00113_339_56_myr.txt
+OpenBLAS blas_thread_init: pthread_create failed for thread 32 of 40: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 100 current, 514334 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 33 of 40: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 100 current, 514334 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 34 of 40: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 100 current, 514334 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 35 of 40: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 100 current, 514334 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 36 of 40: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 100 current, 514334 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 37 of 40: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 100 current, 514334 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 38 of 40: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 100 current, 514334 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 39 of 40: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 100 current, 514334 max
+Traceback (most recent call last):
+  File "star_lum_map.py", line 157, in <module>
+    masses=masses,
+  File "/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py", line 323, in star_luminosity_plot
+    ax.axes.xaxis.set_ticklabels([])
+  File "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages/matplotlib/axis.py", line 1737, in set_ticklabels
+    locs = self.get_majorticklocs()
+  File "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages/matplotlib/axis.py", line 1277, in get_majorticklocs
+    return self.major.locator()
+  File "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages/matplotlib/ticker.py", line 2114, in __call__
+    return self.tick_values(vmin, vmax)
+  File "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages/matplotlib/ticker.py", line 2122, in tick_values
+    locs = self._raw_ticks(vmin, vmax)
+  File "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages/matplotlib/ticker.py", line 2061, in _raw_ticks
+    nbins = np.clip(self.axis.get_tick_space(),
+  File "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages/matplotlib/axis.py", line 2264, in get_tick_space
+    self.figure.dpi_scale_trans)
+  File "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages/matplotlib/transforms.py", line 1470, in __sub__
+    return self + other.inverted()
+  File "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages/matplotlib/transforms.py", line 1890, in inverted
+    self._inverted = Affine2D(inv(mtx), shorthand_name=shorthand_name)
+  File "<__array_function__ internals>", line 6, in inv
+  File "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages/numpy/linalg/linalg.py", line 545, in inv
+    ainv = _umath_linalg.inv(a, signature=signature, extobj=extobj)
+KeyboardInterrupt
