@@ -170,7 +170,7 @@ def star_luminosity_plot(
         pass
     
 
-    fig = plt.figure(figsize=(14,12),dpi=200)
+    fig = plt.figure(figsize=(14,12),dpi=300)
     ax = fig.add_subplot(111, facecolor=cm.inferno(0))
     
     # color maps
@@ -200,12 +200,10 @@ def star_luminosity_plot(
                    )
     else:
         print("!not a valid color scale!")
-        exit
+        exit()
     
-
     #print('lum plot')
 
-    
 # =============================================================================
 #                            Optionally plot test particles
 # =============================================================================
@@ -289,8 +287,6 @@ def star_luminosity_plot(
         size=12
         )
 
-
-    
     # annotate with time
     ax.text(
         -proj_width*0.375,
