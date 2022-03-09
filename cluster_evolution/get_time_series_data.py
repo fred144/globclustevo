@@ -25,7 +25,7 @@ datadir = os.path.expanduser(
     )
 # save path
 sequence_folder = 'data'
-parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
+parent_folder = './time_series_data/fs07_ms10'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     os.makedirs(newpath)

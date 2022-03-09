@@ -18,7 +18,7 @@ plt.style.use('dark_background')
 
 data_directory = r"./pop_2_data/"
 # seq_parent = r"./test/"
-seq_parent = r"./test_sequence/"
+seq_parent = r"./sequences/"
 seq_folder_name = "dynamic_pause_rotate"
 if not os.path.exists(seq_parent+seq_folder_name):
     print("# Creating new sequence directory",seq_parent+seq_folder_name)
