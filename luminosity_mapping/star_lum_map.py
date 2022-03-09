@@ -34,7 +34,7 @@ if not os.path.exists(seq_parent+seq_folder_name):
 # ctr_rel_thresh=.1,
 
 # enable discrete selection of time range based on snapshot number
-strt_snapshot = "00113"
+strt_snapshot = "00250"
 end_snapshot = "00694"
 files = sorted(os.listdir(data_directory))  #[-2:-1]  [300:400:2]
 strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
@@ -111,7 +111,7 @@ for i,file_name in enumerate(filtered_files, start=0):
             rotated_star_positions = np.dot(star_positions, rotation_matrix.T)
             star_positions = rotated_star_positions
 # =============================================================================            
-            _, _ = star_luminosity_plot(
+            star_luminosity_plot(
                 proj_width=proj_width,
                 star_positions=star_positions,
                 scaled_stellar_lums=scaled_stellar_lums,
@@ -144,7 +144,7 @@ for i,file_name in enumerate(filtered_files, start=0):
 
 # =============================================================================
  
-    _, _ = star_luminosity_plot(
+    star_luminosity_plot(
         proj_width=proj_width,
         star_positions=star_positions,
         scaled_stellar_lums=scaled_stellar_lums,
@@ -198,7 +198,7 @@ for i,file_name in enumerate(filtered_files, start=0):
             rotation_matrix = r.as_matrix()
             rotated_star_positions = np.dot(star_positions, rotation_matrix .T)
 # =============================================================================
-            _, _ = star_luminosity_plot(
+            star_luminosity_plot(
                 proj_width=proj_width,
                 star_positions=star_positions,
                 scaled_stellar_lums=scaled_stellar_lums,
