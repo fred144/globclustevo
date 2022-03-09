@@ -34,7 +34,12 @@ def trunc_radius(sigma_0, r_c, alpha, sigma_bg):
     r_trunc = (r_c**alpha * ((sigma_0/ ((1.5-1)*sigma_bg ) - 1 ) ) )**(1/alpha)
     return r_trunc
     
-def get_masses():
+def get_masses(x_coord, y_coord, masses, r_characteristic):
+    all_positions = np.vstack((x_coord, y_coord)).T
+    distances = np.sqrt(np.sum(np.square(all_positions), axis=1))  
+    mask = distances <= r_characteristic
+    core_mass = np.sum(masses [mask])
+    return core_mass
     
 
 

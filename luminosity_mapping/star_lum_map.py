@@ -120,7 +120,7 @@ for i,file_name in enumerate(filtered_files, start=0):
                 pi_multiple=pause_rot_angle,
                 plt_bins=4000,
                 lum_scale=('dynamic', 3e+32, 3e+36),
-                get_ctr=(True, 'potential', 0.04, annotate_gc),
+                get_ctr=None,#(True, 'potential', 0.04, annotate_gc),
                 masses=masses,
                 ) 
 # =============================================================================
@@ -152,7 +152,7 @@ for i,file_name in enumerate(filtered_files, start=0):
         snapshot_num=snapshot_num,
         pi_multiple=pi_multiple,
         plt_bins=4000,
-        get_ctr=(True, 'potential', 0.04, annotate_gc),
+        get_ctr=None,#(True, 'potential', 0.04, annotate_gc),
         lum_scale=('dynamic', 3e+32, 3e+36),
         masses=masses,
     ) 
@@ -207,7 +207,7 @@ for i,file_name in enumerate(filtered_files, start=0):
                 pi_multiple=pause_rot_angle,
                 plt_bins=4000,
                 lum_scale=('dynamic', 3e+32, 3e+36),
-                get_ctr=(True, 'potential', 0.01, annotate_gc),
+                get_ctr=None,#(True, 'potential', 0.01, annotate_gc),
                 masses=masses,
             ) 
 # =============================================================================
