@@ -6,12 +6,22 @@ from lum_funcs import look_up_table, get_cluster
 from scipy.optimize import curve_fit
 
 # mpl.rc('font', family='serif')
-# plt.style.use('dark_background')
+plt.style.use('dark_background')
 # plt.rcParams.update({
 #     "text.usetex": True,
 #     "font.family": "serif",
 #     "font.serif": ["Palatino"],
 # })
+def chi_squared(theory, data, sigma, num_params):
+    
+    import scipy.stats as st
+    
+    chi2 = np.sum((theory-data)**2/sigma**2)
+    dof = np.size(data) - num_params
+    reduced_chi_2 = chi2 / dof
+    p_value = st.chi2.sf(chi2, dof)
+    
+    return p_value, reduced_chi_2
 
 def king_model(r, k, r_c, r_t):
     """
@@ -31,7 +41,7 @@ def trunc_radius(sigma_0, r_c, alpha, sigma_bg):
     0.5bg = (peak)/( 1 + (r/r_c)^alpha)
     """
     #trunc_r = (r_c**alpha * ((sigma_0/(.5*sigma_bg)) - 1) )**(1/alpha)
-    r_trunc = (r_c**alpha * ((sigma_0/ ((2-1)*sigma_bg ) - 1 ) ) )**(1/alpha)
+    r_trunc = (r_c**alpha * ((sigma_0/ ((1.5-1)*sigma_bg ) - 1 ) ) )**(1/alpha)
     return r_trunc
     
 def get_masses(x_coord, y_coord, masses, r_characteristic):
@@ -139,7 +149,7 @@ def projected_surf_densities(
     return bin_ctrs, surf_mass_density, err_surf_mass_density, total_clust_m
     
         
-def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, bins=25):
+def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, gc_label, bins=25):
     """
     depends on projected_surf_densities
     """
@@ -181,7 +191,7 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, bins=25):
         )
     
     # plot the data
-    plt.figure(figsize = (8,8), )
+    plt.figure(figsize = (8,8), dpi=200)
     plt.errorbar(
         r,
         rho,
@@ -219,21 +229,48 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, bins=25):
             sigma_0=fit_sigma_naught,
             sigma_bg=fit_sigma_bg
             )
-        # set to 1.5bg =  bg + (peak)/( 1 + (r/r_c)^alpha)
+        core_mass = get_masses(clust_x, clust_y, clust_masses, fit_r_c)
+        
+        theory_rho = modified_king_model(r,*fit_params)
+        
+        p_value, reduced_chi_2 = chi_squared(theory=theory_rho, 
+                    data=rho, 
+                    sigma=err,
+                    num_params=4
+                    )
         
         #plot the fit
-    
         plt.plot(
             r,
-            modified_king_model(r,*fit_params),
-            linewidth=2,
-            label=(r'$R_{{trunc}} = {:.2f} \: pc$'
-                   '\n'
-                   r'$R_{{core}} = {:.2f} \: pc$').format(truncation_radius,fit_r_c)
+            theory_rho,
+            linewidth=4,
+            label=(
+                r'$R_{{trunc}} = {:.2f} \: pc$'
+                '\n'
+                r'$R_{{core}} = {:.2f} \: pc$'
+                '\n'
+                r'$\alpha = {:.2f} $'
+                '\n'
+                r'$\Sigma_0 = {:.2f} $'
+                '\n'
+                r'$\Sigma_{{bg}} = {:.2f} $'
+                '\n'
+                r'$M_{{r_c}} = {:.2e} \: M_{{\odot}}$'
+                ).format(
+                    truncation_radius,
+                    fit_r_c, 
+                    fit_alpha, 
+                    fit_sigma_naught,
+                    fit_sigma_bg,
+                    core_mass
+                    )
             )
-        
+        plt.title(
+            "Snapshot 481, t = 475.21 myr GC#{}, \n chi_nu = {:.2f}".format(gc_label, reduced_chi_2)
+            )
     except:
-        plt.title("can't fit")
+        plt.title("can't {}".format(gc_label))
+        reduced_chi_2 = 10000000
     
     plt.xscale('log')
     plt.yscale('log')
@@ -243,7 +280,7 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, bins=25):
     plt.grid(visible=True, which='both', axis='y', ls='--')
     plt.legend(fontsize=16)
 
-    return r, rho, err, tot_m
+    return r, rho, err, tot_m, reduced_chi_2
     
 #%%
 from lum_plotting_lib import star_luminosity_plot
@@ -275,7 +312,7 @@ star_positions, scaled_stellar_lums, masses, t_myr= unpack_pop_ii_data(
 #     )
 
 
-peak_x, peak_y = star_luminosity_plot(
+peak_x, peak_y, gc_labels = star_luminosity_plot(
     proj_width=test_proj_width,
     star_positions=star_positions,
     scaled_stellar_lums=scaled_stellar_lums,
@@ -289,20 +326,33 @@ peak_x, peak_y = star_luminosity_plot(
     ) 
 
 gc_masses = []
+gc_chi_nus = []
 test_ctrs = np.array([peak_x, peak_y]).T
 # iterate over x,y maximas and plot
-for ctr in test_ctrs:
-    print(ctr)
-    r, rho, err, tot_m = king_profiler(
+for ctr,label in zip(test_ctrs,gc_labels):
+    # print(ctr)
+    print(label)
+    r, rho, err, tot_m, chi_nu = king_profiler(
                 star_pos=star_positions,
                 lums=scaled_stellar_lums, 
                 masses=masses, 
                 gc_ctr=ctr, 
-                gc_rad=test_rad, 
+                gc_rad=test_rad,
+                gc_label=label,
                 bins=25
                 )
     gc_masses.append(tot_m)
+    gc_chi_nus .append(chi_nu)
+    
+
 #%%
-plt.hist(np.gc_masses, bins=10) 
+gc_chi_nus = np.array(gc_chi_nus)
+gc_masses = np.array(gc_masses)
+valid_fit_mask = gc_chi_nus < 8
+
+plt.hist(gc_masses[valid_fit_mask], bins=14, histtype='step',  fill=False) 
 #plt.xscale('log')
 
+#%%
+
+   

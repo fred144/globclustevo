@@ -17,8 +17,8 @@ def star_luminosity_plot(
         plt_bins=2000,
         lum_scale=('static', 3e+32, 3e+36), 
         get_ctr=(True, 'potential', 0.01, False),
-        num_ctr=50, 
-        ctr_dist_thresh=100, 
+        num_ctr=100, 
+        ctr_dist_thresh=2, 
         ctr_rel_thresh=.1,
         masses=None,
         sfc_positions=None,
@@ -33,11 +33,11 @@ def star_luminosity_plot(
     Parameters
     ----------
     proj_width
-        path to file
+        width of path in pc
     star_positions
-        scaling factor for luminosity, see stsci tables
+       postions of stars, (x,y)
     scaled_stellar_lums
-        link to the lookup table
+        scaled star luminosities
     time
         current time of snapshot in myr
     snapshot_num
@@ -70,6 +70,7 @@ def star_luminosity_plot(
         2d coordinates of centers
 
     """
+   
     # 2d histogram using luminosities
     lums, xedges, yedges = np.histogram2d(
         star_positions[:,0],
@@ -93,6 +94,9 @@ def star_luminosity_plot(
             print('> finding peaks using star density counts ')
             pc_accuracy = get_ctr[2]
             centring_bins = int(proj_width/pc_accuracy)
+            
+            center_threshold_pixels = ctr_dist_thresh/pc_accuracy 
+            
             # find peaks, returns indeces in the matrix
             
             # 2d histogram using raw counts
@@ -114,7 +118,7 @@ def star_luminosity_plot(
             peaks = peak_local_max(
                 counts, 
                 threshold_rel=ctr_rel_thresh, 
-                min_distance=ctr_dist_thresh
+                min_distance=center_threshold_pixels
                 ) 
             
             col_idx = peaks[:,1]
@@ -126,10 +130,23 @@ def star_luminosity_plot(
 
         
         elif get_ctr[1] == 'potential':
-            print('> finding peaks using grav potentials')
-            pc_accuracy = get_ctr[2]
-            centring_bins = int(proj_width/pc_accuracy) 
-            
+            #print('> finding peaks using grav potentials')
+            pc_accuracy = get_ctr[2]                        # pc/pixel
+            centring_bins = int(proj_width/pc_accuracy)     # no. pixels ctr
+            pc_per_pixel = proj_width/centring_bins         # might be rounded
+            # calculate the minimum distance between centers in pc
+            center_threshold_pixels = int(ctr_dist_thresh/pc_accuracy)
+            print(
+                '> finding peaks using grav potentials with precision',
+                  pc_per_pixel, 
+                  'pc/pixel, with',
+                   centring_bins,
+                  'pixels along each dimension,',
+                  'center distance threshold',
+                   center_threshold_pixels,
+                  'pixels'
+                  )
+
             phi = Potential(pos=star_positions, m=masses, method='bruteforce')
             
             grav, xedges, yedges = np.histogram2d(
@@ -150,7 +167,7 @@ def star_luminosity_plot(
             peaks = peak_local_max(
                 grav, 
                 num_peaks=num_ctr,
-                min_distance=ctr_dist_thresh, 
+                min_distance=center_threshold_pixels, 
                 threshold_rel=ctr_rel_thresh
                 ) 
             
@@ -159,6 +176,8 @@ def star_luminosity_plot(
             
             x_peak = x_ctr[col_idx] 
             y_peak = y_ctr[row_idx]
+            
+            gc_labels = np.arange(1, x_peak.size+1, 1)
             
             print("Found Centers for", x_peak.size)
             
@@ -236,7 +255,7 @@ def star_luminosity_plot(
             c='lime'
             )
         for i, txt in enumerate(psc_tags):
-            plt.annotate(int(txt), (psc_x[i], psc_y [i]), fontsize=7, ha='center')
+            plt.annotate(int(txt), (psc_x[i], psc_y [i]), fontsize=8, ha='center')
 
         plt.xlim(-proj_width/2, proj_width/2)
         plt.ylim(-proj_width/2, proj_width/2)
@@ -249,6 +268,9 @@ def star_luminosity_plot(
             plt.scatter(x_peak, y_peak, color='green',marker='.',s=.5)
             plt.xlim(-proj_width/2, proj_width/2)
             plt.ylim(-proj_width/2, proj_width/2)
+            # iterate over labels and label each scatter point
+            for i, label in enumerate(gc_labels):
+                plt.annotate(label, (x_peak[i], y_peak[i]), fontsize=2, ha='center')
 # =============================================================================
 #                            plot aesthetics
 # =============================================================================
@@ -324,7 +346,7 @@ def star_luminosity_plot(
     ax.patch.set_zorder(-1)
 
     if get_ctr is not None:
-        return x_peak, y_peak
+        return x_peak, y_peak, gc_labels
     else:
         pass
     
