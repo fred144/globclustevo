@@ -34,8 +34,8 @@ if not os.path.exists(seq_parent+seq_folder_name):
 # ctr_rel_thresh=.1,
 
 # enable discrete selection of time range based on snapshot number
-strt_snapshot = "00250"
-end_snapshot = "00694"
+strt_snapshot = "00619"
+end_snapshot = "00710"
 files = sorted(os.listdir(data_directory))  #[-2:-1]  [300:400:2]
 strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
 end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
