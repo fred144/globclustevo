@@ -68,6 +68,8 @@ def star_luminosity_plot(
         2d coordinates of centers
     y_peak
         2d coordinates of centers
+    labels
+        number labels for each GC
 
     """
    
@@ -136,16 +138,17 @@ def star_luminosity_plot(
             pc_per_pixel = proj_width/centring_bins         # might be rounded
             # calculate the minimum distance between centers in pc
             center_threshold_pixels = int(ctr_dist_thresh/pc_accuracy)
-            print(
+            print( 
                 '> finding peaks using grav potentials with precision',
-                  pc_per_pixel, 
-                  'pc/pixel, with',
-                   centring_bins,
-                  'pixels along each dimension,',
-                  'center distance threshold',
-                   center_threshold_pixels,
-                  'pixels'
-                  )
+                pc_per_pixel, 
+                'pc/pixel'
+                )
+            print('> pixels along each dimension', centring_bins)
+            print( 
+                '> center distance threshold', 
+                center_threshold_pixels,
+                'pixels'
+                )
 
             phi = Potential(pos=star_positions, m=masses, method='bruteforce')
             
@@ -268,9 +271,10 @@ def star_luminosity_plot(
             plt.scatter(x_peak, y_peak, color='green',marker='.',s=.5)
             plt.xlim(-proj_width/2, proj_width/2)
             plt.ylim(-proj_width/2, proj_width/2)
+            
             # iterate over labels and label each scatter point
             for i, label in enumerate(gc_labels):
-                plt.annotate(label, (x_peak[i], y_peak[i]), fontsize=2, ha='center')
+                plt.annotate(label, (x_peak[i], y_peak[i]), fontsize=4, ha='center')
 # =============================================================================
 #                            plot aesthetics
 # =============================================================================
