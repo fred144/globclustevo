@@ -182,7 +182,7 @@ def star_luminosity_plot(
             
             gc_labels = np.arange(1, x_peak.size+1, 1)
             
-            print("Found Centers for", x_peak.size)
+            print("> found Centers for", x_peak.size)
             
         else:
             print("!centering method not supported!")

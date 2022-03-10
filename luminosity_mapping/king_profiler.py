@@ -206,11 +206,8 @@ def king_profiler(
         dr=None        
         )
     
-    # plot the data 
-  
-    
-    # do the fit
     try:
+        # try to do the fit
         fit_params, cov_matrix = curve_fit(
             f=modified_king_model,
             xdata=r,
@@ -300,6 +297,7 @@ def king_profiler(
                 yerr=err,
                 fmt='o',
                 capsize=5,
+                capthick=3,
                 elinewidth=3,
                 label= (
                     r'$M_{{total}}= {:.2e} \: M_{{\odot}}$'
@@ -307,32 +305,30 @@ def king_profiler(
                     r'$t_{{age}}= {:.2f}$ Myr'
                     ).format(tot_m, gc_char_age) 
                 )
-            plt.plot(
-                r,
-                theory_rho,
-                linewidth=4,
-                label=plot_label
-                )
-            plt.title(
-                r"GC # {:.0f}".format(gc_label), fontsize=16
-                )
+            plt.plot(r,theory_rho,linewidth=4,label=plot_label)
+            plt.title(r"GC # {:.0f}".format(gc_label), fontsize=16)
+            plt.ylabel(r'Surface Mass Density ($M_{\odot} \; pc^{-2}$)', fontsize=16)
+            plt.xlabel(r'Radius ($pc$)', fontsize=16)
+            plt.xscale('log')
+            plt.yscale('log')
+            plt.grid(visible=True, which='both', axis='y', ls='--')
+            plt.legend(fontsize=16)
+            return r, rho, err, tot_m, core_mass, truncation_radius, gc_char_age 
         else: 
             print(r"> bad alpha for GC #{:.0f}".format(gc_label))
-            
-        
-    except:
-        print(r"> can't fit GC #{:.0f}".format(gc_label))
-        reduced_chi_2 = 10000000
+            return -1, -1, -1, -1, -1, -1, -1
     
-    plt.xscale('log')
-    plt.yscale('log')
-    plt.ylabel(r'Surface Mass Density ($M_{\odot} \; pc^{-2}$)', fontsize=16)
-    plt.xlabel(r'Radius ($pc$)', fontsize=16)
-    #plt.xlim(.9*ring_width,gc_rad)
-    plt.grid(visible=True, which='both', axis='y', ls='--')
-    plt.legend(fontsize=16)
 
-    return r, rho, err, tot_m, core_mass, truncation_radius, gc_char_age 
+    except:
+        # if it can't fit it
+        print(r"> can't fit GC #{:.0f}".format(gc_label))
+        return -1, -1, -1, -1, -1, -1, -1
+    
+    
+    
+
+
+
     
 #%%
 from lum_plotting_lib import star_luminosity_plot
@@ -381,15 +377,18 @@ peak_x, peak_y, gc_labels = star_luminosity_plot(
     masses=masses,
     ) 
 
-# loop over the centers and make profiles
-gc_masses = []
+# loop over the centers, make profiles, and get data on a cluster basis.
+gc_tot_masses = []
+gc_m_core = []
+gc_r_trunc = []
+gc_char_age = []
 
 test_ctrs = np.array([peak_x, peak_y]).T
 # iterate over x,y maximas and plot
 for ctr,label in zip(test_ctrs,gc_labels):
     # print(ctr)
     print(label)
-    _, _, _, tot_m, m_r_c, r_trunc, gc_char_age = king_profiler(
+    _, _, _, m_tot, m_r_c, r_trunc, char_age = king_profiler(
                 star_pos=star_positions,
                 lums=scaled_stellar_lums, 
                 masses=masses, 
@@ -399,17 +398,29 @@ for ctr,label in zip(test_ctrs,gc_labels):
                 gc_label=label,
                 bins=25
                 )
-    gc_masses.append(tot_m)
-
+    gc_tot_masses.append(m_tot)
+    gc_m_core.append(m_r_c)
+    gc_r_trunc.append(r_trunc)
+    gc_char_age.append(char_age)
     
+# turn into arrays so we can index them and then clean up
+gc_tot_masses = np.array(gc_tot_masses)   
+gc_m_core = np.array(gc_m_core)
+gc_r_trunc = np.array(gc_r_trunc)
+gc_char_age = np.array(gc_char_age)
+#%%
+mask = gc_tot_masses > 0
+gc_tot_masses = gc_tot_masses[mask] 
+gc_m_core = gc_m_core[mask]
+gc_r_trunc = gc_r_trunc[mask]
+gc_char_age = gc_char_age[mask]
+
 
 #%%
 
-gc_masses = np.array(gc_masses)
-
-
-plt.hist(gc_masses, bins=14, histtype='step',  fill=False) 
-#plt.xscale('log')
+plt.figure(figsize = (8,8), dpi=200)
+plt.hist(gc_tot_masses, bins=10, histtype='step',  fill=False) 
+# #plt.xscale('log')
 
 #%%
 
