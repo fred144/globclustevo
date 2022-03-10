@@ -45,6 +45,9 @@ def trunc_radius(sigma_0, r_c, alpha, sigma_bg):
     return r_trunc
     
 def get_masses(x_coord, y_coord, masses, r_characteristic):
+    """
+    get core mass or any mass enclosed a characteristic radius
+    """
     all_positions = np.vstack((x_coord, y_coord)).T
     distances = np.sqrt(np.sum(np.square(all_positions), axis=1))  
     mask = distances <= r_characteristic
@@ -134,22 +137,23 @@ def projected_surf_densities(
     bin_ctrs = 0.5*( left_edges + right_edges)[mask]
     ring_areas = np.pi * (right_edges**2 - left_edges**2)[mask]
     
-
     
     # calculate densities
     surf_mass_density = mass_per_bin / ring_areas
     surf_lum_density = lum_per_bin / ring_areas
     surf_number_density =  count_per_bin / ring_areas
      
-    # characterize what the tupical mass is for a bin 
+    # characterize what the typical mass is for a bin 
     avg_star_masses = mass_per_bin / count_per_bin
+    # piosson error in the surface density
     err_surf_mass_density = np.sqrt(count_per_bin)*(avg_star_masses/ring_areas)
+    # sum the bins to get total mass out to the specified cluster radii
     total_clust_m = np.sum(mass_per_bin)
     
     return bin_ctrs, surf_mass_density, err_surf_mass_density, total_clust_m
     
         
-def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, gc_label, bins=25):
+def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, gc_label, bins=30):
     """
     depends on projected_surf_densities
     """
@@ -223,6 +227,7 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, gc_label, bins=25):
         fit_alpha = fit_params[2]
         fit_sigma_bg = fit_params[3]
         
+        # get derived quantities
         truncation_radius = trunc_radius(
             r_c=fit_r_c, 
             alpha=fit_alpha, 
@@ -230,28 +235,23 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, gc_label, bins=25):
             sigma_bg=fit_sigma_bg
             )
         core_mass = get_masses(clust_x, clust_y, clust_masses, fit_r_c)
-        
+        # plot theoretical best fit
         theory_rho = modified_king_model(r,*fit_params)
-        
+        # quantify goodness of fit
         p_value, reduced_chi_2 = chi_squared(theory=theory_rho, 
                     data=rho, 
                     sigma=err,
                     num_params=4
                     )
-        
-        #plot the fit
-        plt.plot(
-            r,
-            theory_rho,
-            linewidth=4,
-            label=(
+        if truncation_radius <= 50:
+            plot_label = (
                 r'$R_{{trunc}} = {:.2f} \: pc$'
                 '\n'
                 r'$R_{{core}} = {:.2f} \: pc$'
                 '\n'
                 r'$\alpha = {:.2f} $'
                 '\n'
-                r'$\Sigma_0 = {:.2f} $'
+                r'$\Sigma_0 = {:.2e} $'
                 '\n'
                 r'$\Sigma_{{bg}} = {:.2f} $'
                 '\n'
@@ -263,11 +263,39 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, gc_label, bins=25):
                     fit_sigma_naught,
                     fit_sigma_bg,
                     core_mass
-                    )
+                        )
+        else: 
+            plot_label = (
+                r'$R_{{trunc}} > 50 \: pc$'
+                '\n'
+                r'$R_{{core}} = {:.2f} \: pc$'
+                '\n'
+                r'$\alpha = {:.2f} $'
+                '\n'
+                r'$\Sigma_0 = {:.2e} $'
+                '\n'
+                r'$\Sigma_{{bg}} = {:.2f} $'
+                '\n'
+                r'$M_{{r_c}} = {:.2e} \: M_{{\odot}}$'
+                ).format(
+                    fit_r_c, 
+                    fit_alpha, 
+                    fit_sigma_naught,
+                    fit_sigma_bg,
+                    core_mass
+                        )
+            
+        #plot the fit
+        plt.plot(
+            r,
+            theory_rho,
+            linewidth=4,
+            label=plot_label
             )
         plt.title(
             "Snapshot 481, t = 475.21 myr GC#{}, \n chi_nu = {:.2f}".format(gc_label, reduced_chi_2)
             )
+        
     except:
         plt.title("can't {}".format(gc_label))
         reduced_chi_2 = 10000000
@@ -292,9 +320,9 @@ test_rad = 10
 test_proj_width = 400
 bins = 4000
 star_positions, scaled_stellar_lums, masses, t_myr= unpack_pop_ii_data(
-    #r"./pop_2_data/pos_00660_516_05_myr.txt"
+    r"./pop_2_data/pos_00660_516_05_myr.txt"
     #r"./pop_2_data/pos_00694_523_92_myr.txt"
-    r"./pop_2_data/pos_00481_475_21_myr.txt"
+    #r"./pop_2_data/pos_00481_475_21_myr.txt"
     
     )
 
