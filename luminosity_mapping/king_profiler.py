@@ -240,7 +240,7 @@ def king_profiler(
             sigma_bg=fit_sigma_bg
             )
         core_mass = get_masses(clust_x, clust_y, clust_masses, fit_r_c)
-        gc_characteristic_age = float(stats.mode(clust_ages)[0]/1e6) 
+        gc_char_age = float(stats.mode(clust_ages)[0]/1e6) 
 # =============================================================================
 
         # quantify goodness of fit
@@ -249,7 +249,7 @@ def king_profiler(
                     sigma=err,
                     num_params=4
                     )
-        if truncation_radius <= 50:
+        if truncation_radius <= 20:
             plot_label = (
                 r'$R_{{trunc}} = {:.2f} \: pc$'
                 '\n'
@@ -272,7 +272,7 @@ def king_profiler(
                         )
         else: 
             plot_label = (
-                r'$R_{{trunc}} > 50 $ pc'
+                r'$R_{{trunc}} > 20 $ pc'
                 '\n'
                 r'$R_{{core}} = {:.2f}$ pc'
                 '\n'
@@ -305,7 +305,7 @@ def king_profiler(
                     r'$M_{{total}}= {:.2e} \: M_{{\odot}}$'
                     '\n'
                     r'$t_{{age}}= {:.2f}$ Myr'
-                    ).format(tot_m, gc_characteristic_age) 
+                    ).format(tot_m, gc_char_age) 
                 )
             plt.plot(
                 r,
@@ -332,7 +332,7 @@ def king_profiler(
     plt.grid(visible=True, which='both', axis='y', ls='--')
     plt.legend(fontsize=16)
 
-    return r, rho, err, tot_m, reduced_chi_2
+    return r, rho, err, tot_m, core_mass, truncation_radius, gc_char_age 
     
 #%%
 from lum_plotting_lib import star_luminosity_plot
@@ -383,13 +383,13 @@ peak_x, peak_y, gc_labels = star_luminosity_plot(
 
 # loop over the centers and make profiles
 gc_masses = []
-gc_chi_nus = []
+
 test_ctrs = np.array([peak_x, peak_y]).T
 # iterate over x,y maximas and plot
 for ctr,label in zip(test_ctrs,gc_labels):
     # print(ctr)
     print(label)
-    r, rho, err, tot_m, chi_nu = king_profiler(
+    _, _, _, tot_m, m_r_c, r_trunc, gc_char_age = king_profiler(
                 star_pos=star_positions,
                 lums=scaled_stellar_lums, 
                 masses=masses, 
@@ -400,15 +400,15 @@ for ctr,label in zip(test_ctrs,gc_labels):
                 bins=25
                 )
     gc_masses.append(tot_m)
-    gc_chi_nus .append(chi_nu)
+
     
 
 #%%
-gc_chi_nus = np.array(gc_chi_nus)
-gc_masses = np.array(gc_masses)
-valid_fit_mask = gc_chi_nus < 8
 
-plt.hist(gc_masses[valid_fit_mask], bins=14, histtype='step',  fill=False) 
+gc_masses = np.array(gc_masses)
+
+
+plt.hist(gc_masses, bins=14, histtype='step',  fill=False) 
 #plt.xscale('log')
 
 #%%
