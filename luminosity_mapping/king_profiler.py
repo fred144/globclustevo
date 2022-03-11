@@ -1,11 +1,19 @@
 import numpy as np
+import os
 import matplotlib.pyplot as plt
 from lum_funcs import look_up_table, get_cluster 
+from lum_plotting_lib import star_luminosity_plot
 from scipy.optimize import curve_fit
+import matplotlib as mpl
 from scipy import stats 
+import sys
 
+
+plt.rcParams.update({'figure.max_open_warning': 0})
 # mpl.rc('font', family='serif')
+# mpl.rc('text', usetex=True) 
 plt.style.use('dark_background')
+
 # plt.rcParams.update({
 #     "text.usetex": True,
 #     "font.family": "serif",
@@ -289,7 +297,7 @@ def king_profiler(
                         )
             
         # plot the fit if it is good
-        if fit_alpha < 5:
+        if fit_alpha < 5 and core_mass > 1:
             plt.figure(figsize = (8,8), dpi=200)
             plt.errorbar(
                 r,
@@ -306,6 +314,8 @@ def king_profiler(
                     ).format(tot_m, gc_char_age) 
                 )
             plt.plot(r,theory_rho,linewidth=4,label=plot_label)
+            #plt.axvline(fit_r_c)
+            #plt.text(fit_r_c, 0,r'$R_core$',rotation=90)
             plt.title(r"GC # {:.0f}".format(gc_label), fontsize=16)
             plt.ylabel(r'Surface Mass Density ($M_{\odot} \; pc^{-2}$)', fontsize=16)
             plt.xlabel(r'Radius ($pc$)', fontsize=16)
@@ -313,115 +323,161 @@ def king_profiler(
             plt.yscale('log')
             plt.grid(visible=True, which='both', axis='y', ls='--')
             plt.legend(fontsize=16)
-            return r, rho, err, tot_m, core_mass, truncation_radius, gc_char_age 
+            return r, rho, err, tot_m, fit_r_c, core_mass, truncation_radius, gc_char_age 
         else: 
             print(r"> bad alpha for GC #{:.0f}".format(gc_label))
-            return -1, -1, -1, -1, -1, -1, -1
+            return -1, -1, -1, -1, -1, -1, -1, -1
     
 
     except:
         # if it can't fit it
         print(r"> can't fit GC #{:.0f}".format(gc_label))
-        return -1, -1, -1, -1, -1, -1, -1
-    
-    
-    
-
-
-
+        return -1, -1, -1, -1, -1, -1, -1, -1
     
 #%%
-from lum_plotting_lib import star_luminosity_plot
 
-# test_ctr = np.array([0.8662, -78.5067])
-# #test_ctr = np.array([peak_x, peak_y])
-# test_ctr = np.array([3.781448, 14.74236, 25.41285])
-test_rad = 10
-test_proj_width = 400
-bins = 4000
-star_positions, scaled_stellar_lums, masses, ages, t_myr= unpack_pop_ii_data(
-    r"./pop_2_data/pos_00660_516_05_myr.txt"
-    #r"./pop_2_data/pos_00694_523_92_myr.txt"
-    #r"./pop_2_data/pos_00481_475_21_myr.txt"
+def run_profiler (file_name, proj_width, gc_radii, lum_map_bins): 
+    print("# read in:", file_name)
+    
+    time_str = file_name[23:29].replace('_','.') #in myr
+    time = float(time_str)
+    snapshot_num = int(file_name[17:22])
+
+    save_name = './gc_profiles/snapshot_{}_t_{}/'.format(
+        str(snapshot_num).zfill(4),
+        str(time).ljust(6, '0').replace('.','_'),
+        )
+    
+    # put all verbose output into a text file
+    sys.stdout = open(save_name + 'log.txt','wt') 
+    print("> snapshot time", time, "Myr")
+    print("> snapshot number", snapshot_num)
+    print("> uniform radius of", gc_radii, "pc")
+    
+    star_positions, scaled_stellar_lums, masses, ages, t_myr= unpack_pop_ii_data(
+        file_name
+        )
+    # get center x and y coordinates
+    peak_x, peak_y, gc_labels = star_luminosity_plot(
+        proj_width=proj_width,
+        star_positions=star_positions,
+        scaled_stellar_lums=scaled_stellar_lums,
+        time=t_myr,
+        snapshot_num=snapshot_num,
+        pi_multiple=0,
+        plt_bins=lum_map_bins,
+        lum_scale=('dynamic',0,0),
+        get_ctr=(True, 'potential', 0.04, True),
+        masses=masses,
+        ) 
+
+    if not os.path.exists(save_name):
+        print("# Creating new sequence directory",save_name )
+        os.makedirs(save_name )
+    
+    plt.savefig(
+        save_name+'annotated_gcs.png',
+        dpi=300,
+        bbox_inches='tight',
+        pad_inches=0.05
+        )
+    # loop over the centers, make profiles, and get data on a cluster basis.
+    gc_tot_masses = []
+    gc_r_core = []
+    gc_m_core = []
+    gc_r_trunc = []
+    gc_char_age = []
+    
+    test_ctrs = np.array([peak_x, peak_y]).T
+    # iterate over x,y maximas and plot
+    for ctr,label in zip(test_ctrs,gc_labels):
+        # print(ctr)
+        #print(label)
+        _, _, _, m_tot, r_c, m_r_c, r_trunc, char_age = king_profiler(
+                    star_pos=star_positions,
+                    lums=scaled_stellar_lums, 
+                    masses=masses, 
+                    ages=ages,
+                    gc_ctr=ctr, 
+                    gc_rad=gc_radii,
+                    gc_label=label,
+                    bins=25
+                    )
+        #print(char_age )
+        gc_tot_masses.append(m_tot)
+        gc_r_core.append(r_c)
+        gc_m_core.append(m_r_c)
+        gc_r_trunc.append(r_trunc)
+        gc_char_age.append(char_age)
+        if m_tot > 0:
+            plt.savefig(
+                save_name+'gc_{}'.format(label),
+                dpi=300,
+                bbox_inches='tight',
+                pad_inches=0.05
+                )
+        
+    # turn into arrays so we can index them and then clean up
+    gc_tot_masses = np.array(gc_tot_masses) 
+    gc_r_core = np.array(gc_r_core)
+    gc_m_core = np.array(gc_m_core)
+    gc_r_trunc = np.array(gc_r_trunc)
+    gc_char_age = np.array(gc_char_age)
+    
+    mask = gc_tot_masses > 0
+    gc_tot_masses = gc_tot_masses[mask] 
+    gc_r_core = gc_r_core[mask]
+    gc_m_core = gc_m_core[mask]
+    gc_r_trunc = gc_r_trunc[mask]
+    gc_char_age = gc_char_age[mask]
+
+    print("> found",gc_char_age.size,"good profiles" )
+    
+    sys.stdout.close()
+    
+    return gc_tot_masses, gc_r_core, gc_m_core, gc_r_trunc, gc_char_age
+    
+masses, core_radii, core_masses, r_trunc, ages  = run_profiler(
+    "./pop_2_data/pos_00694_523_92_myr.txt", 400, 10, 4000,
     
     )
-# print("# read in:", file_name)
-# time_str = file_name[10:16].replace('_','.') #in myr
-# time = float(time_str)
-# snapshot_num = int(file_name[4:9])
-# #print(file_name)
-# generate luminosity plot and get peaks based on counts
-# peak_x, peak_y = star_luminosity_plot(
-#     proj_width=test_proj_width ,
-#     star_positions=star_positions,
-#     scaled_stellar_lums=scaled_stellar_lums,
-#     time=t_myr,
-#     snapshot_num=590,
-#     pi_multiple=0,
-#     bins=bins,
-#     plt_type='luminosity',
-#     annotate_ctrs=True
-#     )
-
-# get center x and y coordinates
-peak_x, peak_y, gc_labels = star_luminosity_plot(
-    proj_width=test_proj_width,
-    star_positions=star_positions,
-    scaled_stellar_lums=scaled_stellar_lums,
-    time=t_myr,
-    snapshot_num=660,
-    pi_multiple=0,
-    plt_bins=bins,
-    lum_scale=('dynamic',0,0),
-    get_ctr=(True, 'potential', 0.04, True),
-    masses=masses,
-    ) 
-
-# loop over the centers, make profiles, and get data on a cluster basis.
-gc_tot_masses = []
-gc_m_core = []
-gc_r_trunc = []
-gc_char_age = []
-
-test_ctrs = np.array([peak_x, peak_y]).T
-# iterate over x,y maximas and plot
-for ctr,label in zip(test_ctrs,gc_labels):
-    # print(ctr)
-    print(label)
-    _, _, _, m_tot, m_r_c, r_trunc, char_age = king_profiler(
-                star_pos=star_positions,
-                lums=scaled_stellar_lums, 
-                masses=masses, 
-                ages=ages,
-                gc_ctr=ctr, 
-                gc_rad=test_rad,
-                gc_label=label,
-                bins=25
-                )
-    gc_tot_masses.append(m_tot)
-    gc_m_core.append(m_r_c)
-    gc_r_trunc.append(r_trunc)
-    gc_char_age.append(char_age)
-    
-# turn into arrays so we can index them and then clean up
-gc_tot_masses = np.array(gc_tot_masses)   
-gc_m_core = np.array(gc_m_core)
-gc_r_trunc = np.array(gc_r_trunc)
-gc_char_age = np.array(gc_char_age)
-#%%
-mask = gc_tot_masses > 0
-gc_tot_masses = gc_tot_masses[mask] 
-gc_m_core = gc_m_core[mask]
-gc_r_trunc = gc_r_trunc[mask]
-gc_char_age = gc_char_age[mask]
-
-
 #%%
 
 plt.figure(figsize = (8,8), dpi=200)
-plt.hist(gc_tot_masses, bins=10, histtype='step',  fill=False) 
-# #plt.xscale('log')
+plt.hist(core_masses, bins=np.geomspace(core_masses.min(), core_masses.max(),10), histtype='step',  fill=False) 
+plt.xscale('log')
 
-#%%
+#%%https://matplotlib.org/stable/gallery/lines_bars_and_markers/scatter_with_legend.html
 
-   
+colors =  np.random.uniform(size=masses.size)
+biggest_gc = np.max(core_radii)
+# map to differnt sizes for better plotting
+core_radii_per_size = (500*core_radii) / biggest_gc
+
+fig, ax = plt.subplots(figsize = (8,8), dpi=200) 
+
+scatter = ax.scatter(ages, 
+                     masses, 
+                     c=colors, 
+                     s=core_radii_per_size,
+                     cmap='Set3', 
+                     alpha=0.6,
+                     linewidths=2
+                     )
+
+# remap to actual sizes for legend
+legend_properties = dict(prop='sizes', num=4, color='white', fmt=' {x:.2f}',
+          func=lambda r: (r*biggest_gc)/500 )
+
+legend = ax.legend(
+    *scatter.legend_elements(**legend_properties),
+    loc='upper right', 
+    title='$R_{core}$ (pc)',
+    title_fontsize=16, 
+    fontsize=14,
+    
+    )
+ax.set_yscale('log')
+plt.ylabel(r'Total GC Mass ($M_{\odot}$)', fontsize=16)
+plt.xlabel(r'Age (Myr)', fontsize=16) 
+plt.show()

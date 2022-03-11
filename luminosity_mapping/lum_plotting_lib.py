@@ -18,8 +18,8 @@ def star_luminosity_plot(
         lum_scale=('static', 3e+32, 3e+36), 
         get_ctr=(True, 'potential', 0.01, False),
         num_ctr=100, 
-        ctr_dist_thresh=2, 
-        ctr_rel_thresh=.1,
+        ctr_dist_thresh=4, 
+        ctr_rel_thresh=.0001,
         masses=None,
         sfc_positions=None,
         psc_positions=None,
@@ -139,16 +139,19 @@ def star_luminosity_plot(
             # calculate the minimum distance between centers in pc
             center_threshold_pixels = int(ctr_dist_thresh/pc_accuracy)
             print( 
-                '> finding peaks using grav potentials with precision',
+                "> finding peaks using grav potentials with precision",
                 pc_per_pixel, 
-                'pc/pixel'
+                "pc/pixel"
                 )
-            print('> pixels along each dimension', centring_bins)
+            print("> pixels along each dimension", centring_bins)
             print( 
-                '> center distance threshold', 
+                "> centers have to  be", 
                 center_threshold_pixels,
-                'pixels'
+                "pixels apart, corresponding to ",
+                ctr_dist_thresh,
+                "pc"
                 )
+            print("> top",100*(1-ctr_rel_thresh),"% of deepest potentials")
 
             phi = Potential(pos=star_positions, m=masses, method='bruteforce')
             
@@ -212,7 +215,7 @@ def star_luminosity_plot(
         rectbin = plt.imshow(
                    lums,
                    cmap='inferno',
-                   interpolation='gaussian',
+                   #interpolation='gaussian',
                    origin='lower',
                    extent=[-proj_width/2,
                            proj_width/2,
@@ -268,13 +271,15 @@ def star_luminosity_plot(
     if get_ctr is not None: 
         # can't put in the same line since it will check the tuple regardless
         if get_ctr[3] is True:
-            plt.scatter(x_peak, y_peak, color='green',marker='.',s=.5)
+            plt.scatter(x_peak, y_peak, color='green', marker='x',linewidths=1,s=10)
             plt.xlim(-proj_width/2, proj_width/2)
             plt.ylim(-proj_width/2, proj_width/2)
             
             # iterate over labels and label each scatter point
             for i, label in enumerate(gc_labels):
-                plt.annotate(label, (x_peak[i], y_peak[i]), fontsize=4, ha='center')
+                plt.annotate(
+                    label, (x_peak[i], y_peak[i]), fontsize=5, ha='center', color='white'
+                )
 # =============================================================================
 #                            plot aesthetics
 # =============================================================================
