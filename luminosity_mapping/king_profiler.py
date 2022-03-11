@@ -438,7 +438,7 @@ def run_profiler (file_name, proj_width, gc_radii, lum_map_bins):
     return gc_tot_masses, gc_r_core, gc_m_core, gc_r_trunc, gc_char_age
     
 masses, core_radii, core_masses, r_trunc, ages  = run_profiler(
-    "./pop_2_data/pos_00694_523_92_myr.txt", 400, 10, 2000,
+    "./pop_2_data/pos_00694_523_92_myr.txt", 400, 10, 1000,
     
     )
 # sys.stdout.close()
@@ -449,7 +449,7 @@ plt.hist(core_masses, bins=np.geomspace(core_masses.min(), core_masses.max(),10)
 plt.xscale('log')
 
 #%%https://matplotlib.org/stable/gallery/lines_bars_and_markers/scatter_with_legend.html
-
+core_radii = core_radii * 2
 colors =  np.random.uniform(size=masses.size)
 biggest_gc = np.max(core_radii)
 # map to differnt sizes for better plotting
@@ -473,9 +473,9 @@ legend_properties = dict(prop='sizes', num=4, color='white', fmt=' {x:.2f}',
 legend = ax.legend(
     *scatter.legend_elements(**legend_properties),
     loc='upper right', 
-    title='$R_{core}$ (pc)',
+    title='$D_{core}$ (pc)',
     title_fontsize=16, 
-    fontsize=14,
+    fontsize=15,
     
     )
 ax.set_yscale('log')

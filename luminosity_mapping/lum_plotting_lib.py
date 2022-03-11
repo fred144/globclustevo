@@ -19,7 +19,7 @@ def star_luminosity_plot(
         get_ctr=(True, 'potential', 0.01, False),
         num_ctr=120, 
         ctr_dist_thresh=2, 
-        ctr_rel_thresh=.05,
+        ctr_rel_thresh=.08,
         masses=None,
         sfc_positions=None,
         psc_positions=None,
