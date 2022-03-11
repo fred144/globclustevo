@@ -28,17 +28,17 @@ datadir = os.path.expanduser(
     '/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
     )
 # save path
-sequence_folder = 'newcmap_gas_projected_density_x'
+sequence_folder = 'newcmap_gas_projected_density_y'
 parent_folder = '/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine'
 newpath = parent_folder + '/' + sequence_folder
 if not os.path.exists(newpath):
     print("# Creating new sequence directory",newpath) 
     os.makedirs(newpath)
 #---------------------------------plot params----------------------------------
-sequence_title = 'x_gas'
+sequence_title = 'y_gas'
 width = (400,'pc') 
-slice_axis = 'x'
-start_step = 694 
+slice_axis = 'y'
+start_step = 498
 end_step = 710
 
 #ctr_shift_thresh = 0.00060 #code length
