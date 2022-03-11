@@ -318,7 +318,7 @@ def king_profiler(
             #plt.text(fit_r_c, 0,r'$R_core$',rotation=90)
             plt.title(r"GC # {:.0f}".format(gc_label), fontsize=16)
             plt.ylabel(r'Surface Mass Density ($M_{\odot} \; pc^{-2}$)', fontsize=16)
-            plt.xlabel(r'Radius ($pc$)', fontsize=16)
+            plt.xlabel(r'R ($pc$)', fontsize=16)
             plt.xscale('log')
             plt.yscale('log')
             plt.grid(visible=True, which='both', axis='y', ls='--')
@@ -441,6 +441,7 @@ masses, core_radii, core_masses, r_trunc, ages  = run_profiler(
     "./pop_2_data/pos_00694_523_92_myr.txt", 400, 10, 1000,
     
     )
+core_diameter = core_radii*2
 # sys.stdout.close()
 #%%
 
@@ -449,18 +450,18 @@ plt.hist(core_masses, bins=np.geomspace(core_masses.min(), core_masses.max(),10)
 plt.xscale('log')
 
 #%%https://matplotlib.org/stable/gallery/lines_bars_and_markers/scatter_with_legend.html
-core_radii = core_radii * 2
+
 colors =  np.random.uniform(size=masses.size)
-biggest_gc = np.max(core_radii)
+biggest_gc = np.max(core_diameter)
 # map to differnt sizes for better plotting
-core_radii_per_size = (500*core_radii) / biggest_gc
+core_diameter_per_size = (500*core_diameter) / biggest_gc
 
 fig, ax = plt.subplots(figsize = (8,8), dpi=200) 
 
 scatter = ax.scatter(ages, 
                      masses, 
                      c=colors, 
-                     s=core_radii_per_size,
+                     s=core_diameter_per_size,
                      cmap='Set3', 
                      alpha=0.6,
                      linewidths=2
@@ -473,7 +474,7 @@ legend_properties = dict(prop='sizes', num=4, color='white', fmt=' {x:.2f}',
 legend = ax.legend(
     *scatter.legend_elements(**legend_properties),
     loc='upper right', 
-    title='$D_{core}$ (pc)',
+    title='$d_{core}$ (pc)',
     title_fontsize=16, 
     fontsize=15,
     
