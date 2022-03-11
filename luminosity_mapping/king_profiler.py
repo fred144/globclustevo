@@ -348,8 +348,8 @@ def run_profiler (file_name, proj_width, gc_radii, lum_map_bins):
         str(time).ljust(6, '0').replace('.','_'),
         )
     
-    # put all verbose output into a text file
-    sys.stdout = open(save_name + 'log.txt','wt') 
+    # # put all verbose output into a text file
+    # sys.stdout = open(save_name + 'log.txt','wt') 
     print("> snapshot time", time, "Myr")
     print("> snapshot number", snapshot_num)
     print("> uniform radius of", gc_radii, "pc")
@@ -433,14 +433,15 @@ def run_profiler (file_name, proj_width, gc_radii, lum_map_bins):
 
     print("> found",gc_char_age.size,"good profiles" )
     
-    sys.stdout.close()
+    
     
     return gc_tot_masses, gc_r_core, gc_m_core, gc_r_trunc, gc_char_age
     
 masses, core_radii, core_masses, r_trunc, ages  = run_profiler(
-    "./pop_2_data/pos_00694_523_92_myr.txt", 400, 10, 4000,
+    "./pop_2_data/pos_00694_523_92_myr.txt", 400, 10, 2000,
     
     )
+# sys.stdout.close()
 #%%
 
 plt.figure(figsize = (8,8), dpi=200)
