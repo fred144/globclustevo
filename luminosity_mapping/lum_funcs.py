@@ -37,6 +37,7 @@ def get_cluster(
         cluster_radius,
         lums,
         masses,
+        ages,
         trns_coord,
         zpos=None, 
         ):
@@ -57,6 +58,7 @@ def get_cluster(
     masked_positions = all_positions[mask]
     masked_lums = lums[mask]
     masked_masses = masses[mask]
+    masked_ages = ages[mask]
     
     x = masked_positions[:,0]
     y = masked_positions[:,1]
@@ -72,9 +74,9 @@ def get_cluster(
             return x, y, z, masked_lums, masked_masses
     else:
         if trns_coord is True:
-            return x_recentered, y_recentered, masked_lums, masked_masses
+            return x_recentered, y_recentered, masked_lums, masked_masses, masked_ages
         else:
-            return x, y, masked_lums, masked_masses
+            return x, y, masked_lums, masked_masses, masked_ages
         
 
 def ring_2d_mask(xpos, ypos, ctr_at, lums, masses, outer_radius, inner_radius):

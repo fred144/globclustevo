@@ -1,9 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib as mpl
-import pandas as pd
 from lum_funcs import look_up_table, get_cluster 
 from scipy.optimize import curve_fit
+from scipy import stats 
 
 # mpl.rc('font', family='serif')
 plt.style.use('dark_background')
@@ -99,7 +98,7 @@ def unpack_pop_ii_data(
     star_positions = pop_2_data[:,2:5]      # (x,y,z)
 
     
-    return star_positions, scaled_stellar_lums, masses, t_myr
+    return star_positions, scaled_stellar_lums, masses, ages, t_myr
 
 def projected_surf_densities(
     x_coord, y_coord, lums, masses, radius, num_bins, log_bins=True, dr=None        
@@ -153,36 +152,49 @@ def projected_surf_densities(
     return bin_ctrs, surf_mass_density, err_surf_mass_density, total_clust_m
     
         
-def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, gc_label, bins=30):
+def king_profiler(
+        star_pos, 
+        lums, 
+        masses, 
+        ages, 
+        gc_ctr, 
+        gc_rad, 
+        gc_label, 
+        bins=30
+        ):
     """
     depends on projected_surf_densities
     """
     # get a cluster given a center --> (0,0,0) and spherically mask around it
+    # returns positons (recentered), masses, luminosites, and ages of each star
     if gc_ctr.size == 2:
-        clust_x, clust_y, clust_lums, clust_masses = get_cluster(
+        clust_x, clust_y, clust_lums, clust_masses, clust_ages = get_cluster(
             xpos=star_pos[:,0],
             ypos=star_pos[:,1],
             zpos=None,
             ctr_at=gc_ctr,
             masses=masses,
+            ages=ages,
             cluster_radius=gc_rad,
             lums=lums,
             trns_coord = True
             )
     else:
-        clust_x, clust_y, clust_z, clust_lums, clust_masses = get_cluster(
+        # 3d case
+        clust_x, clust_y, clust_z, clust_lums, clust_masses, clust_ages = get_cluster(
             xpos=star_pos[:,0],
             ypos=star_pos[:,1],
             zpos=star_pos[:,2],
             ctr_at=gc_ctr,
             masses=masses,
+            ages=ages,
             cluster_radius=gc_rad,
             lums=lums,
             trns_coord = True
             )
 
-    
-    # given an isolated cluster, find projected density quantities
+    # given an isolated cluster, find projected density quantities 
+    # as a function of radius with log bins or linear bins
     r, rho, err, tot_m = projected_surf_densities(
         x_coord=clust_x, 
         y_coord=clust_y, 
@@ -194,20 +206,8 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, gc_label, bins=30):
         dr=None        
         )
     
-    # plot the data
-    plt.figure(figsize = (8,8), dpi=200)
-    plt.errorbar(
-        r,
-        rho,
-        yerr=err,
-        fmt='o',
-        capsize=5,
-        elinewidth=2,
-        label= r'$M_{{total}}= {:.2e} \: M_{{\odot}}$'.format(tot_m) 
-        )
-    
-    # do the fit
     try:
+        # try to do the fit
         fit_params, cov_matrix = curve_fit(
             f=modified_king_model,
             xdata=r,
@@ -221,13 +221,15 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, gc_label, bins=30):
         fit_sigma = np.sqrt(np.diag(cov_matrix))
         # print(fit_params)
         # print(fit_sigma)
+    
+        # calculate theoretical best fit
+        theory_rho = modified_king_model(r,*fit_params)
         
+# ===========================calc derived quantities===========================
         fit_sigma_naught = fit_params[0]
         fit_r_c = fit_params[1]
         fit_alpha = fit_params[2]
         fit_sigma_bg = fit_params[3]
-        
-        # get derived quantities
         truncation_radius = trunc_radius(
             r_c=fit_r_c, 
             alpha=fit_alpha, 
@@ -235,15 +237,16 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, gc_label, bins=30):
             sigma_bg=fit_sigma_bg
             )
         core_mass = get_masses(clust_x, clust_y, clust_masses, fit_r_c)
-        # plot theoretical best fit
-        theory_rho = modified_king_model(r,*fit_params)
+        gc_char_age = float(stats.mode(clust_ages)[0]/1e6) 
+# =============================================================================
+
         # quantify goodness of fit
         p_value, reduced_chi_2 = chi_squared(theory=theory_rho, 
                     data=rho, 
                     sigma=err,
                     num_params=4
                     )
-        if truncation_radius <= 50:
+        if truncation_radius <= 20:
             plot_label = (
                 r'$R_{{trunc}} = {:.2f} \: pc$'
                 '\n'
@@ -266,9 +269,9 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, gc_label, bins=30):
                         )
         else: 
             plot_label = (
-                r'$R_{{trunc}} > 50 \: pc$'
+                r'$R_{{trunc}} > 20 $ pc'
                 '\n'
-                r'$R_{{core}} = {:.2f} \: pc$'
+                r'$R_{{core}} = {:.2f}$ pc'
                 '\n'
                 r'$\alpha = {:.2f} $'
                 '\n'
@@ -285,30 +288,47 @@ def king_profiler(star_pos, lums, masses, gc_ctr, gc_rad, gc_label, bins=30):
                     core_mass
                         )
             
-        #plot the fit
-        plt.plot(
-            r,
-            theory_rho,
-            linewidth=4,
-            label=plot_label
-            )
-        plt.title(
-            "Snapshot 481, t = 475.21 myr GC#{}, \n chi_nu = {:.2f}".format(gc_label, reduced_chi_2)
-            )
-        
-    except:
-        plt.title("can't {}".format(gc_label))
-        reduced_chi_2 = 10000000
+        # plot the fit if it is good
+        if fit_alpha < 5:
+            plt.figure(figsize = (8,8), dpi=200)
+            plt.errorbar(
+                r,
+                rho,
+                yerr=err,
+                fmt='o',
+                capsize=5,
+                capthick=3,
+                elinewidth=3,
+                label= (
+                    r'$M_{{total}}= {:.2e} \: M_{{\odot}}$'
+                    '\n'
+                    r'$t_{{age}}= {:.2f}$ Myr'
+                    ).format(tot_m, gc_char_age) 
+                )
+            plt.plot(r,theory_rho,linewidth=4,label=plot_label)
+            plt.title(r"GC # {:.0f}".format(gc_label), fontsize=16)
+            plt.ylabel(r'Surface Mass Density ($M_{\odot} \; pc^{-2}$)', fontsize=16)
+            plt.xlabel(r'Radius ($pc$)', fontsize=16)
+            plt.xscale('log')
+            plt.yscale('log')
+            plt.grid(visible=True, which='both', axis='y', ls='--')
+            plt.legend(fontsize=16)
+            return r, rho, err, tot_m, core_mass, truncation_radius, gc_char_age 
+        else: 
+            print(r"> bad alpha for GC #{:.0f}".format(gc_label))
+            return -1, -1, -1, -1, -1, -1, -1
     
-    plt.xscale('log')
-    plt.yscale('log')
-    plt.ylabel(r'Surface Mass Density ($M_{\odot} \; pc^{-2}$)', fontsize=16)
-    plt.xlabel(r'Radius ($pc$)', fontsize=16)
-    #plt.xlim(.9*ring_width,gc_rad)
-    plt.grid(visible=True, which='both', axis='y', ls='--')
-    plt.legend(fontsize=16)
 
-    return r, rho, err, tot_m, reduced_chi_2
+    except:
+        # if it can't fit it
+        print(r"> can't fit GC #{:.0f}".format(gc_label))
+        return -1, -1, -1, -1, -1, -1, -1
+    
+    
+    
+
+
+
     
 #%%
 from lum_plotting_lib import star_luminosity_plot
@@ -319,13 +339,17 @@ from lum_plotting_lib import star_luminosity_plot
 test_rad = 10
 test_proj_width = 400
 bins = 4000
-star_positions, scaled_stellar_lums, masses, t_myr= unpack_pop_ii_data(
+star_positions, scaled_stellar_lums, masses, ages, t_myr= unpack_pop_ii_data(
     r"./pop_2_data/pos_00660_516_05_myr.txt"
     #r"./pop_2_data/pos_00694_523_92_myr.txt"
     #r"./pop_2_data/pos_00481_475_21_myr.txt"
     
     )
-
+# print("# read in:", file_name)
+# time_str = file_name[10:16].replace('_','.') #in myr
+# time = float(time_str)
+# snapshot_num = int(file_name[4:9])
+# #print(file_name)
 # generate luminosity plot and get peaks based on counts
 # peak_x, peak_y = star_luminosity_plot(
 #     proj_width=test_proj_width ,
@@ -339,7 +363,7 @@ star_positions, scaled_stellar_lums, masses, t_myr= unpack_pop_ii_data(
 #     annotate_ctrs=True
 #     )
 
-
+# get center x and y coordinates
 peak_x, peak_y, gc_labels = star_luminosity_plot(
     proj_width=test_proj_width,
     star_positions=star_positions,
@@ -353,33 +377,50 @@ peak_x, peak_y, gc_labels = star_luminosity_plot(
     masses=masses,
     ) 
 
-gc_masses = []
-gc_chi_nus = []
+# loop over the centers, make profiles, and get data on a cluster basis.
+gc_tot_masses = []
+gc_m_core = []
+gc_r_trunc = []
+gc_char_age = []
+
 test_ctrs = np.array([peak_x, peak_y]).T
 # iterate over x,y maximas and plot
 for ctr,label in zip(test_ctrs,gc_labels):
     # print(ctr)
     print(label)
-    r, rho, err, tot_m, chi_nu = king_profiler(
+    _, _, _, m_tot, m_r_c, r_trunc, char_age = king_profiler(
                 star_pos=star_positions,
                 lums=scaled_stellar_lums, 
                 masses=masses, 
+                ages=ages,
                 gc_ctr=ctr, 
                 gc_rad=test_rad,
                 gc_label=label,
                 bins=25
                 )
-    gc_masses.append(tot_m)
-    gc_chi_nus .append(chi_nu)
+    gc_tot_masses.append(m_tot)
+    gc_m_core.append(m_r_c)
+    gc_r_trunc.append(r_trunc)
+    gc_char_age.append(char_age)
     
+# turn into arrays so we can index them and then clean up
+gc_tot_masses = np.array(gc_tot_masses)   
+gc_m_core = np.array(gc_m_core)
+gc_r_trunc = np.array(gc_r_trunc)
+gc_char_age = np.array(gc_char_age)
+#%%
+mask = gc_tot_masses > 0
+gc_tot_masses = gc_tot_masses[mask] 
+gc_m_core = gc_m_core[mask]
+gc_r_trunc = gc_r_trunc[mask]
+gc_char_age = gc_char_age[mask]
+
 
 #%%
-gc_chi_nus = np.array(gc_chi_nus)
-gc_masses = np.array(gc_masses)
-valid_fit_mask = gc_chi_nus < 8
 
-plt.hist(gc_masses[valid_fit_mask], bins=14, histtype='step',  fill=False) 
-#plt.xscale('log')
+plt.figure(figsize = (8,8), dpi=200)
+plt.hist(gc_tot_masses, bins=10, histtype='step',  fill=False) 
+# #plt.xscale('log')
 
 #%%
 
