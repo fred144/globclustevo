@@ -495,7 +495,7 @@ def run_profiler (file_name, proj_width, gc_radii, lum_map_bins):
         (gc_char_age, gc_tot_masses, gc_m_core, gc_r_trunc, gc_r_core, gc_alpha, gc_sigma0, gc_sigmabg)
     ).T
     comment = "# These are just the succesful fits with reasonable alpha."
-    header = ("\t\t Age[Myr] \t\t\t Masses[Msun]" 
+    header = ("Age[Myr] \t\t\t Masses[Msun]" 
               "\t\t\t CoreMass[Msun] \t\t\t  TruncRadii[pc]" 
               "\t\t\t  CoreRadii[pc] \t\t\t  FitAlpha" 
               "\t\t\t FitSigma0 \t\t\t  FitSigmaBg")
