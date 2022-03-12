@@ -17,9 +17,9 @@ def star_luminosity_plot(
         plt_bins=2000,
         lum_scale=('static', 3e+32, 3e+36), 
         get_ctr=(True, 'potential', 0.01, False),
-        num_ctr=120, 
+        num_ctr=100, 
         ctr_dist_thresh=2, 
-        ctr_rel_thresh=.08,
+        ctr_rel_thresh=.01,
         masses=None,
         sfc_positions=None,
         psc_positions=None,
@@ -271,7 +271,7 @@ def star_luminosity_plot(
     if get_ctr is not None: 
         # can't put in the same line since it will check the tuple regardless
         if get_ctr[3] is True:
-            plt.scatter(x_peak, y_peak, color='green', marker='x',linewidths=1,s=10)
+            plt.scatter(x_peak, y_peak, color='green', marker='x',linewidths=.5,s=10)
             plt.xlim(-proj_width/2, proj_width/2)
             plt.ylim(-proj_width/2, proj_width/2)
             
