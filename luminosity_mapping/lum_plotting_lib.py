@@ -17,7 +17,7 @@ def star_luminosity_plot(
         plt_bins=2000,
         lum_scale=('static', 3e+32, 3e+36), 
         get_ctr=(True, 'potential', 0.01, False),
-        num_ctr=100, 
+        num_ctr=200, 
         ctr_dist_thresh=2, 
         ctr_rel_thresh=.01,
         masses=None,
@@ -215,7 +215,7 @@ def star_luminosity_plot(
         rectbin = plt.imshow(
                    lums,
                    cmap='inferno',
-                   #interpolation='gaussian',
+                   interpolation='gaussian',
                    origin='lower',
                    extent=[-proj_width/2,
                            proj_width/2,

@@ -314,7 +314,7 @@ def king_profiler(
                         )
             
         # plot the fit if it is good
-        if fit_alpha < 5 and core_mass > 1:
+        if fit_alpha < 4 and core_mass > 1:
             
             plt.figure(figsize = (8,8), dpi=200)
             plt.errorbar(
@@ -355,6 +355,7 @@ def king_profiler(
                     )
         else: 
             print(r"> bad alpha for GC #{:.0f}".format(gc_label))
+            # return invalid values
             return -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -2
     
     except:
@@ -369,9 +370,10 @@ def king_profiler(
         plt.legend(fontsize=16)
         
         print(r"> can't fit GC #{:.0f}".format(gc_label))
+        # return invalid values
         return -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2
     
-#%%
+
 
 def run_profiler (file_name, proj_width, gc_radii, lum_map_bins): 
     print("# read in:", file_name)
@@ -380,13 +382,11 @@ def run_profiler (file_name, proj_width, gc_radii, lum_map_bins):
     time = float(time_str)
     snapshot_num = int(file_name[17:22])
 
-    save_name = './gc_profiles/snapshot_{}_t_{}/'.format(
+    save_name = './gc_profiles/snapshot_{}_{}/'.format(
         str(snapshot_num).zfill(4),
         str(time).ljust(6, '0').replace('.','_'),
         )
     
-    # # put all verbose output into a text file
-    # sys.stdout = open(save_name + 'log.txt','wt') 
     print("> snapshot time", time, "Myr")
     print("> snapshot number", snapshot_num)
     print("> uniform radius of", gc_radii, "pc")
@@ -494,59 +494,79 @@ def run_profiler (file_name, proj_width, gc_radii, lum_map_bins):
     output = np.vstack(
         (gc_char_age, gc_tot_masses, gc_m_core, gc_r_trunc, gc_r_core, gc_alpha, gc_sigma0, gc_sigmabg)
     ).T
-    header = ("\t\tAge[Myr] \t\t\t Masses[Msun]" 
+    comment = "# These are just the succesful fits with reasonable alpha."
+    header = ("\t\t Age[Myr] \t\t\t Masses[Msun]" 
               "\t\t\t CoreMass[Msun] \t\t\t  TruncRadii[pc]" 
               "\t\t\t  CoreRadii[pc] \t\t\t  FitAlpha" 
               "\t\t\t FitSigma0 \t\t\t  FitSigmaBg")
     np.savetxt(fname=save_name+'info.txt', X=output, header=header)
     
     
-    return gc_tot_masses, gc_r_core, gc_m_core, gc_r_trunc, gc_char_age
-    
-masses, core_radii, core_masses, r_trunc, ages  = run_profiler(
-    "./pop_2_data/pos_00694_523_92_myr.txt", 400, 10, 1000,
-    
-    )
-core_diameter = core_radii*2
-# sys.stdout.close()
+    return gc_tot_masses, gc_r_core, gc_m_core, gc_r_trunc, gc_char_age, time
 #%%
 
-plt.figure(figsize = (8,8), dpi=200)
-plt.hist(core_masses, bins=np.geomspace(core_masses.min(), core_masses.max(),10), histtype='step',  fill=False) 
-plt.xscale('log')
-
-#%%https://matplotlib.org/stable/gallery/lines_bars_and_markers/scatter_with_legend.html
-
-colors =  np.random.uniform(size=masses.size)
-biggest_gc = np.max(core_diameter)
-# map to differnt sizes for better plotting
-core_diameter_per_size = (500*core_diameter) / biggest_gc
-
-fig, ax = plt.subplots(figsize = (8,8), dpi=200) 
-
-scatter = ax.scatter(ages, 
-                     masses, 
-                     c=colors, 
-                     s=core_diameter_per_size,
-                     cmap='Set3', 
-                     alpha=0.6,
-                     linewidths=2
-                     )
-
-# remap to actual sizes for legend
-legend_properties = dict(prop='sizes', num=4, color='white', fmt=' {x:.2f}',
-          func=lambda r: (r*biggest_gc)/500 )
-
-legend = ax.legend(
-    *scatter.legend_elements(**legend_properties),
-    loc='upper right', 
-    title='$d_{core}$ (pc)',
-    title_fontsize=16, 
-    fontsize=15,
+if __name__ == '__main__': 
     
-    )
-ax.set_yscale('log')
-plt.ylabel(r'Total GC Mass ($M_{\odot}$)', fontsize=16)
-plt.xlabel(r'Age (Myr)', fontsize=16) 
-plt.show()
+    #data_file = "./pop_2_data/pos_00418_462_09_myr.txt"
+    data_file = "./pop_2_data/pos_00486_476_23_myr.txt"
+    # # put all verbose output into a text file
+    folder_name = './gc_profiles/snapshot_'+data_file[18:-8]
+    if not os.path.exists(folder_name):
+        print("# Creating new sequence directory",folder_name)
+        os.makedirs(folder_name)
+    
+    orig_stdout = sys.stdout
+    sys.stdout = open(folder_name+'/log.txt','w')
+    
+    masses, core_radii, core_masses, r_trunc, ages, time  = run_profiler(
+        data_file, 400, 10, 1000,
+        )
+    
+    core_diameter = core_radii*2
+    
+
+    
+    # plt.figure(figsize = (8,8), dpi=200)
+    # plt.hist(core_masses, bins=np.geomspace(core_masses.min(), core_masses.max(),10), histtype='step',  fill=False) 
+    # plt.xscale('log')
+    
+    #https://matplotlib.org/stable/gallery/lines_bars_and_markers/scatter_with_legend.html
+    
+    colors =  np.random.uniform(size=masses.size)
+    biggest_gc = np.max(core_diameter)
+    # map to differnt sizes for better plotting
+    core_diameter_per_size = (500*core_diameter) / biggest_gc
+    
+    fig, ax = plt.subplots(figsize = (8,8), dpi=200) 
+    
+    scatter = ax.scatter(ages, 
+                          masses, 
+                          c=colors, 
+                          s=core_diameter_per_size,
+                          cmap='Set3', 
+                          alpha=0.6,
+                          linewidths=2
+                          )
+    
+    # remap to actual sizes for legend
+    legend_properties = dict(prop='sizes', num=4, color='white', fmt=' {x:.2f}',
+              func=lambda r: (r*biggest_gc)/500 )
+    legend = ax.legend(
+        *scatter.legend_elements(**legend_properties),
+        loc='upper right', 
+        title='$d_{core}$ (pc)',
+        title_fontsize=16, 
+        fontsize=15,
+        )
+    
+    ax.set_yscale('log')
+    ax.set_title(r'$t_{{sim}} = {} Myr$'.format(time))
+    ax.set_ylabel(r'Total GC Mass ($M_{\odot}$)', fontsize=16)
+    ax.set_xlabel(r'Age (Myr)', fontsize=16) 
+    fig.savefig(folder_name+'/scatter.png', dpi=300)
+    #fig.close()
+    
+   
+    sys.stdout.close()
+    sys.stdout=orig_stdout 
 
