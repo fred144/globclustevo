@@ -11,6 +11,15 @@ def chi_squared(theory, data, sigma, num_params):
 
     return p_value, reduced_chi_2
 
+def get_masses(x_coord, y_coord, masses, r_characteristic):
+    """
+    get core mass or any mass enclosed by a characteristic radius; e.g. r_core
+    """
+    all_positions = np.vstack((x_coord, y_coord)).T
+    distances = np.sqrt(np.sum(np.square(all_positions), axis=1))
+    mask = distances <= r_characteristic
+    core_mass = np.sum(masses[mask])
+    return core_mass
 
 def look_up_table(stellar_ages, table_link, column_idx:int, log=True):
     """
