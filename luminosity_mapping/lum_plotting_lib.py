@@ -46,21 +46,30 @@ def star_luminosity_plot(
         pi multiple of the rotation matrix, can be 0
     plt_bins
         number of bins along the axis of the luminosity map
-    lum_scale: tuple (log_scale_type, min, max
+    lum_scale: tuple (log_scale_type, min, max)
         log_scale_type - static or dynamic
         
         min - minimum value color scale
-        
+    
         max- maximum value color scale
-        
-    get_ctr : tuple  (get_ctr, method, resolution, overplot)
-        get_ctr - gets centers of GCs 
+    get_ctr: tuple  (get_ctr, method, resolution, overplot)
+        get_ctr - True or False, gets centers of GCs 
         
         method - either using raw "counts" of star in a bin or grav "potential"
         
-        resolution - produces bins for centering using width/resolution
+        resolution - produces bins for center finding using width/resolution in pc
         
-        overplot - True or false, overplots found centers
+        overplot - True or False, overplots found centers
+    num_ctr: int
+        maximum number of GC centers to find
+    ctr_dist_thresh: float
+        the minimum (projected) distance in pc that each center should be
+    ctr_rel_thresh: float 
+        everything above maximum value * ctr_rel_thresh is included
+    masses
+        all the masses of the particels, needed to find potentials
+    sfc/psc_positions
+        array of the test particle positons
         
     Returns
     -------

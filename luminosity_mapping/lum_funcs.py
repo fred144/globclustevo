@@ -1,5 +1,15 @@
 import numpy as np
 import pandas as pd
+import scipy.stats as st
+
+def chi_squared(theory, data, sigma, num_params):
+    
+    chi2 = np.sum((theory-data)**2/sigma**2)
+    dof = np.size(data) - num_params
+    reduced_chi_2 = chi2 / dof
+    p_value = st.chi2.sf(chi2, dof)
+
+    return p_value, reduced_chi_2
 
 
 def look_up_table(stellar_ages, table_link, column_idx:int, log=True):
@@ -29,6 +39,115 @@ def look_up_table(stellar_ages, table_link, column_idx:int, log=True):
 
     luminosities = look_up_lumi[closest_match_idxs]
     return luminosities
+
+def projected_surf_densities(
+    x_coord, y_coord, lums, masses, radius, num_bins, log_bins=True, dr=None        
+    ):
+    r"""
+    Gets projected density profiles centered at a given coordinate. 
+    Log bins by default.
+   
+    """
+    
+    starting_point = .04 #pc might have to tweak this. 
+    
+    # stack two-1d arrays
+    all_positions = np.vstack((x_coord, y_coord)).T
+
+    if log_bins is True:
+        r = np.geomspace(starting_point, radius, num=num_bins, endpoint=True)
+        #r_inner = np.geomspace(0, radius, num=num_bins, endpoint=False)
+    else: 
+        r = np.arange(0, radius+dr, dr)
+    
+    # assume that the cluster fed to this has already been translated to (0,0)
+    #ctr_at=np.array([0,0])
+    
+    distances = np.sqrt(np.sum(np.square(all_positions), axis=1))    
+
+    mass_per_bin, bin_edges = np.histogram(distances, bins=r, weights=masses)
+    lum_per_bin, _ = np.histogram(distances, bins=r, weights=lums)
+    count_per_bin, _ = np.histogram(distances, bins=r)
+    #print(mass_per_bin.size, lum_per_bin.size, count_per_bin.size)
+    # mask zero count bins
+    mask = count_per_bin > 0
+    count_per_bin = count_per_bin[mask]
+    mass_per_bin = mass_per_bin[mask]
+    lum_per_bin = lum_per_bin[mask]
+    
+    # getting bin properties
+    right_edges = bin_edges[1:] 
+    left_edges = bin_edges[:-1]
+    bin_ctrs = 0.5*( left_edges + right_edges)[mask]
+    ring_areas = np.pi * (right_edges**2 - left_edges**2)[mask]
+    
+    
+    # calculate densities
+    surf_mass_density = mass_per_bin / ring_areas
+    surf_lum_density = lum_per_bin / ring_areas
+    surf_number_density =  count_per_bin / ring_areas
+     
+    # characterize what the typical mass is for a bin 
+    avg_star_masses = mass_per_bin / count_per_bin
+    # piosson error in the surface density
+    err_surf_mass_density = np.sqrt(count_per_bin)*(avg_star_masses/ring_areas)
+    # sum the bins to get total mass out to the specified cluster radii
+    total_clust_m = np.sum(mass_per_bin)
+    
+    return bin_ctrs, surf_mass_density, err_surf_mass_density, total_clust_m
+
+def unpack_pop_ii_data(
+        path:str, 
+        lum_scaling=1e-5, 
+        lum_link='https://www.stsci.edu/science/starburst99/data/l1500_inst_e.dat'
+    ): 
+    r"""
+    Depends on the lookup table function.
+    given path, gives you look up table luminosities and cleans them up
+    
+    Parameters
+    ----------
+    path
+        path to file
+    lum_scaling
+        scaling factor for luminosity, see stsci tables
+    lum_link
+        link to the lookup table
+    
+    Returns
+    -------
+    star_positions
+        (x,y,z) positions of stars
+    scaled_stellar_lums
+        corresponding stellar luminosities
+    masses
+        masses in M_sun
+    ages
+    
+    t_myr
+        current time in Myr
+    """
+    
+    pop_2_data = np.loadtxt(path)
+    # birth_epochs = pop_2_data[:,0] *1e6
+    ages = pop_2_data[:,1] *1e6             # convert to myr
+    ages [ages < 1e6 ] = 1e6                # set minimum age
+    t_myr = pop_2_data[0,6]                 # current simulation time
+    masses = pop_2_data[:,5]                # msun
+    
+    # use look up table; current bottle neck 
+    stellar_lums = look_up_table(
+        stellar_ages=ages,
+        table_link=lum_link,
+        column_idx=1,
+        log=True
+        )
+    
+    scaled_stellar_lums = stellar_lums*lum_scaling 
+    star_positions = pop_2_data[:,2:5]      # (x,y,z)
+
+    return star_positions, scaled_stellar_lums, masses, ages, t_myr
+
 
 def get_cluster(
         xpos,

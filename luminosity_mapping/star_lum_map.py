@@ -1,4 +1,5 @@
 import sys
+# dt2 specific, prioritizes the libraries in my home directory
 sys.path.insert(
     1, "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages"
     ) 
