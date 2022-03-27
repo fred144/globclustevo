@@ -18,7 +18,7 @@ for path, subdirs, files in os.walk(lustre):
                 print("# Creating new directory: ",  save_folder_name)
                 os.makedirs( save_folder_name)
                 
-            shutil.copyfile(src=full_path_to_files, dst=save_folder_name)
+            shutil.copy(src=full_path_to_files, dst=save_folder_name)
             
         
            # print(test)
