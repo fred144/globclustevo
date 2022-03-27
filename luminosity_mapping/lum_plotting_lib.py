@@ -125,292 +125,293 @@ def star_luminosity_plot(
         number labels for each GC
 
     """
-
-    # 2d histogram using luminosities
-    lums, xedges, yedges = np.histogram2d(
-        star_positions[:, 0],
-        star_positions[:, 1],
-        bins=plt_bins,
-        weights=scaled_stellar_lums,
-        normed=False,
-        range=[
-            [-proj_width / 2, proj_width / 2],
-            [-proj_width / 2, proj_width / 2],
-            ],
-        )
-    # need to transpose for some reason
-    lums = lums.T
-    # =============================================================================
-    #              get GC centers based on potential or density counts
-    # =============================================================================
-    if get_ctr is not None:
-        print("> calculating centers")
-        if get_ctr[1] == "counts":
-            print("> finding peaks using star density counts ")
-            pc_accuracy = get_ctr[2]
-            centring_bins = int(proj_width / pc_accuracy)
-
-            center_threshold_pixels = ctr_dist_thresh / pc_accuracy
-
-            # find peaks, returns indeces in the matrix
-
-            # 2d histogram using raw counts
-            counts, _, _ = np.histogram2d(
-                star_positions[:, 0],
-                star_positions[:, 1],
-                bins=centring_bins,
-                normed=False,
-                range=[
-                    [-proj_width / 2, proj_width / 2],
-                    [-proj_width / 2, proj_width / 2],
-                    ],
-                )
-            counts = counts.T
-            # get bin centers
-            x_ctr = 0.5 * (xedges[1:] + xedges[:-1])
-            y_ctr = 0.5 * (yedges[1:] + yedges[:-1])
-
-            peaks = peak_local_max(
-                counts,
-                threshold_rel=ctr_rel_thresh,
-                min_distance=center_threshold_pixels,
-                )
-
-            col_idx = peaks[:, 1]
-            row_idx = peaks[:, 0]
-            # translate indeces to coordinates
-            x_peak = x_ctr[col_idx]
-            y_peak = y_ctr[row_idx]
-            # optionally annotate with found centers
-
-        elif get_ctr[1] == "potential":
-            # print('> finding peaks using grav potentials')
-            pc_accuracy = get_ctr[2]  # pc/pixel
-            centring_bins = int(proj_width / pc_accuracy)  # no. pixels ctr
-            pc_per_pixel = proj_width / centring_bins  # might be rounded
-            # calculate the minimum distance between centers in pc
-            center_threshold_pixels = int(ctr_dist_thresh / pc_accuracy)
-            print(
-                "> finding peaks using grav potentials with precision",
-                pc_per_pixel,
-                "pc/pixel",
-                )
-            print("> pixels along each dimension", centring_bins)
-            print(
-                "> centers have to  be",
-                center_threshold_pixels,
-                "pixels apart, corresponding to ",
-                ctr_dist_thresh,
-                "pc",
-                )
-            print(
-                "> top", 100 * (1 - ctr_rel_thresh), "% of deepest potentials"
-                )
-
-            phi = Potential(pos=star_positions, m=masses, method="bruteforce")
-
-            grav, xedges, yedges = np.histogram2d(
-                star_positions[:, 0],
-                star_positions[:, 1],
-                bins=centring_bins,
-                weights=np.abs(phi),
-                normed=False,
-                range=[
-                    [-proj_width / 2, proj_width / 2],
-                    [-proj_width / 2, proj_width / 2],
-                    ],
-                )
-            grav = grav.T
-            x_ctr = 0.5 * (xedges[1:] + xedges[:-1])
-            y_ctr = 0.5 * (yedges[1:] + yedges[:-1])
-
-            peaks = peak_local_max(
-                grav,
-                num_peaks=num_ctr,
-                min_distance=center_threshold_pixels,
-                threshold_rel=ctr_rel_thresh,
-                )
-
-            col_idx = peaks[:, 1]
-            row_idx = peaks[:, 0]
-
-            x_peak = x_ctr[col_idx]
-            y_peak = y_ctr[row_idx]
-
-            gc_labels = np.arange(1, x_peak.size + 1, 1)
-
-            print("> found Centers for", x_peak.size)
-
+    with plt.style.context('dark_background'):
+        
+        # 2d histogram using luminosities
+        lums, xedges, yedges = np.histogram2d(
+            star_positions[:, 0],
+            star_positions[:, 1],
+            bins=plt_bins,
+            weights=scaled_stellar_lums,
+            normed=False,
+            range=[
+                [-proj_width / 2, proj_width / 2],
+                [-proj_width / 2, proj_width / 2],
+                ],
+            )
+        # need to transpose for some reason
+        lums = lums.T
+        # =============================================================================
+        #              get GC centers based on potential or density counts
+        # =============================================================================
+        if get_ctr is not None:
+            print("> calculating centers")
+            if get_ctr[1] == "counts":
+                print("> finding peaks using star density counts ")
+                pc_accuracy = get_ctr[2]
+                centring_bins = int(proj_width / pc_accuracy)
+    
+                center_threshold_pixels = ctr_dist_thresh / pc_accuracy
+    
+                # find peaks, returns indeces in the matrix
+    
+                # 2d histogram using raw counts
+                counts, _, _ = np.histogram2d(
+                    star_positions[:, 0],
+                    star_positions[:, 1],
+                    bins=centring_bins,
+                    normed=False,
+                    range=[
+                        [-proj_width / 2, proj_width / 2],
+                        [-proj_width / 2, proj_width / 2],
+                        ],
+                    )
+                counts = counts.T
+                # get bin centers
+                x_ctr = 0.5 * (xedges[1:] + xedges[:-1])
+                y_ctr = 0.5 * (yedges[1:] + yedges[:-1])
+    
+                peaks = peak_local_max(
+                    counts,
+                    threshold_rel=ctr_rel_thresh,
+                    min_distance=center_threshold_pixels,
+                    )
+    
+                col_idx = peaks[:, 1]
+                row_idx = peaks[:, 0]
+                # translate indeces to coordinates
+                x_peak = x_ctr[col_idx]
+                y_peak = y_ctr[row_idx]
+                # optionally annotate with found centers
+    
+            elif get_ctr[1] == "potential":
+                # print('> finding peaks using grav potentials')
+                pc_accuracy = get_ctr[2]  # pc/pixel
+                centring_bins = int(proj_width / pc_accuracy)  # no. pixels ctr
+                pc_per_pixel = proj_width / centring_bins  # might be rounded
+                # calculate the minimum distance between centers in pc
+                center_threshold_pixels = int(ctr_dist_thresh / pc_accuracy)
+                print(
+                    "> finding peaks using grav potentials with precision",
+                    pc_per_pixel,
+                    "pc/pixel",
+                    )
+                print("> pixels along each dimension", centring_bins)
+                print(
+                    "> centers have to  be",
+                    center_threshold_pixels,
+                    "pixels apart, corresponding to ",
+                    ctr_dist_thresh,
+                    "pc",
+                    )
+                print(
+                    "> top", 100 * (1 - ctr_rel_thresh), "% of deepest potentials"
+                    )
+    
+                phi = Potential(pos=star_positions, m=masses, method="bruteforce")
+    
+                grav, xedges, yedges = np.histogram2d(
+                    star_positions[:, 0],
+                    star_positions[:, 1],
+                    bins=centring_bins,
+                    weights=np.abs(phi),
+                    normed=False,
+                    range=[
+                        [-proj_width / 2, proj_width / 2],
+                        [-proj_width / 2, proj_width / 2],
+                        ],
+                    )
+                grav = grav.T
+                x_ctr = 0.5 * (xedges[1:] + xedges[:-1])
+                y_ctr = 0.5 * (yedges[1:] + yedges[:-1])
+    
+                peaks = peak_local_max(
+                    grav,
+                    num_peaks=num_ctr,
+                    min_distance=center_threshold_pixels,
+                    threshold_rel=ctr_rel_thresh,
+                    )
+    
+                col_idx = peaks[:, 1]
+                row_idx = peaks[:, 0]
+    
+                x_peak = x_ctr[col_idx]
+                y_peak = y_ctr[row_idx]
+    
+                gc_labels = np.arange(1, x_peak.size + 1, 1)
+    
+                print("> found Centers for", x_peak.size)
+    
+            else:
+                print("!centering method not supported!")
+                exit
+    
         else:
-            print("!centering method not supported!")
-            exit
-
-    else:
-        pass
-
-    fig = plt.figure(figsize=(14, 12), dpi=300)
-    ax = fig.add_subplot(111, facecolor=cm.inferno(0))
-
-    # color maps
-    if lum_scale[0] == "static":
-        rectbin = plt.imshow(
-            lums,
-            cmap="inferno",
-            interpolation="gaussian",
-            origin="lower",
-            extent=[
-                -proj_width / 2,
-                proj_width / 2,
-                -proj_width / 2,
-                proj_width / 2,
-                ],
-            norm=LogNorm(vmin=lum_scale[1], vmax=lum_scale[2]),
-            )
-    elif lum_scale[0] == "dynamic":
-        rectbin = plt.imshow(
-            lums,
-            cmap="inferno",
-            interpolation="gaussian",
-            origin="lower",
-            extent=[
-                -proj_width / 2,
-                proj_width / 2,
-                -proj_width / 2,
-                proj_width / 2,
-                ],
-            norm=LogNorm(),
-            )
-    else:
-        print("!not a valid color scale!")
-        exit()
-
-    # print('lum plot')
-
-    # =============================================================================
-    #                            Optionally plot test particles
-    # =============================================================================
-    if sfc_positions is not None:
-        sfc_x = sfc_positions[:, 0]
-        sfc_y = sfc_positions[:, 1]
-        sfc_tags = sfc_positions[:, 3]
-
-        plt.scatter(sfc_x, sfc_y, marker=".", s=5)
-
-        for i, txt in enumerate(sfc_tags):
-            plt.annotate(
-                int(txt), (sfc_x[i], sfc_y[i]), fontsize=7, ha="center"
+            pass
+    
+        fig = plt.figure(figsize=(14, 12), dpi=300)
+        ax = fig.add_subplot(111, facecolor=cm.inferno(0))
+    
+        # color maps
+        if lum_scale[0] == "static":
+            rectbin = plt.imshow(
+                lums,
+                cmap="inferno",
+                interpolation="gaussian",
+                origin="lower",
+                extent=[
+                    -proj_width / 2,
+                    proj_width / 2,
+                    -proj_width / 2,
+                    proj_width / 2,
+                    ],
+                norm=LogNorm(vmin=lum_scale[1], vmax=lum_scale[2]),
                 )
-        plt.xlim(-proj_width / 2, proj_width / 2)
-        plt.ylim(-proj_width / 2, proj_width / 2)
-    if psc_positions is not None:
-        psc_x = psc_positions[:, 0]
-        psc_y = psc_positions[:, 1]
-        psc_tags = psc_positions[:, 3]
-
-        plt.scatter(
-            psc_positions[:, 0], psc_positions[:, 1], marker=".", s=5, c="lime"
-            )
-        for i, txt in enumerate(psc_tags):
-            plt.annotate(
-                int(txt), (psc_x[i], psc_y[i]), fontsize=8, ha="center"
+        elif lum_scale[0] == "dynamic":
+            rectbin = plt.imshow(
+                lums,
+                cmap="inferno",
+                interpolation="gaussian",
+                origin="lower",
+                extent=[
+                    -proj_width / 2,
+                    proj_width / 2,
+                    -proj_width / 2,
+                    proj_width / 2,
+                    ],
+                norm=LogNorm(),
                 )
-
-        plt.xlim(-proj_width / 2, proj_width / 2)
-        plt.ylim(-proj_width / 2, proj_width / 2)
-    # =============================================================================
-    #                              plot centers of max values if true
-    # =============================================================================
-    if get_ctr is not None:
-        # can't put in the same line since it will check the tuple regardless
-        if get_ctr[3] is True:
-            plt.scatter(
-                x_peak, y_peak, color="green", marker="x", linewidths=0.5, s=10
-                )
+        else:
+            print("!not a valid color scale!")
+            exit()
+    
+        # print('lum plot')
+    
+        # =============================================================================
+        #                            Optionally plot test particles
+        # =============================================================================
+        if sfc_positions is not None:
+            sfc_x = sfc_positions[:, 0]
+            sfc_y = sfc_positions[:, 1]
+            sfc_tags = sfc_positions[:, 3]
+    
+            plt.scatter(sfc_x, sfc_y, marker=".", s=5)
+    
+            for i, txt in enumerate(sfc_tags):
+                plt.annotate(
+                    int(txt), (sfc_x[i], sfc_y[i]), fontsize=7, ha="center"
+                    )
             plt.xlim(-proj_width / 2, proj_width / 2)
             plt.ylim(-proj_width / 2, proj_width / 2)
-
-            # iterate over labels and label each scatter point
-            for i, label in enumerate(gc_labels):
+        if psc_positions is not None:
+            psc_x = psc_positions[:, 0]
+            psc_y = psc_positions[:, 1]
+            psc_tags = psc_positions[:, 3]
+    
+            plt.scatter(
+                psc_positions[:, 0], psc_positions[:, 1], marker=".", s=5, c="lime"
+                )
+            for i, txt in enumerate(psc_tags):
                 plt.annotate(
-                    label,
-                    (x_peak[i], y_peak[i]),
-                    fontsize=5,
-                    ha="center",
-                    color="white",
+                    int(txt), (psc_x[i], psc_y[i]), fontsize=8, ha="center"
                     )
-    # =============================================================================
-    #                            plot aesthetics
-    # =============================================================================
-
-    plt_label = (
-        r"$\lambda = 1500\;\AA$ Projected Monochromatic Luminosity"
-        r" $\left(erg\;s^{-1}\AA^{-1} \right)$"
-        )
-
-    # add color bar to the bottom
-    # fig.subplots_adjust(wspace=0, hspace=0, bottom=.1)
-    # cbar_ax = fig.add_axes([.178, .090, 0.67, 0.010])
-    # cbar = fig.colorbar(
-    #              rectbin,
-    #              cax=cbar_ax,
-    #              orientation='horizontal',
-    #              pad=0
-    #             )
-    # cbar.set_label(
-    #     label=plt_label,
-    #     size=12
-    #     )
-
-    # add color bar inside
-    fig.subplots_adjust(wspace=0, hspace=0, bottom=0.1)
-    # [left, bottom, width, height]
-    cbar_ax = fig.add_axes([0.319, 0.835, 0.39, 0.008])
-    cbar = fig.colorbar(rectbin, cax=cbar_ax, orientation="horizontal", pad=0)
-    cbar_ax.xaxis.set_label_position("top")
-    cbar.set_label(label=plt_label, labelpad=8, size=12)
-
-    # annotate with time
-    ax.text(
-        -proj_width * 0.375,
-        -proj_width * 0.45,
-        "t = %.2f Myr" % (time),
-        size=12,
-        ha="center",
-        va="center",
-        color="white",
-        )
-
-    # add scale bar
-    rect = patches.Rectangle(
-        xy=(-proj_width * 0.125, -proj_width * 0.45),
-        width=proj_width * 0.25,
-        height=proj_width * 0.005,
-        linewidth=0,
-        edgecolor="white",
-        facecolor="white",
-        )
-    ax.add_patch(rect)
-    ax.text(
-        0,
-        -proj_width * 0.475,
-        "{} pc".format(int(proj_width / 4)),
-        size=12,
-        ha="center",
-        va="center",
-        color="white",
-        )
-    # ax.set_axis_off()
-    ax.axes.xaxis.set_ticklabels([])
-    ax.axes.yaxis.set_ticklabels([])
-    ax.xaxis.set_ticks_position("none")
-    ax.yaxis.set_ticks_position("none")
-    ax.add_artist(ax.patch)
-    ax.patch.set_zorder(-1)
-
-    if get_ctr is not None:
-        return x_peak, y_peak, gc_labels
-    else:
-        pass
+    
+            plt.xlim(-proj_width / 2, proj_width / 2)
+            plt.ylim(-proj_width / 2, proj_width / 2)
+        # =============================================================================
+        #                              plot centers of max values if true
+        # =============================================================================
+        if get_ctr is not None:
+            # can't put in the same line since it will check the tuple regardless
+            if get_ctr[3] is True:
+                plt.scatter(
+                    x_peak, y_peak, color="green", marker="x", linewidths=0.5, s=10
+                    )
+                plt.xlim(-proj_width / 2, proj_width / 2)
+                plt.ylim(-proj_width / 2, proj_width / 2)
+    
+                # iterate over labels and label each scatter point
+                for i, label in enumerate(gc_labels):
+                    plt.annotate(
+                        label,
+                        (x_peak[i], y_peak[i]),
+                        fontsize=5,
+                        ha="center",
+                        color="white",
+                        )
+        # =============================================================================
+        #                            plot aesthetics
+        # =============================================================================
+    
+        plt_label = (
+            r"$\lambda = 1500\;\AA$ Projected Monochromatic Luminosity"
+            r" $\left(erg\;s^{-1}\AA^{-1} \right)$"
+            )
+    
+        # add color bar to the bottom
+        # fig.subplots_adjust(wspace=0, hspace=0, bottom=.1)
+        # cbar_ax = fig.add_axes([.178, .090, 0.67, 0.010])
+        # cbar = fig.colorbar(
+        #              rectbin,
+        #              cax=cbar_ax,
+        #              orientation='horizontal',
+        #              pad=0
+        #             )
+        # cbar.set_label(
+        #     label=plt_label,
+        #     size=12
+        #     )
+    
+        # add color bar inside
+        fig.subplots_adjust(wspace=0, hspace=0, bottom=0.1)
+        # [left, bottom, width, height]
+        cbar_ax = fig.add_axes([0.319, 0.835, 0.39, 0.008])
+        cbar = fig.colorbar(rectbin, cax=cbar_ax, orientation="horizontal", pad=0)
+        cbar_ax.xaxis.set_label_position("top")
+        cbar.set_label(label=plt_label, labelpad=8, size=12)
+    
+        # annotate with time
+        ax.text(
+            -proj_width * 0.375,
+            -proj_width * 0.45,
+            "t = %.2f Myr" % (time),
+            size=12,
+            ha="center",
+            va="center",
+            color="white",
+            )
+    
+        # add scale bar
+        rect = patches.Rectangle(
+            xy=(-proj_width * 0.125, -proj_width * 0.45),
+            width=proj_width * 0.25,
+            height=proj_width * 0.005,
+            linewidth=0,
+            edgecolor="white",
+            facecolor="white",
+            )
+        ax.add_patch(rect)
+        ax.text(
+            0,
+            -proj_width * 0.475,
+            "{} pc".format(int(proj_width / 4)),
+            size=12,
+            ha="center",
+            va="center",
+            color="white",
+            )
+        # ax.set_axis_off()
+        ax.axes.xaxis.set_ticklabels([])
+        ax.axes.yaxis.set_ticklabels([])
+        ax.xaxis.set_ticks_position("none")
+        ax.yaxis.set_ticks_position("none")
+        ax.add_artist(ax.patch)
+        ax.patch.set_zorder(-1)
+    
+        if get_ctr is not None:
+            return x_peak, y_peak, gc_labels
+        else:
+            pass
 
 
 def king_profiler(
@@ -430,6 +431,7 @@ def king_profiler(
     Depends on projected_surf_densities.
     Returns info about one GC if fit is good.
     """
+    
     # get a cluster given a center --> (0,0,0) and spherically mask around it
     # returns positons (recentered), masses, luminosites, and ages of each star
     if gc_ctr.size == 2:
@@ -507,8 +509,10 @@ def king_profiler(
             p0=[1e4, 0.2, 2, 10],
             bounds=([0, 0, 0, 0], [np.inf, np.inf, 100, np.inf]),
             )
-        # r, sigma_naught, r_c, alpha, bg
-        fit_sigma = np.sqrt(np.diag(cov_matrix))
+        # params: sigma_naught, r_c, alpha, bg
+        #fit_err = np.sqrt(np.diag(cov_matrix)) 
+        
+        err_fit_sigma_naught,err_fit_r_c,err_fit_alpha,err_fit_sigma_bg= np.sqrt(np.diag(cov_matrix))
         # print(fit_params)
         # print(fit_sigma)
 
@@ -531,11 +535,12 @@ def king_profiler(
         # =============================================================================
 
         # quantify goodness of fit
-        p_value, reduced_chi_2 = chi_squared(
-            theory=theory_rho, data=rho, sigma=err, num_params=4
-            )
+        # p_value, reduced_chi_2 = chi_squared(
+        #     theory=theory_rho, data=rho, sigma=err, num_params=4
+        #     )
+        
         if truncation_radius <= 20:
-            # realistic truncation radius
+            # realistic truncation radius labels
             plot_label = (
                 r"$R_{{trunc}} = {:.2f} \: pc$"
                 "\n"
@@ -557,7 +562,7 @@ def king_profiler(
                 core_mass,
                 )
         else:
-            # if the truncation radius is a mathematical artifact
+            # if the truncation radius is a mathematical artifact, use this label
             plot_label = (
                 r"$R_{{trunc}} > 20 $ pc"
                 "\n"
@@ -575,34 +580,36 @@ def king_profiler(
                 )
 
         # plot the fit if it is good
-        if fit_alpha < good_alpha and core_mass > 1:
+        if fit_alpha < good_alpha and core_mass > 1 and np.max(rho) > 0 and np.max(r) > 0 :
 
             plt.figure(figsize=(8, 8), dpi=200)
             plt.errorbar(
                 r,
                 rho,
                 yerr=err,
-                fmt="o",
+                fmt='o',
                 capsize=5,
                 capthick=3,
                 elinewidth=3,
                 label=(
-                    r"$M_{{total}}= {:.2e} \: M_{{\odot}}$"
-                    "\n"
-                    r"$t_{{age}}= {:.2f}$ Myr"
+                    r'$M_{{total}}= {:.2e} \: M_{{\odot}}$'
+                    '\n'
+                    r'$t_{{age}}= {:.2f}$ Myr'
                     ).format(tot_m, gc_char_age),
                 )
             plt.plot(r, theory_rho, linewidth=4, label=plot_label)
             # plt.axvline(fit_r_c)
             # plt.text(fit_r_c, 0,r'$R_core$',rotation=90)
-            plt.title(r"GC # {:.0f}".format(gc_label), fontsize=16)
+            plt.title(r'GC # {:.0f}'.format(gc_label), fontsize=16)
             plt.ylabel(
-                r"Surface Mass Density ($M_{\odot} \; pc^{-2}$)", fontsize=16
+                r'Surface Mass Density ($M_{\odot} \; pc^{-2}$)', fontsize=16
                 )
-            plt.xlabel(r"R ($pc$)", fontsize=16)
-            plt.xscale("log")
-            plt.yscale("log")
-            plt.grid(visible=True, which="both", axis="y", ls="--")
+            plt.xlabel(r'R ($pc$)', fontsize=16)
+            plt.xscale('symlog')
+            plt.yscale('symlog')
+            # plt.xscale('symlog')
+            # plt.yscale('symlog')
+            plt.grid(visible=True, which='both', axis='y', ls='--')
             plt.legend(fontsize=16)
             
             return (
@@ -611,31 +618,35 @@ def king_profiler(
                 err,
                 tot_m,
                 fit_r_c,
+                err_fit_r_c,
                 core_mass,
                 truncation_radius,
                 gc_char_age,
                 fit_alpha,
+                err_fit_alpha,
                 fit_sigma_naught,
+                err_fit_sigma_naught,
                 fit_sigma_bg,
+                err_fit_sigma_bg,
                 )
         else:
-            print(r"> bad alpha for GC #{:.0f}".format(gc_label))
+            print(r'> bad alpha for GC #{:.0f}'.format(gc_label))
             # return invalid values
-            return -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+            return -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
 
     except BaseException:
         # if it can't fit it
 
-        plt.title(r"No Fit GC # {:.0f}".format(gc_label), fontsize=16)
+        plt.title(r'No Fit GC # {:.0f}'.format(gc_label), fontsize=16)
         plt.ylabel(
-            r"Surface Mass Density ($M_{\odot} \; pc^{-2}$)", fontsize=16
+            r'Surface Mass Density ($M_{\odot} \; pc^{-2}$)', fontsize=16
             )
-        plt.xlabel(r"R ($pc$)", fontsize=16)
-        plt.xscale("log")
-        plt.yscale("log")
-        plt.grid(visible=True, which="both", axis="y", ls="--")
+        plt.xlabel(r'R ($pc$)', fontsize=16)
+        plt.xscale('symlog')
+        plt.yscale('symlog')
+        plt.grid(visible=True, which='both', axis='y', ls='--')
         plt.legend(fontsize=16)
 
         print(r"> can't fit GC #{:.0f}".format(gc_label))
         # return invalid values
-        return -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2
+        return -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2
