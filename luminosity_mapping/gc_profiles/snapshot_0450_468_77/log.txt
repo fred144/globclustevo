@@ -21,7 +21,7 @@
 > bad alpha for GC #40
 > bad alpha for GC #41
 > bad alpha for GC #42
-> can't fit GC #43
+> bad alpha for GC #43
 > bad alpha for GC #44
 > bad alpha for GC #45
 > bad alpha for GC #46
@@ -78,7 +78,7 @@
 > bad alpha for GC #106
 > bad alpha for GC #107
 > bad alpha for GC #108
-> bad alpha for GC #109
+> can't fit GC #109
 > bad alpha for GC #110
 > bad alpha for GC #111
 > bad alpha for GC #112
@@ -117,7 +117,7 @@
 > bad alpha for GC #148
 > bad alpha for GC #149
 > bad alpha for GC #150
-> can't fit GC #151
+> bad alpha for GC #151
 > bad alpha for GC #152
 > bad alpha for GC #153
 > bad alpha for GC #154
@@ -144,7 +144,7 @@
 > bad alpha for GC #176
 > bad alpha for GC #177
 > bad alpha for GC #178
-> bad alpha for GC #179
+> can't fit GC #179
 > bad alpha for GC #180
 > bad alpha for GC #181
 > bad alpha for GC #182
@@ -176,7 +176,7 @@
 > bad alpha for GC #210
 > bad alpha for GC #211
 > bad alpha for GC #212
-> can't fit GC #213
+> bad alpha for GC #213
 > bad alpha for GC #214
 > bad alpha for GC #215
 > bad alpha for GC #216

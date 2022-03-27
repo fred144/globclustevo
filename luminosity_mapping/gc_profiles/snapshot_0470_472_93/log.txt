@@ -168,7 +168,7 @@
 > bad alpha for GC #203
 > bad alpha for GC #204
 > bad alpha for GC #205
-> can't fit GC #206
+> bad alpha for GC #206
 > bad alpha for GC #207
 > bad alpha for GC #208
 > bad alpha for GC #209
@@ -196,7 +196,7 @@
 > bad alpha for GC #232
 > bad alpha for GC #233
 > bad alpha for GC #235
-> bad alpha for GC #236
+> can't fit GC #236
 > bad alpha for GC #238
 > bad alpha for GC #239
 > bad alpha for GC #240

@@ -1,0 +1,25 @@
+# read in: ./pop_2_data/pos_00210_410_05_myr.txt
+> snapshot time 410.05 Myr
+> snapshot number 210
+> uniform radius of 10 pc
+> calculating centers
+> finding peaks using grav potentials with precision 0.04 pc/pixel
+> pixels along each dimension 10000
+> centers have to  be 50 pixels apart, corresponding to  2 pc
+> top 99.0 % of deepest potentials
+> found Centers for 20
+> bad alpha for GC #3
+> bad alpha for GC #4
+> bad alpha for GC #5
+> bad alpha for GC #6
+> bad alpha for GC #7
+> bad alpha for GC #8
+> bad alpha for GC #9
+> bad alpha for GC #10
+> bad alpha for GC #11
+> bad alpha for GC #12
+> bad alpha for GC #14
+> bad alpha for GC #17
+> bad alpha for GC #18
+> bad alpha for GC #19
+> found 6 good profiles

@@ -80,7 +80,7 @@
 > can't fit GC #106
 > bad alpha for GC #107
 > bad alpha for GC #108
-> can't fit GC #109
+> bad alpha for GC #109
 > bad alpha for GC #110
 > bad alpha for GC #112
 > bad alpha for GC #113

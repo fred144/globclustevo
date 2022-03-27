@@ -109,7 +109,7 @@
 > bad alpha for GC #131
 > bad alpha for GC #133
 > bad alpha for GC #134
-> bad alpha for GC #135
+> can't fit GC #135
 > bad alpha for GC #136
 > can't fit GC #137
 > bad alpha for GC #138
@@ -163,7 +163,7 @@
 > bad alpha for GC #189
 > bad alpha for GC #190
 > bad alpha for GC #191
-> bad alpha for GC #192
+> can't fit GC #192
 > bad alpha for GC #193
 > bad alpha for GC #194
 > bad alpha for GC #195
@@ -189,7 +189,7 @@
 > bad alpha for GC #218
 > bad alpha for GC #219
 > bad alpha for GC #220
-> bad alpha for GC #221
+> can't fit GC #221
 > bad alpha for GC #222
 > bad alpha for GC #223
 > bad alpha for GC #224
@@ -226,6 +226,7 @@
 > bad alpha for GC #263
 > bad alpha for GC #264
 > bad alpha for GC #265
+> bad alpha for GC #266
 > can't fit GC #267
 > bad alpha for GC #268
 > bad alpha for GC #269
@@ -256,4 +257,4 @@
 > bad alpha for GC #297
 > bad alpha for GC #299
 > bad alpha for GC #300
-> found 52 good profiles
+> found 51 good profiles
