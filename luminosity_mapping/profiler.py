@@ -231,7 +231,7 @@ if __name__ == "__main__":
             lum_map_bins=1000, # bad resolution so that you can see it better
             )
     
-        core_diameter = core_radii * 2
+       
 
 
         sys.stdout.close()
