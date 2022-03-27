@@ -50,9 +50,9 @@ def bubble_plot(masses, core_radii, ages, current_time):
     ax.set_title(r"$t_{{sim}}$ = {} Myr".format(current_time), fontsize=16)
     ax.set_ylabel(r"Total GC Mass ($M_{\odot}$)", fontsize=16)
     ax.set_xlabel(r"Age (Myr)", fontsize=16)
-    #ax.set_xlim(-45,300)
-    #ax.set_ylim(10,1e7) 
-    ax.set_yscale("log")
+    ax.set_xlim(-45,300)
+    ax.set_ylim(1e2,7e4) 
+    #ax.set_yscale("log")
     
     # fig.close()
 
@@ -61,8 +61,7 @@ if __name__ == "__main__":
 
     data_directory = r"./gc_profiles/"
     # enable discrete selection of time range based on snapshot number
-    strt_snapshot = "00200"
-    end_snapshot = "00710"
+
     files = sorted(os.listdir(data_directory))  # [-2:-1]  [300:400:2]
     # strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
     # end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
@@ -89,6 +88,7 @@ if __name__ == "__main__":
                 gc_sigmabg,
                 gc_err_sigma_bg,
             ) = zip(*info_file)
+            
             gc_m_core = np.array(gc_m_core)
             gc_tot_masses = np.array(gc_tot_masses)
             gc_r_core = np.array(gc_r_core)
@@ -96,7 +96,7 @@ if __name__ == "__main__":
             t_myr = t_myr[0]
             
             bubble_plot(
-                masses=gc_m_core,
+                masses=gc_tot_masses,
                 core_radii=gc_r_core,
                 ages=gc_char_age,
                 current_time=t_myr,

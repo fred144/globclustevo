@@ -7,7 +7,7 @@
 > pixels along each dimension 10000
 > centers have to  be 50 pixels apart, corresponding to  2 pc
 > top 99.0 % of deepest potentials
-> found Centers for 200
+> found Centers for 300
 > bad alpha for GC #11
 > bad alpha for GC #21
 > bad alpha for GC #22
@@ -163,4 +163,92 @@
 > bad alpha for GC #197
 > bad alpha for GC #198
 > bad alpha for GC #199
-> found 45 good profiles
+> bad alpha for GC #201
+> bad alpha for GC #202
+> bad alpha for GC #204
+> bad alpha for GC #205
+> bad alpha for GC #206
+> bad alpha for GC #207
+> bad alpha for GC #208
+> can't fit GC #209
+> bad alpha for GC #211
+> bad alpha for GC #213
+> bad alpha for GC #214
+> bad alpha for GC #215
+> bad alpha for GC #216
+> bad alpha for GC #217
+> bad alpha for GC #219
+> bad alpha for GC #220
+> bad alpha for GC #221
+> bad alpha for GC #222
+> bad alpha for GC #223
+> bad alpha for GC #224
+> bad alpha for GC #225
+> bad alpha for GC #226
+> bad alpha for GC #227
+> bad alpha for GC #228
+> bad alpha for GC #229
+> bad alpha for GC #231
+> bad alpha for GC #232
+> bad alpha for GC #233
+> bad alpha for GC #234
+> bad alpha for GC #235
+> bad alpha for GC #236
+> bad alpha for GC #237
+> bad alpha for GC #238
+> bad alpha for GC #239
+> bad alpha for GC #240
+> bad alpha for GC #241
+> bad alpha for GC #242
+> bad alpha for GC #243
+> bad alpha for GC #244
+> bad alpha for GC #245
+> bad alpha for GC #246
+> bad alpha for GC #247
+> bad alpha for GC #249
+> bad alpha for GC #251
+> bad alpha for GC #252
+> bad alpha for GC #253
+> bad alpha for GC #254
+> bad alpha for GC #255
+> bad alpha for GC #256
+> bad alpha for GC #257
+> can't fit GC #258
+> bad alpha for GC #259
+> bad alpha for GC #260
+> bad alpha for GC #261
+> bad alpha for GC #262
+> bad alpha for GC #263
+> bad alpha for GC #264
+> bad alpha for GC #265
+> bad alpha for GC #266
+> bad alpha for GC #267
+> bad alpha for GC #268
+> bad alpha for GC #269
+> bad alpha for GC #270
+> bad alpha for GC #272
+> bad alpha for GC #273
+> bad alpha for GC #274
+> bad alpha for GC #275
+> bad alpha for GC #276
+> bad alpha for GC #277
+> bad alpha for GC #278
+> bad alpha for GC #280
+> bad alpha for GC #282
+> bad alpha for GC #283
+> bad alpha for GC #284
+> bad alpha for GC #285
+> bad alpha for GC #286
+> bad alpha for GC #287
+> bad alpha for GC #288
+> bad alpha for GC #289
+> bad alpha for GC #291
+> bad alpha for GC #293
+> bad alpha for GC #294
+> bad alpha for GC #295
+> bad alpha for GC #296
+> bad alpha for GC #297
+> bad alpha for GC #298
+> bad alpha for GC #299
+> bad alpha for GC #300
+> found 57 good profiles
