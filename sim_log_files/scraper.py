@@ -9,8 +9,10 @@ import yt
 
 
 def snap_shot_info(sim_output_abs_dir, save_path):
-    # output_{output_num:05}/info_{output_num:05}.txt"
-    infofile = os.path.abspath(sim_output_abs_dir)
+    output_name = os.path.basename(os.path.normpath(sim_output_abs_dir))
+    info_file_name = "info_" + output_name[7:] + ".txt"
+    
+    infofile = os.path.abspath(os.path.join(sim_output_abs_dir,info_file_name))
     print("# Reading in", infofile)
 
     # read fields explicitly, not recognized by YT from this ver of RAMSES
@@ -85,6 +87,7 @@ def snap_shot_info(sim_output_abs_dir, save_path):
 
 
 lustre = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution"
+# lustre = "../cosm_test_data/refine"
 # lustre = "/home/fabg/cosm_test_data"
 for path, subdirs, files in os.walk(lustre):
     # path is lustre simulation run names, and output directories
@@ -116,8 +119,13 @@ for simrun in sim_runs:
     sim_folder = os.path.join(lustre,  simrun) 
     output_folders = sorted(os.listdir(sim_folder) )
     output_folders = [x for x in output_folders if "output_" in x]
-    latest_snapshots_abs_dir = os.path.join(sim_folder,output_folders[-1]) 
-    print(latest_snapshots_abs_dir )
+    latest_snapshots_abs_dir = os.path.join(sim_folder,output_folders[-1])
+    run_name = os.path.split(os.path.split(latest_snapshots_abs_dir)[0])[1]
+    save_path = "./" + run_name
+    
+    snap_shot_info(latest_snapshots_abs_dir, save_path)
+
+
     
 
     

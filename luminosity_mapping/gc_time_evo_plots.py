@@ -51,8 +51,8 @@ def bubble_plot(masses, core_radii, ages, current_time):
     ax.set_ylabel(r"Total GC Mass ($M_{\odot}$)", fontsize=16)
     ax.set_xlabel(r"Age (Myr)", fontsize=16)
     ax.set_xlim(-45,300)
-    ax.set_ylim(1e2,7e4) 
-    #ax.set_yscale("log")
+    ax.set_ylim(10,1e6) 
+    ax.set_yscale("log")
     
     # fig.close()
 
