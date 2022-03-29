@@ -6,7 +6,11 @@ import os
 import sys
 import shutil
 import yt
+from yt.funcs import mylog
+import warnings
 
+mylog.setLevel(40)
+warnings.simplefilter(action = "ignore", category = RuntimeWarning)
 
 def snap_shot_info(sim_output_abs_dir, save_path):
     output_name = os.path.basename(os.path.normpath(sim_output_abs_dir))
@@ -78,7 +82,7 @@ def snap_shot_info(sim_output_abs_dir, save_path):
             m_black_hole,
             m_gas,
         ]
-    )
+    ).T
     header = (
         "\t\t z \t\t SimTime[Myr] \t DM[Msun] \t pop2[Msun] \t pop3[Msun]"
         " \t SN[Msun] \t Dead[Msun] \t BH[Msun] \t Gas [Msun]"
@@ -123,7 +127,7 @@ for simrun in sim_runs:
     latest_snapshots_abs_dir = os.path.join(sim_folder,output_folders[-1])
     run_name = os.path.split(os.path.split(latest_snapshots_abs_dir)[0])[1]
     save_path = "./" + run_name
-    
+    print("# Saving latest results for", run_name)
     snap_shot_info(latest_snapshots_abs_dir, save_path)
 
 
