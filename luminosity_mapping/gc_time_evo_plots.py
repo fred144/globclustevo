@@ -49,8 +49,8 @@ def bubble_plot(masses, core_radii, ages, current_time):
    
     ax.set_title(r"$t_{{sim}}$ = {} Myr".format(current_time), fontsize=16)
     ax.set_ylabel(r"Total GC Mass ($M_{\odot}$)", fontsize=16)
-    ax.set_xlabel(r"Age (Myr)", fontsize=16)
-    ax.set_xlim(-45,300)
+    ax.set_xlabel(r"Formation Time (Myr)", fontsize=16)
+    ax.set_xlim(200,600)
     ax.set_ylim(10,1e6) 
     ax.set_yscale("log")
     
@@ -98,7 +98,7 @@ if __name__ == "__main__":
             bubble_plot(
                 masses=gc_tot_masses,
                 core_radii=gc_r_core,
-                ages=gc_char_age,
+                ages=t_myr-gc_char_age,
                 current_time=t_myr,
             )
 
