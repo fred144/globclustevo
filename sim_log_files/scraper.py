@@ -92,8 +92,7 @@ def snap_shot_info(sim_output_abs_dir, save_path):
 
 
 lustre = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution"
-# lustre = "../cosm_test_data/refine"
-# lustre = "/home/fabg/cosm_test_data"
+
 for path, subdirs, files in os.walk(lustre):
     # path is lustre simulation run names, and output directories
     for file_name in files:
@@ -125,7 +124,9 @@ for simrun in sim_runs:
     output_folders = sorted(os.listdir(sim_folder) )
     output_folders = [x for x in output_folders if "output_" in x]
     latest_snapshots_abs_dir = os.path.join(sim_folder,output_folders[-1])
+    # get the run name 
     run_name = os.path.split(os.path.split(latest_snapshots_abs_dir)[0])[1]
+    # save path based on the simulation run name
     save_path = "./" + run_name
     print("# Saving latest results for", run_name)
     snap_shot_info(latest_snapshots_abs_dir, save_path)

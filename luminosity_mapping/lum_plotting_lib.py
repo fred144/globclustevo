@@ -531,6 +531,7 @@ def king_profiler(
             sigma_bg=fit_sigma_bg,
             )
         core_mass = get_masses(clust_x, clust_y, clust_masses, fit_r_c)
+        trunc_mass = get_masses(clust_x, clust_y, clust_masses, truncation_radius)
 
         # =============================================================================
 
