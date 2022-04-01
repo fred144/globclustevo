@@ -1,0 +1,110 @@
+# read in: ./pop_2_data/pos_00480_475_01_myr.txt
+> snapshot time 475.01 Myr
+> snapshot number 480
+> uniform radius of 20 pc
+> calculating centers
+> finding peaks using grav potentials with precision 0.04 pc/pixel
+> pixels along each dimension 10000
+> centers have to  be 5 pixels apart, corresponding to  0.2 pc
+> top 99.9 % of deepest potentials
+> found Centers for 250
+> bad alpha for GC #8
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #14
+> bad alpha for GC #15
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #29
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #36
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #48
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #52
+> bad alpha for GC #56
+> bad alpha for GC #58
+> bad alpha for GC #60
+> bad alpha for GC #66
+> bad alpha for GC #71
+> bad alpha for GC #72
+> bad alpha for GC #73
+> bad alpha for GC #75
+> bad alpha for GC #76
+> bad alpha for GC #77
+> bad alpha for GC #79
+> bad alpha for GC #81
+> bad alpha for GC #82
+> bad alpha for GC #83
+> bad alpha for GC #86
+> bad alpha for GC #93
+> bad alpha for GC #95
+> bad alpha for GC #96
+> bad alpha for GC #98
+> bad alpha for GC #107
+> bad alpha for GC #115
+> bad alpha for GC #116
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #117
+> bad alpha for GC #120
+> bad alpha for GC #122
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #125
+> bad alpha for GC #125
+> bad alpha for GC #132
+> bad alpha for GC #134
+> bad alpha for GC #141
+> bad alpha for GC #146
+> bad alpha for GC #147
+> bad alpha for GC #150
+> bad alpha for GC #157
+> bad alpha for GC #158
+> bad alpha for GC #160
+> bad alpha for GC #167
+> bad alpha for GC #169
+> bad alpha for GC #170
+> bad alpha for GC #173
+> bad alpha for GC #177
+> bad alpha for GC #179
+> bad alpha for GC #183
+> bad alpha for GC #186
+> bad alpha for GC #187
+> bad alpha for GC #189
+> bad alpha for GC #190
+> bad alpha for GC #191
+> bad alpha for GC #192
+> bad alpha for GC #195
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #197
+> bad alpha for GC #197
+> bad alpha for GC #200
+> bad alpha for GC #201
+> bad alpha for GC #204
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #205
+> bad alpha for GC #205
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #206
+> bad alpha for GC #206
+> bad alpha for GC #207
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #208
+> bad alpha for GC #208
+> bad alpha for GC #213
+> bad alpha for GC #214
+> bad alpha for GC #215
+> bad alpha for GC #216
+> bad alpha for GC #220
+> bad alpha for GC #224
+> bad alpha for GC #225
+> bad alpha for GC #227
+> bad alpha for GC #234
+> bad alpha for GC #235
+> bad alpha for GC #236
+> bad alpha for GC #237
+> bad alpha for GC #239
+> bad alpha for GC #240
+> bad alpha for GC #241
+> bad alpha for GC #243
+> bad alpha for GC #245
+> bad alpha for GC #247
+> bad alpha for GC #250
+> found 173 good profiles

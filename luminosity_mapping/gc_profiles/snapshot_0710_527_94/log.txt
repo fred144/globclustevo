@@ -1,0 +1,138 @@
+# read in: ./pop_2_data/pos_00710_527_94_myr.txt
+> snapshot time 527.94 Myr
+> snapshot number 710
+> uniform radius of 20 pc
+> calculating centers
+> finding peaks using grav potentials with precision 0.04 pc/pixel
+> pixels along each dimension 10000
+> centers have to  be 5 pixels apart, corresponding to  0.2 pc
+> top 99.9 % of deepest potentials
+> found Centers for 250
+> bad alpha for GC #12
+> bad alpha for GC #13
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #20
+> bad alpha for GC #22
+> bad alpha for GC #30
+> bad alpha for GC #33
+> bad alpha for GC #35
+> bad alpha for GC #39
+> bad alpha for GC #41
+> bad alpha for GC #47
+> bad alpha for GC #50
+> bad alpha for GC #55
+> bad alpha for GC #57
+> bad alpha for GC #60
+> bad alpha for GC #61
+> bad alpha for GC #64
+> bad alpha for GC #66
+> bad alpha for GC #70
+> bad alpha for GC #72
+> bad alpha for GC #74
+> bad alpha for GC #75
+> bad alpha for GC #79
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #80
+> bad alpha for GC #80
+> bad alpha for GC #84
+> bad alpha for GC #87
+> bad alpha for GC #88
+> bad alpha for GC #92
+> bad alpha for GC #93
+> bad alpha for GC #94
+> bad alpha for GC #97
+> bad alpha for GC #98
+> bad alpha for GC #99
+> bad alpha for GC #101
+> bad alpha for GC #103
+> bad alpha for GC #104
+> bad alpha for GC #106
+> bad alpha for GC #107
+> bad alpha for GC #108
+> bad alpha for GC #109
+> bad alpha for GC #110
+> bad alpha for GC #111
+> bad alpha for GC #114
+> bad alpha for GC #116
+> bad alpha for GC #119
+> bad alpha for GC #123
+> bad alpha for GC #127
+> bad alpha for GC #128
+> bad alpha for GC #129
+> bad alpha for GC #131
+> bad alpha for GC #134
+> bad alpha for GC #135
+> bad alpha for GC #136
+> bad alpha for GC #137
+> bad alpha for GC #138
+> bad alpha for GC #141
+> bad alpha for GC #142
+> bad alpha for GC #143
+> bad alpha for GC #146
+> bad alpha for GC #147
+> bad alpha for GC #148
+> bad alpha for GC #150
+> bad alpha for GC #154
+> bad alpha for GC #155
+> bad alpha for GC #158
+> bad alpha for GC #159
+> bad alpha for GC #160
+> bad alpha for GC #161
+> bad alpha for GC #164
+> bad alpha for GC #166
+> bad alpha for GC #168
+> bad alpha for GC #169
+> bad alpha for GC #172
+> bad alpha for GC #173
+> bad alpha for GC #178
+> bad alpha for GC #179
+> bad alpha for GC #180
+> bad alpha for GC #181
+> bad alpha for GC #182
+> bad alpha for GC #183
+> bad alpha for GC #185
+> bad alpha for GC #186
+> bad alpha for GC #187
+> bad alpha for GC #189
+> bad alpha for GC #190
+> bad alpha for GC #191
+> bad alpha for GC #192
+> bad alpha for GC #195
+> bad alpha for GC #196
+> bad alpha for GC #198
+> bad alpha for GC #199
+> bad alpha for GC #200
+> bad alpha for GC #202
+> bad alpha for GC #203
+> bad alpha for GC #206
+> bad alpha for GC #207
+> bad alpha for GC #208
+> bad alpha for GC #209
+> bad alpha for GC #210
+> bad alpha for GC #212
+> bad alpha for GC #213
+> bad alpha for GC #217
+> bad alpha for GC #218
+> bad alpha for GC #219
+> bad alpha for GC #222
+> bad alpha for GC #225
+> bad alpha for GC #226
+> bad alpha for GC #228
+> bad alpha for GC #229
+> bad alpha for GC #230
+> bad alpha for GC #231
+> bad alpha for GC #232
+> bad alpha for GC #236
+> bad alpha for GC #237
+> bad alpha for GC #238
+> bad alpha for GC #239
+> bad alpha for GC #240
+> bad alpha for GC #241
+> bad alpha for GC #242
+> bad alpha for GC #243
+> bad alpha for GC #245
+> bad alpha for GC #246
+> bad alpha for GC #247
+> bad alpha for GC #248
+> bad alpha for GC #249
+> found 127 good profiles
