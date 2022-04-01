@@ -26,34 +26,34 @@ def bubble_plot(masses, core_radii, ages, current_time):
         c="black",
         s=core_diameter_per_size,
         cmap="Set3",
-        alpha=0.6,
+        alpha=0.2,
         linewidths=2,
     )
 
     # remap to actual sizes for legend
     legend_properties = dict(
         prop="sizes",
-        num=[0.25,0.50,0.75], 
+        num=[0.50, 1.0, 1.50],
         color="black",
         fmt=" {x:.2f}",
         func=lambda d: (d * norm) / 500,
     )
     legend = ax.legend(
         *scatter.legend_elements(**legend_properties),
-        loc="upper right",
+        loc="lower left",
         title="$d_{core}$ (pc)",
         title_fontsize=16,
         fontsize=15,
     )
     plt.grid(visible=True)
-   
+
     ax.set_title(r"$t_{{sim}}$ = {} Myr".format(current_time), fontsize=16)
-    ax.set_ylabel(r"Total GC Mass ($M_{\odot}$)", fontsize=16)
+    ax.set_ylabel(r"GC Truncation Mass ($M_{\odot}$)", fontsize=16)
     ax.set_xlabel(r"Formation Time (Myr)", fontsize=16)
-    ax.set_xlim(350,500)
-    ax.set_ylim(10,1e6) 
+    ax.set_xlim(350, 500)
+    ax.set_ylim(10, 1e6)
     ax.set_yscale("log")
-    
+
     # fig.close()
 
 
@@ -75,8 +75,9 @@ if __name__ == "__main__":
 
             (
                 t_myr,
+                gc_labels,
                 gc_char_age,
-                gc_tot_masses,
+                gc_out_masses,
                 gc_m_core,
                 gc_r_trunc,
                 gc_r_core,
@@ -88,17 +89,17 @@ if __name__ == "__main__":
                 gc_sigmabg,
                 gc_err_sigma_bg,
             ) = zip(*info_file)
-            
+
             gc_m_core = np.array(gc_m_core)
-            gc_tot_masses = np.array(gc_tot_masses)
+            gc_out_masses = np.array(gc_out_masses)
             gc_r_core = np.array(gc_r_core)
             gc_char_age = np.array(gc_char_age)
             t_myr = t_myr[0]
-            
+
             bubble_plot(
-                masses=gc_tot_masses,
+                masses=gc_out_masses,
                 core_radii=gc_r_core,
-                ages=t_myr-gc_char_age,
+                ages=t_myr - gc_char_age,
                 current_time=t_myr,
             )
 
