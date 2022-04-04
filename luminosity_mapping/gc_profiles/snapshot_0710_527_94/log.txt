@@ -124,15 +124,8 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 > bad alpha for GC #232
 > bad alpha for GC #236
 > bad alpha for GC #237
-> bad alpha for GC #238
-> bad alpha for GC #239
-> bad alpha for GC #240
-> bad alpha for GC #241
-> bad alpha for GC #242
-> bad alpha for GC #243
-> bad alpha for GC #245
-> bad alpha for GC #246
-> bad alpha for GC #247
-> bad alpha for GC #248
-> bad alpha for GC #249
-> found 127 good profiles
+> bad alpha f[4;33mReloaded modules[24m: lum_funcs, lum_plotting_lib[0m
+set_ylim() got an unexpected keyword argument 'left'
+> Missing info file: ./gc_profiles/snapshot_0710_527_94
+./gc_profiles/profiler_run_300_2pc_1percent/info.txt not found.
+> Missing info file: ./gc_profiles/profiler_run_30

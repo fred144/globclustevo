@@ -80,7 +80,7 @@ import sys
 
 
 def mass_function(masses, t_sim, num_bins, m_core=None):
-
+    """Plot mass function for truncation and core masses"""
     bins = np.geomspace(np.min(masses), np.max(masses), num=num_bins, endpoint=True)
     count, bin_edges = np.histogram(masses, bins=bins)
     right_edges = bin_edges[1:]
@@ -89,7 +89,15 @@ def mass_function(masses, t_sim, num_bins, m_core=None):
 
     fig, ax = plt.subplots(figsize=(8, 8), dpi=200)
     # ax.errorbar(bin_ctrs, count, fmt="-o")
-    ax.hist(masses, bins, histtype="step", linewidth=4, alpha=0.5, label=r"$M_{trunc}$")
+    ax.hist(
+        masses,
+        bins,
+        histtype="step",
+        hatch="\\",
+        linewidth=4,
+        alpha=1,
+        label=r"$M_{trunc}$",
+    )
 
     if m_core is not None:
 
@@ -100,16 +108,24 @@ def mass_function(masses, t_sim, num_bins, m_core=None):
 
         # ax.errorbar(bin_ctrs, count, fmt="-o")
         ax.hist(
-            m_core, bins, histtype="step", linewidth=4, alpha=0.5, label=r"$M_{core}$"
+            m_core,
+            bins,
+            histtype="step",
+            hatch="/",
+            linestyle="--",
+            linewidth=4,
+            alpha=1,
+            label=r"$M_{core}$",
         )
 
     ax.set_title(r"$t_{{sim}}$ = {} Myr".format(t_sim), fontsize=18)
-
-    ax.set_xlabel(r"$ M$ / M$_{\odot} $", fontsize=18)
-    ax.set_ylabel(r"dN / d$\log \left( \frac{M}{M_{\odot}} \right)$", fontsize=18)
+    ax.set_xlabel(r"$ M \left( M_{\odot} \right ) $", fontsize=18)
+    ax.set_ylabel(r"dN / d$\log \left( M \right)$", fontsize=18)
     ax.set_xscale("log")
     ax.set_yscale("log")
-    ax.set_ylim(top=100)
+    # ax.set_xlim(1, 2e5)
+    ax.set_ylim(bottom=1, top=150)
+
     ax.legend(fontsize=18, loc="upper left")
 
     # another type
@@ -176,7 +192,7 @@ if __name__ == "__main__":
     data_directory = r"./gc_profiles/"
     # enable discrete selection of time range based on snapshot number
 
-    files = sorted(os.listdir(data_directory))[-2:-1]  # [300:400:2]
+    files = sorted(os.listdir(data_directory))  # [-10:-1]  # [300:400:2]
     # strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
     # end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
     # filtered_files = files [strt_idx:end_idx:1]
@@ -210,12 +226,12 @@ if __name__ == "__main__":
             gc_char_age = np.array(gc_char_age)
             t_myr = t_myr[0]
 
-            bubble_plot(
-                masses=gc_out_masses,
-                core_radii=gc_r_core,
-                ages=t_myr - gc_char_age,
-                current_time=t_myr,
-            )
+            # bubble_plot(
+            #     masses=gc_out_masses,
+            #     core_radii=gc_r_core,
+            #     ages=t_myr - gc_char_age,
+            #     current_time=t_myr,
+            # )
 
             mass_function(
                 masses=gc_out_masses, t_sim=t_myr, num_bins=10, m_core=gc_m_core
