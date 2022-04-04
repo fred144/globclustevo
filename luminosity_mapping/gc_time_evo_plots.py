@@ -50,7 +50,7 @@ def bubble_plot(masses, core_radii, ages, current_time):
     ax.set_title(r"$t_{{sim}}$ = {} Myr".format(current_time), fontsize=16)
     ax.set_ylabel(r"GC Truncation Mass ($M_{\odot}$)", fontsize=16)
     ax.set_xlabel(r"Formation Time (Myr)", fontsize=16)
-    ax.set_xlim(350, 500)
+    ax.set_xlim(240, 500)
     ax.set_ylim(10, 1e6)
     ax.set_yscale("log")
 
