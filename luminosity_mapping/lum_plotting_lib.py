@@ -15,6 +15,10 @@ from lum_funcs import (
     projected_surf_densities,
 )
 
+# unique_ages, indices = np.unique(gc_char_age, return_inverse=True)
+# index_of_most_common_age = np.argmax(np.bincount(indices))
+# most_common_age = unique_ages[index_of_most_common_age]
+
 
 def king_model(r, k, r_c, r_t):
     """
@@ -41,7 +45,7 @@ def trunc_radius(sigma_0, r_c, alpha, sigma_bg):
     0.5bg = (peak)/( 1 + (r/r_c)^alpha)
     """
 
-    r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+    r_trunc = (r_c**alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
     return r_trunc
 
 
@@ -56,7 +60,7 @@ def star_luminosity_plot(
     lum_scale=("static", 3e32, 3e36),
     get_ctr=(True, "potential", 0.01, False),
     num_ctr=200,
-    ctr_dist_thresh=0.8,
+    ctr_dist_thresh=2,
     ctr_rel_thresh=0.001,
     masses=None,
     sfc_positions=None,
@@ -509,7 +513,8 @@ def king_profiler(
         # print(fit_sigma)
 
         # calculate theoretical best fit
-        theory_r = np.linspace(r[0], gc_rad, 2000)  # smooth version
+        theory_r = np.geomspace(r[0], gc_rad, 100, endpoint=False)
+        # theory_r = np.linspace(r[0], gc_rad, 2000)  # smooth version
         theory_rho = modified_king_model(theory_r, *fit_params)
 
         # ===========================calc derived quantities===================
