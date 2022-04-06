@@ -221,12 +221,12 @@ def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, **kwargs):
 if __name__ == "__main__":
     data_directory = r"./pop_2_data/"
     # enable discrete selection of time range based on snapshot number
-    strt_snapshot = "00120"
+    strt_snapshot = "00710"
     end_snapshot = "00710"
     files = sorted(os.listdir(data_directory))  # [-2:-1]  [300:400:2]
     strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
     end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
-    filtered_files = files[strt_idx : end_idx + 1 : 10]
+    filtered_files = files[strt_idx : end_idx + 1 : 1]
 
     for file_name in filtered_files:
 
@@ -241,8 +241,8 @@ if __name__ == "__main__":
             os.makedirs(folder_name)
 
         # put all verbose output into a text file
-        orig_stdout = sys.stdout
-        sys.stdout = open(folder_name + "/log.txt", "w")
+        # orig_stdout = sys.stdout
+        # sys.stdout = open(folder_name + "/log.txt", "w")
 
         masses, core_radii, core_masses, r_trunc, ages, time = run_profiler(
             file_name=data_file,
@@ -254,5 +254,5 @@ if __name__ == "__main__":
             ctr_rel_thresh=0.001,
         )
 
-        sys.stdout.close()
-        sys.stdout = orig_stdout
+        # sys.stdout.close()
+        # sys.stdout = orig_stdout
