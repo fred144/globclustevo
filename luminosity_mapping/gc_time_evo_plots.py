@@ -226,12 +226,12 @@ if __name__ == "__main__":
             gc_char_age = np.array(gc_char_age)
             t_myr = t_myr[0]
 
-            # bubble_plot(
-            #     masses=gc_out_masses,
-            #     core_radii=gc_r_core,
-            #     ages=t_myr - gc_char_age,
-            #     current_time=t_myr,
-            # )
+            bubble_plot(
+                masses=gc_out_masses,
+                core_radii=gc_r_core,
+                ages=t_myr - gc_char_age,
+                current_time=t_myr,
+            )
 
             mass_function(
                 masses=gc_out_masses, t_sim=t_myr, num_bins=10, m_core=gc_m_core
