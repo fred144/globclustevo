@@ -41,8 +41,8 @@ if not os.path.exists(newpath):
 sequence_title = "z_gas"
 width = (400, "pc")
 slice_axis = "z"
-start_step = 710
-end_step = 794
+start_step = 113
+end_step = 797
 
 # ctr_shift_thresh = 0.00060 #code length
 # ctr_shift_thresh =  0.000001 #code length
@@ -56,7 +56,7 @@ star_map = cm.get_cmap(clrmap)
 
 # snapshot 115 to 452 roughly spans 340 to 470 myr
 # pop II birth color bar kwargs
-time_range = (300, 510)  # Myr
+time_range = (300, 570)  # Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1] + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
 
