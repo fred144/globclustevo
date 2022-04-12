@@ -26,13 +26,17 @@ warnings.simplefilter(action="ignore", category=RuntimeWarning)
 # sequence_folder = "test_frames"
 
 # ---------------------------------DT2 Paths------------------------------------
-# lustre data path
+
+simulation_run_name = "fs035_ms10"  # lustre data path
+
 datadir = os.path.expanduser(
-    "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
-)
+    "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
+).format(simulation_run_name)
 # save path
-sequence_folder = "newcmap_gas_projected_density_z"
-parent_folder = "/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine"
+sequence_folder = "gas_projected_density_z"
+parent_folder = "/homes/fgarcia4/analysis/cluster_evolution/sequences/{}".format(
+    simulation_run_name
+)
 newpath = parent_folder + "/" + sequence_folder
 if not os.path.exists(newpath):
     print("# Creating new sequence directory", newpath)
@@ -42,7 +46,7 @@ sequence_title = "z_gas"
 width = (400, "pc")
 slice_axis = "z"
 start_step = 113
-end_step = 797
+end_step = 473  # 797
 
 # ctr_shift_thresh = 0.00060 #code length
 # ctr_shift_thresh =  0.000001 #code length
@@ -315,87 +319,82 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     # =============================luminosity mappping data extraction==================
 
     # get star positons
-    abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
-    current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
-    t_myr = np.array([current_time])
-    t_myr.resize(np.size(current_ages))
-    star_info = np.array(
-        [
-            star_id,
-            current_ages,
-            ds.arr(x_pos, "code_length").to("pc"),
-            ds.arr(y_pos, "code_length").to("pc"),
-            ds.arr(z_pos, "code_length").to("pc"),
-            ds.arr(ad["star", "particle_mass"], "code_mass").to("msun"),
-            t_myr,
-        ]
-    )
+    # abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
+    # current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
+    # t_myr = np.array([current_time])
+    # t_myr.resize(np.size(current_ages))
+    # star_info = np.array(
+    #     [
+    #         star_id,
+    #         current_ages,
+    #         ds.arr(x_pos, "code_length").to("pc"),
+    #         ds.arr(y_pos, "code_length").to("pc"),
+    #         ds.arr(z_pos, "code_length").to("pc"),
+    #         ds.arr(ad["star", "particle_mass"], "code_mass").to("msun"),
+    #         t_myr,
+    #     ]
+    # )
 
-    # star positions save
-    star_info = np.array(star_info).T
-    save_time = str(format(current_time, ".2f")).replace(".", "_")
-    save_name = "../luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
-        output_num, save_time
-    )
-    header = "\t\tID\t\tCurrentAges[Yr]\t\tX[pc]\t\tY[pc]\t\tZ[pc]\t\tmass[Msun]\t\tt_sim[Myr]"
-    np.savetxt(save_name, X=star_info, header=header)
-    print("# saved:", save_name)
+    # # star positions save
+    # star_info = np.array(star_info).T
+    # save_time = str(format(current_time, ".2f")).replace(".", "_")
+    # save_name = "../luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
+    #     output_num, save_time
+    # )
+    # header = "\t\tID\t\tCurrentAges[Yr]\t\tX[pc]\t\tY[pc]\t\tZ[pc]\t\tmass[Msun]\t\tt_sim[Myr]"
+    # np.savetxt(save_name, X=star_info, header=header)
+    # print("# saved:", save_name)
 
-    # psc sfc save
-    psc_kazu_radii = np.abs(
-        ds.arr(ad["PSC", "particle_metallicity"], "code_length").to("pc")
-    )
-    sfc_kazu_radii = np.abs(
-        ds.arr(ad["SFC", "particle_metallicity"], "code_length").to("pc")
-    )
-    pos_pscs = ds.arr(pos_pscs_recentered, "code_length").to("pc")
-    pos_sfcs = ds.arr(pos_sfcs_recentered, "code_length").to("pc")
+    # # psc sfc save
+    # psc_kazu_radii = np.abs(
+    #     ds.arr(ad["PSC", "particle_metallicity"], "code_length").to("pc")
+    # )
+    # sfc_kazu_radii = np.abs(
+    #     ds.arr(ad["SFC", "particle_metallicity"], "code_length").to("pc")
+    # )
+    # pos_pscs = ds.arr(pos_pscs_recentered, "code_length").to("pc")
+    # pos_sfcs = ds.arr(pos_sfcs_recentered, "code_length").to("pc")
 
-    # particle tags, see if unique
-    psc_tag = np.array(ad["PSC", "particle_index"])
-    sfc_tag = np.array(ad["SFC", "particle_index"])
+    # # particle tags, see if unique
+    # psc_tag = np.array(ad["PSC", "particle_index"])
+    # sfc_tag = np.array(ad["SFC", "particle_index"])
 
-    # save paths
-    psc_path = "../luminosity_mapping/psc_data/psc_{:05d}_{}_myr.txt".format(
-        output_num, save_time
-    )
-    sfc_path = "../luminosity_mapping/sfc_data/sfc_{:05d}_{}_myr.txt".format(
-        output_num, save_time
-    )
-    # x,y,z,radii at birth (pc), particle tag
-    psc_save_data = np.concatenate(
-        (pos_pscs, psc_kazu_radii[:, None], psc_tag[:, None]), axis=1
-    )
-    sfc_save_data = np.concatenate(
-        (pos_sfcs, sfc_kazu_radii[:, None], sfc_tag[:, None]), axis=1
-    )
-    print("# saved:", psc_path)
-    print("# saved:", sfc_path)
-    np.savetxt(psc_path, X=psc_save_data)
-    np.savetxt(sfc_path, X=sfc_save_data)
+    # # save paths
+    # psc_path = "../luminosity_mapping/psc_data/psc_{:05d}_{}_myr.txt".format(
+    #     output_num, save_time
+    # )
+    # sfc_path = "../luminosity_mapping/sfc_data/sfc_{:05d}_{}_myr.txt".format(
+    #     output_num, save_time
+    # )
+    # # x,y,z,radii at birth (pc), particle tag
+    # psc_save_data = np.concatenate(
+    #     (pos_pscs, psc_kazu_radii[:, None], psc_tag[:, None]), axis=1
+    # )
+    # sfc_save_data = np.concatenate(
+    #     (pos_sfcs, sfc_kazu_radii[:, None], sfc_tag[:, None]), axis=1
+    # )
+    # print("# saved:", psc_path)
+    # print("# saved:", sfc_path)
+    # np.savetxt(psc_path, X=psc_save_data)
+    # np.savetxt(sfc_path, X=sfc_save_data)
 
-    # if pos_sfcs.size > 0:
-    #     p.annotate_particles(width=width, ptype="SFC", p_size=10, marker="x", col="b")
-    # if pos_pscs.size > 0:
-    #     p.annotate_particles(width=width, ptype="PSC", p_size=10, marker="x", col="r")
+    # from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
 
-    # from yt.analysis_modules.halo_analysis.api import HaloCatalog
-
-    # hc = HaloCatalog(data_ds=ds, finder_method='hop',
-    #                   finder_kwargs={"threshold": 100, #default: 160
-    #                                   "ptype":'DM',
-    #                                   "dm_only":False})
-
-    # hc = HaloCatalog(data_ds=ds, finder_method='fof',
-    #                   finder_kwargs={"ptype": 'DM',
-    #                                 "link": 0.2,
-    #                                 "dm_only":False})
+    # hc = HaloCatalog(
+    #     data_ds=ds,
+    #     finder_method="fof",
+    #     finder_kwargs={
+    #         "ptype": "star",
+    #         "padding": 0.2,
+    #         "link": 0.0002,
+    #         "dm_only": False,
+    #     },
+    #     output_dir="../halo_data/",
+    # )
 
     # hc.create()
-    # hc_ad = hc.halos_ds.all_data()
-    # p.annotate_halos(hc,
-    #                   width=width,
-    #                   factor = 0.03)
+
+    # p.annotate_halos(hc, width=width, factor=0.1)
 
     save_path = str(
         "{}/{}/out-{}-z-{}-{}.png".format(
