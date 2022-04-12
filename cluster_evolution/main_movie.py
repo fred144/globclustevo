@@ -45,7 +45,7 @@ if not os.path.exists(newpath):
 sequence_title = "z_gas"
 width = (400, "pc")
 slice_axis = "z"
-start_step = 113
+start_step = 200
 end_step = 473  # 797
 
 # ctr_shift_thresh = 0.00060 #code length
@@ -393,8 +393,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     # )
 
     # hc.create()
-
-    # p.annotate_halos(hc, width=width, factor=0.1)
+    # # p.annotate_halos(hc, width=width)
 
     save_path = str(
         "{}/{}/out-{}-z-{}-{}.png".format(
