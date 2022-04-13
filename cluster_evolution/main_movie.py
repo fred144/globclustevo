@@ -35,10 +35,11 @@ parent_folder = "../rendering/gas/{}".format(simulation_run_name)
 pop_2_save = "../pop_2_data/{}".format(simulation_run_name)
 
 newpath = os.path.join(parent_folder, sequence_folder)
-if not os.path.exists(newpath) or not os.path.exists(pop_2_save):
+if not os.path.exists(newpath):
     print("# Creating new sequence directory", newpath)
-    print("# Creating new sequence directory", pop_2_save)
     os.makedirs(newpath)
+if not os.path.exists(pop_2_save):
+    print("# Creating new sequence directory", pop_2_save)
     os.makedirs(pop_2_save)
 # ===================================plot params=================================
 sequence_title = "z_gas"
