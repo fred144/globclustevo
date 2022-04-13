@@ -3,50 +3,49 @@ import sys
 sys.path.insert(
     1, "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages"
 )
-import warnings
-import os
 
-# import pathlib
-import yt
-import numpy as np
-from yt.funcs import mylog
-from matplotlib import cm
-import matplotlib as mpl
-
-# import matplotlib.pyplot as plt
 from macros import code_age_to_yr  # , succ_distance
+import matplotlib as mpl
+from matplotlib import cm
+from yt.funcs import mylog
+import numpy as np
+import yt
+import os
+import warnings
+
 
 mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
-# ---------------------------------local test-----------------------------------
+# ==============================================================================
+simulation_run_name = "fs07_refine"
+# ===================================local test=================================
 # datadir = os.path.relpath("../../cosm_test_data/refine")
 # # parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution'
 # parent_folder = "."
 # sequence_folder = "test_frames"
-
-# ---------------------------------DT2 Paths------------------------------------
-
-simulation_run_name = "fs035_ms10"  # lustre data path
-
+# ===================================DT2 Paths=================================
 datadir = os.path.expanduser(
     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
 ).format(simulation_run_name)
 # save path
 sequence_folder = "gas_projected_density_z"
-parent_folder = "/homes/fgarcia4/analysis/cluster_evolution/sequences/{}".format(
-    simulation_run_name
-)
-newpath = parent_folder + "/" + sequence_folder
-if not os.path.exists(newpath):
+parent_folder = "../rendering/gas/{}".format(simulation_run_name)
+
+pop_2_save = "../pop_2_data/{}".format(simulation_run_name)
+
+newpath = os.path.join(parent_folder, sequence_folder)
+if not os.path.exists(newpath) or not os.path.exists(pop_2_save):
     print("# Creating new sequence directory", newpath)
+    print("# Creating new sequence directory", pop_2_save)
     os.makedirs(newpath)
-# ---------------------------------plot params----------------------------------
+    os.makedirs(pop_2_save)
+# ===================================plot params=================================
 sequence_title = "z_gas"
 width = (400, "pc")
 slice_axis = "z"
-start_step = 200
-end_step = 473  # 797
+start_step = 113
+end_step = 800
 
 # ctr_shift_thresh = 0.00060 #code length
 # ctr_shift_thresh =  0.000001 #code length
@@ -64,7 +63,7 @@ time_range = (300, 570)  # Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1] + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
 
-# ---------------------------------MAIN LOOP-----------------------------------
+# ===================================MAIN=================================
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     print("#________________________________________________________________")
     infofile = os.path.abspath(
@@ -80,7 +79,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         "z-velocity",
         "Pressure",
         "Metallicity",
-        "dark_matter_density",
+        # "dark_matter_density",
         "xHI",
         "xHII",
         "xHeII",
@@ -121,6 +120,8 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     y_center = np.mean(y_pos)
     z_center = np.mean(z_pos)
     plt_ctr = np.array([x_center, y_center, z_center])
+    plt_ctr_in_pc = np.array(ds.arr(plt_ctr, "code_length").to("pc"))
+
     # translate points to center
     x_pos = x_pos - plt_ctr[0]
     y_pos = y_pos - plt_ctr[1]
@@ -231,7 +232,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         fontfamily="serif",
     )
 
-    # axis guide
+    # AXES GUIDE
     p_ax = p.plots[("gas", "density")].axes
     if slice_axis == "z":
         p_ax.text(
@@ -315,37 +316,49 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         length_includes_head=True,
     )
 
-    #
     # =============================luminosity mappping data extraction==================
 
     # get star positons
-    # abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)
-    # current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
-    # t_myr = np.array([current_time])
-    # t_myr.resize(np.size(current_ages))
-    # star_info = np.array(
-    #     [
-    #         star_id,
-    #         current_ages,
-    #         ds.arr(x_pos, "code_length").to("pc"),
-    #         ds.arr(y_pos, "code_length").to("pc"),
-    #         ds.arr(z_pos, "code_length").to("pc"),
-    #         ds.arr(ad["star", "particle_mass"], "code_mass").to("msun"),
-    #         t_myr,
-    #     ]
-    # )
+    abs_birth_epochs = np.round(converted_unfiltered + 339.562, 3)  #!
+    current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
+    extra_info = np.array(
+        [np.concatenate((np.array([current_time, redshft]), plt_ctr, plt_ctr_in_pc))]
+    )
+    extra_info.resize(np.size(current_ages))
+    star_info = np.array(
+        [
+            star_id,
+            current_ages,
+            ds.arr(x_pos, "code_length").to("pc"),
+            ds.arr(y_pos, "code_length").to("pc"),
+            ds.arr(z_pos, "code_length").to("pc"),
+            ds.arr(ad["star", "particle_mass"], "code_mass").to("msun"),
+            extra_info,
+        ]
+    )
 
-    # # star positions save
-    # star_info = np.array(star_info).T
-    # save_time = str(format(current_time, ".2f")).replace(".", "_")
-    # save_name = "../luminosity_mapping/pop_2_data/pos_{:05d}_{}_myr.txt".format(
-    #     output_num, save_time
-    # )
-    # header = "\t\tID\t\tCurrentAges[Yr]\t\tX[pc]\t\tY[pc]\t\tZ[pc]\t\tmass[Msun]\t\tt_sim[Myr]"
-    # np.savetxt(save_name, X=star_info, header=header)
-    # print("# saved:", save_name)
+    # =============================================================================
+    # star positions save
+    star_info = np.array(star_info).T
+    save_time = str(format(current_time, ".2f")).replace(".", "_")
+    save_name = "../pop_2_data/{}/pos_{:05d}_{}_myr.txt".format(
+        simulation_run_name, output_num, save_time
+    )
+    header = (
+        "\t\tID"
+        "\t\tCurrentAges[MYr]"
+        "\t\tX[pc]"
+        "\t\tY[pc]\t\t"
+        "Z[pc]\t\t"
+        "mass[Msun]"
+        "\t\tt_sim[Myr], z, ctr(code), ctr(pc)"
+    )
+    np.savetxt(save_name, X=star_info, header=header)
+    print("# saved:", save_name)
 
-    # # psc sfc save
+    # =============================================================================
+    # psc sfc save
+
     # psc_kazu_radii = np.abs(
     #     ds.arr(ad["PSC", "particle_metallicity"], "code_length").to("pc")
     # )
@@ -377,30 +390,35 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     # print("# saved:", sfc_path)
     # np.savetxt(psc_path, X=psc_save_data)
     # np.savetxt(sfc_path, X=sfc_save_data)
+    # =============================================================================
 
     # from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
 
     # hc = HaloCatalog(
-    #     data_ds=ds,
-    #     finder_method="fof",
+    #     ds,
+    #     finder_method="hop",
     #     finder_kwargs={
     #         "ptype": "star",
-    #         "padding": 0.2,
-    #         "link": 0.0002,
+    #         "padding": 0.1,
+    #         "link": 0.2,
     #         "dm_only": False,
     #     },
     #     output_dir="../halo_data/",
     # )
 
     # hc.create()
-    # # p.annotate_halos(hc, width=width)
 
+    # p.annotate_particles(width=width, ptype="star", p_size=20.0, marker=".", col="r")
+    # p.annotate_halos(hc, width=width)
+
+    # =============================================================================
     save_path = str(
-        "{}/{}/out-{}-z-{}-{}.png".format(
+        "{}/{}/out-{}-z-{}-t-{}-{}.png".format(
             parent_folder,
             sequence_folder,
             str(output_num).zfill(5),
-            str(format(redshft, ".4f")).replace(".", "_"),
+            str(format(redshft, ".2f")).replace(".", "_"),
+            str(format(current_time, ".2f")).replace(".", "_"),
             sequence_title.replace(" ", "-"),
         )
     )
@@ -410,7 +428,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
             "bbox_inches": "tight",
             "dpi": 200,
             "pad_inches": 0.1
-            #'facecolor': 'black'
+            # 'facecolor': 'black'
         },
     )
     # p.show()
