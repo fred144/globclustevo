@@ -45,8 +45,8 @@ if not os.path.exists(pop_2_save):
 sequence_title = "z_gas"
 width = (400, "pc")
 slice_axis = "z"
-start_step = 113
-end_step = 800
+start_step = 800
+end_step = 810
 
 # ctr_shift_thresh = 0.00060 #code length
 # ctr_shift_thresh =  0.000001 #code length
