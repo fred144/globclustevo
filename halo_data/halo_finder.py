@@ -10,11 +10,19 @@ import os
 import yt
 
 from yt.funcs import mylog
+import numpy as np
+
 from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
 
-yt.enable_parallelism()
+# from yt.analysis_modules.halo_analysis.api import HaloCatalog
+
+
+#%%
+
+# yt.enable_parallelism()
 mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
+
 
 # ---------------------------------local test-----------------------------------
 
@@ -44,7 +52,7 @@ strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
 end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
 filtered_files = files[strt_idx : end_idx + 1 : 1]
 filtered_files = [os.path.join(data_directory, file) for file in filtered_files]
-
+#%%
 cell_fields = [
     "Density",
     "x-velocity",
@@ -65,38 +73,63 @@ epf = [
     ("particle_metallicity", "d"),
 ]
 
-yt_data_series = yt.DatasetSeries(
-    filtered_files, parallel=True, fields=cell_fields, extra_particle_fields=epf
-)
+# yt_data_series = yt.DatasetSeries(
+#     filtered_files, parallel=True, fields=cell_fields, extra_particle_fields=epf
+# )
 
 
-for ds in yt_data_series:
-    print(ds.current_time)
-    p = yt.ProjectionPlot(ds, "z", ("gas", "density"), width=(400, "pc"))
-    p.annotate_particles(width=(400, "pc"), p_size=0.2, ptype="star")
-    p.annotate_particles(width=(400, "pc"), ptype="SFC", p_size=10, marker="x", col="b")
-    p.show()
+# for ds in yt_data_series:
+#     print(ds.current_time)
 
+for file_name in filtered_files:
+    file_name = file_name + "/info_{}.txt".format(file_name[-5:])
+    ds = yt.load(file_name, fields=cell_fields, extra_particle_fields=epf)
+    ad = ds.all_data()
 
-# if pos_sfcs.size > 0:
-#     p.annotate_particles(width=width, ptype="SFC", p_size=10, marker="x", col="b")
-# if pos_pscs.size > 0:
-#     p.annotate_particles(width=width, ptype="PSC", p_size=10, marker="x", col="r")
+    # read POPII star info
 
-# from yt.analysis_modules.halo_analysis.api import HaloCatalog
+    x_pos = np.array(ad["star", "particle_position_x"])
+    y_pos = np.array(ad["star", "particle_position_y"])
+    z_pos = np.array(ad["star", "particle_position_z"])
 
-# hc = HaloCatalog(data_ds=ds, finder_method='hop',
-#                   finder_kwargs={"threshold": 100, #default: 160
-#                                   "ptype":'DM',
-#                                   "dm_only":False})
+    # center based on star position distribution
+    x_center = np.mean(x_pos)
+    y_center = np.mean(y_pos)
+    z_center = np.mean(z_pos)
+    plt_ctr = np.array([x_center, y_center, z_center])
 
-# hc = HaloCatalog(data_ds=ds, finder_method='fof',
-#                   finder_kwargs={"ptype": 'DM',
-#                                 "link": 0.2,
-#                                 "dm_only":False})
+    hc = HaloCatalog(
+        data_ds=ds,
+        finder_method="fof",
+        finder_kwargs={
+            "ptype": "star",
+            "padding": 0.0001,
+            "link": 0.000005,
+            "dm_only": False,
+        },
+        output_dir="../halo_data/",
+    )
 
-# hc.create()
-# hc_ad = hc.halos_ds.all_data()
-# p.annotate_halos(hc,
-#                   width=width,
-#                   factor = 0.03)
+    hc.create()
+    # hc_ad = hc.halos_ds.all_data()
+
+    halos = yt.load("../halo_data/info_00500/info_00500.0.h5")
+
+    # Create the halo catalog from this halo list
+    cata = HaloCatalog(halos_ds=halos)
+    cata.load()
+
+    width = (400, "pc")
+
+    p = yt.ProjectionPlot(ds, "z", "density", width=width, center=plt_ctr)
+    p.annotate_particles(width=width, ptype="star", p_size=0.2, marker=".", col="r")
+    p.annotate_halos(
+        cata,
+        width=width,
+    )
+    p.set_cmap("density", "copper")
+    # p.set_figure_size(5)
+    p.save(
+        "./",
+        mpl_kwargs={"bbox_inches": "tight", "dpi": 500, "pad_inches": 0.1},
+    )
