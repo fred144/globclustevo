@@ -81,6 +81,7 @@ epf = [
 
 for file_name in filtered_files:
     file_name = file_name + "/info_{}.txt".format(file_name[-5:])
+    print("Reading", file_name)
     ds = yt.load(file_name, fields=cell_fields, extra_particle_fields=epf)
     ad = ds.all_data()
 
