@@ -1,4 +1,5 @@
 import sys
+
 sys.path.insert(
     1, "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages"
 )
@@ -26,7 +27,7 @@ datadir = os.path.expanduser(
 
 # ---------------------------------save path---------------------
 ##### cluster save path ######
-parent_folder = "/homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10"
+parent_folder = "/homes/fgarcia4/analysis/cluster_evolution_/sequences/fs035_ms10"
 sequence_folder = "run_through"
 newpath = parent_folder + "/" + sequence_folder
 if not os.path.exists(newpath):
@@ -116,7 +117,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     else:
         center = max_density_coords[-1]
         p = yt.ProjectionPlot(
-            ds, axis, "density", width=width, center=max_density_coords[-1]
+            ds, axis, "density", width=width, center=max_density_coord
         )
         x_pos = np.array(ad["star", "particle_position_x"]) - max_density_coords[-1][0]
         y_pos = np.array(ad["star", "particle_position_y"]) - max_density_coords[-1][1]
