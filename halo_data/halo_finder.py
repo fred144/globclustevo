@@ -106,7 +106,7 @@ for file_name in filtered_files:
             "link": 0.00000148,
             "dm_only": False,
         },
-        output_dir="../halo_data/",
+        output_dir="../halo_data/fs07_refine",
     )
 
     hc.create()
