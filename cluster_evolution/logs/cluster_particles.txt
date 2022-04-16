@@ -17,72 +17,84 @@ Warning: particle_families are modified at
 
 > distance b/w current and previously used max density: 0.0
 > plot centered at [0.4737854  0.49093628 0.50039673]
-#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10/run_through/out-00001-z-127_0000-test.png
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00001-z-127_0000-test.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00002/info_00002.txt
 
 > distance b/w current and previously used max density: 0.00013647875839232116
 > using old center at [0.4737854  0.49093628 0.50039673]
-#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10/run_through/out-00002-z-99_2074-test.png
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00002-z-99_2074-test.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00003/info_00003.txt
 
 > distance b/w current and previously used max density: 0.00031714797501871533
 > using old center at [0.4737854  0.49093628 0.50039673]
-#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10/run_through/out-00003-z-82_7223-test.png
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00003-z-82_7223-test.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00004/info_00004.txt
 
 > distance b/w current and previously used max density: 0.0006042172202521768
 > using old center at [0.4737854  0.49093628 0.50039673]
-#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10/run_through/out-00004-z-72_1871-test.png
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00004-z-72_1871-test.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00005/info_00005.txt
 
 > distance b/w current and previously used max density: 0.0008588407763348565
 > using old center at [0.4737854  0.49093628 0.50039673]
-#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10/run_through/out-00005-z-63_9046-test.png
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00005-z-63_9046-test.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00006/info_00006.txt
 
 > distance b/w current and previously used max density: 0.0010589203840879805
 > using old center at [0.4737854  0.49093628 0.50039673]
-#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10/run_through/out-00006-z-58_2585-test.png
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00006-z-58_2585-test.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00007/info_00007.txt
 
 > distance b/w current and previously used max density: 0.0011835155901895335
 > using old center at [0.4737854  0.49093628 0.50039673]
-#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10/run_through/out-00007-z-53_4805-test.png
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00007-z-53_4805-test.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00008/info_00008.txt
 
 > distance b/w current and previously used max density: 0.0016922127780805056
 > using old center at [0.4737854  0.49093628 0.50039673]
-#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10/run_through/out-00008-z-49_3901-test.png
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00008-z-49_3901-test.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00009/info_00009.txt
 
 > distance b/w current and previously used max density: 0.0017932161106524762
 > using old center at [0.4737854  0.49093628 0.50039673]
-#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10/run_through/out-00009-z-45_8494-test.png
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00009-z-45_8494-test.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00010/info_00010.txt
 
 > distance b/w current and previously used max density: 0.001922546870171227
 > using old center at [0.4737854  0.49093628 0.50039673]
-#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10/run_through/out-00010-z-42_7563-test.png
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00010-z-42_7563-test.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00011/info_00011.txt
 
 > distance b/w current and previously used max density: 0.002053257038132493
 > using old center at [0.4737854  0.49093628 0.50039673]
-#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10/run_through/out-00011-z-40_0335-test.png
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00011-z-40_0335-test.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00012/info_00012.txt
 
 > distance b/w current and previously used max density: 0.002088782763101482
 > using old center at [0.4737854  0.49093628 0.50039673]
-#saved: /homes/fgarcia4/analysis/cluster_evolution_fs07/sequences/fs035_ms10/run_through/out-00012-z-39_5280-test.png
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00012-z-39_5280-test.png
 ----------------------------------------------------------------------------------
 # reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00013/info_00013.txt
+
+> distance b/w current and previously used max density: 0.0021541930179687415
+> using old center at [0.4737854  0.49093628 0.50039673]
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00013-z-38_0810-test.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00014/info_00014.txt
+
+> distance b/w current and previously used max density: 0.002276821484722176
+> using old center at [0.4737854  0.49093628 0.50039673]
+#saved: /homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10/run_through/out-00014-z-36_3012-test.png
+----------------------------------------------------------------------------------
+# reading in: /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00015/info_00015.txt

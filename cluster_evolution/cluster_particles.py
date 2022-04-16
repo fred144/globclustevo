@@ -27,7 +27,7 @@ datadir = os.path.expanduser(
 
 # ---------------------------------save path---------------------
 ##### cluster save path ######
-parent_folder = "/homes/fgarcia4/analysis/cluster_evolution_/sequences/fs035_ms10"
+parent_folder = "/homes/fgarcia4/analysis/cluster_evolution/sequences/fs035_ms10"
 sequence_folder = "run_through"
 newpath = parent_folder + "/" + sequence_folder
 if not os.path.exists(newpath):
@@ -132,7 +132,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     )
     p.annotate_scale(corner="lower_right")
     p.set_cmap("density", "magma")
-    p.set_zlim("density", 0.01, 0.15)
+    #p.set_zlim("density", 0.01, 0.15)
     p.set_log(("gas", "density"), False)
 
     p.annotate_text(
