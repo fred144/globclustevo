@@ -36,7 +36,7 @@ if not os.path.exists(newpath):
 sequence_title = "test"
 width = (410, "pc")
 axis = "z"
-start_step = 1
+start_step = 20
 end_step = 200
 # ctr_shift_thresh = 0.00060 #code length
 ctr_shift_thresh = 0.00005  # code length
@@ -126,7 +126,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         print("> using old center at {}".format(center))
     p.annotate_timestamp(
         corner="lower_left",
-        time_format="t = {time:.2f} {units}",
+        time_format="t = {time:.6f} {units}",
         time_unit="Myr",
         redshift=True,
     )
