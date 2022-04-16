@@ -1,3 +1,7 @@
+import sys
+sys.path.insert(
+    1, "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages"
+)
 import warnings
 import os
 import yt
@@ -31,7 +35,7 @@ if not os.path.exists(newpath):
 sequence_title = "test"
 width = (410, "pc")
 axis = "z"
-start_step = 0
+start_step = 1
 end_step = 200
 # ctr_shift_thresh = 0.00060 #code length
 ctr_shift_thresh = 0.00005  # code length
