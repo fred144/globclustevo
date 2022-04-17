@@ -18,7 +18,7 @@ mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 # ==============================================================================
-simulation_run_name = "fs07_refine"
+simulation_run_name = "fs035_ms10"
 # ===================================local test=================================
 # datadir = os.path.relpath("../../cosm_test_data/refine")
 # # parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution'
@@ -30,8 +30,8 @@ datadir = os.path.expanduser(
 ).format(simulation_run_name)
 # save path
 sequence_folder = "gas_projected_density_z"
-parent_folder = "../rendering/gas/{}".format(simulation_run_name)
 
+parent_folder = "../rendering/gas/{}".format(simulation_run_name)
 pop_2_save = "../pop_2_data/{}".format(simulation_run_name)
 
 newpath = os.path.join(parent_folder, sequence_folder)
@@ -45,8 +45,8 @@ if not os.path.exists(pop_2_save):
 sequence_title = "z_gas"
 width = (400, "pc")
 slice_axis = "z"
-start_step = 800
-end_step = 810
+start_step = 154 # fs07:113, fs035:154
+end_step = 503
 
 # ctr_shift_thresh = 0.00060 #code length
 # ctr_shift_thresh =  0.000001 #code length
@@ -61,7 +61,7 @@ star_map = cm.get_cmap(clrmap)
 # snapshot 115 to 452 roughly spans 340 to 470 myr
 
 # pop II birth color bar kwargs
-birth_start = 339.562  # Myr, need to figure out how to got to absolute ages
+birth_start = 344.295545 #339.562  # Myr, need to figure out how to got to absolute ages
 time_range = (300, 570)  # Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1] + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
