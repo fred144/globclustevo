@@ -1,198 +1,499 @@
-# Creating new sequence directory ./gc_profiles/snapshot_0130_356_19
-# Creating new sequence directory ./gc_profiles/snapshot_0140_365_67
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: divide by zero encountered in double_scalars
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
   r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-# Creating new sequence directory ./gc_profiles/snapshot_0150_375_65
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
   r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-# Creating new sequence directory ./gc_profiles/snapshot_0160_383_08
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-# Creating new sequence directory ./gc_profiles/snapshot_0170_388_26
-# Creating new sequence directory ./gc_profiles/snapshot_0180_393_43
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
   r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-# Creating new sequence directory ./gc_profiles/snapshot_0190_398_68
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: divide by zero encountered in double_scalars
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
   r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-# Creating new sequence directory ./gc_profiles/snapshot_0200_404_16
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: divide by zero encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-# Creating new sequence directory ./gc_profiles/snapshot_0210_410_05
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: divide by zero encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-# Creating new sequence directory ./gc_profiles/snapshot_0220_415_54
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: overflow encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-# Creating new sequence directory ./gc_profiles/snapshot_0230_420_66
-# Creating new sequence directory ./gc_profiles/snapshot_0240_424_30
-# Creating new sequence directory ./gc_profiles/snapshot_0250_426_61
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: divide by zero encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-# Creating new sequence directory ./gc_profiles/snapshot_0260_428_82
-# Creating new sequence directory ./gc_profiles/snapshot_0270_430_78
-# Creating new sequence directory ./gc_profiles/snapshot_0280_432_92
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+# Creating new sequence directory ./gc_profiles/snapshot_0395_457_49
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-# Creating new sequence directory ./gc_profiles/snapshot_0290_435_04
-# Creating new sequence directory ./gc_profiles/snapshot_0300_437_13
-# Creating new sequence directory ./gc_profiles/snapshot_0310_439_28
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-# Creating new sequence directory ./gc_profiles/snapshot_0320_441_43
-# Creating new sequence directory ./gc_profiles/snapshot_0330_443_57
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
-  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-# Creating new sequence directory ./gc_profiles/snapshot_0340_445_77
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
-  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-# Creating new sequence directory ./gc_profiles/snapshot_0350_447_96
-# Creating new sequence directory ./gc_profiles/snapshot_0360_450_18
-# Creating new sequence directory ./gc_profiles/snapshot_0370_452_28
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
-  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
-  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-# Creating new sequence directory ./gc_profiles/snapshot_0380_454_36
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
-  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
-  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-# Creating new sequence directory ./gc_profiles/snapshot_0390_456_44
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0400_458_34
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+# Creating new sequence directory ./gc_profiles/snapshot_0405_459_39
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0410_460_45
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0415_461_48
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
   r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0420_462_51
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0425_463_57
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0430_464_59
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0435_465_65
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
+  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
 # Creating new sequence directory ./gc_profiles/snapshot_0440_466_68
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0445_467_70
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0450_468_77
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
   r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+# Creating new sequence directory ./gc_profiles/snapshot_0455_469_81
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0460_470_83
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0465_471_88
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0470_472_93
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0475_473_96
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0480_475_01
-# Creating new sequence directory ./gc_profiles/snapshot_0490_477_05
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
-  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-# Creating new sequence directory ./gc_profiles/snapshot_0500_479_16
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
-  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
-  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-# Creating new sequence directory ./gc_profiles/snapshot_0510_481_25
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
   r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0485_476_03
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0490_477_05
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
+  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+# Creating new sequence directory ./gc_profiles/snapshot_0495_478_10
+# Creating new sequence directory ./gc_profiles/snapshot_0500_479_16
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0505_480_20
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
+  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+# Creating new sequence directory ./gc_profiles/snapshot_0510_481_25
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0515_482_30
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0520_483_31
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0525_484_33
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0530_485_35
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0535_486_38
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0540_487_43
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0545_488_47
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0550_489_51
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0555_490_36
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0560_491_41
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0565_492_44
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0570_493_49
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0575_494_49
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0580_495_52
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+# Creating new sequence directory ./gc_profiles/snapshot_0585_496_57
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0590_497_65
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
+  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0595_498_72
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0600_499_78
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0605_500_88
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0610_502_07
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0615_503_27
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0620_504_38
-# Creating new sequence directory ./gc_profiles/snapshot_0630_506_69
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+# Creating new sequence directory ./gc_profiles/snapshot_0625_505_50
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0630_506_69
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0635_507_73
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0640_509_16
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0645_510_69
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0650_512_37
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: divide by zero encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0655_514_15
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0660_516_05
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: overflow encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
-  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0665_517_45
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0670_518_49
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0675_519_57
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0680_520_67
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0685_521_80
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0690_522_97
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0695_524_16
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
+  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
 # Creating new sequence directory ./gc_profiles/snapshot_0700_525_37
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:44: RuntimeWarning: invalid value encountered in double_scalars
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
   r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
-/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:34: RuntimeWarning: overflow encountered in power
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0705_526_51
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0715_529_33
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: invalid value encountered in double_scalars
+  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0720_530_58
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0725_531_83
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0730_533_09
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0735_534_35
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:48: RuntimeWarning: overflow encountered in double_scalars
+  r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+# Creating new sequence directory ./gc_profiles/snapshot_0740_535_61
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
+  sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
+/lustre/fgarcia4/glob-clust-evo/luminosity_mapping/lum_plotting_lib.py:38: RuntimeWarning: overflow encountered in power
   sigma = bg + (sigma_naught / (1 + (r / r_c) ** alpha))
