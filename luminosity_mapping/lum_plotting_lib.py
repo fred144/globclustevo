@@ -45,7 +45,7 @@ def trunc_radius(sigma_0, r_c, alpha, sigma_bg):
     0.5bg = (peak)/( 1 + (r/r_c)^alpha)
     """
 
-    r_trunc = (r_c**alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+    r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
     return r_trunc
 
 
@@ -59,9 +59,9 @@ def star_luminosity_plot(
     plt_bins=2000,
     lum_scale=("static", 3e32, 3e36),
     get_ctr=(True, "potential", 0.01, False),
-    num_ctr=200,
-    ctr_dist_thresh=2,
-    ctr_rel_thresh=0.001,
+    num_ctr=100,
+    ctr_dist_thresh=10,
+    ctr_rel_thresh=0.0001,
     masses=None,
     sfc_positions=None,
     psc_positions=None,
@@ -141,7 +141,7 @@ def star_luminosity_plot(
         # =============================================================================
         #              get GC centers based on potential or density counts
         # =============================================================================
-        if get_ctr is not None:
+        if get_ctr is not None:  ####### edit this for halo finder support
             print("> calculating centers")
             if get_ctr[1] == "counts":
                 print("> finding peaks using star density counts ")

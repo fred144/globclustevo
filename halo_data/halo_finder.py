@@ -80,13 +80,15 @@ epf = [
 #     print(ds.current_time)
 
 for file_name in filtered_files:
+
     file_name = file_name + "/info_{}.txt".format(file_name[-5:])
+
     print("Reading", file_name)
+
     ds = yt.load(file_name, fields=cell_fields, extra_particle_fields=epf)
     ad = ds.all_data()
 
     # read POPII star info
-
     x_pos = np.array(ad["star", "particle_position_x"])
     y_pos = np.array(ad["star", "particle_position_y"])
     z_pos = np.array(ad["star", "particle_position_z"])

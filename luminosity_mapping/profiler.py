@@ -48,6 +48,7 @@ def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, **kwargs):
     )
     # =============================================================================
     # get center x and y coordinates
+    # edit this for halo finder support
     peak_x, peak_y, gc_labels = star_luminosity_plot(
         proj_width=proj_width,
         star_positions=star_positions,
@@ -222,7 +223,7 @@ if __name__ == "__main__":
     data_directory = r"./pop_2_data/"
     # enable discrete selection of time range based on snapshot number
     strt_snapshot = "00710"
-    end_snapshot = "00710"
+    end_snapshot = "00810"
     files = sorted(os.listdir(data_directory))  # [-2:-1]  [300:400:2]
     strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
     end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
@@ -250,7 +251,7 @@ if __name__ == "__main__":
             gc_radii=20,  # uniform radii to be used to extract clusters
             lum_map_bins=1000,  # bad resolution so that you can see it better
             num_ctr=250,
-            ctr_dist_thresh=0.20,
+            ctr_dist_thresh=5,
             ctr_rel_thresh=0.001,
         )
 

@@ -189,58 +189,57 @@ def bubble_plot(masses, core_radii, ages, current_time):
 
 if __name__ == "__main__":
 
-    data_directory = r"./gc_profiles/"
+    data_directory = r"./gc_profiles"
+    profiler_run = "profiler_run_300_2pc_1percent"
     # enable discrete selection of time range based on snapshot number
-
-    files = sorted(os.listdir(data_directory))  # [-10:-1]  # [300:400:2]
+    master = os.path.join(data_directory, profiler_run)
+    files = sorted(os.listdir(master))  # [-10:-1]  # [300:400:2]
     # strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
     # end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
     # filtered_files = files [strt_idx:end_idx:1]
 
     for file_name in files:
 
-        try:
-            data_file = data_directory + file_name
-            info_file = np.loadtxt(data_file + "/info.txt")
+        # try:
+        data_file = os.path.join(master, file_name)
+        info_file = np.loadtxt(data_file + "/info.txt")
 
-            (
-                t_myr,
-                gc_labels,
-                gc_char_age,
-                gc_out_masses,
-                gc_m_core,
-                gc_r_trunc,
-                gc_r_core,
-                gc_err_rc,
-                gc_alpha,
-                gc_err_alpha,
-                gc_sigma0,
-                gc_err_sigma_0,
-                gc_sigmabg,
-                gc_err_sigma_bg,
-            ) = zip(*info_file)
+        (
+            t_myr,
+            gc_labels,
+            gc_char_age,
+            gc_out_masses,
+            gc_m_core,
+            gc_r_trunc,
+            gc_r_core,
+            gc_err_rc,
+            gc_alpha,
+            gc_err_alpha,
+            gc_sigma0,
+            gc_err_sigma_0,
+            gc_sigmabg,
+            gc_err_sigma_bg,
+        ) = zip(*info_file)
 
-            gc_m_core = np.array(gc_m_core)
-            gc_out_masses = np.array(gc_out_masses)
-            gc_r_core = np.array(gc_r_core)
-            gc_char_age = np.array(gc_char_age)
-            t_myr = t_myr[0]
+        gc_m_core = np.array(gc_m_core)
+        gc_out_masses = np.array(gc_out_masses)
+        gc_r_core = np.array(gc_r_core)
+        gc_char_age = np.array(gc_char_age)
+        t_myr = t_myr[0]
 
-            bubble_plot(
-                masses=gc_out_masses,
-                core_radii=gc_r_core,
-                ages=t_myr - gc_char_age,
-                current_time=t_myr,
-            )
+        bubble_plot(
+            masses=gc_out_masses,
+            core_radii=gc_r_core,
+            ages=t_myr - gc_char_age,
+            current_time=t_myr,
+        )
 
-            mass_function(
-                masses=gc_out_masses, t_sim=t_myr, num_bins=10, m_core=gc_m_core
-            )
+        mass_function(masses=gc_out_masses, t_sim=t_myr, num_bins=10, m_core=gc_m_core)
 
-        except Exception as e:
-            print(e)
-            print("> Missing info file:", data_file)
-            pass
+        # except Exception as e:
+        #     print(e)
+        #     print("> Missing info file:", data_file)
+        #     pass
 
         # if not os.path.exists(folder_name):
         #     print("# Creating new sequence directory", folder_name)
