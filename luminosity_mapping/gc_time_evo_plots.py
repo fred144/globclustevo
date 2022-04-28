@@ -189,10 +189,11 @@ def bubble_plot(masses, core_radii, ages, current_time):
 
 if __name__ == "__main__":
 
-    data_directory = r"./gc_profiles"
-    profiler_run = "profiler_run_300_2pc_1percent"
+    data_directory = r"./gc_profiles/"
+    # profiler_run = "profiler_run_300_2pc_1percent/"
+    profiler_run = "profiler_run_100_5pc_1percent/"
     # enable discrete selection of time range based on snapshot number
-    master = os.path.join(data_directory, profiler_run)
+    master = data_directory + profiler_run
     files = sorted(os.listdir(master))  # [-10:-1]  # [300:400:2]
     # strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
     # end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
@@ -201,7 +202,7 @@ if __name__ == "__main__":
     for file_name in files:
 
         # try:
-        data_file = os.path.join(master, file_name)
+        data_file = master + file_name
         info_file = np.loadtxt(data_file + "/info.txt")
 
         (
@@ -234,7 +235,7 @@ if __name__ == "__main__":
             current_time=t_myr,
         )
 
-        mass_function(masses=gc_out_masses, t_sim=t_myr, num_bins=10, m_core=gc_m_core)
+        # mass_function(masses=gc_out_masses, t_sim=t_myr, num_bins=10, m_core=gc_m_core)
 
         # except Exception as e:
         #     print(e)

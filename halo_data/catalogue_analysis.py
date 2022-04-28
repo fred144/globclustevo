@@ -55,8 +55,10 @@ def filter_snapshots(folder_path, start_snap: int, end_snap: int, sampling=1):
     return abs_paths
 
 
-pop2_data_set = filter_snapshots(pop2_data_directory, 800, 805)
-halo_data_directory = filter_snapshots(halo_data_directory, 800, 805)
+# =============================================================================
+pop2_data_set = filter_snapshots(pop2_data_directory, 113, 808, 10)
+halo_data_directory = filter_snapshots(halo_data_directory, 113, 808, 10)
+# =============================================================================
 
 
 def get_cluster(
@@ -137,6 +139,51 @@ def mass_function(masses, t_sim, num_bins, m_vir=None):
     ax.legend(fontsize=18, loc="upper left")
 
 
+def bubble_plot(masses, vir_radii, ages, current_time):
+    vir_diameter = vir_radii * 2
+
+    colors = np.random.uniform(size=masses.size)
+    norm = 5
+    # map to differnt sizes for better plotting
+    vir_diameter_per_size = (500 * vir_diameter) / norm
+
+    fig, ax = plt.subplots(figsize=(8, 8), dpi=200)
+
+    scatter = ax.scatter(
+        ages,
+        masses,
+        c="black",
+        s=vir_diameter_per_size,
+        cmap="Set3",
+        alpha=0.2,
+        linewidths=2,
+    )
+
+    # remap to actual sizes for legend
+    legend_properties = dict(
+        prop="sizes",
+        num=[0.50, 1.0, 1.50],
+        color="black",
+        fmt=" {x:.2f}",
+        func=lambda d: (d * norm) / 500,
+    )
+    legend = ax.legend(
+        *scatter.legend_elements(**legend_properties),
+        loc="lower left",
+        title="$d_{vir}$ (pc)",
+        title_fontsize=18,
+        fontsize=15,
+    )
+    plt.grid(visible=True)
+
+    ax.set_title(r"$t_{{sim}}$ = {:.2f} Myr".format(t_sim), fontsize=18)
+    ax.set_ylabel(r"GC $M_{vir}$ ($M_{\odot}$)", fontsize=18)
+    ax.set_xlabel(r"Formation Time (Myr)", fontsize=18)
+    ax.set_xlim(300, 500)
+    ax.set_ylim(10, 1e6)
+    ax.set_yscale("log")
+
+
 cell_fields = [
     "Density",
     "x-velocity",
@@ -193,11 +240,19 @@ for pop, hc in zip(pop2_data_set, halo_data_directory):
         gc_uniform_rad_mass.append(uni_mass)
         gc_ages.append(age)
         gc_vir_mass.append(mass)
-    #
+    gc_ages = np.array(gc_ages)
+    gc_vir_mass = np.array(gc_vir_mass)
+    gc_uniform_rad_mass = np.array(gc_uniform_rad_mass)
     # plt.scatter(z_pop2, y_pop2, s=0.1, alpha=0.1)
     # plt.scatter(z_halos, y_halos, s=0.2, color="red")
     # plt.xlim(-200, 200)
     # plt.ylim(-200, 200)
     plt.figure(figsize=(8, 8), dpi=400)
-    mass_function(masses=gc_uniform_rad_mass, t_sim=t_sim, num_bins=10, m_vir=None)
+    # mass_function(
+    #     masses=gc_uniform_rad_mass, t_sim=t_sim, num_bins=10, m_vir=gc_vir_mass
+    # )
+    birth_time = t_sim - gc_ages
+    bubble_plot(
+        masses=gc_vir_mass, vir_radii=vir_radius, ages=birth_time, current_time=t_sim
+    )
 #%%
