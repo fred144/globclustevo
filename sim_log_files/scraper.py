@@ -84,9 +84,10 @@ def snap_shot_info(sim_output_abs_dir, save_path):
         ]
     )
     header = (
-        "\t\t z \t\t SimTime[Myr] \t DM[Msun] \t pop2[Msun] \t pop3[Msun]"
+        "latest_output:{} \t z \t\t SimTime[Myr] \t DM[Msun] \t pop2[Msun] \t pop3[Msun]"
         " \t SN[Msun] \t Dead[Msun] \t BH[Msun] \t Gas [Msun]"
-    )
+    ).format(output_name[7:])
+    
     save_path = os.path.join(save_path,"latest_sim_stats.txt")
     np.savetxt(fname=save_path, X=np.atleast_2d(tot_masses), header=header)
 
