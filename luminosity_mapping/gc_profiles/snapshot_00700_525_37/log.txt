@@ -1,0 +1,131 @@
+# read in: ../pop_2_data/fs07_refine/pos_00700_525_37_myr.txt
+> snapshot time 525.37 Myr
+> snapshot number 700
+> uniform radius of 20 pc
+***Previous Cluster Size 1371
+***Now Returning 324
+***Previous Cluster Size 5821
+***Now Returning 2711
+***Previous Cluster Size 216
+***Now Returning 117
+***Previous Cluster Size 9012
+***Now Returning 976
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #3
+***Previous Cluster Size 171
+***Now Returning 156
+***Previous Cluster Size 1834
+***Now Returning 357
+***Previous Cluster Size 1187
+***Now Returning 552
+***Previous Cluster Size 5959
+***Now Returning 549
+***Previous Cluster Size 2033
+***Now Returning 1054
+***Previous Cluster Size 3492
+***Now Returning 1238
+***Previous Cluster Size 7865
+***Now Returning 2641
+***Previous Cluster Size 1641
+***Now Returning 1549
+***Previous Cluster Size 9817
+***Now Returning 5057
+***Previous Cluster Size 9830
+***Now Returning 5050
+***Previous Cluster Size 9911
+***Now Returning 5047
+***Previous Cluster Size 9953
+***Now Returning 5054
+***Previous Cluster Size 9972
+***Now Returning 5119
+***Previous Cluster Size 882
+***Now Returning 267
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #17
+> bad alpha for GC #17
+***Previous Cluster Size 4155
+***Now Returning 1385
+***Previous Cluster Size 10156
+***Now Returning 5071
+***Previous Cluster Size 4858
+***Now Returning 2525
+***Previous Cluster Size 10141
+***Now Returning 5108
+***Previous Cluster Size 9340
+***Now Returning 4032
+***Previous Cluster Size 9320
+***Now Returning 4070
+***Previous Cluster Size 3813
+***Now Returning 1789
+***Previous Cluster Size 6250
+***Now Returning 1794
+***Previous Cluster Size 8850
+***Now Returning 481
+***Previous Cluster Size 4280
+***Now Returning 722
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #27
+***Previous Cluster Size 7168
+***Now Returning 1083
+***Previous Cluster Size 7229
+***Now Returning 1076
+***Previous Cluster Size 7306
+***Now Returning 3528
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #30
+> bad alpha for GC #30
+***Previous Cluster Size 2215
+***Now Returning 874
+***Previous Cluster Size 2814
+***Now Returning 1024
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #32
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #32 
+***Previous Cluster Size 1930
+***Now Returning 784
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #33
+> bad alpha for GC #33
+***Previous Cluster Size 2367
+***Now Returning 875
+***Previous Cluster Size 3480
+***Now Returning 1254
+***Previous Cluster Size 887
+***Now Returning 555
+***Previous Cluster Size 494
+***Now Returning 227
+***Previous Cluster Size 2669
+***Now Returning 913
+***Previous Cluster Size 180
+***Now Returning 155
+***Previous Cluster Size 6077
+***Now Returning 3486
+***Previous Cluster Size 1424
+***Now Returning 593
+***Previous Cluster Size 2585
+***Now Returning 370
+***Previous Cluster Size 11605
+***Now Returning 7207
+> bad alpha for GC #43
+***Previous Cluster Size 2554
+***Now Returning 2139
+***Previous Cluster Size 2437
+***Now Returning 2078
+***Previous Cluster Size 11462
+***Now Returning 4210
+***Previous Cluster Size 11455
+***Now Returning 4183
+***Previous Cluster Size 11307
+***Now Returning 4218
+***Previous Cluster Size 243
+***Now Returning 220
+***Previous Cluster Size 243
+***Now Returning 222
+***Previous Cluster Size 1074
+***Now Returning 272
+***Previous Cluster Size 4773
+***Now Returning 542
+***Previous Cluster Size 1231
+***Now Returning 246
+> found 49 good profiles

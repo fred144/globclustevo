@@ -1,0 +1,135 @@
+# read in: ../pop_2_data/fs07_refine/pos_00710_527_94_myr.txt
+> snapshot time 527.94 Myr
+> snapshot number 710
+> uniform radius of 20 pc
+***Previous Cluster Size 7512
+***Now Returning 1082
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #0
+***Previous Cluster Size 8032
+***Now Returning 2970
+***Previous Cluster Size 7909
+***Now Returning 2940
+***Previous Cluster Size 8017
+***Now Returning 2987
+***Previous Cluster Size 7565
+***Now Returning 4233
+> bad alpha for GC #4
+***Previous Cluster Size 9663
+***Now Returning 6364
+***Previous Cluster Size 13134
+***Now Returning 7838
+***Previous Cluster Size 239
+***Now Returning 115
+***Previous Cluster Size 1602
+***Now Returning 1522
+***Previous Cluster Size 915
+***Now Returning 652
+***Previous Cluster Size 915
+***Now Returning 650
+***Previous Cluster Size 919
+***Now Returning 645
+***Previous Cluster Size 198
+***Now Returning 156
+***Previous Cluster Size 1131
+***Now Returning 342
+***Previous Cluster Size 2175
+***Now Returning 519
+***Previous Cluster Size 4819
+***Now Returning 2151
+***Previous Cluster Size 3845
+***Now Returning 2033
+***Previous Cluster Size 1623
+***Now Returning 1082
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #17
+***Previous Cluster Size 1324
+***Now Returning 843
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #18
+***Previous Cluster Size 3617
+***Now Returning 352
+***Previous Cluster Size 2834
+***Now Returning 1094
+> bad alpha for GC #20
+***Previous Cluster Size 2503
+***Now Returning 621
+***Previous Cluster Size 10620
+***Now Returning 5077
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #22
+***Previous Cluster Size 4654
+***Now Returning 1169
+***Previous Cluster Size 4856
+***Now Returning 2688
+***Previous Cluster Size 223
+***Now Returning 210
+***Previous Cluster Size 9456
+***Now Returning 4761
+> bad alpha for GC #26
+***Previous Cluster Size 3652
+***Now Returning 486
+***Previous Cluster Size 9536
+***Now Returning 6108
+***Previous Cluster Size 9778
+***Now Returning 6546
+***Previous Cluster Size 9684
+***Now Returning 6505
+***Previous Cluster Size 8812
+***Now Returning 3599
+> bad alpha for GC #31
+***Previous Cluster Size 11315
+***Now Returning 2725
+***Previous Cluster Size 11496
+***Now Returning 2870
+***Previous Cluster Size 995
+***Now Returning 501
+***Previous Cluster Size 9505
+***Now Returning 6246
+***Previous Cluster Size 9631
+***Now Returning 6433
+***Previous Cluster Size 292
+***Now Returning 155
+***Previous Cluster Size 8076
+***Now Returning 5193
+> bad alpha for GC #38
+***Previous Cluster Size 11720
+***Now Returning 6365
+***Previous Cluster Size 7353
+***Now Returning 2148
+***Previous Cluster Size 1687
+***Now Returning 417
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #41
+***Previous Cluster Size 1623
+***Now Returning 1009
+***Previous Cluster Size 1436
+***Now Returning 642
+***Previous Cluster Size 2315
+***Now Returning 1021
+***Previous Cluster Size 154
+***Now Returning 134
+> bad alpha for GC #45
+***Previous Cluster Size 2636
+***Now Returning 577
+***Previous Cluster Size 2709
+***Now Returning 273
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #47
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #47 
+***Previous Cluster Size 746
+***Now Returning 511
+***Previous Cluster Size 4071
+***Now Returning 2114
+***Previous Cluster Size 4052
+***Now Returning 2116
+***Previous Cluster Size 2829
+***Now Returning 1896
+***Previous Cluster Size 4082
+***Now Returning 2099
+***Previous Cluster Size 247
+***Now Returning 133
+***Previous Cluster Size 2173
+***Now Returning 157
+> found 48 good profiles

@@ -1,0 +1,152 @@
+# read in: ../pop_2_data/fs07_refine/pos_00490_477_05_myr.txt
+> snapshot time 477.05 Myr
+> snapshot number 490
+> uniform radius of 20 pc
+***Previous Cluster Size 2211
+***Now Returning 2063
+***Previous Cluster Size 2220
+***Now Returning 2063
+***Previous Cluster Size 1829
+***Now Returning 405
+***Previous Cluster Size 373
+***Now Returning 344
+***Previous Cluster Size 646
+***Now Returning 607
+***Previous Cluster Size 364
+***Now Returning 157
+***Previous Cluster Size 8379
+***Now Returning 4769
+> bad alpha for GC #6
+***Previous Cluster Size 7792
+***Now Returning 5162
+***Previous Cluster Size 7705
+***Now Returning 5145
+***Previous Cluster Size 7937
+***Now Returning 5238
+***Previous Cluster Size 8169
+***Now Returning 5349
+***Previous Cluster Size 8006
+***Now Returning 5254
+***Previous Cluster Size 16632
+***Now Returning 4150
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #12
+***Previous Cluster Size 10336
+***Now Returning 3991
+***Previous Cluster Size 4926
+***Now Returning 3173
+***Previous Cluster Size 7381
+***Now Returning 4265
+***Previous Cluster Size 1049
+***Now Returning 688
+***Previous Cluster Size 1022
+***Now Returning 698
+***Previous Cluster Size 772
+***Now Returning 302
+***Previous Cluster Size 223
+***Now Returning 215
+***Previous Cluster Size 837
+***Now Returning 580
+> bad alpha for GC #20
+***Previous Cluster Size 973
+***Now Returning 560
+***Previous Cluster Size 7274
+***Now Returning 5175
+***Previous Cluster Size 661
+***Now Returning 597
+***Previous Cluster Size 8592
+***Now Returning 837
+***Previous Cluster Size 15069
+***Now Returning 1369
+***Previous Cluster Size 15711
+***Now Returning 6533
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #26
+***Previous Cluster Size 16029
+***Now Returning 2121
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #27
+***Previous Cluster Size 6559
+***Now Returning 618
+***Previous Cluster Size 10038
+***Now Returning 378
+***Previous Cluster Size 15966
+***Now Returning 75
+***Previous Cluster Size 16112
+***Now Returning 3700
+***Previous Cluster Size 16162
+***Now Returning 3915
+***Previous Cluster Size 16031
+***Now Returning 3784
+***Previous Cluster Size 14620
+***Now Returning 5910
+> bad alpha for GC #34
+***Previous Cluster Size 16095
+***Now Returning 3826
+***Previous Cluster Size 16498
+***Now Returning 6635
+***Previous Cluster Size 3710
+***Now Returning 229
+***Previous Cluster Size 806
+***Now Returning 649
+***Previous Cluster Size 12159
+***Now Returning 2589
+***Previous Cluster Size 15534
+***Now Returning 5838
+> bad alpha for GC #40
+***Previous Cluster Size 16560
+***Now Returning 6677
+***Previous Cluster Size 16643
+***Now Returning 6670
+***Previous Cluster Size 16476
+***Now Returning 6638
+***Previous Cluster Size 16470
+***Now Returning 6632
+***Previous Cluster Size 13068
+***Now Returning 2222
+***Previous Cluster Size 13372
+***Now Returning 2269
+***Previous Cluster Size 13292
+***Now Returning 2235
+> bad alpha for GC #47
+***Previous Cluster Size 12942
+***Now Returning 2176
+***Previous Cluster Size 1009
+***Now Returning 361
+***Previous Cluster Size 841
+***Now Returning 207
+***Previous Cluster Size 12889
+***Now Returning 4064
+> bad alpha for GC #51
+***Previous Cluster Size 976
+***Now Returning 744
+***Previous Cluster Size 14386
+***Now Returning 2194
+***Previous Cluster Size 3968
+***Now Returning 2197
+***Previous Cluster Size 7015
+***Now Returning 2718
+***Previous Cluster Size 3553
+***Now Returning 1082
+***Previous Cluster Size 3631
+***Now Returning 1127
+***Previous Cluster Size 202
+***Now Returning 151
+***Previous Cluster Size 15273
+***Now Returning 6413
+> bad alpha for GC #59
+***Previous Cluster Size 15144
+***Now Returning 564
+***Previous Cluster Size 9461
+***Now Returning 2804
+***Previous Cluster Size 566
+***Now Returning 220
+***Previous Cluster Size 11478
+***Now Returning 3407
+***Previous Cluster Size 5638
+***Now Returning 1464
+***Previous Cluster Size 330
+***Now Returning 263
+***Previous Cluster Size 191
+***Now Returning 164
+> found 60 good profiles
