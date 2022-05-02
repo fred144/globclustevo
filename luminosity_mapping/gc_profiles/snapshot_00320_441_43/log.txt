@@ -1,4 +1,4 @@
-# read in: ../pop_2_data/fs07_refine/pos_00320_441_43_myr.txt
+# read in: ../pop_2_data/fs07_refine\pos_00320_441_43_myr.txt
 > snapshot time 441.43 Myr
 > snapshot number 320
 > uniform radius of 20 pc
@@ -6,6 +6,7 @@
 ***Now Returning 666
 ***Previous Cluster Size 1117
 ***Now Returning 956
+> bad alpha for GC #1
 ***Previous Cluster Size 3535
 ***Now Returning 3105
 ***Previous Cluster Size 3550
@@ -16,6 +17,7 @@
 ***Now Returning 185
 ***Previous Cluster Size 169
 ***Now Returning 164
+> bad alpha for GC #6
 ***Previous Cluster Size 3184
 ***Now Returning 3067
 Optimal parameters not found: The maximum number of function evaluations is exceeded.
@@ -31,4 +33,4 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 ***Now Returning 782
 ***Previous Cluster Size 3228
 ***Now Returning 1299
-> found 12 good profiles
+> found 10 good profiles

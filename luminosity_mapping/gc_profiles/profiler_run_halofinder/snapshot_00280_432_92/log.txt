@@ -1,0 +1,27 @@
+# read in: ../pop_2_data/fs07_refine/pos_00280_432_92_myr.txt
+> snapshot time 432.92 Myr
+> snapshot number 280
+> uniform radius of 20 pc
+***Previous Cluster Size 369
+***Now Returning 367
+***Previous Cluster Size 624
+***Now Returning 569
+***Previous Cluster Size 2716
+***Now Returning 2619
+***Previous Cluster Size 476
+***Now Returning 279
+***Previous Cluster Size 810
+***Now Returning 788
+***Previous Cluster Size 525
+***Now Returning 419
+***Previous Cluster Size 2359
+***Now Returning 980
+***Previous Cluster Size 2904
+***Now Returning 2577
+***Previous Cluster Size 2910
+***Now Returning 2583
+***Previous Cluster Size 2914
+***Now Returning 2611
+***Previous Cluster Size 290
+***Now Returning 255
+> found 11 good profiles

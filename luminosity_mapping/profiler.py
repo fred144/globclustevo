@@ -91,8 +91,8 @@ def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, centers=None, **
         )
         gc_ctrs = np.array([peak_x, peak_y]).T
     else:
-        gc_ctrs = centers[:, 0:3]
-        gc_labels = centers[:, 3]
+        gc_ctrs = np.array(centers[:, 0:3])
+        gc_labels = np.array(centers[:, 3]).astype(int)
         # make a master plot of all the gcs
         star_luminosity_plot(
             proj_width=proj_width,
@@ -160,8 +160,8 @@ def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, centers=None, **
             ages=ages,
             gc_ctr=ctr,
             gc_rad=gc_radii,
-            gc_label=int(label),
-            bins=20,
+            gc_label=label,
+            bins=25,
         )
         # print(char_age )
         gc_out_masses.append(m_tot)

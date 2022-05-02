@@ -191,7 +191,7 @@ if __name__ == "__main__":
 
     data_directory = r"./gc_profiles/"
     # profiler_run = "profiler_run_300_2pc_1percent/"
-    profiler_run = "profiler_run_100_5pc_1percent/"
+    profiler_run = "profiler_run_halofinder/"
     # enable discrete selection of time range based on snapshot number
     master = data_directory + profiler_run
     files = sorted(os.listdir(master))  # [-10:-1]  # [300:400:2]
@@ -228,14 +228,14 @@ if __name__ == "__main__":
         gc_char_age = np.array(gc_char_age)
         t_myr = t_myr[0]
 
-        bubble_plot(
-            masses=gc_out_masses,
-            core_radii=gc_r_core,
-            ages=t_myr - gc_char_age,
-            current_time=t_myr,
-        )
+        # bubble_plot(
+        #     masses=gc_out_masses,
+        #     core_radii=gc_r_core,
+        #     ages=t_myr - gc_char_age,
+        #     current_time=t_myr,
+        # )
 
-        # mass_function(masses=gc_out_masses, t_sim=t_myr, num_bins=10, m_core=gc_m_core)
+        mass_function(masses=gc_out_masses, t_sim=t_myr, num_bins=10, m_core=gc_m_core)
 
         # except Exception as e:
         #     print(e)

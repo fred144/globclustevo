@@ -1,4 +1,4 @@
-# read in: ../pop_2_data/fs07_refine/pos_00380_454_36_myr.txt
+# read in: ../pop_2_data/fs07_refine\pos_00380_454_36_myr.txt
 > snapshot time 454.36 Myr
 > snapshot number 380
 > uniform radius of 20 pc
@@ -19,6 +19,7 @@
 > bad alpha for GC #4
 ***Previous Cluster Size 5389
 ***Now Returning 3536
+> bad alpha for GC #5
 ***Previous Cluster Size 5348
 ***Now Returning 3546
 > bad alpha for GC #6
@@ -40,7 +41,6 @@
 > bad alpha for GC #13
 ***Previous Cluster Size 5277
 ***Now Returning 3454
-> bad alpha for GC #14
 ***Previous Cluster Size 5303
 ***Now Returning 3463
 > bad alpha for GC #15
@@ -66,12 +66,11 @@
 ***Now Returning 2718
 Optimal parameters not found: The maximum number of function evaluations is exceeded.
 > Trying another fit for GC #23
+> bad alpha for GC #23
 ***Previous Cluster Size 9280
 ***Now Returning 4176
 ***Previous Cluster Size 5505
 ***Now Returning 1143
-Optimal parameters not found: The maximum number of function evaluations is exceeded.
-> Trying another fit for GC #25
 ***Previous Cluster Size 10049
 ***Now Returning 6015
 ***Previous Cluster Size 9901
@@ -102,26 +101,17 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 ***Now Returning 1157
 ***Previous Cluster Size 4985
 ***Now Returning 1213
-Optimal parameters not found: The maximum number of function evaluations is exceeded.
-> Trying another fit for GC #39
-Optimal parameters not found: The maximum number of function evaluations is exceeded.
-> can't fit GC #39 
 ***Previous Cluster Size 5993
 ***Now Returning 3190
-Optimal parameters not found: The maximum number of function evaluations is exceeded.
-> Trying another fit for GC #40
 > bad alpha for GC #40
 ***Previous Cluster Size 4494
 ***Now Returning 1076
 ***Previous Cluster Size 4605
 ***Now Returning 1244
-> bad alpha for GC #42
 ***Previous Cluster Size 6275
 ***Now Returning 4161
-> bad alpha for GC #43
 ***Previous Cluster Size 6104
 ***Now Returning 3847
-> bad alpha for GC #44
 ***Previous Cluster Size 2884
 ***Now Returning 1163
 ***Previous Cluster Size 3216
@@ -131,11 +121,13 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 ***Now Returning 1009
 ***Previous Cluster Size 207
 ***Now Returning 177
-> bad alpha for GC #48
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #48
 ***Previous Cluster Size 1262
 ***Now Returning 316
 ***Previous Cluster Size 1295
 ***Now Returning 373
+> bad alpha for GC #50
 ***Previous Cluster Size 1078
 ***Now Returning 1018
 ***Previous Cluster Size 1075
@@ -143,7 +135,6 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 > bad alpha for GC #52
 ***Previous Cluster Size 1075
 ***Now Returning 1017
-> bad alpha for GC #53
 ***Previous Cluster Size 8911
 ***Now Returning 5348
 ***Previous Cluster Size 8958
@@ -154,11 +145,9 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 ***Now Returning 3527
 ***Previous Cluster Size 10055
 ***Now Returning 3597
-> bad alpha for GC #58
 ***Previous Cluster Size 8833
 ***Now Returning 1889
-Optimal parameters not found: The maximum number of function evaluations is exceeded.
-> Trying another fit for GC #59
+> bad alpha for GC #59
 ***Previous Cluster Size 8193
 ***Now Returning 3806
 ***Previous Cluster Size 4481
@@ -168,16 +157,16 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 > bad alpha for GC #62
 ***Previous Cluster Size 4260
 ***Now Returning 928
-> bad alpha for GC #63
 ***Previous Cluster Size 2349
 ***Now Returning 627
 ***Previous Cluster Size 6041
 ***Now Returning 3986
 ***Previous Cluster Size 6220
 ***Now Returning 3890
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #66
 ***Previous Cluster Size 6290
 ***Now Returning 4048
-> bad alpha for GC #67
 ***Previous Cluster Size 1607
 ***Now Returning 436
 ***Previous Cluster Size 4398
@@ -186,5 +175,4 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 > Trying another fit for GC #69
 ***Previous Cluster Size 4200
 ***Now Returning 2612
-> bad alpha for GC #70
-> found 43 good profiles
+> found 50 good profiles

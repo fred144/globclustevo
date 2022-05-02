@@ -1,4 +1,4 @@
-# read in: ../pop_2_data/fs07_refine/pos_00410_460_45_myr.txt
+# read in: ../pop_2_data/fs07_refine\pos_00410_460_45_myr.txt
 > snapshot time 460.45 Myr
 > snapshot number 410
 > uniform radius of 20 pc
@@ -192,17 +192,4 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 ***Now Returning 7070
 ***Previous Cluster Size 17518
 ***Now Returning 2867
-***Previous Cluster Size 17309
-***Now Returning 2442
-***Previous Cluster Size 11401
-***Now Returning 7148
-> bad alpha for GC #84
-***Previous Cluster Size 9377
-***Now Returning 6178
-> bad alpha for GC #85
-***Previous Cluster Size 12711
-***Now Returning 6741
-Optimal parameters not found: The maximum number of function evaluations is exceeded.
-> Trying another fit for GC #86
-> bad alpha for GC #86
-> found 64 good profiles
+Error in callback <function install_repl_displayhook.<locals>.post_execute at 0x0000017535133940> (for post_execute):

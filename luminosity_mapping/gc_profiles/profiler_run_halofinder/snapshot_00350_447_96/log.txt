@@ -1,0 +1,140 @@
+# read in: ../pop_2_data/fs07_refine/pos_00350_447_96_myr.txt
+> snapshot time 447.96 Myr
+> snapshot number 350
+> uniform radius of 20 pc
+***Previous Cluster Size 5894
+***Now Returning 4218
+> bad alpha for GC #0
+***Previous Cluster Size 5791
+***Now Returning 4379
+> bad alpha for GC #1
+***Previous Cluster Size 6305
+***Now Returning 4793
+***Previous Cluster Size 6125
+***Now Returning 4671
+***Previous Cluster Size 5165
+***Now Returning 284
+***Previous Cluster Size 6704
+***Now Returning 4513
+> bad alpha for GC #5
+***Previous Cluster Size 6661
+***Now Returning 4555
+***Previous Cluster Size 6342
+***Now Returning 4826
+***Previous Cluster Size 6379
+***Now Returning 5412
+> bad alpha for GC #8
+***Previous Cluster Size 6120
+***Now Returning 5031
+> bad alpha for GC #9
+***Previous Cluster Size 6060
+***Now Returning 5060
+> bad alpha for GC #10
+***Previous Cluster Size 6723
+***Now Returning 4693
+> bad alpha for GC #11
+***Previous Cluster Size 6668
+***Now Returning 4906
+> bad alpha for GC #12
+***Previous Cluster Size 6510
+***Now Returning 4719
+> bad alpha for GC #13
+***Previous Cluster Size 6469
+***Now Returning 4815
+> bad alpha for GC #14
+***Previous Cluster Size 6642
+***Now Returning 4980
+> bad alpha for GC #15
+***Previous Cluster Size 4602
+***Now Returning 3747
+***Previous Cluster Size 188
+***Now Returning 183
+***Previous Cluster Size 4762
+***Now Returning 4213
+***Previous Cluster Size 1417
+***Now Returning 912
+***Previous Cluster Size 1529
+***Now Returning 179
+> bad alpha for GC #20
+***Previous Cluster Size 599
+***Now Returning 333
+***Previous Cluster Size 4219
+***Now Returning 2884
+> bad alpha for GC #22
+***Previous Cluster Size 4013
+***Now Returning 3010
+> bad alpha for GC #23
+***Previous Cluster Size 5303
+***Now Returning 3413
+> bad alpha for GC #24
+***Previous Cluster Size 4326
+***Now Returning 3237
+> bad alpha for GC #25
+***Previous Cluster Size 5178
+***Now Returning 3485
+> bad alpha for GC #26
+***Previous Cluster Size 5119
+***Now Returning 3563
+> bad alpha for GC #27
+***Previous Cluster Size 4232
+***Now Returning 3362
+> bad alpha for GC #28
+***Previous Cluster Size 3342
+***Now Returning 3083
+> bad alpha for GC #29
+***Previous Cluster Size 3447
+***Now Returning 3090
+> bad alpha for GC #30
+***Previous Cluster Size 210
+***Now Returning 196
+***Previous Cluster Size 210
+***Now Returning 195
+***Previous Cluster Size 404
+***Now Returning 401
+***Previous Cluster Size 459
+***Now Returning 425
+***Previous Cluster Size 714
+***Now Returning 704
+***Previous Cluster Size 5444
+***Now Returning 4157
+> bad alpha for GC #36
+***Previous Cluster Size 4351
+***Now Returning 3329
+> bad alpha for GC #37
+***Previous Cluster Size 5406
+***Now Returning 4344
+> bad alpha for GC #38
+***Previous Cluster Size 5687
+***Now Returning 5173
+> bad alpha for GC #39
+***Previous Cluster Size 5264
+***Now Returning 4047
+> bad alpha for GC #40
+***Previous Cluster Size 4532
+***Now Returning 3824
+> bad alpha for GC #41
+***Previous Cluster Size 5505
+***Now Returning 4724
+***Previous Cluster Size 5708
+***Now Returning 4886
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #43
+> bad alpha for GC #43
+***Previous Cluster Size 431
+***Now Returning 431
+***Previous Cluster Size 1213
+***Now Returning 379
+***Previous Cluster Size 1430
+***Now Returning 379
+***Previous Cluster Size 1551
+***Now Returning 379
+***Previous Cluster Size 431
+***Now Returning 431
+***Previous Cluster Size 431
+***Now Returning 431
+> bad alpha for GC #49
+***Previous Cluster Size 875
+***Now Returning 836
+***Previous Cluster Size 855
+***Now Returning 812
+> found 23 good profiles
