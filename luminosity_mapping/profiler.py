@@ -298,8 +298,8 @@ if __name__ == "__main__":
             os.makedirs(folder_name)
 
         # put all verbose output into a text file
-        # orig_stdout = sys.stdout
-        # sys.stdout = open(folder_name + "/log.txt", "w")
+        orig_stdout = sys.stdout
+        sys.stdout = open(folder_name + "/log.txt", "w")
 
         masses, core_radii, core_masses, r_trunc, ages, time = run_profiler(
             file_name=pop_data,
@@ -309,8 +309,8 @@ if __name__ == "__main__":
             centers=gc_centers,
         )
 
-        # sys.stdout.close()
-        # sys.stdout = orig_stdout
+        sys.stdout.close()
+        sys.stdout = orig_stdout
 
     # for file_name in filtered_files:
 
