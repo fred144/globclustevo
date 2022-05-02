@@ -173,11 +173,17 @@ def get_cluster(
 
     Can take 2d or 3d coordinates.
     """
-    if zpos is not None:
-        all_positions = np.vstack((xpos, ypos, zpos)).T
-    else:
-        all_positions = np.vstack((xpos, ypos)).T
 
+    all_positions_2d = np.vstack((xpos, ypos)).T
+    distances_2d = np.sqrt(np.sum(np.square(all_positions_2d - ctr_at[:-1]), axis=1))
+    mask = distances_2d <= cluster_radius
+    masked_positions = all_positions_2d[mask]
+    masked_lums = lums[mask]
+    masked_masses = masses[mask]
+    masked_ages = ages[mask]
+    print("***Previous Cluster Size", np.size(masked_lums))
+
+    all_positions = np.vstack((xpos, ypos, zpos)).T
     distances = np.sqrt(np.sum(np.square(all_positions - ctr_at), axis=1))
     mask = distances <= cluster_radius
     masked_positions = all_positions[mask]
@@ -187,14 +193,24 @@ def get_cluster(
 
     x = masked_positions[:, 0]
     y = masked_positions[:, 1]
+
     x_recentered = masked_positions[:, 0] - ctr_at[0]  # np.mean(x)
     y_recentered = masked_positions[:, 1] - ctr_at[1]  # np.mean(y)
 
     if zpos is not None:
         z = masked_positions[:, 2]
         if trns_coord is True:
+            # make the center (0,0,0) ?
             z_recentered = masked_positions[:, 2] - ctr_at[2]  # p.median(z)
-            return x_recentered, y_recentered, z_recentered, masked_lums, masked_masses
+            print("***Now Returning", np.size(x_recentered))
+            return (
+                x_recentered,
+                y_recentered,
+                z_recentered,
+                masked_lums,
+                masked_masses,
+                masked_ages,
+            )
         else:
             return x, y, z, masked_lums, masked_masses
     else:

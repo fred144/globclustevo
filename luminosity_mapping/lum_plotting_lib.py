@@ -63,8 +63,7 @@ def star_luminosity_plot(
     ctr_dist_thresh=10,
     ctr_rel_thresh=0.0001,
     masses=None,
-    sfc_positions=None,
-    psc_positions=None,
+    plt_ctrs=None,
 ):
     """
     Main single panel movie for luminosities of popII stars.
@@ -282,32 +281,26 @@ def star_luminosity_plot(
         # print('lum plot')
 
         # =============================================================================
-        #                            Optionally plot test particles
+        #                            Optionally plot annotations
         # =============================================================================
-        if sfc_positions is not None:
-            sfc_x = sfc_positions[:, 0]
-            sfc_y = sfc_positions[:, 1]
-            sfc_tags = sfc_positions[:, 3]
+        if plt_ctrs is not None:
+            x_peak = plt_ctrs[:, 0]
+            y_peak = plt_ctrs[:, 1]
+            gc_labels = plt_ctrs[:, 3]
 
-            plt.scatter(sfc_x, sfc_y, marker=".", s=5)
-
-            for i, txt in enumerate(sfc_tags):
-                plt.annotate(int(txt), (sfc_x[i], sfc_y[i]), fontsize=7, ha="center")
+            plt.scatter(x_peak, y_peak, color="green", marker="x", linewidths=0.5, s=10)
             plt.xlim(-proj_width / 2, proj_width / 2)
             plt.ylim(-proj_width / 2, proj_width / 2)
-        if psc_positions is not None:
-            psc_x = psc_positions[:, 0]
-            psc_y = psc_positions[:, 1]
-            psc_tags = psc_positions[:, 3]
 
-            plt.scatter(
-                psc_positions[:, 0], psc_positions[:, 1], marker=".", s=5, c="lime"
-            )
-            for i, txt in enumerate(psc_tags):
-                plt.annotate(int(txt), (psc_x[i], psc_y[i]), fontsize=8, ha="center")
-
-            plt.xlim(-proj_width / 2, proj_width / 2)
-            plt.ylim(-proj_width / 2, proj_width / 2)
+            # iterate over labels and label each scatter point
+            for i, label in enumerate(gc_labels):
+                plt.annotate(
+                    label,
+                    (x_peak[i], y_peak[i]),
+                    fontsize=3,
+                    ha="center",
+                    color="white",
+                )
         # =============================================================================
         #                              plot centers of max values if true
         # =============================================================================
