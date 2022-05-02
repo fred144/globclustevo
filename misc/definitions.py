@@ -78,17 +78,21 @@ STANDARD_FILE_RE = re.compile(r"((amr|hydro|part|grav)_\d{5}\.out\d{5}|info_\d{5
 #     'BH': 6
 # }
 # import os
+#
+
+print("=============================================================================")
 print("Warning: particle_families are modified at")
 print("/home/fabg/cosmology/lib/python3.8/site-packages/yt/frontends/ramses")
-particle_families = { #patch/**/pm_commons.f90参照
-    'DM': 1,
-    'star': 2,
-    'POPIII': 3,
-    'supernova': 4,
-    'dead': 5,
-    'BH': 6,
-    'SFC': 7,
-    'PSC': 8    
+print("=============================================================================")
+particle_families = {  # patch/**/pm_commons.f90参照
+    "DM": 1,
+    "star": 2,
+    "POPIII": 3,
+    "supernova": 4,
+    "dead": 5,
+    "BH": 6,
+    "SFC": 7,
+    "PSC": 8,
 }
 
 if ytcfg.has_section("ramses-families"):
