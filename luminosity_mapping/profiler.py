@@ -160,8 +160,8 @@ def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, centers=None, **
             ages=ages,
             gc_ctr=ctr,
             gc_rad=gc_radii,
-            gc_label=label,
-            bins=25,
+            gc_label=int(label),
+            bins=20,
         )
         # print(char_age )
         gc_out_masses.append(m_tot)
@@ -267,8 +267,8 @@ if __name__ == "__main__":
     data_directory = r"./pop_2_data/"
     pop2_data_directory = r"../pop_2_data/fs07_refine"
     halo_data_directory = r"../halo_data/fs07_refine/fof"
-    pop2_data_set = filter_snapshots(pop2_data_directory, 700, 710, 4)
-    halo_data_directory = filter_snapshots(halo_data_directory, 700, 710, 4)
+    pop2_data_set = filter_snapshots(pop2_data_directory, 200, 810, 10)
+    halo_data_directory = filter_snapshots(halo_data_directory, 200, 810, 10)
 
     for pop_data, hc_data in zip(pop2_data_set, halo_data_directory):
         # get where the stars are centered

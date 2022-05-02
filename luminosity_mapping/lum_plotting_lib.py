@@ -45,7 +45,7 @@ def trunc_radius(sigma_0, r_c, alpha, sigma_bg):
     0.5bg = (peak)/( 1 + (r/r_c)^alpha)
     """
 
-    r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+    r_trunc = (r_c**alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
     return r_trunc
 
 
@@ -506,8 +506,8 @@ def king_profiler(
         # print(fit_sigma)
 
         # calculate theoretical best fit
-        theory_r = np.geomspace(r[0], gc_rad, 100, endpoint=False)
-        # theory_r = np.linspace(r[0], gc_rad, 2000)  # smooth version
+        theory_r = np.geomspace(r[0], gc_rad, 200, endpoint=False)  # smooth version
+        # theory_r = np.linspace(r[0], gc_rad, 2000)
         theory_rho = modified_king_model(theory_r, *fit_params)
 
         # ===========================calc derived quantities===================
@@ -606,9 +606,15 @@ def king_profiler(
                 label=(r"$t_{{age}}= {:.2f}$ Myr").format(gc_char_age),
                 zorder=1,
             )
-
+            # plot curve fit
             plt.plot(
-                theory_r, theory_rho, "-.k", linewidth=4, label=plot_label, zorder=20
+                theory_r,
+                theory_rho,
+                ls="--",
+                color="tab:red",
+                linewidth=4,
+                label=plot_label,
+                zorder=20,
             )
             # plt.axvline(fit_r_c)
             # plt.text(fit_r_c, 0,r'$R_core$',rotation=90)
