@@ -3,7 +3,7 @@ import sys
 import yt
 
 sys.path.insert(
-    1, "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages"
+    1, "/homes/fgarcia4/py-virtual-envs/cosmology/lib/python3.7/site-packages"
 )
 import numpy as np
 import matplotlib.pyplot as plt
@@ -305,7 +305,7 @@ if __name__ == "__main__":
             file_name=pop_data,
             proj_width=400,
             gc_radii=20,  # uniform radii to be used to extract clusters
-            lum_map_bins=3000,  # bad resolution so that you can see it better
+            lum_map_bins=2000,  # bad resolution so that you can see it better
             centers=gc_centers,
         )
 
