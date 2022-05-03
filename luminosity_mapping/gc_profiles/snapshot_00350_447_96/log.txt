@@ -118,6 +118,9 @@
 ***Now Returning 4724
 ***Previous Cluster Size 5708
 ***Now Returning 4886
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #43
+> bad alpha for GC #43
 ***Previous Cluster Size 431
 ***Now Returning 431
 ***Previous Cluster Size 1213
@@ -135,4 +138,4 @@
 ***Now Returning 836
 ***Previous Cluster Size 855
 ***Now Returning 812
-> found 23 good profiles
+> found 22 good profiles

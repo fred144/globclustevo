@@ -8,6 +8,8 @@
 ***Now Returning 2576
 ***Previous Cluster Size 2696
 ***Now Returning 2535
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #2
 > bad alpha for GC #2
 ***Previous Cluster Size 3359
 ***Now Returning 3003

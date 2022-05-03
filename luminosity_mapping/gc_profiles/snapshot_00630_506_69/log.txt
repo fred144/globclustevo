@@ -1,0 +1,141 @@
+# read in: ../pop_2_data/fs07_refine/pos_00630_506_69_myr.txt
+> snapshot time 506.69 Myr
+> snapshot number 630
+> uniform radius of 20 pc
+***Previous Cluster Size 2450
+***Now Returning 2240
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #0
+***Previous Cluster Size 2626
+***Now Returning 2251
+***Previous Cluster Size 2592
+***Now Returning 2309
+***Previous Cluster Size 144
+***Now Returning 139
+***Previous Cluster Size 2545
+***Now Returning 240
+***Previous Cluster Size 6433
+***Now Returning 616
+***Previous Cluster Size 12708
+***Now Returning 631
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #6
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #6 
+***Previous Cluster Size 1519
+***Now Returning 655
+***Previous Cluster Size 1535
+***Now Returning 660
+***Previous Cluster Size 1865
+***Now Returning 293
+***Previous Cluster Size 5055
+***Now Returning 2707
+***Previous Cluster Size 15031
+***Now Returning 424
+***Previous Cluster Size 14583
+***Now Returning 8366
+***Previous Cluster Size 14395
+***Now Returning 8203
+***Previous Cluster Size 15127
+***Now Returning 8829
+***Previous Cluster Size 15946
+***Now Returning 8670
+> bad alpha for GC #15
+***Previous Cluster Size 136
+***Now Returning 132
+> bad alpha for GC #16
+***Previous Cluster Size 2500
+***Now Returning 1086
+***Previous Cluster Size 3754
+***Now Returning 1309
+***Previous Cluster Size 2786
+***Now Returning 878
+***Previous Cluster Size 7986
+***Now Returning 359
+***Previous Cluster Size 3589
+***Now Returning 723
+***Previous Cluster Size 1064
+***Now Returning 677
+> bad alpha for GC #22
+***Previous Cluster Size 1054
+***Now Returning 725
+> bad alpha for GC #23
+***Previous Cluster Size 686
+***Now Returning 411
+***Previous Cluster Size 3653
+***Now Returning 1566
+***Previous Cluster Size 3606
+***Now Returning 399
+***Previous Cluster Size 15281
+***Now Returning 7977
+***Previous Cluster Size 2903
+***Now Returning 1563
+***Previous Cluster Size 2680
+***Now Returning 1155
+> bad alpha for GC #29
+***Previous Cluster Size 1970
+***Now Returning 371
+***Previous Cluster Size 10148
+***Now Returning 4194
+***Previous Cluster Size 4638
+***Now Returning 2753
+***Previous Cluster Size 214
+***Now Returning 179
+***Previous Cluster Size 5559
+***Now Returning 3079
+> bad alpha for GC #34
+***Previous Cluster Size 2502
+***Now Returning 307
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #35
+***Previous Cluster Size 2029
+***Now Returning 527
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #36
+***Previous Cluster Size 1658
+***Now Returning 1610
+***Previous Cluster Size 1654
+***Now Returning 1612
+***Previous Cluster Size 1656
+***Now Returning 1611
+***Previous Cluster Size 4071
+***Now Returning 361
+***Previous Cluster Size 617
+***Now Returning 586
+***Previous Cluster Size 363
+***Now Returning 320
+***Previous Cluster Size 16150
+***Now Returning 4074
+***Previous Cluster Size 16156
+***Now Returning 4145
+***Previous Cluster Size 15069
+***Now Returning 6408
+***Previous Cluster Size 13673
+***Now Returning 7657
+***Previous Cluster Size 13184
+***Now Returning 7121
+***Previous Cluster Size 15406
+***Now Returning 8163
+***Previous Cluster Size 15395
+***Now Returning 8270
+***Previous Cluster Size 15479
+***Now Returning 8267
+***Previous Cluster Size 15441
+***Now Returning 8102
+***Previous Cluster Size 15536
+***Now Returning 8182
+***Previous Cluster Size 15371
+***Now Returning 7950
+***Previous Cluster Size 15388
+***Now Returning 8175
+***Previous Cluster Size 15310
+***Now Returning 8142
+***Previous Cluster Size 15199
+***Now Returning 857
+***Previous Cluster Size 5282
+***Now Returning 2511
+***Previous Cluster Size 1676
+***Now Returning 422
+***Previous Cluster Size 510
+***Now Returning 273
+> found 53 good profiles
