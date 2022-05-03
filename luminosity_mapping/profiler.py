@@ -131,6 +131,7 @@ def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, centers=None, **
     gc_err_sigma_0 = []
     gc_sigmabg = []
     gc_err_sigma_bg = []
+    gc_particles = []
     # print(gc_labels)
     # iterate over x,y maximas and plot
     for ctr, label in zip(gc_ctrs, gc_labels):
@@ -153,6 +154,7 @@ def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, centers=None, **
             err_sigma_0,
             sigma_bg,
             err_sigma_bg,
+            counts,
         ) = king_profiler(
             star_pos=star_positions,
             lums=scaled_stellar_lums,
@@ -176,6 +178,7 @@ def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, centers=None, **
         gc_err_sigma_0.append(err_sigma_0)
         gc_sigmabg.append(sigma_bg)
         gc_err_sigma_bg.append(err_sigma_bg)
+        gc_particles.append(counts)
 
         if m_tot > 0:
             plt.savefig(
@@ -208,6 +211,7 @@ def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, centers=None, **
     gc_err_sigma_0 = np.array(gc_err_sigma_0)
     gc_sigmabg = np.array(gc_sigmabg)
     gc_err_sigma_bg = np.array(gc_err_sigma_bg)
+    gc_particles = np.array(gc_particles)
 
     # mask out invalid values
     mask = gc_out_masses > 0
@@ -224,6 +228,8 @@ def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, centers=None, **
     gc_sigmabg = gc_sigmabg[mask]
     gc_err_sigma_bg = gc_err_sigma_bg[mask]
     gc_labels = gc_labels[mask]
+    gc_particles = gc_particles[mask]
+
     print("> found", gc_char_age.size, "good profiles")
 
     # make the time get along with the rest of dimensions
@@ -260,15 +266,27 @@ def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, centers=None, **
     )
     np.savetxt(fname=save_name + "info.txt", X=output, header=header)
 
-    return gc_out_masses, gc_r_core, gc_m_core, gc_r_trunc, gc_char_age, time
+    return (
+        gc_out_masses,
+        gc_r_core,
+        gc_m_core,
+        gc_r_trunc,
+        gc_char_age,
+        time,
+        gc_particles,
+    )
 
+
+gc_counts = []
+total_counts = []
+time_myr = []
 
 if __name__ == "__main__":
     data_directory = r"./pop_2_data/"
     pop2_data_directory = r"../pop_2_data/fs07_refine"
     halo_data_directory = r"../halo_data/fs07_refine/fof"
-    pop2_data_set = filter_snapshots(pop2_data_directory, 200, 800, 10)
-    halo_data_directory = filter_snapshots(halo_data_directory, 200, 800, 10)
+    pop2_data_set = filter_snapshots(pop2_data_directory, 400, 405, 1)
+    halo_data_directory = filter_snapshots(halo_data_directory, 400, 405, 1)
 
     for pop_data, hc_data in zip(pop2_data_set, halo_data_directory):
         # get where the stars are centered
@@ -298,19 +316,21 @@ if __name__ == "__main__":
             os.makedirs(folder_name)
 
         # put all verbose output into a text file
-        orig_stdout = sys.stdout
-        sys.stdout = open(folder_name + "/log.txt", "w")
+        # orig_stdout = sys.stdout
+        # sys.stdout = open(folder_name + "/log.txt", "w")
 
-        masses, core_radii, core_masses, r_trunc, ages, time = run_profiler(
+        masses, core_radii, core_masses, r_trunc, ages, time, particles = run_profiler(
             file_name=pop_data,
             proj_width=400,
             gc_radii=20,  # uniform radii to be used to extract clusters
             lum_map_bins=2000,  # bad resolution so that you can see it better
             centers=gc_centers,
         )
-
-        sys.stdout.close()
-        sys.stdout = orig_stdout
+        gc_counts.append(np.sum(particles))
+        total_counts.append(pop2_data.shape[0])
+        time_myr.append(time)
+        # sys.stdout.close()
+        # sys.stdout = orig_stdout
 
     # for file_name in filtered_files:
 
@@ -340,3 +360,8 @@ if __name__ == "__main__":
 
     #     sys.stdout.close()
     #     sys.stdout = orig_stdout
+#%%
+plt.figure(figsize=(5, 4), dpi=200)
+plt.plot(time_myr, total_counts, label="total counts")
+plt.plot(time_myr, gc_counts, label="inside globular clusters")
+plt.legend()

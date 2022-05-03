@@ -45,7 +45,7 @@ def trunc_radius(sigma_0, r_c, alpha, sigma_bg):
     0.5bg = (peak)/( 1 + (r/r_c)^alpha)
     """
 
-    r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+    r_trunc = (r_c**alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
     return r_trunc
 
 
@@ -621,8 +621,8 @@ def king_profiler(
             plt.title(r"GC # {:.0f}".format(gc_label), fontsize=16)
             plt.ylabel(r"Surface Mass Density ($M_{\odot} \; pc^{-2}$)", fontsize=16)
             plt.xlabel(r"R ($pc$)", fontsize=16)
-            plt.xscale("symlog")
-            plt.yscale("symlog")
+            plt.xscale("log")
+            plt.yscale("log")
             # plt.xscale('symlog')
             # plt.yscale('symlog')
             plt.grid(visible=True, which="both", axis="y", ls="--")
@@ -644,11 +644,12 @@ def king_profiler(
                 err_fit_sigma_naught,
                 fit_sigma_bg,
                 err_fit_sigma_bg,
+                np.size(clust_x),
             )
         else:
             print(r"> bad alpha for GC #{:.0f}".format(gc_label))
             # return invalid values
-            return -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+            return -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
 
     # except BaseException:
     except Exception as e:
@@ -673,12 +674,12 @@ def king_profiler(
         plt.title(r"No Fit GC # {:.0f}".format(gc_label), fontsize=16)
         plt.ylabel(r"Surface Mass Density ($M_{\odot} \; pc^{-2}$)", fontsize=16)
         plt.xlabel(r"R ($pc$)", fontsize=16)
-        plt.xscale("symlog")
-        plt.yscale("symlog")
+        plt.xscale("log")
+        plt.yscale("log")
         plt.grid(visible=True, which="both", axis="y", ls="--")
         plt.legend(fontsize=16)
 
         print(r"> can't fit GC #{:.0f} ".format(gc_label))
 
         # return invalid values
-        return -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2
+        return -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2
