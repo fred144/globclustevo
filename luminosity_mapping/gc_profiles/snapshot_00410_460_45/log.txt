@@ -1,4 +1,4 @@
-# read in: ../pop_2_data/fs07_refine\pos_00410_460_45_myr.txt
+# read in: ../pop_2_data/fs07_refine/pos_00410_460_45_myr.txt
 > snapshot time 460.45 Myr
 > snapshot number 410
 > uniform radius of 20 pc
@@ -21,6 +21,7 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 ***Now Returning 3679
 ***Previous Cluster Size 7429
 ***Now Returning 3896
+> bad alpha for GC #7
 ***Previous Cluster Size 915
 ***Now Returning 359
 ***Previous Cluster Size 7502
@@ -45,7 +46,6 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 ***Now Returning 928
 ***Previous Cluster Size 17481
 ***Now Returning 8698
-> bad alpha for GC #18
 ***Previous Cluster Size 18866
 ***Now Returning 7333
 ***Previous Cluster Size 18758
@@ -125,7 +125,6 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 ***Now Returning 235
 ***Previous Cluster Size 5880
 ***Now Returning 4443
-> bad alpha for GC #54
 ***Previous Cluster Size 762
 ***Now Returning 501
 ***Previous Cluster Size 14382
@@ -138,7 +137,6 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 ***Now Returning 8927
 ***Previous Cluster Size 15011
 ***Now Returning 8946
-> bad alpha for GC #60
 ***Previous Cluster Size 15067
 ***Now Returning 8936
 ***Previous Cluster Size 14421
@@ -152,6 +150,8 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 ***Now Returning 492
 ***Previous Cluster Size 2972
 ***Now Returning 2405
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #66
 > bad alpha for GC #66
 ***Previous Cluster Size 2741
 ***Now Returning 2324
@@ -172,7 +172,6 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 ***Now Returning 7333
 ***Previous Cluster Size 13503
 ***Now Returning 8727
-> bad alpha for GC #74
 ***Previous Cluster Size 12959
 ***Now Returning 8657
 > bad alpha for GC #75
@@ -192,4 +191,14 @@ Optimal parameters not found: The maximum number of function evaluations is exce
 ***Now Returning 7070
 ***Previous Cluster Size 17518
 ***Now Returning 2867
-Error in callback <function install_repl_displayhook.<locals>.post_execute at 0x0000017535133940> (for post_execute):
+***Previous Cluster Size 17309
+***Now Returning 2442
+***Previous Cluster Size 11401
+***Now Returning 7148
+> bad alpha for GC #84
+***Previous Cluster Size 9377
+***Now Returning 6178
+***Previous Cluster Size 12711
+***Now Returning 6741
+> bad alpha for GC #86
+> found 68 good profiles

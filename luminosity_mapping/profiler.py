@@ -305,7 +305,7 @@ if __name__ == "__main__":
             file_name=pop_data,
             proj_width=400,
             gc_radii=20,  # uniform radii to be used to extract clusters
-            lum_map_bins=1000,  # bad resolution so that you can see it better
+            lum_map_bins=3000,  # bad resolution so that you can see it better
             centers=gc_centers,
         )
 

@@ -45,7 +45,7 @@ def trunc_radius(sigma_0, r_c, alpha, sigma_bg):
     0.5bg = (peak)/( 1 + (r/r_c)^alpha)
     """
 
-    r_trunc = (r_c**alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+    r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
     return r_trunc
 
 
@@ -295,7 +295,7 @@ def star_luminosity_plot(
             # iterate over labels and label each scatter point
             for i, label in enumerate(gc_labels):
                 plt.annotate(
-                    label,
+                    int(label),
                     (x_peak[i], y_peak[i]),
                     fontsize=3,
                     ha="center",
