@@ -12,7 +12,7 @@ import os
 
 # import pathlib
 import yt
-
+yt.enable_parallelism()
 from yt.funcs import mylog
 import numpy as np
 
@@ -21,7 +21,7 @@ from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
 # from yt.analysis_modules.halo_analysis.api import HaloCatalog
 
 
-yt.enable_parallelism()
+
 mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 

@@ -1,0 +1,656 @@
++ NPE=16
++ export LANG=en_US
++ LANG=en_US
++ module load gcc
++ unset _mlshdbg
++ '[' 0 = 1 ']'
++ unset _mlre _mlIFS
++ '[' -n x ']'
++ _mlIFS=' 	
+'
++ IFS=' '
++ for _mlv in ${MODULES_RUN_QUARANTINE:-}
++ '[' LD_LIBRARY_PATH = LD_LIBRARY_PATH -a LD_LIBRARY_PATH = LD_LIBRARY_PATH ']'
+++ eval 'echo ${LD_LIBRARY_PATH+x}'
++++ echo x
++ '[' -n x ']'
+++ eval 'echo ${LD_LIBRARY_PATH}'
++++ echo /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies
++ _mlre='LD_LIBRARY_PATH_modquar='\''/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies'\'' '
++ _mlrv=MODULES_RUNENV_LD_LIBRARY_PATH
+++ eval 'echo ${MODULES_RUNENV_LD_LIBRARY_PATH:-}'
++++ echo
++ _mlre='LD_LIBRARY_PATH_modquar='\''/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies'\'' LD_LIBRARY_PATH='\'''\'' '
++ for _mlv in ${MODULES_RUN_QUARANTINE:-}
++ '[' LD_PRELOAD = LD_PRELOAD -a LD_PRELOAD = LD_PRELOAD ']'
+++ eval 'echo ${LD_PRELOAD+x}'
++++ echo
++ '[' -n '' ']'
++ _mlrv=MODULES_RUNENV_LD_PRELOAD
+++ eval 'echo ${MODULES_RUNENV_LD_PRELOAD:-}'
++++ echo
++ _mlre='LD_LIBRARY_PATH_modquar='\''/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies'\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' '
++ '[' -n 'LD_LIBRARY_PATH_modquar='\''/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies'\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' ' ']'
+++ eval 'LD_LIBRARY_PATH_modquar='\''/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies'\''' 'LD_LIBRARY_PATH='\'''\''' 'LD_PRELOAD='\'''\''' /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash '"$@"'
++++ LD_LIBRARY_PATH_modquar=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies
++++ LD_LIBRARY_PATH=
++++ LD_PRELOAD=
++++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash load gcc
++ eval
++ _mlstatus=0
++ '[' -n x ']'
++ IFS=' 	
+'
++ unset _mlre _mlv _mlrv _mlIFS
++ '[' -n '' ']'
++ unset _mlshdbg
++ return 0
++ module load openmpi
++ unset _mlshdbg
++ '[' 0 = 1 ']'
++ unset _mlre _mlIFS
++ '[' -n x ']'
++ _mlIFS=' 	
+'
++ IFS=' '
++ for _mlv in ${MODULES_RUN_QUARANTINE:-}
++ '[' LD_LIBRARY_PATH = LD_LIBRARY_PATH -a LD_LIBRARY_PATH = LD_LIBRARY_PATH ']'
+++ eval 'echo ${LD_LIBRARY_PATH+x}'
++++ echo x
++ '[' -n x ']'
+++ eval 'echo ${LD_LIBRARY_PATH}'
++++ echo /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies
++ _mlre='LD_LIBRARY_PATH_modquar='\''/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies'\'' '
++ _mlrv=MODULES_RUNENV_LD_LIBRARY_PATH
+++ eval 'echo ${MODULES_RUNENV_LD_LIBRARY_PATH:-}'
++++ echo
++ _mlre='LD_LIBRARY_PATH_modquar='\''/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies'\'' LD_LIBRARY_PATH='\'''\'' '
++ for _mlv in ${MODULES_RUN_QUARANTINE:-}
++ '[' LD_PRELOAD = LD_PRELOAD -a LD_PRELOAD = LD_PRELOAD ']'
+++ eval 'echo ${LD_PRELOAD+x}'
++++ echo
++ '[' -n '' ']'
++ _mlrv=MODULES_RUNENV_LD_PRELOAD
+++ eval 'echo ${MODULES_RUNENV_LD_PRELOAD:-}'
++++ echo
++ _mlre='LD_LIBRARY_PATH_modquar='\''/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies'\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' '
++ '[' -n 'LD_LIBRARY_PATH_modquar='\''/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies'\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' ' ']'
+++ eval 'LD_LIBRARY_PATH_modquar='\''/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies'\''' 'LD_LIBRARY_PATH='\'''\''' 'LD_PRELOAD='\'''\''' /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash '"$@"'
++++ LD_LIBRARY_PATH_modquar=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies
++++ LD_LIBRARY_PATH=
++++ LD_PRELOAD=
++++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash load openmpi
++ eval 'LD_LIBRARY_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies;' export 'LD_LIBRARY_PATH;
+CPATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include;' export 'CPATH;
+CPLUS_INCLUDE_PATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:1;' export 'CPLUS_INCLUDE_PATH_modshare;
+MPI_ROOT=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl;' export 'MPI_ROOT;
+MANPATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/share/man:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/share/man:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/share/man::;' export 'MANPATH;
+LIBRARY_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib;' export 'LIBRARY_PATH;
+_LMFILES_=/software/modulefiles/modules/rhel8/matplotlib/3.2.1/gcc/8.4.0/ivybridge:/software/modulefiles/modules/rhel8/python/3.7.7/gcc/8.4.0/ivybridge:/software/modulefiles/modules/rhel8/gcc/8.4.0:/software/modulefiles/modules/rhel8/jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0:/software/modulefiles/modules/rhel8/hpcc/deepthought2/1.0:/software/modulefiles/modules/rhel8/openmpi/gcc/8.4.0/ivybridge/3.1.5;' export '_LMFILES_;
+LOADEDMODULES=matplotlib/3.2.1/gcc/8.4.0/ivybridge:python/3.7.7/gcc/8.4.0/ivybridge:gcc/8.4.0:jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0:hpcc/deepthought2/1.0:openmpi/gcc/8.4.0/ivybridge/3.1.5;' export 'LOADEDMODULES;
+MPIF77=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin/mpif77;' export 'MPIF77;
+UCX_TLS=shm,ib,self;' export 'UCX_TLS;
+CMAKE_PREFIX_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62;' export 'CMAKE_PREFIX_PATH;
+MODULES_LMALTNAME=matplotlib/3.2.1/gcc/8.4.0/ivybridge\&matplotlib/3.2.1/default\&matplotlib/3.2.1\&matplotlib/3.2.1/gcc/8.4.0/default\&matplotlib/3.2.1/gcc/8.4.0:python/3.7.7/gcc/8.4.0/ivybridge\&python/3.7.7/default\&python/3.7.7\&python/3.7.7/gcc/8.4.0/default\&python/3.7.7/gcc/8.4.0:jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0\&jupyter/python/3.7.7/default\&jupyter/python/3.7.7\&jupyter/python/default\&jupyter/python\&jupyter/default\&jupyter\&jupyter/python/3.7.7/gcc/8.4.0/default\&jupyter/python/3.7.7/gcc/8.4.0:openmpi/gcc/8.4.0/ivybridge/3.1.5\&openmpi/gcc/8.4.0/default\&openmpi/gcc/8.4.0\&openmpi/gcc/default\&openmpi/gcc\&openmpi/default\&openmpi;' export 'MODULES_LMALTNAME;
+MODULES_LMCONFLICT=matplotlib/3.2.1/gcc/8.4.0/ivybridge\&matplotlib:python/3.7.7/gcc/8.4.0/ivybridge\&python:gcc/8.4.0\&aocc\&gcc\&intel\&nvhpc\&pgi:jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0\&jupyter:hpcc/deepthought2/1.0\&hpcc\&hpcc/deepthought2:openmpi/gcc/8.4.0/ivybridge/3.1.5\&openmpi\&intelmpi\&nvmpi;' export 'MODULES_LMCONFLICT;
+MANPATH_modshare=:1:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/share/man:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/share/man:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/share/man:1;' export 'MANPATH_modshare;
+OPENMPI_ROOT=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl;' export 'OPENMPI_ROOT;
+PKG_CONFIG_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib/pkgconfig:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib/pkgconfig:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib/pkgconfig;' export 'PKG_CONFIG_PATH;
+LIBRARY_PATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib:1:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:1:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:1;' export 'LIBRARY_PATH_modshare;
+MPICC=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin/mpicc;' export 'MPICC;
+C_INCLUDE_PATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:1;' export 'C_INCLUDE_PATH_modshare;
+INCLUDE=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include;' export 'INCLUDE;
+MODULES_LMALTNAME_modshare=openmpi/gcc/8.4.0/ivybridge/3.1.5\&openmpi/gcc/8.4.0/default\&openmpi/gcc/8.4.0\&openmpi/gcc/default\&openmpi/gcc\&openmpi/default\&openmpi:1:matplotlib/3.2.1/gcc/8.4.0/ivybridge\&matplotlib/3.2.1/default\&matplotlib/3.2.1\&matplotlib/3.2.1/gcc/8.4.0/default\&matplotlib/3.2.1/gcc/8.4.0:1:python/3.7.7/gcc/8.4.0/ivybridge\&python/3.7.7/default\&python/3.7.7\&python/3.7.7/gcc/8.4.0/default\&python/3.7.7/gcc/8.4.0:1:jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0\&jupyter/python/3.7.7/default\&jupyter/python/3.7.7\&jupyter/python/default\&jupyter/python\&jupyter/default\&jupyter\&jupyter/python/3.7.7/gcc/8.4.0/default\&jupyter/python/3.7.7/gcc/8.4.0:1;' export 'MODULES_LMALTNAME_modshare;
+MODULES_LMCONFLICT_modshare=gcc/8.4.0\&aocc\&gcc\&intel\&nvhpc\&pgi:1:jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0\&jupyter:1:hpcc/deepthought2/1.0\&hpcc\&hpcc/deepthought2:1:openmpi/gcc/8.4.0/ivybridge/3.1.5\&openmpi\&intelmpi\&nvmpi:1:python/3.7.7/gcc/8.4.0/ivybridge\&python:1:matplotlib/3.2.1/gcc/8.4.0/ivybridge\&matplotlib:1;' export 'MODULES_LMCONFLICT_modshare;
+OPENMPI_LIBDIR=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib;' export 'OPENMPI_LIBDIR;
+PKG_CONFIG_PATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib/pkgconfig:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib/pkgconfig:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib/pkgconfig:1;' export 'PKG_CONFIG_PATH_modshare;
+CPLUS_INCLUDE_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include;' export 'CPLUS_INCLUDE_PATH;
+MPI_INC=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include;' export 'MPI_INC;
+OPENMPI_INCDIR=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include;' export 'OPENMPI_INCDIR;
+MPICXX=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin/mpic++;' export 'MPICXX;
+LD_LIBRARY_PATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib:1:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:1:/homes/fgarcia4/rockstar-galaxies:1:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:1;' export 'LD_LIBRARY_PATH_modshare;
+CPATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:1;' export 'CPATH_modshare;
+C_INCLUDE_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include;' export 'C_INCLUDE_PATH;
+_LMFILES__modshare=/software/modulefiles/modules/rhel8/python/3.7.7/gcc/8.4.0/ivybridge:1:/software/modulefiles/modules/rhel8/hpcc/deepthought2/1.0:1:/software/modulefiles/modules/rhel8/openmpi/gcc/8.4.0/ivybridge/3.1.5:1:/software/modulefiles/modules/rhel8/jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0:1:/software/modulefiles/modules/rhel8/matplotlib/3.2.1/gcc/8.4.0/ivybridge:1:/software/modulefiles/modules/rhel8/gcc/8.4.0:1;' export '_LMFILES__modshare;
+LOADEDMODULES_modshare=matplotlib/3.2.1/gcc/8.4.0/ivybridge:1:gcc/8.4.0:1:python/3.7.7/gcc/8.4.0/ivybridge:1:hpcc/deepthought2/1.0:1:openmpi/gcc/8.4.0/ivybridge/3.1.5:1:jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0:1;' export 'LOADEDMODULES_modshare;
+MPI_LIB=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib;' export 'MPI_LIB;
+CMAKE_PREFIX_PATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf:1;' export 'CMAKE_PREFIX_PATH_modshare;
+MPIF90=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin/mpif90;' export 'MPIF90;
+PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin:/software/acigs-utilities/bin:/homes/fgarcia4/py-virtual-envs/clean-install/bin:/software/acigs-utilities/bin:/software/acigs-utilities/bin:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/texlive-20190410-h3akxc37zsena7om3idsx3moxsbfekja/bin/x86_64-linux:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/poppler-0.87.0-c22uylhu5j5yhdnaxb4rdp2xnlzzywuj/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/ghostscript-9.50-kdjv5xjewqtxudlwejhgndgk4podnjes/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/imagemagick-7.0.8-7-w5qxsgyi7m2jnf72qvvo22kbi6qshjex/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/bin:/homes/fgarcia4/.local/bin:/usr/share/Modules/bin:/usr/lib/heimdal/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/dell/srvadmin/bin;' export 'PATH;
+INCLUDE_modshare=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:1;' export 'INCLUDE_modshare;
+MPIFC=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin/mpifort;' export 'MPIFC;
+PATH_modshare=/usr/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/imagemagick-7.0.8-7-w5qxsgyi7m2jnf72qvvo22kbi6qshjex/bin:1:/usr/local/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/bin:1:/usr/share/Modules/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/texlive-20190410-h3akxc37zsena7om3idsx3moxsbfekja/bin/x86_64-linux:1:/opt/dell/srvadmin/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/poppler-0.87.0-c22uylhu5j5yhdnaxb4rdp2xnlzzywuj/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/bin:1:/software/acigs-utilities/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/ghostscript-9.50-kdjv5xjewqtxudlwejhgndgk4podnjes/bin:1:/usr/lib/heimdal/bin:1:/homes/fgarcia4/.local/bin:1:/usr/sbin:1:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin:1:/homes/fgarcia4/py-virtual-envs/clean-install/bin:1:/usr/local/sbin:1;' export 'PATH_modshare;
+test' '0;'
+++ LD_LIBRARY_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:/homes/fgarcia4/rockstar-galaxies
+++ export LD_LIBRARY_PATH
+++ CPATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include
+++ export CPATH
+++ CPLUS_INCLUDE_PATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:1
+++ export CPLUS_INCLUDE_PATH_modshare
+++ MPI_ROOT=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl
+++ export MPI_ROOT
+++ MANPATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/share/man:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/share/man:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/share/man::
+++ export MANPATH
+++ LIBRARY_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib
+++ export LIBRARY_PATH
+++ _LMFILES_=/software/modulefiles/modules/rhel8/matplotlib/3.2.1/gcc/8.4.0/ivybridge:/software/modulefiles/modules/rhel8/python/3.7.7/gcc/8.4.0/ivybridge:/software/modulefiles/modules/rhel8/gcc/8.4.0:/software/modulefiles/modules/rhel8/jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0:/software/modulefiles/modules/rhel8/hpcc/deepthought2/1.0:/software/modulefiles/modules/rhel8/openmpi/gcc/8.4.0/ivybridge/3.1.5
+++ export _LMFILES_
+++ LOADEDMODULES=matplotlib/3.2.1/gcc/8.4.0/ivybridge:python/3.7.7/gcc/8.4.0/ivybridge:gcc/8.4.0:jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0:hpcc/deepthought2/1.0:openmpi/gcc/8.4.0/ivybridge/3.1.5
+++ export LOADEDMODULES
+++ MPIF77=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin/mpif77
+++ export MPIF77
+++ UCX_TLS=shm,ib,self
+++ export UCX_TLS
+++ CMAKE_PREFIX_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62
+++ export CMAKE_PREFIX_PATH
+++ MODULES_LMALTNAME='matplotlib/3.2.1/gcc/8.4.0/ivybridge&matplotlib/3.2.1/default&matplotlib/3.2.1&matplotlib/3.2.1/gcc/8.4.0/default&matplotlib/3.2.1/gcc/8.4.0:python/3.7.7/gcc/8.4.0/ivybridge&python/3.7.7/default&python/3.7.7&python/3.7.7/gcc/8.4.0/default&python/3.7.7/gcc/8.4.0:jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0&jupyter/python/3.7.7/default&jupyter/python/3.7.7&jupyter/python/default&jupyter/python&jupyter/default&jupyter&jupyter/python/3.7.7/gcc/8.4.0/default&jupyter/python/3.7.7/gcc/8.4.0:openmpi/gcc/8.4.0/ivybridge/3.1.5&openmpi/gcc/8.4.0/default&openmpi/gcc/8.4.0&openmpi/gcc/default&openmpi/gcc&openmpi/default&openmpi'
+++ export MODULES_LMALTNAME
+++ MODULES_LMCONFLICT='matplotlib/3.2.1/gcc/8.4.0/ivybridge&matplotlib:python/3.7.7/gcc/8.4.0/ivybridge&python:gcc/8.4.0&aocc&gcc&intel&nvhpc&pgi:jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0&jupyter:hpcc/deepthought2/1.0&hpcc&hpcc/deepthought2:openmpi/gcc/8.4.0/ivybridge/3.1.5&openmpi&intelmpi&nvmpi'
+++ export MODULES_LMCONFLICT
+++ MANPATH_modshare=:1:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/share/man:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/share/man:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/share/man:1
+++ export MANPATH_modshare
+++ OPENMPI_ROOT=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl
+++ export OPENMPI_ROOT
+++ PKG_CONFIG_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib/pkgconfig:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib/pkgconfig:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib/pkgconfig
+++ export PKG_CONFIG_PATH
+++ LIBRARY_PATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib:1:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:1:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:1
+++ export LIBRARY_PATH_modshare
+++ MPICC=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin/mpicc
+++ export MPICC
+++ C_INCLUDE_PATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:1
+++ export C_INCLUDE_PATH_modshare
+++ INCLUDE=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include
+++ export INCLUDE
+++ MODULES_LMALTNAME_modshare='openmpi/gcc/8.4.0/ivybridge/3.1.5&openmpi/gcc/8.4.0/default&openmpi/gcc/8.4.0&openmpi/gcc/default&openmpi/gcc&openmpi/default&openmpi:1:matplotlib/3.2.1/gcc/8.4.0/ivybridge&matplotlib/3.2.1/default&matplotlib/3.2.1&matplotlib/3.2.1/gcc/8.4.0/default&matplotlib/3.2.1/gcc/8.4.0:1:python/3.7.7/gcc/8.4.0/ivybridge&python/3.7.7/default&python/3.7.7&python/3.7.7/gcc/8.4.0/default&python/3.7.7/gcc/8.4.0:1:jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0&jupyter/python/3.7.7/default&jupyter/python/3.7.7&jupyter/python/default&jupyter/python&jupyter/default&jupyter&jupyter/python/3.7.7/gcc/8.4.0/default&jupyter/python/3.7.7/gcc/8.4.0:1'
+++ export MODULES_LMALTNAME_modshare
+++ MODULES_LMCONFLICT_modshare='gcc/8.4.0&aocc&gcc&intel&nvhpc&pgi:1:jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0&jupyter:1:hpcc/deepthought2/1.0&hpcc&hpcc/deepthought2:1:openmpi/gcc/8.4.0/ivybridge/3.1.5&openmpi&intelmpi&nvmpi:1:python/3.7.7/gcc/8.4.0/ivybridge&python:1:matplotlib/3.2.1/gcc/8.4.0/ivybridge&matplotlib:1'
+++ export MODULES_LMCONFLICT_modshare
+++ OPENMPI_LIBDIR=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib
+++ export OPENMPI_LIBDIR
+++ PKG_CONFIG_PATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib/pkgconfig:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib/pkgconfig:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib/pkgconfig:1
+++ export PKG_CONFIG_PATH_modshare
+++ CPLUS_INCLUDE_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include
+++ export CPLUS_INCLUDE_PATH
+++ MPI_INC=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include
+++ export MPI_INC
+++ OPENMPI_INCDIR=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include
+++ export OPENMPI_INCDIR
+++ MPICXX=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin/mpic++
+++ export MPICXX
+++ LD_LIBRARY_PATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib:1:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib64:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/lib:1:/homes/fgarcia4/rockstar-galaxies:1:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/lib:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib:1
+++ export LD_LIBRARY_PATH_modshare
+++ CPATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:1
+++ export CPATH_modshare
+++ C_INCLUDE_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include
+++ export C_INCLUDE_PATH
+++ _LMFILES__modshare=/software/modulefiles/modules/rhel8/python/3.7.7/gcc/8.4.0/ivybridge:1:/software/modulefiles/modules/rhel8/hpcc/deepthought2/1.0:1:/software/modulefiles/modules/rhel8/openmpi/gcc/8.4.0/ivybridge/3.1.5:1:/software/modulefiles/modules/rhel8/jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0:1:/software/modulefiles/modules/rhel8/matplotlib/3.2.1/gcc/8.4.0/ivybridge:1:/software/modulefiles/modules/rhel8/gcc/8.4.0:1
+++ export _LMFILES__modshare
+++ LOADEDMODULES_modshare=matplotlib/3.2.1/gcc/8.4.0/ivybridge:1:gcc/8.4.0:1:python/3.7.7/gcc/8.4.0/ivybridge:1:hpcc/deepthought2/1.0:1:openmpi/gcc/8.4.0/ivybridge/3.1.5:1:jupyter/python/3.7.7/gcc/8.4.0/ivybridge/1.0.0:1
+++ export LOADEDMODULES_modshare
+++ MPI_LIB=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/lib
+++ export MPI_LIB
+++ CMAKE_PREFIX_PATH_modshare=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf:1
+++ export CMAKE_PREFIX_PATH_modshare
+++ MPIF90=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin/mpif90
+++ export MPIF90
+++ PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin:/software/acigs-utilities/bin:/homes/fgarcia4/py-virtual-envs/clean-install/bin:/software/acigs-utilities/bin:/software/acigs-utilities/bin:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/texlive-20190410-h3akxc37zsena7om3idsx3moxsbfekja/bin/x86_64-linux:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/poppler-0.87.0-c22uylhu5j5yhdnaxb4rdp2xnlzzywuj/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/ghostscript-9.50-kdjv5xjewqtxudlwejhgndgk4podnjes/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/imagemagick-7.0.8-7-w5qxsgyi7m2jnf72qvvo22kbi6qshjex/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/bin:/homes/fgarcia4/.local/bin:/usr/share/Modules/bin:/usr/lib/heimdal/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/dell/srvadmin/bin
+++ export PATH
+++ INCLUDE_modshare=/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/include:1
+++ export INCLUDE_modshare
+++ MPIFC=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin/mpifort
+++ export MPIFC
+++ PATH_modshare=/usr/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/imagemagick-7.0.8-7-w5qxsgyi7m2jnf72qvvo22kbi6qshjex/bin:1:/usr/local/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/bin:1:/usr/share/Modules/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/texlive-20190410-h3akxc37zsena7om3idsx3moxsbfekja/bin/x86_64-linux:1:/opt/dell/srvadmin/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/poppler-0.87.0-c22uylhu5j5yhdnaxb4rdp2xnlzzywuj/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/bin:1:/software/acigs-utilities/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/ghostscript-9.50-kdjv5xjewqtxudlwejhgndgk4podnjes/bin:1:/usr/lib/heimdal/bin:1:/homes/fgarcia4/.local/bin:1:/usr/sbin:1:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin:1:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin:1:/homes/fgarcia4/py-virtual-envs/clean-install/bin:1:/usr/local/sbin:1
+++ export PATH_modshare
+++ test 0
++ _mlstatus=0
++ '[' -n x ']'
++ IFS=' 	
+'
++ unset _mlre _mlv _mlrv _mlIFS
++ '[' -n '' ']'
++ unset _mlshdbg
++ return 0
++ STDOUT=sh_log
++ SCRIPT=/lustre/fgarcia4/glob-clust-evo/halo_data/halo_finder.py
++ cd /homes/fgarcia4
++ source /homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh
+++ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PATH" && unset _OLD_VIRTUAL_PATH; rehash; test $?_OLD_VIRTUAL_PROMPT != 0 && set prompt="$_OLD_VIRTUAL_PROMPT" && unset _OLD_VIRTUAL_PROMPT; unsetenv VIRTUAL_ENV; test "\!:*" != "nondestructive" && unalias deactivate'
+/homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh: line 6: alias: deactivate: not found
+/homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh: line 6: alias: `test $?_OLD_VIRTUAL_PATH !': invalid alias name
+++ deactivate nondestructive
+/homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh: line 9: deactivate: command not found
+++ setenv VIRTUAL_ENV /homes/fgarcia4/py-virtual-envs/clean-install
+/homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh: line 11: setenv: command not found
+++ set _OLD_VIRTUAL_PATH=/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin:/software/acigs-utilities/bin:/homes/fgarcia4/py-virtual-envs/clean-install/bin:/software/acigs-utilities/bin:/software/acigs-utilities/bin:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/texlive-20190410-h3akxc37zsena7om3idsx3moxsbfekja/bin/x86_64-linux:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/poppler-0.87.0-c22uylhu5j5yhdnaxb4rdp2xnlzzywuj/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/ghostscript-9.50-kdjv5xjewqtxudlwejhgndgk4podnjes/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/imagemagick-7.0.8-7-w5qxsgyi7m2jnf72qvvo22kbi6qshjex/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/bin:/homes/fgarcia4/.local/bin:/usr/share/Modules/bin:/usr/lib/heimdal/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/dell/srvadmin/bin
+++ setenv PATH /homes/fgarcia4/py-virtual-envs/clean-install/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openmpi-3.1.5-e2ui4ckp7p2bs272tcu2wbbqnrye7kdl/bin:/software/acigs-utilities/bin:/homes/fgarcia4/py-virtual-envs/clean-install/bin:/software/acigs-utilities/bin:/software/acigs-utilities/bin:/software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/py-jupyter-1.0.0-6sdlmkmrerythh5zyl3onqvaeza3lxyf/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/texlive-20190410-h3akxc37zsena7om3idsx3moxsbfekja/bin/x86_64-linux:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/poppler-0.87.0-c22uylhu5j5yhdnaxb4rdp2xnlzzywuj/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/ghostscript-9.50-kdjv5xjewqtxudlwejhgndgk4podnjes/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/imagemagick-7.0.8-7-w5qxsgyi7m2jnf72qvvo22kbi6qshjex/bin:/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/bin:/homes/fgarcia4/.local/bin:/usr/share/Modules/bin:/usr/lib/heimdal/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/dell/srvadmin/bin
+/homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh: line 14: setenv: command not found
+++ set _OLD_VIRTUAL_PROMPT=
+/homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh: line 38: syntax error: unexpected end of file
++ which python
+/homes/fgarcia4/py-virtual-envs/clean-install/bin/python
++ cd sbatch_logs
++ mpirun -np 16 python3 /lustre/fgarcia4/glob-clust-evo/halo_data/halo_finder.py
++ tee -a sh_log
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+yt : [INFO     ] 2022-05-07 01:33:41,294 mpi4py was not found. Disabling parallel computation
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00113/info_00113.txt
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000030 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000029 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000029 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000029 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000030 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000030 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000030 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000029 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000032 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000031 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000030 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000040 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000033 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000030 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000030 secs
+Link length is 0.000007
+Filling in 165 particles
+Number of initial groups:1
+Number of groups:1
+FOF CPU TIME: 0.000030 secs
+Traceback (most recent call last):
+  File "/lustre/fgarcia4/glob-clust-evo/halo_data/halo_finder.py", line 114, in <module>
+    hc.create()
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 345, in create
+    self._run(save_halos, save_output, njobs=njobs, dynamic=dynamic)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/parallel_tools/parallel_analysis_interface.py", line 306, in barrierize
+    return func(*args, **kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 241, in _run
+    self.finder_method(self)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 40, in __call__
+    return self.function(hc, *self.args, **self.kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 75, in _fof_method
+    _parse_halo_list(hc, halo_list)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 174, in _parse_halo_list
+    hc._save(ds=ds, data=halo_properties, field_types=field_types)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 306, in _save
+    ds, filename, data, field_types=field_types, extra_attrs=extra_attrs_d
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/frontends/ytdata/utilities.py", line 94, in save_as_dataset
+    fh = h5py.File(filename, mode="w")
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 507, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 226, in make_fid
+    fid = h5f.create(name, h5f.ACC_TRUNC, fapl=fapl, fcpl=fcpl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 126, in h5py.h5f.create
+BlockingIOError: [Errno 11] Unable to create file (unable to lock file, errno = 11, error message = 'Resource temporarily unavailable')
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00114/info_00114.txt
+Traceback (most recent call last):
+  File "/lustre/fgarcia4/glob-clust-evo/halo_data/halo_finder.py", line 114, in <module>
+    hc.create()
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 345, in create
+    self._run(save_halos, save_output, njobs=njobs, dynamic=dynamic)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/parallel_tools/parallel_analysis_interface.py", line 306, in barrierize
+    return func(*args, **kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 241, in _run
+    self.finder_method(self)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 40, in __call__
+    return self.function(hc, *self.args, **self.kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 75, in _fof_method
+    _parse_halo_list(hc, halo_list)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 174, in _parse_halo_list
+    hc._save(ds=ds, data=halo_properties, field_types=field_types)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 306, in _save
+    ds, filename, data, field_types=field_types, extra_attrs=extra_attrs_d
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/frontends/ytdata/utilities.py", line 94, in save_as_dataset
+    fh = h5py.File(filename, mode="w")
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 507, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 226, in make_fid
+    fid = h5f.create(name, h5f.ACC_TRUNC, fapl=fapl, fcpl=fcpl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 126, in h5py.h5f.create
+BlockingIOError: [Errno 11] Unable to create file (unable to lock file, errno = 11, error message = 'Resource temporarily unavailable')
+Traceback (most recent call last):
+  File "/lustre/fgarcia4/glob-clust-evo/halo_data/halo_finder.py", line 114, in <module>
+    hc.create()
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 345, in create
+    self._run(save_halos, save_output, njobs=njobs, dynamic=dynamic)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/parallel_tools/parallel_analysis_interface.py", line 306, in barrierize
+    return func(*args, **kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 241, in _run
+    self.finder_method(self)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 40, in __call__
+    return self.function(hc, *self.args, **self.kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 75, in _fof_method
+    _parse_halo_list(hc, halo_list)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 174, in _parse_halo_list
+    hc._save(ds=ds, data=halo_properties, field_types=field_types)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 306, in _save
+    ds, filename, data, field_types=field_types, extra_attrs=extra_attrs_d
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/frontends/ytdata/utilities.py", line 94, in save_as_dataset
+    fh = h5py.File(filename, mode="w")
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 507, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 226, in make_fid
+    fid = h5f.create(name, h5f.ACC_TRUNC, fapl=fapl, fcpl=fcpl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 126, in h5py.h5f.create
+BlockingIOError: [Errno 11] Unable to create file (unable to lock file, errno = 11, error message = 'Resource temporarily unavailable')
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00114/info_00114.txt
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00114/info_00114.txt
+Traceback (most recent call last):
+  File "/lustre/fgarcia4/glob-clust-evo/halo_data/halo_finder.py", line 114, in <module>
+    hc.create()
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 345, in create
+    self._run(save_halos, save_output, njobs=njobs, dynamic=dynamic)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/parallel_tools/parallel_analysis_interface.py", line 306, in barrierize
+    return func(*args, **kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 241, in _run
+    self.finder_method(self)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 40, in __call__
+    return self.function(hc, *self.args, **self.kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 75, in _fof_method
+    _parse_halo_list(hc, halo_list)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 174, in _parse_halo_list
+    hc._save(ds=ds, data=halo_properties, field_types=field_types)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 306, in _save
+    ds, filename, data, field_types=field_types, extra_attrs=extra_attrs_d
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/frontends/ytdata/utilities.py", line 94, in save_as_dataset
+    fh = h5py.File(filename, mode="w")
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 507, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 226, in make_fid
+    fid = h5f.create(name, h5f.ACC_TRUNC, fapl=fapl, fcpl=fcpl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 126, in h5py.h5f.create
+BlockingIOError: [Errno 11] Unable to create file (unable to lock file, errno = 11, error message = 'Resource temporarily unavailable')
+Traceback (most recent call last):
+  File "/lustre/fgarcia4/glob-clust-evo/halo_data/halo_finder.py", line 114, in <module>
+    hc.create()
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 345, in create
+    self._run(save_halos, save_output, njobs=njobs, dynamic=dynamic)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/parallel_tools/parallel_analysis_interface.py", line 306, in barrierize
+    return func(*args, **kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 241, in _run
+    self.finder_method(self)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 40, in __call__
+    return self.function(hc, *self.args, **self.kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 75, in _fof_method
+    _parse_halo_list(hc, halo_list)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 174, in _parse_halo_list
+    hc._save(ds=ds, data=halo_properties, field_types=field_types)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 306, in _save
+    ds, filename, data, field_types=field_types, extra_attrs=extra_attrs_d
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/frontends/ytdata/utilities.py", line 94, in save_as_dataset
+    fh = h5py.File(filename, mode="w")
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 507, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 226, in make_fid
+    fid = h5f.create(name, h5f.ACC_TRUNC, fapl=fapl, fcpl=fcpl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 126, in h5py.h5f.create
+BlockingIOError: [Errno 11] Unable to create file (unable to lock file, errno = 11, error message = 'Resource temporarily unavailable')
+Traceback (most recent call last):
+  File "/lustre/fgarcia4/glob-clust-evo/halo_data/halo_finder.py", line 114, in <module>
+    hc.create()
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 345, in create
+    self._run(save_halos, save_output, njobs=njobs, dynamic=dynamic)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/parallel_tools/parallel_analysis_interface.py", line 306, in barrierize
+    return func(*args, **kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 241, in _run
+    self.finder_method(self)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 40, in __call__
+    return self.function(hc, *self.args, **self.kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 75, in _fof_method
+    _parse_halo_list(hc, halo_list)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 174, in _parse_halo_list
+    hc._save(ds=ds, data=halo_properties, field_types=field_types)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 306, in _save
+    ds, filename, data, field_types=field_types, extra_attrs=extra_attrs_d
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/frontends/ytdata/utilities.py", line 94, in save_as_dataset
+    fh = h5py.File(filename, mode="w")
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 507, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 226, in make_fid
+    fid = h5f.create(name, h5f.ACC_TRUNC, fapl=fapl, fcpl=fcpl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 126, in h5py.h5f.create
+BlockingIOError: [Errno 11] Unable to create file (unable to lock file, errno = 11, error message = 'Resource temporarily unavailable')
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00114/info_00114.txt
+Traceback (most recent call last):
+  File "/lustre/fgarcia4/glob-clust-evo/halo_data/halo_finder.py", line 114, in <module>
+    hc.create()
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 345, in create
+    self._run(save_halos, save_output, njobs=njobs, dynamic=dynamic)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/parallel_tools/parallel_analysis_interface.py", line 306, in barrierize
+    return func(*args, **kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 241, in _run
+    self.finder_method(self)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 40, in __call__
+    return self.function(hc, *self.args, **self.kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 75, in _fof_method
+    _parse_halo_list(hc, halo_list)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 174, in _parse_halo_list
+    hc._save(ds=ds, data=halo_properties, field_types=field_types)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 306, in _save
+    ds, filename, data, field_types=field_types, extra_attrs=extra_attrs_d
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/frontends/ytdata/utilities.py", line 94, in save_as_dataset
+    fh = h5py.File(filename, mode="w")
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 507, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 226, in make_fid
+    fid = h5f.create(name, h5f.ACC_TRUNC, fapl=fapl, fcpl=fcpl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 126, in h5py.h5f.create
+BlockingIOError: [Errno 11] Unable to create file (unable to lock file, errno = 11, error message = 'Resource temporarily unavailable')
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00114/info_00114.txt
+Traceback (most recent call last):
+  File "/lustre/fgarcia4/glob-clust-evo/halo_data/halo_finder.py", line 114, in <module>
+    hc.create()
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 345, in create
+    self._run(save_halos, save_output, njobs=njobs, dynamic=dynamic)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/parallel_tools/parallel_analysis_interface.py", line 306, in barrierize
+    return func(*args, **kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 241, in _run
+    self.finder_method(self)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 40, in __call__
+    return self.function(hc, *self.args, **self.kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 75, in _fof_method
+    _parse_halo_list(hc, halo_list)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 174, in _parse_halo_list
+    hc._save(ds=ds, data=halo_properties, field_types=field_types)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 306, in _save
+    ds, filename, data, field_types=field_types, extra_attrs=extra_attrs_d
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/frontends/ytdata/utilities.py", line 94, in save_as_dataset
+    fh = h5py.File(filename, mode="w")
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 507, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 226, in make_fid
+    fid = h5f.create(name, h5f.ACC_TRUNC, fapl=fapl, fcpl=fcpl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 126, in h5py.h5f.create
+BlockingIOError: [Errno 11] Unable to create file (unable to lock file, errno = 11, error message = 'Resource temporarily unavailable')
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00114/info_00114.txt
+Traceback (most recent call last):
+  File "/lustre/fgarcia4/glob-clust-evo/halo_data/halo_finder.py", line 114, in <module>
+    hc.create()
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 345, in create
+    self._run(save_halos, save_output, njobs=njobs, dynamic=dynamic)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/parallel_tools/parallel_analysis_interface.py", line 306, in barrierize
+    return func(*args, **kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 241, in _run
+    self.finder_method(self)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 40, in __call__
+    return self.function(hc, *self.args, **self.kwargs)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 75, in _fof_method
+    _parse_halo_list(hc, halo_list)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 174, in _parse_halo_list
+    hc._save(ds=ds, data=halo_properties, field_types=field_types)
+  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_catalog.py", line 306, in _save
+    ds, filename, data, field_types=field_types, extra_attrs=extra_attrs_d
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/frontends/ytdata/utilities.py", line 94, in save_as_dataset
+    fh = h5py.File(filename, mode="w")
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 507, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/h5py/_hl/files.py", line 226, in make_fid
+    fid = h5f.create(name, h5f.ACC_TRUNC, fapl=fapl, fcpl=fcpl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 126, in h5py.h5f.create
+BlockingIOError: [Errno 11] Unable to create file (unable to lock file, errno = 11, error message = 'Resource temporarily unavailable')
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00114/info_00114.txt
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[29610,1],6]
+  Exit code:    1
+--------------------------------------------------------------------------
++ deactivate
+/var/spool/slurmd/job18564847/slurm_script: line 32: deactivate: command not found
