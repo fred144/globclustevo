@@ -43,7 +43,7 @@ data_directory = os.path.expanduser(
 # =============================================================================
 
 # enable discrete selection of time range based on snapshot number
-strt_snapshot = "00113"
+strt_snapshot = "00820"
 end_snapshot = "00839"
 files = sorted(os.listdir(data_directory))  # [-2:-1]  [300:400:2]
 strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]

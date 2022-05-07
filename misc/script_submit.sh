@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J script_submit
-#SBATCH -n 16
-#SBATCH -t 6
+#SBATCH -n 1
+#SBATCH -t 12
 
 #SBATCH --mail-user=fgarcia4@umd.edu
 #SBATCH --mail-type=BEGIN
@@ -12,7 +12,7 @@
 
 set -x
 
-NPE=16;                            # process number
+NPE=1;                            # process number
 export LANG=en_US
 
 
