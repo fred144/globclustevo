@@ -18,7 +18,7 @@ mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 # ==============================================================================
-simulation_run_name = "fs035_ms10"
+simulation_run_name = "fs07_refine"
 # ===================================local test=================================
 # datadir = os.path.relpath("../../cosm_test_data/refine")
 # # parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution'
@@ -45,7 +45,7 @@ if not os.path.exists(pop_2_save):
 sequence_title = "z_gas"
 width = (400, "pc")
 slice_axis = "z"
-start_step = 154 # fs07:113, fs035:154
+start_step = 154  # fs07:113, fs035:154
 end_step = 503
 
 # ctr_shift_thresh = 0.00060 #code length
@@ -61,7 +61,10 @@ star_map = cm.get_cmap(clrmap)
 # snapshot 115 to 452 roughly spans 340 to 470 myr
 
 # pop II birth color bar kwargs
-birth_start = 344.295545 #339.562  # Myr, need to figure out how to got to absolute ages
+# 339.562 for fs07
+# 344.295545 for fs035
+# Myr, need to figure out how to got to absolute ages
+birth_start = 339.562
 time_range = (300, 570)  # Myr
 evenly_spaced_times = np.arange(time_range[0], time_range[1] + 1)
 cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))

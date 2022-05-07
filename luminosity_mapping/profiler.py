@@ -3,7 +3,7 @@ import sys
 import yt
 
 sys.path.insert(
-    1, "/homes/fgarcia4/py-virtual-envs/cosmology/lib/python3.7/site-packages"
+    1, "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages"
 )
 import numpy as np
 import matplotlib.pyplot as plt

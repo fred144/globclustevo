@@ -1,7 +1,7 @@
 import sys
 
 sys.path.insert(
-    1, "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages"
+    1, "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages"
 )
 # sys.path.insert(
 #     1, "/homes/fgarcia4/py-virtual-envs/old-yt-361/lib/python3.7/site-packages"
@@ -21,7 +21,7 @@ from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
 # from yt.analysis_modules.halo_analysis.api import HaloCatalog
 
 
-# yt.enable_parallelism()
+yt.enable_parallelism()
 mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
@@ -44,7 +44,7 @@ data_directory = os.path.expanduser(
 
 # enable discrete selection of time range based on snapshot number
 strt_snapshot = "00113"
-end_snapshot = "00810"
+end_snapshot = "00839"
 files = sorted(os.listdir(data_directory))  # [-2:-1]  [300:400:2]
 strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
 end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
@@ -105,7 +105,7 @@ for file_name in filtered_files:
         finder_kwargs={
             "ptype": "star",
             "padding": 0.0001,
-            "link": 0.00000148,
+            "link": 0.00004,
             "dm_only": False,
         },
         output_dir="../halo_data/fs07_refine",
