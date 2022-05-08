@@ -285,8 +285,8 @@ if __name__ == "__main__":
 
     pop2_data_directory = r"../pop_2_data/fs07_refine"
     halo_data_directory = r"../halo_data/fs07_refine/fof_00004"
-    pop2_data_set = filter_snapshots(pop2_data_directory, 200, 800, 50)
-    halo_data_directory = filter_snapshots(halo_data_directory, 200, 800, 50)
+    pop2_data_set = filter_snapshots(pop2_data_directory, 113, 839, 1)
+    halo_data_directory = filter_snapshots(halo_data_directory, 113, 839, 1)
 
     for pop_data, hc_data in zip(pop2_data_set, halo_data_directory):
         # get where the stars are centered
