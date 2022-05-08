@@ -1,0 +1,310 @@
+/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /homes/fgarcia4/.config/yt/ytrc is deprecated in favor of /homes/fgarcia4/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00265/info_00265.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:153
+Number of groups:6
+FOF CPU TIME: 0.015657 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00266/info_00266.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:156
+Number of groups:6
+FOF CPU TIME: 0.016966 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00267/info_00267.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:169
+Number of groups:8
+FOF CPU TIME: 0.015140 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00268/info_00268.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:183
+Number of groups:8
+FOF CPU TIME: 0.015049 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00269/info_00269.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:183
+Number of groups:6
+FOF CPU TIME: 0.014359 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00270/info_00270.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:183
+Number of groups:7
+FOF CPU TIME: 0.015627 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00271/info_00271.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:183
+Number of groups:6
+FOF CPU TIME: 0.013243 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00272/info_00272.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:186
+Number of groups:9
+FOF CPU TIME: 0.012959 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00273/info_00273.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:200
+Number of groups:10
+FOF CPU TIME: 0.012417 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00274/info_00274.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:198
+Number of groups:11
+FOF CPU TIME: 0.027899 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00275/info_00275.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:197
+Number of groups:11
+FOF CPU TIME: 0.012689 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00276/info_00276.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:196
+Number of groups:9
+FOF CPU TIME: 0.015112 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00277/info_00277.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:200
+Number of groups:11
+FOF CPU TIME: 0.012303 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00278/info_00278.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:221
+Number of groups:11
+FOF CPU TIME: 0.012523 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00279/info_00279.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:230
+Number of groups:14
+FOF CPU TIME: 0.013135 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00280/info_00280.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:243
+Number of groups:18
+FOF CPU TIME: 0.012840 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00281/info_00281.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:237
+Number of groups:15
+FOF CPU TIME: 0.011895 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00282/info_00282.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:248
+Number of groups:13
+FOF CPU TIME: 0.011809 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00283/info_00283.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:271
+Number of groups:15
+FOF CPU TIME: 0.011692 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00284/info_00284.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:283
+Number of groups:16
+FOF CPU TIME: 0.012039 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00285/info_00285.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:281
+Number of groups:18
+FOF CPU TIME: 0.012139 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00286/info_00286.txt
+Link length is 0.000001
+Filling in 5829 particles
+Number of initial groups:279
+Number of groups:19
+FOF CPU TIME: 0.012115 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00287/info_00287.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:313
+Number of groups:22
+FOF CPU TIME: 0.012265 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00288/info_00288.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:319
+Number of groups:22
+FOF CPU TIME: 0.020703 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00289/info_00289.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:316
+Number of groups:22
+FOF CPU TIME: 0.015962 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00290/info_00290.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:323
+Number of groups:21
+FOF CPU TIME: 0.012453 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00291/info_00291.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:336
+Number of groups:20
+FOF CPU TIME: 0.011849 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00292/info_00292.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:349
+Number of groups:17
+FOF CPU TIME: 0.012450 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00293/info_00293.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:350
+Number of groups:17
+FOF CPU TIME: 0.012652 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00294/info_00294.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:349
+Number of groups:15
+FOF CPU TIME: 0.012343 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00295/info_00295.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:347
+Number of groups:12
+FOF CPU TIME: 0.012525 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00296/info_00296.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:356
+Number of groups:14
+FOF CPU TIME: 0.012312 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00297/info_00297.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:356
+Number of groups:11
+FOF CPU TIME: 0.012447 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00298/info_00298.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:351
+Number of groups:11
+FOF CPU TIME: 0.012147 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00299/info_00299.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:353
+Number of groups:14
+FOF CPU TIME: 0.012044 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00300/info_00300.txt
+Link length is 0.000001
+Filling in 6185 particles
+Number of initial groups:331
+Number of groups:12
+FOF CPU TIME: 0.012220 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00301/info_00301.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:356
+Number of groups:12
+FOF CPU TIME: 0.013267 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00302/info_00302.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:356
+Number of groups:16
+FOF CPU TIME: 0.013123 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00303/info_00303.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:352
+Number of groups:12
+FOF CPU TIME: 0.013703 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00304/info_00304.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:351
+Number of groups:14
+FOF CPU TIME: 0.014442 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00305/info_00305.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:351
+Number of groups:13
+FOF CPU TIME: 0.014273 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00306/info_00306.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:344
+Number of groups:9
+FOF CPU TIME: 0.013943 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00307/info_00307.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:333
+Number of groups:13
+FOF CPU TIME: 0.013813 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00308/info_00308.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:331
+Number of groups:11
+FOF CPU TIME: 0.013774 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00309/info_00309.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:342
+Number of groups:9
+FOF CPU TIME: 0.013752 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00310/info_00310.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:327
+Number of groups:11
+FOF CPU TIME: 0.013520 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00311/info_00311.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:313
+Number of groups:12
+FOF CPU TIME: 0.014700 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00312/info_00312.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:300
+Number of groups:9
+FOF CPU TIME: 0.015903 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00313/info_00313.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:295
+Number of groups:11
+FOF CPU TIME: 0.014283 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00314/info_00314.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:293
+Number of groups:15
+FOF CPU TIME: 0.014794 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00315/info_00315.txt
+Link length is 0.000001
+Filling in 6749 particles
+Number of initial groups:303
+Number of groups:13
+FOF CPU TIME: 0.014139 secs
+Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00316/info_00316.txt
