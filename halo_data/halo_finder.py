@@ -13,7 +13,7 @@ import os
 # import pathlib
 import yt
 
-#yt.enable_parallelism()
+# yt.enable_parallelism()
 from yt.funcs import mylog
 import numpy as np
 
@@ -26,13 +26,13 @@ mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 
-# data_directory = r"../../cosm_test_data/refine"
+data_directory = r"../../cosm_test_data/refine"
 
 # ---------------------------------DT2 Paths------------------------------------
 # lustre data path
-data_directory = os.path.expanduser(
-    "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
-)
+# data_directory = os.path.expanduser(
+#     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
+# )
 # # save path
 # sequence_folder = "newcmap_gas_projected_density_z"
 # parent_folder = "/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine"
@@ -43,8 +43,8 @@ data_directory = os.path.expanduser(
 # =============================================================================
 
 # enable discrete selection of time range based on snapshot number
-strt_snapshot = "00113"
-end_snapshot = "00839"
+strt_snapshot = "00250"
+end_snapshot = "00250"
 files = sorted(os.listdir(data_directory))  # [-2:-1]  [300:400:2]
 strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
 end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
@@ -104,8 +104,7 @@ for file_name in filtered_files:
         finder_method="fof",
         finder_kwargs={
             "ptype": "star",
-            "padding": 0.0001,
-            "link": 0.00002,
+            "link": 0.000006,
             "dm_only": False,
         },
         output_dir="../halo_data/fs07_refine",
@@ -118,21 +117,23 @@ for file_name in filtered_files:
     # hc_ad = hc.halos_ds.all_data()
 
     # new yt
-    # halos = yt.load("../halo_data/info_00500/info_00500.0.h5")
-    # cata = HaloCatalog(halos_ds=halos)
-    # cata.load()
+    halos = yt.load("../halo_data/fs07_refine/info_00250/info_00250.0.h5")
+    cata = HaloCatalog(halos_ds=halos)
+    cata.load()
 
-    # # optionally plot it
-    # width = (400, "pc")
-    # p = yt.ProjectionPlot(ds, "z", "density", width=width, center=plt_ctr)
-    # p.annotate_particles(width=width, ptype="star", p_size=0.2, marker=".", col="r")
-    # p.annotate_halos(
-    #     cata,
-    #     width=width,
-    # )
-    # p.set_cmap("density", "copper")
-    # # p.set_figure_size(5)
-    # p.save(
-    #     "./",
-    #     mpl_kwargs={"bbox_inches": "tight", "dpi": 500, "pad_inches": 0.1},
-    # )
+    # optionally plot it
+    width = (400, "pc")
+    p = yt.ProjectionPlot(ds, "z", "density", width=width, center=plt_ctr)
+    p.annotate_particles(
+        width=width, ptype="star", alpha=0.2, p_size=0.2, marker=".", col="r"
+    )
+    p.annotate_halos(
+        cata,
+        width=width,
+    )
+    p.set_cmap("density", "copper")
+    # p.set_figure_size(5)
+    p.save(
+        "./",
+        mpl_kwargs={"bbox_inches": "tight", "dpi": 500, "pad_inches": 0.1},
+    )
