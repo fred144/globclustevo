@@ -1,7 +1,8 @@
 #!/bin/bash
 #SBATCH -J script_submit
 #SBATCH -n 1
-#SBATCH -t 12
+#SBATCH --mem-per-cpu=32024  
+#SBATCH -t 12:00:00
 
 #SBATCH --mail-user=fgarcia4@umd.edu
 #SBATCH --mail-type=BEGIN
@@ -21,10 +22,12 @@ module load openmpi
 
 STDOUT="sh_log"
 SCRIPT="/lustre/fgarcia4/glob-clust-evo/halo_data/halo_finder.py"
+#SCRIPT="profiler.py"
 
 cd ~
 source /homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh
 which python
+#cd /lustre/fgarcia4/glob-clust-evo/luminosity_mapping
 cd sbatch_logs
 
 

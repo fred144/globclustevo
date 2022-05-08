@@ -1,0 +1,24 @@
+# read in: ../pop_2_data/fs07_refine/pos_00399_458_14_myr.txt
+> snapshot time 458.14 Myr
+> snapshot number 399
+> uniform radius of 20 pc
+> bad alpha for GC #1
+> bad alpha for GC #2
+> bad alpha for GC #3
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #4
+> bad alpha for GC #4
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #5
+> bad alpha for GC #6
+> bad alpha for GC #10
+> bad alpha for GC #11
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #13
+> bad alpha for GC #13
+> bad alpha for GC #14
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #15
+> bad alpha for GC #15
+> bad alpha for GC #17
+> found 7 good profiles

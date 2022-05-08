@@ -1,0 +1,57 @@
+# read in: ../pop_2_data/fs07_refine/pos_00474_473_75_myr.txt
+> snapshot time 473.75 Myr
+> snapshot number 474
+> uniform radius of 20 pc
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #1
+> bad alpha for GC #1
+> bad alpha for GC #2
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #4
+> bad alpha for GC #4
+> bad alpha for GC #5
+> bad alpha for GC #6
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #7
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #7 
+> bad alpha for GC #8
+> bad alpha for GC #9
+> bad alpha for GC #10
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #11
+> bad alpha for GC #11
+> bad alpha for GC #14
+> bad alpha for GC #16
+> bad alpha for GC #17
+> bad alpha for GC #19
+> bad alpha for GC #20
+> bad alpha for GC #21
+> bad alpha for GC #22
+> bad alpha for GC #23
+> bad alpha for GC #24
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #25
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #26
+> bad alpha for GC #26
+> bad alpha for GC #27
+> bad alpha for GC #28
+> bad alpha for GC #29
+> bad alpha for GC #33
+> bad alpha for GC #34
+> bad alpha for GC #35
+> bad alpha for GC #36
+> bad alpha for GC #40
+> bad alpha for GC #44
+> bad alpha for GC #46
+> bad alpha for GC #47
+> bad alpha for GC #49
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #52
+> bad alpha for GC #53
+> bad alpha for GC #54
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #55
+> bad alpha for GC #55
+> found 22 good profiles

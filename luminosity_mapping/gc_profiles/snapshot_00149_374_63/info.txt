@@ -1,0 +1,1 @@
+# 		Time[Myr] 		 GC Label		 Age[Myr] 		 TotalOrTruncreMass[Msun]	 CoreMass[Msun] 	  TruncRadii[pc]	 CoreRadii[pc] 	 ErrCoreRadii	 FitAlpha 	 ErrFitAlpha	 FitSigma0 	  ErrFitSigma0	 FitSigmaBG 	  ErrFitSigmaBG

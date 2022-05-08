@@ -1,0 +1,6 @@
+# read in: ../pop_2_data/fs07_refine/pos_00198_403_01_myr.txt
+> snapshot time 403.01 Myr
+> snapshot number 198
+> uniform radius of 20 pc
+> bad alpha for GC #0
+> found 0 good profiles

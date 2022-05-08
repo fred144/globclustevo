@@ -1,0 +1,56 @@
+# read in: ../pop_2_data/fs07_refine/pos_00486_476_23_myr.txt
+> snapshot time 476.23 Myr
+> snapshot number 486
+> uniform radius of 20 pc
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #1
+> bad alpha for GC #1
+> bad alpha for GC #2
+> bad alpha for GC #3
+> bad alpha for GC #4
+> bad alpha for GC #5
+> bad alpha for GC #6
+> bad alpha for GC #7
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #8
+> bad alpha for GC #8
+> bad alpha for GC #9
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #11
+> bad alpha for GC #11
+> bad alpha for GC #12
+> bad alpha for GC #13
+> bad alpha for GC #19
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #20
+> bad alpha for GC #20
+> bad alpha for GC #21
+> bad alpha for GC #22
+> bad alpha for GC #26
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #29
+> bad alpha for GC #29
+> bad alpha for GC #30
+> bad alpha for GC #32
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #33
+> bad alpha for GC #33
+> bad alpha for GC #35
+> bad alpha for GC #36
+> bad alpha for GC #37
+> bad alpha for GC #38
+> bad alpha for GC #39
+> bad alpha for GC #40
+> bad alpha for GC #41
+> bad alpha for GC #43
+> bad alpha for GC #44
+> bad alpha for GC #45
+> bad alpha for GC #46
+> bad alpha for GC #48
+> bad alpha for GC #50
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #52
+> bad alpha for GC #52
+> bad alpha for GC #53
+> bad alpha for GC #56
+> found 21 good profiles

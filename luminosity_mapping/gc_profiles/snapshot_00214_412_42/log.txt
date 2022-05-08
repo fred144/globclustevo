@@ -1,0 +1,8 @@
+# read in: ../pop_2_data/fs07_refine/pos_00214_412_42_myr.txt
+> snapshot time 412.42 Myr
+> snapshot number 214
+> uniform radius of 20 pc
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #1
+> bad alpha for GC #1
+> found 1 good profiles

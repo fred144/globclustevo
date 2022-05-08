@@ -1,0 +1,65 @@
+# read in: ../pop_2_data/fs07_refine/pos_00465_471_88_myr.txt
+> snapshot time 471.88 Myr
+> snapshot number 465
+> uniform radius of 20 pc
+> bad alpha for GC #0
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #2
+> bad alpha for GC #2
+> bad alpha for GC #3
+> bad alpha for GC #4
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #6
+> bad alpha for GC #7
+> bad alpha for GC #9
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #11
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #11 
+> bad alpha for GC #13
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #14
+> bad alpha for GC #14
+> bad alpha for GC #15
+> bad alpha for GC #16
+> bad alpha for GC #18
+> bad alpha for GC #19
+> bad alpha for GC #20
+> bad alpha for GC #21
+> bad alpha for GC #22
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #23
+> bad alpha for GC #23
+> bad alpha for GC #24
+> bad alpha for GC #25
+> bad alpha for GC #26
+> bad alpha for GC #27
+> bad alpha for GC #28
+> bad alpha for GC #29
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #30
+> bad alpha for GC #30
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #32
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #32 
+> bad alpha for GC #33
+> bad alpha for GC #34
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> Trying another fit for GC #35
+Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #35 
+> bad alpha for GC #37
+> bad alpha for GC #38
+> bad alpha for GC #39
+> bad alpha for GC #40
+> bad alpha for GC #41
+> bad alpha for GC #42
+> bad alpha for GC #45
+> bad alpha for GC #46
+> bad alpha for GC #50
+> bad alpha for GC #51
+> bad alpha for GC #52
+> bad alpha for GC #53
+> bad alpha for GC #54
+> found 14 good profiles
