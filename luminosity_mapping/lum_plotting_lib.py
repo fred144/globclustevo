@@ -45,7 +45,7 @@ def trunc_radius(sigma_0, r_c, alpha, sigma_bg):
     0.5bg = (peak)/( 1 + (r/r_c)^alpha)
     """
 
-    r_trunc = (r_c**alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
+    r_trunc = (r_c ** alpha * ((sigma_0 / ((1.5 - 1) * sigma_bg) - 1))) ** (1 / alpha)
     return r_trunc
 
 
@@ -288,7 +288,15 @@ def star_luminosity_plot(
             y_peak = plt_ctrs[:, 1]
             gc_labels = plt_ctrs[:, 3]
 
-            plt.scatter(x_peak, y_peak, color="green", marker="x", linewidths=0.5, s=10)
+            plt.scatter(
+                x_peak,
+                y_peak,
+                color="green",
+                alpha=0.5,
+                marker="x",
+                linewidths=0.2,
+                s=5,
+            )
             plt.xlim(-proj_width / 2, proj_width / 2)
             plt.ylim(-proj_width / 2, proj_width / 2)
 
@@ -407,7 +415,7 @@ def king_profiler(
     gc_rad,
     gc_label,
     bins=30,
-    good_alpha=4,
+    good_alpha=5,
 ):
     """
     Contructs one projected density profile for a globular cluster within a
@@ -521,7 +529,9 @@ def king_profiler(
             sigma_0=fit_sigma_naught,
             sigma_bg=fit_sigma_bg,
         )
-        core_mass = get_masses(clust_x, clust_y, clust_masses, fit_r_c)
+        core_mass, core_count = get_masses(
+            clust_x, clust_y, clust_masses, fit_r_c, counts=True
+        )
 
         # =============================================================================
 
@@ -532,7 +542,9 @@ def king_profiler(
 
         if truncation_radius <= gc_rad:
             # realistic truncation radius labels
-            trunc_mass = get_masses(clust_x, clust_y, clust_masses, truncation_radius)
+            trunc_mass, trunc_count = get_masses(
+                clust_x, clust_y, clust_masses, truncation_radius, counts=True
+            )
             output_mass = trunc_mass
             plot_label = (
                 r"$R_{{core}} = {:.2f} \: pc$"

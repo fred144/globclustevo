@@ -365,37 +365,37 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     # =============================================================================
     # psc sfc save
 
-    # psc_kazu_radii = np.abs(
-    #     ds.arr(ad["PSC", "particle_metallicity"], "code_length").to("pc")
-    # )
-    # sfc_kazu_radii = np.abs(
-    #     ds.arr(ad["SFC", "particle_metallicity"], "code_length").to("pc")
-    # )
-    # pos_pscs = ds.arr(pos_pscs_recentered, "code_length").to("pc")
-    # pos_sfcs = ds.arr(pos_sfcs_recentered, "code_length").to("pc")
+    psc_kazu_radii = np.abs(
+        ds.arr(ad["PSC", "particle_metallicity"], "code_length").to("pc")
+    )
+    sfc_kazu_radii = np.abs(
+        ds.arr(ad["SFC", "particle_metallicity"], "code_length").to("pc")
+    )
+    pos_pscs = ds.arr(pos_pscs_recentered, "code_length").to("pc")
+    pos_sfcs = ds.arr(pos_sfcs_recentered, "code_length").to("pc")
 
-    # # particle tags, see if unique
-    # psc_tag = np.array(ad["PSC", "particle_index"])
-    # sfc_tag = np.array(ad["SFC", "particle_index"])
+    # particle tags, see if unique
+    psc_tag = np.array(ad["PSC", "particle_index"])
+    sfc_tag = np.array(ad["SFC", "particle_index"])
 
-    # # save paths
-    # psc_path = "../luminosity_mapping/psc_data/psc_{:05d}_{}_myr.txt".format(
-    #     output_num, save_time
-    # )
-    # sfc_path = "../luminosity_mapping/sfc_data/sfc_{:05d}_{}_myr.txt".format(
-    #     output_num, save_time
-    # )
-    # # x,y,z,radii at birth (pc), particle tag
-    # psc_save_data = np.concatenate(
-    #     (pos_pscs, psc_kazu_radii[:, None], psc_tag[:, None]), axis=1
-    # )
-    # sfc_save_data = np.concatenate(
-    #     (pos_sfcs, sfc_kazu_radii[:, None], sfc_tag[:, None]), axis=1
-    # )
-    # print("# saved:", psc_path)
-    # print("# saved:", sfc_path)
-    # np.savetxt(psc_path, X=psc_save_data)
-    # np.savetxt(sfc_path, X=sfc_save_data)
+    # save paths
+    psc_path = "../luminosity_mapping/psc_data/psc_{:05d}_{}_myr.txt".format(
+        output_num, save_time
+    )
+    sfc_path = "../luminosity_mapping/sfc_data/sfc_{:05d}_{}_myr.txt".format(
+        output_num, save_time
+    )
+    # x,y,z,radii at birth (pc), particle tag
+    psc_save_data = np.concatenate(
+        (pos_pscs, psc_kazu_radii[:, None], psc_tag[:, None]), axis=1
+    )
+    sfc_save_data = np.concatenate(
+        (pos_sfcs, sfc_kazu_radii[:, None], sfc_tag[:, None]), axis=1
+    )
+    print("# saved:", psc_path)
+    print("# saved:", sfc_path)
+    np.savetxt(psc_path, X=psc_save_data)
+    np.savetxt(sfc_path, X=sfc_save_data)
     # =============================================================================
 
     # from yt.extensions.astro_analysis.halo_analysis import HaloCatalog

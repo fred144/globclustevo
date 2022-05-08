@@ -165,7 +165,7 @@ def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, centers=None, **
             gc_label=label,
             bins=25,
         )
-        # print(char_age )
+        # per globular cluster inside a snap shot
         gc_out_masses.append(m_tot)
         gc_r_core.append(r_c)
         gc_err_rc.append(err_rc)
@@ -282,11 +282,11 @@ total_counts = []
 time_myr = []
 
 if __name__ == "__main__":
-    data_directory = r"./pop_2_data/"
+
     pop2_data_directory = r"../pop_2_data/fs07_refine"
-    halo_data_directory = r"../halo_data/fs07_refine/fof"
-    pop2_data_set = filter_snapshots(pop2_data_directory, 400, 405, 1)
-    halo_data_directory = filter_snapshots(halo_data_directory, 400, 405, 1)
+    halo_data_directory = r"../halo_data/fs07_refine/fof_00004"
+    pop2_data_set = filter_snapshots(pop2_data_directory, 200, 800, 50)
+    halo_data_directory = filter_snapshots(halo_data_directory, 200, 800, 50)
 
     for pop_data, hc_data in zip(pop2_data_set, halo_data_directory):
         # get where the stars are centered
@@ -305,9 +305,6 @@ if __name__ == "__main__":
 
         gc_centers = np.vstack((x_halos, y_halos, z_halos, ids)).T  # pc
 
-        # data_file = "./pop_2_data/pos_00418_462_09_myr.txt"
-        # data_file = "./pop_2_data/pos_00486_476_23_myr.txt"
-        # data_file = data_directory + file_name
         # make output directory
         folder_name = "./gc_profiles/snapshot_" + pop_data[30:-8]
 
@@ -316,52 +313,24 @@ if __name__ == "__main__":
             os.makedirs(folder_name)
 
         # put all verbose output into a text file
-        # orig_stdout = sys.stdout
-        # sys.stdout = open(folder_name + "/log.txt", "w")
+        orig_stdout = sys.stdout
+        sys.stdout = open(folder_name + "/log.txt", "w")
 
         masses, core_radii, core_masses, r_trunc, ages, time, particles = run_profiler(
             file_name=pop_data,
             proj_width=400,
             gc_radii=20,  # uniform radii to be used to extract clusters
-            lum_map_bins=2000,  # bad resolution so that you can see it better
+            lum_map_bins=4000,  # bad resolution so that you can see it better
             centers=gc_centers,
         )
         gc_counts.append(np.sum(particles))
         total_counts.append(pop2_data.shape[0])
         time_myr.append(time)
-        # sys.stdout.close()
-        # sys.stdout = orig_stdout
+        sys.stdout.close()
+        sys.stdout = orig_stdout
 
-    # for file_name in filtered_files:
-
-    #     # data_file = "./pop_2_data/pos_00418_462_09_myr.txt"
-    #     # data_file = "./pop_2_data/pos_00486_476_23_myr.txt"
-    #     data_file = data_directory + file_name
-    #     # make output directory
-    #     folder_name = "./gc_profiles/snapshot_" + data_file[18:-8]
-
-    #     if not os.path.exists(folder_name):
-    #         print("# Creating new sequence directory", folder_name)
-    #         os.makedirs(folder_name)
-
-    #     # put all verbose output into a text file
-    #     orig_stdout = sys.stdout
-    #     sys.stdout = open(folder_name + "/log.txt", "w")
-
-    #     masses, core_radii, core_masses, r_trunc, ages, time = run_profiler(
-    #         file_name=data_file,
-    #         proj_width=400,
-    #         gc_radii=20,  # uniform radii to be used to extract clusters
-    #         lum_map_bins=1000,  # bad resolution so that you can see it better
-    #         num_ctr=250,
-    #         ctr_dist_thresh=5,
-    #         ctr_rel_thresh=0.001,
-    #     )
-
-    #     sys.stdout.close()
-    #     sys.stdout = orig_stdout
 #%%
-plt.figure(figsize=(5, 4), dpi=200)
-plt.plot(time_myr, total_counts, label="total counts")
-plt.plot(time_myr, gc_counts, label="inside globular clusters")
-plt.legend()
+# plt.figure(figsize=(5, 4), dpi=200)
+# plt.plot(time_myr, total_counts, label="total counts")
+# plt.plot(time_myr, gc_counts, label="inside globular clusters")
+# plt.legend()

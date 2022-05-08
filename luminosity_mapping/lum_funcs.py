@@ -13,15 +13,18 @@ def chi_squared(theory, data, sigma, num_params):
     return p_value, reduced_chi_2
 
 
-def get_masses(x_coord, y_coord, masses, r_characteristic):
+def get_masses(x_coord, y_coord, masses, r_characteristic, counts=False):
     """
-    get core mass or any mass enclosed by a characteristic radius; e.g. r_core
+    get core mass or any characteristic mass enclosed by a characteristic radius; e.g. r_core
     """
     all_positions = np.vstack((x_coord, y_coord)).T
     distances = np.sqrt(np.sum(np.square(all_positions), axis=1))
     mask = distances <= r_characteristic
-    core_mass = np.sum(masses[mask])
-    return core_mass
+    char_mass = np.sum(masses[mask])
+    if counts is True:
+        return char_mass, np.size(masses[mask])
+    else:
+        return char_mass
 
 
 def look_up_table(stellar_ages, table_link, column_idx: int, log=True):
@@ -174,14 +177,14 @@ def get_cluster(
     Can take 2d or 3d coordinates.
     """
 
-    all_positions_2d = np.vstack((xpos, ypos)).T
-    distances_2d = np.sqrt(np.sum(np.square(all_positions_2d - ctr_at[:-1]), axis=1))
-    mask = distances_2d <= cluster_radius
-    masked_positions = all_positions_2d[mask]
-    masked_lums = lums[mask]
-    masked_masses = masses[mask]
-    masked_ages = ages[mask]
-    print("***Previous Cluster Size", np.size(masked_lums))
+    # all_positions_2d = np.vstack((xpos, ypos)).T
+    # distances_2d = np.sqrt(np.sum(np.square(all_positions_2d - ctr_at[:-1]), axis=1))
+    # mask = distances_2d <= cluster_radius
+    # masked_positions = all_positions_2d[mask]
+    # masked_lums = lums[mask]
+    # masked_masses = masses[mask]
+    # masked_ages = ages[mask]
+    # print("***Previous Cluster Size", np.size(masked_lums))
 
     all_positions = np.vstack((xpos, ypos, zpos)).T
     distances = np.sqrt(np.sum(np.square(all_positions - ctr_at), axis=1))
@@ -202,7 +205,7 @@ def get_cluster(
         if trns_coord is True:
             # make the center (0,0,0) ?
             z_recentered = masked_positions[:, 2] - ctr_at[2]  # p.median(z)
-            print("***Now Returning", np.size(x_recentered))
+            # print("***Now Returning", np.size(x_recentered))
             return (
                 x_recentered,
                 y_recentered,

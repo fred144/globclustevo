@@ -12,6 +12,7 @@ import os
 
 # import pathlib
 import yt
+
 yt.enable_parallelism()
 from yt.funcs import mylog
 import numpy as np
@@ -19,7 +20,6 @@ import numpy as np
 from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
 
 # from yt.analysis_modules.halo_analysis.api import HaloCatalog
-
 
 
 mylog.setLevel(40)
@@ -105,7 +105,7 @@ for file_name in filtered_files:
         finder_kwargs={
             "ptype": "star",
             "padding": 0.0001,
-            "link": 0.00004,
+            "link": 0.00002,
             "dm_only": False,
         },
         output_dir="../halo_data/fs07_refine",
