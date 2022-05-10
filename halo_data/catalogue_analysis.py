@@ -11,14 +11,11 @@ from yt.funcs import mylog
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as st
+import h5py as h5
 
 # yt.enable_parallelism()
 mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
-
-
-pop2_data_directory = r"../pop_2_data/fs07_refine"
-halo_data_directory = r"../halo_data/fs07_refine/fof"
 # ---------------------------------DT2 Paths------------------------------------
 # lustre data path
 # pop2_data_directory = os.path.expanduser(
@@ -53,12 +50,6 @@ def filter_snapshots(folder_path, start_snap: int, end_snap: int, sampling=1):
     abs_paths = [os.path.join(folder_path, file) for file in filtered_files]
 
     return abs_paths
-
-
-# =============================================================================
-pop2_data_set = filter_snapshots(pop2_data_directory, 113, 808, 10)
-halo_data_directory = filter_snapshots(halo_data_directory, 113, 808, 10)
-# =============================================================================
 
 
 def get_cluster(
@@ -176,7 +167,7 @@ def bubble_plot(masses, vir_radii, ages, current_time):
     )
     plt.grid(visible=True)
 
-    ax.set_title(r"$t_{{sim}}$ = {:.2f} Myr".format(t_sim), fontsize=18)
+    ax.set_title(r"$t_{{sim}}$ = {:.2f} Myr".format(current_time), fontsize=18)
     ax.set_ylabel(r"GC $M_{vir}$ ($M_{\odot}$)", fontsize=18)
     ax.set_xlabel(r"Formation Time (Myr)", fontsize=18)
     ax.set_xlim(300, 500)
@@ -205,54 +196,107 @@ epf = [
 ]
 
 
-for pop, hc in zip(pop2_data_set, halo_data_directory):
-    print("# Reading Pop II", pop)
-    print("# Reading Catalogue", hc)
-    pop2_data = np.loadtxt(pop)
-    x_pop2 = pop2_data[:, 2]  # pc
-    y_pop2 = pop2_data[:, 3]  # pc
-    z_pop2 = pop2_data[:, 4]  # pc
-    ctr_at = pop2_data[5:8, 6]  # pc
-    ages = pop2_data[:, 1]  # Myr
-    ages[ages < 1] = 1  # set minimum age
-    pop2_masses = pop2_data[:, 5]  # Msun
+pop2_data_directory = r"../pop_2_data/fs07_refine"
+halo_data_directory = r"../halo_data/fs07_refine/fof"
+link_length_4 = r"../halo_data/fs07_refine/fof_00004"
+# =============================================================================
+strt = 113
+end = 808
+step = 10
+pop2_data_set = filter_snapshots(pop2_data_directory, strt, end, step)
+halo_data_directory = filter_snapshots(halo_data_directory, strt, end, step)
+link_length_4 = filter_snapshots(link_length_4, strt, end, step)
+# =============================================================================
 
-    t_sim = pop2_data[0, 6]  # Myr
+# for pop, hc in zip(pop2_data_set, halo_data_directory):
+#     print("# Reading Pop II", pop)
+#     print("# Reading Catalogue", hc)
+#     pop2_data = np.loadtxt(pop)
+#     x_pop2 = pop2_data[:, 2]  # pc
+#     y_pop2 = pop2_data[:, 3]  # pc
+#     z_pop2 = pop2_data[:, 4]  # pc
+#     ctr_at = pop2_data[5:8, 6]  # pc
+#     ages = pop2_data[:, 1]  # Myr
+#     ages[ages < 1] = 1  # set minimum age
+#     pop2_masses = pop2_data[:, 5]  # Msun
 
-    # get the hdf5 catalogue inside each folder
-    halo_cat = yt.load(os.path.join(hc, os.listdir(hc)[0]))
-    halo_data = halo_cat.all_data()
-    # get centers of halos
-    # specific to FOF halo finder output
-    x_halos = np.array(halo_data["all", "particle_position_x"].to("pc")) - ctr_at[0]
-    y_halos = np.array(halo_data["all", "particle_position_y"].to("pc")) - ctr_at[1]
-    z_halos = np.array(halo_data["all", "particle_position_z"].to("pc")) - ctr_at[2]
+#     t_sim = pop2_data[0, 6]  # Myr
 
-    vir_radius = np.array(halo_data["all", "virial_radius"].to("pc"))
-    halos = np.vstack((x_halos, y_halos, z_halos)).T  # pc
+#     # get the hdf5 catalogue inside each folder
+#     halo_cat = yt.load(os.path.join(hc, os.listdir(hc)[0]))
+#     halo_data = halo_cat.all_data()
+#     # get centers of halos
+#     # specific to FOF halo finder output
+#     x_halos = np.array(halo_data["all", "particle_position_x"].to("pc")) - ctr_at[0]
+#     y_halos = np.array(halo_data["all", "particle_position_y"].to("pc")) - ctr_at[1]
+#     z_halos = np.array(halo_data["all", "particle_position_z"].to("pc")) - ctr_at[2]
 
-    gc_ages = []
-    gc_vir_mass = []
-    gc_uniform_rad_mass = []
-    for halo_ctr, r_vir in zip(halos, vir_radius):
-        age, mass = get_cluster(pop2_data[:, 2:5], halo_ctr, r_vir, pop2_masses, ages)
-        _, uni_mass = get_cluster(pop2_data[:, 2:5], halo_ctr, 5, pop2_masses, ages)
-        gc_uniform_rad_mass.append(uni_mass)
-        gc_ages.append(age)
-        gc_vir_mass.append(mass)
-    gc_ages = np.array(gc_ages)
-    gc_vir_mass = np.array(gc_vir_mass)
-    gc_uniform_rad_mass = np.array(gc_uniform_rad_mass)
-    # plt.scatter(z_pop2, y_pop2, s=0.1, alpha=0.1)
-    # plt.scatter(z_halos, y_halos, s=0.2, color="red")
-    # plt.xlim(-200, 200)
-    # plt.ylim(-200, 200)
-    plt.figure(figsize=(8, 8), dpi=400)
-    # mass_function(
-    #     masses=gc_uniform_rad_mass, t_sim=t_sim, num_bins=10, m_vir=gc_vir_mass
-    # )
-    birth_time = t_sim - gc_ages
-    bubble_plot(
-        masses=gc_vir_mass, vir_radii=vir_radius, ages=birth_time, current_time=t_sim
-    )
+#     vir_radius = np.array(halo_data["all", "virial_radius"].to("pc"))
+#     halos = np.vstack((x_halos, y_halos, z_halos)).T  # pc
+
+#     gc_ages = []
+#     gc_vir_mass = []
+#     gc_uniform_rad_mass = []
+#     for halo_ctr, r_vir in zip(halos, vir_radius):
+#         age, mass = get_cluster(pop2_data[:, 2:5], halo_ctr, r_vir, pop2_masses, ages)
+#         _, uni_mass = get_cluster(pop2_data[:, 2:5], halo_ctr, 5, pop2_masses, ages)
+#         gc_uniform_rad_mass.append(uni_mass)
+#         gc_ages.append(age)
+#         gc_vir_mass.append(mass)
+#     gc_ages = np.array(gc_ages)
+#     gc_vir_mass = np.array(gc_vir_mass)
+#     gc_uniform_rad_mass = np.array(gc_uniform_rad_mass)
+#     # plt.scatter(z_pop2, y_pop2, s=0.1, alpha=0.1)
+#     # plt.scatter(z_halos, y_halos, s=0.2, color="red")
+#     # plt.xlim(-200, 200)
+#     # plt.ylim(-200, 200)
+#     plt.figure(figsize=(8, 8), dpi=400)
+#     # mass_function(
+#     #     masses=gc_uniform_rad_mass, t_sim=t_sim, num_bins=10, m_vir=gc_vir_mass
+#     # )
+#     birth_time = t_sim - gc_ages
+#     bubble_plot(
+#         masses=gc_vir_mass, vir_radii=vir_radius, ages=birth_time, current_time=t_sim
+#     )
+
+time = []
+total_stars = []
+original_fof = []
+fof_00004 = []
+fof_00002 = []
+
+
+if __name__ == "__main__":
+    for pop, hc, hc4 in zip(pop2_data_set, halo_data_directory, link_length_4):
+        print("# Reading Pop II", pop)
+        print("# Reading Catalogue", hc)
+        pop2_data = np.loadtxt(pop)
+        t_sim = pop2_data[0, 6]  # Myr
+
+        total_pop2 = pop2_data.shape[0]
+        total_stars.append(total_pop2)
+
+        cat_file = os.path.join(hc, os.listdir(hc)[0])
+        halo_data = h5.File(cat_file, "r")
+        stars_in_halos = halo_data["particles/ids"].shape[0]
+
+        cat_file = os.path.join(hc4, os.listdir(hc)[0])
+        halo_data = h5.File(cat_file, "r")
+        stars_in_halos_4 = halo_data["particles/ids"].shape[0]
+
+        time.append(t_sim)
+        original_fof.append(stars_in_halos)
+        fof_00004.append(stars_in_halos_4)
+
+        # halo_cat = yt.load()
+        # halo_data = halo_cat.all_data()
 #%%
+plt.subplots(figsize=(8, 6), dpi=200)
+
+plt.plot(time, original_fof, label="Linking Length 0.0000001")
+plt.plot(time, fof_00004, label="Linking Length 0.00004")
+plt.plot(time, total_stars, label="Total Stars")
+
+plt.title("FOF Stars inside GCs")
+
+plt.legend()
