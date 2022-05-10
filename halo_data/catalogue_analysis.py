@@ -298,5 +298,6 @@ plt.plot(time, fof_00004, label="Linking Length 0.00004")
 plt.plot(time, total_stars, label="Total Stars")
 
 plt.title("FOF Stars inside GCs")
-
+plt.ylabel("# of Stars")
+plt.xlabel("T_univ [myr]")
 plt.legend()
