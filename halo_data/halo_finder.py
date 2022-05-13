@@ -12,6 +12,7 @@ import os
 
 # import pathlib
 import yt
+import h5py as h5
 
 # yt.enable_parallelism()
 from yt.funcs import mylog
@@ -28,7 +29,7 @@ warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 data_directory = r"../../cosm_test_data/refine"
 
-# ---------------------------------DT2 Paths------------------------------------
+# =============================================================================
 # lustre data path
 # data_directory = os.path.expanduser(
 #     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
@@ -43,8 +44,8 @@ data_directory = r"../../cosm_test_data/refine"
 # =============================================================================
 
 # enable discrete selection of time range based on snapshot number
-strt_snapshot = "00250"
-end_snapshot = "00250"
+strt_snapshot = "00500"
+end_snapshot = "00500"
 files = sorted(os.listdir(data_directory))  # [-2:-1]  [300:400:2]
 strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
 end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
@@ -80,8 +81,8 @@ epf = [
 #     print(ds.current_time)
 
 for file_name in filtered_files:
-
-    file_name = file_name + "/info_{}.txt".format(file_name[-5:])
+    output_num_string = file_name[-5:]
+    file_name = file_name + "/info_{}.txt".format(output_num_string)
 
     print("Reading", file_name)
 
@@ -92,6 +93,7 @@ for file_name in filtered_files:
     x_pos = np.array(ad["star", "particle_position_x"])
     y_pos = np.array(ad["star", "particle_position_y"])
     z_pos = np.array(ad["star", "particle_position_z"])
+    star_id = np.array(ad["star", "particle_identity"])
 
     # center based on star position distribution
     x_center = np.mean(x_pos)
@@ -104,36 +106,107 @@ for file_name in filtered_files:
         finder_method="fof",
         finder_kwargs={
             "ptype": "star",
-            "link": 0.000006,
+            "padding": 0.0001,
+            "link": 0.00001,
             "dm_only": False,
         },
-        output_dir="../halo_data/fs07_refine",
+        output_dir="../halo_data/fs07_refine/test_run",
     )
 
     hc.create()
 
-    # if runnig old halo finder
+    # load halo data
+    cata_h5 = h5.File(
+        "../halo_data/fs07_refine/test_run/info_00500/info_00500.0.h5", "r"
+    )
 
-    # hc_ad = hc.halos_ds.all_data()
+    # need to read in using yt for virial radius for some reason unknown units in catalogue
+    cata_yt = yt.load("../halo_data/fs07_refine/test_run/info_00500/info_00500.0.h5")
 
-    # new yt
-    halos = yt.load("../halo_data/fs07_refine/info_00250/info_00250.0.h5")
-    cata = HaloCatalog(halos_ds=halos)
-    cata.load()
+    # make a halo catalogue for yt overplot
+    halo_cat_plotting = HaloCatalog(halos_ds=cata_yt)
+    halo_cat_plotting.load()
+
+    cata_yt = cata_yt.all_data()
+
+    pop2_data = np.loadtxt("../pop_2_data/fs07_refine/pos_00500_479_16_myr.txt")
+    ctr_at = pop2_data[5:8, 6]
+
+    # get the halo centers
+
+    halo_id = np.array(cata_h5["particle_identifier"])
+
+    halo_x = np.array(cata_h5["particle_position_x"])
+    halo_y = np.array(cata_h5["particle_position_y"])
+    halo_z = np.array(cata_h5["particle_position_z"])
+
+    halo_x = np.array(ds.arr(halo_x, "code_length").to("pc")) - ctr_at[0]
+    halo_y = np.array(ds.arr(halo_y, "code_length").to("pc")) - ctr_at[1]
+    halo_z = np.array(ds.arr(halo_z, "code_length").to("pc")) - ctr_at[2]
+
+    # get halo virial radii
+    halo_vir_rad = np.array(ds.arr(cata_yt["all", "virial_radius"], "cm").to("pc"))
+
+    cat_pc = np.vstack((halo_id, halo_x, halo_y, halo_z, halo_vir_rad)).T
+    header = "x \t y \t z"
+    # TODO: remove hardcode
+    hard = "../halo_data/fs07_refine/test_run/"
+    save_name = hard + "info_{}/catalogue_{}.txt".format(
+        output_num_string, output_num_string
+    )
+    np.savetxt(save_name, X=cat_pc, header=header)
+
+    # get particles belonging to each halo
+    num_stars_in_halo = np.array(cata_h5["particle_number"])
+    start_of_new_halo = np.array(cata_h5["particle_index_start"])
+    halo_star_ids = np.array(cata_h5["particles/ids"])
+
+    for i, (new_h, h_id) in enumerate(zip(start_of_new_halo, halo_id), start=1):
+
+        if i == np.size(
+            start_of_new_halo
+        ):  # cheecky over ride once it reaches end of list
+            star_ids_inside = halo_star_ids[new_h:]
+        else:
+            star_ids_inside = halo_star_ids[new_h : start_of_new_halo[i]]
+
+        # translate stars, taking into account centers
+        gc_mask = np.isin(star_id, star_ids_inside)
+        gc_x = np.array(ds.arr(x_pos - x_center, "code_length").to("pc"))[gc_mask]
+        gc_y = np.array(ds.arr(y_pos - y_center, "code_length").to("pc"))[gc_mask]
+        gc_z = np.array(ds.arr(z_pos - z_center, "code_length").to("pc"))[gc_mask]
+        gc_stars = np.vstack((gc_x, gc_y, gc_z)).T
+        header = "x \t y \t z"
+        # TODO: remove hardcode
+        hard = "../halo_data/fs07_refine/test_run/"
+        save_name = hard + "info_{}/gc_vir_{}.txt".format(
+            output_num_string, str(h_id).zfill(3)
+        )
+        np.savetxt(save_name, X=gc_stars, header=header)
 
     # optionally plot it
-    width = (400, "pc")
-    p = yt.ProjectionPlot(ds, "z", "density", width=width, center=plt_ctr)
-    p.annotate_particles(
-        width=width, ptype="star", alpha=0.2, p_size=0.2, marker=".", col="r"
-    )
-    p.annotate_halos(
-        cata,
-        width=width,
-    )
-    p.set_cmap("density", "copper")
-    # p.set_figure_size(5)
-    p.save(
-        "./",
-        mpl_kwargs={"bbox_inches": "tight", "dpi": 500, "pad_inches": 0.1},
-    )
+    # width = (400, "pc")
+    # p = yt.ProjectionPlot(ds, "z", "density", width=width, center=plt_ctr)
+    # p.annotate_particles(
+    #     width=width, ptype="star", alpha=0.1, p_size=0.2, marker=".", col="red"
+    # )
+    # p.annotate_halos(
+    #     halo_cat_plotting,
+    #     width=width,
+    # )
+    # p.set_cmap("density", "copper")
+    # p["gas", "density"].axes.scatter(
+    #     halo_x,
+    #     halo_y,
+    #     color="green",
+    #     alpha=1,
+    #     marker="x",
+    #     linewidths=0.1,
+    #     s=2,
+    # )
+
+    # # p.set_figure_size(5)
+    # p.save(
+    #     "./",
+    #     mpl_kwargs={"bbox_inches": "tight", "dpi": 500, "pad_inches": 0.1},
+    # )

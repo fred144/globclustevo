@@ -284,9 +284,9 @@ time_myr = []
 if __name__ == "__main__":
 
     pop2_data_directory = r"../pop_2_data/fs07_refine"
-    halo_data_directory = r"../halo_data/fs07_refine/fof_00002"
-    strt = 266
-    end = 314
+    halo_data_directory = r"../halo_data/fs07_refine/test_run"
+    strt = 500
+    end = 500
     step = 1
     pop2_data_set = filter_snapshots(pop2_data_directory, strt, end, step)
     halo_data_directory = filter_snapshots(halo_data_directory, strt, end, step)
@@ -300,6 +300,7 @@ if __name__ == "__main__":
         halo_cat = yt.load(os.path.join(hc_data, os.listdir(hc_data)[0]))
         halo_data = halo_cat.all_data()
         # get centers of halos
+
         # specific to FOF halo finder output
         x_halos = np.array(halo_data["all", "particle_position_x"].to("pc")) - ctr_at[0]
         y_halos = np.array(halo_data["all", "particle_position_y"].to("pc")) - ctr_at[1]
@@ -316,8 +317,8 @@ if __name__ == "__main__":
             os.makedirs(folder_name)
 
         # put all verbose output into a text file
-        orig_stdout = sys.stdout
-        sys.stdout = open(folder_name + "/log.txt", "w")
+        # orig_stdout = sys.stdout
+        # sys.stdout = open(folder_name + "/log.txt", "w")
 
         masses, core_radii, core_masses, r_trunc, ages, time, particles = run_profiler(
             file_name=pop_data,
@@ -329,8 +330,8 @@ if __name__ == "__main__":
         gc_counts.append(np.sum(particles))
         total_counts.append(pop2_data.shape[0])
         time_myr.append(time)
-        sys.stdout.close()
-        sys.stdout = orig_stdout
+        # sys.stdout.close()
+        # sys.stdout = orig_stdout
 
 #%%
 # plt.figure(figsize=(5, 4), dpi=200)
