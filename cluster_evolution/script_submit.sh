@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J script_submit
 #SBATCH --ntasks=4
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=16
 #SBATCH --mem-per-cpu=6000  
 #SBATCH --exclusive
 #SBATCH -t 12:00:00
@@ -18,7 +18,7 @@ export LANG=en_US
 module load gcc
 module load openmpi
 
-STDOUT="sh_log"
+
 SCRIPT="/lustre/fgarcia4/glob_clust_evo/cluster_evolution/main_movie.py"
 #SCRIPT="profiler.py"
 
@@ -29,5 +29,5 @@ SCRIPT="/lustre/fgarcia4/glob_clust_evo/cluster_evolution/main_movie.py"
 # cd sbatch_logs
 # for rockstar --mca btl ^openib
 # number of cores specified above
-mpirun python3 $SCRIPT  2>&1 | tee -a $STDOUT
+mpirun python3 $SCRIPT  2>&1 
 
