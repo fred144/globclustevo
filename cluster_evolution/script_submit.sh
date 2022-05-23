@@ -20,7 +20,7 @@ module load gcc
 module load openmpi
 
 STDOUT="sh_log"
-SCRIPT="/lustre/fgarcia4/glob_clust_evo/halo_data/main_movie.py"
+SCRIPT="/lustre/fgarcia4/glob_clust_evo/cluster_evolution/main_movie.py"
 #SCRIPT="profiler.py"
 
 # cd ~
