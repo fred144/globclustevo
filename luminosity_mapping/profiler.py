@@ -50,7 +50,9 @@ def filter_snapshots(folder_path, start_snap: int, end_snap: int, sampling=1):
     return abs_paths
 
 
-def run_profiler(file_name, proj_width, gc_radii, lum_map_bins, centers=None, **kwargs):
+def run_profiler(
+    file_name, proj_width, gc_radii, lum_map_bins, centers=None, **kwargs
+):
     """
     Runs the profiler for a given snapshot. Finds centers and loops over centers.
     Makes profiles and returns properties of GCs found.
@@ -297,14 +299,20 @@ if __name__ == "__main__":
         ctr_at = pop2_data[5:8, 6]  # pc
 
         # get the hdf5 catalogue inside each folder
-        halo_cat = yt.load(os.path.join(hc_data, os.listdir(hc_data)[0]))
+        halo_cat = yt.load(os.path.join(hc_data, sorted(os.listdir(hc_data))[-1]))
         halo_data = halo_cat.all_data()
         # get centers of halos
 
         # specific to FOF halo finder output
-        x_halos = np.array(halo_data["all", "particle_position_x"].to("pc")) - ctr_at[0]
-        y_halos = np.array(halo_data["all", "particle_position_y"].to("pc")) - ctr_at[1]
-        z_halos = np.array(halo_data["all", "particle_position_z"].to("pc")) - ctr_at[2]
+        x_halos = (
+            np.array(halo_data["all", "particle_position_x"].to("pc")) - ctr_at[0]
+        )
+        y_halos = (
+            np.array(halo_data["all", "particle_position_y"].to("pc")) - ctr_at[1]
+        )
+        z_halos = (
+            np.array(halo_data["all", "particle_position_z"].to("pc")) - ctr_at[2]
+        )
         ids = np.array(halo_data["all", "particle_identifier"])
 
         gc_centers = np.vstack((x_halos, y_halos, z_halos, ids)).T  # pc
@@ -320,7 +328,15 @@ if __name__ == "__main__":
         # orig_stdout = sys.stdout
         # sys.stdout = open(folder_name + "/log.txt", "w")
 
-        masses, core_radii, core_masses, r_trunc, ages, time, particles = run_profiler(
+        (
+            masses,
+            core_radii,
+            core_masses,
+            r_trunc,
+            ages,
+            time,
+            particles,
+        ) = run_profiler(
             file_name=pop_data,
             proj_width=400,
             gc_radii=20,  # uniform radii to be used to extract clusters

@@ -44,8 +44,8 @@ data_directory = r"../../cosm_test_data/refine"
 # =============================================================================
 
 # enable discrete selection of time range based on snapshot number
-strt_snapshot = "00500"
-end_snapshot = "00500"
+strt_snapshot = "00250"
+end_snapshot = "00250"
 files = sorted(os.listdir(data_directory))  # [-2:-1]  [300:400:2]
 strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
 end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
@@ -70,6 +70,8 @@ epf = [
     ("particle_tag", "b"),
     ("particle_birth_epoch", "d"),
     ("particle_metallicity", "d"),
+    ("particle_birth_time", "d"),
+    ("star_age", "d"),
 ]
 
 # yt_data_series = yt.DatasetSeries(
@@ -117,11 +119,11 @@ for file_name in filtered_files:
 
     # load halo data
     cata_h5 = h5.File(
-        "../halo_data/fs07_refine/test_run/info_00500/info_00500.0.h5", "r"
+        "../halo_data/fs07_refine/test_run/info_00250/info_00250.0.h5", "r"
     )
 
     # need to read in using yt for virial radius for some reason unknown units in catalogue
-    cata_yt = yt.load("../halo_data/fs07_refine/test_run/info_00500/info_00500.0.h5")
+    cata_yt = yt.load("../halo_data/fs07_refine/test_run/info_00250/info_00250.0.h5")
 
     # make a halo catalogue for yt overplot
     halo_cat_plotting = HaloCatalog(halos_ds=cata_yt)
@@ -129,7 +131,7 @@ for file_name in filtered_files:
 
     cata_yt = cata_yt.all_data()
 
-    pop2_data = np.loadtxt("../pop_2_data/fs07_refine/pos_00500_479_16_myr.txt")
+    pop2_data = np.loadtxt("../pop_2_data/fs07_refine/pos_00250_426_61_myr.txt")
     ctr_at = pop2_data[5:8, 6]
 
     # get the halo centers
@@ -148,7 +150,7 @@ for file_name in filtered_files:
     halo_vir_rad = np.array(ds.arr(cata_yt["all", "virial_radius"], "cm").to("pc"))
 
     cat_pc = np.vstack((halo_id, halo_x, halo_y, halo_z, halo_vir_rad)).T
-    header = "x \t y \t z"
+    header = "halo_id \t x_coord [pc] \t y_coord [pc] \t z_coord [pc] \t vir_rad [pc]"
     # TODO: remove hardcode
     hard = "../halo_data/fs07_refine/test_run/"
     save_name = hard + "info_{}/catalogue_{}.txt".format(
@@ -161,6 +163,7 @@ for file_name in filtered_files:
     start_of_new_halo = np.array(cata_h5["particle_index_start"])
     halo_star_ids = np.array(cata_h5["particles/ids"])
 
+    cata_h5.close()
     for i, (new_h, h_id) in enumerate(zip(start_of_new_halo, halo_id), start=1):
 
         if i == np.size(
@@ -176,37 +179,37 @@ for file_name in filtered_files:
         gc_y = np.array(ds.arr(y_pos - y_center, "code_length").to("pc"))[gc_mask]
         gc_z = np.array(ds.arr(z_pos - z_center, "code_length").to("pc"))[gc_mask]
         gc_stars = np.vstack((gc_x, gc_y, gc_z)).T
-        header = "x \t y \t z"
+        header = "star_x_coords [pc] \t star_y_coords [pc] \t star_z_coords [pc] "
         # TODO: remove hardcode
         hard = "../halo_data/fs07_refine/test_run/"
-        save_name = hard + "info_{}/gc_vir_{}.txt".format(
-            output_num_string, str(h_id).zfill(3)
+        save_name = hard + "info_{}/gc_vir_{}".format(
+            output_num_string, str(int(h_id)).zfill(3)
         )
-        np.savetxt(save_name, X=gc_stars, header=header)
+        np.savetxt(save_name + ".txt", X=gc_stars, header=header)
 
-    # optionally plot it
-    # width = (400, "pc")
-    # p = yt.ProjectionPlot(ds, "z", "density", width=width, center=plt_ctr)
-    # p.annotate_particles(
-    #     width=width, ptype="star", alpha=0.1, p_size=0.2, marker=".", col="red"
-    # )
-    # p.annotate_halos(
-    #     halo_cat_plotting,
-    #     width=width,
-    # )
-    # p.set_cmap("density", "copper")
-    # p["gas", "density"].axes.scatter(
-    #     halo_x,
-    #     halo_y,
-    #     color="green",
-    #     alpha=1,
-    #     marker="x",
-    #     linewidths=0.1,
-    #     s=2,
-    # )
+    # optionally plot the halod finder results and put in the catalogue directory
+    width = (400, "pc")
+    p = yt.ProjectionPlot(ds, "z", "density", width=width, center=plt_ctr)
+    p.annotate_particles(
+        width=width, ptype="star", alpha=0.1, p_size=0.2, marker=".", col="red"
+    )
+    p.annotate_halos(
+        halo_cat_plotting,
+        width=width,
+    )
+    p.set_cmap("density", "copper")
+    p["gas", "density"].axes.scatter(
+        halo_x,
+        halo_y,
+        color="green",
+        alpha=1,
+        marker="x",
+        linewidths=0.1,
+        s=2,
+    )
 
-    # # p.set_figure_size(5)
-    # p.save(
-    #     "./",
-    #     mpl_kwargs={"bbox_inches": "tight", "dpi": 500, "pad_inches": 0.1},
-    # )
+    # p.set_figure_size(5)
+    p.save(
+        hard + "info_{}/annotated.png".format(output_num_string),
+        mpl_kwargs={"bbox_inches": "tight", "dpi": 300, "pad_inches": 0.1},
+    )

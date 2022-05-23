@@ -1,10 +1,16 @@
+"""
+Script that gets the data as well as (projected) gas density. 
+Must be ran in the direcotry.
+"""
+
 import sys
 
 sys.path.insert(
-    1, "/homes/fgarcia4/py-virtual-envs/cosmology-clean/lib/python3.7/site-packages"
+    1, "/homes/fgarcia4/py-virtual-envs/master/lib/python3.7/site-packages"
 )
+sys.path.append("..")  # makes sure that importing the modules work
 
-from macros import code_age_to_yr  # , succ_distance
+from modules.macros import code_age_to_myr
 import matplotlib as mpl
 from matplotlib import cm
 from yt.funcs import mylog
@@ -13,26 +19,34 @@ import yt
 import os
 import warnings
 
-
+yt.enable_parallelism()
 mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 # ==============================================================================
 simulation_run_name = "fs07_refine"
+latest_sim_stats = np.loadtxt(
+    "../sim_log_files/{}/latest_sim_stats.txt".format(simulation_run_name)
+)
 # ===================================local test=================================
 # datadir = os.path.relpath("../../cosm_test_data/refine")
 # # parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution'
 # parent_folder = "."
 # sequence_folder = "test_frames"
-# ===================================DT2 Paths=================================
+# ===================================dt2 paths=================================
 datadir = os.path.expanduser(
     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
 ).format(simulation_run_name)
 # save path
-sequence_folder = "gas_projected_density_z"
-
 parent_folder = "../rendering/gas/{}".format(simulation_run_name)
-pop_2_save = "../pop_2_data/{}".format(simulation_run_name)
+# TODO: edit for rendering runs
+sequence_folder = "gas_projected_density_z"
+# ===================================save path=================================
+
+pop_2_save = "../particle_data/pop_2_data/{}".format(simulation_run_name)
+sfc_save = "../particle_data/sfc_data/{}".format(simulation_run_name)
+psc_save = "../particle_data/psc_data/{}".format(simulation_run_name)
+
 
 newpath = os.path.join(parent_folder, sequence_folder)
 if not os.path.exists(newpath):
@@ -41,34 +55,30 @@ if not os.path.exists(newpath):
 if not os.path.exists(pop_2_save):
     print("# Creating new sequence directory", pop_2_save)
     os.makedirs(pop_2_save)
+if not os.path.exists(sfc_save):
+    print("# Creating new sequence directory", sfc_save)
+    os.makedirs(sfc_save)
+if not os.path.exists(psc_save):
+    print("# Creating new sequence directory", psc_save)
+    os.makedirs(psc_save)
 # ===================================plot params=================================
+
+# TODO: edit for rendering runs
 sequence_title = "z_gas"
 width = (400, "pc")
 slice_axis = "z"
-start_step = 154  # fs07:113, fs035:154
-end_step = 503
-
-# ctr_shift_thresh = 0.00060 #code length
-# ctr_shift_thresh =  0.000001 #code length
-# max_density_coords = []
+start_step = 113  # fs07:113, fs035:154
+end_step = 874
 
 # cosmetics
 clrmap = "BuGn_r"  # for the pop II ages
+density_cmap = "inferno"  # "cmyt.dusk"
 mpl.rc("font", family="serif")
 # https://matplotlib.org/stable/tutorials/colors/colormaps.html
+# https://yt-project.org/doc/visualizing/colormaps/index.html
 star_map = cm.get_cmap(clrmap)
 
 # snapshot 115 to 452 roughly spans 340 to 470 myr
-
-# pop II birth color bar kwargs
-# 339.562 for fs07
-# 344.295545 for fs035
-# Myr, need to figure out how to got to absolute ages
-birth_start = 339.562
-time_range = (300, 570)  # Myr
-evenly_spaced_times = np.arange(time_range[0], time_range[1] + 1)
-cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
-
 # ===================================MAIN=================================
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     print("#________________________________________________________________")
@@ -159,8 +169,10 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         unit="pc",
         text_args={"size": 12, "family": "serif"},
     )
-    p.set_cmap("density", "inferno")
+    p.set_cmap(field=("gas", "density"), cmap=density_cmap)
+    # linear scale
     # p.set_zlim('density', 0.005, .34)                   # default
+    # log scale
     p.set_zlim("density", 0.008, 0.35)
     p.set_log(("gas", "density"), True)
     p.set_colorbar_label(("gas", "density"), r"Projected Gas Density (g cm$^{-2}$)")
@@ -169,28 +181,38 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     print("> annotating", np.array(be_star).size, "star particles")
 
     # particle clumps by age; converts code age to relative ages
-    unique_birth_epochs = code_age_to_yr(
-        ad["star", "particle_birth_epoch"], current_hubble
+    unique_birth_epochs = code_age_to_myr(
+        ad["star", "particle_birth_epoch"], current_hubble, unique_age=True
     )
+    # calculate the age of the universe when the first star was born
+    # using the logSFC as a reference point for redshift when the first star
+    # was born. Every age is relative to this. Due to our mods of ramses.
+    log_sfc = np.loadtxt("../sim_log_files/{}/logSFC".format(simulation_run_name))
+    birth_start = np.round_(
+        float(ds.cosmology.t_from_z(log_sfc[0, 2]).in_units("Myr")), 0
+    )
+
+    # pop II birth color bar
+    time_range = (int(birth_start), int(latest_sim_stats[1]))  # Myr
+    evenly_spaced_times = np.arange(time_range[0], time_range[1] + 1)
+    cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
 
     # gets the clump ages, treats all clumps within 1 Myr as the from same
     unique_birth_epochs = np.unique(np.round_(unique_birth_epochs, 0))
 
     # all the birth epochs of the stars
-    converted_unfiltered = code_age_to_yr(
-        ad["star", "particle_birth_epoch"], current_hubble, unique=False
+    converted_unfiltered = code_age_to_myr(
+        ad["star", "particle_birth_epoch"], current_hubble, unique_age=False
     )
     # treats all clusters within 1 Myr birth epoch as same birth epoch
-    # the first output with star in it was t = 339.562 for fs07
+    # the first output with star in it was t ~ 339.562 for fs07
     # have yet to figure out how to calculate absolute times
     # just relative for now
     converted_unfiltered_rounded = np.round_(converted_unfiltered, 0) + birth_start
 
     # pop II annotate loop
     for i, unique_age in enumerate(unique_birth_epochs + birth_start):
-
         print(unique_age)
-
         mask = np.array(converted_unfiltered_rounded) == unique_age
         filtered_x = ds.arr(x_pos, "code_length").to("pc")[mask]
         filtered_y = ds.arr(y_pos, "code_length").to("pc")[mask]
@@ -203,15 +225,15 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
 
         if slice_axis == "z":
             p["gas", "density"].axes.scatter(
-                filtered_x, filtered_y, marker=".", c=color, s=0.0005, alpha=1
+                filtered_x, filtered_y, marker=".", c=color, s=0.0008, alpha=1
             )
         elif slice_axis == "x":
             p["gas", "density"].axes.scatter(
-                filtered_y, filtered_z, marker=".", c=color, s=0.0005, alpha=1
+                filtered_y, filtered_z, marker=".", c=color, s=0.0008, alpha=1
             )
         elif slice_axis == "y":
             p["gas", "density"].axes.scatter(
-                filtered_z, filtered_x, marker=".", c=color, s=0.0005, alpha=1
+                filtered_z, filtered_x, marker=".", c=color, s=0.0008, alpha=1
             )
         else:
             print("Invalid slice axis.")
@@ -238,7 +260,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         fontfamily="serif",
     )
 
-    # AXES GUIDE
+    # axes guides
     p_ax = p.plots[("gas", "density")].axes
     if slice_axis == "z":
         p_ax.text(
@@ -322,9 +344,9 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         length_includes_head=True,
     )
 
-    # =============================luminosity mappping data extraction==================
+    # ==========================luminosity mappping data extraction==================
 
-    # get star positons
+    # get popII star positons
     abs_birth_epochs = np.round(converted_unfiltered + birth_start, 3)  #!
     current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
     extra_info = np.array(
@@ -343,13 +365,11 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         ]
     )
 
-    # =============================================================================
-    # star positions save
+    # ===============================star positions save===============================
+
     star_info = np.array(star_info).T
     save_time = str(format(current_time, ".2f")).replace(".", "_")
-    save_name = "../pop_2_data/{}/pos_{:05d}_{}_myr.txt".format(
-        simulation_run_name, output_num, save_time
-    )
+    save_name = "{}/pos_{:05d}_{}_myr.txt".format(pop_2_save, output_num, save_time)
     header = (
         "\t\tID"
         "\t\tCurrentAges[MYr]"
@@ -379,45 +399,22 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     sfc_tag = np.array(ad["SFC", "particle_index"])
 
     # save paths
-    psc_path = "../luminosity_mapping/psc_data/psc_{:05d}_{}_myr.txt".format(
-        output_num, save_time
-    )
-    sfc_path = "../luminosity_mapping/sfc_data/sfc_{:05d}_{}_myr.txt".format(
-        output_num, save_time
-    )
-    # x,y,z,radii at birth (pc), particle tag
+    psc_path = "{}/psc_{:05d}_{}_myr.txt".format(psc_save, output_num, save_time)
+    sfc_path = "{}/sfc_{:05d}_{}_myr.txt".format(sfc_save, output_num, save_time)
+    # x(pc), y(pc), z(pc),radii at birth (pc), particle tag
     psc_save_data = np.concatenate(
         (pos_pscs, psc_kazu_radii[:, None], psc_tag[:, None]), axis=1
     )
     sfc_save_data = np.concatenate(
         (pos_sfcs, sfc_kazu_radii[:, None], sfc_tag[:, None]), axis=1
     )
+    test_particale_header = "x(pc), y(pc), z(pc),radii at birth (pc), particle tag"
     print("# saved:", psc_path)
     print("# saved:", sfc_path)
-    np.savetxt(psc_path, X=psc_save_data)
-    np.savetxt(sfc_path, X=sfc_save_data)
-    # =============================================================================
+    np.savetxt(psc_path, X=psc_save_data, header=test_particale_header)
+    np.savetxt(sfc_path, X=sfc_save_data, header=test_particale_header)
 
-    # from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
-
-    # hc = HaloCatalog(
-    #     ds,
-    #     finder_method="hop",
-    #     finder_kwargs={
-    #         "ptype": "star",
-    #         "padding": 0.1,
-    #         "link": 0.2,
-    #         "dm_only": False,
-    #     },
-    #     output_dir="../halo_data/",
-    # )
-
-    # hc.create()
-
-    # p.annotate_particles(width=width, ptype="star", p_size=20.0, marker=".", col="r")
-    # p.annotate_halos(hc, width=width)
-
-    # =============================================================================
+    # save the frame
     save_path = str(
         "{}/{}/out-{}-z-{}-t-{}-{}.png".format(
             parent_folder,
@@ -432,7 +429,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         save_path,
         mpl_kwargs={
             "bbox_inches": "tight",
-            "dpi": 200,
+            "dpi": 300,
             "pad_inches": 0.1
             # 'facecolor': 'black'
         },
