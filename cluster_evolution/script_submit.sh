@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J script_submit
-#SBATCH -n 16
+#SBATCH -n 8
 #SBATCH --mem-per-cpu=16024  
 #SBATCH --exclusive
 #SBATCH -t 12:00:00
@@ -12,7 +12,7 @@
 
 set -x
 
-NPE=16;                            # process number
+NPE=8;                            # process number
 export LANG=en_US
 
 

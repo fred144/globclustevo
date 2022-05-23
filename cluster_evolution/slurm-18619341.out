@@ -1590,3 +1590,772 @@ Warning: particle_families are modified at /site-packages/yt/frontends/ramses
 # saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00122-z-12_81-t-348_64-z_gas.png
 #________________________________________________________________
 # reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00123/info_00123.txt
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+340.0
+> annotating 165 star particles
+340.0
+340.0
+340.0
+340.0
+340.0
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+340.0
+340.0
+> annotating 165 star particles
+340.0
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+340.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00123_349_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00123_349_65_myr.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00123-z-12_78-t-349_65-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00124/info_00124.txt
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+340.0
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+340.0
+340.0
+340.0
+340.0
+340.0
+340.0
+> annotating 165 star particles
+340.0
+340.0
+340.0
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+340.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00124_350_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00124_350_68_myr.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00124-z-12_75-t-350_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00125/info_00125.txt
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+340.0
+340.0
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+340.0
+340.0
+340.0
+> annotating 165 star particles
+340.0
+340.0
+340.0
+340.0
+340.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00125_351_68_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00125_351_68_myr.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00125-z-12_73-t-351_68-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00126/info_00126.txt
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+340.0
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+340.0
+340.0
+340.0
+340.0
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+340.0
+340.0
+340.0
+340.0
+> annotating 165 star particles
+340.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00126_352_71_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00126_352_71_myr.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00126-z-12_70-t-352_71-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00127/info_00127.txt
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+340.0
+340.0
+340.0
+> annotating 165 star particles
+340.0
+340.0
+340.0
+> annotating 165 star particles
+340.0
+340.0
+340.0
+340.0
+340.0
+> annotating 165 star particles
+340.0
+340.0
+340.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00127_353_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00127_353_73_myr.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00127-z-12_68-t-353_73-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00128/info_00128.txt
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+340.0
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+340.0
+340.0
+340.0
+> annotating 165 star particles
+> annotating 165 star particles
+> annotating 165 star particles
+340.0
+340.0
+> annotating 165 star particles
+340.0
+340.0
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+340.0
+> annotating 165 star particles
+340.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00128_354_76_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00128_354_76_myr.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+# saved: ../rendering/gas/fs07_refine/gas_projected_density_z/out-00128-z-12_65-t-354_76-z_gas.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00129/info_00129.txt
+slurmstepd: error: *** JOB 18619341 ON compute-b19-24 CANCELLED AT 2022-05-23T01:05:14 ***
