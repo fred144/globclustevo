@@ -68,7 +68,7 @@ if not os.path.exists(psc_save):
 sequence_title = "z_gas"
 width = (400, "pc")
 slice_axis = "z"
-start_step = 113  # fs07:113, fs035:154
+start_step = 326  # fs07:113, fs035:154
 end_step = 874
 
 # cosmetics

@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J script_submit
-#SBATCH -n 8
-#SBATCH --mem-per-cpu=16024  
+#SBATCH --ntasks=64
+#SBATCH --mem-per-cpu=4096  
 #SBATCH --exclusive
 #SBATCH -t 12:00:00
 
@@ -12,7 +12,7 @@
 
 set -x
 
-NPE=8;                            # process number
+NPE=64;                            # process number
 export LANG=en_US
 
 
@@ -28,7 +28,7 @@ SCRIPT="/lustre/fgarcia4/glob_clust_evo/cluster_evolution/main_movie.py"
 # which python
 # cd /lustre/fgarcia4/glob-clust-evo/luminosity_mapping
 # cd sbatch_logs
-
+# for rockstar --mca btl ^openib
 
 mpirun -np $NPE python3 $SCRIPT  2>&1 | tee -a $STDOUT
 
