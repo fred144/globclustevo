@@ -1,18 +1,23 @@
 import os
 import sys
-import yt
 
 sys.path.insert(
     1, "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages"
 )
-import numpy as np
+sys.path.append("..")  # makes sure that importing the modules in the main folder work
+
+from modules.macros import filter_snapshots
+from modules.luminosity.lum_functions import unpack_pop_ii_data
+from modules.luminosity.lum_plotting import star_luminosity_plot
+from modules.profiles.profile_plotting import king_profile_plotter
 import matplotlib.pyplot as plt
-from lum_funcs import unpack_pop_ii_data
-from lum_plotting_lib import king_profiler, star_luminosity_plot
+import numpy as np
+import yt
 from yt.funcs import mylog
 import warnings
 
-
+#%%
+yt.enable_parallelism()
 mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
@@ -28,28 +33,7 @@ plt.rcParams.update({"figure.max_open_warning": 0})
 #     "font.serif": ["Palatino"],
 # })
 
-
-def filter_snapshots(folder_path, start_snap: int, end_snap: int, sampling=1):
-    r"""Given a directory of outputs, return a list of absolute file
-    paths given a range of snapshot values. Enables discrete selection
-    of time range based on snapshot number.
-
-    """
-    strt_string = str(start_snap).zfill(5)
-    end_string = str(end_snap).zfill(5)
-
-    files = sorted(os.listdir(folder_path))
-
-    strt_idx = [i for i, s in enumerate(files) if strt_string in s][0]
-    end_idx = [i for i, s in enumerate(files) if end_string in s][0]
-
-    filtered_files = files[strt_idx : end_idx + 1 : sampling]
-
-    abs_paths = [os.path.join(folder_path, file) for file in filtered_files]
-
-    return abs_paths
-
-
+# TODO: chagen the profiles directory.
 def run_profiler(
     file_name, proj_width, gc_radii, lum_map_bins, centers=None, **kwargs
 ):
@@ -157,7 +141,7 @@ def run_profiler(
             sigma_bg,
             err_sigma_bg,
             counts,
-        ) = king_profiler(
+        ) = king_profile_plotter(
             star_pos=star_positions,
             lums=scaled_stellar_lums,
             masses=masses,

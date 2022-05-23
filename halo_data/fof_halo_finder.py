@@ -3,22 +3,16 @@ import sys
 sys.path.insert(
     1, "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages"
 )
-# sys.path.insert(
-#     1, "/homes/fgarcia4/py-virtual-envs/old-yt-361/lib/python3.7/site-packages"
-# )
 
+import h5py as h5
 import warnings
 import os
-
-# import pathlib
-import yt
-import h5py as h5
-
-# yt.enable_parallelism()
-from yt.funcs import mylog
 import numpy as np
+import yt
 
+yt.enable_parallelism()
 from yt.extensions.astro_analysis.halo_analysis import HaloCatalog
+from yt.funcs import mylog
 
 # from yt.analysis_modules.halo_analysis.api import HaloCatalog
 

@@ -1,11 +1,42 @@
-import warnings
+import sys
+
+sys.path.append("../..")
 import numpy as np
+import os
+import scipy.stats as st
 import yt
 from yt.funcs import mylog
+import warnings
+
 
 # reduces some of the outputs when reading in yt data
 mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
+
+
+def characterisitc_mass(x_coord, y_coord, masses, r_characteristic, counts=False):
+    """
+    get core mass or any characteristic mass enclosed by a characteristic radius;
+    e.g. r_core
+    """
+    all_positions = np.vstack((x_coord, y_coord)).T
+    distances = np.sqrt(np.sum(np.square(all_positions), axis=1))
+    mask = distances <= r_characteristic
+    char_mass = np.sum(masses[mask])
+    if counts is True:
+        return char_mass, np.size(masses[mask])
+    else:
+        return char_mass
+
+
+def chi_squared(theory, data, sigma, num_params):
+
+    chi2 = np.sum((theory - data) ** 2 / sigma**2)
+    dof = np.size(data) - num_params
+    reduced_chi_2 = chi2 / dof
+    p_value = st.chi2.sf(chi2, dof)
+
+    return p_value, reduced_chi_2
 
 
 def code_age_to_myr(all_star_ages, hubble_const, unique_age=True, true_age=False):
@@ -39,6 +70,27 @@ def code_age_to_myr(all_star_ages, hubble_const, unique_age=True, true_age=False
         return star_age_myr  # + 13.787 * 1e3
     else:
         return relative_ages  # t = 0 is the age of
+
+
+def filter_snapshots(folder_path, start_snap: int, end_snap: int, sampling=1):
+    r"""Given a directory of outputs, return a list of absolute file
+    paths given a range of snapshot values. Enables discrete selection
+    of time range based on snapshot number.
+
+    """
+    strt_string = str(start_snap).zfill(5)
+    end_string = str(end_snap).zfill(5)
+
+    files = sorted(os.listdir(folder_path))
+
+    strt_idx = [i for i, s in enumerate(files) if strt_string in s][0]
+    end_idx = [i for i, s in enumerate(files) if end_string in s][0]
+
+    filtered_files = files[strt_idx : end_idx + 1 : sampling]
+
+    abs_paths = [os.path.join(folder_path, file) for file in filtered_files]
+
+    return abs_paths
 
 
 def succ_distance(current, previous):

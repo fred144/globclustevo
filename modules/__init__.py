@@ -8,8 +8,6 @@ Analysis Modules
 
 """
 
-__all__ = [
-    "macros",
-]
+__all__ = ["macros", "luminosity", "profiles"]
 
-from . import macros
+from . import macros, luminosity, profiles
