@@ -39,6 +39,7 @@ datadir = os.path.expanduser(
 ).format(simulation_run_name)
 # save path
 parent_folder = "../rendering/gas/{}".format(simulation_run_name)
+
 # TODO: edit for rendering runs
 sequence_folder = "gas_projected_density_z"
 # ===================================save path=================================
