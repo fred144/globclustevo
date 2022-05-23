@@ -345,7 +345,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         length_includes_head=True,
     )
 
-    # ==========================luminosity mappping data extraction==================
+    # ==========================luminosity mappping data extraction==============
 
     # get popII star positons
     abs_birth_epochs = np.round(converted_unfiltered + birth_start, 3)  #!
@@ -366,7 +366,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         ]
     )
 
-    # ===============================star positions save===============================
+    # =========================star positions save=================================
 
     star_info = np.array(star_info).T
     save_time = str(format(current_time, ".2f")).replace(".", "_")
@@ -383,7 +383,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     np.savetxt(save_name, X=star_info, header=header)
     print("# saved:", save_name)
 
-    # =============================================================================
+    # ==========================================================================
     # psc sfc save
 
     psc_kazu_radii = np.abs(
