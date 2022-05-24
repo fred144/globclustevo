@@ -1,0 +1,1 @@
+# x(pc), y(pc), z(pc),radii at birth (pc), particle tag
