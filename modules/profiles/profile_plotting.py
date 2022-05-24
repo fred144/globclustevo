@@ -9,7 +9,7 @@ from .profile_models import modified_king_model, trunc_radius
 from scipy.optimize import curve_fit
 import scipy.stats as st
 
-
+# TODO: add filter to avoid small double count by filtering clust_x, y,z using fof
 def king_profile_plotter(
     star_pos,
     lums,
@@ -20,6 +20,7 @@ def king_profile_plotter(
     gc_label,
     bins=30,
     good_alpha=5,
+    particle_filter=None,
     **kwargs
 ):
     """
@@ -63,6 +64,11 @@ def king_profile_plotter(
             lums=lums,
             trns_coord=True,
         )
+
+    if particle_filter is not None:
+        pass
+    else:
+        pass
 
     # given an isolated cluster, find projected density quantities
     # as a function of radius with log bins or linear bins
@@ -239,9 +245,12 @@ def king_profile_plotter(
                 label=plot_label,
                 zorder=20,
             )
-            plt.axvline(**kwargs)
+            # plt.axvline(**kwargs) #!!!
             # plt.text(fit_r_c, 0,r'$R_core$',rotation=90)
-            plt.title(r"GC # {:.0f}".format(gc_label), fontsize=16)
+            plt.title(
+                r"GC # {:.0f}, Star Count:{}".format(gc_label, np.size(clust_masses)),
+                fontsize=16,
+            )
             plt.ylabel(r"Surface Mass Density ($M_{\odot} \; pc^{-2}$)", fontsize=16)
             plt.xlabel(r"R ($pc$)", fontsize=16)
             plt.xscale("log")
@@ -250,7 +259,7 @@ def king_profile_plotter(
             # plt.yscale('symlog')
             plt.grid(visible=True, which="both", axis="y", ls="--")
             plt.legend(fontsize=16)
-
+            print(r"> fitted GC #{:.0f}".format(gc_label))
             return (
                 r,
                 rho,
@@ -267,8 +276,9 @@ def king_profile_plotter(
                 err_fit_sigma_naught,
                 fit_sigma_bg,
                 err_fit_sigma_bg,
-                np.size(clust_x),
+                np.size(clust_masses),  # size of the masses array, count star in gc
             )
+
         else:
             print(r"> bad alpha for GC #{:.0f}".format(gc_label))
             # return invalid values
@@ -465,7 +475,7 @@ def king_profile_plotter_lite(
         # plot the fit if it is good
         if (
             fit_alpha < good_alpha
-            and core_mass > 1
+            and core_mass > 0
             and np.max(rho) > 0
             and np.max(r) > 0
         ):

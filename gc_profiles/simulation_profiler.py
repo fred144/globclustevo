@@ -62,11 +62,11 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii=Non
             star_file_path=pop_data,
             parent_save_path=run_save_path,
             proj_width=400,  # pc
-            gc_radii=vir_radii,  # uniform radii to be used to extract clusters
+            gc_radii=vir_radii,  # radii to be used to extract clusters
             lum_map_bins=4000,  # bad resolution so that you can see it better
             centers=ctrs_pc,
         )
-        print(particles_in_this_snapshot)
+        # print(particles_in_this_snapshot)
         gc_counts.append(np.sum(particles_in_this_snapshot))
         total_counts.append(pop2_data.shape[0])
         time_myr.append(time)
@@ -81,10 +81,10 @@ if __name__ == "__main__":
     pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
     halo_data_directory = r"../halo_data/fs07_refine/test_run"
 
-    save_path = "./profile_runs/fs07_refine/test_run/10_pc_axvline"
+    save_path = "./profile_runs/fs07_refine/test_run/vir_rad"
 
-    strt = 250
-    end = 250
+    strt = 500
+    end = 500
     step = 1
     pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
     halos = filter_snapshots(halo_data_directory, strt, end, step)

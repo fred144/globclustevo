@@ -150,7 +150,7 @@ def run_profiler(
             gc_rad=radius,
             gc_label=label,
             bins=25,
-            # x=gc_radii[i],
+            x=gc_radii[i],
         )
         # per globular cluster inside a snap shot
         gc_out_masses.append(m_tot)
@@ -166,7 +166,7 @@ def run_profiler(
         gc_sigmabg.append(sigma_bg)
         gc_err_sigma_bg.append(err_sigma_bg)
         gc_particle_counts.append(counts)
-
+        print("There are this many stars in the cluster", counts)
         if m_tot > 0:
             plt_save_path = os.path.join(
                 save_folder_abs_path, "gc_{}.png".format(str(label).zfill(3))
