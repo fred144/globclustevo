@@ -50,7 +50,7 @@ def lum_look_up_table(stellar_ages, table_link, column_idx: int, log=True):
 def unpack_pop_ii_data(
     path: str,
     lum_scaling=1e-5,
-    lum_link="../paricle_data/luminosity_look_up_tables/l1500_inst_e.dat.txt",
+    lum_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
 ):
     r"""
     Depends on the lookup table function.

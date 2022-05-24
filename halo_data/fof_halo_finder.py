@@ -125,7 +125,9 @@ for file_name in filtered_files:
 
     cata_yt = cata_yt.all_data()
 
-    pop2_data = np.loadtxt("../pop_2_data/fs07_refine/pos_00250_426_61_myr.txt")
+    pop2_data = np.loadtxt(
+        "../particle_data/pop_2_data/fs07_refine/pos_00250_427_39_myr.txt"
+    )
     ctr_at = pop2_data[5:8, 6]
 
     # get the halo centers
@@ -172,7 +174,7 @@ for file_name in filtered_files:
         gc_x = np.array(ds.arr(x_pos - x_center, "code_length").to("pc"))[gc_mask]
         gc_y = np.array(ds.arr(y_pos - y_center, "code_length").to("pc"))[gc_mask]
         gc_z = np.array(ds.arr(z_pos - z_center, "code_length").to("pc"))[gc_mask]
-        gc_stars = np.vstack((gc_x, gc_y, gc_z)).T
+        gc_stars = np.vstack((gc_x, gc_y, gc_z)).T - cat_pc[:, 1:-1][i - 1]  #!!!
         header = "star_x_coords [pc] \t star_y_coords [pc] \t star_z_coords [pc] "
         # TODO: remove hardcode
         hard = "../halo_data/fs07_refine/test_run/"

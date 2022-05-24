@@ -25,7 +25,7 @@ warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 # ==============================================================================
 # TODO: edit for rendering runs
-simulation_run_name = "fs07_refine"
+simulation_run_name = "fs035_ms10"
 latest_sim_stats = np.loadtxt(
     "../sim_log_files/{}/latest_sim_stats.txt".format(simulation_run_name)
 )
@@ -69,8 +69,8 @@ if not os.path.exists(psc_save):
 sequence_title = "z_gas"
 width = (400, "pc")
 slice_axis = "z"
-start_step = 772  # fs07:113, fs035:154
-end_step = 874
+start_step = 758  # fs07:113, fs035:154
+end_step = 857
 
 # cosmetics
 clrmap = "BuGn_r"  # for the pop II ages
