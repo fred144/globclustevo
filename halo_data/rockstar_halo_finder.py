@@ -17,7 +17,7 @@ from yt.funcs import mylog
 # from yt.analysis_modules.halo_analysis.api import HaloCatalog
 
 
-# mylog.setLevel(40)
+mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 
@@ -25,9 +25,9 @@ data_directory = r"../../cosm_test_data/refine"
 
 # =============================================================================
 # lustre data path
-# data_directory = os.path.expanduser(
-#     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
-# )
+data_directory = os.path.expanduser(
+    "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
+)
 # # save path
 # sequence_folder = "newcmap_gas_projected_density_z"
 # parent_folder = "/homes/fgarcia4/analysis/cluster_evolution/sequences/new_refine"
@@ -88,7 +88,7 @@ for file_name in filtered_files:
     hc = HaloCatalog(
         data_ds=ds,
         finder_method="rockstar",
-        finder_kwargs={"particle_type": "star", "num_readers": 1, "num_writers": 1},
+        finder_kwargs={"particle_type": "star", "num_readers": 1, "num_writers": 2},
         output_dir="../halo_data/fs07_refine/rockstar",
     )
 
