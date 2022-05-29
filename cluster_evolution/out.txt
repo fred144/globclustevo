@@ -1,0 +1,6393 @@
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00624/info_00624.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00624_506_20_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00624_506_20_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00624_506_20_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00624-z-9_77-t-506_20-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00625/info_00625.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00625_506_43_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00625_506_43_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00625_506_43_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00625-z-9_77-t-506_43-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00626/info_00626.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00626_506_66_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00626_506_66_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00626_506_66_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00626-z-9_76-t-506_66-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00627/info_00627.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00627_506_89_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00627_506_89_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00627_506_89_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00627-z-9_76-t-506_89-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00628/info_00628.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00628_507_13_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00628_507_13_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00628_507_13_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00628-z-9_76-t-507_13-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00629/info_00629.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00629_507_38_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00629_507_38_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00629_507_38_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00629-z-9_75-t-507_38-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00630/info_00630.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00630_507_62_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00630_507_62_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00630_507_62_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00630-z-9_75-t-507_62-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00631/info_00631.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00631_507_75_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00631_507_75_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00631_507_75_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00631-z-9_75-t-507_75-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00632/info_00632.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00632_507_88_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00632_507_88_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00632_507_88_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00632-z-9_75-t-507_88-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00633/info_00633.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00633_508_13_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00633_508_13_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00633_508_13_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00633-z-9_74-t-508_13-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00634/info_00634.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00634_508_40_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00634_508_40_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00634_508_40_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00634-z-9_74-t-508_40-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00635/info_00635.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00635_508_66_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00635_508_66_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00635_508_66_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00635-z-9_74-t-508_66-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00636/info_00636.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00636_508_94_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00636_508_94_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00636_508_94_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00636-z-9_73-t-508_94-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00637/info_00637.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00637_509_22_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00637_509_22_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00637_509_22_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00637-z-9_73-t-509_22-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00638/info_00638.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00638_509_50_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00638_509_50_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00638_509_50_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00638-z-9_72-t-509_50-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00639/info_00639.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00639_509_80_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00639_509_80_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00639_509_80_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00639-z-9_72-t-509_80-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00640/info_00640.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00640_510_09_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00640_510_09_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00640_510_09_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00640-z-9_72-t-510_09-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00641/info_00641.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00641_510_40_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00641_510_40_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00641_510_40_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00641-z-9_71-t-510_40-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00642/info_00642.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00642_510_70_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00642_510_70_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00642_510_70_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00642-z-9_71-t-510_70-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00643/info_00643.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00643_511_01_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00643_511_01_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00643_511_01_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00643-z-9_70-t-511_01-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00644/info_00644.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00644_511_32_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00644_511_32_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00644_511_32_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00644-z-9_70-t-511_32-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00645/info_00645.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00645_511_64_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00645_511_64_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00645_511_64_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00645-z-9_69-t-511_64-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00646/info_00646.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00646_511_96_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00646_511_96_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00646_511_96_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00646-z-9_69-t-511_96-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00647/info_00647.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00647_512_29_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00647_512_29_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00647_512_29_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00647-z-9_69-t-512_29-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00648/info_00648.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00648_512_63_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00648_512_63_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00648_512_63_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00648-z-9_68-t-512_63-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00649/info_00649.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00649_512_97_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00649_512_97_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00649_512_97_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00649-z-9_68-t-512_97-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00650/info_00650.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00650_513_32_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00650_513_32_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00650_513_32_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00650-z-9_67-t-513_32-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00651/info_00651.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00651_513_67_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00651_513_67_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00651_513_67_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00651-z-9_67-t-513_67-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00652/info_00652.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00652_514_02_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00652_514_02_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00652_514_02_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00652-z-9_66-t-514_02-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00653/info_00653.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00653_514_38_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00653_514_38_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00653_514_38_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00653-z-9_66-t-514_38-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00654/info_00654.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00654_514_74_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00654_514_74_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00654_514_74_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00654-z-9_65-t-514_74-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00655/info_00655.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00655_515_10_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00655_515_10_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00655_515_10_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00655-z-9_65-t-515_10-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00656/info_00656.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00656_515_47_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00656_515_47_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00656_515_47_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00656-z-9_64-t-515_47-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00657/info_00657.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00657_515_85_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00657_515_85_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00657_515_85_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00657-z-9_64-t-515_85-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00658/info_00658.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00658_516_23_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00658_516_23_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00658_516_23_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00658-z-9_63-t-516_23-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00659/info_00659.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00659_516_61_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00659_516_61_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00659_516_61_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00659-z-9_63-t-516_61-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00660/info_00660.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00660_517_00_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00660_517_00_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00660_517_00_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00660-z-9_62-t-517_00-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00661/info_00661.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00661_517_40_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00661_517_40_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00661_517_40_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00661-z-9_62-t-517_40-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00662/info_00662.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00662_517_80_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00662_517_80_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00662_517_80_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00662-z-9_61-t-517_80-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00663/info_00663.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00663_518_00_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00663_518_00_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00663_518_00_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00663-z-9_61-t-518_00-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00664/info_00664.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00664_518_20_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00664_518_20_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00664_518_20_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00664-z-9_60-t-518_20-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00665/info_00665.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00665_518_41_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00665_518_41_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00665_518_41_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00665-z-9_60-t-518_41-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00666/info_00666.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00666_518_61_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00666_518_61_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00666_518_61_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00666-z-9_60-t-518_61-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00667/info_00667.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00667_518_82_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00667_518_82_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00667_518_82_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00667-z-9_60-t-518_82-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00668/info_00668.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00668_519_03_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00668_519_03_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00668_519_03_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00668-z-9_59-t-519_03-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00669/info_00669.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00669_519_24_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00669_519_24_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00669_519_24_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00669-z-9_59-t-519_24-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00670/info_00670.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00670_519_45_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00670_519_45_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00670_519_45_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00670-z-9_59-t-519_45-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00671/info_00671.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00671_519_66_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00671_519_66_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00671_519_66_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00671-z-9_58-t-519_66-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00672/info_00672.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00672_519_88_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00672_519_88_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00672_519_88_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00672-z-9_58-t-519_88-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00673/info_00673.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00673_520_09_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00673_520_09_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00673_520_09_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00673-z-9_58-t-520_09-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00674/info_00674.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00674_520_31_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00674_520_31_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00674_520_31_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00674-z-9_58-t-520_31-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00675/info_00675.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00675_520_53_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00675_520_53_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00675_520_53_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00675-z-9_57-t-520_53-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00676/info_00676.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00676_520_75_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00676_520_75_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00676_520_75_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00676-z-9_57-t-520_75-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00677/info_00677.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00677_520_97_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00677_520_97_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00677_520_97_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00677-z-9_57-t-520_97-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00678/info_00678.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00678_521_19_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00678_521_19_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00678_521_19_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00678-z-9_56-t-521_19-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00679/info_00679.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00679_521_41_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00679_521_41_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00679_521_41_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00679-z-9_56-t-521_41-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00680/info_00680.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00680_521_63_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00680_521_63_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00680_521_63_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00680-z-9_56-t-521_63-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00681/info_00681.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00681_521_86_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00681_521_86_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00681_521_86_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00681-z-9_55-t-521_86-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00682/info_00682.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00682_522_08_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00682_522_08_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00682_522_08_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00682-z-9_55-t-522_08-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00683/info_00683.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00683_522_31_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00683_522_31_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00683_522_31_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00683-z-9_55-t-522_31-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00684/info_00684.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00684_522_54_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00684_522_54_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00684_522_54_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00684-z-9_55-t-522_54-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00685/info_00685.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00685_522_77_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00685_522_77_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00685_522_77_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00685-z-9_54-t-522_77-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00686/info_00686.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00686_523_00_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00686_523_00_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00686_523_00_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00686-z-9_54-t-523_00-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00687/info_00687.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00687_523_23_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00687_523_23_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00687_523_23_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00687-z-9_54-t-523_23-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00688/info_00688.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00688_523_46_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00688_523_46_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00688_523_46_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00688-z-9_53-t-523_46-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00689/info_00689.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00689_523_70_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00689_523_70_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00689_523_70_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00689-z-9_53-t-523_70-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00690/info_00690.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00690_523_93_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00690_523_93_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00690_523_93_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00690-z-9_53-t-523_93-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00691/info_00691.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00691_524_17_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00691_524_17_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00691_524_17_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00691-z-9_52-t-524_17-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00692/info_00692.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00692_524_41_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00692_524_41_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00692_524_41_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00692-z-9_52-t-524_41-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00693/info_00693.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00693_524_65_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00693_524_65_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00693_524_65_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00693-z-9_52-t-524_65-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00694/info_00694.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00694_524_88_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00694_524_88_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00694_524_88_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00694-z-9_51-t-524_88-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00695/info_00695.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00695_525_12_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00695_525_12_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00695_525_12_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00695-z-9_51-t-525_12-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00696/info_00696.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00696_525_37_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00696_525_37_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00696_525_37_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00696-z-9_51-t-525_37-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00697/info_00697.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00697_525_61_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00697_525_61_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00697_525_61_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00697-z-9_50-t-525_61-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00698/info_00698.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00698_525_85_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00698_525_85_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00698_525_85_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00698-z-9_50-t-525_85-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00699/info_00699.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00699_526_10_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00699_526_10_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00699_526_10_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00699-z-9_50-t-526_10-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00700/info_00700.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00700_526_34_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00700_526_34_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00700_526_34_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00700-z-9_49-t-526_34-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00701/info_00701.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00701_526_59_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00701_526_59_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00701_526_59_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00701-z-9_49-t-526_59-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00702/info_00702.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00702_526_84_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00702_526_84_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00702_526_84_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00702-z-9_49-t-526_84-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00703/info_00703.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00703_527_05_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00703_527_05_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00703_527_05_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00703-z-9_49-t-527_05-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00704/info_00704.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00704_527_28_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00704_527_28_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00704_527_28_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00704-z-9_48-t-527_28-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00705/info_00705.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00705_527_48_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00705_527_48_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00705_527_48_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00705-z-9_48-t-527_48-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00706/info_00706.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00706_527_73_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00706_527_73_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00706_527_73_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00706-z-9_48-t-527_73-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00707/info_00707.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00707_528_04_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00707_528_04_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00707_528_04_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00707-z-9_47-t-528_04-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00708/info_00708.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00708_528_28_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00708_528_28_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00708_528_28_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00708-z-9_47-t-528_28-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00709/info_00709.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00709_528_57_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00709_528_57_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00709_528_57_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00709-z-9_47-t-528_57-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00710/info_00710.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00710_528_91_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00710_528_91_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00710_528_91_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00710-z-9_46-t-528_91-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00711/info_00711.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00711_529_32_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00711_529_32_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00711_529_32_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00711-z-9_46-t-529_32-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00712/info_00712.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00712_529_55_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00712_529_55_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00712_529_55_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00712-z-9_45-t-529_55-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00713/info_00713.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00713_529_80_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00713_529_80_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00713_529_80_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00713-z-9_45-t-529_80-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00714/info_00714.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00714_530_05_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00714_530_05_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00714_530_05_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00714-z-9_45-t-530_05-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00715/info_00715.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00715_530_30_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00715_530_30_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00715_530_30_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00715-z-9_44-t-530_30-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00716/info_00716.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00716_530_55_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00716_530_55_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00716_530_55_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00716-z-9_44-t-530_55-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00717/info_00717.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00717_530_80_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00717_530_80_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00717_530_80_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00717-z-9_44-t-530_80-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00718/info_00718.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00718_531_06_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00718_531_06_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00718_531_06_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00718-z-9_43-t-531_06-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00719/info_00719.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00719_531_31_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00719_531_31_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00719_531_31_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00719-z-9_43-t-531_31-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00720/info_00720.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00720_531_56_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00720_531_56_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00720_531_56_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00720-z-9_43-t-531_56-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00721/info_00721.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00721_531_81_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00721_531_81_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00721_531_81_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00721-z-9_42-t-531_81-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00722/info_00722.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00722_532_06_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00722_532_06_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00722_532_06_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00722-z-9_42-t-532_06-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00723/info_00723.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00723_532_31_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00723_532_31_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00723_532_31_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00723-z-9_42-t-532_31-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00724/info_00724.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00724_532_56_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00724_532_56_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00724_532_56_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00724-z-9_41-t-532_56-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00725/info_00725.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00725_532_81_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00725_532_81_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00725_532_81_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00725-z-9_41-t-532_81-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00726/info_00726.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00726_533_06_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00726_533_06_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00726_533_06_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00726-z-9_41-t-533_06-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00727/info_00727.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00727_533_31_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00727_533_31_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00727_533_31_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00727-z-9_40-t-533_31-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00728/info_00728.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00728_533_57_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00728_533_57_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00728_533_57_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00728-z-9_40-t-533_57-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00729/info_00729.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00729_533_82_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00729_533_82_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00729_533_82_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00729-z-9_40-t-533_82-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00730/info_00730.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00730_534_07_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00730_534_07_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00730_534_07_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00730-z-9_39-t-534_07-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00731/info_00731.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00731_534_32_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00731_534_32_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00731_534_32_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00731-z-9_39-t-534_32-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00732/info_00732.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00732_534_58_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00732_534_58_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00732_534_58_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00732-z-9_39-t-534_58-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00733/info_00733.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00733_534_83_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00733_534_83_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00733_534_83_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00733-z-9_38-t-534_83-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00734/info_00734.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00734_535_08_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00734_535_08_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00734_535_08_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00734-z-9_38-t-535_08-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00735/info_00735.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00735_535_33_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00735_535_33_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00735_535_33_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00735-z-9_38-t-535_33-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00736/info_00736.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00736_535_58_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00736_535_58_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00736_535_58_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00736-z-9_37-t-535_58-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00737/info_00737.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00737_535_83_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00737_535_83_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00737_535_83_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00737-z-9_37-t-535_83-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00738/info_00738.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00738_536_09_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00738_536_09_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00738_536_09_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00738-z-9_37-t-536_09-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00739/info_00739.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00739_536_34_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00739_536_34_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00739_536_34_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00739-z-9_36-t-536_34-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00740/info_00740.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00740_536_59_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00740_536_59_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00740_536_59_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00740-z-9_36-t-536_59-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00741/info_00741.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00741_536_85_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00741_536_85_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00741_536_85_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00741-z-9_36-t-536_85-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00742/info_00742.txt
+> annotating 42037 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00742_537_10_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00742_537_10_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00742_537_10_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00742-z-9_35-t-537_10-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00743/info_00743.txt
+> annotating 42331 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00743_537_35_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00743_537_35_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00743_537_35_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00743-z-9_35-t-537_35-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00744/info_00744.txt
+> annotating 42331 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00744_537_60_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00744_537_60_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00744_537_60_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00744-z-9_35-t-537_60-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00745/info_00745.txt
+> annotating 42331 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00745_537_86_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00745_537_86_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00745_537_86_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00745-z-9_34-t-537_86-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00746/info_00746.txt
+> annotating 42331 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00746_538_11_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00746_538_11_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00746_538_11_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00746-z-9_34-t-538_11-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00747/info_00747.txt
+> annotating 42331 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00747_538_36_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00747_538_36_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00747_538_36_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00747-z-9_34-t-538_36-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00748/info_00748.txt
+> annotating 42331 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00748_538_61_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00748_538_61_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00748_538_61_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00748-z-9_33-t-538_61-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00749/info_00749.txt
+> annotating 43116 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00749_538_87_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00749_538_87_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00749_538_87_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00749-z-9_33-t-538_87-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00750/info_00750.txt
+> annotating 43499 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00750_539_12_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00750_539_12_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00750_539_12_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00750-z-9_33-t-539_12-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00751/info_00751.txt
+> annotating 43499 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00751_539_38_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00751_539_38_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00751_539_38_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00751-z-9_33-t-539_38-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00752/info_00752.txt
+> annotating 43499 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00752_539_63_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00752_539_63_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00752_539_63_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00752-z-9_32-t-539_63-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00753/info_00753.txt
+> annotating 43499 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00753_539_88_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00753_539_88_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00753_539_88_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00753-z-9_32-t-539_88-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00754/info_00754.txt
+> annotating 43499 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00754_540_14_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00754_540_14_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00754_540_14_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00754-z-9_32-t-540_14-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00755/info_00755.txt
+> annotating 43499 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00755_540_39_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00755_540_39_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00755_540_39_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00755-z-9_31-t-540_39-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00756/info_00756.txt
+> annotating 44036 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00756_540_64_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00756_540_64_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00756_540_64_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00756-z-9_31-t-540_64-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00757/info_00757.txt
+> annotating 44036 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00757_540_88_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00757_540_88_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00757_540_88_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00757-z-9_31-t-540_88-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00758/info_00758.txt
+> annotating 44036 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00758_541_15_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00758_541_15_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00758_541_15_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00758-z-9_30-t-541_15-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00759/info_00759.txt
+> annotating 44036 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00759_541_49_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00759_541_49_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00759_541_49_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00759-z-9_30-t-541_49-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00760/info_00760.txt
+> annotating 44036 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00760_541_74_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00760_541_74_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00760_541_74_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00760-z-9_29-t-541_74-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00761/info_00761.txt
+> annotating 44036 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00761_542_01_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00761_542_01_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00761_542_01_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00761-z-9_29-t-542_01-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00762/info_00762.txt
+> annotating 44036 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00762_542_22_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00762_542_22_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00762_542_22_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00762-z-9_29-t-542_22-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00763/info_00763.txt
+> annotating 44036 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00763_542_46_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00763_542_46_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00763_542_46_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00763-z-9_29-t-542_46-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00764/info_00764.txt
+> annotating 44036 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00764_542_67_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00764_542_67_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00764_542_67_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00764-z-9_28-t-542_67-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00765/info_00765.txt
+> annotating 44322 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+543.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00765_542_89_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00765_542_89_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00765_542_89_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00765-z-9_28-t-542_89-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00766/info_00766.txt
+> annotating 44322 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+543.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00766_543_15_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00766_543_15_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00766_543_15_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00766-z-9_28-t-543_15-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00767/info_00767.txt
+> annotating 44322 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+543.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00767_543_37_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00767_543_37_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00767_543_37_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00767-z-9_27-t-543_37-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00768/info_00768.txt
+> annotating 44322 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+543.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00768_543_57_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00768_543_57_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00768_543_57_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00768-z-9_27-t-543_57-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00769/info_00769.txt
+> annotating 44906 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+543.0
+544.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00769_543_79_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00769_543_79_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00769_543_79_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00769-z-9_27-t-543_79-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00770/info_00770.txt
+> annotating 44906 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+543.0
+544.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00770_544_03_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00770_544_03_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00770_544_03_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00770-z-9_27-t-544_03-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00771/info_00771.txt
+> annotating 44906 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+543.0
+544.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00771_544_25_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00771_544_25_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00771_544_25_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00771-z-9_26-t-544_25-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00772/info_00772.txt
+> annotating 44906 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+543.0
+544.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00772_544_48_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00772_544_48_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00772_544_48_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00772-z-9_26-t-544_48-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00773/info_00773.txt
+> annotating 44906 star particles
+> star time range: (340, 571) Myr
+340.0
+359.0
+376.0
+409.0
+410.0
+411.0
+428.0
+429.0
+431.0
+435.0
+438.0
+442.0
+443.0
+445.0
+446.0
+447.0
+448.0
+449.0
+450.0
+451.0
+452.0
+453.0
+454.0
+455.0
+456.0
+457.0
+458.0
+459.0
+460.0
+461.0
+462.0
+463.0
+464.0
+465.0
+537.0
+539.0
+541.0
+543.0
+544.0
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_00773_544_70_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_00773_544_70_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_00773_544_70_myr.txt
+# saved: ../rendering/gas/fs07_refine/lin_gas_projected_density_x/out-00773-z-9_26-t-544_70-x_gas_lin.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_00774/info_00774.txt
