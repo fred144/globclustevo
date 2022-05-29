@@ -25,7 +25,7 @@ warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 # ==============================================================================
 # TODO: edit for rendering runs
-simulation_run_name = "fs07_refine"
+simulation_run_name = "fs035_ms10"
 latest_sim_stats = np.loadtxt(
     "../sim_log_files/{}/latest_sim_stats.txt".format(simulation_run_name)
 )
@@ -68,8 +68,8 @@ if not os.path.exists(psc_save):
 sequence_title = "x_gas_log"
 slice_axis = "x"
 width = (400, "pc")
-start_step = 113  # fs07:113, fs035:154
-end_step = 889
+start_step = 154  # fs07:113, fs035:154
+end_step = 897
 
 # cosmetics
 mpl.rc("font", family="serif")
@@ -204,7 +204,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     # pop II birth color bar
     time_range = (int(birth_start), int(np.ceil(latest_sim_stats[1])))  # Myr
     print("> star time range:", time_range, "Myr")
-    evenly_spaced_times = np.arange(time_range[0], time_range[1] + 1)
+    evenly_spaced_times = np.arange(time_range[0], time_range[1] + 5)  # Myr
     cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
 
     # gets the clump ages, treats all clumps within 1 Myr as the from same
