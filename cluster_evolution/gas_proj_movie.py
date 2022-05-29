@@ -25,14 +25,13 @@ warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 # ==============================================================================
 # TODO: edit for rendering runs
-simulation_run_name = "fs035_ms10"
+simulation_run_name = "fs07_refine"
 latest_sim_stats = np.loadtxt(
     "../sim_log_files/{}/latest_sim_stats.txt".format(simulation_run_name)
 )
 # ===================================local test=================================
 # datadir = os.path.relpath("../../cosm_test_data/refine")
-# # parent_folder = 'C:/Users/144/Desktop/AstroSimulationResearch/cluster_evolution'
-# parent_folder = "."
+# parent_folder = "../rendering"
 # sequence_folder = "test_frames"
 # ===================================dt2 paths=================================
 datadir = os.path.expanduser(
@@ -42,7 +41,7 @@ datadir = os.path.expanduser(
 parent_folder = "../rendering/gas/{}".format(simulation_run_name)
 
 # TODO: edit for rendering runs
-sequence_folder = "gas_projected_density_z"
+sequence_folder = "log_gas_projected_density_x"
 # ===================================save path=================================
 
 pop_2_save = "../particle_data/pop_2_data/{}".format(simulation_run_name)
@@ -66,16 +65,17 @@ if not os.path.exists(psc_save):
 # ===================================plot params=================================
 
 # TODO: edit for rendering runs
-sequence_title = "z_gas"
+sequence_title = "x_gas_log"
+slice_axis = "x"
 width = (400, "pc")
-slice_axis = "z"
-start_step = 758  # fs07:113, fs035:154
-end_step = 857
+start_step = 113  # fs07:113, fs035:154
+end_step = 889
 
 # cosmetics
+mpl.rc("font", family="serif")
 clrmap = "BuGn_r"  # for the pop II ages
 density_cmap = "inferno"  # "cmyt.dusk"
-mpl.rc("font", family="serif")
+z_scale = "lin"
 # https://matplotlib.org/stable/tutorials/colors/colormaps.html
 # https://yt-project.org/doc/visualizing/colormaps/index.html
 star_map = cm.get_cmap(clrmap)
@@ -172,11 +172,18 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         text_args={"size": 12, "family": "serif"},
     )
     p.set_cmap(field=("gas", "density"), cmap=density_cmap)
-    # linear scale
-    # p.set_zlim('density', 0.005, .34)                   # default
-    # log scale
-    p.set_zlim("density", 0.008, 0.35)
-    p.set_log(("gas", "density"), True)
+
+    if z_scale == "log":
+        # log scale
+        p.set_zlim("density", 0.008, 0.35)
+        p.set_log(("gas", "density"), True)
+    elif z_scale == "lin":
+        # linear scale
+        p.set_zlim("density", 0.005, 0.34)  # default
+        p.set_log(("gas", "density"), False)
+    else:
+        print("* scale not supported!")
+
     p.set_colorbar_label(("gas", "density"), r"Projected Gas Density (g cm$^{-2}$)")
     p.hide_axes(draw_frame=True)
 
@@ -195,7 +202,8 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     )
 
     # pop II birth color bar
-    time_range = (int(birth_start), int(latest_sim_stats[1]))  # Myr
+    time_range = (int(birth_start), int(np.ceil(latest_sim_stats[1])))  # Myr
+    print("> star time range:", time_range, "Myr")
     evenly_spaced_times = np.arange(time_range[0], time_range[1] + 1)
     cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
 
@@ -227,15 +235,33 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
 
         if slice_axis == "z":
             p["gas", "density"].axes.scatter(
-                filtered_x, filtered_y, marker=".", c=color, s=0.0008, alpha=1
+                filtered_x,
+                filtered_y,
+                marker=".",
+                c=color,
+                s=1,
+                edgecolors=None,
+                alpha=0.03,
             )
         elif slice_axis == "x":
             p["gas", "density"].axes.scatter(
-                filtered_y, filtered_z, marker=".", c=color, s=0.0008, alpha=1
+                filtered_y,
+                filtered_z,
+                marker=".",
+                c=color,
+                s=1,
+                edgecolors=None,
+                alpha=0.03,
             )
         elif slice_axis == "y":
             p["gas", "density"].axes.scatter(
-                filtered_z, filtered_x, marker=".", c=color, s=0.0008, alpha=1
+                filtered_z,
+                filtered_x,
+                marker=".",
+                c=color,
+                s=1,
+                edgecolors=None,
+                alpha=0.03,
             )
         else:
             print("Invalid slice axis.")
@@ -384,8 +410,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     np.savetxt(save_name, X=star_info, header=header)
     print("# saved:", save_name)
 
-    # ==========================================================================
-    # psc sfc save
+    # =========================== psc sfc save==================================
 
     psc_kazu_radii = np.abs(
         ds.arr(ad["PSC", "particle_metallicity"], "code_length").to("pc")

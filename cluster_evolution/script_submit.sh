@@ -19,7 +19,7 @@ module load gcc
 module load openmpi
 
 
-SCRIPT="/lustre/fgarcia4/glob_clust_evo/cluster_evolution/main_movie.py"
+SCRIPT="/lustre/fgarcia4/glob_clust_evo/cluster_evolution/gas_proj_movie.py"
 #SCRIPT="profiler.py"
 
 # cd ~
