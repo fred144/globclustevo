@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib as mpl
+import matplotlib.lines as mlines
 
 
 def read_cat(filen):
@@ -97,9 +98,8 @@ n_hydrogen_fs035 = fs035_log_sfc[:, 8]
 metal_zun_cloud_fs035 = fs035_log_sfc[:, 9]
 
 
-fig, axs = plt.subplots(1, 1, figsize=(7, 6), dpi=300)
-cmap = plt.cm.get_cmap("winter_r")
-
+plt.subplots(1, 1, figsize=(7, 6), dpi=300)
+cmap = plt.cm.get_cmap("autumn_r")
 
 plt.scatter(
     metal_zun_cloud_fs070,
@@ -116,7 +116,7 @@ plt.scatter(
     metal_zun_cloud_fs035,
     n_hydrogen_fs035,
     c=redshft_fs035,
-    label=r"0.35 ",
+    label=r"0.35",
     cmap=cmap,
     marker="P",
     edgecolors="black",
@@ -132,10 +132,14 @@ plt.ylabel(r"Mean Gas Number Density $\left( \mathrm{cm} ^{-3} \right)$", fontsi
 plt.xscale("log")
 plt.yscale("log")
 plt.xlim(1e-4, 8e-3)
-
-plt.legend(title="SFR ($f_{*})$", loc="lower left", title_fontsize=14, fontsize=14)
-
-ax = plt.gca()
-leg_params = ax.get_legend()
-leg_params.legendHandles[0].set_color(plt.cm.Greys(0.8))
-leg_params.legendHandles[1].set_color(plt.cm.Greys(0.8))
+plt.ylim(0.4e4, 1e5)
+# manual legend, want to customize colors
+f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"0.70")
+f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"0.35")
+plt.legend(
+    title="SFR ($f_{*})$",
+    loc="upper left",
+    title_fontsize=14,
+    fontsize=12,
+    handles=[f70, f35],
+)
