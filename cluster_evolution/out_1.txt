@@ -15,3 +15,1387 @@ Warning: particle_families are modified at /site-packages/yt/frontends/ramses
 =============================================================================
 #________________________________________________________________
 # reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00354/info_00354.txt
+> annotating 1905 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00354_415_24_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00354_415_24_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00354_415_24_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00354-z-11_29-t-415_24-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00355/info_00355.txt
+> annotating 2283 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00355_415_52_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00355_415_52_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00355_415_52_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00355-z-11_29-t-415_52-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00356/info_00356.txt
+> annotating 2283 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00356_415_74_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00356_415_74_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00356_415_74_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00356-z-11_28-t-415_74-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00357/info_00357.txt
+> annotating 2283 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00357_416_03_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00357_416_03_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00357_416_03_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00357-z-11_28-t-416_03-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00358/info_00358.txt
+> annotating 2283 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00358_416_37_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00358_416_37_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00358_416_37_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00358-z-11_27-t-416_37-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00359/info_00359.txt
+> annotating 2283 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00359_416_58_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00359_416_58_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00359_416_58_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00359-z-11_26-t-416_58-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00360/info_00360.txt
+> annotating 2283 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00360_416_79_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00360_416_79_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00360_416_79_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00360-z-11_26-t-416_79-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00361/info_00361.txt
+> annotating 2283 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00361_417_03_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00361_417_03_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00361_417_03_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00361-z-11_26-t-417_03-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00362/info_00362.txt
+> annotating 2498 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00362_417_28_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00362_417_28_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00362_417_28_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00362-z-11_25-t-417_28-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00363/info_00363.txt
+> annotating 2498 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00363_417_50_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00363_417_50_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00363_417_50_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00363-z-11_25-t-417_50-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00364/info_00364.txt
+> annotating 2498 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00364_417_71_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00364_417_71_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00364_417_71_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00364-z-11_24-t-417_71-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00365/info_00365.txt
+> annotating 2498 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00365_417_94_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00365_417_94_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00365_417_94_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00365-z-11_24-t-417_94-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00366/info_00366.txt
+> annotating 2498 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00366_418_20_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00366_418_20_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00366_418_20_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00366-z-11_23-t-418_20-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00367/info_00367.txt
+> annotating 2498 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00367_418_47_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00367_418_47_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00367_418_47_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00367-z-11_23-t-418_47-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00368/info_00368.txt
+> annotating 2498 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00368_418_67_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00368_418_67_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00368_418_67_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00368-z-11_22-t-418_67-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00369/info_00369.txt
+> annotating 3347 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00369_418_89_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00369_418_89_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00369_418_89_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00369-z-11_22-t-418_89-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00370/info_00370.txt
+> annotating 4134 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00370_419_12_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00370_419_12_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00370_419_12_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00370-z-11_21-t-419_12-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00371/info_00371.txt
+> annotating 4456 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00371_419_35_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00371_419_35_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00371_419_35_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00371-z-11_21-t-419_35-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00372/info_00372.txt
+> annotating 4456 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00372_419_56_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00372_419_56_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00372_419_56_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00372-z-11_21-t-419_56-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00373/info_00373.txt
+> annotating 4456 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00373_419_78_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00373_419_78_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00373_419_78_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00373-z-11_20-t-419_78-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00374/info_00374.txt
+> annotating 4456 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00374_420_01_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00374_420_01_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00374_420_01_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00374-z-11_20-t-420_01-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00375/info_00375.txt
+> annotating 4456 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00375_420_22_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00375_420_22_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00375_420_22_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00375-z-11_19-t-420_22-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00376/info_00376.txt
+> annotating 4813 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00376_420_43_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00376_420_43_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00376_420_43_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00376-z-11_19-t-420_43-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00377/info_00377.txt
+> annotating 5636 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00377_420_63_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00377_420_63_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00377_420_63_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00377-z-11_19-t-420_63-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00378/info_00378.txt
+> annotating 7361 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00378_420_88_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00378_420_88_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00378_420_88_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00378-z-11_18-t-420_88-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00379/info_00379.txt
+> annotating 8278 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00379_421_10_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00379_421_10_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00379_421_10_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00379-z-11_18-t-421_10-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00380/info_00380.txt
+> annotating 8278 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00380_421_37_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00380_421_37_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00380_421_37_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00380-z-11_17-t-421_37-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00381/info_00381.txt
+> annotating 8765 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00381_421_63_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00381_421_63_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00381_421_63_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00381-z-11_17-t-421_63-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00382/info_00382.txt
+> annotating 9083 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00382_421_88_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00382_421_88_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00382_421_88_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00382-z-11_16-t-421_88-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00383/info_00383.txt
+> annotating 9981 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00383_422_19_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00383_422_19_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00383_422_19_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00383-z-11_16-t-422_19-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00384/info_00384.txt
+> annotating 10606 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00384_422_43_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00384_422_43_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00384_422_43_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00384-z-11_15-t-422_43-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00385/info_00385.txt
+> annotating 11512 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00385_422_66_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00385_422_66_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00385_422_66_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00385-z-11_15-t-422_66-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00386/info_00386.txt
+> annotating 11762 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00386_422_91_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00386_422_91_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00386_422_91_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00386-z-11_14-t-422_91-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00387/info_00387.txt
+> annotating 12939 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00387_423_17_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00387_423_17_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00387_423_17_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00387-z-11_14-t-423_17-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00388/info_00388.txt
+> annotating 12939 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00388_423_40_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00388_423_40_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00388_423_40_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00388-z-11_13-t-423_40-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00389/info_00389.txt
+> annotating 13068 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00389_423_62_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00389_423_62_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00389_423_62_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00389-z-11_13-t-423_62-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00390/info_00390.txt
+> annotating 13256 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00390_423_84_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00390_423_84_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00390_423_84_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00390-z-11_12-t-423_84-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00391/info_00391.txt
+> annotating 13256 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00391_424_06_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00391_424_06_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00391_424_06_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00391-z-11_12-t-424_06-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00392/info_00392.txt
+> annotating 13256 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00392_424_28_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00392_424_28_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00392_424_28_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00392-z-11_12-t-424_28-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00393/info_00393.txt
+> annotating 13336 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00393_424_50_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00393_424_50_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00393_424_50_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00393-z-11_11-t-424_50-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00394/info_00394.txt
+> annotating 13521 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00394_424_73_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00394_424_73_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00394_424_73_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00394-z-11_11-t-424_73-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00395/info_00395.txt
+> annotating 13521 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00395_424_95_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00395_424_95_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00395_424_95_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00395-z-11_10-t-424_95-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00396/info_00396.txt
+> annotating 13521 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00396_425_18_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00396_425_18_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00396_425_18_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00396-z-11_10-t-425_18-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00397/info_00397.txt
+> annotating 13521 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00397_425_38_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00397_425_38_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00397_425_38_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00397-z-11_09-t-425_38-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00398/info_00398.txt
+> annotating 13521 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00398_425_62_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00398_425_62_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00398_425_62_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00398-z-11_09-t-425_62-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00399/info_00399.txt
+> annotating 13521 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00399_425_83_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00399_425_83_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00399_425_83_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00399-z-11_09-t-425_83-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00400/info_00400.txt
+> annotating 13521 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00400_426_04_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00400_426_04_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00400_426_04_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00400-z-11_08-t-426_04-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00401/info_00401.txt
+> annotating 14024 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00401_426_28_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00401_426_28_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00401_426_28_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00401-z-11_08-t-426_28-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00402/info_00402.txt
+> annotating 14289 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00402_426_49_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00402_426_49_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00402_426_49_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00402-z-11_07-t-426_49-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00403/info_00403.txt
+> annotating 14289 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00403_426_72_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00403_426_72_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00403_426_72_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00403-z-11_07-t-426_72-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00404/info_00404.txt
+> annotating 14381 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00404_426_94_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00404_426_94_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00404_426_94_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00404-z-11_07-t-426_94-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00405/info_00405.txt
+> annotating 14743 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00405_427_17_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00405_427_17_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00405_427_17_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00405-z-11_06-t-427_17-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00406/info_00406.txt
+> annotating 14957 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00406_427_39_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00406_427_39_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00406_427_39_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00406-z-11_06-t-427_39-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00407/info_00407.txt
+> annotating 14957 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00407_427_62_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00407_427_62_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00407_427_62_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00407-z-11_05-t-427_62-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00408/info_00408.txt
+> annotating 14957 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00408_427_84_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00408_427_84_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00408_427_84_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00408-z-11_05-t-427_84-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00409/info_00409.txt
+> annotating 15031 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00409_428_05_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00409_428_05_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00409_428_05_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00409-z-11_04-t-428_05-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00410/info_00410.txt
+> annotating 15228 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00410_428_28_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00410_428_28_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00410_428_28_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00410-z-11_04-t-428_28-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00411/info_00411.txt
+> annotating 15872 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00411_428_49_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00411_428_49_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00411_428_49_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00411-z-11_04-t-428_49-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00412/info_00412.txt
+> annotating 16087 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00412_428_71_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00412_428_71_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00412_428_71_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00412-z-11_03-t-428_71-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00413/info_00413.txt
+> annotating 16087 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00413_428_92_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00413_428_92_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00413_428_92_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00413-z-11_03-t-428_92-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00414/info_00414.txt
+> annotating 16343 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00414_429_13_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00414_429_13_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00414_429_13_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00414-z-11_02-t-429_13-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00415/info_00415.txt
+> annotating 16562 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00415_429_35_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00415_429_35_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00415_429_35_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00415-z-11_02-t-429_35-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00416/info_00416.txt
+> annotating 17315 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00416_429_56_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00416_429_56_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00416_429_56_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00416-z-11_02-t-429_56-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00417/info_00417.txt
+> annotating 18249 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00417_429_78_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00417_429_78_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00417_429_78_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00417-z-11_01-t-429_78-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00418/info_00418.txt
+> annotating 18453 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00418_429_99_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00418_429_99_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00418_429_99_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00418-z-11_01-t-429_99-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00419/info_00419.txt
+> annotating 18974 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00419_430_20_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00419_430_20_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00419_430_20_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00419-z-11_00-t-430_20-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00420/info_00420.txt
+> annotating 19118 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00420_430_40_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00420_430_40_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00420_430_40_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00420-z-11_00-t-430_40-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00421/info_00421.txt
+> annotating 19301 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00421_430_44_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00421_430_44_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00421_430_44_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00421-z-11_00-t-430_44-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00422/info_00422.txt
+> annotating 19451 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00422_430_62_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00422_430_62_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00422_430_62_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00422-z-11_00-t-430_62-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00423/info_00423.txt
+> annotating 19564 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00423_430_83_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00423_430_83_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00423_430_83_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00423-z-10_99-t-430_83-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00424/info_00424.txt
+> annotating 20296 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00424_431_04_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00424_431_04_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00424_431_04_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00424-z-10_99-t-431_04-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00425/info_00425.txt
+> annotating 20744 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00425_431_25_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00425_431_25_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00425_431_25_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00425-z-10_98-t-431_25-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00426/info_00426.txt
+> annotating 20853 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00426_431_47_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00426_431_47_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00426_431_47_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00426-z-10_98-t-431_47-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00427/info_00427.txt
+> annotating 21006 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00427_431_67_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00427_431_67_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00427_431_67_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00427-z-10_98-t-431_67-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00428/info_00428.txt
+> annotating 21279 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00428_431_89_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00428_431_89_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00428_431_89_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00428-z-10_97-t-431_89-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00429/info_00429.txt
+> annotating 21347 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00429_432_09_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00429_432_09_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00429_432_09_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00429-z-10_97-t-432_09-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00430/info_00430.txt
+> annotating 21347 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00430_432_30_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00430_432_30_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00430_432_30_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00430-z-10_97-t-432_30-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00431/info_00431.txt
+> annotating 21347 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00431_432_51_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00431_432_51_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00431_432_51_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00431-z-10_96-t-432_51-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00432/info_00432.txt
+> annotating 21347 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00432_432_73_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00432_432_73_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00432_432_73_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00432-z-10_96-t-432_73-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00433/info_00433.txt
+> annotating 21347 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00433_432_94_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00433_432_94_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00433_432_94_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00433-z-10_95-t-432_94-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00434/info_00434.txt
+> annotating 21347 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00434_433_17_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00434_433_17_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00434_433_17_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00434-z-10_95-t-433_17-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00435/info_00435.txt
+> annotating 21766 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00435_433_39_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00435_433_39_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00435_433_39_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00435-z-10_95-t-433_39-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00436/info_00436.txt
+> annotating 21766 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00436_433_59_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00436_433_59_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00436_433_59_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00436-z-10_94-t-433_59-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00437/info_00437.txt
+> annotating 21899 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00437_433_81_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00437_433_81_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00437_433_81_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00437-z-10_94-t-433_81-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00438/info_00438.txt
+> annotating 22073 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00438_434_02_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00438_434_02_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00438_434_02_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00438-z-10_93-t-434_02-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00439/info_00439.txt
+> annotating 22073 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00439_434_22_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00439_434_22_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00439_434_22_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00439-z-10_93-t-434_22-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00440/info_00440.txt
+> annotating 22218 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00440_434_44_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00440_434_44_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00440_434_44_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00440-z-10_93-t-434_44-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00441/info_00441.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00441_434_65_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00441_434_65_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00441_434_65_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00441-z-10_92-t-434_65-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00442/info_00442.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00442_434_87_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00442_434_87_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00442_434_87_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00442-z-10_92-t-434_87-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00443/info_00443.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00443_435_07_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00443_435_07_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00443_435_07_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00443-z-10_91-t-435_07-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00444/info_00444.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00444_435_28_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00444_435_28_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00444_435_28_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00444-z-10_91-t-435_28-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00445/info_00445.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00445_435_49_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00445_435_49_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00445_435_49_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00445-z-10_91-t-435_49-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00446/info_00446.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00446_435_70_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00446_435_70_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00446_435_70_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00446-z-10_90-t-435_70-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00447/info_00447.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00447_435_90_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00447_435_90_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00447_435_90_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00447-z-10_90-t-435_90-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00448/info_00448.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00448_436_11_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00448_436_11_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00448_436_11_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00448-z-10_90-t-436_11-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00449/info_00449.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00449_436_33_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00449_436_33_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00449_436_33_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00449-z-10_89-t-436_33-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00450/info_00450.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00450_436_54_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00450_436_54_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00450_436_54_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00450-z-10_89-t-436_54-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00451/info_00451.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00451_436_75_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00451_436_75_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00451_436_75_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00451-z-10_88-t-436_75-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00452/info_00452.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00452_436_96_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00452_436_96_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00452_436_96_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00452-z-10_88-t-436_96-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00453/info_00453.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00453_437_17_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00453_437_17_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00453_437_17_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00453-z-10_88-t-437_17-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00454/info_00454.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00454_437_38_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00454_437_38_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00454_437_38_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00454-z-10_87-t-437_38-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00455/info_00455.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00455_437_59_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00455_437_59_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00455_437_59_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00455-z-10_87-t-437_59-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00456/info_00456.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00456_437_79_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00456_437_79_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00456_437_79_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00456-z-10_87-t-437_79-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00457/info_00457.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00457_437_99_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00457_437_99_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00457_437_99_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00457-z-10_86-t-437_99-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00458/info_00458.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00458_438_20_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00458_438_20_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00458_438_20_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00458-z-10_86-t-438_20-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00459/info_00459.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00459_438_41_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00459_438_41_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00459_438_41_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00459-z-10_85-t-438_41-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00460/info_00460.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00460_438_62_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00460_438_62_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00460_438_62_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00460-z-10_85-t-438_62-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00461/info_00461.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00461_438_84_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00461_438_84_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00461_438_84_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00461-z-10_85-t-438_84-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00462/info_00462.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00462_439_04_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00462_439_04_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00462_439_04_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00462-z-10_84-t-439_04-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00463/info_00463.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00463_439_25_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00463_439_25_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00463_439_25_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00463-z-10_84-t-439_25-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00464/info_00464.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00464_439_45_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00464_439_45_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00464_439_45_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00464-z-10_84-t-439_45-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00465/info_00465.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00465_439_66_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00465_439_66_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00465_439_66_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00465-z-10_83-t-439_66-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00466/info_00466.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00466_439_88_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00466_439_88_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00466_439_88_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00466-z-10_83-t-439_88-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00467/info_00467.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00467_440_09_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00467_440_09_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00467_440_09_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00467-z-10_82-t-440_09-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00468/info_00468.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00468_440_30_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00468_440_30_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00468_440_30_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00468-z-10_82-t-440_30-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00469/info_00469.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00469_440_50_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00469_440_50_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00469_440_50_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00469-z-10_82-t-440_50-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00470/info_00470.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00470_440_71_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00470_440_71_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00470_440_71_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00470-z-10_81-t-440_71-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00471/info_00471.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00471_440_91_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00471_440_91_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00471_440_91_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00471-z-10_81-t-440_91-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00472/info_00472.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00472_441_11_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00472_441_11_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00472_441_11_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00472-z-10_81-t-441_11-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00473/info_00473.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00473_441_32_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00473_441_32_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00473_441_32_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00473-z-10_80-t-441_32-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00474/info_00474.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00474_441_53_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00474_441_53_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00474_441_53_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00474-z-10_80-t-441_53-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00475/info_00475.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00475_441_73_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00475_441_73_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00475_441_73_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00475-z-10_79-t-441_73-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00476/info_00476.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00476_441_93_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00476_441_93_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00476_441_93_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00476-z-10_79-t-441_93-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00477/info_00477.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00477_442_13_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00477_442_13_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00477_442_13_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00477-z-10_79-t-442_13-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00478/info_00478.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00478_442_35_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00478_442_35_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00478_442_35_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00478-z-10_78-t-442_35-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00479/info_00479.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00479_442_55_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00479_442_55_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00479_442_55_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00479-z-10_78-t-442_55-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00480/info_00480.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00480_442_75_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00480_442_75_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00480_442_75_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00480-z-10_78-t-442_75-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00481/info_00481.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00481_442_96_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00481_442_96_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00481_442_96_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00481-z-10_77-t-442_96-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00482/info_00482.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00482_443_16_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00482_443_16_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00482_443_16_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00482-z-10_77-t-443_16-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00483/info_00483.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00483_443_37_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00483_443_37_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00483_443_37_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00483-z-10_77-t-443_37-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00484/info_00484.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00484_443_58_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00484_443_58_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00484_443_58_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00484-z-10_76-t-443_58-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00485/info_00485.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00485_443_78_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00485_443_78_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00485_443_78_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00485-z-10_76-t-443_78-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00486/info_00486.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00486_443_99_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00486_443_99_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00486_443_99_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00486-z-10_75-t-443_99-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00487/info_00487.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00487_444_20_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00487_444_20_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00487_444_20_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00487-z-10_75-t-444_20-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00488/info_00488.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00488_444_41_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00488_444_41_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00488_444_41_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00488-z-10_75-t-444_41-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00489/info_00489.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00489_444_62_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00489_444_62_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00489_444_62_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00489-z-10_74-t-444_62-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00490/info_00490.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00490_444_82_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00490_444_82_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00490_444_82_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00490-z-10_74-t-444_82-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00491/info_00491.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00491_445_03_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00491_445_03_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00491_445_03_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00491-z-10_74-t-445_03-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00492/info_00492.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00492_445_24_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00492_445_24_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00492_445_24_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00492-z-10_73-t-445_24-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00493/info_00493.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00493_445_45_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00493_445_45_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00493_445_45_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00493-z-10_73-t-445_45-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00494/info_00494.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00494_445_67_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00494_445_67_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00494_445_67_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00494-z-10_73-t-445_67-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00495/info_00495.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00495_445_88_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00495_445_88_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00495_445_88_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00495-z-10_72-t-445_88-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00496/info_00496.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00496_446_08_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00496_446_08_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00496_446_08_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00496-z-10_72-t-446_08-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00497/info_00497.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00497_446_29_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00497_446_29_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00497_446_29_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00497-z-10_71-t-446_29-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00498/info_00498.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00498_446_50_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00498_446_50_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00498_446_50_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00498-z-10_71-t-446_50-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00499/info_00499.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00499_446_72_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00499_446_72_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00499_446_72_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00499-z-10_71-t-446_72-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00500/info_00500.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00500_446_93_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00500_446_93_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00500_446_93_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00500-z-10_70-t-446_93-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00501/info_00501.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00501_447_13_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00501_447_13_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00501_447_13_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00501-z-10_70-t-447_13-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00502/info_00502.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00502_447_34_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00502_447_34_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00502_447_34_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00502-z-10_70-t-447_34-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00503/info_00503.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00503_447_54_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00503_447_54_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00503_447_54_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00503-z-10_69-t-447_54-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00504/info_00504.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00504_447_74_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00504_447_74_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00504_447_74_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00504-z-10_69-t-447_74-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00505/info_00505.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00505_447_96_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00505_447_96_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00505_447_96_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00505-z-10_69-t-447_96-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00506/info_00506.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00506_448_17_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00506_448_17_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00506_448_17_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00506-z-10_68-t-448_17-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00507/info_00507.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00507_448_39_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00507_448_39_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00507_448_39_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00507-z-10_68-t-448_39-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00508/info_00508.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00508_448_59_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00508_448_59_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00508_448_59_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00508-z-10_67-t-448_59-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00509/info_00509.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00509_448_80_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00509_448_80_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00509_448_80_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00509-z-10_67-t-448_80-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00510/info_00510.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00510_449_01_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00510_449_01_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00510_449_01_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00510-z-10_67-t-449_01-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00511/info_00511.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00511_449_23_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00511_449_23_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00511_449_23_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00511-z-10_66-t-449_23-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00512/info_00512.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00512_449_44_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00512_449_44_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00512_449_44_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00512-z-10_66-t-449_44-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00513/info_00513.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00513_449_66_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00513_449_66_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00513_449_66_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00513-z-10_66-t-449_66-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00514/info_00514.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00514_449_86_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00514_449_86_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00514_449_86_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00514-z-10_65-t-449_86-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00515/info_00515.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00515_450_07_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00515_450_07_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00515_450_07_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00515-z-10_65-t-450_07-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00516/info_00516.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00516_450_29_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00516_450_29_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00516_450_29_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00516-z-10_64-t-450_29-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00517/info_00517.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00517_450_49_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00517_450_49_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00517_450_49_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00517-z-10_64-t-450_49-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00518/info_00518.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00518_450_71_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00518_450_71_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00518_450_71_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00518-z-10_64-t-450_71-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00519/info_00519.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00519_450_92_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00519_450_92_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00519_450_92_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00519-z-10_63-t-450_92-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00520/info_00520.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00520_451_14_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00520_451_14_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00520_451_14_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00520-z-10_63-t-451_14-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00521/info_00521.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00521_451_36_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00521_451_36_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00521_451_36_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00521-z-10_63-t-451_36-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00522/info_00522.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00522_451_58_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00522_451_58_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00522_451_58_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00522-z-10_62-t-451_58-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00523/info_00523.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00523_451_78_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00523_451_78_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00523_451_78_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00523-z-10_62-t-451_78-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00524/info_00524.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00524_452_00_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00524_452_00_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00524_452_00_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00524-z-10_62-t-452_00-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00525/info_00525.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00525_452_20_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00525_452_20_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00525_452_20_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00525-z-10_61-t-452_20-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00526/info_00526.txt
+> annotating 22339 star particles
+> star age range: [345, 536] Myr
+# saved: ../particle_data/pop_2_data/fs035_ms10/pos_00526_452_41_myr.txt
+# saved: ../particle_data/psc_data/fs035_ms10/psc_00526_452_41_myr.txt
+# saved: ../particle_data/sfc_data/fs035_ms10/sfc_00526_452_41_myr.txt
+# saved: ../rendering/gas/fs035_ms10/log_gas_projected_density_x/out-00526-z-10_61-t-452_41-x_gas_log.png
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00527/info_00527.txt
