@@ -68,7 +68,7 @@ if not os.path.exists(psc_save):
 sequence_title = "x_gas_lin"
 slice_axis = "x"
 width = (400, "pc")
-start_step = 624  # fs07:113, fs035:154
+start_step = 897  # fs07:113, fs035:154
 end_step = 897
 # cosmetics
 mpl.rc("font", family="serif")
@@ -201,8 +201,8 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     )
 
     # pop II birth color bar
-    time_range = (int(birth_start), int(np.ceil(latest_sim_stats[1])))  # Myr
-    print("> star time range:", time_range, "Myr")
+    time_range = [int(birth_start), int(np.ceil(latest_sim_stats[1]))]  # Myr
+    print("> star age range:", time_range, "Myr")
     evenly_spaced_times = np.arange(time_range[0], time_range[1] + 5)  # Myr
     cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
 
@@ -221,7 +221,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
 
     # pop II annotate loop
     for i, unique_age in enumerate(unique_birth_epochs + birth_start):
-        print(unique_age)
+
         mask = np.array(converted_unfiltered_rounded) == unique_age
         filtered_x = ds.arr(x_pos, "code_length").to("pc")[mask]
         filtered_y = ds.arr(y_pos, "code_length").to("pc")[mask]
