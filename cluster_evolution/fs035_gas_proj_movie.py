@@ -68,7 +68,7 @@ if not os.path.exists(psc_save):
 sequence_title = "x_gas_log"
 slice_axis = "x"
 width = (400, "pc")
-start_step = 287  # fs07:113, fs035:154
+start_step = 354 # fs07:113, fs035:154
 end_step = 910
 # cosmetics
 mpl.rc("font", family="serif")

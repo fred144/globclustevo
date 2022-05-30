@@ -45,7 +45,7 @@ end_snapshot = "00897"
 files = sorted(os.listdir(data_directory))  # [-2:-1]  [300:400:2]
 strt_idx = [i for i, s in enumerate(files) if strt_snapshot in s][0]
 end_idx = [i for i, s in enumerate(files) if end_snapshot in s][0]
-filtered_files = files[strt_idx : end_idx + 1 : 1]
+filtered_files = files[strt_idx : end_idx + 1 : 10]
 filtered_files = [os.path.join(data_directory, file) for file in filtered_files]
 
 cell_fields = [
