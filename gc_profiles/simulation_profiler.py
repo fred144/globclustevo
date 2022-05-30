@@ -1,11 +1,10 @@
-import os
 import sys
 
 sys.path.insert(
     1, "/homes/fgarcia4/py-virtual-envs/clean-install/lib/python3.7/site-packages"
 )
 sys.path.append("..")  # makes sure that importing the modules in the main folder work
-
+import os
 from modules.macros import filter_snapshots
 from snapshot_profiler import run_profiler
 import matplotlib.pyplot as plt

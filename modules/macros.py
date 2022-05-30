@@ -72,6 +72,20 @@ def code_age_to_myr(all_star_ages, hubble_const, unique_age=True, true_age=False
         return relative_ages  # t = 0 is the age of
 
 
+def common_filter_snapshots(snapshots_to_filter, filter_list):
+    r"""
+    Given a list of snapshot file names (snapshots_to_filter),
+    return only the snapshot file names in the given filter_list
+    """
+    filter_list = [f.split("_")[-1] for f in filter_list]
+    common_items = []
+    for file_name in snapshots_to_filter:
+        if any(ext in file_name for ext in filter_list):
+            common_items.append(file_name)
+
+    return common_items
+
+
 def filter_snapshots(folder_path, start_snap: int, end_snap: int, sampling=1):
     r"""Given a directory of outputs, return a list of absolute file
     paths given a range of snapshot values. Enables discrete selection
