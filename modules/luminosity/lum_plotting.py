@@ -243,9 +243,15 @@ def star_luminosity_plot(
         #                            Optionally plot annotations
         # =============================================================================
         if plt_ctrs is not None:
-            x_peak = plt_ctrs[:, 1]
-            y_peak = plt_ctrs[:, 2]
-            gc_labels = plt_ctrs[:, 0]
+            try:
+                x_peak = plt_ctrs[:, 1]
+                y_peak = plt_ctrs[:, 2]
+                gc_labels = plt_ctrs[:, 0]
+            except:
+                # if there is only one gc in the snapshot; just a 1d array
+                x_peak = np.array([plt_ctrs[1]])
+                y_peak = np.array([plt_ctrs[2]])
+                gc_labels = np.array([plt_ctrs[0]])
 
             plt.scatter(
                 x_peak,

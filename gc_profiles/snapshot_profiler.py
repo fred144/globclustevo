@@ -20,6 +20,7 @@ def run_profiler(
     gc_radii,
     lum_map_bins,
     centers=None,
+    particle_filter=None,
     **kwargs
 ):
     """
@@ -49,13 +50,14 @@ def run_profiler(
     print("> snapshot number", int(snapshot_num))
 
     # allow non-uniform, user-defined radii
-    if np.size(gc_radii) > 1:
-        print("> nonuniform radius, using virial or other")
-    else:
+    if isinstance(gc_radii, int):
         print("> uniform radius of", gc_radii, "pc")
+    else:
+        print("> non-uniform radius, using virial or other")
 
     if centers is None:
-        # get center x and y coordinates if centers are not provided.
+        # get center x and y coordinates using
+        # min/max method if centers are not provided.
         peak_x, peak_y, gc_labels = star_luminosity_plot(
             proj_width=proj_width,
             star_positions=star_positions,
@@ -71,10 +73,22 @@ def run_profiler(
         )
         gc_ctrs = np.array([peak_x, peak_y]).T
     else:
-        # centers are contained in the files
-        gc_ctrs = centers[:, 1:4]
-        gc_labels = centers[:, 0]
+        # centers are contained in the files\
+        try:
+            gc_ctrs = centers[:, 1:4]
+            gc_labels = centers[:, 0]
+            # stupid: break it up and immediately put it together, but better
+            # syntax for loop below.
+            annotation_ctrs = np.column_stack((gc_labels, gc_ctrs))
+        except:
+            # for single cluster snapshots
 
+            gc_ctrs = np.expand_dims(centers[1:4], axis=0)
+            gc_labels = np.array([centers[0]])
+
+            annotation_ctrs = centers
+
+        # print(annotation_ctrs)
         # make a master plot of all the gcs, just for visualization
         star_luminosity_plot(
             proj_width=proj_width,
@@ -86,7 +100,7 @@ def run_profiler(
             lum_scale=("dynamic", 0, 0),
             plt_bins=lum_map_bins,
             get_ctr=None,
-            plt_ctrs=np.column_stack((gc_labels, gc_ctrs)),
+            plt_ctrs=annotation_ctrs,
             masses=masses,
             **kwargs
         )
@@ -115,15 +129,39 @@ def run_profiler(
     gc_sigmabg = []
     gc_err_sigma_bg = []
     gc_particle_counts = []
-
+    gc_star_ids = []
     # iterate over x,y maximas and plot
     for i, (ctr, label) in enumerate(zip(gc_ctrs, gc_labels)):
         label = int(label)
-        # can allow non uniform radii.
-        if np.size(gc_radii) > 1:
-            radius = gc_radii[i]
+
+        # allow filetering if provided the parent directory for a given snapshot
+        # with all the gc_vir files that have been separated.
+        # filtereing based on x coords for now
+
+        if particle_filter is not None:
+            gc_label_num_str = str(int(label)).zfill(3)
+
+            path_to_post_processed_data = os.path.join(
+                particle_filter, "gc_vir_{}.txt".format(gc_label_num_str)
+            )
+            valid_x_coords = np.loadtxt(path_to_post_processed_data)[:, 1]
+            star_id_in_cluster = np.loadtxt(path_to_post_processed_data)[:, 0]
+
         else:
+            valid_x_coords = None
             pass
+
+        # can allow non uniform radii.
+        if isinstance(gc_radii, int):
+            radius = gc_radii
+        else:
+            if gc_radii.size == 1:  # account for single cluster snap shots
+
+                radius = np.array([gc_radii])[i]
+            else:
+
+                radius = gc_radii[i]
+
         (
             _,
             _,
@@ -150,7 +188,8 @@ def run_profiler(
             gc_rad=radius,
             gc_label=label,
             bins=25,
-            x=gc_radii[i],
+            particle_filter=valid_x_coords,
+            # x=gc_radii[i],
         )
         # per globular cluster inside a snap shot
         gc_out_masses.append(m_tot)
@@ -166,7 +205,9 @@ def run_profiler(
         gc_sigmabg.append(sigma_bg)
         gc_err_sigma_bg.append(err_sigma_bg)
         gc_particle_counts.append(counts)
-        print("There are this many stars in the cluster", counts)
+        gc_star_ids.append(star_id_in_cluster)
+
+        # print("There are this many stars in the cluster", counts)
         if m_tot > 0:
             plt_save_path = os.path.join(
                 save_folder_abs_path, "gc_{}.png".format(str(label).zfill(3))
@@ -197,7 +238,8 @@ def run_profiler(
     gc_err_sigma_bg = np.array(gc_err_sigma_bg)
     gc_particle_counts = np.array(gc_particle_counts)
 
-    # mask out invalid values
+    gc_star_ids = np.array(gc_star_ids, dtype=object)
+    # mask out invalid values, uses the first value for maskin only
     mask = gc_out_masses > 0
     gc_out_masses = gc_out_masses[mask]
     gc_r_core = gc_r_core[mask]
@@ -213,8 +255,9 @@ def run_profiler(
     gc_err_sigma_bg = gc_err_sigma_bg[mask]
     gc_labels = gc_labels[mask]
     gc_particle_counts = gc_particle_counts[mask]
-
-    print("> found", gc_char_age.size, "good profiles")
+    gc_star_ids = gc_star_ids[mask]
+    gc_star_ids = np.hstack(gc_star_ids)
+    print("> found", gc_char_age.size, "good profiles for", int(snapshot_num))
 
     # make the time get along with the rest of dimensions
     t_myr = np.array(time)
@@ -259,4 +302,5 @@ def run_profiler(
         gc_char_age,
         time,
         gc_particle_counts,
+        gc_star_ids,
     )

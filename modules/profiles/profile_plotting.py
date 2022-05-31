@@ -66,7 +66,13 @@ def king_profile_plotter(
         )
 
     if particle_filter is not None:
-        pass
+        mask = np.isin(clust_x, particle_filter)
+        clust_x = clust_x[mask]
+        clust_y = clust_y[mask]
+        clust_z = clust_z[mask]
+        clust_lums = clust_lums[mask]
+        clust_masses = clust_masses[mask]
+        clust_ages = clust_ages[mask]
     else:
         pass
 
