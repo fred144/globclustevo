@@ -32,6 +32,7 @@ def get_cluster(
 
     all_positions = np.vstack((xpos, ypos, zpos)).T
     distances = np.sqrt(np.sum(np.square(all_positions - ctr_at), axis=1))
+
     mask = distances < cluster_radius
     masked_positions = all_positions[mask]
     masked_lums = lums[mask]
