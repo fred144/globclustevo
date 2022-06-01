@@ -292,7 +292,7 @@ def king_profile_plotter(
                     r,
                     rho,
                     yerr=err,
-                    c="darkorchid",
+                    c="mediumpurple",
                     fmt="o",
                     capsize=5,
                     capthick=3,

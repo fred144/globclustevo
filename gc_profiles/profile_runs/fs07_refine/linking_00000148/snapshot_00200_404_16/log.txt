@@ -1,9 +1,0 @@
-# read in: ../pop_2_data/fs07_refine\pos_00200_404_16_myr.txt
-> snapshot time 404.16 Myr
-> snapshot number 200
-> uniform radius of 20 pc
-***Previous Cluster Size 231
-***Now Returning 207
-***Previous Cluster Size 204
-***Now Returning 197
-> found 2 good profiles

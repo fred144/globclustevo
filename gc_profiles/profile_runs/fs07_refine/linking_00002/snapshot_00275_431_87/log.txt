@@ -1,6 +1,0 @@
-# read in: ../pop_2_data/fs07_refine/pos_00275_431_87_myr.txt
-> snapshot time 431.87 Myr
-> snapshot number 275
-> uniform radius of 20 pc
-Error in callback <function flush_figures at 0x7f3cf8072af0> (for post_execute):
-Reading ../../cosm_test_data/refine/output_00500/info_00500.txt

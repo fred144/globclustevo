@@ -81,65 +81,68 @@ plt.show()
 Graph for plotting the mean gas numbe density as a function of metallicity 
 for a given redshift formation time
 """
-plt.rcParams.update({"font.family": "serif"})
+with plt.rc_context({"font.family": "serif", "mathtext.fontset": "cm"}):
 
-fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
-redshft_fs070 = fs070_log_sfc[:, 2]
-r_pc_cloud_fs070 = fs070_log_sfc[:, 4]
-m_sun_cloud_fs070 = fs070_log_sfc[:, 5]
-n_hydrogen_fs070 = fs070_log_sfc[:, 8]
-metal_zun_cloud_fs070 = fs070_log_sfc[:, 9]
+    fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
+    redshft_fs070 = fs070_log_sfc[:, 2]
+    r_pc_cloud_fs070 = fs070_log_sfc[:, 4]
+    m_sun_cloud_fs070 = fs070_log_sfc[:, 5]
+    n_hydrogen_fs070 = fs070_log_sfc[:, 8]
+    metal_zun_cloud_fs070 = fs070_log_sfc[:, 9]
 
-fs035_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
-redshft_fs035 = fs035_log_sfc[:, 2]
-r_pc_cloud_fs035 = fs035_log_sfc[:, 4]
-m_sun_cloud_fs035 = fs035_log_sfc[:, 5]
-n_hydrogen_fs035 = fs035_log_sfc[:, 8]
-metal_zun_cloud_fs035 = fs035_log_sfc[:, 9]
+    fs035_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
+    redshft_fs035 = fs035_log_sfc[:, 2]
+    r_pc_cloud_fs035 = fs035_log_sfc[:, 4]
+    m_sun_cloud_fs035 = fs035_log_sfc[:, 5]
+    n_hydrogen_fs035 = fs035_log_sfc[:, 8]
+    metal_zun_cloud_fs035 = fs035_log_sfc[:, 9]
 
+    plt.subplots(1, 1, figsize=(7, 6), dpi=300)
+    cmap = plt.cm.get_cmap("autumn_r")
 
-plt.subplots(1, 1, figsize=(7, 6), dpi=300)
-cmap = plt.cm.get_cmap("autumn_r")
+    plt.scatter(
+        metal_zun_cloud_fs070,
+        n_hydrogen_fs070,
+        c=redshft_fs070,
+        label=r"0.70",
+        cmap=cmap,
+        marker="o",
+        edgecolors="black",
+        linewidth=0.5,
+        s=40,
+        alpha=.8,
+    )
+    plt.scatter(
+        metal_zun_cloud_fs035,
+        n_hydrogen_fs035,
+        c=redshft_fs035,
+        label=r"0.35",
+        cmap=cmap,
+        marker="P",
+        edgecolors="black",
+        linewidth=0.5,
+        s=40,
+        alpha=.8,
+    )
+    cbar = plt.colorbar(pad=0)
+    cbar.set_label(label="z$_{formation}$", fontsize=16)
+    cbar.ax.invert_yaxis()
 
-plt.scatter(
-    metal_zun_cloud_fs070,
-    n_hydrogen_fs070,
-    c=redshft_fs070,
-    label=r"0.70",
-    cmap=cmap,
-    marker="o",
-    edgecolors="black",
-    linewidth=0.5,
-    s=40,
-)
-plt.scatter(
-    metal_zun_cloud_fs035,
-    n_hydrogen_fs035,
-    c=redshft_fs035,
-    label=r"0.35",
-    cmap=cmap,
-    marker="P",
-    edgecolors="black",
-    linewidth=0.5,
-    s=40,
-)
-cbar = plt.colorbar(pad=0)
-cbar.set_label(label="z$_{formation}$", fontsize=16)
-cbar.ax.invert_yaxis()
-
-plt.xlabel(r"Metallicity Z (Z$_{\odot}$)", fontsize=14)
-plt.ylabel(r"Mean Gas Number Density $\left( \mathrm{cm} ^{-3} \right)$", fontsize=14)
-plt.xscale("log")
-plt.yscale("log")
-plt.xlim(1e-4, 8e-3)
-plt.ylim(0.4e4, 1e5)
-# manual legend, want to customize colors
-f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"0.70")
-f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"0.35")
-plt.legend(
-    title="SFR ($f_{*})$",
-    loc="upper left",
-    title_fontsize=14,
-    fontsize=12,
-    handles=[f70, f35],
-)
+    plt.xlabel(r" Metallicity $(\mathrm{Z}_{\odot})$", fontsize=14)
+    plt.ylabel(
+        r"Mean Gas Number Density $\left( \mathrm{cm} ^{-3} \right)$", fontsize=14
+    )
+    plt.xscale("log")
+    plt.yscale("log")
+    plt.xlim(1e-4, 8e-3)
+    plt.ylim(0.4e4, 1e5)
+    # manual legend, want to customize colors
+    f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"0.70")
+    f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"0.35")
+    plt.legend(
+        title="$\mathrm{SFR} \: (f_{*})$",
+        loc="upper left",
+        title_fontsize=14,
+        fontsize=12,
+        handles=[f70, f35],
+    )
