@@ -194,7 +194,7 @@ for i, file_name in enumerate(local_snapshots):
     width = (400, "pc")
     p = yt.ProjectionPlot(ds, "z", "density", width=width, center=ctr_at_code_length)
     p.annotate_particles(
-        width=width, ptype="star", alpha=0.1, p_size=0.2, marker=".", col="red"
+        width=width, ptype="star", alpha=0.5, p_size=0.2, marker=".", col="red"
     )
     p.annotate_halos(
         halo_cat_plotting,

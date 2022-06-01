@@ -69,14 +69,22 @@ def get_cluster(
 
 
 def projected_surf_densities(
-    x_coord, y_coord, lums, masses, radius, num_bins, log_bins=True, dr=None
+    x_coord,
+    y_coord,
+    lums,
+    masses,
+    radius,
+    num_bins,
+    log_bins=True,
+    dr=None,
+    calc_half_r=None,
 ):
     r"""
     Gets projected density profiles centered at a given coordinate.
     Log bins by default.
 
     """
-
+    # TODO: calculate half mass
     starting_point = 0.04  # pc might have to tweak this.
 
     # stack two-1d arrays
@@ -120,8 +128,29 @@ def projected_surf_densities(
     err_surf_mass_density = np.sqrt(count_per_bin) * (avg_star_masses / ring_areas)
     # sum the bins to get total mass out to the specified cluster radii
     total_clust_m = np.sum(mass_per_bin)
+    total_clust_lum = np.sum(lum_per_bin)
 
-    return bin_ctrs, surf_mass_density, err_surf_mass_density, total_clust_m
+    if calc_half_r is not None:
+        integrated_mass = np.cumsum(mass_per_bin)
+        integrated_light = np.cumsum(lum_per_bin)
+
+        half_mass_point = np.abs(integrated_mass - total_clust_m).argmin()
+        half_light_point = np.abs(integrated_light - total_clust_lum).argmin()
+
+        half_mass_r = r[half_mass_point]
+        half_light_r = r[half_light_point]
+
+        return (
+            bin_ctrs,
+            surf_mass_density,
+            err_surf_mass_density,
+            total_clust_m,
+            half_mass_r,
+            half_light_r,
+        )
+    else:
+
+        return bin_ctrs, surf_mass_density, err_surf_mass_density, total_clust_m
 
 
 def ring_2d_mask(xpos, ypos, ctr_at, lums, masses, outer_radius, inner_radius):
@@ -158,6 +187,7 @@ def surface_2d_brightness(
     Get surface brightness as a function of radius for a specified cluster.
     Deprecate and unparallelized.
     """
+    #!!! Deprecated
     print("Deprecated, use king_profiler and projected_surf_densities.")
     if log_bins == True and num_bins != None:
         # returns log spaces outer rings, the width of each concentric ring
