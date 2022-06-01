@@ -50,6 +50,8 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
 
     # loop over snapshots
     for pop_data, hc_data in zip(pop2_data_set, halo_data_directory):
+        pop_data = pop_data.replace("\\", "/")
+
         snapshot_num = pop_data.split("/")[-1].split("_")[1]
 
         pop2_data = np.loadtxt(pop_data)
