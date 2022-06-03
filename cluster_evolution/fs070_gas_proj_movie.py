@@ -69,7 +69,7 @@ sequence_title = "x_gas_lin"
 slice_axis = "x"
 width = (400, "pc")
 start_step = 897  # fs07:113, fs035:154
-end_step = 897
+end_step = 918
 # cosmetics
 mpl.rc("font", family="serif")
 clrmap = "BuGn_r"  # for the pop II ages
