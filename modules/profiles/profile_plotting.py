@@ -29,7 +29,7 @@ def king_profile_plotter(
     gc_ctr,
     gc_rad,
     gc_label,
-    bins=30,
+    bins=25,
     good_alpha=5,
     particle_filter=None,
     using_vir_rad=True,
@@ -286,32 +286,54 @@ def king_profile_plotter(
             and np.max(r) > 0
         ):
             with plt.rc_context({"font.family": "serif", "mathtext.fontset": "cm"}):
-
                 plt.figure(figsize=(8, 8), dpi=200)
-                plt.errorbar(
-                    r,
-                    rho,
-                    yerr=err,
-                    c="mediumpurple",
-                    fmt="o",
-                    capsize=5,
-                    capthick=3,
-                    elinewidth=3,
-                    label=(
-                        r"$t_{{age}}\:{} \:\mathrm{{stars}} : {:.2f}\:\mathrm{{Myr}}$"
-                    ).format(np.size(clust_masses), gc_char_age),
-                    zorder=1,
-                )
+                # plt.errorbar(
+                #     r,
+                #     rho,
+                #     yerr=err,
+                #     c="mediumpurple",
+                #     fmt="o",
+                #     capsize=5,
+                #     capthick=3,
+                #     elinewidth=3,
+                #     label=(
+                #         r"$t_{{age}}\:{} \:\mathrm{{stars}} : {:.2f}\:\mathrm{{Myr}}$"
+                #     ).format(np.size(clust_masses), gc_char_age),
+                #     zorder=1,
+                # )
                 # plot curve fit
                 plt.plot(
                     theory_r,
                     theory_rho,
-                    ls="--",
                     color="darkorange",
                     linewidth=4,
                     label=plot_label,
+                    alpha=0.9,
                     zorder=20,
                 )
+                plt.plot(
+                    r,
+                    rho,
+                    ls="--",
+                    color="mediumpurple",
+                    linewidth=4,
+                    label=(
+                        r"$t_{{age}}\:\mathrm{{with}}\:{}\:\mathrm{{stars}}:{:.2f}\:\mathrm{{Myr}}$"
+                    ).format(np.size(clust_masses), gc_char_age),
+                    alpha=0.5,
+                    zorder=1,
+                )
+                plt.fill_between(
+                    r,
+                    y1=rho - err,
+                    y2=rho + err,
+                    facecolor="mediumpurple",
+                    alpha=0.5,
+                    linewidth=0.0,
+                    interpolate=True,
+                    zorder=1,
+                )
+
                 # plt.axvline(**kwargs) #!!!
                 # plt.text(fit_r_c, 0,r'$R_core$',rotation=90)
                 plt.title(
