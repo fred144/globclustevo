@@ -30,12 +30,10 @@ datadir = os.path.expanduser(
 ).format(simulation_run)
 
 # local_snapshots = filter_snapshots(r"../../cosm_test_data/refine", 113, 893, 10)
-local_snapshots = filter_snapshots(datadir, 113, 893, 10)
-fof_run_snapshots = filter_snapshots(
-    "../halo_data/fs07_refine/fof_best", 113, 893, 10
-)
+local_snapshots = filter_snapshots(datadir, 113, 918, 1)
+fof_run_snapshots = filter_snapshots("../halo_data/fs07_refine/fof_best", 113, 918, 1)
 pop_2_dataset = filter_snapshots(
-    "../particle_data/pop_2_data/fs07_refine", 113, 893, 10
+    "../particle_data/pop_2_data/fs07_refine", 113, 918, 1
 )
 reduced_h5_list = common_filter_snapshots(fof_run_snapshots, local_snapshots)
 reduced_pop2_list = common_filter_snapshots(pop_2_dataset, reduced_h5_list)
