@@ -176,27 +176,29 @@ massci = np.interp(ti, t, massc)
 
 dti = (ti[1:] - ti[:-1]) * 1e6
 sfri = (massci[1:] - massci[:-1]) / dti
-axs[0].plot(ti[1:], sfri)
+# axs[0].plot(ti[1:], sfri)
 axs[1].plot(ti, massci, label="0.35")
 
-# [redshift, current_time, dm, pop2, pop3, sn, dead, BH, sfc, psc,gas mass]
-# z,tim,mass_dm,mass_p2,mass_p3=read_cat1('mtot_0-100.txt')
-# axs[1].plot(tim,mass_p2)
-# axs[1].plot(tim,mass_p3)
+# # [redshift, current_time, dm, pop2, pop3, sn, dead, BH, sfc, psc,gas mass]
+# z, tim, mass_dm, mass_p2, mass_p3 = read_cat1("mtot_0-100.txt")
+# axs[1].plot(tim, mass_p2)
+# axs[1].plot(tim, mass_p3)
 
-# next file
-# step, zred, tUniv[Myr], Mvir[Msun], Rvir[kpc], pos[code_length], Mdm, Mpop2, Mpop3, Mgas, Nbh
-# tim,mass_dm,mass_p2,mass_p3,mass_g,Nbh=read_cat2('halo1_history.f05.dat')
-# axs[1].plot(tim,mass_p2,label='f=0.5')
-# axs[1].plot(tim,Nbh*120.0)
-# axs[1].plot(tim,mass_dm)
-##axs[1].plot(tim,mass_g)
+# # next file
+# # step, zred, tUniv[Myr], Mvir[Msun], Rvir[kpc], pos[
+# #     code_length
+# # ], Mdm, Mpop2, Mpop3, Mgas, Nbh
+# tim, mass_dm, mass_p2, mass_p3, mass_g, Nbh = read_cat2("halo1_history.f05.dat")
+# axs[1].plot(tim, mass_p2, label="f=0.5")
+# axs[1].plot(tim, Nbh * 120.0)
+# axs[1].plot(tim, mass_dm)
+# # axs[1].plot(tim,mass_g)
 
-# tim,mass_dm,mass_p2,mass_p3,mass_g,Nbh=read_cat2('halo1_history.f01.dat')
-# axs[1].plot(tim,mass_p2,label='f=0.1')
+# tim, mass_dm, mass_p2, mass_p3, mass_g, Nbh = read_cat2("halo1_history.f01.dat")
+# axs[1].plot(tim, mass_p2, label="f=0.1")
 
-# tim,mass_dm,mass_p2,mass_p3,mass_g,Nbh=read_cat2('halo1_historyHe19.dat')
-# axs[1].plot(tim,mass_p2,label='He+19')
+# tim, mass_dm, mass_p2, mass_p3, mass_g, Nbh = read_cat2("halo1_historyHe19.dat")
+# axs[1].plot(tim, mass_p2, label="He+19")
 axs[1].legend()
 
 plt.show()

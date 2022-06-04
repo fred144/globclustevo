@@ -36,7 +36,7 @@ def read_cat(filen):
     return t, x, y, V, I
 
 
-def star_formation_efficiency(n_H, mass, metallicity):
+def star_formation_efficiency(n_h, mass, metallicity):
     """
     star formation efficiency formula
     """
@@ -44,14 +44,14 @@ def star_formation_efficiency(n_H, mass, metallicity):
     # with shell 6 times less dense. At t_relax 12 times less dense6
     # f_s reduced by 5 for low met.
     # f_s increases with stronger B-field
-    n_crit = n_H * 0 + 1.0e3 / (4.0 * 2)
+    n_crit = n_h * 0 + 1.0e3 / (4.0 * 2)
 
     f_s = (
         2.0e-2
         / 5.0
         * (metallicity / 1e-3) ** 0.5
         * (mass / 1.0e4) ** 0.4
-        * (n_H / n_crit + 1.0) ** (0.91)
+        * (n_h / n_crit + 1.0) ** (0.91)
     )
     # f_s=4.e-3*(mass/1.e4)**0.4*(n_H/n_crit+1.0)**(0.91)
     f_s = np.where(f_s < 0.9, f_s, 0.9)
@@ -78,24 +78,25 @@ axs.set(
 plt.show()
 #%% clean up
 """
-Graph for plotting the mean gas numbe density as a function of metallicity 
+Graph for plotting the mean gas number density as a function of metallicity 
 for a given redshift formation time
 """
+
+fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
+redshft_fs070 = fs070_log_sfc[:, 2]
+r_pc_cloud_fs070 = fs070_log_sfc[:, 4]
+m_sun_cloud_fs070 = fs070_log_sfc[:, 5]
+n_hydrogen_fs070 = fs070_log_sfc[:, 8]
+metal_zun_cloud_fs070 = fs070_log_sfc[:, 9]
+
+fs035_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
+redshft_fs035 = fs035_log_sfc[:, 2]
+r_pc_cloud_fs035 = fs035_log_sfc[:, 4]
+m_sun_cloud_fs035 = fs035_log_sfc[:, 5]
+n_hydrogen_fs035 = fs035_log_sfc[:, 8]
+metal_zun_cloud_fs035 = fs035_log_sfc[:, 9]
+
 with plt.rc_context({"font.family": "serif", "mathtext.fontset": "cm"}):
-
-    fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
-    redshft_fs070 = fs070_log_sfc[:, 2]
-    r_pc_cloud_fs070 = fs070_log_sfc[:, 4]
-    m_sun_cloud_fs070 = fs070_log_sfc[:, 5]
-    n_hydrogen_fs070 = fs070_log_sfc[:, 8]
-    metal_zun_cloud_fs070 = fs070_log_sfc[:, 9]
-
-    fs035_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
-    redshft_fs035 = fs035_log_sfc[:, 2]
-    r_pc_cloud_fs035 = fs035_log_sfc[:, 4]
-    m_sun_cloud_fs035 = fs035_log_sfc[:, 5]
-    n_hydrogen_fs035 = fs035_log_sfc[:, 8]
-    metal_zun_cloud_fs035 = fs035_log_sfc[:, 9]
 
     plt.subplots(1, 1, figsize=(7, 6), dpi=300)
     cmap = plt.cm.get_cmap("autumn_r")
@@ -110,7 +111,7 @@ with plt.rc_context({"font.family": "serif", "mathtext.fontset": "cm"}):
         edgecolors="black",
         linewidth=0.5,
         s=40,
-        alpha=.8,
+        alpha=0.8,
     )
     plt.scatter(
         metal_zun_cloud_fs035,
@@ -122,13 +123,13 @@ with plt.rc_context({"font.family": "serif", "mathtext.fontset": "cm"}):
         edgecolors="black",
         linewidth=0.5,
         s=40,
-        alpha=.8,
+        alpha=0.8,
     )
     cbar = plt.colorbar(pad=0)
-    cbar.set_label(label="z$_{formation}$", fontsize=16)
+    cbar.set_label(label="$\mathrm{z}_{formation}$", fontsize=16)
     cbar.ax.invert_yaxis()
 
-    plt.xlabel(r" Metallicity $(\mathrm{Z}_{\odot})$", fontsize=14)
+    plt.xlabel(r" SFC Metallicity $(\mathrm{Z}_{\odot})$", fontsize=14)
     plt.ylabel(
         r"Mean Gas Number Density $\left( \mathrm{cm} ^{-3} \right)$", fontsize=14
     )
