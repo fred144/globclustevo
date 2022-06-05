@@ -20,8 +20,8 @@ import os
 import warnings
 
 yt.enable_parallelism()
-mylog.setLevel(40)
-warnings.simplefilter(action="ignore", category=RuntimeWarning)
+#mylog.setLevel(40)
+#warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 # ==============================================================================
 # TODO: edit for rendering runs
