@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import matplotlib as mpl
 import matplotlib.lines as mlines
 
 
@@ -15,7 +14,7 @@ def read_cat(filen):
     i = 0
     for line in f:
         if i > 0:
-            t0 = float(line.split()[2])  # zred
+            t0 = float(line.split()[2])
             x1 = float(line.split()[4])
             y1 = float(line.split()[5])
             V1 = float(line.split()[8])
@@ -36,17 +35,62 @@ def read_cat(filen):
     return t, x, y, V, I
 
 
+def f_star(n_H, mass, met):
+    # n_crit=n_H*0+1.e3/12.0
+    # with shell 6 times less dense. At t_relax 12 times less dense6
+    # f_s reduced by 5 for low met.
+    # f_s increases with stronger B-field
+    n_crit = n_H * 0 + 1.0e3 / (4.0 * 2)
+
+    efficiency = (
+        2.0e-2
+        / 5.0
+        * (met / 5e-4) ** 0.5
+        * (mass / 1.0e4) ** 0.4
+        * (n_H / n_crit + 1.0) ** (0.91)
+    )
+    # f_s=4.e-3*(mass/1.e4)**0.4*(n_H/n_crit+1.0)**(0.91)
+    efficiency = np.where(efficiency < 0.9, efficiency, 0.9)
+    return efficiency
+
+
+z, ra, mass, n_H, met = read_cat("../sim_log_files/fs07_refine/logSFC")
+
+fig, axs = plt.subplots(1, 1)
+plt.scatter(mass, f_star(n_H, mass, met) * 100, c=np.log10(n_H))
+plt.colorbar(label="Log(n$_H$ [cm$^{-3}$])")
+axs.set(
+    xlabel="Stellar mass [M/M$_\odot$]",
+    ylabel="Star formation efficiency %",
+    xlim=[5e2, 5e4],
+    ylim=[5, 100],
+    xscale="log",
+    yscale="log",
+)
+
+z, ra, mass, n_H, met = read_cat("../sim_log_files/fs035_ms10/logSFC")
+plt.scatter(mass, f_star(n_H, mass, met) * 100, c=np.log10(n_H), marker="s")
+
+plt.show()
+#%%
+
+"""
+Graph for plotting the star formation efficeicney as a function of molecular 
+cloud mass for a given mean number density of hydrogen
+"""
+
+
 def star_formation_efficiency(n_h, mass, metallicity):
     """
     star formation efficiency formula
     """
     # n_crit=n_H*0+1.e3/12.0
-    # with shell 6 times less dense. At t_relax 12 times less dense6
+    # with shell 6 times less dense. At t_relax 12 times less dense
     # f_s reduced by 5 for low met.
     # f_s increases with stronger B-field
     n_crit = n_h * 0 + 1.0e3 / (4.0 * 2)
 
-    f_s = (
+    efficiency = (
         2.0e-2
         / 5.0
         * (metallicity / 1e-3) ** 0.5
@@ -54,33 +98,9 @@ def star_formation_efficiency(n_h, mass, metallicity):
         * (n_h / n_crit + 1.0) ** (0.91)
     )
     # f_s=4.e-3*(mass/1.e4)**0.4*(n_H/n_crit+1.0)**(0.91)
-    f_s = np.where(f_s < 0.9, f_s, 0.9)
-    return f_s
+    efficiency = np.where(efficiency < 0.9, efficiency, 0.9)
+    return efficiency
 
-
-z, ra, mass, n_H, met = read_cat("../sim_log_files/fs07_refine/logSFC")
-
-fig, axs = plt.subplots(1, 1)
-plt.scatter(met, (n_H), c=z)
-plt.colorbar(label="redshift of formation")
-axs.set(
-    xlabel="metallicity [Z/Z$_\odot$]",
-    ylabel="mean gas number density [cm$^{-3}]$",
-    xlim=[1e-4, 5e-3],
-    ylim=[5e3, 5e4],
-    xscale="log",
-    yscale="log",
-)
-
-# z, ra, mass, n_H, met = read_cat("../sim_log_files/fs035_ms10/logSFC")
-# plt.scatter(met, (n_H), c=z, marker="s")
-
-plt.show()
-#%% clean up
-"""
-Graph for plotting the mean gas number density as a function of metallicity 
-for a given redshift formation time
-"""
 
 fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
 redshft_fs070 = fs070_log_sfc[:, 2]
@@ -96,15 +116,25 @@ m_sun_cloud_fs035 = fs035_log_sfc[:, 5]
 n_hydrogen_fs035 = fs035_log_sfc[:, 8]
 metal_zun_cloud_fs035 = fs035_log_sfc[:, 9]
 
-with plt.rc_context({"font.family": "serif", "mathtext.fontset": "cm"}):
-
+with plt.rc_context(
+    {
+        "font.family": "serif",
+        "mathtext.fontset": "cm",
+        "xtick.labelsize": 12,
+        "ytick.labelsize": 12,
+    }
+):
     plt.subplots(1, 1, figsize=(7, 6), dpi=300)
-    cmap = plt.cm.get_cmap("autumn_r")
+
+    cmap = plt.cm.get_cmap("summer")
 
     plt.scatter(
-        metal_zun_cloud_fs070,
-        n_hydrogen_fs070,
-        c=redshft_fs070,
+        m_sun_cloud_fs070,
+        star_formation_efficiency(
+            n_hydrogen_fs070, m_sun_cloud_fs070, metal_zun_cloud_fs070
+        )
+        * 100,
+        c=np.log10(n_hydrogen_fs070),
         label=r"0.70",
         cmap=cmap,
         marker="o",
@@ -113,10 +143,14 @@ with plt.rc_context({"font.family": "serif", "mathtext.fontset": "cm"}):
         s=40,
         alpha=0.8,
     )
+
     plt.scatter(
-        metal_zun_cloud_fs035,
-        n_hydrogen_fs035,
-        c=redshft_fs035,
+        m_sun_cloud_fs035,
+        star_formation_efficiency(
+            n_hydrogen_fs035, m_sun_cloud_fs035, metal_zun_cloud_fs035
+        )
+        * 100,
+        c=np.log10(n_hydrogen_fs035),
         label=r"0.35",
         cmap=cmap,
         marker="P",
@@ -126,24 +160,24 @@ with plt.rc_context({"font.family": "serif", "mathtext.fontset": "cm"}):
         alpha=0.8,
     )
     cbar = plt.colorbar(pad=0)
-    cbar.set_label(label="$\mathrm{z}_{formation}$", fontsize=16)
-    cbar.ax.invert_yaxis()
-
-    plt.xlabel(r" SFC Metallicity $(\mathrm{Z}_{\odot})$", fontsize=14)
-    plt.ylabel(
-        r"Mean Gas Number Density $\left( \mathrm{cm} ^{-3} \right)$", fontsize=14
+    cbar.set_label(
+        label=(r"$\log_{10} \: n_h \:\:  \left( \mathrm{cm} ^{-3} \right)$"),
+        fontsize=16,
     )
+
+    plt.xlabel(r" MC Mass $(\mathrm{M}_{\odot})$", fontsize=14)
+    plt.ylabel(r"Star Formation Efficiency $(\%)$", fontsize=14)
     plt.xscale("log")
     plt.yscale("log")
-    plt.xlim(1e-4, 8e-3)
-    plt.ylim(0.4e4, 1e5)
+    plt.xlim(5e2, 5e4)
+    plt.ylim(5, 100)
     # manual legend, want to customize colors
     f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"0.70")
     f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"0.35")
     plt.legend(
-        title="$\mathrm{SFR} \: (f_{*})$",
+        title="$\mathrm{SFE} \: (f_{*})$",
         loc="upper left",
         title_fontsize=14,
         fontsize=12,
-        handles=[f70, f35],
+        handles=[f35, f70],
     )

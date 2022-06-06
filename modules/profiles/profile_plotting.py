@@ -3,7 +3,7 @@ import sys
 sys.path.append("..")
 import matplotlib.pyplot as plt
 import numpy as np
-from ..macros import characterisitc_mass
+from ..macros import characterisitc_mass, chi_squared
 from .profile_functions import get_cluster, projected_surf_densities
 from .profile_models import modified_king_model, trunc_radius
 from scipy.optimize import curve_fit
@@ -285,24 +285,33 @@ def king_profile_plotter(
             and np.max(rho) > 0
             and np.max(r) > 0
         ):
-            with plt.rc_context({"font.family": "serif", "mathtext.fontset": "cm"}):
-                plt.figure(figsize=(8, 8), dpi=200)
-                # plt.errorbar(
-                #     r,
-                #     rho,
-                #     yerr=err,
-                #     c="mediumpurple",
-                #     fmt="o",
-                #     capsize=5,
-                #     capthick=3,
-                #     elinewidth=3,
-                #     label=(
-                #         r"$t_{{age}}\:{} \:\mathrm{{stars}} : {:.2f}\:\mathrm{{Myr}}$"
-                #     ).format(np.size(clust_masses), gc_char_age),
-                #     zorder=1,
-                # )
+            with plt.rc_context(
+                {
+                    "font.family": "serif",
+                    "mathtext.fontset": "cm",
+                    "xtick.labelsize": 12,
+                    "ytick.labelsize": 12,
+                    "font.size": 14,
+                }
+            ):
+                fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(8, 8), dpi=300)
+
+                ax.errorbar(
+                    r,
+                    rho,
+                    yerr=err,
+                    c="mediumpurple",
+                    fmt="o",
+                    capsize=5,
+                    capthick=3,
+                    elinewidth=3,
+                    label=(
+                        r"$t_{{age}}\:{} \:\mathrm{{stars}} : {:.2f}\:\mathrm{{Myr}}$"
+                    ).format(np.size(clust_masses), gc_char_age),
+                    zorder=1,
+                )
                 # plot curve fit
-                plt.plot(
+                ax.plot(
                     theory_r,
                     theory_rho,
                     color="darkorange",
@@ -311,47 +320,70 @@ def king_profile_plotter(
                     alpha=0.9,
                     zorder=20,
                 )
-                plt.plot(
-                    r,
-                    rho,
-                    ls="--",
-                    color="mediumpurple",
-                    linewidth=4,
-                    label=(
-                        r"$t_{{age}}\:\mathrm{{with}}\:{}\:\mathrm{{stars}}:{:.2f}\:\mathrm{{Myr}}$"
-                    ).format(np.size(clust_masses), gc_char_age),
-                    alpha=0.5,
-                    zorder=1,
-                )
-                plt.fill_between(
-                    r,
-                    y1=rho - err,
-                    y2=rho + err,
-                    facecolor="mediumpurple",
-                    alpha=0.5,
-                    linewidth=0.0,
-                    interpolate=True,
-                    zorder=1,
-                )
+
+                # plt.plot(
+                #     r,
+                #     rho,
+                #     ls="--",
+                #     color="mediumpurple",
+                #     linewidth=4,
+                #     label=(
+                #         r"$t_{{age}}\:\mathrm{{with}}\:{}\:\mathrm{{stars}}:{:.2f}\:\mathrm{{Myr}}$"
+                #     ).format(np.size(clust_masses), gc_char_age),
+                #     alpha=0.5,
+                #     zorder=1,
+                # )
+                # plt.fill_between(
+                #     r,
+                #     y1=rho - err,
+                #     y2=rho + err,
+                #     facecolor="mediumpurple",
+                #     alpha=0.5,
+                #     linewidth=0.0,
+                #     interpolate=True,
+                #     zorder=1,
+                # )
 
                 # plt.axvline(**kwargs) #!!!
                 # plt.text(fit_r_c, 0,r'$R_core$',rotation=90)
-                plt.title(
+
+                ax.set_title(
                     r"GC # {:.0f}".format(
                         gc_label,
                     ),
-                    fontsize=16,
                 )
-                plt.ylabel(
-                    r"Surface Mass Density ($M_{\odot} \; pc^{-2}$)", fontsize=16
+                p_value, reduced_chi_2 = chi_squared(
+                    modified_king_model(r, *fit_params), rho, err, num_params=4
                 )
-                plt.xlabel(r"R ($pc$)", fontsize=16)
-                plt.xscale("log")
-                plt.yscale("log")
+                fit_str = r"$\chi^2_{{\nu}} = {:.1f},\:P\left(\chi^2,\nu \right) = {:.2f}$".format(
+                    reduced_chi_2, p_value
+                )
+                props = dict(
+                    boxstyle="round",
+                    facecolor="white",
+                    alpha=0.8,
+                    linewidth=0.8,
+                    edgecolor="gray",
+                )
+
+                # place a text box in upper left in axes coords
+                ax.text(
+                    0.65,
+                    0.98,
+                    fit_str,
+                    transform=ax.transAxes,
+                    fontsize=14,
+                    verticalalignment="top",
+                    bbox=props,
+                )
+                ax.set_ylabel(r"Surface Mass Density ($M_{\odot} \; pc^{-2}$)")
+                ax.set_xlabel(r"R ($pc$)")
+                ax.set_xscale("log")
+                ax.set_yscale("log")
                 # plt.xscale('symlog')
                 # plt.yscale('symlog')
-                plt.grid(visible=True, which="both", axis="y", ls="--")
-                plt.legend(loc="lower left", prop={"family": "serif", "size": 16})
+                ax.grid(visible=True, which="both", axis="y", ls="--")
+                ax.legend(loc="lower left")
 
             print(r"> fitted GC #{:.0f}".format(gc_label))
 
@@ -371,6 +403,7 @@ def king_profile_plotter(
                 err_fit_sigma_naught,
                 fit_sigma_bg,
                 err_fit_sigma_bg,
+                p_value,
                 np.size(clust_masses),  # size of the masses array, count star in gc
                 r_half_mass,
                 r_half_light,
@@ -380,6 +413,7 @@ def king_profile_plotter(
             print(r"> bad alpha for GC #{:.0f}".format(gc_label))
             # return invalid values
             return (
+                -1,
                 -1,
                 -1,
                 -1,
@@ -432,7 +466,27 @@ def king_profile_plotter(
         plt.legend(fontsize=16)
 
         # return invalid values
-        return -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2
+        return (
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+        )
 
 
 # def king_profile_plotter_lite(

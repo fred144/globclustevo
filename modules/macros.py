@@ -6,6 +6,7 @@ import os
 import scipy.stats as st
 import yt
 from yt.funcs import mylog
+from yt.utilities.cosmology import Cosmology
 import warnings
 
 
@@ -164,3 +165,20 @@ def max_density_center_stable(
         z_pos = np.array(ad["star", "particle_position_z"]) - prev_max_den[2]
         print("> using old center at {}".format(prev_max_den))
         return p, max_density_coord, x_pos, y_pos, z_pos
+
+
+def t_myr_from_z(z):
+    """
+    The times are in reasonable agreement, within 1 Myr, deviations due
+    to the used value of parameters, which change somewhat over cosmic
+    time
+    """
+    co = Cosmology(
+        hubble_constant=0.7,
+        omega_matter=0.270000010728836,
+        omega_radiation=0.0,
+        omega_lambda=0.730000019073486,
+    )
+    t_myr = np.array(co.t_from_z(z).in_units("Myr"))
+
+    return t_myr
