@@ -11,7 +11,7 @@ import os
 
 
 dat_set = np.loadtxt(
-    "../gc_profiles/profile_runs/fs07_refine/fof_best_fb/time_series_run_stats.txt"
+    "../gc_profiles/profile_runs/fs07_refine/time_series_run_stats.txt"
 )
 # stats for fitted gcs only
 t_sim_myr = dat_set[:, 0]
@@ -182,8 +182,8 @@ with plt.rc_context(
 #%%
 fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(8, 8), dpi=300)
 (x, y, z) = np.loadtxt(os.path.join(ds, "field_stars.txt"))[:, 2:5].T
-ax.scatter(x, y, color="tab:blue", s=0.5, alpha=0.08)
+ax.scatter(x, y, c="tab:blue", s=0.5, alpha=0.08)
 (x, y, z) = np.loadtxt(os.path.join(ds, "bound_stars.txt"))[:, 2:5].T
-ax.scatter(x, y, color="tab:r", s=0.5, alpha=0.08)
+ax.scatter(x, y, c="tab:r", s=0.5, alpha=0.08)
 ax.set_xlim(-200, 200)
 ax.set_ylim(-200, 200)

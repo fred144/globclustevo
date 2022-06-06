@@ -166,42 +166,44 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
         # sys.stdout.close()
         # sys.stdout = orig_stdout
 
-    # profiler run stats, one row per snapshot
-    gc_counts = np.array(gc_counts)
-    gc_masses = np.array(gc_masses)
-    gc_core_masses = np.array(gc_core_masses)
-    total_counts = np.array(total_counts)
-    total_masses = np.array(total_masses)
-    snapshot = np.array(snapshot)
-    time_myr = np.array(time_myr)
-    redshift = np.array(redshift)
+        # saves every loop in case crashes mid run
 
-    header = (
-        "\t\t Snapshotnum"
-        "\t\t Time[MYR]"
-        "\t\t redshift"
-        "\t\t total_counts"
-        "\t\t gc_counts"
-        "\t\t total_masses[Msun]"
-        "\t\t gc_masses[Msun]"
-        "\t\t  gc_core_masses[Msun]"
-    )
+        # profiler run stats, one row per snapshot
+        gc_counts = np.array(gc_counts)
+        gc_masses = np.array(gc_masses)
+        gc_core_masses = np.array(gc_core_masses)
+        total_counts = np.array(total_counts)
+        total_masses = np.array(total_masses)
+        snapshot = np.array(snapshot)
+        time_myr = np.array(time_myr)
+        redshift = np.array(redshift)
 
-    output = np.vstack(
-        (
-            snapshot,
-            time_myr,
-            redshift,
-            total_counts,
-            gc_counts,
-            total_masses,
-            gc_masses,
-            gc_core_masses,
+        header = (
+            "\t\t Snapshotnum"
+            "\t\t Time[MYR]"
+            "\t\t redshift"
+            "\t\t total_counts"
+            "\t\t gc_counts"
+            "\t\t total_masses[Msun]"
+            "\t\t gc_masses[Msun]"
+            "\t\t  gc_core_masses[Msun]"
         )
-    ).T
-    save_name = os.path.join(run_save_path, "time_series_run_stats.txt")
 
-    np.savetxt(fname=save_name, X=output, header=header)
+        output = np.vstack(
+            (
+                snapshot,
+                time_myr,
+                redshift,
+                total_counts,
+                gc_counts,
+                total_masses,
+                gc_masses,
+                gc_core_masses,
+            )
+        ).T
+        save_name = os.path.join(run_save_path, "time_series_run_stats.txt")
+
+        np.savetxt(fname=save_name, X=output, header=header)
 
 
 if __name__ == "__main__":
