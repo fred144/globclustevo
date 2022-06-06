@@ -165,11 +165,12 @@ def run_profiler(
             else:
 
                 radius = gc_radii[i]
-
+        # draw the king profile for each indiviaula gc
+        # TODO: GC Master plot
         (
-            _,
-            _,
-            _,
+            r,
+            rho,
+            err,
             m_tot,
             r_c,
             err_rc,
@@ -230,13 +231,13 @@ def run_profiler(
             plt_save_path = os.path.join(
                 save_folder_abs_path, "gc_{}.png".format(str(label).zfill(3))
             )
-            plt.savefig(plt_save_path, dpi=300, bbox_inches="tight")
+            plt.savefig(plt_save_path, dpi=100, bbox_inches="tight")
         elif m_tot == -2:
             # save the failed fits
             plt_save_path = os.path.join(
                 save_folder_abs_path, "no_fit_gc_{}.png".format(str(label).zfill(3))
             )
-            plt.savefig(plt_save_path, dpi=300, bbox_inches="tight")
+            plt.savefig(plt_save_path, dpi=100, bbox_inches="tight")
 
         plt.cla()
         plt.close()

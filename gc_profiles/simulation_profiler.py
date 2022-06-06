@@ -37,6 +37,7 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
         print("# Creating new profiler run directory", run_save_path)
         os.makedirs(run_save_path)
 
+    snapshot = []
     gc_counts = []
     gc_masses = []
     gc_core_masses = []
@@ -118,7 +119,7 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
 
         total_masses.append(np.sum(pop2_data[:, 5]))  # Msun
         total_counts.append(pop2_data.shape[0])
-
+        snapshot.append(int(snapshot_num))
         time_myr.append(time)
         redshift.append(pop2_data[1, 6])
 
@@ -171,10 +172,12 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
     gc_core_masses = np.array(gc_core_masses)
     total_counts = np.array(total_counts)
     total_masses = np.array(total_masses)
+    snapshot = np.array(snapshot)
     time_myr = np.array(time_myr)
     redshift = np.array(redshift)
 
     header = (
+        "\t\t Snapshotnum"
         "\t\t Time[MYR]"
         "\t\t redshift"
         "\t\t total_counts"
@@ -186,6 +189,7 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
 
     output = np.vstack(
         (
+            snapshot,
             time_myr,
             redshift,
             total_counts,

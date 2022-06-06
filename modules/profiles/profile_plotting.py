@@ -294,7 +294,7 @@ def king_profile_plotter(
                     "font.size": 14,
                 }
             ):
-                fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(8, 8), dpi=300)
+                fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(8, 8), dpi=100)
 
                 ax.errorbar(
                     r,
@@ -439,7 +439,7 @@ def king_profile_plotter(
         print("* might be masked out to emptiness", e)
         print(r"> can't fit GC #{:.0f} ".format(gc_label))
         # if it can't fit it
-        plt.figure(figsize=(8, 8), dpi=200)
+        plt.figure(figsize=(8, 8), dpi=100)
 
         plt.errorbar(
             r,
