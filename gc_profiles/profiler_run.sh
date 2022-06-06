@@ -1,6 +1,10 @@
 #!/bin/bash
 #SBATCH -J profiler_run
+<<<<<<< Updated upstream
 #SBATCH --ntasks=4
+=======
+#SBATCH --ntasks=2
+>>>>>>> Stashed changes
 #SBATCH --cpus-per-task=16
 #SBATCH --mem-per-cpu=7000  
 #SBATCH --exclusive
