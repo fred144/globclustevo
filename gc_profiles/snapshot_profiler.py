@@ -128,6 +128,7 @@ def run_profiler(
     gc_err_sigma_0 = []
     gc_sigmabg = []
     gc_err_sigma_bg = []
+    gc_fit_pval = []
     gc_particle_counts = []
     gc_star_ids = []
     gc_fitted_star_ids = []
@@ -181,6 +182,7 @@ def run_profiler(
             err_sigma_0,
             sigma_bg,
             err_sigma_bg,
+            p_value,
             counts,
             half_m,
             half_l,
@@ -210,6 +212,7 @@ def run_profiler(
         gc_err_sigma_0.append(err_sigma_0)
         gc_sigmabg.append(sigma_bg)
         gc_err_sigma_bg.append(err_sigma_bg)
+        gc_fit_pval.append(p_value)
         gc_particle_counts.append(counts)
         gc_r_half_mass.append(half_m)
         gc_r_half_light.append(half_l)
@@ -227,13 +230,13 @@ def run_profiler(
             plt_save_path = os.path.join(
                 save_folder_abs_path, "gc_{}.png".format(str(label).zfill(3))
             )
-            plt.savefig(plt_save_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
+            plt.savefig(plt_save_path, dpi=300, bbox_inches="tight")
         elif m_tot == -2:
             # save the failed fits
             plt_save_path = os.path.join(
                 save_folder_abs_path, "no_fit_gc_{}.png".format(str(label).zfill(3))
             )
-            plt.savefig(plt_save_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
+            plt.savefig(plt_save_path, dpi=300, bbox_inches="tight")
 
         plt.cla()
         plt.close()
@@ -251,6 +254,7 @@ def run_profiler(
     gc_err_sigma_0 = np.array(gc_err_sigma_0)
     gc_sigmabg = np.array(gc_sigmabg)
     gc_err_sigma_bg = np.array(gc_err_sigma_bg)
+    gc_fit_pval = np.array(gc_fit_pval)
     gc_particle_counts = np.array(gc_particle_counts)
     gc_star_ids = np.array(gc_star_ids, dtype=object)  # can be ragged
     gc_fitted_star_ids = np.array(gc_fitted_star_ids, dtype=object)
@@ -271,6 +275,7 @@ def run_profiler(
     gc_err_sigma_0 = gc_err_sigma_0[mask]
     gc_sigmabg = gc_sigmabg[mask]
     gc_err_sigma_bg = gc_err_sigma_bg[mask]
+    gc_fit_pval = gc_fit_pval[mask]
     gc_labels = gc_labels[mask]
     gc_particle_counts = gc_particle_counts[mask]
     gc_star_ids = gc_star_ids[mask]  # mask is sort of worthless
@@ -306,19 +311,21 @@ def run_profiler(
             gc_err_sigma_0,
             gc_sigmabg,
             gc_err_sigma_bg,
+            gc_fit_pval,
             gc_r_half_mass,
             gc_r_half_light,
         )
     ).T
     # comment = "These are just the succesful fits with reasonable alpha."
     header = (
-        "\t\tTime[Myr] \t\t GC Label"
-        "\t\t Age[Myr] \t\t TotalOrTruncreMass[Msun]"
+        "\t\tTime[Myr] \t GC Label"
+        "\t\t Age[Myr] \t TotalOrTruncMass[Msun]"
         "\t CoreMass[Msun] \t  TruncRadii[pc]"
         "\t CoreRadii[pc] \t ErrCoreRadii"
         "\t FitAlpha \t ErrFitAlpha"
         "\t FitSigma0 \t  ErrFitSigma0"
         "\t FitSigmaBG \t  ErrFitSigmaBG"
+        "\t P Value"
         "\t Half Mass[pc]\t  Half Light [pc]"
     )
     info_save_path = os.path.join(save_folder_abs_path, "info.txt")

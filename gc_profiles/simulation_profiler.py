@@ -10,13 +10,10 @@ from modules.macros import filter_snapshots, common_filter_snapshots
 from snapshot_profiler import run_profiler
 import matplotlib.pyplot as plt
 import numpy as np
-import yt
-from yt.funcs import mylog
+
 import warnings
 
 
-yt.enable_parallelism()
-mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 
@@ -140,7 +137,8 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
         # save only those that weer succesfully fitted
         fitted_field_save_path = os.path.join(hc_data, "fitted_field_stars.txt")
         fitted_clust_save_path = os.path.join(hc_data, "fitted_bound_stars.txt")
-
+        # save the feild / bound stars as seen by the halo finder,
+        # doesn't care if fitted or not
         np.savetxt(
             fname=field_save_path,
             X=pop2_data_field,
@@ -207,10 +205,10 @@ if __name__ == "__main__":
     pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
     halo_data_directory = r"../halo_data/fs07_refine/fof_best"
 
-    save_path = "./profile_runs/fs07_refine/fof_best_fb"
+    save_path = "./profile_runs/fs07_refine/fof_best_v2"
 
     strt = 113
-    end = 893
+    end = 918
     step = 1
     pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
     halos = filter_snapshots(halo_data_directory, strt, end, step)
@@ -225,7 +223,6 @@ if __name__ == "__main__":
     )
 
 
-#%%
 # plt.figure(figsize=(5, 4), dpi=200)
 # plt.plot(time_myr, total_counts, label="total counts")
 # plt.plot(time_myr, gc_counts, label="inside globular clusters")
