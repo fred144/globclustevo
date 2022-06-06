@@ -1,3 +1,6 @@
+import sys
+
+sys.path.append("..")
 import numpy as np
 from matplotlib import cm
 import matplotlib.pyplot as plt
@@ -29,7 +32,7 @@ with plt.rc_context(
 ):
     cmap = cm.get_cmap("inferno_r")
     cmap = cmap(np.linspace(0, 1, 10))
-    fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(8, 6), dpi=300)
+    fig, ax = plt.subplots(nrows=2, ncols=1, sharex=True, figsize=(8, 6), dpi=300)
 
     ax[0].plot(t_sim_myr, total_mass, label=r"Total", linewidth=4, c=cmap[2])
     ax[0].plot(t_sim_myr, mass_in_gc, label=r"In GCs, fitted", linewidth=4, c=cmap[3])
@@ -125,7 +128,7 @@ with plt.rc_context(
     cmap = cm.get_cmap("viridis_r")
     cmap = cmap(np.linspace(0, 1, 10))
 
-    fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(8, 6), dpi=300)
+    fig, ax = plt.subplots(nrows=2, ncols=1, sharex=True, figsize=(8, 6), dpi=300)
 
     ax[0].plot(t, fof_total_mass, label=r"Total", linewidth=4, c=cmap[2])
     ax[0].plot(t, fof_bound_mass, label=r"In GCs, FOF", linewidth=4, c=cmap[3])
@@ -181,6 +184,6 @@ fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(8, 8), dpi=300)
 (x, y, z) = np.loadtxt(os.path.join(ds, "field_stars.txt"))[:, 2:5].T
 ax.scatter(x, y, color="tab:blue", s=0.5, alpha=0.08)
 (x, y, z) = np.loadtxt(os.path.join(ds, "bound_stars.txt"))[:, 2:5].T
-ax.scatter(x, y, color="tab:red", s=0.5, alpha=0.08)
+ax.scatter(x, y, color="tab:r", s=0.5, alpha=0.08)
 ax.set_xlim(-200, 200)
 ax.set_ylim(-200, 200)
