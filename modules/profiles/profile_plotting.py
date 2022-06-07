@@ -1,6 +1,8 @@
 import sys
 
 sys.path.append("..")
+from matplotlib import cm
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 from ..macros import characterisitc_mass, chi_squared
@@ -18,6 +20,98 @@ def sci_notation(decimal_places, exp_string):
     start = decimal_places + 2
     end = decimal_places + 3
     return r"{}\;\times\;10^{:1} ".format(exp_string[:start], int(exp_string[end:]))
+
+
+def master_king(rads, rhos, errs, ages, t_myr):
+    """
+    gets all the raw profiles for a given snapshot and plots them, note
+    both theory and fitted curves are taken
+    """
+    print("> making Master Plot")
+    ages = np.array(ages)
+    with plt.rc_context(
+        {
+            "font.family": "serif",
+            "mathtext.fontset": "cm",
+            "xtick.labelsize": 12,
+            "ytick.labelsize": 12,
+            "font.size": 12,
+        }
+    ):
+        # initialize figure
+        fig, (ax, cbar_ax) = plt.subplots(
+            nrows=1,
+            ncols=2,
+            figsize=(4, 4),
+            dpi=400,
+            gridspec_kw={"width_ratios": [20, 1]},
+        )
+        # make subplot
+        plt.subplots_adjust(wspace=0)
+        cmap = plt.cm.winter_r
+        # extend the range of color bars
+        norm = plt.Normalize(vmin=np.min(ages) - 1, vmax=np.max(ages) + 1)
+        # just integers
+        kwargs = {"format": "%.0f"}
+        cbar = mpl.colorbar.ColorbarBase(
+            cbar_ax,
+            cmap=cmap,
+            norm=norm,
+            label=r"$\mathrm{GC} \: \mathrm{Age}  \: \mathrm{(Myr)}$",
+            alpha=0.6,
+            # **kwargs,
+        )
+        # loop and plot
+        for i, (r, rho, err, age) in enumerate(zip(rads, rhos, errs, ages)):
+
+            ax.plot(
+                r,
+                rho,
+                color=cmap(norm(age)),
+                linewidth=2,
+                alpha=0.6,
+                # zorder=20,
+            )
+            # ax.fill_between(
+            #     r,
+            #     y1=rho - err,
+            #     y2=rho + err,
+            #     facecolor=cmap(norm(age)),
+            #     alpha=0.5,
+            #     linewidth=0.0,
+            #     interpolate=True,
+            #     zorder=1,
+            # )
+
+        # current simulation time annotation
+        props = dict(
+            boxstyle="round",
+            facecolor="white",
+            alpha=0.5,
+            linewidth=0.8,
+            edgecolor="gray",
+        )
+        textstr = r"$\mathrm{{t}} = {:.1f} \: \mathrm{{Myr}}$".format(t_myr)
+        # place a text box in upper left in axes coords
+        ax.text(
+            0.62,
+            0.95,
+            textstr,
+            transform=ax.transAxes,
+            fontsize=12,
+            verticalalignment="top",
+            bbox=props,
+        )
+        # indicate max precision
+        ax.axvspan(ax.get_xlim()[0], 0.15, facecolor="grey", alpha=0.5, zorder=0)
+        ax.set_xlabel(r"$ \mathrm{R} (\mathrm{pc})$")
+        ax.set_ylabel(
+            r"$ \mathrm{\Sigma} \: (\mathrm{M}_{\odot} \; \mathrm{pc}^{-2})$"
+        )
+        ax.set_xscale("log")
+        ax.set_yscale("log")
+        ax.set_xlim(right=15)
+        ax.set_ylim(bottom=8e-1, top=8e4)
 
 
 # TODO: add filter to avoid small double count by filtering clust_x, y,z using fof
@@ -291,10 +385,10 @@ def king_profile_plotter(
                     "mathtext.fontset": "cm",
                     "xtick.labelsize": 12,
                     "ytick.labelsize": 12,
-                    "font.size": 14,
+                    "font.size": 12,
                 }
             ):
-                fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(8, 8), dpi=100)
+                fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(4, 4), dpi=400)
 
                 ax.errorbar(
                     r,
@@ -318,31 +412,7 @@ def king_profile_plotter(
                     linewidth=4,
                     label=plot_label,
                     alpha=0.9,
-                    zorder=20,
                 )
-
-                # plt.plot(
-                #     r,
-                #     rho,
-                #     ls="--",
-                #     color="mediumpurple",
-                #     linewidth=4,
-                #     label=(
-                #         r"$t_{{age}}\:\mathrm{{with}}\:{}\:\mathrm{{stars}}:{:.2f}\:\mathrm{{Myr}}$"
-                #     ).format(np.size(clust_masses), gc_char_age),
-                #     alpha=0.5,
-                #     zorder=1,
-                # )
-                # plt.fill_between(
-                #     r,
-                #     y1=rho - err,
-                #     y2=rho + err,
-                #     facecolor="mediumpurple",
-                #     alpha=0.5,
-                #     linewidth=0.0,
-                #     interpolate=True,
-                #     zorder=1,
-                # )
 
                 # plt.axvline(**kwargs) #!!!
                 # plt.text(fit_r_c, 0,r'$R_core$',rotation=90)
@@ -355,9 +425,10 @@ def king_profile_plotter(
                 p_value, reduced_chi_2 = chi_squared(
                     modified_king_model(r, *fit_params), rho, err, num_params=4
                 )
-                fit_str = r"$\chi^2_{{\nu}} = {:.1f},\:P\left(\chi^2,\nu \right) = {:.2f}$".format(
-                    reduced_chi_2, p_value
-                )
+                fit_str = (
+                    r"$\chi^2_{{\nu}} = {:.1f}"
+                    r",\:\mathrm{{P}}\left(\chi^2,\nu \right) = {:.2f}$"
+                ).format(reduced_chi_2, p_value)
                 props = dict(
                     boxstyle="round",
                     facecolor="white",
@@ -366,30 +437,29 @@ def king_profile_plotter(
                     edgecolor="gray",
                 )
 
-                # place a text box in upper left in axes coords
+                #  text box in upper left in axes coords for the goodness of fit
                 ax.text(
-                    0.65,
-                    0.98,
+                    0.56,
+                    0.96,
                     fit_str,
                     transform=ax.transAxes,
-                    fontsize=14,
                     verticalalignment="top",
                     bbox=props,
+                    fontsize=8,
                 )
-                ax.set_ylabel(r"Surface Mass Density ($M_{\odot} \; pc^{-2}$)")
-                ax.set_xlabel(r"R ($pc$)")
+                ax.set_ylabel(
+                    r" $ \mathrm{\Sigma} \: (\mathrm{M}_{\odot} \; \mathrm{pc}^{-2})$"
+                )
+                ax.set_xlabel(r"$ \mathrm{R} \: (\mathrm{pc})$")
                 ax.set_xscale("log")
                 ax.set_yscale("log")
-                # plt.xscale('symlog')
-                # plt.yscale('symlog')
                 ax.grid(visible=True, which="both", axis="y", ls="--")
-                ax.legend(loc="lower left")
-
-            print(r"> fitted GC #{:.0f}".format(gc_label))
-
+                ax.legend(loc="lower left", fontsize=8)
+            # print(r"> fitted GC #{:.0f}".format(gc_label))
+            # !!!
             return (
-                r,
-                rho,
+                (r, theory_r),
+                (rho, theory_rho),
                 err,
                 output_mass,
                 fit_r_c,
@@ -439,7 +509,7 @@ def king_profile_plotter(
         print("* might be masked out to emptiness", e)
         print(r"> can't fit GC #{:.0f} ".format(gc_label))
         # if it can't fit it
-        plt.figure(figsize=(8, 8), dpi=100)
+        plt.figure(figsize=(4, 4), dpi=200)
 
         plt.errorbar(
             r,
@@ -450,20 +520,22 @@ def king_profile_plotter(
             capthick=3,
             elinewidth=3,
             label=(
-                r"$M_{{total}}= {:.2e} \: M_{{\odot}}$"
+                r"$M_{{total}}= {:.2e} \: \mathrm{{M}}_{{\odot}}$"
                 "\n"
                 r"$t_{{age}}= {:.2f}$ Myr"
             ).format(tot_m, gc_char_age),
             zorder=1,
         )
 
-        plt.title(r"No Fit GC # {:.0f}".format(gc_label), fontsize=16)
-        plt.ylabel(r"Surface Mass Density ($M_{\odot} \; pc^{-2}$)", fontsize=16)
-        plt.xlabel(r"R ($pc$)", fontsize=16)
+        plt.title(r"No Fit GC # {:.0f}".format(gc_label), fontsize=12)
+        plt.ylabel(
+            r"Surface Mass Density ($M_{\odot} \;\mathrm{pc}^{-2}$)", fontsize=12
+        )
+        plt.xlabel(r"R ($\mathrm{pc}$)", fontsize=12)
         plt.xscale("log")
         plt.yscale("log")
         plt.grid(visible=True, which="both", axis="y", ls="--")
-        plt.legend(fontsize=16)
+        plt.legend(fontsize=12)
 
         # return invalid values
         return (

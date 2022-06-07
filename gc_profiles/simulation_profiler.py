@@ -10,10 +10,10 @@ from modules.macros import filter_snapshots, common_filter_snapshots
 from snapshot_profiler import run_profiler
 import matplotlib.pyplot as plt
 import numpy as np
-
+import yt
 import warnings
 
-
+yt.enable_parallelism()
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 
@@ -166,44 +166,42 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
         # sys.stdout.close()
         # sys.stdout = orig_stdout
 
-        # saves every loop in case crashes mid run
-
         # profiler run stats, one row per snapshot
-        gc_counts = np.array(gc_counts)
-        gc_masses = np.array(gc_masses)
-        gc_core_masses = np.array(gc_core_masses)
-        total_counts = np.array(total_counts)
-        total_masses = np.array(total_masses)
-        snapshot = np.array(snapshot)
-        time_myr = np.array(time_myr)
-        redshift = np.array(redshift)
+    gc_counts = np.array(gc_counts)
+    gc_masses = np.array(gc_masses)
+    gc_core_masses = np.array(gc_core_masses)
+    total_counts = np.array(total_counts)
+    total_masses = np.array(total_masses)
+    snapshot = np.array(snapshot)
+    time_myr = np.array(time_myr)
+    redshift = np.array(redshift)
 
-        header = (
-            "\t\t Snapshotnum"
-            "\t\t Time[MYR]"
-            "\t\t redshift"
-            "\t\t total_counts"
-            "\t\t gc_counts"
-            "\t\t total_masses[Msun]"
-            "\t\t gc_masses[Msun]"
-            "\t\t  gc_core_masses[Msun]"
+    header = (
+        "\t\t Snapshotnum"
+        "\t\t Time[MYR]"
+        "\t\t redshift"
+        "\t\t total_counts"
+        "\t\t gc_counts"
+        "\t\t total_masses[Msun]"
+        "\t\t gc_masses[Msun]"
+        "\t\t  gc_core_masses[Msun]"
+    )
+
+    output = np.vstack(
+        (
+            snapshot,
+            time_myr,
+            redshift,
+            total_counts,
+            gc_counts,
+            total_masses,
+            gc_masses,
+            gc_core_masses,
         )
+    ).T
+    save_name = os.path.join(run_save_path, "time_series_run_stats.txt")
 
-        output = np.vstack(
-            (
-                snapshot,
-                time_myr,
-                redshift,
-                total_counts,
-                gc_counts,
-                total_masses,
-                gc_masses,
-                gc_core_masses,
-            )
-        ).T
-        save_name = os.path.join(run_save_path, "time_series_run_stats.txt")
-
-        np.savetxt(fname=save_name, X=output, header=header)
+    np.savetxt(fname=save_name, X=output, header=header)
 
 
 if __name__ == "__main__":

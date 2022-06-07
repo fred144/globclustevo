@@ -7,12 +7,11 @@ sys.path.insert(
 sys.path.append("..")  # makes sure that importing the modules in the main folder work
 from modules.luminosity.lum_functions import unpack_pop_ii_data
 from modules.luminosity.lum_plotting import star_luminosity_plot
-from modules.profiles.profile_plotting import king_profile_plotter
+from modules.profiles.profile_plotting import king_profile_plotter, master_king
 import matplotlib.pyplot as plt
 import numpy as np
 
 
-# TODO: chagen the profiles directory.
 def run_profiler(
     star_file_path,
     parent_save_path,
@@ -106,7 +105,9 @@ def run_profiler(
         )
 
     # save the figure with annotated found GCs
-    annotated_gc_save = os.path.join(save_folder_abs_path, "annotated_gcs.png")
+    annotated_gc_save = os.path.join(
+        save_folder_abs_path, "annotated_gcs_{}.png".format(snapshot_num)
+    )
     plt.savefig(annotated_gc_save, dpi=300, bbox_inches="tight", pad_inches=0.05)
     # Clear the current axes.
     plt.cla()
@@ -134,6 +135,14 @@ def run_profiler(
     gc_fitted_star_ids = []
     gc_r_half_mass = []
     gc_r_half_light = []
+    # save each profiler for master plotting
+    master_r = []
+    master_rho = []
+    master_err = []
+    master_age = []
+
+    theory_r = []
+    theory_rho = []
     # iterate over x,y maximas and plot
     for i, (ctr, label) in enumerate(zip(gc_ctrs, gc_labels)):
         label = int(label)
@@ -231,16 +240,52 @@ def run_profiler(
             plt_save_path = os.path.join(
                 save_folder_abs_path, "gc_{}.png".format(str(label).zfill(3))
             )
-            plt.savefig(plt_save_path, dpi=100, bbox_inches="tight")
+            plt.savefig(plt_save_path, dpi=200, bbox_inches="tight")
         elif m_tot == -2:
             # save the failed fits
             plt_save_path = os.path.join(
                 save_folder_abs_path, "no_fit_gc_{}.png".format(str(label).zfill(3))
             )
-            plt.savefig(plt_save_path, dpi=100, bbox_inches="tight")
+            plt.savefig(plt_save_path, dpi=200, bbox_inches="tight")
 
         plt.cla()
         plt.close()
+        #!!!
+
+        # if the data has enough points
+        # note, r and rho contain both theory and data (r, theory_r)
+        if m_tot > 0:
+            # nested "if" instead of "and" since r can be an integer, cant subscript
+            if np.size(r[0]) > 8:
+
+                master_r.append(r[0])
+                master_rho.append(rho[0])
+                master_err.append(err)
+                master_age.append(char_age)
+
+                theory_r.append(r[1])
+                theory_rho.append(rho[1])
+            else:
+                pass
+        else:
+            pass
+
+    # master plot containing all the profiles in the snapshot
+    master_king(master_r, master_rho, master_err, master_age, time)
+    plt_save_path = os.path.join(
+        save_folder_abs_path, "master_raw_{}.png".format(snapshot_num)
+    )
+    plt.savefig(plt_save_path, dpi=200, bbox_inches="tight")
+    plt.cla()
+    plt.close()
+
+    master_king(theory_r, theory_rho, master_err, master_age, time)
+    plt_save_path = os.path.join(
+        save_folder_abs_path, "master_theory_{}.png".format(snapshot_num)
+    )
+    plt.savefig(plt_save_path, dpi=200, bbox_inches="tight")
+    plt.cla()
+    plt.close()
 
     # turn into arrays so we can index them and then clean up
     gc_out_masses = np.array(gc_out_masses)
