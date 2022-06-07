@@ -273,7 +273,7 @@ def run_profiler(
     # master plot containing all the profiles in the snapshot,
     # do this if atleast one passes, which means the list is not exclusively negative
 
-    if np.max(np.array(char_age)) > -1:
+    if np.max(np.array(char_age)) > 0:
 
         master_king(master_r, master_rho, master_err, master_age, time)
         plt_save_path = os.path.join(
