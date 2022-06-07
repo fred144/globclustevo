@@ -270,22 +270,28 @@ def run_profiler(
         else:
             pass
 
-    # master plot containing all the profiles in the snapshot
-    master_king(master_r, master_rho, master_err, master_age, time)
-    plt_save_path = os.path.join(
-        save_folder_abs_path, "master_raw_{}.png".format(snapshot_num)
-    )
-    plt.savefig(plt_save_path, dpi=200, bbox_inches="tight")
-    plt.cla()
-    plt.close()
+    # master plot containing all the profiles in the snapshot,
+    # do this if atleast one passes, which means the list is not exclusively negative
 
-    master_king(theory_r, theory_rho, master_err, master_age, time)
-    plt_save_path = os.path.join(
-        save_folder_abs_path, "master_theory_{}.png".format(snapshot_num)
-    )
-    plt.savefig(plt_save_path, dpi=200, bbox_inches="tight")
-    plt.cla()
-    plt.close()
+    if np.max(np.array(char_age)) > -1:
+
+        master_king(master_r, master_rho, master_err, master_age, time)
+        plt_save_path = os.path.join(
+            save_folder_abs_path, "master_raw_{}.png".format(snapshot_num)
+        )
+        plt.savefig(plt_save_path, dpi=200, bbox_inches="tight")
+        plt.cla()
+        plt.close()
+
+        master_king(theory_r, theory_rho, master_err, master_age, time)
+        plt_save_path = os.path.join(
+            save_folder_abs_path, "master_theory_{}.png".format(snapshot_num)
+        )
+        plt.savefig(plt_save_path, dpi=200, bbox_inches="tight")
+        plt.cla()
+        plt.close()
+    else:
+        pass
 
     # turn into arrays so we can index them and then clean up
     gc_out_masses = np.array(gc_out_masses)
