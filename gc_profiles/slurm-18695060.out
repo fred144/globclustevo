@@ -53852,3 +53852,1229 @@ Warning: particle_families are modified at
 > bad alpha for GC #51
 > bad alpha for GC #52
 > bad alpha for GC #53
+> bad alpha for GC #55
+> bad alpha for GC #57
+> bad alpha for GC #58
+> bad alpha for GC #63
+> bad alpha for GC #64
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #65
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #65 
+> bad alpha for GC #66
+> bad alpha for GC #67
+> bad alpha for GC #68
+> bad alpha for GC #69
+> bad alpha for GC #71
+> bad alpha for GC #72
+> bad alpha for GC #73
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #74
+> bad alpha for GC #74
+> bad alpha for GC #75
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #79
+> bad alpha for GC #79
+> bad alpha for GC #80
+> bad alpha for GC #81
+> bad alpha for GC #83
+> bad alpha for GC #86
+> bad alpha for GC #91
+> bad alpha for GC #97
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #98
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #98 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #99
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #99 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #100
+> bad alpha for GC #100
+> bad alpha for GC #101
+> bad alpha for GC #104
+> bad alpha for GC #105
+> bad alpha for GC #106
+> bad alpha for GC #108
+> bad alpha for GC #109
+> bad alpha for GC #110
+> bad alpha for GC #111
+> bad alpha for GC #115
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #116
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #116 
+> bad alpha for GC #118
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #119
+> bad alpha for GC #119
+> bad alpha for GC #120
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #123
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #123 
+> bad alpha for GC #124
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #127
+> bad alpha for GC #127
+> bad alpha for GC #128
+> bad alpha for GC #130
+> bad alpha for GC #131
+> bad alpha for GC #132
+> bad alpha for GC #133
+> found 61 good profiles; snapshot 836
+> making Master Plot
+> making Master Plot
+# read in: ../particle_data/pop_2_data/fs07_refine/pos_00837_558_20_myr.txt
+# Creating new sequence directory ./profile_runs/fs07_refine/fof_best_v2/snapshot_00837_t_558_2
+> snapshot time 558.2 Myr
+> snapshot number 837
+> non-uniform radius, using virial or other
+> bad alpha for GC #3
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #4
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #4 
+> bad alpha for GC #5
+> bad alpha for GC #8
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #9
+> bad alpha for GC #9
+> bad alpha for GC #10
+> bad alpha for GC #11
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #13
+> bad alpha for GC #13
+> bad alpha for GC #14
+> bad alpha for GC #15
+> bad alpha for GC #16
+> bad alpha for GC #17
+> bad alpha for GC #20
+> bad alpha for GC #21
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #24
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #24 
+> bad alpha for GC #26
+> bad alpha for GC #27
+> bad alpha for GC #33
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #37
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #37 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #40
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #40 
+> bad alpha for GC #41
+> bad alpha for GC #42
+> bad alpha for GC #43
+> bad alpha for GC #44
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #46
+> bad alpha for GC #46
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #47
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #47 
+> bad alpha for GC #48
+> bad alpha for GC #50
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #51
+> bad alpha for GC #51
+> bad alpha for GC #52
+> bad alpha for GC #55
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #56
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #56 
+> bad alpha for GC #58
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #59
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #59 
+> bad alpha for GC #60
+> bad alpha for GC #61
+> bad alpha for GC #67
+> bad alpha for GC #68
+> bad alpha for GC #71
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #74
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #74 
+> bad alpha for GC #75
+> bad alpha for GC #79
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #81
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #81 
+> bad alpha for GC #82
+> bad alpha for GC #87
+> bad alpha for GC #88
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #90
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #90 
+> bad alpha for GC #91
+> bad alpha for GC #92
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #94
+> bad alpha for GC #94
+> bad alpha for GC #95
+> bad alpha for GC #96
+> bad alpha for GC #98
+> bad alpha for GC #99
+> bad alpha for GC #101
+> bad alpha for GC #102
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #103
+> bad alpha for GC #103
+> bad alpha for GC #104
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #105
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #105 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #109
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #109 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #110
+> bad alpha for GC #111
+> bad alpha for GC #112
+> bad alpha for GC #113
+> bad alpha for GC #119
+> bad alpha for GC #120
+> bad alpha for GC #121
+> found 58 good profiles; snapshot 837
+> making Master Plot
+> making Master Plot
+# read in: ../particle_data/pop_2_data/fs07_refine/pos_00838_558_41_myr.txt
+# Creating new sequence directory ./profile_runs/fs07_refine/fof_best_v2/snapshot_00838_t_558_41
+> snapshot time 558.41 Myr
+> snapshot number 838
+> non-uniform radius, using virial or other
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #3
+> bad alpha for GC #3
+> bad alpha for GC #4
+> bad alpha for GC #5
+> bad alpha for GC #7
+> bad alpha for GC #8
+> bad alpha for GC #9
+> bad alpha for GC #11
+> bad alpha for GC #13
+> bad alpha for GC #14
+> bad alpha for GC #15
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #16
+> bad alpha for GC #16
+> bad alpha for GC #17
+> bad alpha for GC #18
+> bad alpha for GC #19
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #20
+> bad alpha for GC #20
+> bad alpha for GC #24
+> bad alpha for GC #25
+> bad alpha for GC #27
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #28
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #28 
+> bad alpha for GC #29
+> bad alpha for GC #31
+> bad alpha for GC #33
+> bad alpha for GC #34
+> bad alpha for GC #36
+> bad alpha for GC #37
+> bad alpha for GC #39
+> bad alpha for GC #41
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #44
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #44 
+> bad alpha for GC #46
+> bad alpha for GC #47
+> bad alpha for GC #48
+> bad alpha for GC #49
+> bad alpha for GC #52
+> bad alpha for GC #53
+> bad alpha for GC #54
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #55
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #55 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #56
+> bad alpha for GC #56
+> bad alpha for GC #57
+> bad alpha for GC #59
+> bad alpha for GC #61
+> bad alpha for GC #62
+> bad alpha for GC #63
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #64
+> bad alpha for GC #64
+> bad alpha for GC #65
+> bad alpha for GC #73
+> bad alpha for GC #79
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #80
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #80 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #87
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #87 
+> bad alpha for GC #90
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #91
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #91 
+> bad alpha for GC #92
+> bad alpha for GC #93
+> bad alpha for GC #94
+> bad alpha for GC #95
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #97
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #97 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #98
+> bad alpha for GC #98
+> bad alpha for GC #100
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #101
+> bad alpha for GC #101
+> bad alpha for GC #102
+> bad alpha for GC #103
+> bad alpha for GC #106
+> bad alpha for GC #107
+> bad alpha for GC #108
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #109
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #109 
+> bad alpha for GC #110
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #111
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #111 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #113
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #113 
+> bad alpha for GC #114
+> bad alpha for GC #115
+> bad alpha for GC #116
+> bad alpha for GC #118
+> bad alpha for GC #119
+> bad alpha for GC #120
+> bad alpha for GC #121
+> bad alpha for GC #122
+> bad alpha for GC #124
+> bad alpha for GC #126
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #128
+> bad alpha for GC #128
+> bad alpha for GC #129
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #131
+> bad alpha for GC #131
+> found 53 good profiles; snapshot 838
+> making Master Plot
+> making Master Plot
+# read in: ../particle_data/pop_2_data/fs07_refine/pos_00839_558_63_myr.txt
+# Creating new sequence directory ./profile_runs/fs07_refine/fof_best_v2/snapshot_00839_t_558_63
+> snapshot time 558.63 Myr
+> snapshot number 839
+> non-uniform radius, using virial or other
+> bad alpha for GC #3
+> bad alpha for GC #5
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #9
+> bad alpha for GC #9
+> bad alpha for GC #10
+> bad alpha for GC #11
+> bad alpha for GC #14
+> bad alpha for GC #15
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #16
+> bad alpha for GC #16
+> bad alpha for GC #20
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #21
+> bad alpha for GC #21
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #22
+> bad alpha for GC #22
+> bad alpha for GC #23
+> bad alpha for GC #24
+> bad alpha for GC #25
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #26
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #26 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #28
+> bad alpha for GC #28
+> bad alpha for GC #30
+> bad alpha for GC #31
+> bad alpha for GC #32
+> bad alpha for GC #35
+> bad alpha for GC #36
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #39
+> bad alpha for GC #39
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #42
+> bad alpha for GC #42
+> bad alpha for GC #45
+> bad alpha for GC #47
+> bad alpha for GC #48
+> bad alpha for GC #49
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #50
+> bad alpha for GC #50
+> bad alpha for GC #51
+> bad alpha for GC #52
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #56
+> bad alpha for GC #56
+> bad alpha for GC #57
+> bad alpha for GC #59
+> bad alpha for GC #60
+> bad alpha for GC #62
+> bad alpha for GC #63
+> bad alpha for GC #64
+> bad alpha for GC #65
+> bad alpha for GC #66
+> bad alpha for GC #68
+> bad alpha for GC #69
+> bad alpha for GC #73
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #75
+> bad alpha for GC #75
+> bad alpha for GC #76
+> bad alpha for GC #79
+> bad alpha for GC #86
+> bad alpha for GC #90
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #91
+> bad alpha for GC #91
+> bad alpha for GC #97
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #99
+> bad alpha for GC #99
+> bad alpha for GC #100
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #101
+> bad alpha for GC #101
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #102
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #102 
+> bad alpha for GC #104
+> bad alpha for GC #106
+> bad alpha for GC #107
+> bad alpha for GC #108
+> bad alpha for GC #109
+> bad alpha for GC #110
+> bad alpha for GC #111
+> bad alpha for GC #112
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #113
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #113 
+> bad alpha for GC #114
+> bad alpha for GC #115
+> bad alpha for GC #116
+> bad alpha for GC #118
+> bad alpha for GC #119
+> bad alpha for GC #120
+> bad alpha for GC #122
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #123
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #123 
+> bad alpha for GC #124
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #125
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #125 
+> bad alpha for GC #126
+> bad alpha for GC #129
+> bad alpha for GC #134
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #136
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #136 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #138
+> bad alpha for GC #138
+> bad alpha for GC #139
+> bad alpha for GC #141
+> bad alpha for GC #142
+> bad alpha for GC #143
+> found 66 good profiles; snapshot 839
+> making Master Plot
+> making Master Plot
+# read in: ../particle_data/pop_2_data/fs07_refine/pos_00840_558_84_myr.txt
+# Creating new sequence directory ./profile_runs/fs07_refine/fof_best_v2/snapshot_00840_t_558_84
+> snapshot time 558.84 Myr
+> snapshot number 840
+> non-uniform radius, using virial or other
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #0
+> bad alpha for GC #3
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #5
+> bad alpha for GC #5
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #8
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #8 
+> bad alpha for GC #10
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #12
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #12 
+> bad alpha for GC #13
+> bad alpha for GC #14
+> bad alpha for GC #15
+> bad alpha for GC #16
+> bad alpha for GC #18
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #19
+> bad alpha for GC #19
+> bad alpha for GC #20
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #21
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #21 
+> bad alpha for GC #22
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #23
+> bad alpha for GC #23
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #25
+> bad alpha for GC #25
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #26
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #26 
+> bad alpha for GC #28
+> bad alpha for GC #31
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #32
+> bad alpha for GC #32
+> bad alpha for GC #36
+> bad alpha for GC #37
+> bad alpha for GC #38
+> bad alpha for GC #43
+> bad alpha for GC #47
+> bad alpha for GC #49
+> bad alpha for GC #50
+> bad alpha for GC #51
+> bad alpha for GC #52
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #54
+> bad alpha for GC #54
+> bad alpha for GC #55
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #58
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #58 
+> bad alpha for GC #59
+> bad alpha for GC #60
+> bad alpha for GC #61
+> bad alpha for GC #62
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #64
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #64 
+> bad alpha for GC #74
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #83
+> bad alpha for GC #83
+> bad alpha for GC #84
+> bad alpha for GC #85
+> bad alpha for GC #86
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #87
+> bad alpha for GC #87
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #88
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #88 
+> bad alpha for GC #89
+> bad alpha for GC #90
+> bad alpha for GC #92
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #93
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #93 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #94
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #94 
+> bad alpha for GC #95
+> bad alpha for GC #96
+> bad alpha for GC #97
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #98
+> bad alpha for GC #98
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #99
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #99 
+> bad alpha for GC #100
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #101
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #101 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #102
+> bad alpha for GC #102
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #104
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #104 
+> bad alpha for GC #105
+> bad alpha for GC #106
+> bad alpha for GC #108
+> bad alpha for GC #110
+> bad alpha for GC #112
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #113
+> bad alpha for GC #113
+> bad alpha for GC #114
+> bad alpha for GC #115
+> bad alpha for GC #116
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #119
+> bad alpha for GC #119
+> bad alpha for GC #120
+> bad alpha for GC #122
+> bad alpha for GC #124
+> bad alpha for GC #125
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #126
+> bad alpha for GC #126
+> bad alpha for GC #127
+> bad alpha for GC #130
+> bad alpha for GC #131
+> bad alpha for GC #132
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #134
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #134 
+> bad alpha for GC #137
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #138
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #138 
+> bad alpha for GC #139
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #140
+> bad alpha for GC #140
+> bad alpha for GC #141
+> bad alpha for GC #143
+> bad alpha for GC #144
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #146
+> bad alpha for GC #146
+> found 62 good profiles; snapshot 840
+> making Master Plot
+> making Master Plot
+# read in: ../particle_data/pop_2_data/fs07_refine/pos_00841_559_05_myr.txt
+# Creating new sequence directory ./profile_runs/fs07_refine/fof_best_v2/snapshot_00841_t_559_05
+> snapshot time 559.05 Myr
+> snapshot number 841
+> non-uniform radius, using virial or other
+> bad alpha for GC #5
+> bad alpha for GC #7
+> bad alpha for GC #8
+> bad alpha for GC #11
+> bad alpha for GC #12
+> bad alpha for GC #14
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #15
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #15 
+> bad alpha for GC #16
+> bad alpha for GC #18
+> bad alpha for GC #21
+> bad alpha for GC #22
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #24
+> bad alpha for GC #24
+> bad alpha for GC #25
+> bad alpha for GC #30
+> bad alpha for GC #31
+> bad alpha for GC #33
+> bad alpha for GC #36
+> bad alpha for GC #37
+> bad alpha for GC #38
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #42
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #42 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #51
+> bad alpha for GC #51
+> bad alpha for GC #52
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #54
+> bad alpha for GC #54
+> bad alpha for GC #55
+> bad alpha for GC #56
+> bad alpha for GC #57
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #61
+> bad alpha for GC #61
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #62
+> bad alpha for GC #62
+> bad alpha for GC #63
+> bad alpha for GC #64
+> bad alpha for GC #65
+> bad alpha for GC #66
+> bad alpha for GC #72
+> bad alpha for GC #83
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #85
+> bad alpha for GC #85
+> bad alpha for GC #86
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #88
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #88 
+> bad alpha for GC #90
+> bad alpha for GC #91
+> bad alpha for GC #92
+> bad alpha for GC #93
+> bad alpha for GC #94
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #95
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #95 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #96
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #96 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #97
+> bad alpha for GC #97
+> bad alpha for GC #98
+> bad alpha for GC #99
+> bad alpha for GC #100
+> bad alpha for GC #101
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #102
+> bad alpha for GC #102
+> bad alpha for GC #104
+> bad alpha for GC #105
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #106
+> bad alpha for GC #106
+> bad alpha for GC #107
+> bad alpha for GC #109
+> bad alpha for GC #112
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #113
+> bad alpha for GC #113
+> bad alpha for GC #114
+> bad alpha for GC #115
+> bad alpha for GC #116
+> bad alpha for GC #117
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #118
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #118 
+> bad alpha for GC #120
+> bad alpha for GC #124
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #125
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #125 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #126
+> bad alpha for GC #126
+> bad alpha for GC #127
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #128
+> bad alpha for GC #128
+> bad alpha for GC #129
+> bad alpha for GC #130
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #131
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #131 
+> bad alpha for GC #133
+> bad alpha for GC #134
+> bad alpha for GC #136
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #138
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #138 
+> bad alpha for GC #139
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #140
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #140 
+> bad alpha for GC #142
+> found 65 good profiles; snapshot 841
+> making Master Plot
+> making Master Plot
+# read in: ../particle_data/pop_2_data/fs07_refine/pos_00842_559_26_myr.txt
+# Creating new sequence directory ./profile_runs/fs07_refine/fof_best_v2/snapshot_00842_t_559_26
+> snapshot time 559.26 Myr
+> snapshot number 842
+> non-uniform radius, using virial or other
+> bad alpha for GC #4
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #5
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #5 
+> bad alpha for GC #8
+> bad alpha for GC #12
+> bad alpha for GC #13
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #14
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #14 
+> bad alpha for GC #15
+> bad alpha for GC #16
+> bad alpha for GC #17
+> bad alpha for GC #21
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #23
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #23 
+> bad alpha for GC #24
+> bad alpha for GC #25
+> bad alpha for GC #26
+> bad alpha for GC #28
+> bad alpha for GC #35
+> bad alpha for GC #36
+> bad alpha for GC #37
+> bad alpha for GC #38
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #40
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #40 
+> bad alpha for GC #45
+> bad alpha for GC #46
+> bad alpha for GC #47
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #48
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #48 
+> bad alpha for GC #50
+> bad alpha for GC #52
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #53
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #53 
+> bad alpha for GC #54
+> bad alpha for GC #55
+> bad alpha for GC #61
+> bad alpha for GC #62
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #63
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #64
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #64 
+> bad alpha for GC #66
+> bad alpha for GC #67
+> bad alpha for GC #70
+> bad alpha for GC #71
+> bad alpha for GC #72
+> bad alpha for GC #73
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #74
+> bad alpha for GC #74
+> bad alpha for GC #75
+> bad alpha for GC #76
+> bad alpha for GC #83
+> bad alpha for GC #84
+> bad alpha for GC #85
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #86
+> bad alpha for GC #89
+> bad alpha for GC #94
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #96
+> bad alpha for GC #96
+> bad alpha for GC #97
+> bad alpha for GC #103
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #106
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #106 
+> bad alpha for GC #107
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #108
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #108 
+> bad alpha for GC #109
+> bad alpha for GC #110
+> bad alpha for GC #112
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #113
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #113 
+> bad alpha for GC #114
+> bad alpha for GC #115
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #117
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #117 
+> bad alpha for GC #119
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #120
+> bad alpha for GC #120
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #126
+> bad alpha for GC #126
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #127
+> bad alpha for GC #127
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #128
+> bad alpha for GC #128
+> bad alpha for GC #129
+> bad alpha for GC #130
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #131
+> bad alpha for GC #131
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #133
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #133 
+> bad alpha for GC #134
+> bad alpha for GC #138
+> bad alpha for GC #139
+> bad alpha for GC #144
+> found 75 good profiles; snapshot 842
+> making Master Plot
+> making Master Plot
+# read in: ../particle_data/pop_2_data/fs07_refine/pos_00843_559_48_myr.txt
+# Creating new sequence directory ./profile_runs/fs07_refine/fof_best_v2/snapshot_00843_t_559_48
+> snapshot time 559.48 Myr
+> snapshot number 843
+> non-uniform radius, using virial or other
+> bad alpha for GC #4
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #5
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #5 
+> bad alpha for GC #6
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #10
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #10 
+> bad alpha for GC #12
+> bad alpha for GC #15
+> bad alpha for GC #16
+> bad alpha for GC #18
+> bad alpha for GC #19
+> bad alpha for GC #20
+> bad alpha for GC #21
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #22
+> bad alpha for GC #22
+> bad alpha for GC #23
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #24
+> bad alpha for GC #24
+> bad alpha for GC #28
+> bad alpha for GC #32
+> bad alpha for GC #35
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #37
+> bad alpha for GC #37
+> bad alpha for GC #38
+> bad alpha for GC #39
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #40
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #40 
+> bad alpha for GC #43
+> bad alpha for GC #44
+> bad alpha for GC #45
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #46
+> bad alpha for GC #46
+> bad alpha for GC #50
+> bad alpha for GC #51
+> bad alpha for GC #52
+> bad alpha for GC #54
+> bad alpha for GC #55
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #56
+> bad alpha for GC #56
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #57
+> bad alpha for GC #57
+> bad alpha for GC #58
+> bad alpha for GC #60
+> bad alpha for GC #62
+> bad alpha for GC #63
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #65
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #65 
+> bad alpha for GC #67
+> bad alpha for GC #69
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #70
+> bad alpha for GC #70
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #72
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #72 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #74
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #74 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #76
+> bad alpha for GC #76
+> bad alpha for GC #77
+> bad alpha for GC #79
+> bad alpha for GC #84
+> bad alpha for GC #86
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #92
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #92 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #93
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #93 
+> bad alpha for GC #94
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #99
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #99 
+> bad alpha for GC #100
+> bad alpha for GC #101
+> bad alpha for GC #104
+> bad alpha for GC #107
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #110
+> bad alpha for GC #110
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #111
+> bad alpha for GC #111
+> bad alpha for GC #112
+> bad alpha for GC #113
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #114
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #114 
+> bad alpha for GC #115
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #116
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #116 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #120
+> bad alpha for GC #120
+> bad alpha for GC #121
+> bad alpha for GC #123
+> bad alpha for GC #124
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #125
+> bad alpha for GC #125
+> bad alpha for GC #130
+> bad alpha for GC #131
+> bad alpha for GC #132
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #133
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #133 
+> bad alpha for GC #134
+> bad alpha for GC #135
+> bad alpha for GC #136
+> bad alpha for GC #137
+> bad alpha for GC #138
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #141
+> bad alpha for GC #141
+> bad alpha for GC #143
+> found 67 good profiles; snapshot 843
+> making Master Plot
+> making Master Plot
+# read in: ../particle_data/pop_2_data/fs07_refine/pos_00844_559_69_myr.txt
+# Creating new sequence directory ./profile_runs/fs07_refine/fof_best_v2/snapshot_00844_t_559_69
+> snapshot time 559.69 Myr
+> snapshot number 844
+> non-uniform radius, using virial or other
+> bad alpha for GC #5
+> bad alpha for GC #6
+> bad alpha for GC #14
+> bad alpha for GC #16
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #18
+> bad alpha for GC #19
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #22
+> bad alpha for GC #22
+> bad alpha for GC #23
+> bad alpha for GC #24
+> bad alpha for GC #25
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #27
+> bad alpha for GC #27
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #28
+> bad alpha for GC #28
+> bad alpha for GC #29
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #38
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #38 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #40
+> bad alpha for GC #40
+> bad alpha for GC #41
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #43
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #45
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #45 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #46
+> bad alpha for GC #46
+> bad alpha for GC #47
+> bad alpha for GC #51
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #52
+> bad alpha for GC #52
+> bad alpha for GC #54
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #55
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #55 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #56
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #56 
+> bad alpha for GC #57
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #59
+> bad alpha for GC #59
+> bad alpha for GC #60
+> bad alpha for GC #61
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #63
+> bad alpha for GC #63
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #64
+> bad alpha for GC #64
+> bad alpha for GC #65
+> bad alpha for GC #66
+> bad alpha for GC #68
+> bad alpha for GC #73
+> bad alpha for GC #78
+> bad alpha for GC #85
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #86
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #86 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #87
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #87 
+> bad alpha for GC #88
+> bad alpha for GC #89
+> bad alpha for GC #90
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #91
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #91 
+> bad alpha for GC #93
+> bad alpha for GC #94
+> bad alpha for GC #95
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #100
+> bad alpha for GC #100
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #101
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #101 
+> bad alpha for GC #102
+> bad alpha for GC #103
+> bad alpha for GC #105
+> bad alpha for GC #106
+> bad alpha for GC #109
+> bad alpha for GC #110
+> bad alpha for GC #111
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #112
+> bad alpha for GC #112
+> bad alpha for GC #113
+> bad alpha for GC #114
+> bad alpha for GC #115
+> bad alpha for GC #116
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #118
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #118 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #119
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #119 
+> bad alpha for GC #120
+> bad alpha for GC #121
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #123
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #123 
+> found 65 good profiles; snapshot 844
+> making Master Plot
+> making Master Plot
+# read in: ../particle_data/pop_2_data/fs07_refine/pos_00845_559_90_myr.txt
+# Creating new sequence directory ./profile_runs/fs07_refine/fof_best_v2/snapshot_00845_t_559_9
+> snapshot time 559.9 Myr
+> snapshot number 845
+> non-uniform radius, using virial or other
+> bad alpha for GC #4
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #6
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #6 
+> bad alpha for GC #10
+> bad alpha for GC #11
+> bad alpha for GC #12
+> bad alpha for GC #15
+Traceback (most recent call last):
+  File "/lustre/fgarcia4/glob_clust_evo/gc_profiles/simulation_profiler.py", line 226, in <module>
+    gc_radii="vir_rad",
+  File "/lustre/fgarcia4/glob_clust_evo/gc_profiles/simulation_profiler.py", line 105, in fof_profiler
+    particle_filter=hc_data,
+  File "/lustre/fgarcia4/glob_clust_evo/gc_profiles/snapshot_profiler.py", line 208, in run_profiler
+    particle_filter=valid_x_coords,
+  File "../modules/profiles/profile_plotting.py", line 197, in king_profile_plotter
+    calc_half_r=True,
+  File "../modules/profiles/profile_functions.py", line 137, in projected_surf_densities
+    half_mass_point = np.abs(integrated_mass - total_clust_m).argmin()
+ValueError: attempt to get argmin of an empty sequence
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[31648,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
