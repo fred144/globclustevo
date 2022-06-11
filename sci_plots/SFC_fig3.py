@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib import cm
 
 #%%
 
@@ -171,10 +172,17 @@ with plt.rc_context(
     }
 ):
     # mass function
-    fs70_mass, fs70_counts = log_data_function(m_sun_cloud_fs070, 20, (3e2, 1e5))
-    fs35_mass, fs35_counts = log_data_function(m_sun_cloud_fs035, 20, (3e2, 1e5))
-    plt.figure(figsize=(7, 10), dpi=300)
-    plt.subplot(2, 1, 1)
+    fs70_mass, fs70_counts = log_data_function(m_sun_cloud_fs070, 20, (3e2, 8e4))
+    fs35_mass, fs35_counts = log_data_function(m_sun_cloud_fs035, 20, (3e2, 8e4))
+
+    cmap = cm.get_cmap("Set2")
+    cmap = cmap(np.linspace(0, 1, 8))
+
+    fs70_color = cmap[1]
+    fs35_color = cmap[2]
+
+    plt.figure(figsize=(12, 4), dpi=400)
+    plt.subplot(1, 2, 1)
     # 35% efficiency
     plt.plot(
         fs35_mass,
@@ -183,14 +191,14 @@ with plt.rc_context(
         drawstyle="steps-mid",
         linewidth=4,
         alpha=0.8,
-        color="mediumpurple",
+        color=fs35_color,
     )
     plt.fill_between(
         fs35_mass,
         fs35_counts,
         step="mid",
-        color="mediumpurple",
         alpha=0.4,
+        color=fs35_color,
     )
     # 70% efficiency
     plt.plot(
@@ -200,14 +208,14 @@ with plt.rc_context(
         drawstyle="steps-mid",
         linewidth=4,
         alpha=0.8,
-        color="coral",
+        color=fs70_color,
     )
     plt.fill_between(
         fs70_mass,
         fs70_counts,
         step="mid",
-        color="coral",
         alpha=0.4,
+        color=fs70_color,
     )
     plt.xlabel(
         r"$  \mathrm{M_{MC}} \:\:  \left( \mathrm{M}_{\odot} \right) $",
@@ -217,54 +225,56 @@ with plt.rc_context(
         r"$\mathrm{dN / d\log} \: \mathrm{M_{MC}} \:\: \left( \mathrm{M}_{\odot} \right )   $",
         fontsize=14,
     )
-    plt.xlim((3e2, 1e5))
+    plt.xlim((3e2, 8e4))
     # plt.ylim(.8, 2.75)
     plt.xscale("log")
-    plt.yscale("log")
+    # plt.yscale("log")
     plt.legend(
         title="$\mathrm{SFE} \: (f_{*})$",
         loc="upper right",
         title_fontsize=14,
         fontsize=12,
     )
+
+    # metalicitty function
+
     fs70_z, fs70_z_counts = log_data_function(metal_cloud_fs070, 20, (1e-4, 1e-2))
     fs35_z, fs35_z_counts = log_data_function(metal_cloud_fs035, 20, (1e-4, 1e-2))
 
-    # metalicitty function
-    plt.subplot(2, 1, 2)
+    plt.subplot(1, 2, 2)
     # 35% efficiency
     plt.plot(
         fs35_z,
         fs35_z_counts,
-        label=r"0.70",
+        label=r"0.35",
         drawstyle="steps-mid",
         linewidth=4,
         alpha=0.8,
-        color="coral",
+        color=fs35_color,
     )
     plt.fill_between(
         fs35_z,
         fs35_z_counts,
         step="mid",
-        color="coral",
         alpha=0.4,
+        color=fs35_color,
     )
     # 70% efficiency
     plt.plot(
         fs70_z,
         fs70_z_counts,
-        label=r"0.35",
+        label=r"0.70",
         drawstyle="steps-mid",
         linewidth=4,
         alpha=0.8,
-        color="mediumpurple",
+        color=fs70_color,
     )
     plt.fill_between(
         fs70_z,
         fs70_z_counts,
         step="mid",
-        color="mediumpurple",
         alpha=0.4,
+        color=fs70_color,
     )
 
     plt.xlabel(

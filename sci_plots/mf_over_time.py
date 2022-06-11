@@ -1,6 +1,7 @@
 import sys
 
 sys.path.append("..")
+from matplotlib import cm
 import matplotlib.pyplot as plt
 import numpy as np
 import os
@@ -119,9 +120,20 @@ def bubble_plot(masses, core_radii, ages, current_time):
 
 
 if __name__ == "__main__":
+    cmap = cm.get_cmap("Set2")
+    cmap = cmap(np.linspace(0, 1, 8))
 
+    x_range = (1000, 1e5)
+    bns = 15
+
+    vir_clr = cmap[1]
+    mc_imf_clr = cmap[2]
     data_directory = r"../gc_profiles/profile_runs/fs07_refine/fof_best_fb/"
-    data_sets = filter_snapshots(data_directory, 263, 893, 5)
+    data_sets = filter_snapshots(data_directory, 243, 893, 5)
+
+    fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
+    m_sun_cloud_fs070 = fs070_log_sfc[:, 5]
+    fs70_mass, fs70_counts = log_data_function(m_sun_cloud_fs070, bns, x_range)
 
     for ds in data_sets:
         info_file = np.loadtxt(os.path.join(ds, "info.txt"))
@@ -142,8 +154,8 @@ if __name__ == "__main__":
         half_light_r = info_file[:, 14]
         half_mass_r = info_file[:, 15]
 
-        tot_mass, tot_counts = log_data_function(tot_mass, 20, (5, 1e5))
-        cor_mass, cor_counts = log_data_function(core_mass, 20, (5, 1e5))
+        tot_mass, tot_counts = log_data_function(tot_mass, bns, x_range)
+        cor_mass, cor_counts = log_data_function(core_mass, bns, x_range)
 
         with plt.rc_context(
             {
@@ -154,45 +166,60 @@ if __name__ == "__main__":
                 "font.size": 14,
             }
         ):
-            fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(7, 6), dpi=300)
+            fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(6, 5), dpi=300)
+
+            ax.plot(
+                fs70_mass,
+                fs70_counts,
+                label=r"$\mathrm{MC} \: \mathrm{IMF}$",
+                drawstyle="steps-mid",
+                linewidth=4,
+                alpha=0.8,
+                color=mc_imf_clr,
+            )
+            ax.fill_between(
+                fs70_mass, fs70_counts, step="mid", alpha=0.4, color=mc_imf_clr
+            )
+
             ax.plot(
                 tot_mass,
                 tot_counts,
-                label=r"Vir",
+                label=r"$\mathrm{Vir}$",
                 drawstyle="steps-mid",
                 linewidth=4,
                 alpha=0.8,
-                color="crimson",
+                color=vir_clr,
             )
             ax.fill_between(
-                tot_mass, tot_counts, step="mid", color="crimson", alpha=0.4
+                tot_mass, tot_counts, step="mid", alpha=0.4, color=vir_clr
             )
 
-            ax.plot(
-                cor_mass,
-                cor_counts,
-                label=r"Core",
-                drawstyle="steps-mid",
-                linewidth=4,
-                alpha=0.8,
-                color="royalblue",
-            )
-            ax.fill_between(
-                cor_mass, cor_counts, step="mid", color="royalblue", alpha=0.4
-            )
+            # ax.plot(
+            #     cor_mass,
+            #     cor_counts,
+            #     label=r"Core",
+            #     drawstyle="steps-mid",
+            #     linewidth=4,
+            #     alpha=0.8,
+            #     color="royalblue",
+            # )
+            # ax.fill_between(
+            #     cor_mass, cor_counts, step="mid", color="royalblue", alpha=0.4
+            # )
 
             ax.set_xscale("log")
             ax.set_yscale("log")
-
             plt.xlabel(
-                r"$  \mathrm{M_{GC}} \:\:  \left( \mathrm{M}_{\odot} \right) $",
+                r"$  \mathrm{M} \:\:  \left( \mathrm{M}_{\odot} \right) $",
                 fontsize=14,
             )
             plt.ylabel(
-                r"$\mathrm{dN / d\log} \: \mathrm{M_{GC}} \:\: \left( \mathrm{M}_{\odot} \right ) $",
+                (
+                    r"$\mathrm{dN / d\log}\:\mathrm{M}"
+                    r"\:\:\left(\mathrm{M}_{\odot} \right)$"
+                ),
                 fontsize=14,
             )
-
             ax.legend(
                 title="$\mathrm{SFE} \: (f_{*}) = 0.70$",
                 loc="upper right",
@@ -216,8 +243,8 @@ if __name__ == "__main__":
                 verticalalignment="top",
                 bbox=props,
             )
-            ax.set_xlim(5, 1e5)
-            ax.set_ylim(1, 100)
+            ax.set_xlim(x_range)
+            ax.set_ylim(1, 400)
 
             plt.show()
 
