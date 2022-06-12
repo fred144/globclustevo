@@ -127,14 +127,15 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
         # total light in gcs, profiler determined
         gc_lums_in_snap.append(np.sum(gc_lums))
 
-        total_masses_in_snap.append(np.sum(pop2_data[:, 5]))  # Msun
+        # idxs adjust due to insertion of luminosity data
+        total_masses_in_snap.append(np.sum(pop2_data[:, 6]))  # Msun
         total_lums_in_snap.append(np.sum(scaled_stellar_lums))
         total_counts_in_snap.append(pop2_data.shape[0])
-        snapshot.append(int(snapshot_num))
         time_myr_in_snap.append(time)
-        redshift_in_snap.append(pop2_data[1, 6])
+        redshift_in_snap.append(pop2_data[1, 7])
+        snapshot.append(int(snapshot_num))
 
-        header = (
+        pop_2_header = (
             "\t\tID"
             "\t\tCurrentAges[Myr]"
             "\t CurrentLums[erg s^-1 Angstrom-^1]"
@@ -155,23 +156,23 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
         np.savetxt(
             fname=field_save_path,
             X=pop2_data_field,
-            header=header,
+            header=pop_2_header,
         )
         np.savetxt(
             fname=clust_save_path,
             X=pop2_data_bound,
-            header=header,
+            header=pop_2_header,
         )
 
         np.savetxt(
             fname=fitted_field_save_path,
             X=fitted_pop2_data_field,
-            header=header,
+            header=pop_2_header,
         )
         np.savetxt(
             fname=fitted_clust_save_path,
             X=fitted_pop2_data_bound,
-            header=header,
+            header=pop_2_header,
         )
 
         # undo put all verbose output into a text file
@@ -190,7 +191,7 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
         save_time_myr = np.array(time_myr_in_snap)
         save_redshift = np.array(redshift_in_snap)
 
-        header = (
+        prof_run_header = (
             "\t Snapshotnum"
             "\t Time[MYR]"
             "\t redshift"
@@ -219,7 +220,7 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
         ).T
         save_name = os.path.join(run_save_path, "time_series_run_stats.txt")
 
-        np.savetxt(fname=save_name, X=output, header=header)
+        np.savetxt(fname=save_name, X=output, header=prof_run_header)
 
 
 if __name__ == "__main__":
