@@ -1,0 +1,1 @@
+# 		ID		CurrentAges[Myr]	 CurrentLums[erg s^-1 Angstrom-^1]		X[pc] Y[pc] Z[pc] 		mass[Msun]		t_sim[Myr], z, ctr(code), ctr(pc)
