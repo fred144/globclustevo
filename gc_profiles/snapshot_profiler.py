@@ -259,7 +259,7 @@ def run_profiler(
         # note, r and rho contain both theory and data (r, theory_r)
         if m_tot > 0:
             # nested "if" instead of "and" since r can be an integer, cant subscript
-            if np.size(r[0]) > 8:
+            if np.size(r[0]) > 3:
 
                 master_r.append(r[0])
                 master_rho.append(rho[0])
@@ -328,7 +328,7 @@ def run_profiler(
     # master plot containing all the profiles in the snapshot,
     # do this if atleast one passes, which means the list is not exclusively negative
 
-    if gc_char_age.size > 0:
+    try:
 
         master_king(master_r, master_rho, master_err, master_age, time)
         plt_save_path = os.path.join(
@@ -345,7 +345,8 @@ def run_profiler(
         plt.savefig(plt_save_path, dpi=200, bbox_inches="tight")
         plt.cla()
         plt.close()
-    else:
+    except:
+        print("> not enough good fits to make master plot")
         pass
 
     # make the time get along with the rest of dimensions

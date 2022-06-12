@@ -27,7 +27,7 @@ def master_king(rads, rhos, errs, ages, t_myr):
     gets all the raw profiles for a given snapshot and plots them, note
     both theory and fitted curves are taken
     """
-    print("> making Master Plot")
+    print("> making master plot")
     ages = np.array(ages)
     birth_times = t_myr - ages
     with plt.rc_context(
@@ -47,6 +47,7 @@ def master_king(rads, rhos, errs, ages, t_myr):
             dpi=400,
             gridspec_kw={"width_ratios": [20, 1]},
         )
+
         # make subplot
         plt.subplots_adjust(wspace=0)
         cmap = plt.cm.winter
