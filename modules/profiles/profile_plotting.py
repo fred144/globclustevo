@@ -29,6 +29,7 @@ def master_king(rads, rhos, errs, ages, t_myr):
     """
     print("> making Master Plot")
     ages = np.array(ages)
+    birth_times = t_myr - ages
     with plt.rc_context(
         {
             "font.family": "serif",
@@ -48,26 +49,28 @@ def master_king(rads, rhos, errs, ages, t_myr):
         )
         # make subplot
         plt.subplots_adjust(wspace=0)
-        cmap = plt.cm.winter_r
+        cmap = plt.cm.winter
         # extend the range of color bars
-        norm = plt.Normalize(vmin=np.min(ages) - 1, vmax=np.max(ages) + 1)
+        norm = plt.Normalize(
+            vmin=np.min(birth_times) - 1, vmax=np.max(birth_times) + 1
+        )
         # just integers
         kwargs = {"format": "%.0f"}
         cbar = mpl.colorbar.ColorbarBase(
             cbar_ax,
             cmap=cmap,
             norm=norm,
-            label=r"$\mathrm{GC} \: \mathrm{Age}  \: \mathrm{(Myr)}$",
+            label=r"$\: \mathrm{t_{birth}}  \: \mathrm{(Myr)}$",
             alpha=0.6,
             # **kwargs,
         )
         # loop and plot
-        for i, (r, rho, err, age) in enumerate(zip(rads, rhos, errs, ages)):
+        for i, (r, rho, err, bt) in enumerate(zip(rads, rhos, errs, birth_times)):
 
             ax.plot(
                 r,
                 rho,
-                color=cmap(norm(age)),
+                color=cmap(norm(bt)),
                 linewidth=2,
                 alpha=0.6,
                 # zorder=20,
@@ -110,8 +113,8 @@ def master_king(rads, rhos, errs, ages, t_myr):
         )
         ax.set_xscale("log")
         ax.set_yscale("log")
-        ax.set_xlim(right=15)
-        ax.set_ylim(bottom=8e-1, top=8e4)
+        ax.set_xlim(right=20)
+        ax.set_ylim(bottom=3e-1, top=1e5)
 
 
 # TODO: add filter to avoid small double count by filtering clust_x, y,z using fof
@@ -179,13 +182,13 @@ def king_profile_plotter(
         clust_lums = clust_lums[mask]
         clust_masses = clust_masses[mask]
         clust_ages = clust_ages[mask]
-
     else:
         pass
 
+    # try:
     # given an isolated cluster, find projected density quantities
     # as a function of radius with log bins or linear bins
-    r, rho, err, tot_m, r_half_mass, r_half_light = projected_surf_densities(
+    r, rho, err, tot_m, tot_lum, r_half_m, r_half_l = projected_surf_densities(
         x_coord=clust_x,
         y_coord=clust_y,
         lums=clust_lums,
@@ -196,6 +199,30 @@ def king_profile_plotter(
         dr=None,
         calc_half_r=True,
     )
+    # except:
+    #     print("> not enough stars to profile")
+    #     return (
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #         -2,
+    #     )
 
     # numpy way of doing mode
     # unique_ages, indices = np.unique(gc_char_age, return_inverse=True)
@@ -475,14 +502,16 @@ def king_profile_plotter(
                 err_fit_sigma_bg,
                 p_value,
                 np.size(clust_masses),  # size of the masses array, count star in gc
-                r_half_mass,
-                r_half_light,
+                r_half_m,
+                r_half_l,
+                tot_lum,
             )
 
         else:
             print(r"> bad alpha for GC #{:.0f}".format(gc_label))
             # return invalid values
             return (
+                -1,
                 -1,
                 -1,
                 -1,
@@ -539,6 +568,7 @@ def king_profile_plotter(
 
         # return invalid values
         return (
+            -2,
             -2,
             -2,
             -2,

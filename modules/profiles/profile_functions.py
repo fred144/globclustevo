@@ -85,7 +85,7 @@ def projected_surf_densities(
 
     """
     # TODO: calculate half mass
-    starting_point = 0.04  # pc might have to tweak this.
+    starting_point = 0.01  # pc might have to tweak this.
 
     # stack two-1d arrays
     all_positions = np.vstack((x_coord, y_coord)).T
@@ -134,8 +134,8 @@ def projected_surf_densities(
         integrated_mass = np.cumsum(mass_per_bin)
         integrated_light = np.cumsum(lum_per_bin)
 
-        half_mass_point = np.abs(integrated_mass - total_clust_m).argmin()
-        half_light_point = np.abs(integrated_light - total_clust_lum).argmin()
+        half_mass_point = np.abs(integrated_mass - 0.5 * total_clust_m).argmin()
+        half_light_point = np.abs(integrated_light - 0.5 * total_clust_lum).argmin()
 
         half_mass_r = r[half_mass_point]
         half_light_r = r[half_light_point]
@@ -145,12 +145,19 @@ def projected_surf_densities(
             surf_mass_density,
             err_surf_mass_density,
             total_clust_m,
+            total_clust_lum,
             half_mass_r,
             half_light_r,
         )
     else:
 
-        return bin_ctrs, surf_mass_density, err_surf_mass_density, total_clust_m
+        return (
+            bin_ctrs,
+            surf_mass_density,
+            err_surf_mass_density,
+            total_clust_m,
+            total_clust_lum,
+        )
 
 
 def ring_2d_mask(xpos, ypos, ctr_at, lums, masses, outer_radius, inner_radius):

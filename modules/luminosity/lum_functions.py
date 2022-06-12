@@ -51,6 +51,7 @@ def unpack_pop_ii_data(
     path: str,
     lum_scaling=1e-5,
     lum_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
+    table_column_idx=1,
 ):
     r"""
     Depends on the lookup table function.
@@ -88,7 +89,7 @@ def unpack_pop_ii_data(
 
     # use look up table; current bottle neck
     stellar_lums = lum_look_up_table(
-        stellar_ages=ages, table_link=lum_link, column_idx=1, log=True
+        stellar_ages=ages, table_link=lum_link, column_idx=table_column_idx, log=True
     )
 
     scaled_stellar_lums = stellar_lums * lum_scaling

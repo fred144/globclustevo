@@ -135,7 +135,8 @@ def run_profiler(
     gc_fitted_star_ids = []
     gc_r_half_mass = []
     gc_r_half_light = []
-    # save each profiler for master plotting
+    gc_total_lum = []  # trunc lum (for uniform) or  mass within gc_radii (user_def)
+    # save each profiler result for a gc for master plotting
     master_r = []
     master_rho = []
     master_err = []
@@ -196,6 +197,7 @@ def run_profiler(
             counts,
             half_m,
             half_l,
+            lum_tot,
         ) = king_profile_plotter(
             star_pos=star_positions,
             lums=scaled_stellar_lums,
@@ -226,14 +228,15 @@ def run_profiler(
         gc_particle_counts.append(counts)
         gc_r_half_mass.append(half_m)
         gc_r_half_light.append(half_l)
+        gc_total_lum.append(lum_tot)
 
         # saves ids regardless if the cluster was fitted or not,
+        gc_star_ids.append(star_id_in_cluster)
         # this filters make it return only if fitted
         if m_tot > 0:
             gc_fitted_star_ids.append(star_id_in_cluster)
         else:
             pass
-        gc_star_ids.append(star_id_in_cluster)
 
         # print("There are this many stars in the cluster", counts)
         if m_tot > 0:
@@ -289,8 +292,9 @@ def run_profiler(
     gc_fitted_star_ids = np.array(gc_fitted_star_ids, dtype=object)
     gc_r_half_mass = np.array(gc_r_half_mass)
     gc_r_half_light = np.array(gc_r_half_light)
+    gc_total_lum = np.array(gc_total_lum)
 
-    # mask out invalid values, uses the first value for maskin only
+    # mask out invalid values, uses the first value for masking only
     mask = gc_out_masses > 0
     gc_out_masses = gc_out_masses[mask]
     gc_r_core = gc_r_core[mask]
@@ -310,8 +314,9 @@ def run_profiler(
     gc_star_ids = gc_star_ids[mask]  # mask is sort of worthless
     gc_r_half_mass = gc_r_half_mass[mask]
     gc_r_half_light = gc_r_half_light[mask]
+    gc_total_lum = gc_total_lum[mask]
 
-    try:  # take care if there is only one cluster in snapshot
+    try:  # takes care  of situation if there is only one cluster in snapshot
         gc_star_ids = np.hstack(gc_star_ids)  # flatten ragged array
         gc_fitted_star_ids = np.hstack(gc_fitted_star_ids)
     except:
@@ -366,25 +371,28 @@ def run_profiler(
             gc_fit_pval,
             gc_r_half_mass,
             gc_r_half_light,
+            gc_total_lum,
         )
     ).T
     # comment = "These are just the succesful fits with reasonable alpha."
     header = (
-        "\t\tTime[Myr] \t GC Label"
+        "\t\tTime[Myr] \t\t GC Label"
         "\t\t Age[Myr] \t TotalOrTruncMass[Msun]"
-        "\t CoreMass[Msun] \t  TruncRadii[pc]"
-        "\t CoreRadii[pc] \t ErrCoreRadii"
-        "\t FitAlpha \t ErrFitAlpha"
-        "\t FitSigma0 \t  ErrFitSigma0"
-        "\t FitSigmaBG \t  ErrFitSigmaBG"
-        "\t P Value"
-        "\t Half Mass[pc]\t  Half Light [pc]"
+        "\t\t CoreMass[Msun] \t\t  TruncRadii[pc]"
+        "\t\t CoreRadii[pc] \t\t ErrCoreRadii"
+        "\t\t FitAlpha \t\t ErrFitAlpha"
+        "\t\t FitSigma0 \t\t  ErrFitSigma0"
+        "\t\t FitSigmaBG \t\t  ErrFitSigmaBG"
+        "\t\t P Value"
+        "\t\t Half Mass[pc] \t\t Half Light [pc]"
+        "GCTotalLum[erg s^-1 Angstrom-^1 ]"
     )
     info_save_path = os.path.join(save_folder_abs_path, "info.txt")
     np.savetxt(fname=info_save_path, X=output, header=header)
-
+    # return arrays to be summed for time series analysis
     return (
         gc_out_masses,
+        gc_total_lum,
         gc_r_core,
         gc_m_core,
         gc_r_trunc,
@@ -393,4 +401,5 @@ def run_profiler(
         gc_particle_counts,
         gc_star_ids,
         gc_fitted_star_ids,
+        scaled_stellar_lums,
     )

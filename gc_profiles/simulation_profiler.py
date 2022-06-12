@@ -7,6 +7,7 @@ sys.path.insert(
 import glob
 import os
 from modules.macros import filter_snapshots, common_filter_snapshots
+from modules.luminosity.lum_functions import lum_look_up_table
 from snapshot_profiler import run_profiler
 import matplotlib.pyplot as plt
 import numpy as np
@@ -38,13 +39,15 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
         os.makedirs(run_save_path)
 
     snapshot = []
-    gc_counts = []
-    gc_masses = []
-    gc_core_masses = []
-    total_counts = []
-    total_masses = []
-    time_myr = []
-    redshift = []
+    gc_counts_in_snap = []
+    gc_masses_in_snap = []
+    gc_lums_in_snap = []
+    gc_core_masses_in_snap = []
+    total_counts_in_snap = []
+    total_masses_in_snap = []
+    total_lums_in_snap = []
+    time_myr_in_snap = []
+    redshift_in_snap = []
 
     # loop over snapshots
     for pop_data, hc_data in zip(pop2_data_set, halo_data_directory):
@@ -87,6 +90,7 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
 
         (
             gc_full_masses,
+            gc_lums,
             core_radii,
             core_masses,
             r_trunc,
@@ -94,7 +98,8 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
             time,
             particles_in_this_snapshot,
             pop_2_ids_in_gcs,
-            pop_2_ids_in_fitted_gcs,
+            pop_2_ids_in_fitted_gcs,  # profiler run dictated
+            scaled_stellar_lums,  # for all stars, UV [erg s^-1 Angstrom-^1]
         ) = run_profiler(
             star_file_path=pop_data,
             parent_save_path=save_path,
@@ -104,6 +109,9 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
             centers=ctrs_pc,
             particle_filter=hc_data,
         )
+        # modify pop2 by tacking on luminosities
+        pop2_data = np.insert(pop2_data, 2, scaled_stellar_lums, axis=1)
+
         mask = np.isin(pop2_data[:, 0], pop_2_ids_in_gcs)
         pop2_data_field = pop2_data[~mask]
         pop2_data_bound = pop2_data[mask]
@@ -112,24 +120,28 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
         fitted_pop2_data_field = pop2_data[~mask_only_fitted]
         fitted_pop2_data_bound = pop2_data[mask_only_fitted]
 
-        gc_counts.append(np.sum(particles_in_this_snapshot))
+        gc_counts_in_snap.append(np.sum(particles_in_this_snapshot))
         # masses within the vir_radius, full cluster
-        gc_masses.append(np.sum(gc_full_masses))
-        gc_core_masses.append(np.sum(core_masses))  # Msun
+        gc_masses_in_snap.append(np.sum(gc_full_masses))
+        gc_core_masses_in_snap.append(np.sum(core_masses))  # Msun
+        # total light in gcs, profiler determined
+        gc_lums_in_snap.append(np.sum(gc_lums))
 
-        total_masses.append(np.sum(pop2_data[:, 5]))  # Msun
-        total_counts.append(pop2_data.shape[0])
+        total_masses_in_snap.append(np.sum(pop2_data[:, 5]))  # Msun
+        total_lums_in_snap.append(np.sum(scaled_stellar_lums))
+        total_counts_in_snap.append(pop2_data.shape[0])
         snapshot.append(int(snapshot_num))
-        time_myr.append(time)
-        redshift.append(pop2_data[1, 6])
+        time_myr_in_snap.append(time)
+        redshift_in_snap.append(pop2_data[1, 6])
 
         header = (
             "\t\tID"
-            "\t\tCurrentAges[MYr]"
-            "\t\tX[pc]"
-            "\t\tY[pc]\t\t"
-            "Z[pc]\t\t"
-            "mass[Msun]"
+            "\t\tCurrentAges[Myr]"
+            "\t CurrentLums[erg s^-1 Angstrom-^1]"
+            "\t\tX[pc] "
+            "Y[pc] "
+            "Z[pc] "
+            "\t\tmass[Msun]"
             "\t\tt_sim[Myr], z, ctr(code), ctr(pc)"
         )
         # save, regardless of profiler outcome
@@ -166,42 +178,48 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
         # sys.stdout.close()
         # sys.stdout = orig_stdout
 
-        # profiler run stats, one row per snapshot
-    gc_counts = np.array(gc_counts)
-    gc_masses = np.array(gc_masses)
-    gc_core_masses = np.array(gc_core_masses)
-    total_counts = np.array(total_counts)
-    total_masses = np.array(total_masses)
-    snapshot = np.array(snapshot)
-    time_myr = np.array(time_myr)
-    redshift = np.array(redshift)
+        # profiler run stats, one row per snapshot, save per loop for crashes
+        save_gc_counts = np.array(gc_counts_in_snap)
+        save_gc_masses = np.array(gc_masses_in_snap)
+        save_gc_lums = np.array(gc_lums_in_snap)
+        save_gc_core_masses = np.array(gc_core_masses_in_snap)
+        save_total_counts = np.array(total_counts_in_snap)
+        save_total_masses = np.array(total_masses_in_snap)
+        save_total_lums = np.array(total_lums_in_snap)
+        save_snapshot = np.array(snapshot)
+        save_time_myr = np.array(time_myr_in_snap)
+        save_redshift = np.array(redshift_in_snap)
 
-    header = (
-        "\t\t Snapshotnum"
-        "\t\t Time[MYR]"
-        "\t\t redshift"
-        "\t\t total_counts"
-        "\t\t gc_counts"
-        "\t\t total_masses[Msun]"
-        "\t\t gc_masses[Msun]"
-        "\t\t  gc_core_masses[Msun]"
-    )
-
-    output = np.vstack(
-        (
-            snapshot,
-            time_myr,
-            redshift,
-            total_counts,
-            gc_counts,
-            total_masses,
-            gc_masses,
-            gc_core_masses,
+        header = (
+            "\t Snapshotnum"
+            "\t Time[MYR]"
+            "\t redshift"
+            "\t total_counts"
+            "\t gc_counts"
+            "\t total_masses[Msun]"
+            "\t gc_masses[Msun]"
+            "\t gc_core_masses[Msun]"
+            "\t total_lums[erg s^-1 Angstrom-^1]"
+            "\t gc_lums[erg s^-1 Angstrom-^1]"
         )
-    ).T
-    save_name = os.path.join(run_save_path, "time_series_run_stats.txt")
 
-    np.savetxt(fname=save_name, X=output, header=header)
+        output = np.vstack(
+            (
+                save_snapshot,
+                save_time_myr,
+                save_redshift,
+                save_total_counts,
+                save_gc_counts,
+                save_total_masses,
+                save_gc_masses,
+                save_gc_core_masses,
+                save_total_lums,
+                save_gc_lums,
+            )
+        ).T
+        save_name = os.path.join(run_save_path, "time_series_run_stats.txt")
+
+        np.savetxt(fname=save_name, X=output, header=header)
 
 
 if __name__ == "__main__":
@@ -209,7 +227,7 @@ if __name__ == "__main__":
     pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
     halo_data_directory = r"../halo_data/fs07_refine/fof_best"
 
-    save_path = "./profile_runs/fs07_refine/fof_best_v2"
+    save_path = "./profile_runs/fs07_refine/fof_best_v3"
 
     strt = 113
     end = 918
