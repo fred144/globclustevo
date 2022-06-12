@@ -240,7 +240,7 @@ if __name__ == "__main__":
     save_path = "./profile_runs/fs035_ms10/fof_best"
 
     strt = 154
-    end = 918
+    end = 917
     step = 1
 
     pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
