@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --mem-per-cpu=7000  
 #SBATCH --exclusive
-#SBATCH -t 86:00:00
+#SBATCH -t 96:00:00
 
 
 

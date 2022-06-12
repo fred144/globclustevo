@@ -1,1 +1,0 @@
-# 		Time[Myr] 		 GC Label		 Age[Myr] 	 TotalOrTruncMass[Msun]		 CoreMass[Msun] 		  TruncRadii[pc]		 CoreRadii[pc] 		 ErrCoreRadii		 FitAlpha 		 ErrFitAlpha		 FitSigma0 		  ErrFitSigma0		 FitSigmaBG 		  ErrFitSigmaBG		 P Value		 Half Mass[pc] 		 Half Light [pc]GCTotalLum[erg s^-1 Angstrom-^1 ]
