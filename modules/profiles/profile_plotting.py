@@ -128,7 +128,7 @@ def king_profile_plotter(
     gc_rad,
     gc_label,
     bins=25,
-    good_alpha=5,
+    good_alpha=8,
     particle_filter=None,
     using_vir_rad=True,
     **kwargs,
@@ -509,7 +509,7 @@ def king_profile_plotter(
             )
 
         else:
-            print(r"> bad alpha for GC #{:.0f}".format(gc_label))
+            print(r"> bad alpha: {:.5f} for GC #{:.0f}".format(fit_alpha, gc_label))
             # return invalid values
             return (
                 -1,

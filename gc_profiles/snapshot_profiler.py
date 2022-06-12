@@ -323,11 +323,8 @@ def run_profiler(
         gc_star_ids = np.array(gc_star_ids)
         gc_fitted_star_ids = np.array(gc_fitted_star_ids)
 
-    print("> found", gc_char_age.size, "good profiles; snapshot", int(snapshot_num))
-
     # master plot containing all the profiles in the snapshot,
     # do this if atleast one passes, which means the list is not exclusively negative
-
     try:
 
         master_king(master_r, master_rho, master_err, master_age, time)
@@ -348,6 +345,8 @@ def run_profiler(
     except:
         print("> not enough good fits to make master plot")
         pass
+
+    print("> found", gc_char_age.size, "good profiles; snapshot", int(snapshot_num))
 
     # make the time get along with the rest of dimensions
     t_myr = np.array(time)
@@ -390,6 +389,7 @@ def run_profiler(
     )
     info_save_path = os.path.join(save_folder_abs_path, "info.txt")
     np.savetxt(fname=info_save_path, X=output, header=header)
+
     # return arrays to be summed for time series analysis
     return (
         gc_out_masses,
