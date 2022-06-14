@@ -10,7 +10,7 @@ import os
 #%%
 
 dat_set = np.loadtxt(
-    "../gc_profiles/profile_runs/fs07_refine/time_series_run_stats.txt"
+    "../gc_profiles/profile_runs/fs035_ms10/fof_best/time_series_run_stats.txt"
 )[:, :]
 
 
@@ -61,7 +61,7 @@ with plt.rc_context(
         linewidth=0.8,
         edgecolor="gray",
     )
-    textstr = "$f_{*} = 0.70$"
+    textstr = "$f_{*} = 0.35$"
     # place a text box in upper left in axes coords
     ax[0].text(
         0.05,
@@ -73,7 +73,7 @@ with plt.rc_context(
         bbox=props,
     )
 
-    # the limits are controlled by 0.70 efficiency
+    # the limits are controlled by 0.35 efficiency
     # add a twin axis
     plt.xlim(left=np.min(t_sim_myr), right=np.max(t_sim_myr))
     ax1_twin = ax[0].twiny()
@@ -126,7 +126,7 @@ with plt.rc_context(
         linewidth=0.8,
         edgecolor="gray",
     )
-    textstr = "$f_{*} = 0.70$"
+    textstr = "$f_{*} = 0.35$"
     # place a text box in upper left in axes coords
     ax[0].text(
         0.05,
@@ -138,7 +138,7 @@ with plt.rc_context(
         bbox=props,
     )
 
-    # the limits are controlled by 0.70 efficiency
+    # the limits are controlled by 0.35 efficiency
     # add a twin axis
     plt.xlim(left=np.min(t_sim_myr), right=np.max(t_sim_myr))
     ax1_twin = ax[0].twiny()
@@ -199,7 +199,7 @@ with plt.rc_context(
         linewidth=0.8,
         edgecolor="gray",
     )
-    textstr = "$f_{*} = 0.70$"
+    textstr = "$f_{*} = 0.35$"
     # place a text box in upper left in axes coords
     ax[0].text(
         0.05,
@@ -211,7 +211,7 @@ with plt.rc_context(
         bbox=props,
     )
 
-    # the limits are controlled by 0.70 efficiency add a twin axis
+    # the limits are controlled by 0.35 efficiency add a twin axis
 
     plt.xlim(left=np.min(t_sim_myr), right=np.max(t_sim_myr))
     ax1_twin = ax[0].twiny()
@@ -246,7 +246,7 @@ with plt.rc_context(
     ax[0].plot(t_sim_myr, total_lum, label=r"Total", linewidth=4, c=cmap[0])
     ax[0].plot(t_sim_myr, lum_in_gc, label=r"In GCs, fitted", linewidth=4, c=cmap[3])
     field_lum = total_lum - lum_in_gc
-
+    mask = field_lum > 1e25
     ax[0].plot(t_sim_myr[mask], field_lum[mask], label=r"Field", linewidth=4, c=cmap[4])
 
     ax[0].set_yscale("log")
@@ -271,7 +271,7 @@ with plt.rc_context(
         linewidth=0.8,
         edgecolor="gray",
     )
-    textstr = "$f_{*} = 0.70$"
+    textstr = "$f_{*} = 0.35$"
     # place a text box in upper left in axes coords
     ax[0].text(
         0.05,
@@ -283,7 +283,7 @@ with plt.rc_context(
         bbox=props,
     )
 
-    # the limits are controlled by 0.70 efficiency add a twin axis
+    # the limits are controlled by 0.35 efficiency add a twin axis
 
     plt.xlim(left=np.min(t_sim_myr), right=np.max(t_sim_myr))
     ax1_twin = ax[0].twiny()
