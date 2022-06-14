@@ -133,7 +133,7 @@ with plt.rc_context(
         alpha=0.8,
     )
     cbar = plt.colorbar(pad=0)
-    cbar.set_label(label="$\mathrm{z}_{formation}$", fontsize=16)
+    cbar.set_label(label="$\mathrm{z}_{\mathrm{formation}}$", fontsize=16)
     cbar.ax.invert_yaxis()
 
     plt.xlabel(r" MC Metallicity $(\mathrm{Z}_{\odot})$", fontsize=14)

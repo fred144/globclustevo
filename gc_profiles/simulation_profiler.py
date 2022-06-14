@@ -111,7 +111,8 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
         )
         # modify pop2 by tacking on luminosities
         pop2_data = np.insert(pop2_data, 2, scaled_stellar_lums, axis=1)
-
+        # print(pop_2_ids_in_gcs)
+        # print(pop_2_ids_in_fitted_gcs)
         mask = np.isin(pop2_data[:, 0], pop_2_ids_in_gcs)
         pop2_data_field = pop2_data[~mask]
         pop2_data_bound = pop2_data[mask]
@@ -225,23 +226,23 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
 
 if __name__ == "__main__":
 
-    # pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
-    # halo_data_directory = r"../halo_data/fs07_refine/fof_best"
+    pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
+    halo_data_directory = r"../halo_data/fs07_refine/fof_best"
 
-    # save_path = "./profile_runs/fs07_refine/fof_best_v3"
+    save_path = "./profile_runs/fs07_refine/fof_best_v3"
 
-    # strt = 113
-    # end = 918
-    # step = 1
-
-    pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
-    halo_data_directory = r"../halo_data/fs035_ms10/fof_best"
-
-    save_path = "./profile_runs/fs035_ms10/fof_best"
-
-    strt = 154
-    end = 917
+    strt = 113
+    end = 918
     step = 1
+
+    # pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
+    # halo_data_directory = r"../halo_data/fs035_ms10/fof_best"
+
+    # save_path = "./profile_runs/fs035_ms10/fof_best"
+
+    # strt = 420
+    # end = 420
+    # step = 1
 
     pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
     halos = filter_snapshots(halo_data_directory, strt, end, step)

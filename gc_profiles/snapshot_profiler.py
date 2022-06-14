@@ -234,6 +234,7 @@ def run_profiler(
         gc_star_ids.append(star_id_in_cluster)
         # this filters make it return only if fitted
         if m_tot > 0:
+            print("fitted")
             gc_fitted_star_ids.append(star_id_in_cluster)
         else:
             pass
@@ -311,7 +312,8 @@ def run_profiler(
     gc_fit_pval = gc_fit_pval[mask]
     gc_labels = gc_labels[mask]
     gc_particle_counts = gc_particle_counts[mask]
-    gc_star_ids = gc_star_ids[mask]  # mask is sort of worthless
+    # gc_star_ids = gc_star_ids[mask]  # mask is sort of worthless
+    # !!! less than worthless it made you waste 3 days.
     gc_r_half_mass = gc_r_half_mass[mask]
     gc_r_half_light = gc_r_half_light[mask]
     gc_total_lum = gc_total_lum[mask]
