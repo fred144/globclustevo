@@ -116706,3 +116706,3843 @@ fitted
 > snapshot time 531.61 Myr
 > snapshot number 893
 > non-uniform radius, using virial or other
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.797, mcore: 0.000, for GC #4
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #8
+> alpha: 1.800, mcore: 0.000, for GC #8
+> alpha: 14.282, mcore: 189.056, for GC #9
+fitted
+> alpha: 2.388, mcore: 0.000, for GC #11
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #12
+> alpha: 14.448, mcore: 45.013, for GC #12
+> alpha: 76.523, mcore: 36.011, for GC #13
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 8.772, mcore: 270.079, for GC #20
+> alpha: 1.492, mcore: 0.000, for GC #21
+> alpha: 67.118, mcore: 45.013, for GC #22
+fitted
+fitted
+> alpha: 33.314, mcore: 176.052, for GC #25
+fitted
+fitted
+fitted
+> alpha: 1.459, mcore: 0.000, for GC #29
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #31
+> alpha: 6.714, mcore: 0.000, for GC #31
+fitted
+> alpha: 10.062, mcore: 953.280, for GC #33
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #34
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #34 
+fitted
+fitted
+> alpha: 79.033, mcore: 215.063, for GC #37
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #40
+> alpha: 5.572, mcore: 0.000, for GC #40
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #41
+> alpha: 4.141, mcore: 0.000, for GC #41
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 18.468, mcore: 58.017, for GC #47
+fitted
+> alpha: 2.098, mcore: 0.000, for GC #49
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #50
+> alpha: 60.990, mcore: 72.021, for GC #50
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.856, mcore: 0.000, for GC #55
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #57
+> alpha: 69.178, mcore: 27.008, for GC #57
+> alpha: 9.244, mcore: 279.082, for GC #58
+> alpha: 2.136, mcore: 0.000, for GC #59
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #60
+> alpha: 4.554, mcore: 0.000, for GC #60
+fitted
+fitted
+> alpha: 8.903, mcore: 54.016, for GC #63
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #65
+> alpha: 6.168, mcore: 0.000, for GC #65
+fitted
+> alpha: 1.807, mcore: 0.000, for GC #67
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #69
+> alpha: 7.572, mcore: 0.000, for GC #69
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #71
+> alpha: 5.682, mcore: 0.000, for GC #71
+> alpha: 52.313, mcore: 0.000, for GC #72
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #73
+> alpha: 6.308, mcore: 0.000, for GC #73
+fitted
+> alpha: 19.456, mcore: 117.034, for GC #75
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #76
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #76 
+> alpha: 23.765, mcore: 81.024, for GC #77
+fitted
+> alpha: 19.441, mcore: 45.013, for GC #79
+fitted
+> alpha: 1.292, mcore: 0.000, for GC #81
+> alpha: 12.233, mcore: 360.106, for GC #82
+fitted
+> alpha: 1.994, mcore: 0.000, for GC #84
+> alpha: 2.033, mcore: 0.000, for GC #85
+> alpha: 73.945, mcore: 72.021, for GC #86
+> alpha: 88.037, mcore: 90.026, for GC #87
+fitted
+fitted
+> alpha: 9.221, mcore: 191.056, for GC #90
+fitted
+> alpha: 2.077, mcore: 0.000, for GC #92
+> alpha: 3.611, mcore: 0.000, for GC #93
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #103
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #105
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #105 
+> alpha: 2.258, mcore: 0.000, for GC #106
+> alpha: 77.001, mcore: 54.016, for GC #107
+> alpha: 14.305, mcore: 81.024, for GC #108
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #110
+> alpha: 3.360, mcore: 0.000, for GC #110
+> alpha: 1.871, mcore: 0.000, for GC #111
+fitted
+fitted
+fitted
+> making master plot
+> making master plot
+> found 64 good profiles; snapshot 893
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00894_531_82_myr.txt
+> snapshot time 531.82 Myr
+> snapshot number 894
+> non-uniform radius, using virial or other
+fitted
+> alpha: 8.507, mcore: 9.003, for GC #1
+> alpha: 2.204, mcore: 0.000, for GC #2
+fitted
+> alpha: 19.243, mcore: 48.014, for GC #4
+> alpha: 2.140, mcore: 0.000, for GC #5
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.070, mcore: 0.000, for GC #12
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #16
+> alpha: 7.437, mcore: 0.000, for GC #16
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #19
+> alpha: 5.071, mcore: 0.000, for GC #19
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #20
+> alpha: 6.046, mcore: 0.000, for GC #20
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #21
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #21 
+fitted
+> alpha: 1.699, mcore: 0.000, for GC #23
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #30
+> alpha: 61.683, mcore: 27.008, for GC #30
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #31
+> alpha: 2.062, mcore: 0.000, for GC #31
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #38
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #38 
+> alpha: 9.328, mcore: 36.011, for GC #39
+> alpha: 8.252, mcore: 272.080, for GC #40
+fitted
+> alpha: 1.989, mcore: 0.000, for GC #42
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #44
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #44 
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.961, mcore: 0.000, for GC #50
+fitted
+fitted
+fitted
+> alpha: 14.973, mcore: 127.037, for GC #54
+> alpha: 8.434, mcore: 105.031, for GC #55
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #56
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #56 
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #58
+> alpha: 5.684, mcore: 0.000, for GC #58
+> alpha: 2.246, mcore: 0.000, for GC #59
+fitted
+fitted
+fitted
+> alpha: 1.940, mcore: 0.000, for GC #63
+> alpha: 2.016, mcore: 0.000, for GC #64
+> alpha: 74.890, mcore: 81.024, for GC #65
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #66
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #66 
+> alpha: 8.818, mcore: 279.082, for GC #67
+> alpha: 2.125, mcore: 0.000, for GC #68
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #69
+> alpha: 6.660, mcore: 0.000, for GC #69
+> alpha: 35.568, mcore: 135.040, for GC #70
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #72
+> alpha: 5.527, mcore: 0.000, for GC #72
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #76
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #76 
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #79
+> alpha: 8.972, mcore: 18.005, for GC #79
+> alpha: 2.262, mcore: 0.000, for GC #80
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #81
+> alpha: 6.625, mcore: 0.000, for GC #81
+> alpha: 48.558, mcore: 18.005, for GC #82
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #83
+> alpha: 7.066, mcore: 0.000, for GC #83
+fitted
+> alpha: 1.419, mcore: 0.000, for GC #85
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #86
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #86 
+> alpha: 39.358, mcore: 117.034, for GC #87
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #89
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #89 
+fitted
+> alpha: 29.367, mcore: 72.021, for GC #91
+fitted
+fitted
+> alpha: 8.444, mcore: 324.095, for GC #94
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #95
+> alpha: 28.003, mcore: 9.003, for GC #95
+> alpha: 1.977, mcore: 0.000, for GC #96
+fitted
+> alpha: 77.862, mcore: 54.016, for GC #98
+> alpha: 1.640, mcore: 0.000, for GC #99
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #100
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #100 
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 16.817, mcore: 153.045, for GC #112
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #113
+> alpha: 28.312, mcore: 0.000, for GC #113
+fitted
+fitted
+fitted
+fitted
+fitted
+> making master plot
+> making master plot
+> found 68 good profiles; snapshot 894
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00895_532_04_myr.txt
+> snapshot time 532.04 Myr
+> snapshot number 895
+> non-uniform radius, using virial or other
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #1
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #1 
+> alpha: 13.645, mcore: 36.011, for GC #2
+> alpha: 2.112, mcore: 0.000, for GC #3
+> alpha: 2.086, mcore: 0.000, for GC #4
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #5
+> alpha: 5.264, mcore: 0.000, for GC #5
+fitted
+> alpha: 11.531, mcore: 18.005, for GC #7
+fitted
+fitted
+> alpha: 10.820, mcore: 189.056, for GC #10
+fitted
+fitted
+> alpha: 1.805, mcore: 0.000, for GC #13
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #15
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #15 
+fitted
+fitted
+> alpha: 3.279, mcore: 0.000, for GC #18
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #19
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #19 
+fitted
+fitted
+> alpha: 2.104, mcore: 0.000, for GC #22
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.962, mcore: 0.000, for GC #27
+fitted
+> alpha: 2.039, mcore: 0.000, for GC #29
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #34
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #34 
+> alpha: 1.686, mcore: 0.000, for GC #35
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #37
+> alpha: 5.361, mcore: 0.000, for GC #37
+fitted
+fitted
+> alpha: 1.896, mcore: 0.000, for GC #40
+> alpha: 84.989, mcore: 134.039, for GC #41
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #44
+> alpha: 5.799, mcore: 0.000, for GC #44
+fitted
+> alpha: 8.084, mcore: 0.000, for GC #46
+fitted
+fitted
+> alpha: 2.070, mcore: 0.000, for GC #49
+> alpha: 1.639, mcore: 0.000, for GC #50
+fitted
+> alpha: 52.109, mcore: 0.000, for GC #52
+fitted
+fitted
+> alpha: 2.043, mcore: 0.000, for GC #55
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.886, mcore: 0.000, for GC #61
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #62
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #62 
+> alpha: 2.199, mcore: 0.000, for GC #63
+fitted
+> alpha: 10.234, mcore: 45.013, for GC #65
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.096, mcore: 0.000, for GC #70
+> alpha: 71.189, mcore: 81.024, for GC #71
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #73
+> alpha: 5.156, mcore: 0.000, for GC #73
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #75
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #75 
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #79
+> alpha: 8.963, mcore: 18.005, for GC #79
+> alpha: 87.379, mcore: 36.011, for GC #80
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #81
+> alpha: 7.738, mcore: 0.000, for GC #81
+> alpha: 1.877, mcore: 0.000, for GC #82
+> alpha: 76.395, mcore: 92.027, for GC #83
+fitted
+> alpha: 11.494, mcore: 54.016, for GC #85
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #88
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #88 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #89
+> alpha: 2.309, mcore: 0.000, for GC #89
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #90
+> alpha: 5.336, mcore: 0.000, for GC #90
+> alpha: 27.889, mcore: 72.021, for GC #91
+> alpha: 8.257, mcore: 297.087, for GC #92
+fitted
+fitted
+fitted
+> alpha: 10.195, mcore: 90.026, for GC #96
+fitted
+fitted
+> alpha: 22.266, mcore: 263.077, for GC #99
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #100
+> alpha: 6.409, mcore: 0.000, for GC #100
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #103
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #103 
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.920, mcore: 0.000, for GC #108
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #110
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #113
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #115
+> alpha: 2.299, mcore: 0.000, for GC #115
+fitted
+fitted
+fitted
+> making master plot
+> making master plot
+> found 69 good profiles; snapshot 895
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00896_532_26_myr.txt
+> snapshot time 532.26 Myr
+> snapshot number 896
+> non-uniform radius, using virial or other
+fitted
+> alpha: 9.844, mcore: 46.014, for GC #1
+> alpha: 2.076, mcore: 0.000, for GC #2
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #3
+fitted
+fitted
+> alpha: 1.658, mcore: 0.000, for GC #5
+fitted
+fitted
+fitted
+fitted
+> alpha: 76.293, mcore: 216.063, for GC #10
+> alpha: 2.110, mcore: 0.000, for GC #11
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.988, mcore: 0.000, for GC #16
+fitted
+fitted
+> alpha: 78.214, mcore: 27.008, for GC #19
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #20
+> alpha: 5.429, mcore: 0.000, for GC #20
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 25.207, mcore: 0.000, for GC #32
+fitted
+fitted
+fitted
+> alpha: 1.961, mcore: 0.000, for GC #36
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #37
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #37 
+fitted
+> alpha: 87.328, mcore: 46.014, for GC #39
+> alpha: 89.582, mcore: 115.034, for GC #40
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 39.110, mcore: 63.019, for GC #46
+> alpha: 8.181, mcore: 99.029, for GC #47
+> alpha: 1.447, mcore: 0.000, for GC #48
+fitted
+fitted
+> alpha: 2.713, mcore: 0.000, for GC #51
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #55
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #55 
+> alpha: 1.312, mcore: 0.000, for GC #56
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #58
+> alpha: 13.678, mcore: 54.016, for GC #58
+fitted
+fitted
+fitted
+> alpha: 81.701, mcore: 72.021, for GC #62
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #63
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #63 
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #68
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #68 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #69
+> alpha: 4.446, mcore: 0.000, for GC #69
+> alpha: 2.124, mcore: 0.000, for GC #70
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #71
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #71 
+> alpha: 2.016, mcore: 0.000, for GC #72
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #74
+> alpha: 4.819, mcore: 0.000, for GC #74
+fitted
+fitted
+> alpha: 1.957, mcore: 0.000, for GC #77
+> alpha: 2.967, mcore: 0.000, for GC #78
+fitted
+> alpha: 14.515, mcore: 513.151, for GC #80
+> alpha: 1.971, mcore: 0.000, for GC #81
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #82
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #82 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #83
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #83 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #84
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #84 
+fitted
+> alpha: 11.549, mcore: 270.079, for GC #86
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #87
+fitted
+> alpha: 72.935, mcore: 217.064, for GC #88
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #90
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #90 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #91
+> alpha: 5.648, mcore: 0.000, for GC #91
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> making master plot
+> making master plot
+> found 68 good profiles; snapshot 896
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00897_532_48_myr.txt
+> snapshot time 532.48 Myr
+> snapshot number 897
+> non-uniform radius, using virial or other
+fitted
+> alpha: 22.491, mcore: 55.016, for GC #1
+fitted
+> alpha: 3.608, mcore: 0.000, for GC #3
+> alpha: 2.711, mcore: 0.000, for GC #4
+> alpha: 10.152, mcore: 211.062, for GC #5
+> alpha: 1.995, mcore: 0.000, for GC #6
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #12
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #12 
+fitted
+> alpha: 1.081, mcore: 0.000, for GC #14
+fitted
+fitted
+fitted
+> alpha: 81.326, mcore: 36.011, for GC #18
+fitted
+fitted
+> alpha: 1.391, mcore: 0.000, for GC #21
+fitted
+fitted
+> alpha: 1.717, mcore: 0.000, for GC #24
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #26
+> alpha: 2.214, mcore: 0.000, for GC #26
+fitted
+fitted
+fitted
+fitted
+> alpha: 7.814, mcore: 0.000, for GC #31
+> alpha: 87.041, mcore: 48.014, for GC #32
+> alpha: 11.432, mcore: 514.151, for GC #33
+> alpha: 86.905, mcore: 55.016, for GC #34
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #35
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #35 
+fitted
+> alpha: 77.371, mcore: 124.036, for GC #37
+fitted
+fitted
+> alpha: 9.755, mcore: 45.013, for GC #40
+fitted
+fitted
+> alpha: 8.525, mcore: 45.013, for GC #43
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #44
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #44 
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.222, mcore: 0.000, for GC #49
+> alpha: 9.609, mcore: 324.095, for GC #50
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #54
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #54 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #55
+> alpha: 4.890, mcore: 0.000, for GC #55
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #57
+> alpha: 6.986, mcore: 0.000, for GC #57
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #58
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #60
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #60 
+> alpha: 9.004, mcore: 81.024, for GC #61
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #62
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #62 
+> alpha: 8.319, mcore: 9.003, for GC #63
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #68
+fitted
+fitted
+fitted
+fitted
+> alpha: 27.307, mcore: 0.000, for GC #72
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #73
+> alpha: 2.121, mcore: 0.000, for GC #73
+> alpha: 1.653, mcore: 0.000, for GC #74
+> alpha: 12.842, mcore: 54.016, for GC #75
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #76
+> alpha: 7.385, mcore: 0.000, for GC #76
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #77
+> alpha: 25.847, mcore: 0.000, for GC #77
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #78
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #78 
+> alpha: 16.816, mcore: 0.000, for GC #79
+fitted
+fitted
+fitted
+> alpha: 1.681, mcore: 0.000, for GC #83
+> alpha: 74.585, mcore: 63.019, for GC #84
+> alpha: 78.461, mcore: 252.074, for GC #85
+> alpha: 2.028, mcore: 0.000, for GC #86
+> alpha: 8.959, mcore: 253.074, for GC #87
+> alpha: 87.730, mcore: 63.019, for GC #88
+> alpha: 2.701, mcore: 0.000, for GC #89
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #92
+> alpha: 6.530, mcore: 0.000, for GC #92
+fitted
+fitted
+> alpha: 1.868, mcore: 0.000, for GC #95
+fitted
+fitted
+fitted
+> alpha: 2.072, mcore: 0.000, for GC #99
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #104
+> alpha: 6.825, mcore: 0.000, for GC #104
+fitted
+fitted
+fitted
+> making master plot
+> making master plot
+> found 60 good profiles; snapshot 897
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00898_532_73_myr.txt
+> snapshot time 532.73 Myr
+> snapshot number 898
+> non-uniform radius, using virial or other
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #2
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #2 
+fitted
+> alpha: 1.764, mcore: 0.000, for GC #4
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.134, mcore: 0.000, for GC #10
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #16
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #17
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #17 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #18
+> alpha: 9.379, mcore: 27.008, for GC #18
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #19
+> alpha: 2.004, mcore: 0.000, for GC #19
+> alpha: 1.784, mcore: 0.000, for GC #20
+fitted
+fitted
+> alpha: 1.971, mcore: 0.000, for GC #23
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #24
+> alpha: 60.182, mcore: 54.016, for GC #24
+fitted
+fitted
+fitted
+> alpha: 10.346, mcore: 234.069, for GC #28
+fitted
+> alpha: 26.521, mcore: 0.000, for GC #30
+fitted
+fitted
+> alpha: 8.394, mcore: 1054.310, for GC #33
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #34
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #34 
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #37
+> alpha: 5.058, mcore: 0.000, for GC #37
+fitted
+fitted
+> alpha: 8.743, mcore: 27.008, for GC #40
+fitted
+fitted
+> alpha: 82.992, mcore: 88.026, for GC #43
+fitted
+> alpha: 2.067, mcore: 0.000, for GC #45
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #48
+> alpha: 7.056, mcore: 0.000, for GC #48
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #53
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #53 
+> alpha: 2.447, mcore: 0.000, for GC #54
+fitted
+fitted
+fitted
+> alpha: 2.030, mcore: 0.000, for GC #58
+> alpha: 2.262, mcore: 0.000, for GC #59
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #65
+> alpha: 7.357, mcore: 0.000, for GC #65
+> alpha: 2.313, mcore: 0.000, for GC #66
+> alpha: 1.466, mcore: 0.000, for GC #67
+fitted
+fitted
+> alpha: 12.831, mcore: 36.011, for GC #70
+> alpha: 1.690, mcore: 0.000, for GC #71
+> alpha: 8.100, mcore: 81.024, for GC #72
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #73
+> alpha: 6.171, mcore: 0.000, for GC #73
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #74
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #74 
+> alpha: 16.576, mcore: 18.005, for GC #75
+fitted
+> alpha: 78.907, mcore: 72.021, for GC #77
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #78
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #78 
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #81
+fitted
+> alpha: 2.045, mcore: 0.000, for GC #82
+> alpha: 69.755, mcore: 126.037, for GC #83
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #85
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #85 
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #87
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #87 
+fitted
+> alpha: 2.359, mcore: 0.000, for GC #89
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 9.787, mcore: 207.061, for GC #95
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #99
+> alpha: 7.641, mcore: 0.000, for GC #99
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #102
+> alpha: 7.358, mcore: 0.000, for GC #102
+fitted
+fitted
+> making master plot
+> making master plot
+> found 64 good profiles; snapshot 898
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00899_532_95_myr.txt
+> snapshot time 532.95 Myr
+> snapshot number 899
+> non-uniform radius, using virial or other
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #2
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #2 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #3
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #3 
+> alpha: 1.761, mcore: 0.000, for GC #4
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #8
+> alpha: 5.722, mcore: 0.000, for GC #8
+fitted
+fitted
+> alpha: 2.049, mcore: 0.000, for GC #11
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #12
+> alpha: 2.081, mcore: 0.000, for GC #12
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #20
+> alpha: 5.191, mcore: 0.000, for GC #20
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #22
+> alpha: 8.552, mcore: 0.000, for GC #22
+> alpha: 14.111, mcore: 710.209, for GC #23
+fitted
+fitted
+> alpha: 1.811, mcore: 0.000, for GC #26
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #27
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #27 
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #32
+> alpha: 2.145, mcore: 0.000, for GC #32
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 88.545, mcore: 64.019, for GC #39
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #42
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #42 
+fitted
+> alpha: 2.143, mcore: 0.000, for GC #44
+fitted
+fitted
+> alpha: 4.821, mcore: 0.000, for GC #47
+fitted
+fitted
+fitted
+> alpha: 1.963, mcore: 0.000, for GC #51
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #52
+> alpha: 12.088, mcore: 36.011, for GC #52
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #54
+fitted
+> alpha: 39.828, mcore: 63.019, for GC #55
+> alpha: 11.552, mcore: 63.019, for GC #56
+> alpha: 12.089, mcore: 171.050, for GC #57
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #58
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #58 
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #62
+> alpha: 4.663, mcore: 0.000, for GC #62
+fitted
+fitted
+fitted
+> alpha: 2.456, mcore: 0.000, for GC #66
+fitted
+fitted
+fitted
+fitted
+> alpha: 41.501, mcore: 72.021, for GC #71
+> alpha: 12.759, mcore: 36.011, for GC #72
+fitted
+fitted
+> alpha: 25.095, mcore: 0.000, for GC #75
+> alpha: 4.033, mcore: 0.000, for GC #76
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #77
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #77 
+> alpha: 4.200, mcore: 0.000, for GC #78
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #80
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #80 
+fitted
+> alpha: 2.258, mcore: 0.000, for GC #82
+> alpha: 8.179, mcore: 90.026, for GC #83
+> alpha: 12.757, mcore: 45.013, for GC #84
+> alpha: 2.296, mcore: 0.000, for GC #85
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #86
+fitted
+fitted
+> alpha: 1.986, mcore: 0.000, for GC #88
+> alpha: 70.625, mcore: 126.037, for GC #89
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #92
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #92 
+fitted
+fitted
+fitted
+> alpha: 86.460, mcore: 36.011, for GC #96
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #97
+> alpha: 81.965, mcore: 36.011, for GC #97
+fitted
+fitted
+fitted
+> alpha: 1.830, mcore: 0.000, for GC #101
+> alpha: 9.187, mcore: 36.011, for GC #102
+fitted
+> alpha: 8.975, mcore: 0.000, for GC #104
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #106
+> alpha: 12.272, mcore: 63.019, for GC #106
+> alpha: 1.571, mcore: 0.000, for GC #107
+fitted
+fitted
+fitted
+> making master plot
+> making master plot
+> found 66 good profiles; snapshot 899
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00900_533_18_myr.txt
+> snapshot time 533.18 Myr
+> snapshot number 900
+> non-uniform radius, using virial or other
+fitted
+> alpha: 10.333, mcore: 36.011, for GC #1
+fitted
+fitted
+> alpha: 2.039, mcore: 0.000, for GC #4
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #6
+> alpha: 5.475, mcore: 0.000, for GC #6
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 11.090, mcore: 369.108, for GC #17
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #20
+> alpha: 5.384, mcore: 0.000, for GC #20
+fitted
+fitted
+> alpha: 77.026, mcore: 99.029, for GC #23
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #24
+> alpha: 2.073, mcore: 0.000, for GC #24
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #28
+> alpha: 2.096, mcore: 0.000, for GC #28
+> alpha: 68.492, mcore: 135.040, for GC #29
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 91.625, mcore: 64.019, for GC #39
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.032, mcore: 0.000, for GC #47
+fitted
+> alpha: 2.067, mcore: 0.000, for GC #49
+fitted
+fitted
+> alpha: 2.298, mcore: 0.000, for GC #52
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #53
+> alpha: 5.101, mcore: 0.000, for GC #53
+fitted
+fitted
+> alpha: 1.896, mcore: 0.000, for GC #56
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #57
+> alpha: 11.498, mcore: 0.000, for GC #57
+> alpha: 2.416, mcore: 0.000, for GC #58
+> alpha: 0.448, mcore: 0.000, for GC #59
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 9.771, mcore: 73.021, for GC #65
+> alpha: 18.419, mcore: 45.013, for GC #66
+> alpha: 11.356, mcore: 18.005, for GC #67
+fitted
+fitted
+> alpha: 12.686, mcore: 36.011, for GC #70
+fitted
+> alpha: 89.062, mcore: 45.013, for GC #72
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #73
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #73 
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #76
+> alpha: 5.805, mcore: 0.000, for GC #76
+fitted
+> alpha: 81.119, mcore: 36.011, for GC #78
+> alpha: 4.519, mcore: 0.000, for GC #79
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #82
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #82 
+> alpha: 10.552, mcore: 90.026, for GC #83
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #84
+> alpha: 5.315, mcore: 0.000, for GC #84
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #85
+> alpha: 4.364, mcore: 0.000, for GC #85
+> alpha: 22.150, mcore: 54.016, for GC #86
+> alpha: 2.023, mcore: 0.000, for GC #87
+> alpha: 12.608, mcore: 226.066, for GC #88
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #91
+> alpha: 5.813, mcore: 0.000, for GC #91
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #96
+> alpha: 5.885, mcore: 0.000, for GC #96
+fitted
+fitted
+> alpha: 10.941, mcore: 243.071, for GC #99
+> alpha: 98.949, mcore: 36.011, for GC #100
+> alpha: 8.011, mcore: 261.077, for GC #101
+> alpha: 26.154, mcore: 0.000, for GC #102
+fitted
+fitted
+fitted
+fitted
+> alpha: 16.051, mcore: 189.056, for GC #107
+fitted
+> alpha: 2.542, mcore: 0.000, for GC #109
+> making master plot
+> making master plot
+> found 68 good profiles; snapshot 900
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00901_533_40_myr.txt
+> snapshot time 533.4 Myr
+> snapshot number 901
+> non-uniform radius, using virial or other
+fitted
+> alpha: 2.105, mcore: 0.000, for GC #1
+fitted
+> alpha: 15.458, mcore: 99.029, for GC #3
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #5
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #5 
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #10
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #10 
+fitted
+fitted
+> alpha: 15.467, mcore: 477.140, for GC #13
+fitted
+fitted
+> alpha: 1.970, mcore: 0.000, for GC #16
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #24
+> alpha: 2.014, mcore: 0.000, for GC #24
+fitted
+> alpha: 1.961, mcore: 0.000, for GC #26
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #28
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #28 
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.203, mcore: 0.000, for GC #33
+> alpha: 2.081, mcore: 0.000, for GC #34
+> alpha: 9.833, mcore: 501.147, for GC #35
+fitted
+> alpha: 64.346, mcore: 328.096, for GC #37
+> alpha: 41.851, mcore: 65.019, for GC #38
+fitted
+fitted
+fitted
+fitted
+> alpha: 8.732, mcore: 40.012, for GC #43
+fitted
+> alpha: 14.863, mcore: 36.011, for GC #45
+> alpha: 2.731, mcore: 0.000, for GC #46
+fitted
+fitted
+> alpha: 12.770, mcore: 98.029, for GC #49
+fitted
+> alpha: 8.145, mcore: 27.008, for GC #51
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #53
+> alpha: 2.097, mcore: 0.000, for GC #53
+> alpha: 74.896, mcore: 81.024, for GC #54
+fitted
+fitted
+> alpha: 81.520, mcore: 36.011, for GC #57
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #58
+fitted
+fitted
+fitted
+fitted
+> alpha: 86.474, mcore: 54.016, for GC #62
+fitted
+fitted
+> alpha: 1.943, mcore: 0.000, for GC #65
+fitted
+> alpha: 2.449, mcore: 0.000, for GC #67
+> alpha: 1.769, mcore: 0.000, for GC #68
+fitted
+fitted
+fitted
+fitted
+> alpha: 20.448, mcore: 54.016, for GC #73
+fitted
+> alpha: 6.986, mcore: 0.000, for GC #75
+> alpha: 70.945, mcore: 210.062, for GC #76
+> alpha: 1.533, mcore: 0.000, for GC #77
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #78
+> alpha: 5.779, mcore: 0.000, for GC #78
+> alpha: 2.288, mcore: 0.000, for GC #79
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #80
+> alpha: 18.502, mcore: 18.005, for GC #80
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #84
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #85
+fitted
+> alpha: 1.980, mcore: 0.000, for GC #86
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 87.501, mcore: 54.016, for GC #94
+> alpha: 2.047, mcore: 0.000, for GC #95
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #96
+> alpha: 5.890, mcore: 0.000, for GC #96
+fitted
+fitted
+fitted
+> alpha: 13.792, mcore: 72.021, for GC #100
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #102
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #102 
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #104
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #104 
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #106
+> alpha: 5.933, mcore: 0.000, for GC #106
+fitted
+fitted
+fitted
+fitted
+> making master plot
+> making master plot
+> found 70 good profiles; snapshot 901
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00902_533_64_myr.txt
+> snapshot time 533.64 Myr
+> snapshot number 902
+> non-uniform radius, using virial or other
+fitted
+> alpha: 1.489, mcore: 0.000, for GC #1
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #2
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #2 
+fitted
+fitted
+> alpha: 81.593, mcore: 36.011, for GC #5
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.827, mcore: 0.000, for GC #10
+> alpha: 20.165, mcore: 0.000, for GC #11
+fitted
+fitted
+fitted
+fitted
+> alpha: 17.969, mcore: 45.013, for GC #16
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.276, mcore: 0.000, for GC #21
+fitted
+fitted
+> alpha: 9.414, mcore: 207.061, for GC #24
+> alpha: 69.959, mcore: 144.042, for GC #25
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #26
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #26 
+fitted
+fitted
+> alpha: 9.514, mcore: 493.145, for GC #29
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #30
+> alpha: 5.979, mcore: 0.000, for GC #30
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #32
+> alpha: 11.681, mcore: 18.005, for GC #32
+fitted
+fitted
+fitted
+> alpha: 8.171, mcore: 1153.339, for GC #36
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #40
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #40 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #41
+> alpha: 6.065, mcore: 0.000, for GC #41
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #43
+> alpha: 2.011, mcore: 0.000, for GC #43
+> alpha: 79.189, mcore: 18.005, for GC #44
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #45
+> alpha: 86.201, mcore: 37.011, for GC #45
+> alpha: 21.854, mcore: 127.037, for GC #46
+fitted
+> alpha: 1.923, mcore: 0.000, for GC #48
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #50
+fitted
+> alpha: 2.643, mcore: 0.000, for GC #51
+fitted
+fitted
+> alpha: 1.580, mcore: 0.000, for GC #54
+fitted
+> alpha: 1.703, mcore: 0.000, for GC #56
+fitted
+fitted
+fitted
+> alpha: 10.873, mcore: 306.090, for GC #60
+> alpha: 9.532, mcore: 20.006, for GC #61
+> alpha: 1.803, mcore: 0.000, for GC #62
+fitted
+fitted
+> alpha: 82.839, mcore: 18.005, for GC #65
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #66
+> alpha: 11.874, mcore: 81.024, for GC #66
+fitted
+> alpha: 9.920, mcore: 570.167, for GC #68
+fitted
+fitted
+> alpha: 1.880, mcore: 0.000, for GC #71
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #74
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #74 
+fitted
+fitted
+> alpha: 12.743, mcore: 36.011, for GC #77
+fitted
+> alpha: 2.199, mcore: 0.000, for GC #79
+fitted
+> alpha: 10.592, mcore: 181.053, for GC #81
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #82
+> alpha: 5.309, mcore: 0.000, for GC #82
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 96.960, mcore: 36.011, for GC #88
+> alpha: 79.017, mcore: 54.016, for GC #89
+> alpha: 12.831, mcore: 153.045, for GC #90
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #95
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #95 
+> alpha: 37.545, mcore: 0.000, for GC #96
+> alpha: 9.720, mcore: 36.011, for GC #97
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #101
+> alpha: 11.794, mcore: 18.005, for GC #101
+> alpha: 2.173, mcore: 0.000, for GC #102
+fitted
+> making master plot
+> making master plot
+> found 60 good profiles; snapshot 902
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00903_533_86_myr.txt
+> snapshot time 533.86 Myr
+> snapshot number 903
+> non-uniform radius, using virial or other
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #1
+> alpha: 6.180, mcore: 0.000, for GC #1
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #2
+> alpha: 5.671, mcore: 0.000, for GC #2
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #9
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #9 
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #12
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #12 
+> alpha: 2.175, mcore: 0.000, for GC #13
+fitted
+> alpha: 3.530, mcore: 0.000, for GC #15
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #20
+> alpha: 5.665, mcore: 0.000, for GC #20
+> alpha: 12.519, mcore: 252.074, for GC #21
+> alpha: 73.940, mcore: 54.016, for GC #22
+> alpha: 10.070, mcore: 18.005, for GC #23
+fitted
+> alpha: 72.805, mcore: 117.034, for GC #25
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #26
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #26 
+> alpha: 14.355, mcore: 338.099, for GC #27
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 8.171, mcore: 48.014, for GC #33
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #36
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #36 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #37
+> alpha: 5.446, mcore: 0.000, for GC #37
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #41
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #41 
+> alpha: 2.130, mcore: 0.000, for GC #42
+fitted
+fitted
+> alpha: 75.261, mcore: 213.063, for GC #45
+> alpha: 1.568, mcore: 0.000, for GC #46
+fitted
+fitted
+fitted
+> alpha: 99.999, mcore: 198.058, for GC #50
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #51
+> alpha: 71.056, mcore: 18.005, for GC #51
+> alpha: 2.877, mcore: 0.000, for GC #52
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #53
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #53 
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #55
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #55 
+> alpha: 1.982, mcore: 0.000, for GC #56
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #62
+> alpha: 4.537, mcore: 0.000, for GC #62
+> alpha: 12.454, mcore: 306.090, for GC #63
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #68
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #68 
+fitted
+fitted
+fitted
+> alpha: 45.882, mcore: 63.019, for GC #72
+fitted
+fitted
+> alpha: 1.877, mcore: 0.000, for GC #75
+fitted
+fitted
+fitted
+> alpha: 44.172, mcore: 72.021, for GC #79
+fitted
+> alpha: 2.082, mcore: 0.000, for GC #81
+> alpha: 2.168, mcore: 0.000, for GC #82
+> alpha: 2.011, mcore: 0.000, for GC #83
+> alpha: 1.947, mcore: 0.000, for GC #84
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #85
+> alpha: 68.230, mcore: 18.005, for GC #85
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 10.524, mcore: 72.021, for GC #92
+> alpha: 8.373, mcore: 27.008, for GC #93
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 5.144, mcore: 0.000, for GC #99
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #100
+fitted
+> alpha: 9.679, mcore: 27.008, for GC #101
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #102
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #102 
+fitted
+fitted
+> alpha: 1.817, mcore: 0.000, for GC #105
+> alpha: 9.422, mcore: 324.095, for GC #106
+fitted
+> making master plot
+> making master plot
+> found 64 good profiles; snapshot 903
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00904_534_06_myr.txt
+> snapshot time 534.06 Myr
+> snapshot number 904
+> non-uniform radius, using virial or other
+fitted
+> alpha: 1.582, mcore: 0.000, for GC #1
+fitted
+> alpha: 1.752, mcore: 0.000, for GC #3
+> alpha: 24.219, mcore: 9.003, for GC #4
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #16
+> alpha: 4.803, mcore: 0.000, for GC #16
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 16.712, mcore: 198.058, for GC #23
+> alpha: 84.944, mcore: 63.019, for GC #24
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #25
+> alpha: 16.319, mcore: 18.005, for GC #25
+> alpha: 64.228, mcore: 135.040, for GC #26
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #27
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #27 
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.849, mcore: 0.000, for GC #33
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #37
+> alpha: 5.478, mcore: 0.000, for GC #37
+> alpha: 9.098, mcore: 387.114, for GC #38
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #42
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #42 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #43
+> alpha: 6.957, mcore: 0.000, for GC #43
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #44
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #44 
+> alpha: 75.454, mcore: 216.063, for GC #45
+> alpha: 4.456, mcore: 0.000, for GC #46
+fitted
+fitted
+> alpha: 10.384, mcore: 185.054, for GC #49
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #51
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #51 
+> alpha: 3.487, mcore: 0.000, for GC #52
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #53
+> alpha: 65.697, mcore: 63.019, for GC #53
+fitted
+> alpha: 2.115, mcore: 0.000, for GC #55
+fitted
+> alpha: 31.141, mcore: 180.053, for GC #57
+fitted
+> alpha: 2.792, mcore: 0.000, for GC #59
+fitted
+fitted
+fitted
+> alpha: 13.908, mcore: 336.099, for GC #63
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #67
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #67 
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #69
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #69 
+fitted
+fitted
+> alpha: 0.819, mcore: 0.000, for GC #72
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #74
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #74 
+> alpha: 14.479, mcore: 27.008, for GC #75
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #76
+> alpha: 5.363, mcore: 0.000, for GC #76
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #79
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #79 
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #85
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #85 
+> alpha: 12.863, mcore: 63.019, for GC #86
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.634, mcore: 0.000, for GC #91
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #92
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #92 
+> alpha: 26.926, mcore: 171.050, for GC #93
+fitted
+fitted
+fitted
+> alpha: 4.084, mcore: 0.000, for GC #97
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #98
+> alpha: 6.599, mcore: 0.000, for GC #98
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #100
+> alpha: 5.938, mcore: 0.000, for GC #100
+fitted
+fitted
+fitted
+> alpha: 22.553, mcore: 180.053, for GC #104
+> alpha: 9.750, mcore: 306.090, for GC #105
+fitted
+> making master plot
+> making master plot
+> found 65 good profiles; snapshot 904
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00905_534_27_myr.txt
+> snapshot time 534.27 Myr
+> snapshot number 905
+> non-uniform radius, using virial or other
+fitted
+> alpha: 8.424, mcore: 36.011, for GC #1
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #2
+> alpha: 7.602, mcore: 0.000, for GC #2
+fitted
+fitted
+fitted
+> alpha: 0.678, mcore: 0.000, for GC #6
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #7
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.123, mcore: 0.000, for GC #14
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #17
+> alpha: 4.764, mcore: 0.000, for GC #17
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.510, mcore: 0.000, for GC #22
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #23
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #23 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #24
+> alpha: 10.271, mcore: 9.003, for GC #24
+> alpha: 75.803, mcore: 117.034, for GC #25
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #26
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #26 
+fitted
+> alpha: 1.737, mcore: 0.000, for GC #28
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #29
+> alpha: 2.765, mcore: 0.000, for GC #29
+fitted
+> alpha: 58.075, mcore: 1149.338, for GC #31
+> alpha: 1.799, mcore: 0.000, for GC #32
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 81.513, mcore: 146.043, for GC #42
+fitted
+> alpha: 15.812, mcore: 54.016, for GC #44
+> alpha: 2.235, mcore: 0.000, for GC #45
+> alpha: 77.562, mcore: 180.053, for GC #46
+> alpha: 2.218, mcore: 0.000, for GC #47
+> alpha: 2.107, mcore: 0.000, for GC #48
+> alpha: 33.738, mcore: 99.029, for GC #49
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #50
+> alpha: 5.368, mcore: 0.000, for GC #50
+> alpha: 2.106, mcore: 0.000, for GC #51
+fitted
+> alpha: 9.608, mcore: 162.048, for GC #53
+fitted
+> alpha: 8.098, mcore: 36.011, for GC #55
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #56
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #56 
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #59
+> alpha: 6.969, mcore: 0.000, for GC #59
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #60
+> alpha: 2.016, mcore: 0.000, for GC #60
+> alpha: 13.995, mcore: 360.106, for GC #61
+> alpha: 38.544, mcore: 10.003, for GC #62
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #67
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #67 
+> alpha: 15.314, mcore: 81.024, for GC #68
+fitted
+> alpha: 20.992, mcore: 207.061, for GC #70
+> alpha: 83.678, mcore: 72.021, for GC #71
+fitted
+> alpha: 76.988, mcore: 30.009, for GC #73
+fitted
+> alpha: 10.001, mcore: 210.062, for GC #75
+fitted
+fitted
+fitted
+fitted
+> alpha: 41.370, mcore: 36.011, for GC #80
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #81
+> alpha: 63.593, mcore: 18.005, for GC #81
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #82
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #82 
+fitted
+> alpha: 61.813, mcore: 45.013, for GC #84
+> alpha: 10.766, mcore: 27.008, for GC #85
+> alpha: 4.007, mcore: 0.000, for GC #86
+fitted
+fitted
+fitted
+fitted
+> alpha: 3.917, mcore: 0.000, for GC #91
+> alpha: 8.446, mcore: 18.005, for GC #92
+fitted
+fitted
+> alpha: 0.977, mcore: 0.000, for GC #95
+> alpha: 74.179, mcore: 63.019, for GC #96
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #97
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #97 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #98
+> alpha: 4.384, mcore: 0.000, for GC #98
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #102
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #102 
+fitted
+fitted
+> making master plot
+> making master plot
+> found 56 good profiles; snapshot 905
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00906_534_47_myr.txt
+> snapshot time 534.47 Myr
+> snapshot number 906
+> non-uniform radius, using virial or other
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #1
+> alpha: 2.434, mcore: 0.000, for GC #1
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #2
+> alpha: 5.866, mcore: 0.000, for GC #2
+> alpha: 2.310, mcore: 0.000, for GC #3
+fitted
+> alpha: 10.636, mcore: 1696.498, for GC #5
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.570, mcore: 0.000, for GC #10
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #11
+> alpha: 35.299, mcore: 0.000, for GC #11
+fitted
+> alpha: 37.449, mcore: 63.019, for GC #13
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #14
+> alpha: 5.432, mcore: 0.000, for GC #14
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #23
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #24
+> alpha: 5.032, mcore: 0.000, for GC #24
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #25
+> alpha: 19.216, mcore: 9.003, for GC #25
+fitted
+> alpha: 1.934, mcore: 0.000, for GC #27
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #30
+> alpha: 4.538, mcore: 0.000, for GC #30
+fitted
+> alpha: 15.710, mcore: 496.146, for GC #32
+> alpha: 61.408, mcore: 1148.337, for GC #33
+fitted
+> alpha: 62.375, mcore: 181.053, for GC #35
+fitted
+> alpha: 64.928, mcore: 715.210, for GC #37
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #41
+> alpha: 58.244, mcore: 0.000, for GC #41
+> alpha: 2.379, mcore: 0.000, for GC #42
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #44
+> alpha: 6.527, mcore: 0.000, for GC #44
+fitted
+> alpha: 2.374, mcore: 0.000, for GC #46
+fitted
+fitted
+fitted
+> alpha: 2.215, mcore: 0.000, for GC #50
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #53
+> alpha: 39.447, mcore: 18.005, for GC #53
+> alpha: 2.324, mcore: 0.000, for GC #54
+fitted
+fitted
+> alpha: 8.739, mcore: 162.048, for GC #57
+fitted
+fitted
+fitted
+> alpha: 13.855, mcore: 45.013, for GC #61
+fitted
+> alpha: 2.816, mcore: 0.000, for GC #63
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #67
+> alpha: 7.369, mcore: 0.000, for GC #67
+> alpha: 8.388, mcore: 306.090, for GC #68
+> alpha: 90.128, mcore: 117.034, for GC #69
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #73
+> alpha: 5.447, mcore: 0.000, for GC #73
+> alpha: 1.813, mcore: 0.000, for GC #74
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #76
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #76 
+> alpha: 27.330, mcore: 27.008, for GC #77
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #79
+> alpha: 5.265, mcore: 0.000, for GC #79
+> alpha: 1.752, mcore: 0.000, for GC #80
+> alpha: 9.172, mcore: 369.108, for GC #81
+> alpha: 1.998, mcore: 0.000, for GC #82
+fitted
+fitted
+> alpha: 8.429, mcore: 45.013, for GC #85
+fitted
+> alpha: 1.858, mcore: 0.000, for GC #87
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #89
+> alpha: 2.090, mcore: 0.000, for GC #89
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #90
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #90 
+fitted
+fitted
+> alpha: 7.411, mcore: 0.000, for GC #93
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #94
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #94 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #95
+> alpha: 5.312, mcore: 0.000, for GC #95
+fitted
+> alpha: 10.259, mcore: 378.111, for GC #97
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #101
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #101 
+> making master plot
+> making master plot
+> found 56 good profiles; snapshot 906
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00907_534_68_myr.txt
+> snapshot time 534.68 Myr
+> snapshot number 907
+> non-uniform radius, using virial or other
+fitted
+> alpha: 2.347, mcore: 0.000, for GC #1
+fitted
+fitted
+fitted
+> alpha: 0.635, mcore: 0.000, for GC #5
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #7
+> alpha: 9.946, mcore: 0.000, for GC #7
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #16
+> alpha: 4.925, mcore: 0.000, for GC #16
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #21
+> alpha: 16.982, mcore: 18.005, for GC #21
+> alpha: 2.405, mcore: 0.000, for GC #22
+fitted
+fitted
+fitted
+> alpha: 2.100, mcore: 0.000, for GC #26
+> alpha: 2.725, mcore: 0.000, for GC #27
+fitted
+fitted
+> alpha: 16.130, mcore: 1059.311, for GC #30
+> alpha: 78.447, mcore: 63.019, for GC #31
+fitted
+> alpha: 70.551, mcore: 131.038, for GC #33
+> alpha: 1.755, mcore: 0.000, for GC #34
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.449, mcore: 0.000, for GC #39
+> alpha: 10.063, mcore: 9.003, for GC #40
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #45
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #45 
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #48
+> alpha: 78.334, mcore: 36.011, for GC #48
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #51
+> alpha: 5.699, mcore: 0.000, for GC #51
+fitted
+> alpha: 65.390, mcore: 216.063, for GC #53
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #54
+> alpha: 19.707, mcore: 63.019, for GC #54
+fitted
+> alpha: 8.512, mcore: 198.058, for GC #56
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #57
+> alpha: 4.194, mcore: 0.000, for GC #57
+> alpha: 78.271, mcore: 63.019, for GC #58
+> alpha: 2.042, mcore: 0.000, for GC #59
+> alpha: 2.012, mcore: 0.000, for GC #60
+> alpha: 79.169, mcore: 45.013, for GC #61
+> alpha: 1.963, mcore: 0.000, for GC #62
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #63
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #63 
+fitted
+fitted
+fitted
+fitted
+> alpha: 29.886, mcore: 18.005, for GC #68
+> alpha: 2.020, mcore: 0.000, for GC #69
+fitted
+fitted
+fitted
+fitted
+> alpha: 8.047, mcore: 351.103, for GC #74
+> alpha: 21.892, mcore: 0.000, for GC #75
+fitted
+> alpha: 9.329, mcore: 549.161, for GC #77
+> alpha: 1.998, mcore: 0.000, for GC #78
+> alpha: 20.370, mcore: 27.008, for GC #79
+> alpha: 1.881, mcore: 0.000, for GC #80
+> alpha: 15.921, mcore: 117.034, for GC #81
+fitted
+fitted
+> alpha: 2.472, mcore: 0.000, for GC #84
+> alpha: 16.286, mcore: 36.011, for GC #85
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #89
+> alpha: 65.534, mcore: 0.000, for GC #89
+> alpha: 1.351, mcore: 0.000, for GC #90
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.473, mcore: 0.000, for GC #95
+> alpha: 80.050, mcore: 144.042, for GC #96
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #97
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #97 
+> alpha: 9.786, mcore: 495.145, for GC #98
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #101
+> alpha: 10.891, mcore: 9.003, for GC #101
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #103
+> alpha: 1.796, mcore: 0.000, for GC #103
+> making master plot
+> making master plot
+> found 58 good profiles; snapshot 907
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00908_534_90_myr.txt
+> snapshot time 534.9 Myr
+> snapshot number 908
+> non-uniform radius, using virial or other
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #1
+> alpha: 7.596, mcore: 0.000, for GC #1
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #2
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #2 
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #10
+> alpha: 9.690, mcore: 0.000, for GC #10
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #14
+> alpha: 4.890, mcore: 0.000, for GC #14
+> alpha: 13.927, mcore: 234.069, for GC #15
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #19
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #20
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #20 
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #24
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #24 
+fitted
+fitted
+> alpha: 1.558, mcore: 0.000, for GC #27
+fitted
+fitted
+> alpha: 11.930, mcore: 452.133, for GC #30
+> alpha: 9.856, mcore: 1156.340, for GC #31
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #35
+fitted
+> alpha: 2.119, mcore: 0.000, for GC #36
+fitted
+fitted
+fitted
+> alpha: 1.493, mcore: 0.000, for GC #40
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #41
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #41 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #42
+fitted
+> alpha: 12.616, mcore: 9.003, for GC #43
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #48
+> alpha: 7.355, mcore: 0.000, for GC #48
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #49
+> alpha: 6.689, mcore: 0.000, for GC #49
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #50
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #50 
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #52
+> alpha: 9.568, mcore: 0.000, for GC #52
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #54
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #54 
+fitted
+> alpha: 1.964, mcore: 0.000, for GC #56
+> alpha: 1.978, mcore: 0.000, for GC #57
+> alpha: 10.808, mcore: 207.061, for GC #58
+fitted
+fitted
+> alpha: 52.812, mcore: 612.180, for GC #61
+> alpha: 26.305, mcore: 0.000, for GC #62
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 99.994, mcore: 27.008, for GC #68
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #69
+> alpha: 4.438, mcore: 0.000, for GC #69
+> alpha: 8.287, mcore: 315.093, for GC #70
+> alpha: 99.986, mcore: 207.061, for GC #71
+fitted
+fitted
+fitted
+> alpha: 8.642, mcore: 414.122, for GC #75
+> alpha: 1.132, mcore: 0.000, for GC #76
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #79
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #79 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #80
+> alpha: 5.424, mcore: 0.000, for GC #80
+fitted
+> alpha: 1.889, mcore: 0.000, for GC #82
+> alpha: 2.040, mcore: 0.000, for GC #83
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #91
+> alpha: 9.066, mcore: 0.000, for GC #91
+> alpha: 88.886, mcore: 45.013, for GC #92
+fitted
+fitted
+> alpha: 10.874, mcore: 0.000, for GC #95
+> alpha: 2.169, mcore: 0.000, for GC #96
+> alpha: 1.262, mcore: 0.000, for GC #97
+> alpha: 9.036, mcore: 180.053, for GC #98
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #103
+> alpha: 1.944, mcore: 0.000, for GC #103
+fitted
+fitted
+> making master plot
+> making master plot
+> found 65 good profiles; snapshot 908
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00909_535_11_myr.txt
+> snapshot time 535.11 Myr
+> snapshot number 909
+> non-uniform radius, using virial or other
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #4
+> alpha: 67.883, mcore: 45.013, for GC #4
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.109, mcore: 0.000, for GC #11
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #15
+> alpha: 19.467, mcore: 0.000, for GC #15
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.941, mcore: 0.000, for GC #23
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #26
+> alpha: 79.485, mcore: 27.008, for GC #26
+fitted
+fitted
+> alpha: 77.188, mcore: 86.025, for GC #29
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.969, mcore: 0.000, for GC #34
+> alpha: 10.069, mcore: 150.044, for GC #35
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #39
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #39 
+fitted
+fitted
+> alpha: 1.799, mcore: 0.000, for GC #42
+fitted
+> alpha: 9.914, mcore: 117.034, for GC #44
+fitted
+fitted
+> alpha: 1.917, mcore: 0.000, for GC #47
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #50
+> alpha: 6.026, mcore: 0.000, for GC #50
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #52
+> alpha: 18.885, mcore: 36.011, for GC #52
+> alpha: 1.901, mcore: 0.000, for GC #53
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #54
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #54 
+> alpha: 9.842, mcore: 45.013, for GC #55
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #56
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #56 
+fitted
+fitted
+> alpha: 12.425, mcore: 108.032, for GC #59
+> alpha: 1.950, mcore: 0.000, for GC #60
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #62
+> alpha: 5.366, mcore: 0.000, for GC #62
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #65
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #65 
+> alpha: 8.939, mcore: 441.130, for GC #66
+> alpha: 15.956, mcore: 72.021, for GC #67
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #72
+> alpha: 4.988, mcore: 0.000, for GC #72
+> alpha: 8.747, mcore: 275.081, for GC #73
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.539, mcore: 0.000, for GC #79
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #83
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #83 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #84
+> alpha: 5.882, mcore: 0.000, for GC #84
+> alpha: 2.607, mcore: 0.000, for GC #85
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #86
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #86 
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #93
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #93 
+fitted
+fitted
+fitted
+> alpha: 11.256, mcore: 153.045, for GC #97
+fitted
+fitted
+fitted
+> alpha: 84.888, mcore: 63.019, for GC #101
+> alpha: 0.847, mcore: 0.000, for GC #102
+> alpha: 16.824, mcore: 99.029, for GC #103
+fitted
+fitted
+fitted
+> alpha: 1.595, mcore: 0.000, for GC #107
+fitted
+fitted
+> making master plot
+> making master plot
+> found 73 good profiles; snapshot 909
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00910_535_33_myr.txt
+> snapshot time 535.33 Myr
+> snapshot number 910
+> non-uniform radius, using virial or other
+fitted
+> alpha: 2.062, mcore: 0.000, for GC #1
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #2
+> alpha: 2.462, mcore: 0.000, for GC #2
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #3
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #3 
+> alpha: 2.270, mcore: 0.000, for GC #4
+fitted
+fitted
+> alpha: 2.047, mcore: 0.000, for GC #7
+fitted
+fitted
+fitted
+fitted
+> alpha: 8.667, mcore: 0.000, for GC #12
+fitted
+> alpha: 1.747, mcore: 0.000, for GC #14
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #15
+> alpha: 9.239, mcore: 0.000, for GC #15
+fitted
+> alpha: 25.909, mcore: 63.019, for GC #17
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #31
+> alpha: 45.034, mcore: 18.005, for GC #31
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.971, mcore: 0.000, for GC #38
+fitted
+fitted
+fitted
+> alpha: 1.982, mcore: 0.000, for GC #42
+> alpha: 2.142, mcore: 0.000, for GC #43
+> alpha: 5.565, mcore: 0.000, for GC #44
+> alpha: 1.901, mcore: 0.000, for GC #45
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 73.268, mcore: 108.032, for GC #53
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #56
+> alpha: 19.539, mcore: 36.011, for GC #56
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #59
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #59 
+> alpha: 64.775, mcore: 99.029, for GC #60
+> alpha: 1.873, mcore: 0.000, for GC #61
+fitted
+> alpha: 21.325, mcore: 117.034, for GC #63
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #66
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #67
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #67 
+fitted
+> alpha: 12.549, mcore: 45.013, for GC #69
+> alpha: 12.848, mcore: 450.132, for GC #70
+> alpha: 17.514, mcore: 36.011, for GC #71
+fitted
+> alpha: 3.385, mcore: 0.000, for GC #73
+fitted
+fitted
+> alpha: 2.300, mcore: 0.000, for GC #76
+fitted
+fitted
+fitted
+> alpha: 11.071, mcore: 423.124, for GC #80
+fitted
+fitted
+fitted
+fitted
+> alpha: 9.343, mcore: 18.005, for GC #85
+> alpha: 2.014, mcore: 0.000, for GC #86
+> alpha: 2.663, mcore: 0.000, for GC #87
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #89
+> alpha: 5.116, mcore: 0.000, for GC #89
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #92
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #92 
+fitted
+fitted
+fitted
+fitted
+> alpha: 9.172, mcore: 207.061, for GC #97
+> alpha: 19.210, mcore: 63.019, for GC #98
+fitted
+> alpha: 80.836, mcore: 126.037, for GC #100
+> alpha: 15.153, mcore: 36.011, for GC #101
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #102
+> alpha: 5.285, mcore: 0.000, for GC #102
+> alpha: 2.082, mcore: 0.000, for GC #103
+> alpha: 47.742, mcore: 27.008, for GC #104
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 15.027, mcore: 270.079, for GC #112
+> making master plot
+> making master plot
+> found 72 good profiles; snapshot 910
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00911_535_55_myr.txt
+> snapshot time 535.55 Myr
+> snapshot number 911
+> non-uniform radius, using virial or other
+fitted
+fitted
+> alpha: 2.128, mcore: 0.000, for GC #2
+fitted
+> alpha: 2.141, mcore: 0.000, for GC #4
+fitted
+fitted
+> alpha: 2.293, mcore: 0.000, for GC #7
+fitted
+fitted
+fitted
+> alpha: 2.228, mcore: 0.000, for GC #11
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #12
+> alpha: 5.342, mcore: 0.000, for GC #12
+> alpha: 74.219, mcore: 81.024, for GC #13
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #15
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #15 
+fitted
+> alpha: 37.322, mcore: 38.011, for GC #17
+> alpha: 5.171, mcore: 0.000, for GC #18
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #27
+> alpha: 24.370, mcore: 0.000, for GC #27
+fitted
+fitted
+fitted
+> alpha: 1.713, mcore: 0.000, for GC #31
+fitted
+> alpha: 1.949, mcore: 0.000, for GC #33
+fitted
+> alpha: 1.840, mcore: 0.000, for GC #35
+> alpha: 8.313, mcore: 1126.331, for GC #36
+fitted
+fitted
+> alpha: 1.858, mcore: 0.000, for GC #39
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #43
+> alpha: 5.639, mcore: 0.000, for GC #43
+> alpha: 31.784, mcore: 36.011, for GC #44
+> alpha: 2.097, mcore: 0.000, for GC #45
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #47
+> alpha: 5.685, mcore: 0.000, for GC #47
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #48
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #48 
+fitted
+> alpha: 2.112, mcore: 0.000, for GC #50
+fitted
+> alpha: 1.827, mcore: 0.000, for GC #52
+fitted
+fitted
+fitted
+fitted
+> alpha: 10.849, mcore: 9.003, for GC #57
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #58
+> alpha: 4.099, mcore: 0.000, for GC #58
+> alpha: 13.042, mcore: 63.019, for GC #59
+fitted
+> alpha: 2.052, mcore: 0.000, for GC #61
+> alpha: 15.988, mcore: 45.013, for GC #62
+fitted
+fitted
+> alpha: 87.818, mcore: 189.056, for GC #65
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #66
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #66 
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #68
+> alpha: 14.596, mcore: 0.000, for GC #68
+> alpha: 10.008, mcore: 36.011, for GC #69
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #71
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #71 
+> alpha: 39.878, mcore: 72.021, for GC #72
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #73
+> alpha: 4.229, mcore: 0.000, for GC #73
+> alpha: 39.121, mcore: 27.008, for GC #74
+> alpha: 43.333, mcore: 72.021, for GC #75
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #76
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #76 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #77
+> alpha: 11.720, mcore: 18.005, for GC #77
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #78
+> alpha: 6.712, mcore: 0.000, for GC #78
+fitted
+> alpha: 44.246, mcore: 18.005, for GC #80
+fitted
+fitted
+fitted
+> alpha: 8.413, mcore: 245.072, for GC #84
+fitted
+fitted
+fitted
+> alpha: 26.178, mcore: 120.035, for GC #88
+fitted
+> alpha: 91.761, mcore: 54.016, for GC #90
+fitted
+> alpha: 2.135, mcore: 0.000, for GC #92
+> alpha: 2.196, mcore: 0.000, for GC #93
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #94
+> alpha: 12.117, mcore: 0.000, for GC #94
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #98
+> alpha: 5.092, mcore: 0.000, for GC #98
+> alpha: 2.112, mcore: 0.000, for GC #99
+fitted
+fitted
+> alpha: 41.246, mcore: 27.008, for GC #102
+> alpha: 9.992, mcore: 36.011, for GC #103
+fitted
+fitted
+> alpha: 1.101, mcore: 0.000, for GC #106
+> alpha: 17.952, mcore: 63.019, for GC #107
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #108
+> alpha: 37.742, mcore: 18.005, for GC #108
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> making master plot
+> making master plot
+> found 64 good profiles; snapshot 911
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00912_535_75_myr.txt
+> snapshot time 535.75 Myr
+> snapshot number 912
+> non-uniform radius, using virial or other
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.959, mcore: 0.000, for GC #4
+fitted
+fitted
+> alpha: 8.263, mcore: 0.000, for GC #7
+fitted
+fitted
+> alpha: 23.030, mcore: 207.061, for GC #10
+> alpha: 1.998, mcore: 0.000, for GC #11
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #13
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #13 
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #16
+> alpha: 71.230, mcore: 10.003, for GC #16
+fitted
+> alpha: 2.387, mcore: 0.000, for GC #18
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.930, mcore: 0.000, for GC #28
+fitted
+fitted
+> alpha: 2.034, mcore: 0.000, for GC #31
+> alpha: 11.200, mcore: 140.041, for GC #32
+fitted
+> alpha: 9.367, mcore: 1078.317, for GC #34
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #38
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #38 
+fitted
+fitted
+> alpha: 79.936, mcore: 58.017, for GC #41
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #42
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #42 
+> alpha: 2.087, mcore: 0.000, for GC #43
+fitted
+> alpha: 10.664, mcore: 9.003, for GC #45
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #48
+> alpha: 44.487, mcore: 18.005, for GC #48
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #53
+> alpha: 5.791, mcore: 0.000, for GC #53
+> alpha: 14.384, mcore: 324.095, for GC #54
+fitted
+> alpha: 1.839, mcore: 0.000, for GC #56
+> alpha: 2.084, mcore: 0.000, for GC #57
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #58
+> alpha: 79.350, mcore: 18.005, for GC #58
+fitted
+> alpha: 79.013, mcore: 72.021, for GC #60
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #61
+> alpha: 6.908, mcore: 0.000, for GC #61
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #62
+> alpha: 5.829, mcore: 0.000, for GC #62
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #64
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #64 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #65
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #65 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #66
+> alpha: 5.807, mcore: 0.000, for GC #66
+fitted
+> alpha: 1.880, mcore: 0.000, for GC #68
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #70
+> alpha: 8.049, mcore: 0.000, for GC #70
+fitted
+fitted
+> alpha: 3.261, mcore: 0.000, for GC #73
+fitted
+fitted
+fitted
+> alpha: 1.759, mcore: 0.000, for GC #77
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #79
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #79 
+fitted
+fitted
+> alpha: 14.016, mcore: 50.015, for GC #82
+fitted
+fitted
+> alpha: 4.086, mcore: 0.000, for GC #85
+fitted
+> alpha: 3.904, mcore: 0.000, for GC #87
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #88
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #88 
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #91
+> alpha: 2.047, mcore: 0.000, for GC #91
+fitted
+fitted
+> alpha: 13.492, mcore: 144.042, for GC #94
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #101
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #101 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #102
+> alpha: 18.596, mcore: 18.005, for GC #102
+> alpha: 2.196, mcore: 0.000, for GC #103
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #104
+> alpha: 4.396, mcore: 0.000, for GC #104
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> making master plot
+> making master plot
+> found 70 good profiles; snapshot 912
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00913_535_97_myr.txt
+> snapshot time 535.97 Myr
+> snapshot number 913
+> non-uniform radius, using virial or other
+fitted
+> alpha: 12.748, mcore: 0.000, for GC #1
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.962, mcore: 0.000, for GC #6
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 12.986, mcore: 531.156, for GC #13
+> alpha: 1.897, mcore: 0.000, for GC #14
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 9.656, mcore: 108.032, for GC #23
+fitted
+fitted
+> alpha: 2.248, mcore: 0.000, for GC #26
+fitted
+fitted
+> alpha: 17.266, mcore: 0.000, for GC #29
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #30
+> alpha: 10.963, mcore: 0.000, for GC #30
+fitted
+> alpha: 8.661, mcore: 1077.316, for GC #32
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #36
+> alpha: 6.914, mcore: 0.000, for GC #36
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #37
+> alpha: 3.933, mcore: 0.000, for GC #37
+> alpha: 2.019, mcore: 0.000, for GC #38
+> alpha: 8.862, mcore: 36.011, for GC #39
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #40
+> alpha: 5.063, mcore: 0.000, for GC #40
+> alpha: 2.945, mcore: 0.000, for GC #41
+> alpha: 89.050, mcore: 117.034, for GC #42
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 72.658, mcore: 27.008, for GC #48
+fitted
+fitted
+> alpha: 2.221, mcore: 0.000, for GC #51
+fitted
+> alpha: 71.594, mcore: 36.011, for GC #53
+> alpha: 2.015, mcore: 0.000, for GC #54
+fitted
+fitted
+> alpha: 1.764, mcore: 0.000, for GC #57
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #58
+> alpha: 6.580, mcore: 0.000, for GC #58
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 8.582, mcore: 10.003, for GC #64
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #65
+> alpha: 38.143, mcore: 20.006, for GC #65
+fitted
+> alpha: 2.155, mcore: 0.000, for GC #67
+> alpha: 13.858, mcore: 171.050, for GC #68
+fitted
+fitted
+fitted
+> alpha: 9.882, mcore: 10.003, for GC #72
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #74
+> alpha: 5.598, mcore: 0.000, for GC #74
+> alpha: 14.393, mcore: 0.000, for GC #75
+> alpha: 9.617, mcore: 310.091, for GC #76
+fitted
+> alpha: 2.263, mcore: 0.000, for GC #78
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #81
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #84
+> alpha: 2.109, mcore: 0.000, for GC #84
+fitted
+fitted
+fitted
+> alpha: 73.968, mcore: 63.019, for GC #88
+fitted
+fitted
+> alpha: 9.077, mcore: 90.026, for GC #91
+> alpha: 2.155, mcore: 0.000, for GC #92
+> alpha: 2.189, mcore: 0.000, for GC #93
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #94
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #94 
+> alpha: 5.627, mcore: 0.000, for GC #95
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> making master plot
+> making master plot
+> found 64 good profiles; snapshot 913
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00914_536_19_myr.txt
+> snapshot time 536.19 Myr
+> snapshot number 914
+> non-uniform radius, using virial or other
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #1
+> alpha: 3.943, mcore: 0.000, for GC #1
+fitted
+fitted
+> alpha: 2.524, mcore: 0.000, for GC #4
+> alpha: 2.669, mcore: 0.000, for GC #5
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #11
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #11 
+fitted
+fitted
+fitted
+fitted
+> alpha: 22.456, mcore: 9.003, for GC #16
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #18
+> alpha: 74.354, mcore: 252.074, for GC #18
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 17.820, mcore: 117.034, for GC #25
+> alpha: 77.281, mcore: 216.063, for GC #26
+fitted
+> alpha: 1.543, mcore: 0.000, for GC #28
+fitted
+fitted
+> alpha: 10.481, mcore: 0.000, for GC #31
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #32
+> alpha: 5.799, mcore: 0.000, for GC #32
+fitted
+> alpha: 18.044, mcore: 1049.308, for GC #34
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #38
+> alpha: 2.708, mcore: 0.000, for GC #38
+fitted
+fitted
+> alpha: 1.936, mcore: 0.000, for GC #41
+fitted
+> alpha: 10.504, mcore: 45.013, for GC #43
+fitted
+> alpha: 23.551, mcore: 81.024, for GC #45
+fitted
+> alpha: 1.683, mcore: 0.000, for GC #47
+fitted
+> alpha: 9.443, mcore: 198.058, for GC #49
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #50
+> alpha: 87.247, mcore: 37.011, for GC #50
+> alpha: 2.323, mcore: 0.000, for GC #51
+> alpha: 1.973, mcore: 0.000, for GC #52
+> alpha: 1.855, mcore: 0.000, for GC #53
+> alpha: 2.682, mcore: 0.000, for GC #54
+> alpha: 72.395, mcore: 81.024, for GC #55
+> alpha: 2.061, mcore: 0.000, for GC #56
+fitted
+> alpha: 7.542, mcore: 0.000, for GC #58
+> alpha: 2.164, mcore: 0.000, for GC #59
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #60
+> alpha: 7.169, mcore: 0.000, for GC #60
+> alpha: 2.020, mcore: 0.000, for GC #61
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #62
+> alpha: 1.889, mcore: 0.000, for GC #62
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.983, mcore: 0.000, for GC #67
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #68
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #68 
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.247, mcore: 0.000, for GC #74
+fitted
+> alpha: 19.877, mcore: 189.056, for GC #76
+fitted
+> alpha: 1.792, mcore: 0.000, for GC #78
+fitted
+> alpha: 15.061, mcore: 180.053, for GC #80
+> alpha: 80.448, mcore: 0.000, for GC #81
+fitted
+> alpha: 1.998, mcore: 0.000, for GC #83
+> alpha: 1.924, mcore: 0.000, for GC #84
+fitted
+> alpha: 1.900, mcore: 0.000, for GC #86
+> alpha: 1.929, mcore: 0.000, for GC #87
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 76.275, mcore: 90.026, for GC #93
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #98
+> alpha: 8.827, mcore: 27.008, for GC #98
+> alpha: 27.731, mcore: 63.019, for GC #99
+> alpha: 2.552, mcore: 0.000, for GC #100
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> making master plot
+> making master plot
+> found 63 good profiles; snapshot 914
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00915_536_40_myr.txt
+> snapshot time 536.4 Myr
+> snapshot number 915
+> non-uniform radius, using virial or other
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.431, mcore: 0.000, for GC #10
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #14
+> alpha: 4.425, mcore: 0.000, for GC #14
+fitted
+> alpha: 2.043, mcore: 0.000, for GC #16
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 42.642, mcore: 63.019, for GC #22
+fitted
+fitted
+> alpha: 14.336, mcore: 126.037, for GC #25
+fitted
+> alpha: 2.231, mcore: 0.000, for GC #27
+> alpha: 1.749, mcore: 0.000, for GC #28
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #31
+> alpha: 4.714, mcore: 0.000, for GC #31
+> alpha: 2.295, mcore: 0.000, for GC #32
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 80.534, mcore: 36.011, for GC #39
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #40
+> alpha: 13.226, mcore: 0.000, for GC #40
+> alpha: 39.482, mcore: 78.023, for GC #41
+> alpha: 12.221, mcore: 117.034, for GC #42
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #44
+> alpha: 6.351, mcore: 0.000, for GC #44
+> alpha: 1.864, mcore: 0.000, for GC #45
+> alpha: 1.967, mcore: 0.000, for GC #46
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #47
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #47 
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #49
+> alpha: 4.828, mcore: 0.000, for GC #49
+fitted
+> alpha: 1.987, mcore: 0.000, for GC #51
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #52
+> alpha: 6.300, mcore: 0.000, for GC #52
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #55
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #55 
+fitted
+> alpha: 14.299, mcore: 90.026, for GC #57
+> alpha: 1.872, mcore: 0.000, for GC #58
+> alpha: 41.962, mcore: 54.016, for GC #59
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #61
+> alpha: 5.672, mcore: 0.000, for GC #61
+> alpha: 1.984, mcore: 0.000, for GC #62
+fitted
+fitted
+> alpha: 1.860, mcore: 0.000, for GC #65
+fitted
+> alpha: 1.997, mcore: 0.000, for GC #67
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #69
+> alpha: 9.703, mcore: 0.000, for GC #69
+> alpha: 66.244, mcore: 10.003, for GC #70
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #75
+fitted
+fitted
+> alpha: 93.674, mcore: 81.024, for GC #77
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #78
+> alpha: 4.540, mcore: 0.000, for GC #78
+fitted
+> alpha: 9.571, mcore: 45.013, for GC #80
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 16.092, mcore: 198.058, for GC #86
+> alpha: 83.485, mcore: 90.026, for GC #87
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #88
+> alpha: 13.340, mcore: 0.000, for GC #88
+fitted
+> alpha: 2.329, mcore: 0.000, for GC #90
+> alpha: 2.276, mcore: 0.000, for GC #91
+> alpha: 1.925, mcore: 0.000, for GC #92
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #93
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #93 
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #95
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #95 
+fitted
+fitted
+> alpha: 10.894, mcore: 495.145, for GC #98
+fitted
+fitted
+fitted
+> making master plot
+> making master plot
+> found 60 good profiles; snapshot 915
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00916_536_62_myr.txt
+> snapshot time 536.62 Myr
+> snapshot number 916
+> non-uniform radius, using virial or other
+fitted
+fitted
+> alpha: 14.009, mcore: 99.029, for GC #2
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #5
+> alpha: 4.960, mcore: 0.000, for GC #5
+fitted
+> alpha: 12.290, mcore: 603.177, for GC #7
+fitted
+> alpha: 19.411, mcore: 54.016, for GC #9
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #11
+> alpha: 4.425, mcore: 0.000, for GC #11
+fitted
+fitted
+fitted
+> alpha: 10.065, mcore: 36.011, for GC #15
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 83.836, mcore: 108.032, for GC #23
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #25
+> alpha: 2.028, mcore: 0.000, for GC #25
+> alpha: 1.827, mcore: 0.000, for GC #26
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #28
+> alpha: 9.623, mcore: 0.000, for GC #28
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #31
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #31 
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #34
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #34 
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #38
+> alpha: 10.063, mcore: 10.003, for GC #38
+fitted
+fitted
+> alpha: 1.863, mcore: 0.000, for GC #41
+> alpha: 44.371, mcore: 36.011, for GC #42
+> alpha: 13.344, mcore: 0.000, for GC #43
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #44
+> alpha: 69.921, mcore: 9.003, for GC #44
+> alpha: 2.092, mcore: 0.000, for GC #45
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #46
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #46 
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #47
+> alpha: 6.283, mcore: 0.000, for GC #47
+> alpha: 1.791, mcore: 0.000, for GC #48
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #49
+> alpha: 7.363, mcore: 0.000, for GC #49
+fitted
+fitted
+fitted
+> alpha: 97.697, mcore: 27.008, for GC #53
+> alpha: 74.574, mcore: 45.013, for GC #54
+fitted
+> alpha: 1.567, mcore: 0.000, for GC #56
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #57
+> alpha: 2.032, mcore: 0.000, for GC #57
+fitted
+fitted
+> alpha: 10.333, mcore: 180.053, for GC #60
+fitted
+fitted
+fitted
+> alpha: 18.236, mcore: 0.000, for GC #64
+fitted
+> alpha: 8.403, mcore: 19.006, for GC #66
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #67
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #67 
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 15.529, mcore: 279.082, for GC #73
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #75
+> alpha: 4.482, mcore: 0.000, for GC #75
+> alpha: 1.800, mcore: 0.000, for GC #76
+> alpha: 2.789, mcore: 0.000, for GC #77
+> alpha: 47.938, mcore: 27.008, for GC #78
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #88
+fitted
+fitted
+fitted
+> alpha: 2.325, mcore: 0.000, for GC #91
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #93
+> alpha: 66.792, mcore: 18.005, for GC #93
+fitted
+fitted
+> alpha: 15.893, mcore: 99.029, for GC #96
+fitted
+fitted
+> making master plot
+> making master plot
+> found 61 good profiles; snapshot 916
+# read in: ../particle_data/pop_2_data/fs035_ms10/pos_00917_536_83_myr.txt
+> snapshot time 536.83 Myr
+> snapshot number 917
+> non-uniform radius, using virial or other
+fitted
+> alpha: 8.115, mcore: 46.014, for GC #1
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #4
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #4 
+fitted
+fitted
+> alpha: 31.477, mcore: 0.000, for GC #7
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 2.202, mcore: 0.000, for GC #13
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #14
+> alpha: 3.278, mcore: 0.000, for GC #14
+> alpha: 11.476, mcore: 63.019, for GC #15
+> alpha: 37.778, mcore: 64.019, for GC #16
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 12.490, mcore: 135.040, for GC #25
+fitted
+fitted
+> alpha: 8.290, mcore: 9.003, for GC #28
+> alpha: 2.071, mcore: 0.000, for GC #29
+fitted
+> alpha: 1.948, mcore: 0.000, for GC #31
+fitted
+> alpha: 1.940, mcore: 0.000, for GC #33
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #35
+> alpha: 2.052, mcore: 0.000, for GC #35
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #37
+> alpha: 5.505, mcore: 0.000, for GC #37
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #42
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #42 
+> alpha: 48.133, mcore: 300.088, for GC #43
+> alpha: 70.832, mcore: 54.016, for GC #44
+fitted
+> alpha: 8.514, mcore: 18.005, for GC #46
+> alpha: 9.148, mcore: 27.008, for GC #47
+> alpha: 66.425, mcore: 135.040, for GC #48
+> alpha: 22.196, mcore: 36.011, for GC #49
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #57
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #57 
+> alpha: 2.207, mcore: 0.000, for GC #58
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #60
+> alpha: 76.990, mcore: 27.008, for GC #60
+fitted
+> alpha: 2.362, mcore: 0.000, for GC #62
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #63
+> alpha: 4.578, mcore: 0.000, for GC #63
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #64
+> alpha: 3.110, mcore: 0.000, for GC #64
+fitted
+> alpha: 10.797, mcore: 9.003, for GC #66
+> alpha: 24.826, mcore: 18.005, for GC #67
+> alpha: 2.169, mcore: 0.000, for GC #68
+fitted
+fitted
+> alpha: 3.285, mcore: 0.000, for GC #71
+> alpha: 87.896, mcore: 63.019, for GC #72
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #73
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #73 
+fitted
+fitted
+> alpha: 15.886, mcore: 423.124, for GC #76
+fitted
+fitted
+fitted
+fitted
+fitted
+fitted
+> alpha: 1.737, mcore: 0.000, for GC #83
+> alpha: 69.343, mcore: 225.066, for GC #84
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #85
+> alpha: 5.098, mcore: 0.000, for GC #85
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #86
+> alpha: 4.159, mcore: 0.000, for GC #86
+> alpha: 1.892, mcore: 0.000, for GC #87
+fitted
+> alpha: 13.878, mcore: 450.132, for GC #89
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #90
+* might be masked out to emptiness `ydata` must not be empty!
+> can't fit GC #90 
+fitted
+fitted
+fitted
+> alpha: 8.262, mcore: 207.061, for GC #94
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #100
+fitted
+fitted
+> alpha: 2.295, mcore: 0.000, for GC #102
+fitted
+fitted
+fitted
+fitted
+fitted
+*  Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> trying another fit for GC #108
+* might be masked out to emptiness Optimal parameters not found: The maximum number of function evaluations is exceeded.
+> can't fit GC #108 
+> alpha: 2.312, mcore: 0.000, for GC #109
+fitted
+> making master plot
+> making master plot
+> found 66 good profiles; snapshot 917
