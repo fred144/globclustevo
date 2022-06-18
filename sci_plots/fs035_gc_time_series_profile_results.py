@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from modules.macros import filter_snapshots, common_filter_snapshots
 import os
 
+
 #%%
 
 dat_set = np.loadtxt(
@@ -42,6 +43,7 @@ with plt.rc_context(
 
     ax[0].plot(t_sim_myr, total_mass, label=r"Total", linewidth=4, c=cmap[2])
     ax[0].plot(t_sim_myr, mass_in_gc, label=r"In GCs, fitted", linewidth=4, c=cmap[3])
+
     # ax[0].plot(t_sim_myr, core_mass_in_gc, label=r"Core Mass", linewidth=4, c=cmap[4])
 
     ax[0].set_yscale("log")
@@ -89,7 +91,7 @@ with plt.rc_context(
     ax[1].set_ylabel(r"$\mathrm{In} \: \mathrm{GCs}  / \mathrm{Total}$")
     ax[1].set_ylim(0.05, 1.05)
     plt.subplots_adjust(hspace=0)
-
+#%%
 # another version
 with plt.rc_context(
     {
