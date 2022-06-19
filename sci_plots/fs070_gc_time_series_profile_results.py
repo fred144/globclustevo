@@ -15,7 +15,7 @@ from scipy.signal import find_peaks
 
 dat_set = np.loadtxt(
     "../gc_profiles/profile_runs/fs07_refine/time_series_run_stats.txt"
-)[::10, :]
+)[::5, :]
 
 
 fail_mask = dat_set[:, 4] > 1
