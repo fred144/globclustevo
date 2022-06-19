@@ -5,7 +5,7 @@ from matplotlib import cm
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-from modules.macros import filter_snapshots, common_filter_snapshots
+from modules.macros import filter_snapshots, common_filter_snapshots, t_myr_from_z
 
 
 def log_data_function(data, num_bins, bin_range: tuple):
@@ -123,24 +123,22 @@ if __name__ == "__main__":
     cmap = cm.get_cmap("Set2")
     cmap = cmap(np.linspace(0, 1, 8))
 
-    x_range = (1000, 1e5)
+    x_range = (1e3, 1e5)
     bns = 15
 
     vir_clr = cmap[1]
     mc_imf_clr = cmap[2]
-    data_directory = r"../gc_profiles/profile_runs/fs07_refine/fof_best_fb/"
-    data_sets = filter_snapshots(data_directory, 243, 893, 5)
+    data_directory = r"../gc_profiles/profile_runs/fs07_refine/fof_best_v3/"
+    data_sets = filter_snapshots(data_directory, 150, 918, 5)
 
     fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
-    m_sun_cloud_fs070 = fs070_log_sfc[:, 5]
-    fs70_mass, fs70_counts = log_data_function(m_sun_cloud_fs070, bns, x_range)
 
     for ds in data_sets:
         info_file = np.loadtxt(os.path.join(ds, "info.txt"))
         t_myr = info_file[0, 0]
         labels = info_file[:, 1]
         age = info_file[:, 2]
-        tot_mass = info_file[:, 3]
+        tot_masses = info_file[:, 3]
         core_mass = info_file[:, 4]
         vir_rad = info_file[:, 5]
         core_rad = info_file[:, 6]
@@ -154,7 +152,13 @@ if __name__ == "__main__":
         half_light_r = info_file[:, 14]
         half_mass_r = info_file[:, 15]
 
-        tot_mass, tot_counts = log_data_function(tot_mass, bns, x_range)
+        birth_z_fs070 = fs070_log_sfc[:, 2]
+        birth_myr_fs070 = t_myr_from_z(birth_z_fs070)
+        mc_mask = birth_myr_fs070 <= t_myr
+        m_sun_cloud_fs070 = fs070_log_sfc[:, 5][mc_mask]
+        fs70_mass, fs70_counts = log_data_function(m_sun_cloud_fs070, bns, x_range)
+
+        tot_mass, tot_counts = log_data_function(tot_masses, bns, x_range)
         cor_mass, cor_counts = log_data_function(core_mass, bns, x_range)
 
         with plt.rc_context(
@@ -171,7 +175,9 @@ if __name__ == "__main__":
             ax.plot(
                 fs70_mass,
                 fs70_counts,
-                label=r"$\mathrm{MC} \: \mathrm{IMF}$",
+                label=r"$\mathrm{{MC}} \: \mathrm{{IMF}} ({})$".format(
+                    len(m_sun_cloud_fs070)
+                ),
                 drawstyle="steps-mid",
                 linewidth=4,
                 alpha=0.8,
@@ -184,15 +190,13 @@ if __name__ == "__main__":
             ax.plot(
                 tot_mass,
                 tot_counts,
-                label=r"$\mathrm{Vir}$",
+                label=r"$\mathrm{{ GC \: M_{{vir}} }} ({})$".format(len(tot_masses)),
                 drawstyle="steps-mid",
                 linewidth=4,
                 alpha=0.8,
                 color=vir_clr,
             )
-            ax.fill_between(
-                tot_mass, tot_counts, step="mid", alpha=0.4, color=vir_clr
-            )
+            ax.fill_between(tot_mass, tot_counts, step="mid", alpha=0.4, color=vir_clr)
 
             # ax.plot(
             #     cor_mass,
@@ -221,7 +225,7 @@ if __name__ == "__main__":
                 fontsize=14,
             )
             ax.legend(
-                title="$\mathrm{SFE} \: (f_{*}) = 0.70$",
+                title=r"$\mathrm{SFE} \: (f_{*}) = 0.70$",
                 loc="upper right",
                 title_fontsize=14,
             )
@@ -237,14 +241,14 @@ if __name__ == "__main__":
             # place a text box in upper left in axes coords
             ax.text(
                 0.03,
-                0.97,
+                0.96,
                 textstr,
                 transform=ax.transAxes,
                 verticalalignment="top",
                 bbox=props,
             )
             ax.set_xlim(x_range)
-            ax.set_ylim(1, 400)
+            ax.set_ylim(1, 250)
 
             plt.show()
 
