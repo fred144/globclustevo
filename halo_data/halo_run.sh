@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -J halo_run.sh
-#SBATCH --ntasks=4
+#SBATCH --ntasks=3
 
 #SBATCH --mem-per-cpu=7000  
-#SBATCH --exclusive
+
 #SBATCH -t 1:00:00
 
 
@@ -29,4 +29,4 @@ SCRIPT="/lustre/fgarcia4/glob_clust_evo/halo_data/rockstar_halo_finder.py"
 # cd sbatch_logs
 # for rockstar --mca btl ^openib
 # number of cores specified above
-mpirun  -n 4 --mca btl ^openib python3 $SCRIPT  2>&1 
+mpirun  -n 3 --mca btl ^openib python3 $SCRIPT  2>&1 
