@@ -19,7 +19,7 @@ from yt.funcs import mylog
 
 
 mylog.setLevel(40)
-warnings.simplefilter(action="ignore", category=RuntimeWarning)
+
 
 simulation_run = "fs07_refine"
 profiler_run = "rockstar"
@@ -80,7 +80,7 @@ hc = HaloCatalog(
     finder_kwargs={
         "num_readers": 1,
         "num_writers": 1,
-        "particle_type": "star",
+        #"particle_type": "star",
         "outbase": "../halo_data/{}/{}/".format(simulation_run, profiler_run),
     },
     output_dir="../halo_data/{}/{}/".format(simulation_run, profiler_run),
