@@ -51,8 +51,8 @@ P000 yt : [ERROR    ] 2022-06-19 21:01:13,737 AttributeError: 'NoneType' object 
     return self.function(hc, *self.args, **self.kwargs)
   File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_catalog/halo_finding_methods.py", line 92, in _rockstar_method
     rh = RockstarHaloFinder(ds, **finder_kwargs)
-  File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_finding/rockstar/rockstar.py", line 294, in __init__
-    self.handler = rockstar_interface.RockstarInterface(self.ts)
+      File "/homes/fgarcia4/yt_astro_analysis/yt_astro_analysis/halo_analysis/halo_finding/rockstar/rockstar.py", line 294, in __init__
+        self.handler = rockstar_interface.RockstarInterface(self.ts)
 P001 yt : [ERROR    ] 2022-06-19 21:01:13,737 AttributeError: 'NoneType' object has no attribute 'RockstarInterface'
   File "/lustre/fgarcia4/glob_clust_evo/halo_data/rockstar_halo_finder.py", line 88, in <module>
     hc.create()
