@@ -123,15 +123,15 @@ if __name__ == "__main__":
     cmap = cm.get_cmap("Set2")
     cmap = cmap(np.linspace(0, 1, 8))
 
-    x_range = (1e3, 1e5)
+    x_range = (100, 1e5)
     bns = 15
 
     vir_clr = cmap[1]
     mc_imf_clr = cmap[2]
-    data_directory = r"../gc_profiles/profile_runs/fs07_refine/fof_best_v3/"
-    data_sets = filter_snapshots(data_directory, 150, 918, 5)
+    data_directory = r"../gc_profiles/profile_runs/fs035_ms10/fof_best/"
+    data_sets = filter_snapshots(data_directory, 210, 917, 5)
 
-    fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
+    fs070_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
 
     for ds in data_sets:
         info_file = np.loadtxt(os.path.join(ds, "info.txt"))
@@ -225,7 +225,7 @@ if __name__ == "__main__":
                 fontsize=14,
             )
             ax.legend(
-                title=r"$\mathrm{SFE} \: (f_{*}) = 0.70$",
+                title=r"$\mathrm{SFE} \: (f_{*}) = 0.35$",
                 loc="upper right",
                 title_fontsize=14,
             )
@@ -248,7 +248,7 @@ if __name__ == "__main__":
                 bbox=props,
             )
             ax.set_xlim(x_range)
-            ax.set_ylim(1, 250)
+            ax.set_ylim(1, 400)
 
             plt.show()
 
