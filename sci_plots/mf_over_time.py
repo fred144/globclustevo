@@ -126,12 +126,12 @@ if __name__ == "__main__":
     x_range = (100, 1e5)
     bns = 15
 
-    vir_clr = cmap[1]
-    mc_imf_clr = cmap[2]
-    data_directory = r"../gc_profiles/profile_runs/fs035_ms10/fof_best/"
+    vir_clr = cmap[0]
+    mc_imf_clr = cmap[1]
+    data_directory = r"../gc_profiles/profile_runs/fs07_refine/fof_best_v3/"
     data_sets = filter_snapshots(data_directory, 210, 917, 5)
 
-    fs070_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
+    fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
 
     for ds in data_sets:
         info_file = np.loadtxt(os.path.join(ds, "info.txt"))
@@ -155,7 +155,7 @@ if __name__ == "__main__":
         birth_z_fs070 = fs070_log_sfc[:, 2]
         birth_myr_fs070 = t_myr_from_z(birth_z_fs070)
         mc_mask = birth_myr_fs070 <= t_myr
-        m_sun_cloud_fs070 = fs070_log_sfc[:, 5][mc_mask]
+        m_sun_cloud_fs070 = fs070_log_sfc[:, 7][mc_mask]
         fs70_mass, fs70_counts = log_data_function(m_sun_cloud_fs070, bns, x_range)
 
         tot_mass, tot_counts = log_data_function(tot_masses, bns, x_range)
@@ -175,7 +175,7 @@ if __name__ == "__main__":
             ax.plot(
                 fs70_mass,
                 fs70_counts,
-                label=r"$\mathrm{{MC}} \: \mathrm{{IMF}} ({})$".format(
+                label=r"$\mathrm{{MC \: M_{{*}}}} \: \mathrm{{IMF}} ({})$".format(
                     len(m_sun_cloud_fs070)
                 ),
                 drawstyle="steps-mid",
@@ -225,7 +225,7 @@ if __name__ == "__main__":
                 fontsize=14,
             )
             ax.legend(
-                title=r"$\mathrm{SFE} \: (f_{*}) = 0.35$",
+                title=r"$\mathrm{SFE} \: (f_{*}) = 0.70$",
                 loc="upper right",
                 title_fontsize=14,
             )
@@ -248,7 +248,7 @@ if __name__ == "__main__":
                 bbox=props,
             )
             ax.set_xlim(x_range)
-            ax.set_ylim(1, 400)
+            ax.set_ylim(1, 300)
 
             plt.show()
 

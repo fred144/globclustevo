@@ -142,6 +142,7 @@ with plt.rc_context(
     ax1_twin = ax[0, 0].twiny()
     ax1_twin.invert_xaxis()
     ax1_twin.set_xlim(left=np.max(f7_redshift), right=np.min(f7_redshift))
+    ax1_twin.xaxis.set_major_locator(MaxNLocator(7))
     ax1_twin.set(xlabel="$\mathrm{z}$")
 
     f7_bound_total_ratio = f7_mass_in_gc / f7_total_mass
