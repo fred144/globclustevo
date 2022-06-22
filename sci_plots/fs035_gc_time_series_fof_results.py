@@ -17,10 +17,10 @@ fof_bound_mass = fof_ds[:, 2][fail_mask]
 fof_field_mass = fof_ds[:, 3][fail_mask]
 fof_bound_lumi = fof_ds[:, 4][fail_mask]
 fof_field_lumi = fof_ds[:, 5][fail_mask]
-prof_bound_mass = fof_ds[:, 6][fail_mask]
-profiler_field_mass = fof_ds[:, 7][fail_mask]
-prof_bound_lumi = fof_ds[:, 8][fail_mask]
-prof_field_lumi = fof_ds[:, 9][fail_mask]
+# prof_bound_mass = fof_ds[:, 6][fail_mask]
+# profiler_field_mass = fof_ds[:, 7][fail_mask]
+# prof_bound_lumi = fof_ds[:, 8][fail_mask]
+# prof_field_lumi = fof_ds[:, 9][fail_mask]
 
 fof_total_mass = fof_bound_mass + fof_field_mass
 fof_total_lumi = fof_bound_lumi + fof_field_lumi

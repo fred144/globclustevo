@@ -10,7 +10,7 @@ import os
 
 #%% get the gc results from halo finder only
 halo_data_directory = r"../halo_data/fs035_ms10/fof_best"
-pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
+pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
 strt = 154
 end = 917
 step = 1
@@ -126,7 +126,7 @@ h = (
     "\tprof_bound_lumi \t\t prof_field_lumi \t\t"
 )
 
-np.savetxt("fs035_fof_series_results.txt", X=data, header=h)
+np.savetxt("fof_time_series/fs035_fof_series_results.txt", X=data, header=h)
 #%% fof performance map scatter
 fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(8, 8), dpi=300)
 (x, y, z) = np.loadtxt(os.path.join(ds, "field_stars.txt"))[:, 3:6].T

@@ -9,39 +9,46 @@ import os
 from scipy.interpolate import UnivariateSpline
 from scipy.interpolate import InterpolatedUnivariateSpline
 from scipy.interpolate import CubicSpline
-from scipy.signal import find_peaks
+from scipy.signal import find_peaks, find_peaks_cwt, savgol_filter
+from matplotlib.ticker import MaxNLocator
 
-#%%
 
-dat_set = np.loadtxt(
+# 70% efficiency run
+fs70_ds = np.loadtxt(
     "../gc_profiles/profile_runs/fs07_refine/time_series_run_stats.txt"
-)[::5, :]
+)[::1, :]
+fail_mask = fs70_ds[:, 4] > 1
 
-
-fail_mask = dat_set[:, 4] > 1
 # all results are fit filtered
-t_sim_myr = dat_set[:, 1][fail_mask]
-redshift = dat_set[:, 2][fail_mask]
-total_mass = dat_set[:, 5][fail_mask]
-mass_in_gc = dat_set[:, 6][fail_mask]
-core_mass_in_gc = dat_set[:, 7][fail_mask]
-total_lum = dat_set[:, 8][fail_mask]
-lum_in_gc = dat_set[:, 9][fail_mask]
+f7_t_sim_myr = fs70_ds[:, 1][fail_mask]
+f7_redshift = fs70_ds[:, 2][fail_mask]
+
+f7_total_mass = fs70_ds[:, 5][fail_mask]
+f7_mass_in_gc = fs70_ds[:, 6][fail_mask]
+
+f7_total_lum = fs70_ds[:, 8][fail_mask]
+f7_lum_in_gc = fs70_ds[:, 9][fail_mask]
+
+# f7_core_mass_in_gc =fs70_ds[:, 7][fail_mask]
 
 
-t_sim_myr_high_res = np.linspace(t_sim_myr.min(), t_sim_myr.max(), 1000)
-valleys, _ = find_peaks(-mass_in_gc)
+# 35% efficiency run
+fs35_ds = np.loadtxt(
+    "../gc_profiles/profile_runs/fs035_ms10/hi_fidelity_time_series_run_stats.txt"
+)[::1, :]
+fail_mask = fs35_ds[:, 4] > 1
 
-t_sim_myr_filt = np.flip(t_sim_myr[~valleys])
-m_tot_filt = np.flip(total_mass[~valleys])
-gc_m_filt = np.flip(mass_in_gc[~valleys])
-l_tot_filt = np.flip(total_lum[~valleys])
-gc_l_filt = np.flip(lum_in_gc[~valleys])
+# all results are fit filtered
+f3_t_sim_myr = fs35_ds[:, 1][fail_mask]
+f3_redshift = fs35_ds[:, 2][fail_mask]
 
-m_tot_fit = InterpolatedUnivariateSpline(t_sim_myr_filt, m_tot_filt)
-gc_m_fit = InterpolatedUnivariateSpline(t_sim_myr_filt, gc_m_filt, k=3)
-l_tot_fit = InterpolatedUnivariateSpline(t_sim_myr_filt, l_tot_filt)
-gc_l_fit = InterpolatedUnivariateSpline(t_sim_myr_filt, gc_l_filt)
+f3_total_mass = fs35_ds[:, 5][fail_mask]
+f3_mass_in_gc = fs35_ds[:, 6][fail_mask]
+
+f3_total_lum = fs35_ds[:, 8][fail_mask]
+f3_lum_in_gc = fs35_ds[:, 9][fail_mask]
+
+# f3_core_mass_in_gc =fs35_ds[:, 7][fail_mask]
 #%%# fitted bound and unbound mass
 with plt.rc_context(
     {
@@ -54,18 +61,19 @@ with plt.rc_context(
 ):
     cmap = cm.get_cmap("Set2")
     cmap = cmap(np.linspace(0, 1, 8))
-    fig, ax = plt.subplots(nrows=2, ncols=1, sharex=True, figsize=(8, 6), dpi=300)
-
-    ax[0].scatter(t_sim_myr, total_mass, label=r"Total", color=cmap[2])
-    ax[0].scatter(t_sim_myr, mass_in_gc, label=r"In GCs, fitted", color=cmap[3])
-    ax[0].plot(
-        t_sim_myr_high_res,
-        gc_m_fit(t_sim_myr_high_res),
-        label=r"Smooth Spline",
-        linewidth=1,
-        c="red",
+    fig, ax = plt.subplots(
+        nrows=2,
+        ncols=1,
+        gridspec_kw={"height_ratios": [2, 1]},
+        sharex=True,
+        figsize=(8, 6),
+        dpi=300,
     )
-    # ax[0].plot(t_sim_myr, core_mass_in_gc, label=r"Core Mass", linewidth=4, c=cmap[4])
+
+    ax[0].plot(f7_t_sim_myr, f7_total_mass, label=r"Total", color=cmap[2], lw=4)
+    ax[0].plot(
+        f7_t_sim_myr, f7_mass_in_gc, label=r"In GCs, fitted", color=cmap[3], lw=4
+    )
 
     ax[0].set_yscale("log")
     ax[0].set_ylabel((r"$\mathrm{M}_{*} \: (\mathrm{M}_{\odot})$"))
@@ -74,8 +82,8 @@ with plt.rc_context(
         loc="lower right",
         fontsize=12,
     )
-    ax[0].set_xlim(left=np.min(t_sim_myr), right=np.max(t_sim_myr))
-    ax[0].set_ylim(4e2, 5e5)
+    ax[0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
+    # ax[0].set_ylim(4e2, 5e5)
     # these are matplotlib.patch.Patch properties
     props = dict(
         boxstyle="round",
@@ -98,19 +106,20 @@ with plt.rc_context(
 
     # the limits are controlled by 0.70 efficiency
     # add a twin axis
-    plt.xlim(left=np.min(t_sim_myr), right=np.max(t_sim_myr))
+    plt.xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
     ax1_twin = ax[0].twiny()
     ax1_twin.invert_xaxis()
-    ax1_twin.set_xlim(left=np.max(redshift), right=np.min(redshift))
+    ax1_twin.set_xlim(left=np.max(f7_redshift), right=np.min(f7_redshift))
     ax1_twin.set(xlabel="$\mathrm{z}$")
 
-    bound_total_ratio = mass_in_gc / total_mass
+    f7_bound_total_ratio = f7_mass_in_gc / f7_total_mass
     ax[1].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
-    ax[1].plot(t_sim_myr, bound_total_ratio, linewidth=4, c=cmap[4])
+    ax[1].plot(f7_t_sim_myr, f7_bound_total_ratio, linewidth=4, c=cmap[4])
 
     ax[1].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
     ax[1].set_ylabel(r"$\mathrm{In} \: \mathrm{GCs}  / \mathrm{Total}$")
     ax[1].set_ylim(0.05, 1.05)
+    ax[1].yaxis.set_major_locator(MaxNLocator(4))
     plt.subplots_adjust(hspace=0)
 #%%
 # another version
@@ -127,10 +136,12 @@ with plt.rc_context(
     cmap = cmap(np.linspace(0, 1, 8))
     fig, ax = plt.subplots(nrows=2, ncols=1, sharex=True, figsize=(8, 6), dpi=300)
 
-    ax[0].plot(t_sim_myr, total_mass, label=r"Total", linewidth=4, c=cmap[2])
-    ax[0].plot(t_sim_myr, mass_in_gc, label=r"In GCs, fitted", linewidth=4, c=cmap[3])
-    field_mass = total_mass - mass_in_gc
-    ax[0].plot(t_sim_myr, field_mass, label=r"Field", linewidth=4, c=cmap[1])
+    ax[0].plot(f7_t_sim_myr, f7_total_mass, label=r"Total", linewidth=4, c=cmap[2])
+    ax[0].plot(
+        f7_t_sim_myr, f7_mass_in_gc, label=r"In GCs, fitted", linewidth=4, c=cmap[3]
+    )
+    f7_field_mass = f7_total_mass - f7_mass_in_gc
+    ax[0].plot(f7_t_sim_myr, f7_field_mass, label=r"Field", linewidth=4, c=cmap[1])
 
     ax[0].set_yscale("log")
     ax[0].set_ylabel((r"$\mathrm{M}_{*} \: (\mathrm{M}_{\odot})$"))
@@ -139,7 +150,7 @@ with plt.rc_context(
         loc="lower right",
         fontsize=12,
     )
-    ax[0].set_xlim(left=np.min(t_sim_myr), right=np.max(t_sim_myr))
+    ax[0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
     ax[0].set_ylim(4e2, 5e5)
     # these are matplotlib.patch.Patch properties
     props = dict(
@@ -163,16 +174,16 @@ with plt.rc_context(
 
     # the limits are controlled by 0.70 efficiency
     # add a twin axis
-    plt.xlim(left=np.min(t_sim_myr), right=np.max(t_sim_myr))
+    plt.xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
     ax1_twin = ax[0].twiny()
     ax1_twin.invert_xaxis()
-    ax1_twin.set_xlim(left=np.max(redshift), right=np.min(redshift))
+    ax1_twin.set_xlim(left=np.max(f7_redshift), right=np.min(f7_redshift))
     ax1_twin.set(xlabel="$\mathrm{z}$")
 
-    bound_field = mass_in_gc / field_mass
+    f7_bound_field = f7_mass_in_gc / f7_field_mass
     ax[1].axhline(y=1, ls="--", c="grey", alpha=0.8)
-    mask = field_mass > 0
-    ax[1].plot(t_sim_myr[mask], bound_field[mask], linewidth=4, c=cmap[7])
+    mask = f7_field_mass > 0
+    ax[1].plot(f7_t_sim_myr[mask], f7_bound_field[mask], linewidth=4, c=cmap[7])
 
     ax[1].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
 
@@ -196,8 +207,10 @@ with plt.rc_context(
     cmap = cmap(np.linspace(0, 1, 11))
     fig, ax = plt.subplots(nrows=2, ncols=1, sharex=True, figsize=(8, 6), dpi=300)
 
-    ax[0].plot(t_sim_myr, total_lum, label=r"Total", linewidth=4, c=cmap[0])
-    ax[0].plot(t_sim_myr, lum_in_gc, label=r"In GCs, fitted", linewidth=4, c=cmap[3])
+    ax[0].plot(f7_t_sim_myr, f7_total_lum, label=r"Total", linewidth=4, c=cmap[0])
+    ax[0].plot(
+        f7_t_sim_myr, f7_lum_in_gc, label=r"In GCs, fitted", linewidth=4, c=cmap[3]
+    )
     # ax[0].plot(t_sim_myr, core_mass_in_gc, label=r"Core Mass", linewidth=4, c=cmap[4])
 
     ax[0].set_yscale("log")
@@ -212,7 +225,7 @@ with plt.rc_context(
         loc="lower right",
         fontsize=12,
     )
-    ax[0].set_xlim(left=np.min(t_sim_myr), right=np.max(t_sim_myr))
+    ax[0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
     # ax[0].set_ylim(4e2, 5e5)
     # these are matplotlib.patch.Patch properties
     props = dict(
@@ -236,15 +249,15 @@ with plt.rc_context(
 
     # the limits are controlled by 0.70 efficiency add a twin axis
 
-    plt.xlim(left=np.min(t_sim_myr), right=np.max(t_sim_myr))
+    plt.xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
     ax1_twin = ax[0].twiny()
     ax1_twin.invert_xaxis()
-    ax1_twin.set_xlim(left=np.max(redshift), right=np.min(redshift))
+    ax1_twin.set_xlim(left=np.max(f7_redshift), right=np.min(f7_redshift))
     ax1_twin.set(xlabel="$\mathrm{z}$")
 
-    bound_total_light = lum_in_gc / total_lum
+    f7_bound_total_light = f7_lum_in_gc / f7_total_lum
     ax[1].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
-    ax[1].plot(t_sim_myr, bound_total_light, linewidth=4, c=cmap[8])
+    ax[1].plot(f7_t_sim_myr, f7_bound_total_light, linewidth=4, c=cmap[8])
 
     ax[1].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
     # ax[1].set_xscale("log")
@@ -266,11 +279,15 @@ with plt.rc_context(
     cmap = cmap(np.linspace(0, 1, 11))
     fig, ax = plt.subplots(nrows=2, ncols=1, sharex=True, figsize=(8, 6), dpi=300)
 
-    ax[0].plot(t_sim_myr, total_lum, label=r"Total", linewidth=4, c=cmap[0])
-    ax[0].plot(t_sim_myr, lum_in_gc, label=r"In GCs, fitted", linewidth=4, c=cmap[3])
-    field_lum = total_lum - lum_in_gc
+    ax[0].plot(f7_t_sim_myr, f7_total_lum, label=r"Total", linewidth=4, c=cmap[0])
+    ax[0].plot(
+        f7_t_sim_myr, f7_lum_in_gc, label=r"In GCs, fitted", linewidth=4, c=cmap[3]
+    )
+    f7_field_lum = f7_total_lum - f7_lum_in_gc
 
-    ax[0].plot(t_sim_myr[mask], field_lum[mask], label=r"Field", linewidth=4, c=cmap[4])
+    ax[0].plot(
+        f7_t_sim_myr[mask], f7_field_lum[mask], label=r"Field", linewidth=4, c=cmap[4]
+    )
 
     ax[0].set_yscale("log")
     ax[0].set_ylabel(
@@ -284,7 +301,7 @@ with plt.rc_context(
         loc="lower right",
         fontsize=12,
     )
-    ax[0].set_xlim(left=np.min(t_sim_myr), right=np.max(t_sim_myr))
+    ax[0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
     # ax[0].set_ylim(4e2, 5e5)
     # these are matplotlib.patch.Patch properties
     props = dict(
@@ -308,15 +325,15 @@ with plt.rc_context(
 
     # the limits are controlled by 0.70 efficiency add a twin axis
 
-    plt.xlim(left=np.min(t_sim_myr), right=np.max(t_sim_myr))
+    plt.xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
     ax1_twin = ax[0].twiny()
     ax1_twin.invert_xaxis()
-    ax1_twin.set_xlim(left=np.max(redshift), right=np.min(redshift))
+    ax1_twin.set_xlim(left=np.max(f7_redshift), right=np.min(f7_redshift))
     ax1_twin.set(xlabel="$\mathrm{z}$")
 
-    bound_field = lum_in_gc / field_lum
+    f7_bound_field = f7_lum_in_gc / f7_field_lum
     ax[1].axhline(y=1, ls="--", c="grey", alpha=0.8)
-    ax[1].plot(t_sim_myr[mask], bound_field[mask], linewidth=4, c=cmap[8])
+    ax[1].plot(f7_t_sim_myr[mask], f7_bound_field[mask], linewidth=4, c=cmap[8])
 
     ax[1].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
 
