@@ -52,6 +52,7 @@ def unpack_pop_ii_data(
     lum_scaling=1e-5,
     lum_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
     table_column_idx=1,
+    return_ids=False,
 ):
     r"""
     Depends on the lookup table function.
@@ -95,4 +96,14 @@ def unpack_pop_ii_data(
     scaled_stellar_lums = stellar_lums * lum_scaling
     star_positions = pop_2_data[:, 2:5]  # (x,y,z)
 
-    return star_positions, scaled_stellar_lums, masses, ages, t_myr
+    if return_ids is True:
+        return (
+            star_positions,
+            scaled_stellar_lums,
+            masses,
+            ages,
+            t_myr,
+            pop_2_data[:, 0],
+        )
+    else:
+        return star_positions, scaled_stellar_lums, masses, ages, t_myr
