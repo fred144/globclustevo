@@ -16,9 +16,15 @@ import matplotlib.font_manager as font_manager
 import matplotlib.patches as patches
 from scipy.optimize import curve_fit
 
+runsavepath = "../rendering/luminosity/fs07_refine/gc_tracking"
+if not os.path.exists(runsavepath):
+    print("# Creating new sequence directory", runsavepath)
+    os.makedirs(runsavepath)
+
+
 strt = 404
-end = 918
-step = 5
+end = 404
+step = 1
 
 halo_data_directory = r"../halo_data/fs07_refine/fof_best"
 pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
@@ -530,7 +536,7 @@ for p2, ds in zip(pop2, halo_ds):
                     bbox=props,
                 )
 
-                plt.subplots_adjust(hspace=-0.032, wspace=0)
+                plt.subplots_adjust(hspace=-0.033, wspace=0)
 
                 # add a histogram of ages inside the cluster
                 # [left, bottom, width, height]
@@ -554,7 +560,9 @@ for p2, ds in zip(pop2, halo_ds):
                 ax_inset.set_xlim(300, 600)
                 ax_inset.set_ylim(1, 1e4)
 
-                plt.show()
+                save_name = os.path.join(runsavepath, "tracked_{}".format(output_num))
+
+                plt.savefig(save_name, dpi=300, bbox_inches="tight")
             print(output_num, halo_num)
             break
         else:
