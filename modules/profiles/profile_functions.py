@@ -137,7 +137,7 @@ def projected_surf_densities(
         half_mass_point = np.abs(integrated_mass - 0.5 * total_clust_m).argmin()
         half_light_point = np.abs(integrated_light - 0.5 * total_clust_lum).argmin()
 
-        half_mass_r = r[half_mass_point]
+        half_mass_r = mass_per_bin[half_mass_point]
         half_light_r = r[half_light_point]
 
         return (
@@ -199,9 +199,7 @@ def surface_2d_brightness(
     if log_bins == True and num_bins != None:
         # returns log spaces outer rings, the width of each concentric ring
         # will be preserved and is handled by ring_2d_mask
-        outer_rings = np.geomspace(
-            dr, clust_radius + dr, num=num_bins, endpoint=False
-        )
+        outer_rings = np.geomspace(dr, clust_radius + dr, num=num_bins, endpoint=False)
     elif log_bins == False:
         outer_rings = np.arange(dr, clust_radius + dr, dr)
     else:
