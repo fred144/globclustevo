@@ -1,3 +1,6 @@
+"""
+Copies over all the profiler master plots
+"""
 import sys
 
 sys.path.append("..")
