@@ -71,11 +71,11 @@ with plt.rc_context(
 
     ax[0, 0].plot(f7_t_sim_myr, f7_total_lum, label=r"Total", linewidth=4, c=cmap[0])
     ax[0, 0].plot(
-        f7_t_sim_myr, f7_lum_in_gc, label=r"In GCs, FOF", linewidth=4, c=cmap[1]
+        f7_t_sim_myr, f7_lum_in_gc, label=r"Bound, FOF", linewidth=4, c=cmap[1]
     )
     # ax[0, 0].scatter(f7_t_sim_myr, f7_total_lum, label=r"Total", s =3, c=cmap[0])
     # ax[0, 0].scatter(
-    #     f7_t_sim_myr, f7_lum_in_gc, label=r"In GCs, FOF",s =3, c=cmap[1]
+    #     f7_t_sim_myr, f7_lum_in_gc, label=r"Bound, FOF",s =3, c=cmap[1]
     # )
     # ax[0].plot(t_sim_myr, core_mass_in_gc, label=r"Core Mass", linewidth=4, c=cmap[4])
 
@@ -124,7 +124,7 @@ with plt.rc_context(
     ax[1, 0].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
     ax[1, 0].xaxis.set_major_locator(MaxNLocator(7))
     ax[1, 0].yaxis.set_major_locator(MaxNLocator(4))
-    ax[1, 0].set_ylabel(r"$\mathrm{In} \: \mathrm{GCs} / \mathrm{Total}$")
+    ax[1, 0].set_ylabel(r"$\mathrm{Bound} / \mathrm{Total}$")
     ax[1, 0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
 
     # =================================30%============================================
@@ -132,9 +132,7 @@ with plt.rc_context(
     f3_bound_total_light = f3_lum_in_gc / f3_total_lum
 
     ax[0, 1].plot(f3_t_sim_myr, f3_total_lum, label=r"Total", color=cmap[2], lw=4)
-    ax[0, 1].plot(
-        f3_t_sim_myr, f3_lum_in_gc, label=r"In GCs,  FOF", color=cmap[3], lw=4
-    )
+    ax[0, 1].plot(f3_t_sim_myr, f3_lum_in_gc, label=r"Bound,  FOF", color=cmap[3], lw=4)
     ax[0, 1].legend(
         title="Pop II Stars",
         loc="lower right",
@@ -209,7 +207,7 @@ with plt.rc_context(
     ax[0, 0].plot(
         f7_t_sim_myr[mask],
         f7_lum_in_gc[mask],
-        label=r"In GCs, FOF",
+        label=r"Bound, FOF",
         linewidth=4,
         c=cmap[1],
     )
@@ -262,7 +260,7 @@ with plt.rc_context(
 
     ax[1, 0].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
     ax[1, 0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
-    ax[1, 0].set_ylabel(r"$\mathrm{In} \: \mathrm{GCs} / \mathrm{Field}$")
+    ax[1, 0].set_ylabel(r"$\mathrm{Bound} / \mathrm{Field}$")
     ax[1, 0].xaxis.set_major_locator(MaxNLocator(7))
     ax[1, 0].yaxis.set_major_locator(MaxNLocator(4))
     ax[1, 0].set_yscale("log")
@@ -276,7 +274,7 @@ with plt.rc_context(
     ax[0, 1].plot(
         f3_t_sim_myr[mask],
         f3_lum_in_gc[mask],
-        label=r"In GCs,  FOF",
+        label=r"Bound,  FOF",
         color=cmap[3],
         lw=4,
     )

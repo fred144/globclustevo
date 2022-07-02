@@ -69,9 +69,7 @@ with plt.rc_context(
     )
 
     ax[0, 0].plot(f7_t_sim_myr, f7_total_mass, label=r"Total", color=cmap[0], lw=4)
-    ax[0, 0].plot(
-        f7_t_sim_myr, f7_mass_in_gc, label=r"In GCs, FOF", color=cmap[1], lw=4
-    )
+    ax[0, 0].plot(f7_t_sim_myr, f7_mass_in_gc, label=r"Bound, FOF", color=cmap[1], lw=4)
 
     ax[0, 0].set_yscale("log")
     ax[0, 0].set_ylabel((r"$\mathrm{M}_{*} \: (\mathrm{M}_{\odot})$"))
@@ -117,14 +115,14 @@ with plt.rc_context(
     ax[1, 0].yaxis.set_major_locator(MaxNLocator(4))
     ax[1, 0].xaxis.set_major_locator(MaxNLocator(7))
     ax[1, 0].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
-    ax[1, 0].set_ylabel(r"$\mathrm{In} \: \mathrm{GCs}  / \mathrm{Total}$")
+    ax[1, 0].set_ylabel(r"$\mathrm{Bound}  / \mathrm{Total}$")
 
     ax[1, 0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
 
     # =================================30%============================================
     ax[0, 1].plot(f3_t_sim_myr, f3_total_mass, label=r"Total", color=cmap[2], lw=4)
     ax[0, 1].plot(
-        f3_t_sim_myr, f3_mass_in_gc, label=r"In GCs,  FOF", color=cmap[3], lw=4
+        f3_t_sim_myr, f3_mass_in_gc, label=r"Bound,  FOF", color=cmap[3], lw=4
     )
     ax[0, 1].legend(
         title="Pop II Stars",
@@ -202,7 +200,7 @@ with plt.rc_context(
     ax[0, 0].plot(
         f7_t_sim_myr[mask],
         f7_mass_in_gc[mask],
-        label=r"In GCs, FOF",
+        label=r"Bound, FOF",
         color=cmap[1],
         lw=4,
     )
@@ -250,7 +248,7 @@ with plt.rc_context(
     ax[1, 0].axhline(y=1, ls="--", c="grey", alpha=0.8)
     ax[1, 0].set_yscale("log")
     ax[1, 0].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
-    ax[1, 0].set_ylabel(r"$\mathrm{In} \: \mathrm{GCs}  / \mathrm{Field}$")
+    ax[1, 0].set_ylabel(r"$\mathrm{Bound}  / \mathrm{Field}$")
     ax[1, 0].xaxis.set_major_locator(MaxNLocator(7))
     ax[1, 0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
 
@@ -263,7 +261,7 @@ with plt.rc_context(
     ax[0, 1].plot(
         f3_t_sim_myr,
         f3_mass_in_gc,
-        label=r"In GCs,  FOF",
+        label=r"Bound,  FOF",
         color=cmap[3],
         lw=4,
     )

@@ -5,13 +5,12 @@ Must be ran in the direcotry.
 
 import sys
 
-sys.path.insert(
-    1, "/homes/fgarcia4/py-virtual-envs/master/lib/python3.7/site-packages"
-)
+sys.path.insert(1, "/homes/fgarcia4/py-virtual-envs/master/lib/python3.7/site-packages")
 sys.path.append("..")  # makes sure that importing the modules work
 
 from modules.macros import code_age_to_myr
 import matplotlib as mpl
+import matplotlib.font_manager as font_manager
 from matplotlib import cm
 from yt.funcs import mylog
 import numpy as np
@@ -19,9 +18,9 @@ import yt
 import os
 import warnings
 
-#yt.enable_parallelism()
-#mylog.setLevel(40)
-#warnings.simplefilter(action="ignore", category=RuntimeWarning)
+# yt.enable_parallelism()
+# mylog.setLevel(40)
+# warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
 # ==============================================================================
 # TODO: edit for rendering runs
@@ -41,7 +40,7 @@ datadir = os.path.expanduser(
 parent_folder = "../rendering/gas/{}".format(simulation_run_name)
 
 # TODO: edit for rendering runs
-sequence_folder = "lin_gas_projected_density_x"
+sequence_folder = "log_gas_projected_density_z"
 # ===================================save path=================================
 
 pop_2_save = "../particle_data/pop_2_data/{}".format(simulation_run_name)
@@ -65,16 +64,18 @@ if not os.path.exists(psc_save):
 # ===================================plot params=================================
 
 # TODO: edit for rendering runs
-sequence_title = "x_gas_lin"
-slice_axis = "x"
+sequence_title = "z_gas_log"
+slice_axis = "z"
+z_scale = "log"
 width = (400, "pc")
-start_step = 897  # fs07:113, fs035:154
-end_step = 918
+start_step = 113  # fs07:113, fs035:154
+end_step = 1000
 # cosmetics
 mpl.rc("font", family="serif")
+leg_font = font_manager.FontProperties(family="serif", math_fontfamily="cm")
 clrmap = "BuGn_r"  # for the pop II ages
 density_cmap = "inferno"  # "cmyt.dusk"
-z_scale = "lin"
+
 # https://matplotlib.org/stable/tutorials/colors/colormaps.html
 # https://yt-project.org/doc/visualizing/colormaps/index.html
 star_map = cm.get_cmap(clrmap)
@@ -293,58 +294,64 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         p_ax.text(
             -width[0] * 0.375,
             -width[0] * 0.4625,
-            "X",
-            size=7,
+            r"$x$",
+            size=10,
             ha="center",
             va="center",
             color="white",
+            fontproperties=leg_font,
         )
         p_ax.text(
             -width[0] * 0.4625,
             -width[0] * 0.375,
-            "Y",
-            size=7,
+            r"$y$",
+            size=10,
             ha="center",
             va="center",
             color="white",
+            fontproperties=leg_font,
         )
     elif slice_axis == "x":
         p_ax.text(
             -width[0] * 0.375,
             -width[0] * 0.4625,
-            "Y",
-            size=7,
+            r"$y$",
+            size=10,
             ha="center",
             va="center",
             color="white",
+            fontproperties=leg_font,
         )
         p_ax.text(
             -width[0] * 0.4625,
             -width[0] * 0.375,
-            "Z",
-            size=7,
+            r"$z$",
+            size=10,
             ha="center",
             va="center",
             color="white",
+            fontproperties=leg_font,
         )
     elif slice_axis == "y":
         p_ax.text(
             -width[0] * 0.375,
             -width[0] * 0.4625,
-            "Z",
-            size=7,
+            r"$z$",
+            size=10,
             ha="center",
             va="center",
             color="white",
+            fontproperties=leg_font,
         )
         p_ax.text(
             -width[0] * 0.4625,
             -width[0] * 0.375,
-            "X",
-            size=8,
+            r"$x$",
+            size=10,
             ha="center",
             va="center",
             color="white",
+            fontproperties=leg_font,
         )
     else:
         print("Invalid slice axis.")
@@ -369,6 +376,18 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         linewidth=width[0] * 0.00125,
         color="w",
         length_includes_head=True,
+    )
+
+    # add efficiency annotation
+    p_ax.text(
+        width[0] * 0.435,
+        width[0] * 0.45,
+        r"$f_{*} = 0.70$",
+        size=14,
+        ha="center",
+        va="center",
+        color="white",
+        fontproperties=leg_font,
     )
 
     # ==========================luminosity mappping data extraction==============

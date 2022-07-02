@@ -66,15 +66,16 @@ if not os.path.exists(psc_save):
 # TODO: edit for rendering runs
 sequence_title = "z_gas_log"
 slice_axis = "z"
+z_scale = "log"
 width = (400, "pc")
 start_step = 154  # fs07:113, fs035:154
-end_step = 1154
+end_step = 1177
 # cosmetics
 mpl.rc("font", family="serif")
 leg_font = font_manager.FontProperties(family="serif", math_fontfamily="cm")
 clrmap = "BuGn_r"  # for the pop II ages
 density_cmap = "inferno"  # "cmyt.dusk"
-z_scale = "log"
+
 # https://matplotlib.org/stable/tutorials/colors/colormaps.html
 # https://yt-project.org/doc/visualizing/colormaps/index.html
 star_map = cm.get_cmap(clrmap)
