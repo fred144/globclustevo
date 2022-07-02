@@ -80,7 +80,7 @@ hc = HaloCatalog(
     finder_kwargs={
         "num_readers": 1,
         "num_writers": 1,
-        #"particle_type": "star",
+        "particle_type": "star",
         "outbase": "../halo_data/{}/{}/".format(simulation_run, profiler_run),
     },
     output_dir="../halo_data/{}/{}/".format(simulation_run, profiler_run),
