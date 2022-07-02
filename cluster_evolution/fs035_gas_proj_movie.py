@@ -18,7 +18,7 @@ import yt
 import os
 import warnings
 
-yt.enable_parallelism()
+# yt.enable_parallelism()
 # mylog.setLevel(40)
 # warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
@@ -170,7 +170,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
         corner="lower_right",
         coeff=width[0] / 4,
         unit="pc",
-        text_args={"size": 14, "family": "serif"},
+        text_args={"size": 12, "family": "serif"},
     )
     p.set_cmap(field=("gas", "density"), cmap=density_cmap)
 
