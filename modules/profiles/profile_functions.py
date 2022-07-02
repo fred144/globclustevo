@@ -131,14 +131,18 @@ def projected_surf_densities(
     total_clust_lum = np.sum(lum_per_bin)
 
     if calc_half_r is not None:
-        integrated_mass = np.cumsum(mass_per_bin)
-        integrated_light = np.cumsum(lum_per_bin)
-
+        # reevaluate with increased bin resolition to get as close to the actual values
+        dr = 0.01
+        high_res_r = np.arange(0, radius + 0.01, 0.01)
+        high_res_m_per_bin, _ = np.histogram(distances, bins=high_res_r, weights=masses)
+        high_res_l_per_bin, _ = np.histogram(distances, bins=high_res_r, weights=lums)
+        integrated_mass = np.cumsum(high_res_m_per_bin)
+        integrated_light = np.cumsum(high_res_l_per_bin)
         half_mass_point = np.abs(integrated_mass - 0.5 * total_clust_m).argmin()
         half_light_point = np.abs(integrated_light - 0.5 * total_clust_lum).argmin()
 
-        half_mass_r = mass_per_bin[half_mass_point]
-        half_light_r = r[half_light_point]
+        half_mass_r = high_res_m_per_bin[half_mass_point]
+        half_light_r = high_res_l_per_bin[half_light_point]
 
         return (
             bin_ctrs,
