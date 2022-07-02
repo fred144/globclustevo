@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH -J script_submit
 #SBATCH --ntasks=8
-#SBATCH --cpus-per-task=8
-#SBATCH --mem-per-cpu=7000  
+#SBATCH --cpus-per-task=4
+#SBATCH --mem-per-cpu=4000  
 #SBATCH --exclusive
 #SBATCH -t 24:00:00
 
@@ -19,7 +19,7 @@ module load gcc
 module load openmpi
 
 
-SCRIPT="/lustre/fgarcia4/glob_clust_evo/cluster_evolution/gas_proj_movie.py"
+SCRIPT="/lustre/fgarcia4/glob_clust_evo/cluster_evolution/fs035_gas_proj_movie.py"
 #SCRIPT="profiler.py"
 
 # cd ~
