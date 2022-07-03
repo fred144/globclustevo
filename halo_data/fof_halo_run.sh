@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J fof_halo_run
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=20
 #SBATCH --mem-per-cpu=7000  
 #SBATCH --exclusive
 #SBATCH -t 72:00:00
@@ -15,6 +15,8 @@
 export LANG=en_US
 module load gcc
 module load openmpi
+source ~/py-virtual-envs/master/bin/activate.csh
+
 
 SCRIPT="/lustre/fgarcia4/glob_clust_evo/halo_data/fof_halo_finder.py"
 

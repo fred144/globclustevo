@@ -21,16 +21,16 @@ from yt.funcs import mylog
 mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
-simulation_run = "fs035_ms10"
-profiler_run = "fof_best"
+simulation_run = "fs07_refine"
+profiler_run = "fof"
 processor_number = 0
 
 datadir = os.path.expanduser(
     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
 ).format(simulation_run)
 
-# local_snapshots = filter_snapshots(r"../../cosm_test_data/refine", 113, 893, 10)
-local_snapshots = filter_snapshots(datadir, 784, 935, 1)
+# local_snapshots = filter_snapshots(r"../../cosm_test_data/refine", 500, 500, 1)
+local_snapshots = filter_snapshots(datadir, 113, 1000, 1)
 
 # if post processing isn't done alongside catalogue
 # fof_run_snapshots = filter_snapshots("../halo_data/fs07_refine/fof_best", 113, 918, 1)
@@ -78,7 +78,8 @@ for i, file_name in enumerate(local_snapshots):
         finder_kwargs={
             "ptype": "star",
             "padding": 0.0001,
-            "link": 0.00001,
+            # "link": 0.00001, "best"
+            "link": 0.0000025,
             "dm_only": False,
         },
         output_dir="../halo_data/{}/{}/".format(simulation_run, profiler_run),
@@ -183,7 +184,9 @@ for i, file_name in enumerate(local_snapshots):
         # this makes them all centered at the origin (0,0,0)
         gc_stars = np.vstack((gc_x, gc_y, gc_z)).T - cat_pc[:, 1:-1][i - 1]
         gc_stars = np.column_stack((star_ids_inside, gc_stars))
-        header = "star id \t star_x_coords [pc] \t star_y_coords [pc] \t star_z_coords [pc] "
+        header = (
+            "star id \t star_x_coords [pc] \t star_y_coords [pc] \t star_z_coords [pc] "
+        )
 
         save_name = "../halo_data/{}/{}/info_{}/gc_vir_{}.txt".format(
             simulation_run, profiler_run, snapshot_num_string, str(int(h_id)).zfill(3)
