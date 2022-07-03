@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J fof_halo_run
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=20
 #SBATCH --mem-per-cpu=7000  
 #SBATCH --exclusive
 #SBATCH -t 72:00:00

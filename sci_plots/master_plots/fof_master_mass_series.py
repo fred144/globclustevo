@@ -74,7 +74,7 @@ with plt.rc_context(
     ax[0, 0].set_yscale("log")
     ax[0, 0].set_ylabel((r"$\mathrm{M}_{*} \: (\mathrm{M}_{\odot})$"))
     ax[0, 0].legend(
-        title="Pop II Stars",
+        # title="Pop II Stars",
         loc="lower right",
         fontsize=12,
     )
@@ -104,19 +104,18 @@ with plt.rc_context(
 
     ax1_twin = ax[0, 0].twiny()
     ax1_twin.invert_xaxis()
+    ax1_twin.xaxis.set_major_locator(MaxNLocator(5))
     ax1_twin.set_xlim(left=np.max(f7_redshift), right=np.min(f7_redshift))
-    ax1_twin.set(xlabel="$\mathrm{z}$")
 
     f7_bound_total_ratio = f7_mass_in_gc / f7_total_mass
 
     ax[1, 0].plot(f7_t_sim_myr, f7_bound_total_ratio, linewidth=4, c="grey")
 
     ax[1, 0].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
-    ax[1, 0].yaxis.set_major_locator(MaxNLocator(4))
-    ax[1, 0].xaxis.set_major_locator(MaxNLocator(7))
-    ax[1, 0].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
-    ax[1, 0].set_ylabel(r"$\mathrm{Bound}  / \mathrm{Total}$")
 
+    ax[1, 0].xaxis.set_major_locator(MaxNLocator(5))
+    ax[1, 0].yaxis.set_major_locator(MaxNLocator(4))
+    ax[1, 0].set_ylabel(r"$\mathrm{Bound}  / \mathrm{Total}$")
     ax[1, 0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
 
     # =================================30%============================================
@@ -125,7 +124,7 @@ with plt.rc_context(
         f3_t_sim_myr, f3_mass_in_gc, label=r"Bound,  FOF", color=cmap[3], lw=4
     )
     ax[0, 1].legend(
-        title="Pop II Stars",
+        # title="Pop II Stars",
         loc="lower right",
         fontsize=12,
     )
@@ -154,17 +153,21 @@ with plt.rc_context(
 
     ax2_twin = ax[0, 1].twiny()
     ax2_twin.invert_xaxis()
+    ax2_twin.xaxis.set_major_locator(MaxNLocator(5))
     ax2_twin.set_xlim(left=np.max(f3_redshift), right=np.min(f3_redshift))
-    ax2_twin.set(xlabel="$\mathrm{z}$")
 
     f3_bound_total_ratio = f3_mass_in_gc / f3_total_mass
 
     ax[1, 1].plot(f3_t_sim_myr, f3_bound_total_ratio, linewidth=4, c="grey")
 
     ax[1, 1].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
-    ax[1, 1].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
+
     ax[1, 1].set_xlim(left=np.min(f3_t_sim_myr), right=np.max(f3_t_sim_myr))
-    ax[1, 1].xaxis.set_major_locator(MaxNLocator(7))
+    ax[1, 1].xaxis.set_major_locator(MaxNLocator(5))
+
+    fig.text(0.5, 0.04, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
+    fig.text(0.5, 0.93, "$\mathrm{z}$", ha="center")
+
     plt.subplots_adjust(hspace=0, wspace=0)
 
 #%%
@@ -211,7 +214,7 @@ with plt.rc_context(
     ax[0, 0].set_yscale("log")
     ax[0, 0].set_ylabel((r"$\mathrm{M}_{*} \: (\mathrm{M}_{\odot})$"))
     ax[0, 0].legend(
-        title="Pop II Stars",
+        # title="Pop II Stars",
         loc="lower right",
         fontsize=12,
     )
@@ -240,16 +243,16 @@ with plt.rc_context(
     # add a twin axis
     ax1_twin = ax[0, 0].twiny()
     ax1_twin.invert_xaxis()
+    ax1_twin.xaxis.set_major_locator(MaxNLocator(5))
     ax1_twin.set_xlim(left=np.max(f7_redshift), right=np.min(f7_redshift))
-    ax1_twin.set(xlabel="$\mathrm{z}$")
 
     ax[1, 0].plot(f7_t_sim_myr[mask], f7_bound_field[mask], linewidth=4, c="grey")
 
     ax[1, 0].axhline(y=1, ls="--", c="grey", alpha=0.8)
     ax[1, 0].set_yscale("log")
-    ax[1, 0].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
+
     ax[1, 0].set_ylabel(r"$\mathrm{Bound}  / \mathrm{Field}$")
-    ax[1, 0].xaxis.set_major_locator(MaxNLocator(7))
+    ax[1, 0].xaxis.set_major_locator(MaxNLocator(5))
     ax[1, 0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
 
     # =================================30%============================================
@@ -269,7 +272,7 @@ with plt.rc_context(
         f3_t_sim_myr[mask], f3_field_mass[mask], label=r"Field", linewidth=4, c=cmap[5]
     )
     ax[0, 1].legend(
-        title="Pop II Stars",
+        # title="Pop II Stars",
         loc="lower right",
         fontsize=12,
     )
@@ -298,14 +301,17 @@ with plt.rc_context(
 
     ax2_twin = ax[0, 1].twiny()
     ax2_twin.invert_xaxis()
+    ax2_twin.xaxis.set_major_locator(MaxNLocator(5))
     ax2_twin.set_xlim(left=np.max(f3_redshift), right=np.min(f3_redshift))
-    ax2_twin.set(xlabel="$\mathrm{z}$")
 
     ax[1, 1].plot(f3_t_sim_myr[mask], f3_bound_field[mask], linewidth=4, c="grey")
 
     ax[1, 1].axhline(y=1, ls="--", c="grey", alpha=0.8)
 
-    ax[1, 1].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
     ax[1, 1].set_xlim(left=np.min(f3_t_sim_myr), right=np.max(f3_t_sim_myr))
-    ax[1, 1].xaxis.set_major_locator(MaxNLocator(7))
+    ax[1, 1].xaxis.set_major_locator(MaxNLocator(5))
+
+    fig.text(0.5, 0.04, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
+    fig.text(0.5, 0.93, "$\mathrm{z}$", ha="center")
+
     plt.subplots_adjust(hspace=0, wspace=0)
