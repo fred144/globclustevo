@@ -68,7 +68,7 @@ sequence_title = "z_gas_log"
 slice_axis = "z"
 z_scale = "log"
 width = (400, "pc")
-start_step = 1103  # fs07:113, fs035:154
+start_step = 1176  # fs07:113, fs035:154
 end_step = 1177
 # cosmetics
 mpl.rc("font", family="serif")
@@ -202,7 +202,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     )
 
     # pop II birth color bar
-    time_range = [int(birth_start), int(np.ceil(latest_sim_stats[1]))]  # Myr
+    time_range = [int(birth_start), int(np.ceil(latest_sim_stats[1]) + 2)]  # Myr
     print("> star age range:", time_range, "Myr")
     evenly_spaced_times = np.arange(time_range[0], time_range[1] + 5)  # Myr
     cmap = star_map(np.linspace(0, 1, time_range[1] - time_range[0]))
