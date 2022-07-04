@@ -68,7 +68,7 @@ sequence_title = "z_gas_log"
 slice_axis = "z"
 z_scale = "log"
 width = (400, "pc")
-start_step = 154  # fs07:113, fs035:154
+start_step = 1103  # fs07:113, fs035:154
 end_step = 1177
 # cosmetics
 mpl.rc("font", family="serif")

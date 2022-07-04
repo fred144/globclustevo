@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=20
 #SBATCH --mem-per-cpu=8000  
 #SBATCH --exclusive
-#SBATCH -t 72:00:00
+#SBATCH -t 24:00:00
 
 
 
@@ -21,7 +21,7 @@ module load openmpi
 
 SCRIPT="/lustre/fgarcia4/glob_clust_evo/cluster_evolution/fs035_gas_proj_movie.py"
 #SCRIPT="profiler.py"
-
+source ~/py-virtual-envs/master/bin/activate
 # cd ~
 # source /homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh
 # which python

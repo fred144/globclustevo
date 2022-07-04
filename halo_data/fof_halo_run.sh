@@ -15,7 +15,7 @@
 export LANG=en_US
 module load gcc
 module load openmpi
-source ~/py-virtual-envs/master/bin/activate.csh
+source ~/py-virtual-envs/master/bin/activate
 
 
 SCRIPT="/lustre/fgarcia4/glob_clust_evo/halo_data/fof_halo_finder.py"

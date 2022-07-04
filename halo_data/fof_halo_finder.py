@@ -21,7 +21,7 @@ from yt.funcs import mylog
 mylog.setLevel(40)
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
 
-simulation_run = "fs07_refine"
+simulation_run = "fs035_ms10"
 profiler_run = "fof"
 processor_number = 0
 
@@ -30,7 +30,7 @@ datadir = os.path.expanduser(
 ).format(simulation_run)
 
 # local_snapshots = filter_snapshots(r"../../cosm_test_data/refine", 500, 500, 1)
-local_snapshots = filter_snapshots(datadir, 113, 1000, 1)
+local_snapshots = filter_snapshots(datadir, 154, 1177, 1)
 
 # if post processing isn't done alongside catalogue
 # fof_run_snapshots = filter_snapshots("../halo_data/fs07_refine/fof_best", 113, 918, 1)
