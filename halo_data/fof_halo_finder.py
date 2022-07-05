@@ -30,7 +30,7 @@ datadir = os.path.expanduser(
 ).format(simulation_run)
 
 # local_snapshots = filter_snapshots(r"../../cosm_test_data/refine", 500, 500, 1)
-local_snapshots = filter_snapshots(datadir, 154, 1177, 1)
+local_snapshots = filter_snapshots(datadir, 500, 1177, 1)
 
 # if post processing isn't done alongside catalogue
 # fof_run_snapshots = filter_snapshots("../halo_data/fs07_refine/fof_best", 113, 918, 1)
