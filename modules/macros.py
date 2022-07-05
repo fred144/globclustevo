@@ -73,12 +73,18 @@ def code_age_to_myr(all_star_ages, hubble_const, unique_age=True, true_age=False
         return relative_ages  # t = 0 is the age of
 
 
-def common_filter_snapshots(snapshots_to_filter, filter_list):
+def common_filter_snapshots(snapshots_to_filter, filter_list, provide_numbers=False):
     r"""
     Given a list of snapshot file names (snapshots_to_filter),
     return only the snapshot file names in the given filter_list
     """
-    filter_list = [f.split("_")[-1] for f in filter_list]
+    if provide_numbers is True:
+        # turn an array into a list of str if providing numbers
+        filter_list = list(map(str, list(filter_list)))
+        filter_list = [f.zfill(5) for f in filter_list]
+
+    else:
+        filter_list = [f.split("_")[-1] for f in filter_list]
     common_items = []
     for file_name in snapshots_to_filter:
         if any(ext in file_name for ext in filter_list):

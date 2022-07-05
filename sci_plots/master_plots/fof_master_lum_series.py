@@ -51,9 +51,9 @@ with plt.rc_context(
     {
         "font.family": "serif",
         "mathtext.fontset": "cm",
-        "xtick.labelsize": 12,
-        "ytick.labelsize": 12,
-        "font.size": 14,
+        "xtick.labelsize": 10,
+        "ytick.labelsize": 10,
+        "font.size": 12,
     }
 ):
     cmap = cm.get_cmap("Set2")
@@ -64,14 +64,20 @@ with plt.rc_context(
         gridspec_kw={"height_ratios": [5, 3]},
         sharex="col",
         sharey="row",
-        figsize=(12, 6),
-        dpi=300,
+        figsize=(7.5, 4),
+        dpi=400,
     )
     f7_bound_total_light = f7_lum_in_gc / f7_total_lum
 
-    ax[0, 0].plot(f7_t_sim_myr, f7_total_lum, label=r"Total", linewidth=4, c=cmap[0])
     ax[0, 0].plot(
-        f7_t_sim_myr, f7_lum_in_gc, label=r"Bound, FOF", linewidth=4, c=cmap[1]
+        f7_t_sim_myr, f7_total_lum, label=r"$\mathrm{Total}$", linewidth=4, c=cmap[0]
+    )
+    ax[0, 0].plot(
+        f7_t_sim_myr,
+        f7_lum_in_gc,
+        label=r"$\mathrm{Bound}$",
+        linewidth=4,
+        c=cmap[1],
     )
     # ax[0, 0].scatter(f7_t_sim_myr, f7_total_lum, label=r"Total", s =3, c=cmap[0])
     # ax[0, 0].scatter(
@@ -108,7 +114,7 @@ with plt.rc_context(
         0.90,
         textstr,
         transform=ax[0, 0].transAxes,
-        fontsize=14,
+        fontsize=12,
         verticalalignment="top",
         bbox=props,
     )
@@ -124,15 +130,19 @@ with plt.rc_context(
 
     ax[1, 0].xaxis.set_major_locator(MaxNLocator(5))
     ax[1, 0].yaxis.set_major_locator(MaxNLocator(4))
-    ax[1, 0].set_ylabel(r"$\mathrm{Bound} / \mathrm{Total}$")
+    ax[1, 0].set_ylabel(r"$\mathrm{L_{*,bound}} / \mathrm{L_{*,total}}$")
     ax[1, 0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
 
     # =================================30%============================================
 
     f3_bound_total_light = f3_lum_in_gc / f3_total_lum
 
-    ax[0, 1].plot(f3_t_sim_myr, f3_total_lum, label=r"Total", color=cmap[2], lw=4)
-    ax[0, 1].plot(f3_t_sim_myr, f3_lum_in_gc, label=r"Bound,  FOF", color=cmap[3], lw=4)
+    ax[0, 1].plot(
+        f3_t_sim_myr, f3_total_lum, label=r"$\mathrm{Total}$", color=cmap[2], lw=4
+    )
+    ax[0, 1].plot(
+        f3_t_sim_myr, f3_lum_in_gc, label=r"$\mathrm{Bound}$", color=cmap[3], lw=4
+    )
     ax[0, 1].legend(
         # title="Pop II Stars",
         loc="lower right",
@@ -154,7 +164,7 @@ with plt.rc_context(
         0.90,
         textstr,
         transform=ax[0, 1].transAxes,
-        fontsize=14,
+        fontsize=12,
         verticalalignment="top",
         bbox=props,
     )
@@ -173,10 +183,20 @@ with plt.rc_context(
     ax[1, 1].set_xlim(left=np.min(f3_t_sim_myr), right=np.max(f3_t_sim_myr))
     ax[1, 1].xaxis.set_major_locator(MaxNLocator(5))
 
-    fig.text(0.5, 0.04, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
+    fig.text(0.5, 0.03, "$\mathrm{t} \:(\mathrm{Myr})$", ha="center")
     fig.text(0.5, 0.93, "$\mathrm{z}$", ha="center")
 
     plt.subplots_adjust(hspace=0, wspace=0)
+
+    plt.savefig(
+        os.path.expanduser(
+            "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/lum_bound_unbound.png"
+        ),
+        dpi=800,
+        bbox_inches="tight",
+        pad_inches=0.05,
+        format="png",
+    )
 
 #%%
 # another version
@@ -185,9 +205,9 @@ with plt.rc_context(
     {
         "font.family": "serif",
         "mathtext.fontset": "cm",
-        "xtick.labelsize": 12,
-        "ytick.labelsize": 12,
-        "font.size": 14,
+        "xtick.labelsize": 10,
+        "ytick.labelsize": 10,
+        "font.size": 12,
     }
 ):
     cmap = cm.get_cmap("Set2")
@@ -198,25 +218,33 @@ with plt.rc_context(
         gridspec_kw={"height_ratios": [5, 3]},
         sharex="col",
         sharey="row",
-        figsize=(12, 6),
-        dpi=300,
+        figsize=(7.5, 4),
+        dpi=400,
     )
     f7_field_lum = f7_total_lum - f7_lum_in_gc
     f7_bound_field = f7_lum_in_gc / f7_field_lum
     mask = f7_field_lum > 1e30
 
     ax[0, 0].plot(
-        f7_t_sim_myr[mask], f7_total_lum[mask], label=r"Total", linewidth=4, c=cmap[0]
+        f7_t_sim_myr[mask],
+        f7_total_lum[mask],
+        label=r"$\mathrm{Total}$",
+        linewidth=4,
+        c=cmap[0],
     )
     ax[0, 0].plot(
         f7_t_sim_myr[mask],
         f7_lum_in_gc[mask],
-        label=r"Bound, FOF",
+        label=r"$\mathrm{Bound}$",
         linewidth=4,
         c=cmap[1],
     )
     ax[0, 0].plot(
-        f7_t_sim_myr[mask], f7_field_lum[mask], label=r"Field", linewidth=4, c=cmap[4]
+        f7_t_sim_myr[mask],
+        f7_field_lum[mask],
+        label=r"$\mathrm{Field}$",
+        linewidth=4,
+        c=cmap[4],
     )
 
     ax[0, 0].set_yscale("log")
@@ -248,7 +276,7 @@ with plt.rc_context(
         0.90,
         textstr,
         transform=ax[0, 0].transAxes,
-        fontsize=14,
+        fontsize=12,
         verticalalignment="top",
         bbox=props,
     )
@@ -263,8 +291,8 @@ with plt.rc_context(
     ax[1, 0].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
 
     ax[1, 0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
-    ax[1, 0].set_ylabel(r"$\mathrm{Bound} / \mathrm{Field}$")
-    ax[1, 0].xaxis.set_major_locator(MaxNLocator(7))
+    ax[1, 0].set_ylabel(r"$\mathrm{L_{*,bound}} / \mathrm{L_{*,field}}$")
+    ax[1, 0].xaxis.set_major_locator(MaxNLocator(5))
     ax[1, 0].yaxis.set_major_locator(MaxNLocator(4))
     ax[1, 0].set_yscale("log")
     # =================================30%============================================
@@ -273,16 +301,22 @@ with plt.rc_context(
     f3_bound_field = f3_lum_in_gc / f3_field_lum
     mask = f3_field_lum > 1e30
 
-    ax[0, 1].plot(f3_t_sim_myr, f3_total_lum, label=r"Total", color=cmap[2], lw=4)
+    ax[0, 1].plot(
+        f3_t_sim_myr, f3_total_lum, label=r"$\mathrm{Total}$", color=cmap[2], lw=4
+    )
     ax[0, 1].plot(
         f3_t_sim_myr[mask],
         f3_lum_in_gc[mask],
-        label=r"Bound,  FOF",
+        label=r"$\mathrm{Bound}$",
         color=cmap[3],
         lw=4,
     )
     ax[0, 1].plot(
-        f3_t_sim_myr[mask], f3_field_lum[mask], label=r"Field", linewidth=4, c=cmap[5]
+        f3_t_sim_myr[mask],
+        f3_field_lum[mask],
+        label=r"$\mathrm{Field}$",
+        linewidth=4,
+        c=cmap[5],
     )
 
     ax[0, 1].legend(
@@ -306,7 +340,7 @@ with plt.rc_context(
         0.90,
         textstr,
         transform=ax[0, 1].transAxes,
-        fontsize=14,
+        fontsize=12,
         verticalalignment="top",
         bbox=props,
     )
@@ -323,8 +357,8 @@ with plt.rc_context(
     ax[1, 1].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
 
     ax[1, 1].set_xlim(left=np.min(f3_t_sim_myr), right=np.max(f3_t_sim_myr))
-    ax[1, 1].xaxis.set_major_locator(MaxNLocator(7))
+    ax[1, 1].xaxis.set_major_locator(MaxNLocator(5))
 
-    fig.text(0.5, 0.04, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
+    fig.text(0.5, 0.03, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
     fig.text(0.5, 0.93, "$\mathrm{z}$", ha="center")
     plt.subplots_adjust(hspace=0, wspace=0)

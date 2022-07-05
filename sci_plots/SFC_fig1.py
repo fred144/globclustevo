@@ -4,78 +4,78 @@ import matplotlib as mpl
 import matplotlib.lines as mlines
 
 
-def read_cat(filen):
-    t = []
-    x = []
-    y = []
-    V = []
-    I = []
+# def read_cat(filen):
+#     t = []
+#     x = []
+#     y = []
+#     V = []
+#     I = []
 
-    f = open(filen, "r")
-    i = 0
-    for line in f:
-        if i > 0:
-            t0 = float(line.split()[2])  # zred
-            x1 = float(line.split()[4])
-            y1 = float(line.split()[5])
-            V1 = float(line.split()[8])
-            I1 = float(line.split()[9])
-            t.append(t0)
-            x.append(x1)
-            y.append(y1)
-            V.append(V1)
-            I.append(I1)
-        i = i + 1
+#     f = open(filen, "r")
+#     i = 0
+#     for line in f:
+#         if i > 0:
+#             t0 = float(line.split()[2])  # zred
+#             x1 = float(line.split()[4])
+#             y1 = float(line.split()[5])
+#             V1 = float(line.split()[8])
+#             I1 = float(line.split()[9])
+#             t.append(t0)
+#             x.append(x1)
+#             y.append(y1)
+#             V.append(V1)
+#             I.append(I1)
+#         i = i + 1
 
-    print("total lines", i)
-    t = np.array(t)
-    x = np.array(x)
-    y = np.array(y)
-    V = np.array(V)
-    I = np.array(I)
-    return t, x, y, V, I
-
-
-def star_formation_efficiency(n_h, mass, metallicity):
-    """
-    star formation efficiency formula
-    """
-    # n_crit=n_H*0+1.e3/12.0
-    # with shell 6 times less dense. At t_relax 12 times less dense6
-    # f_s reduced by 5 for low met.
-    # f_s increases with stronger B-field
-    n_crit = n_h * 0 + 1.0e3 / (4.0 * 2)
-
-    f_s = (
-        2.0e-2
-        / 5.0
-        * (metallicity / 1e-3) ** 0.5
-        * (mass / 1.0e4) ** 0.4
-        * (n_h / n_crit + 1.0) ** (0.91)
-    )
-    # f_s=4.e-3*(mass/1.e4)**0.4*(n_H/n_crit+1.0)**(0.91)
-    f_s = np.where(f_s < 0.9, f_s, 0.9)
-    return f_s
+#     print("total lines", i)
+#     t = np.array(t)
+#     x = np.array(x)
+#     y = np.array(y)
+#     V = np.array(V)
+#     I = np.array(I)
+#     return t, x, y, V, I
 
 
-z, ra, mass, n_H, met = read_cat("../sim_log_files/fs07_refine/logSFC")
+# def star_formation_efficiency(n_h, mass, metallicity):
+#     """
+#     star formation efficiency formula
+#     """
+#     # n_crit=n_H*0+1.e3/12.0
+#     # with shell 6 times less dense. At t_relax 12 times less dense6
+#     # f_s reduced by 5 for low met.
+#     # f_s increases with stronger B-field
+#     n_crit = n_h * 0 + 1.0e3 / (4.0 * 2)
 
-fig, axs = plt.subplots(1, 1)
-plt.scatter(met, (n_H), c=z)
-plt.colorbar(label="redshift of formation")
-axs.set(
-    xlabel="metallicity [Z/Z$_\odot$]",
-    ylabel="mean gas number density [cm$^{-3}]$",
-    xlim=[1e-4, 5e-3],
-    ylim=[5e3, 5e4],
-    xscale="log",
-    yscale="log",
-)
+#     f_s = (
+#         2.0e-2
+#         / 5.0
+#         * (metallicity / 1e-3) ** 0.5
+#         * (mass / 1.0e4) ** 0.4
+#         * (n_h / n_crit + 1.0) ** (0.91)
+#     )
+#     # f_s=4.e-3*(mass/1.e4)**0.4*(n_H/n_crit+1.0)**(0.91)
+#     f_s = np.where(f_s < 0.9, f_s, 0.9)
+#     return f_s
 
-# z, ra, mass, n_H, met = read_cat("../sim_log_files/fs035_ms10/logSFC")
-# plt.scatter(met, (n_H), c=z, marker="s")
 
-plt.show()
+# z, ra, mass, n_H, met = read_cat("../sim_log_files/fs07_refine/logSFC")
+
+# fig, axs = plt.subplots(1, 1)
+# plt.scatter(met, (n_H), c=z)
+# plt.colorbar(label="redshift of formation")
+# axs.set(
+#     xlabel="metallicity [Z/Z$_\odot$]",
+#     ylabel="mean gas number density [cm$^{-3}]$",
+#     xlim=[1e-4, 5e-3],
+#     ylim=[5e3, 5e4],
+#     xscale="log",
+#     yscale="log",
+# )
+
+# # z, ra, mass, n_H, met = read_cat("../sim_log_files/fs035_ms10/logSFC")
+# # plt.scatter(met, (n_H), c=z, marker="s")
+
+# plt.show()
 #%% clean up
 """
 Graph for plotting the mean gas number density as a function of metallicity 
@@ -100,12 +100,12 @@ with plt.rc_context(
     {
         "font.family": "serif",
         "mathtext.fontset": "cm",
-        "xtick.labelsize": 12,
-        "ytick.labelsize": 12,
+        "xtick.labelsize": 10,
+        "ytick.labelsize": 10,
     }
 ):
 
-    plt.subplots(1, 1, figsize=(7, 6), dpi=300)
+    plt.subplots(1, 1, figsize=(4, 3.5), dpi=400)
     cmap = plt.cm.get_cmap("autumn_r")
 
     plt.scatter(
@@ -117,7 +117,7 @@ with plt.rc_context(
         marker="o",
         edgecolors="black",
         linewidth=0.5,
-        s=40,
+        s=20,
         alpha=0.8,
     )
     plt.scatter(
@@ -129,28 +129,42 @@ with plt.rc_context(
         marker="P",
         edgecolors="black",
         linewidth=0.5,
-        s=40,
+        s=20,
         alpha=0.8,
     )
     cbar = plt.colorbar(pad=0)
-    cbar.set_label(label="$\mathrm{z}_{\mathrm{formation}}$", fontsize=16)
     cbar.ax.invert_yaxis()
+    cbar.set_label(label="$\mathrm{z}_{\mathrm{formation}}$", fontsize=16)
 
-    plt.xlabel(r" MC Metallicity $(\mathrm{Z}_{\odot})$", fontsize=14)
+    plt.xlabel(r"$ \mathrm{Z_{MC}\:}(\mathrm{Z}_{\odot})$", fontsize=12)
+    # plt.ylabel(
+    #     r"$\mathrm{Mean\:Gas\:Number\:Density\:}\left( \mathrm{cm} ^{-3} \right)$",
+    #     fontsize=12,
+    # )
     plt.ylabel(
-        r"Mean Gas Number Density $\left( \mathrm{cm} ^{-3} \right)$", fontsize=14
+        r"$\overline{n_\mathrm{H}} \: \left( \mathrm{cm} ^{-3} \right)$",
+        fontsize=12,
     )
+
     plt.xscale("log")
     plt.yscale("log")
     plt.xlim(1e-4, 8e-3)
-    plt.ylim(0.4e4, 1e5)
+    plt.ylim(2e3, 1e5)
     # manual legend, want to customize colors
-    f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"0.70")
-    f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"0.35")
+    f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"$0.70$")
+    f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"$0.35$")
     plt.legend(
         title="$\mathrm{SFE} \: (f_{*})$",
-        loc="upper left",
-        title_fontsize=14,
+        loc="upper right",
+        title_fontsize=12,
         fontsize=12,
         handles=[f35, f70],
+    )
+
+    plt.savefig(
+        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_metal_nden.png",
+        dpi=800,
+        bbox_inches="tight",
+        pad_inches=0.05,
+        format="png",
     )

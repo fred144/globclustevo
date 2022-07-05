@@ -3,75 +3,75 @@ import numpy as np
 import matplotlib.lines as mlines
 
 
-def read_cat(filen):
-    t = []
-    x = []
-    y = []
-    V = []
-    I = []
+# def read_cat(filen):
+#     t = []
+#     x = []
+#     y = []
+#     V = []
+#     I = []
 
-    f = open(filen, "r")
-    i = 0
-    for line in f:
-        if i > 0:
-            t0 = float(line.split()[2])
-            x1 = float(line.split()[4])
-            y1 = float(line.split()[5])
-            V1 = float(line.split()[8])
-            I1 = float(line.split()[9])
-            t.append(t0)
-            x.append(x1)
-            y.append(y1)
-            V.append(V1)
-            I.append(I1)
-        i = i + 1
+#     f = open(filen, "r")
+#     i = 0
+#     for line in f:
+#         if i > 0:
+#             t0 = float(line.split()[2])
+#             x1 = float(line.split()[4])
+#             y1 = float(line.split()[5])
+#             V1 = float(line.split()[8])
+#             I1 = float(line.split()[9])
+#             t.append(t0)
+#             x.append(x1)
+#             y.append(y1)
+#             V.append(V1)
+#             I.append(I1)
+#         i = i + 1
 
-    print("total lines", i)
-    t = np.array(t)
-    x = np.array(x)
-    y = np.array(y)
-    V = np.array(V)
-    I = np.array(I)
-    return t, x, y, V, I
-
-
-def f_star(n_H, mass, met):
-    # n_crit=n_H*0+1.e3/12.0
-    # with shell 6 times less dense. At t_relax 12 times less dense6
-    # f_s reduced by 5 for low met.
-    # f_s increases with stronger B-field
-    n_crit = n_H * 0 + 1.0e3 / (4.0 * 2)
-
-    efficiency = (
-        2.0e-2
-        / 5.0
-        * (met / 5e-4) ** 0.5
-        * (mass / 1.0e4) ** 0.4
-        * (n_H / n_crit + 1.0) ** (0.91)
-    )
-    # f_s=4.e-3*(mass/1.e4)**0.4*(n_H/n_crit+1.0)**(0.91)
-    efficiency = np.where(efficiency < 0.9, efficiency, 0.9)
-    return efficiency
+#     print("total lines", i)
+#     t = np.array(t)
+#     x = np.array(x)
+#     y = np.array(y)
+#     V = np.array(V)
+#     I = np.array(I)
+#     return t, x, y, V, I
 
 
-z, ra, mass, n_H, met = read_cat("../sim_log_files/fs07_refine/logSFC")
+# def f_star(n_H, mass, met):
+#     # n_crit=n_H*0+1.e3/12.0
+#     # with shell 6 times less dense. At t_relax 12 times less dense6
+#     # f_s reduced by 5 for low met.
+#     # f_s increases with stronger B-field
+#     n_crit = n_H * 0 + 1.0e3 / (4.0 * 2)
 
-fig, axs = plt.subplots(1, 1)
-plt.scatter(mass, f_star(n_H, mass, met) * 100, c=np.log10(n_H))
-plt.colorbar(label="Log(n$_H$ [cm$^{-3}$])")
-axs.set(
-    xlabel="Stellar mass [M/M$_\odot$]",
-    ylabel="Star formation efficiency %",
-    xlim=[5e2, 5e4],
-    ylim=[5, 100],
-    xscale="log",
-    yscale="log",
-)
+#     efficiency = (
+#         2.0e-2
+#         / 5.0
+#         * (met / 5e-4) ** 0.5
+#         * (mass / 1.0e4) ** 0.4
+#         * (n_H / n_crit + 1.0) ** (0.91)
+#     )
+#     # f_s=4.e-3*(mass/1.e4)**0.4*(n_H/n_crit+1.0)**(0.91)
+#     efficiency = np.where(efficiency < 0.9, efficiency, 0.9)
+#     return efficiency
 
-z, ra, mass, n_H, met = read_cat("../sim_log_files/fs035_ms10/logSFC")
-plt.scatter(mass, f_star(n_H, mass, met) * 100, c=np.log10(n_H), marker="s")
 
-plt.show()
+# z, ra, mass, n_H, met = read_cat("../sim_log_files/fs07_refine/logSFC")
+
+# fig, axs = plt.subplots(1, 1)
+# plt.scatter(mass, f_star(n_H, mass, met) * 100, c=np.log10(n_H))
+# plt.colorbar(label="Log(n$_H$ [cm$^{-3}$])")
+# axs.set(
+#     xlabel="Stellar mass [M/M$_\odot$]",
+#     ylabel="Star formation efficiency %",
+#     xlim=[5e2, 5e4],
+#     ylim=[5, 100],
+#     xscale="log",
+#     yscale="log",
+# )
+
+# z, ra, mass, n_H, met = read_cat("../sim_log_files/fs035_ms10/logSFC")
+# plt.scatter(mass, f_star(n_H, mass, met) * 100, c=np.log10(n_H), marker="s")
+
+# plt.show()
 #%%
 
 """
@@ -120,11 +120,11 @@ with plt.rc_context(
     {
         "font.family": "serif",
         "mathtext.fontset": "cm",
-        "xtick.labelsize": 12,
-        "ytick.labelsize": 12,
+        "xtick.labelsize": 10,
+        "ytick.labelsize": 10,
     }
 ):
-    plt.subplots(1, 1, figsize=(7, 6), dpi=300)
+    plt.subplots(1, 1, figsize=(4, 3.5), dpi=400)
 
     cmap = plt.cm.get_cmap("summer")
 
@@ -140,7 +140,7 @@ with plt.rc_context(
         marker="o",
         edgecolors="black",
         linewidth=0.5,
-        s=40,
+        s=20,
         alpha=0.8,
     )
 
@@ -156,28 +156,36 @@ with plt.rc_context(
         marker="P",
         edgecolors="black",
         linewidth=0.5,
-        s=40,
+        s=20,
         alpha=0.8,
     )
     cbar = plt.colorbar(pad=0)
     cbar.set_label(
-        label=(r"$\log_{10} \: n_h \:\:  \left( \mathrm{cm} ^{-3} \right)$"),
-        fontsize=16,
+        label=(r"$\log_{10}\:\overline{n_\mathrm{H}}\:\left(\mathrm{cm}^{-3} \right)$"),
+        fontsize=14,
     )
 
-    plt.xlabel(r" MC Mass $(\mathrm{M}_{\odot})$", fontsize=14)
-    plt.ylabel(r"Star Formation Efficiency $(\%)$", fontsize=14)
+    plt.xlabel(r"$\mathrm{M_{MC}} (\mathrm{M}_{\odot})$", fontsize=12)
+    plt.ylabel(r"$ \mathrm{SFE}\:(\%)$", fontsize=12)
     plt.xscale("log")
     plt.yscale("log")
     plt.xlim(5e2, 5e4)
     plt.ylim(5, 100)
     # manual legend, want to customize colors
-    f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"0.70")
-    f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"0.35")
+    f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"$0.70$")
+    f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"$0.35$")
     plt.legend(
         title="$\mathrm{SFE} \: (f_{*})$",
         loc="upper left",
-        title_fontsize=14,
+        title_fontsize=12,
         fontsize=12,
         handles=[f35, f70],
+    )
+
+    plt.savefig(
+        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_mass_sfe.png",
+        dpi=800,
+        bbox_inches="tight",
+        pad_inches=0.05,
+        format="png",
     )

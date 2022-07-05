@@ -25,12 +25,13 @@ simulation_run = "fs035_ms10"
 profiler_run = "fof"
 processor_number = 0
 
+# local_snapshots = filter_snapshots(r"../../cosm_test_data/fs035_ms10", 500, 500, 1)
+
 datadir = os.path.expanduser(
     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
 ).format(simulation_run)
+local_snapshots = filter_snapshots(datadir, 501, 1177, 1)
 
-# local_snapshots = filter_snapshots(r"../../cosm_test_data/refine", 500, 500, 1)
-local_snapshots = filter_snapshots(datadir, 500, 1177, 1)
 
 # if post processing isn't done alongside catalogue
 # fof_run_snapshots = filter_snapshots("../halo_data/fs07_refine/fof_best", 113, 918, 1)

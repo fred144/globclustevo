@@ -79,10 +79,12 @@ density_cmap = "inferno"  # "cmyt.dusk"
 # https://matplotlib.org/stable/tutorials/colors/colormaps.html
 # https://yt-project.org/doc/visualizing/colormaps/index.html
 star_map = cm.get_cmap(clrmap)
-
+skip_frames = [1102]  # corrupted frames
 # snapshot 115 to 452 roughly spans 340 to 470 myr
 # ===================================MAIN=================================
 for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
+    if output_num in skip_frames:
+        continue
     print("#________________________________________________________________")
     infofile = os.path.abspath(
         datadir + f"/output_{output_num:05}/info_{output_num:05}.txt"

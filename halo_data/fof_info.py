@@ -1,6 +1,6 @@
 """
 make an info file similar to the one produced by gc_profiler but based soley on the
-fof results
+fof results. to be used for things like the mass function or bubble plot.
 """
 
 import sys

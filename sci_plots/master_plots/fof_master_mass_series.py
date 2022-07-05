@@ -46,14 +46,14 @@ f3_mass_in_gc = fs35_ds[:, 2][fail_mask]
 
 # f3_core_mass_in_gc =fs35_ds[:, 7][fail_mask]
 
-#%%# fitted bound and unbound mass
+#%%#
 with plt.rc_context(
     {
         "font.family": "serif",
         "mathtext.fontset": "cm",
-        "xtick.labelsize": 12,
-        "ytick.labelsize": 12,
-        "font.size": 14,
+        "xtick.labelsize": 10,
+        "ytick.labelsize": 10,
+        "font.size": 12,
     }
 ):
     cmap = cm.get_cmap("Set2")
@@ -64,12 +64,16 @@ with plt.rc_context(
         gridspec_kw={"height_ratios": [5, 3]},
         sharex="col",
         sharey="row",
-        figsize=(12, 6),
-        dpi=300,
+        figsize=(7.5, 4),
+        dpi=400,
     )
 
-    ax[0, 0].plot(f7_t_sim_myr, f7_total_mass, label=r"Total", color=cmap[0], lw=4)
-    ax[0, 0].plot(f7_t_sim_myr, f7_mass_in_gc, label=r"Bound, FOF", color=cmap[1], lw=4)
+    ax[0, 0].plot(
+        f7_t_sim_myr, f7_total_mass, label=r"$\mathrm{Total}$", color=cmap[0], lw=4
+    )
+    ax[0, 0].plot(
+        f7_t_sim_myr, f7_mass_in_gc, label="$\mathrm{Bound}$", color=cmap[1], lw=4
+    )
 
     ax[0, 0].set_yscale("log")
     ax[0, 0].set_ylabel((r"$\mathrm{M}_{*} \: (\mathrm{M}_{\odot})$"))
@@ -95,7 +99,7 @@ with plt.rc_context(
         0.90,
         textstr,
         transform=ax[0, 0].transAxes,
-        fontsize=14,
+        fontsize=12,
         verticalalignment="top",
         bbox=props,
     )
@@ -115,13 +119,15 @@ with plt.rc_context(
 
     ax[1, 0].xaxis.set_major_locator(MaxNLocator(5))
     ax[1, 0].yaxis.set_major_locator(MaxNLocator(4))
-    ax[1, 0].set_ylabel(r"$\mathrm{Bound}  / \mathrm{Total}$")
+    ax[1, 0].set_ylabel(r"$\mathrm{M_{*,bound}} / \mathrm{M_{*,total}}$")
     ax[1, 0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
 
     # =================================30%============================================
-    ax[0, 1].plot(f3_t_sim_myr, f3_total_mass, label=r"Total", color=cmap[2], lw=4)
     ax[0, 1].plot(
-        f3_t_sim_myr, f3_mass_in_gc, label=r"Bound,  FOF", color=cmap[3], lw=4
+        f3_t_sim_myr, f3_total_mass, label=r"$\mathrm{Total}$", color=cmap[2], lw=4
+    )
+    ax[0, 1].plot(
+        f3_t_sim_myr, f3_mass_in_gc, label="$\mathrm{Bound}$", color=cmap[3], lw=4
     )
     ax[0, 1].legend(
         # title="Pop II Stars",
@@ -165,10 +171,21 @@ with plt.rc_context(
     ax[1, 1].set_xlim(left=np.min(f3_t_sim_myr), right=np.max(f3_t_sim_myr))
     ax[1, 1].xaxis.set_major_locator(MaxNLocator(5))
 
-    fig.text(0.5, 0.04, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
+    fig.text(0.5, 0.03, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
     fig.text(0.5, 0.93, "$\mathrm{z}$", ha="center")
 
     plt.subplots_adjust(hspace=0, wspace=0)
+
+    plt.savefig(
+        os.path.expanduser(
+            "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/mass_bound_unbound.png"
+        ),
+        dpi=800,
+        bbox_inches="tight",
+        pad_inches=0.05,
+        format="png",
+    )
+
 
 #%%
 # another version
@@ -177,9 +194,9 @@ with plt.rc_context(
     {
         "font.family": "serif",
         "mathtext.fontset": "cm",
-        "xtick.labelsize": 12,
-        "ytick.labelsize": 12,
-        "font.size": 14,
+        "xtick.labelsize": 10,
+        "ytick.labelsize": 10,
+        "font.size": 12,
     }
 ):
     cmap = cm.get_cmap("Set2")
@@ -190,25 +207,33 @@ with plt.rc_context(
         gridspec_kw={"height_ratios": [5, 3]},
         sharex="col",
         sharey="row",
-        figsize=(12, 6),
-        dpi=300,
+        figsize=(7.5, 4),
+        dpi=400,
     )
     f7_field_mass = f7_total_mass - f7_mass_in_gc
     f7_bound_field = f7_mass_in_gc / f7_field_mass
     mask = f7_field_mass > 10
 
     ax[0, 0].plot(
-        f7_t_sim_myr[mask], f7_total_mass[mask], label=r"Total", color=cmap[0], lw=4
+        f7_t_sim_myr[mask],
+        f7_total_mass[mask],
+        label=r"$\mathrm{Total}$",
+        color=cmap[0],
+        lw=4,
     )
     ax[0, 0].plot(
         f7_t_sim_myr[mask],
         f7_mass_in_gc[mask],
-        label=r"Bound, FOF",
+        label="$\mathrm{Bound}$",
         color=cmap[1],
         lw=4,
     )
     ax[0, 0].plot(
-        f7_t_sim_myr[mask], f7_field_mass[mask], label=r"Field", linewidth=4, c=cmap[4]
+        f7_t_sim_myr[mask],
+        f7_field_mass[mask],
+        label=r"$\mathrm{Field}$",
+        linewidth=4,
+        c=cmap[4],
     )
 
     ax[0, 0].set_yscale("log")
@@ -251,7 +276,7 @@ with plt.rc_context(
     ax[1, 0].axhline(y=1, ls="--", c="grey", alpha=0.8)
     ax[1, 0].set_yscale("log")
 
-    ax[1, 0].set_ylabel(r"$\mathrm{Bound}  / \mathrm{Field}$")
+    ax[1, 0].set_ylabel(r"$\mathrm{M_{*,bound}} / \mathrm{M_{*,field}}$")
     ax[1, 0].xaxis.set_major_locator(MaxNLocator(5))
     ax[1, 0].set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
 
@@ -260,16 +285,22 @@ with plt.rc_context(
     f3_bound_field = f3_mass_in_gc / f3_field_mass
     mask = f3_field_mass > 10
 
-    ax[0, 1].plot(f3_t_sim_myr, f3_total_mass, label=r"Total", color=cmap[2], lw=4)
+    ax[0, 1].plot(
+        f3_t_sim_myr, f3_total_mass, label=r"$\mathrm{Total}$", color=cmap[2], lw=4
+    )
     ax[0, 1].plot(
         f3_t_sim_myr,
         f3_mass_in_gc,
-        label=r"Bound,  FOF",
+        label="$\mathrm{Bound}$",
         color=cmap[3],
         lw=4,
     )
     ax[0, 1].plot(
-        f3_t_sim_myr[mask], f3_field_mass[mask], label=r"Field", linewidth=4, c=cmap[5]
+        f3_t_sim_myr[mask],
+        f3_field_mass[mask],
+        label=r"$\mathrm{Field}$",
+        linewidth=4,
+        c=cmap[5],
     )
     ax[0, 1].legend(
         # title="Pop II Stars",
@@ -311,7 +342,7 @@ with plt.rc_context(
     ax[1, 1].set_xlim(left=np.min(f3_t_sim_myr), right=np.max(f3_t_sim_myr))
     ax[1, 1].xaxis.set_major_locator(MaxNLocator(5))
 
-    fig.text(0.5, 0.04, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
+    fig.text(0.5, 0.03, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
     fig.text(0.5, 0.93, "$\mathrm{z}$", ha="center")
 
     plt.subplots_adjust(hspace=0, wspace=0)
