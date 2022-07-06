@@ -62,7 +62,7 @@ def get_snapshots(snapshot_file_list, get_list):
     for num in filter_list:
         for file in snapshot_file_list:
             if num in file:
-                filtered_lst.append(snapshot_file_list)
+                filtered_lst.append(file)
                 break
     return filtered_lst
 

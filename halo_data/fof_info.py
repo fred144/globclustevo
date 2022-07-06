@@ -14,12 +14,12 @@ from modules.luminosity.lum_functions import unpack_pop_ii_data
 
 from scipy import stats
 
-strt = 200
-end = 917
+strt = 694
+end = 918
 step = 1
 
-halo_data_directory = r"./fs035_ms10/fof_best"
-pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
+halo_data_directory = r"./fs07_refine/fof_best"
+pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
 pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
 halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
 
@@ -33,7 +33,7 @@ for p2, ds in zip(pop2, halo_ds):
     t_myr = tz[0]
     redshift = tz[1]
 
-    halos = sorted(glob.glob(os.path.join(ds, "gc*.txt")))
+    halos = sorted(glob.glob(os.path.join(ds, "gc_vir_*.txt")))
 
     gc_ages_per_snapshot = []
     gc_masses_per_snapshot = []
@@ -57,15 +57,22 @@ for p2, ds in zip(pop2, halo_ds):
     gc_masses_per_snapshot = np.array(gc_masses_per_snapshot)
     gc_lums_per_snapshot = np.array(gc_lums_per_snapshot)
 
-    t_myr = np.array([t_myr, redshift])
+    t_myr = np.array([t_myr])
+    redshift = np.array([redshift])
     t_myr.resize(np.size(gc_lums_per_snapshot))
-
+    redshift.resize(np.size(gc_lums_per_snapshot))
     output = np.vstack(
-        (t_myr, gc_ages_per_snapshot, gc_masses_per_snapshot, gc_lums_per_snapshot)
+        (
+            t_myr,
+            redshift,
+            gc_ages_per_snapshot,
+            gc_masses_per_snapshot,
+            gc_lums_per_snapshot,
+        )
     ).T
 
     header = (
-        "(t_myr, z), gc_ages_per_snapshot, gc_masses_per_snapshot, gc_lums_per_snapshot"
+        "t_myr, z, gc_ages_per_snapshot, gc_masses_per_snapshot, gc_lums_per_snapshot"
     )
     info_save_path = os.path.join(ds, "fof_info.txt")
     np.savetxt(fname=info_save_path, X=output, header=header)

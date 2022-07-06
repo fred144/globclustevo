@@ -136,8 +136,7 @@ if __name__ == "__main__":
     for ds in data_sets:
         info_file = np.loadtxt(os.path.join(ds, "info.txt"))
         t_myr = info_file[0, 0]
-        labels = info_file[:, 1]
-        age = info_file[:, 2]
+
         tot_masses = info_file[:, 3]
         core_mass = info_file[:, 4]
         vir_rad = info_file[:, 5]
@@ -175,9 +174,7 @@ if __name__ == "__main__":
             ax.plot(
                 fs70_mass,
                 fs70_counts,
-                label=r"$\mathrm{{MC \: M_{{*}}}} \: \mathrm{{IMF}} ({})$".format(
-                    len(m_sun_cloud_fs070)
-                ),
+                label=r"$\mathrm{{MC \: M_{{*}}}} \: \mathrm{{IMF}}$",
                 drawstyle="steps-mid",
                 linewidth=4,
                 alpha=0.8,
@@ -190,7 +187,7 @@ if __name__ == "__main__":
             ax.plot(
                 tot_mass,
                 tot_counts,
-                label=r"$\mathrm{{ GC \: M_{{vir}} }} ({})$".format(len(tot_masses)),
+                label=r"$\mathrm{{ GC \: M_{{vir}} }}$",
                 drawstyle="steps-mid",
                 linewidth=4,
                 alpha=0.8,

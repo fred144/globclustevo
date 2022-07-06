@@ -9,10 +9,10 @@ import os
 
 
 #%% get the gc results from halo finder only
-halo_data_directory = r"../halo_data/fs035_ms10/fof_best"
-pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
-strt = 154
-end = 917
+halo_data_directory = r"../halo_data/fs07_refine/fof_best"
+pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
+strt = 113
+end = 918
 step = 1
 pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
 halos_ds = filter_snapshots(halo_data_directory, strt, end, step)
