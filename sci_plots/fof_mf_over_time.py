@@ -27,7 +27,7 @@ if __name__ == "__main__":
     cmap = cm.get_cmap("Set2")
     cmap = cmap(np.linspace(0, 1, 8))
 
-    x_range = (100, 1e5)
+    x_range = (10, 3e5)
     bns = 15
 
     f7_mc_imf_clr = cmap[0]
@@ -83,8 +83,8 @@ if __name__ == "__main__":
             f3_redshift = f3_info_file[1]
             f3_masses_per_snapshot = f3_info_file[3]
 
-        print(f7_t_myr, f3_t_myr)
-        print(f7_redshift, f3_redshift)
+        # print(f7_t_myr, f3_t_myr)
+        # print(f7_redshift, f3_redshift)
 
         # gc_ages_per_snapshot = info_file[:, 1]
         # gc_lums_per_snapshot = info_file[:, 3]
@@ -120,74 +120,84 @@ if __name__ == "__main__":
                 "font.size": 12,
             }
         ):
-            fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(6, 5), dpi=300)
+            fig, ax = plt.subplots(
+                nrows=1,
+                ncols=2,
+                sharex=True,
+                sharey=True,
+                figsize=(9, 3.5),
+                dpi=300,
+            )
 
-            ax.plot(
+            ax[0].plot(
                 mc_f7_mass,
                 mc_f7_counts,
-                label=r"$f_{*} = 0.70  \mathrm{{MC \: M_{{*}}}} \: \mathrm{{IMF}}$",
+                label=r"$ \mathrm{{MC}} \: \mathrm{{IMF}}$",
                 drawstyle="steps-mid",
                 linewidth=4,
                 alpha=0.8,
                 color=f7_mc_imf_clr,
             )
 
-            ax.plot(
+            ax[0].plot(
                 f7_vir_mass,
                 f7_vir_counts,
-                label=r"$f_{*} = 0.70 \mathrm{{FOF \:GC \: M_{{vir}} }} $",
+                label=r"$\mathrm{{BSC \: M_{{vir}} }} $",
                 drawstyle="steps-mid",
                 linewidth=4,
                 alpha=0.8,
                 color=f7_bsc_mf_clr,
             )
-
-            # ax.plot(
-            #     mc_f3_mass,
-            #     mc_f3_counts,
-            #     label=r"$f_{*} = 0.70  \mathrm{{MC \: M_{{*}}}} \: \mathrm{{IMF}}$",
-            #     drawstyle="steps-mid",
-            #     linewidth=4,
-            #     ls="--",
-            #     alpha=0.8,
-            #     color=f3_mc_imf_clr,
-            # )
-
-            # ax.plot(
-            #     f3_vir_mass,
-            #     f3_vir_counts,
-            #     label=r"$f_{*} = 0.70 \mathrm{{FOF \:GC \: M_{{vir}} }} $",
-            #     drawstyle="steps-mid",
-            #     linewidth=4,
-            #     ls="--",
-            #     alpha=0.8,
-            #     color=f3_bsc_mf_clr,
-            # )
-
-            ax.fill_between(
+            ax[0].fill_between(
                 mc_f7_mass, mc_f7_counts, step="mid", alpha=0.4, color=f7_mc_imf_clr
             )
-            ax.fill_between(
+            ax[0].fill_between(
                 f7_vir_mass, f7_vir_counts, step="mid", alpha=0.4, color=f7_bsc_mf_clr
             )
 
-            ax.set_xscale("log")
-            ax.set_yscale("log")
-            plt.xlabel(
-                r"$  \mathrm{M} \:\:  \left( \mathrm{M}_{\odot} \right) $",
-                fontsize=14,
+            ax[1].plot(
+                mc_f3_mass,
+                mc_f3_counts,
+                label=r"$ \mathrm{{MC}} \: \mathrm{{IMF}}$",
+                drawstyle="steps-mid",
+                linewidth=4,
+                alpha=0.8,
+                color=f3_mc_imf_clr,
             )
-            plt.ylabel(
-                (
-                    r"$\mathrm{dN / d\log}\:\mathrm{M}"
-                    r"\:\:\left(\mathrm{M}_{\odot} \right)$"
-                ),
-                fontsize=14,
+
+            ax[1].plot(
+                f3_vir_mass,
+                f3_vir_counts,
+                label=r"$\mathrm{{BSC \: M_{{vir}} }} $",
+                drawstyle="steps-mid",
+                linewidth=4,
+                alpha=0.8,
+                color=f3_bsc_mf_clr,
             )
-            ax.legend(
-                # title=r"$\mathrm{SFE} \: (f_{*}) = 0.35$",
+
+            ax[1].fill_between(
+                mc_f3_mass, mc_f3_counts, step="mid", alpha=0.4, color=f3_mc_imf_clr
+            )
+            ax[1].fill_between(
+                f3_vir_mass, f3_vir_counts, step="mid", alpha=0.4, color=f3_bsc_mf_clr
+            )
+
+            ax[0].set_xscale("log")
+            ax[0].set_yscale("log")
+            # ax[0].set_xlabel(
+            #     r"$  \mathrm{M} \:\:  \left( \mathrm{M}_{\odot} \right) $",
+            #     fontsize=14,
+            # )
+            # ax[0].ylabel(
+            #     (
+            #         r"$\mathrm{dN / d\log}\:\mathrm{M}"
+            #         r"\:\:\left(\mathrm{M}_{\odot} \right)$"
+            #     ),
+            #     fontsize=14,
+            # )
+            ax[0].legend(
+                title=r"$\mathrm{SFE} \: (f_{*}) = 0.70$",
                 loc="upper right",
-                title_fontsize=14,
             )
             # current simulation time annotation
             props = dict(
@@ -197,23 +207,37 @@ if __name__ == "__main__":
                 linewidth=0.8,
                 edgecolor="gray",
             )
-            textstr = (
+            textstr_f7 = (
                 r"$\mathrm{{t}} = {:.1f} \: \mathrm{{Myr}}$"
                 "\n"
                 r"$\mathrm{{z}} = {:.1f}$"
             ).format(f7_t_myr, f7_redshift)
-            # place a text box in upper left in axes coords
-            ax.text(
+            ax[0].text(
                 0.03,
                 0.96,
-                textstr,
-                transform=ax.transAxes,
+                textstr_f7,
+                transform=ax[0].transAxes,
                 verticalalignment="top",
                 bbox=props,
             )
-            ax.set_xlim(left=f7_vir_mass[0])
-            ax.set_ylim(1, 500)
 
+            # textstr_f3 = (
+            #     r"$\mathrm{{t}} = {:.1f} \: \mathrm{{Myr}}$"
+            #     "\n"
+            #     r"$\mathrm{{z}} = {:.1f}$"
+            # ).format(f3_t_myr, f3_redshift)
+            # ax[1].text(
+            #     0.03,
+            #     0.96,
+            #     textstr_f3,
+            #     transform=ax[1].transAxes,
+            #     verticalalignment="top",
+            #     bbox=props,
+            # )
+            ax[0].set_xlim(left=f7_vir_mass[0])
+            ax[0].set_ylim(1, 500)
+
+            plt.subplots_adjust(hspace=0, wspace=0)
             plt.show()
 
         # bubble_plot(
