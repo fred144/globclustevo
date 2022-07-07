@@ -30,7 +30,7 @@ processor_number = 0
 datadir = os.path.expanduser(
     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
 ).format(simulation_run)
-local_snapshots = filter_snapshots(datadir, 917, 1117, 1)
+local_snapshots = filter_snapshots(datadir, 917, 1177, 1)
 
 
 # if post processing isn't done alongside catalogue

@@ -18,7 +18,7 @@ module load openmpi
 source ~/py-virtual-envs/master/bin/activate
 
 
-SCRIPT="/lustre/fgarcia4/glob_clust_evo/halo_data/fof_halo_finder.py"
+SCRIPT="/lustre/fgarcia4/glob_clust_evo/halo_data/fs035_fof_halo_finder.py"
 
 # source /homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh
 # which python
