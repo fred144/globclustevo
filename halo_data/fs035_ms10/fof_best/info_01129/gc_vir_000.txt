@@ -1,0 +1,1 @@
+# star id 	 star_x_coords [pc] 	 star_y_coords [pc] 	 star_z_coords [pc] 

@@ -30,7 +30,7 @@ processor_number = 0
 datadir = os.path.expanduser(
     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
 ).format(simulation_run)
-local_snapshots = filter_snapshots(datadir, 1103, 1177, 1)
+local_snapshots = filter_snapshots(datadir, 1125, 1177, 1)
 
 
 # if post processing isn't done alongside catalogue
@@ -196,29 +196,29 @@ for i, file_name in enumerate(local_snapshots):
 
     # optionally plot the halod finder results and put in the catalogue directory
     width = (400, "pc")
-    p = yt.ProjectionPlot(ds, "z", "density", width=width, center=ctr_at_code_length)
-    p.annotate_particles(
-        width=width, ptype="star", alpha=0.5, p_size=0.2, marker=".", col="red"
-    )
-    p.annotate_halos(
-        halo_cat_plotting,
-        width=width,
-    )
-    p.set_cmap("density", "copper")
-    p["gas", "density"].axes.scatter(
-        halo_x,
-        halo_y,
-        color="green",
-        alpha=1,
-        marker="x",
-        linewidths=0.1,
-        s=2,
-    )
+    # p = yt.ProjectionPlot(ds, "z", "density", width=width, center=ctr_at_code_length)
+    # p.annotate_particles(
+    #     width=width, ptype="star", alpha=0.5, p_size=0.2, marker=".", col="red"
+    # )
+    # p.annotate_halos(
+    #     halo_cat_plotting,
+    #     width=width,
+    # )
+    # p.set_cmap("density", "copper")
+    # p["gas", "density"].axes.scatter(
+    #     halo_x,
+    #     halo_y,
+    #     color="green",
+    #     alpha=1,
+    #     marker="x",
+    #     linewidths=0.1,
+    #     s=2,
+    # )
 
-    # p.set_figure_size(5)
-    p.save(
-        "../halo_data/{}/{}/info_{}/annotated.png".format(
-            simulation_run, profiler_run, snapshot_num_string
-        ),
-        mpl_kwargs={"bbox_inches": "tight", "dpi": 300, "pad_inches": 0.1},
-    )
+    # # p.set_figure_size(5)
+    # p.save(
+    #     "../halo_data/{}/{}/info_{}/annotated.png".format(
+    #         simulation_run, profiler_run, snapshot_num_string
+    #     ),
+    #     mpl_kwargs={"bbox_inches": "tight", "dpi": 300, "pad_inches": 0.1},
+    # )
