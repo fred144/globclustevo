@@ -1,3 +1,8 @@
+"""
+Make a time series result a la profiler, but only use the fof results,
+don't pass it throught the gc filter
+"""
+
 import sys
 
 sys.path.append("..")
