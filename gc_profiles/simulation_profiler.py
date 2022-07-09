@@ -248,7 +248,7 @@ if __name__ == "__main__":
 
     save_path = "./profile_runs/fs07_refine/fof_best"
 
-    strt = 113
+    strt = 290
     end = 1000
     step = 1
 
