@@ -27,15 +27,15 @@ def master_king(rads, rhos, errs, ages, t_myr):
     gets all the raw profiles for a given snapshot and plots them, note
     both theory and fitted curves are taken
     """
-    print("> making master plot")
+
     ages = np.array(ages)
     birth_times = t_myr - ages
     with plt.rc_context(
         {
             "font.family": "serif",
             "mathtext.fontset": "cm",
-            "xtick.labelsize": 12,
-            "ytick.labelsize": 12,
+            "xtick.labelsize": 10,
+            "ytick.labelsize": 10,
             "font.size": 12,
         }
     ):
@@ -50,7 +50,7 @@ def master_king(rads, rhos, errs, ages, t_myr):
 
         # make subplot
         plt.subplots_adjust(wspace=0)
-        cmap = plt.cm.winter
+        cmap = plt.cm.autumn
         # extend the range of color bars
         norm = plt.Normalize(vmin=np.min(birth_times) - 1, vmax=np.max(birth_times) + 1)
         # just integers
@@ -111,7 +111,7 @@ def master_king(rads, rhos, errs, ages, t_myr):
         ax.set_xscale("log")
         ax.set_yscale("log")
         ax.set_xlim(right=20)
-        ax.set_ylim(bottom=3e-1, top=1e5)
+        ax.set_ylim(bottom=3e-1, top=8e5)
 
 
 # TODO: add filter to avoid small double count by filtering clust_x, y,z using fof

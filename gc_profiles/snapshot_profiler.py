@@ -234,7 +234,7 @@ def run_profiler(
         gc_star_ids.append(star_id_in_cluster)
         # this filters make it return only if fitted
         if m_tot > 0:
-            print("fitted")
+            # print("fitted")
             gc_fitted_star_ids.append(star_id_in_cluster)
         else:
             pass
@@ -328,7 +328,7 @@ def run_profiler(
     # master plot containing all the profiles in the snapshot,
     # do this if atleast one passes, which means the list is not exclusively negative
     try:
-
+        print("> making master plot")
         master_king(master_r, master_rho, master_err, master_age, time)
         plt_save_path = os.path.join(
             save_folder_abs_path, "master_raw_{}.png".format(snapshot_num)

@@ -1,5 +1,0 @@
-# read in: ../pop_2_data/fs07_refine/pos_00195_401_40_myr.txt
-> snapshot time 401.4 Myr
-> snapshot number 195
-> uniform radius of 20 pc
-> found 2 good profiles

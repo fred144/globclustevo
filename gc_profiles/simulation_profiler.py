@@ -6,6 +6,7 @@ sys.path.insert(
 )
 import glob
 import os
+
 from modules.macros import filter_snapshots, common_filter_snapshots
 from modules.luminosity.lum_functions import lum_look_up_table
 from snapshot_profiler import run_profiler
@@ -219,8 +220,15 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
                 save_gc_lums,
             )
         ).T
-        save_name = os.path.join(run_save_path, "time_series_run_stats.txt")
 
+        save_name = os.path.join(
+            run_save_path,
+            "time_series_run_stats_{}_to_{}.txt".format(
+                save_snapshot.min(), save_snapshot.max()
+            ),
+        )
+        for f in glob.glob(os.path.join(run_save_path, "*.txt")):
+            os.remove(f)
         np.savetxt(fname=save_name, X=output, header=prof_run_header)
 
 
@@ -235,13 +243,13 @@ if __name__ == "__main__":
     # end = 918
     # step = 1
 
-    pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
-    halo_data_directory = r"../halo_data/fs035_ms10/fof_best"
+    pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
+    halo_data_directory = r"../halo_data/fs07_refine/fof_best"
 
-    save_path = "./profile_runs/fs035_ms10/fof_best"
+    save_path = "./profile_runs/fs07_refine/fof_best"
 
-    strt = 154
-    end = 917
+    strt = 113
+    end = 1000
     step = 1
 
     pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
