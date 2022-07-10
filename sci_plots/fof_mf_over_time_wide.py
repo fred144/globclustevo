@@ -3,6 +3,7 @@ import sys
 sys.path.append("..")
 from matplotlib import cm
 import matplotlib.pyplot as plt
+import matplotlib.lines as mlines
 import numpy as np
 import os
 from modules.macros import filter_snapshots, t_myr_from_z
@@ -55,8 +56,8 @@ if __name__ == "__main__":
     fs070_matched = get_snapshots(
         snapshot_file_list=filter_snapshots(fs070_dat_dir, 113, 918, 1),
         get_list=f7_matched_nums,
-    )[300::150]
-    fs035_matched = filter_snapshots(fs035_dat_dir, 154, 917, 1)[300::150]
+    )[200::100]
+    fs035_matched = filter_snapshots(fs035_dat_dir, 154, 917, 1)[200::100]
 
     fs035_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
     fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
@@ -70,17 +71,17 @@ if __name__ == "__main__":
         }
     ):
         fig, ax = plt.subplots(
-            nrows=len(fs070_matched),
-            ncols=2,
+            nrows=int(len(fs070_matched) / 2),
+            ncols=4,
             sharex=True,
             sharey=True,
-            figsize=(7, 2.6 * len(fs070_matched)),
+            figsize=(13, 2.6 * int(len(fs070_matched) / 2)),
             dpi=300,
         )
         plt.subplots_adjust(hspace=0, wspace=0)
         fig.text(
             0.5,
-            0.06,
+            0.05,
             r"$\mathrm{M} \:\:  \left( \mathrm{M}_{\odot} \right) $",
             ha="center",
         )
@@ -91,6 +92,40 @@ if __name__ == "__main__":
             va="center",
             rotation="vertical",
         )
+        f7_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*}}}$"
+        f7_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
+        f3_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*}}}$"
+        f3_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
+        f7_legend_title = r"$f_{*} = 0.70$"
+        f3_legend_title = r"$f_{*} = 0.35$"
+        f70_imf = mlines.Line2D(
+            [], [], color=f7_mc_imf_clr, ls="-", lw=4, label=f7_imf_label
+        )
+        f70_bsc = mlines.Line2D(
+            [], [], color=f7_bsc_mf_clr, ls="-", lw=4, label=f7_bsc_label
+        )
+        f35_imf = mlines.Line2D(
+            [], [], color=f3_mc_imf_clr, ls="-", lw=4, label=f3_imf_label
+        )
+        f35_bsc = mlines.Line2D(
+            [], [], color=f3_bsc_mf_clr, ls="-", lw=4, label=f3_bsc_label
+        )
+        f7_leg_title = mlines.Line2D(
+            [], [], color=f7_mc_imf_clr, ls="", label=f7_legend_title
+        )
+        f3_leg_title = mlines.Line2D(
+            [], [], color=f3_mc_imf_clr, ls="", label=f3_legend_title
+        )
+        fig.legend(
+            # title="$\mathrm{SFE} \: (f_{*})$",
+            loc="upper left",
+            title_fontsize=11,
+            fontsize=11,
+            handles=[f7_leg_title, f70_imf, f70_bsc, f3_leg_title, f35_imf, f35_bsc],
+            bbox_to_anchor=(0, 0.89),
+            edgecolor="k",
+        )
+        axs = ax.ravel()
 
     for i, (f7_ds, f3_ds) in enumerate(zip(fs070_matched, fs035_matched)):
         f7_info_file = np.loadtxt(os.path.join(f7_ds, "fof_info.txt"))
@@ -171,24 +206,16 @@ if __name__ == "__main__":
                 "font.size": 12,
             }
         ):
-            if i == 0:
-                f7_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*} \: MF}}$"
-                f7_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
-                f3_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*} \: MF}}$"
-                f3_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
 
-                f7_legend_title = r"$\mathrm{SFE} \: (f_{*}) = 0.70$"
-                f3_legend_title = r"$\mathrm{SFE} \: (f_{*}) = 0.35$"
-            else:
-                f7_imf_label = "_nolegend_"
-                f7_bsc_label = "_nolegend_"
-                f3_imf_label = "_nolegend_"
-                f3_bsc_label = "_nolegend_"
+            f7_imf_label = "_nolegend_"
+            f7_bsc_label = "_nolegend_"
+            f3_imf_label = "_nolegend_"
+            f3_bsc_label = "_nolegend_"
 
-                f7_legend_title = ""
-                f3_legend_title = ""
+            f7_legend_title = ""
+            f3_legend_title = ""
 
-            ax[i, 0].plot(
+            axs[2 * i].plot(
                 mc_f7_mass,
                 mc_f7_counts,
                 label=f7_imf_label,
@@ -197,9 +224,9 @@ if __name__ == "__main__":
                 alpha=0.8,
                 color=f7_mc_imf_clr,
             )
-            ax[i, 0].plot(
-                f7_vir_mass[f7_fitting_mask],
-                f7_vir_counts[f7_fitting_mask],
+            axs[2 * i].plot(
+                f7_vir_mass,
+                f7_vir_counts,
                 label=f7_bsc_label,
                 drawstyle="steps-mid",
                 linewidth=4,
@@ -207,7 +234,7 @@ if __name__ == "__main__":
                 color=f7_bsc_mf_clr,
             )
 
-            ax[i, 1].plot(
+            axs[2 * i + 1].plot(
                 mc_f3_mass,
                 mc_f3_counts,
                 label=f3_imf_label,
@@ -216,29 +243,29 @@ if __name__ == "__main__":
                 alpha=0.8,
                 color=f3_mc_imf_clr,
             )
-            ax[i, 1].plot(
-                f3_vir_mass[f3_fitting_mask],
-                f3_vir_counts[f3_fitting_mask],
+            axs[2 * i + 1].plot(
+                f3_vir_mass,
+                f3_vir_counts,
                 label=f3_bsc_label,
                 drawstyle="steps-mid",
                 linewidth=4,
                 alpha=0.8,
                 color=f3_bsc_mf_clr,
             )
-            ax[i, 0].fill_between(
+            axs[2 * i].fill_between(
                 mc_f7_mass, mc_f7_counts, step="mid", alpha=0.4, color=f7_mc_imf_clr
             )
-            ax[i, 0].fill_between(
+            axs[2 * i].fill_between(
                 f7_vir_mass, f7_vir_counts, step="mid", alpha=0.4, color=f7_bsc_mf_clr
             )
-            ax[i, 1].fill_between(
+            axs[2 * i + 1].fill_between(
                 mc_f3_mass, mc_f3_counts, step="mid", alpha=0.4, color=f3_mc_imf_clr
             )
-            ax[i, 1].fill_between(
+            axs[2 * i + 1].fill_between(
                 f3_vir_mass, f3_vir_counts, step="mid", alpha=0.4, color=f3_bsc_mf_clr
             )
             # plot the theoretical power laws
-            ax[i, 0].plot(
+            axs[2 * i].plot(
                 f7_theory_x,
                 f7_theory_y,
                 ls="--",
@@ -247,7 +274,7 @@ if __name__ == "__main__":
                 color="grey",
                 label=r"$\alpha = {:.2f}$".format(f7_fit_params[0]),
             )
-            ax[i, 1].plot(
+            axs[2 * i + 1].plot(
                 f3_theory_x,
                 f3_theory_y,
                 ls="--",
@@ -270,13 +297,14 @@ if __name__ == "__main__":
                 "\n"
                 r"$\mathrm{{z}} = {:.1f}$"
             ).format(f7_t_myr, f7_redshift)
-            ax[i, 0].text(
+            axs[2 * i].text(
                 0.03,
                 0.95,
                 textstr_f7,
-                transform=ax[i, 0].transAxes,
+                transform=axs[2 * i].transAxes,
                 verticalalignment="top",
                 bbox=props,
+                fontsize=10,
             )
             # textstr_f3 = (
             #     r"$\mathrm{{t}} = {:.1f} \: \mathrm{{Myr}}$"
@@ -292,16 +320,16 @@ if __name__ == "__main__":
             #     verticalalignment="top",
             #     bbox=props,
             # )
-            ax[i, 0].set_xlim(left=f7_vir_mass[0])
-            ax[i, 0].set_ylim(1, 800)
-            ax[i, 0].set_xscale("log")
-            ax[i, 0].set_yscale("log")
+            axs[2 * i].set_xlim(left=f7_vir_mass[0])
+            axs[2 * i].set_ylim(1, 800)
+            axs[2 * i].set_xscale("log")
+            axs[2 * i].set_yscale("log")
 
-            ax[i, 0].legend(
+            axs[2 * i].legend(
                 title=f7_legend_title, loc="upper right", fontsize=10, title_fontsize=10
             )
 
-            ax[i, 1].legend(
+            axs[2 * i + 1].legend(
                 title=f3_legend_title, loc="upper right", fontsize=10, title_fontsize=10
             )
 
@@ -309,7 +337,7 @@ if __name__ == "__main__":
         os.path.expanduser(
             (
                 "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
-                "mf_overtime.png"
+                "mf_overtime_wide.png"
             )
         ),
         dpi=800,

@@ -24,7 +24,7 @@ if not os.path.exists(runsavepath):
 
 strt = 665
 end = 918
-step = 1
+step = 200
 
 halo_data_directory = r"../halo_data/fs07_refine/fof_best"
 pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
