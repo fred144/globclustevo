@@ -63,10 +63,10 @@ with plt.rc_context(
     fig, ax = plt.subplots(
         nrows=4,
         ncols=2,
-        gridspec_kw={"height_ratios": [6, 3, 6, 3]},
+        gridspec_kw={"height_ratios": [5, 3, 5, 3]},
         sharex="col",
         sharey="row",
-        figsize=(7.5, 9),
+        figsize=(7, 8),
         dpi=400,
     )
 
@@ -110,8 +110,8 @@ with plt.rc_context(
 
     left_panel_twin_ax.set_xlim(left=f7_redshift.max(), right=f7_redshift.min())
     ax[3, 0].set_xlim(left=f7_t_sim_myr.min(), right=f7_t_sim_myr.max())
-    ax[1, 0].set_ylim(0.05, 1.05)
-    ax[3, 0].set_ylim(0.05, 1.05)
+    ax[1, 0].set_ylim(0.00, 1.05)
+    ax[3, 0].set_ylim(0.00, 1.05)
 
     ax[0, 0].legend(
         title="$f_{*} = 0.70$",
@@ -148,8 +148,8 @@ with plt.rc_context(
 
     right_panel_twin_ax.set_xlim(left=f3_redshift.max(), right=f3_redshift.min())
     ax[3, 1].set_xlim(left=f3_t_sim_myr.min(), right=f3_t_sim_myr.max())
-    ax[1, 1].set_ylim(0.05, 1.05)
-    ax[3, 1].set_ylim(0.05, 1.05)
+    # ax[1, 1].set_ylim(0.05, 1.05)
+    # ax[3, 1].set_ylim(0.05, 1.05)
 
     ax[0, 1].legend(
         title="$f_{*} = 0.35$",
@@ -164,8 +164,11 @@ with plt.rc_context(
     right_panel_twin_ax.xaxis.set_major_locator(MaxNLocator(5))
     ax[3, 1].xaxis.set_major_locator(MaxNLocator(4))
 
-    fig.text(0.5, 0.08, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
-    fig.text(0.5, 0.92, "$\mathrm{z}$", ha="center")
+    ax[1, 0].yaxis.set_major_locator(MaxNLocator(5))
+    ax[3, 0].yaxis.set_major_locator(MaxNLocator(5))
+
+    fig.text(0.5, 0.07, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
+    fig.text(0.5, 0.91, "$\mathrm{z}$", ha="center")
     plt.subplots_adjust(hspace=0, wspace=0)
 
     plt.savefig(

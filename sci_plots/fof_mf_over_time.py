@@ -7,6 +7,11 @@ import numpy as np
 import os
 from modules.macros import filter_snapshots, t_myr_from_z
 from modules.match_t_sims import find_matching_time, get_snapshots
+from scipy.optimize import curve_fit
+
+
+def pwr_law(x, a, coeff):
+    return coeff * x**a
 
 
 def log_data_function(data, num_bins, bin_range: tuple):
@@ -27,7 +32,7 @@ if __name__ == "__main__":
     cmap = cm.get_cmap("Set2")
     cmap = cmap(np.linspace(0, 1, 8))
 
-    x_range = (10, 3e5)
+    x_range = (10, 5e5)
     bns = 15
 
     f7_mc_imf_clr = cmap[0]
@@ -50,31 +55,57 @@ if __name__ == "__main__":
     fs070_matched = get_snapshots(
         snapshot_file_list=filter_snapshots(fs070_dat_dir, 113, 918, 1),
         get_list=f7_matched_nums,
-    )[::500]
-    fs035_matched = filter_snapshots(fs035_dat_dir, 154, 917, 1)[::500]
+    )[200::200]
+    fs035_matched = filter_snapshots(fs035_dat_dir, 154, 917, 1)[200::200]
 
     fs035_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
     fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
+    with plt.rc_context(
+        {
+            "font.family": "serif",
+            "mathtext.fontset": "cm",
+            "xtick.labelsize": 10,
+            "ytick.labelsize": 10,
+            "font.size": 12,
+        }
+    ):
+        fig, ax = plt.subplots(
+            nrows=len(fs070_matched),
+            ncols=2,
+            sharex=True,
+            sharey=True,
+            figsize=(7, 2.6 * len(fs070_matched)),
+            dpi=300,
+        )
+        plt.subplots_adjust(hspace=0, wspace=0)
+        fig.text(
+            0.5,
+            0.06,
+            r"$\mathrm{M} \:\:  \left( \mathrm{M}_{\odot} \right) $",
+            ha="center",
+        )
+        fig.text(
+            0.04,
+            0.5,
+            r"$\mathrm{dN / d\log}\:\mathrm{M}\:\:\left(\mathrm{M}_{\odot} \right)$",
+            va="center",
+            rotation="vertical",
+        )
 
-    for f7_ds, f3_ds in zip(fs070_matched, fs035_matched):
+    for i, (f7_ds, f3_ds) in enumerate(zip(fs070_matched, fs035_matched)):
         f7_info_file = np.loadtxt(os.path.join(f7_ds, "fof_info.txt"))
         f3_info_file = np.loadtxt(os.path.join(f3_ds, "fof_info.txt"))
 
         try:
             f7_t_myr = f7_info_file[0, 0]
-
             f7_redshift = f7_info_file[0, 1]
-
             f7_masses_per_snapshot = f7_info_file[:, 3]
-
         except:  # if there is only once cluster
             f7_t_myr = f7_info_file[0]
-
             f7_redshift = f7_info_file[1]
-
             f7_masses_per_snapshot = f7_info_file[3]
 
-        try:
+        try:  # if there is only once cluster
             f3_t_myr = f3_info_file[0, 0]
             f3_redshift = f3_info_file[0, 1]
             f3_masses_per_snapshot = f3_info_file[:, 3]
@@ -110,6 +141,26 @@ if __name__ == "__main__":
         f3_vir_mass, f3_vir_counts = log_data_function(
             f3_masses_per_snapshot, bns, x_range
         )
+        # fit
+        f7_fitting_mask = f7_vir_mass >= 2e3
+        f3_fitting_mask = f3_vir_mass >= 3e2
+
+        f7_fit_params, _ = curve_fit(
+            f=pwr_law,
+            xdata=f7_vir_mass[f7_fitting_mask],
+            ydata=f7_vir_counts[f7_fitting_mask],
+            #
+        )
+        f7_theory_x = np.linspace(f7_vir_mass.min(), f7_vir_mass.max(), 100)
+        f7_theory_y = pwr_law(f7_theory_x, *f7_fit_params)
+
+        f3_fit_params, _ = curve_fit(
+            f=pwr_law,
+            xdata=f3_vir_mass[f3_fitting_mask],
+            ydata=f3_vir_counts[f3_fitting_mask],
+        )
+        f3_theory_x = np.linspace(f3_vir_mass.min(), f3_vir_mass.max(), 100)
+        f3_theory_y = pwr_law(f3_theory_x, *f3_fit_params)
 
         with plt.rc_context(
             {
@@ -120,85 +171,92 @@ if __name__ == "__main__":
                 "font.size": 12,
             }
         ):
-            fig, ax = plt.subplots(
-                nrows=1,
-                ncols=2,
-                sharex=True,
-                sharey=True,
-                figsize=(9, 3.5),
-                dpi=300,
-            )
+            if i == 0:
+                f7_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{IMF}}$"
+                f7_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
+                f3_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{IMF}}$"
+                f3_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
 
-            ax[0].plot(
+                f7_legend_title = r"$\mathrm{SFE} \: (f_{*}) = 0.70$"
+                f3_legend_title = r"$\mathrm{SFE} \: (f_{*}) = 0.35$"
+            else:
+                f7_imf_label = "_nolegend_"
+                f7_bsc_label = "_nolegend_"
+                f3_imf_label = "_nolegend_"
+                f3_bsc_label = "_nolegend_"
+
+                f7_legend_title = ""
+                f3_legend_title = ""
+
+            ax[i, 0].plot(
                 mc_f7_mass,
                 mc_f7_counts,
-                label=r"$ \mathrm{{MC}} \: \mathrm{{IMF}}$",
+                label=f7_imf_label,
                 drawstyle="steps-mid",
                 linewidth=4,
                 alpha=0.8,
                 color=f7_mc_imf_clr,
             )
-
-            ax[0].plot(
-                f7_vir_mass,
-                f7_vir_counts,
-                label=r"$\mathrm{{BSC \: M_{{vir}} }} $",
+            ax[i, 0].plot(
+                f7_vir_mass[f7_fitting_mask],
+                f7_vir_counts[f7_fitting_mask],
+                label=f7_bsc_label,
                 drawstyle="steps-mid",
                 linewidth=4,
                 alpha=0.8,
                 color=f7_bsc_mf_clr,
             )
-            ax[0].fill_between(
-                mc_f7_mass, mc_f7_counts, step="mid", alpha=0.4, color=f7_mc_imf_clr
-            )
-            ax[0].fill_between(
-                f7_vir_mass, f7_vir_counts, step="mid", alpha=0.4, color=f7_bsc_mf_clr
-            )
 
-            ax[1].plot(
+            ax[i, 1].plot(
                 mc_f3_mass,
                 mc_f3_counts,
-                label=r"$ \mathrm{{MC}} \: \mathrm{{IMF}}$",
+                label=f3_imf_label,
                 drawstyle="steps-mid",
                 linewidth=4,
                 alpha=0.8,
                 color=f3_mc_imf_clr,
             )
-
-            ax[1].plot(
-                f3_vir_mass,
-                f3_vir_counts,
-                label=r"$\mathrm{{BSC \: M_{{vir}} }} $",
+            ax[i, 1].plot(
+                f3_vir_mass[f3_fitting_mask],
+                f3_vir_counts[f3_fitting_mask],
+                label=f3_bsc_label,
                 drawstyle="steps-mid",
                 linewidth=4,
                 alpha=0.8,
                 color=f3_bsc_mf_clr,
             )
-
-            ax[1].fill_between(
+            ax[i, 0].fill_between(
+                mc_f7_mass, mc_f7_counts, step="mid", alpha=0.4, color=f7_mc_imf_clr
+            )
+            ax[i, 0].fill_between(
+                f7_vir_mass, f7_vir_counts, step="mid", alpha=0.4, color=f7_bsc_mf_clr
+            )
+            ax[i, 1].fill_between(
                 mc_f3_mass, mc_f3_counts, step="mid", alpha=0.4, color=f3_mc_imf_clr
             )
-            ax[1].fill_between(
+            ax[i, 1].fill_between(
                 f3_vir_mass, f3_vir_counts, step="mid", alpha=0.4, color=f3_bsc_mf_clr
             )
-
-            ax[0].set_xscale("log")
-            ax[0].set_yscale("log")
-            # ax[0].set_xlabel(
-            #     r"$  \mathrm{M} \:\:  \left( \mathrm{M}_{\odot} \right) $",
-            #     fontsize=14,
-            # )
-            # ax[0].ylabel(
-            #     (
-            #         r"$\mathrm{dN / d\log}\:\mathrm{M}"
-            #         r"\:\:\left(\mathrm{M}_{\odot} \right)$"
-            #     ),
-            #     fontsize=14,
-            # )
-            ax[0].legend(
-                title=r"$\mathrm{SFE} \: (f_{*}) = 0.70$",
-                loc="upper right",
+            # plot the theoretical power laws
+            ax[i, 0].plot(
+                f7_theory_x,
+                f7_theory_y,
+                ls="--",
+                linewidth=2,
+                alpha=0.8,
+                color="grey",
+                label=r"$\alpha = {:.2f}$".format(f7_fit_params[0]),
             )
+            ax[i, 1].plot(
+                f3_theory_x,
+                f3_theory_y,
+                ls="--",
+                linewidth=2,
+                alpha=0.8,
+                color="grey",
+                label=r"$\alpha = {:.2f}$".format(f3_fit_params[0]),
+            )
+
             # current simulation time annotation
             props = dict(
                 boxstyle="round",
@@ -212,20 +270,20 @@ if __name__ == "__main__":
                 "\n"
                 r"$\mathrm{{z}} = {:.1f}$"
             ).format(f7_t_myr, f7_redshift)
-            ax[0].text(
+            ax[i, 0].text(
                 0.03,
-                0.96,
+                0.95,
                 textstr_f7,
-                transform=ax[0].transAxes,
+                transform=ax[i, 0].transAxes,
                 verticalalignment="top",
                 bbox=props,
             )
-
             # textstr_f3 = (
             #     r"$\mathrm{{t}} = {:.1f} \: \mathrm{{Myr}}$"
             #     "\n"
             #     r"$\mathrm{{z}} = {:.1f}$"
             # ).format(f3_t_myr, f3_redshift)
+
             # ax[1].text(
             #     0.03,
             #     0.96,
@@ -234,28 +292,28 @@ if __name__ == "__main__":
             #     verticalalignment="top",
             #     bbox=props,
             # )
-            ax[0].set_xlim(left=f7_vir_mass[0])
-            ax[0].set_ylim(1, 500)
+            ax[i, 0].set_xlim(left=f7_vir_mass[0])
+            ax[i, 0].set_ylim(1, 800)
+            ax[i, 0].set_xscale("log")
+            ax[i, 0].set_yscale("log")
 
-            plt.subplots_adjust(hspace=0, wspace=0)
-            plt.show()
+            ax[i, 0].legend(
+                title=f7_legend_title, loc="upper right", fontsize=10, title_fontsize=10
+            )
 
-        # bubble_plot(
-        #     masses=gc_out_masses,
-        #     core_radii=gc_r_core,
-        #     ages=t_myr - gc_char_age,
-        #     current_time=t_myr,
-        # )
+            ax[i, 1].legend(
+                title=f3_legend_title, loc="upper right", fontsize=10, title_fontsize=10
+            )
 
-    # mass_function(masses=gc_out_masses, t_sim=t_myr, num_bins=10, m_core=gc_m_core)
-
-    # except Exception as e:
-    #     print(e)
-    #     print("> Missing info file:", data_file)
-    #     pass
-
-    # if not os.path.exists(folder_name):
-    #     print("# Creating new sequence directory", folder_name)
-    #     os.makedirs(folder_name)
-
-    # fig.savefig(folder_name + "/scatter.png", dpi=300)
+    plt.savefig(
+        os.path.expanduser(
+            (
+                "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+                "mf_overtime.png"
+            )
+        ),
+        dpi=800,
+        bbox_inches="tight",
+        pad_inches=0.05,
+        format="png",
+    )
