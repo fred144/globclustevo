@@ -141,8 +141,8 @@ def projected_surf_densities(
         half_mass_point = np.abs(integrated_mass - 0.5 * total_clust_m).argmin()
         half_light_point = np.abs(integrated_light - 0.5 * total_clust_lum).argmin()
 
-        half_mass_r = high_res_m_per_bin[half_mass_point]
-        half_light_r = high_res_l_per_bin[half_light_point]
+        half_mass_r = high_res_r[half_mass_point]
+        half_light_r = high_res_r[half_light_point]
 
         return (
             bin_ctrs,

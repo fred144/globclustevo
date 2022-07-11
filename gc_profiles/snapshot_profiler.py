@@ -195,8 +195,8 @@ def run_profiler(
             err_sigma_bg,
             p_value,
             counts,
-            half_m,
-            half_l,
+            r_half_m,
+            r_half_l,
             lum_tot,
         ) = king_profile_plotter(
             star_pos=star_positions,
@@ -226,8 +226,8 @@ def run_profiler(
         gc_err_sigma_bg.append(err_sigma_bg)
         gc_fit_pval.append(p_value)
         gc_particle_counts.append(counts)
-        gc_r_half_mass.append(half_m)
-        gc_r_half_light.append(half_l)
+        gc_r_half_mass.append(r_half_m)
+        gc_r_half_light.append(r_half_l)
         gc_total_lum.append(lum_tot)
 
         # saves ids regardless if the cluster was fitted or not,
@@ -387,7 +387,7 @@ def run_profiler(
         "\t\t FitSigmaBG \t\t  ErrFitSigmaBG"
         "\t\t P Value"
         "\t\t Half Mass[pc] \t\t Half Light [pc]"
-        "GCTotalLum[erg s^-1 Angstrom-^1 ]"
+        "\t\t GCTotalLum[erg s^-1 Angstrom-^1 ]"
     )
     info_save_path = os.path.join(save_folder_abs_path, "info.txt")
     np.savetxt(fname=info_save_path, X=output, header=header)

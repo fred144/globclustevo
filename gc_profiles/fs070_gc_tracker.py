@@ -24,7 +24,7 @@ if not os.path.exists(runsavepath):
 
 strt = 665
 end = 918
-step = 200
+step = 500
 
 halo_data_directory = r"../halo_data/fs07_refine/fof_best"
 pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
@@ -149,7 +149,7 @@ for p2, ds in zip(pop2, halo_ds):
 
                     # calculated projected surface densities for each three projections
 
-                    xy_r, xy_rho, xy_err, _, _, _, xy_half_r = projected_surf_densities(
+                    xy_r, xy_rho, xy_err, _, _, xy_half_r, _ = projected_surf_densities(
                         x_coord=x,
                         y_coord=y,
                         lums=gc_lums,
@@ -589,7 +589,7 @@ for p2, ds in zip(pop2, halo_ds):
                         runsavepath, "tracked_{}".format(output_num)
                     )
 
-                    plt.savefig(save_name, dpi=300, bbox_inches="tight")
+                    # plt.savefig(save_name, dpi=300, bbox_inches="tight")
 
                 print(output_num, halo_num)
             except:
