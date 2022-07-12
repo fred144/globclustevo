@@ -173,6 +173,19 @@ def max_density_center_stable(
         return p, max_density_coord, x_pos, y_pos, z_pos
 
 
+def sci_notation(decimal_places, float_num: float):
+    """
+    turns '1.00e+06' into scientific notation with times and power formatter
+    for LaTeX
+
+    """
+    num = np.round(float_num, decimal_places)
+    exp_string = "{:.2e}".format(num)
+    start = decimal_places + 2
+    end = decimal_places + 3
+    return r"{}\:\times\:10^{:1} ".format(exp_string[:start], int(exp_string[end:]))
+
+
 def t_myr_from_z(z):
     """
     The times are in reasonable agreement, within 1 Myr, deviations due

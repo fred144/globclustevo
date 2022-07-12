@@ -508,9 +508,9 @@ for p2, ds in zip(pop2, halo_ds):
                     )
 
                     rect = patches.Rectangle(
-                        xy=(-radius * 1.2, -5),
+                        xy=(-radius * 1.2, -50),
                         width=0.25,
-                        height=10,
+                        height=100,
                         linewidth=0,
                         edgecolor="white",
                         facecolor="white",

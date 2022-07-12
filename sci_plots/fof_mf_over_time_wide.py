@@ -243,7 +243,7 @@ if __name__ == "__main__":
                 alpha=0.8,
                 color=f3_mc_imf_clr,
             )
-            axs[2 * i + 1].plot(
+            axs[2 * i].plot(
                 f3_vir_mass,
                 f3_vir_counts,
                 label=f3_bsc_label,

@@ -53,8 +53,8 @@ with plt.rc_context(
     {
         "font.family": "serif",
         "mathtext.fontset": "cm",
-        "xtick.labelsize": 10,
-        "ytick.labelsize": 10,
+        "xtick.labelsize": 8,
+        "ytick.labelsize": 8,
         "font.size": 12,
     }
 ):
@@ -66,19 +66,34 @@ with plt.rc_context(
         gridspec_kw={"height_ratios": [5, 3, 5, 3]},
         sharex="col",
         sharey="row",
-        figsize=(7, 8),
+        figsize=(6, 8),
         dpi=400,
     )
 
     ax[0, 0].plot(
-        f7_t_sim_myr, f7_total_mass, label=r"$\mathrm{Total}$", color=cmap[0], lw=4
+        f7_t_sim_myr,
+        f7_total_mass,
+        label=r"$\mathrm{Total}$",
+        color=cmap[0],
+        lw=4,
+        alpha=0.8,
     )
     ax[0, 0].plot(
-        f7_t_sim_myr, f7_mass_in_gc, label="$\mathrm{BSC}$", color=cmap[1], lw=4
+        f7_t_sim_myr,
+        f7_mass_in_gc,
+        label="$\mathrm{BSC}$",
+        color=cmap[1],
+        lw=4,
+        alpha=0.8,
     )
     ax[1, 0].plot(f7_t_sim_myr, f7_bound_total_mass_ratio, lw=4, c="grey")
     ax[2, 0].plot(
-        f7_t_sim_myr, f7_total_lum, label=r"$\mathrm{Total}$", lw=4, c=cmap[0]
+        f7_t_sim_myr,
+        f7_total_lum,
+        label=r"$\mathrm{Total}$",
+        lw=4,
+        c=cmap[0],
+        alpha=0.8,
     )
     ax[2, 0].plot(
         f7_t_sim_myr,
@@ -86,6 +101,7 @@ with plt.rc_context(
         label=r"$\mathrm{BSC}$",
         linewidth=4,
         c=cmap[1],
+        alpha=0.8,
     )
     ax[3, 0].plot(f7_t_sim_myr, f7_bound_total_light_ratio, lw=4, c="grey")
 
@@ -122,14 +138,29 @@ with plt.rc_context(
     # =================================30%============================================
 
     ax[0, 1].plot(
-        f3_t_sim_myr, f3_total_mass, label=r"$\mathrm{Total}$", color=cmap[2], lw=4
+        f3_t_sim_myr,
+        f3_total_mass,
+        label=r"$\mathrm{Total}$",
+        color=cmap[2],
+        lw=4,
+        alpha=0.8,
     )
     ax[0, 1].plot(
-        f3_t_sim_myr, f3_mass_in_gc, label="$\mathrm{BSC}$", color=cmap[3], lw=4
+        f3_t_sim_myr,
+        f3_mass_in_gc,
+        label="$\mathrm{BSC}$",
+        color=cmap[3],
+        lw=4,
+        alpha=0.8,
     )
     ax[1, 1].plot(f3_t_sim_myr, f3_bound_total_mass_ratio, linewidth=4, c="grey")
     ax[2, 1].plot(
-        f3_t_sim_myr, f3_total_lum, label=r"$\mathrm{Total}$", linewidth=4, c=cmap[2]
+        f3_t_sim_myr,
+        f3_total_lum,
+        label=r"$\mathrm{Total}$",
+        linewidth=4,
+        c=cmap[2],
+        alpha=0.8,
     )
     ax[2, 1].plot(
         f3_t_sim_myr,
@@ -137,6 +168,7 @@ with plt.rc_context(
         label=r"$\mathrm{BSC}$",
         linewidth=4,
         c=cmap[3],
+        alpha=0.8,
     )
     ax[3, 1].plot(f3_t_sim_myr, f3_bound_total_light_ratio, linewidth=4, c="grey")
 
