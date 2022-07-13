@@ -75,18 +75,18 @@ if __name__ == "__main__":
             ncols=4,
             sharex=True,
             sharey=True,
-            figsize=(13, 2.6 * int(len(fs070_matched) / 2)),
+            figsize=(10, 2.5 * int(len(fs070_matched) / 2)),
             dpi=300,
         )
         plt.subplots_adjust(hspace=0, wspace=0)
         fig.text(
             0.5,
-            0.05,
+            0.06,
             r"$\mathrm{M} \:\:  \left( \mathrm{M}_{\odot} \right) $",
             ha="center",
         )
         fig.text(
-            0.04,
+            0.06,
             0.5,
             r"$\mathrm{dN / d\log}\:\mathrm{M}\:\:\left(\mathrm{M}_{\odot} \right)$",
             va="center",
@@ -118,11 +118,12 @@ if __name__ == "__main__":
         )
         fig.legend(
             # title="$\mathrm{SFE} \: (f_{*})$",
-            loc="upper left",
+            loc="lower center",
             title_fontsize=11,
             fontsize=11,
             handles=[f7_leg_title, f70_imf, f70_bsc, f3_leg_title, f35_imf, f35_bsc],
-            bbox_to_anchor=(0, 0.89),
+            bbox_to_anchor=(0.5, 0.88),
+            ncol=2,
             edgecolor="k",
         )
         axs = ax.ravel()
@@ -243,7 +244,7 @@ if __name__ == "__main__":
                 alpha=0.8,
                 color=f3_mc_imf_clr,
             )
-            axs[2 * i].plot(
+            axs[2 * i + 1].plot(
                 f3_vir_mass,
                 f3_vir_counts,
                 label=f3_bsc_label,
@@ -272,7 +273,7 @@ if __name__ == "__main__":
                 linewidth=2,
                 alpha=0.8,
                 color="grey",
-                label=r"$\alpha = {:.2f}$".format(f7_fit_params[0]),
+                label=r"${:.2f}$".format(f7_fit_params[0]),
             )
             axs[2 * i + 1].plot(
                 f3_theory_x,
@@ -281,7 +282,7 @@ if __name__ == "__main__":
                 linewidth=2,
                 alpha=0.8,
                 color="grey",
-                label=r"$\alpha = {:.2f}$".format(f3_fit_params[0]),
+                label=r"${:.2f}$".format(f3_fit_params[0]),
             )
 
             # current simulation time annotation

@@ -41,7 +41,7 @@ f7_pop2_matched, f7_matched_nums = find_matching_time(
 f7_halo_matched = get_snapshots(snapshot_file_list=f7_halo_ds, get_list=f7_matched_nums)
 
 # sampple idxs
-prof_start = 760
+prof_start = 763
 prof_end = 764
 prof_step = 1
 
@@ -57,9 +57,9 @@ fs035_ds = f3_halo[prof_start:prof_end:prof_step]
 
 cmap = cm.get_cmap("Set3")
 cmap = cmap(np.linspace(0, 1, 11))
-bound_clr = cmap[3]
-field_clr = cmap[4]
-
+bound_clr = "tab:red"
+field_clr = "tab:blue"
+#%%
 for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
     f7_t_myr, f7_redshift = np.loadtxt(f7_p2, max_rows=2)[0:2, 6]
     f3_t_myr, f3_redshift = np.loadtxt(f3_p2, max_rows=2)[0:2, 6]
@@ -110,7 +110,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
             ncols=1,
             sharex=True,
             sharey=True,
-            figsize=(4, 8),
+            figsize=(4.5, 9),
             dpi=300,
         )
 
@@ -124,7 +124,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         ax[1].set_ylim(-200, 200)
 
         # add histogram of ages
-        ax_f7 = fig.add_axes([0.23, 0.545, 0.20, 0.10])
+        ax_f7 = fig.add_axes([0.24, 0.55, 0.20, 0.10])
         ax_f7.patch.set_alpha(0.5)
         bins = np.linspace(300, 600, 25)
         ax_f7.hist(
@@ -153,7 +153,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
             labelpad=0,
         )
         ax_f7.set_ylabel(
-            r"$\mathrm{Field \: Mass \: (M_{\odot})}$",
+            r"$\mathrm{Mass \: (M_{\odot})}$",
             fontsize=8,
             labelpad=0,
         )
@@ -170,7 +170,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         ax_f7.set_xlim(300, 600)
         ax_f7.set_ylim(1, 5e5)
 
-        ax_f3 = fig.add_axes([0.23, 0.165, 0.20, 0.10])
+        ax_f3 = fig.add_axes([0.24, 0.17, 0.20, 0.10])
         ax_f3.patch.set_alpha(0.5)
         ax_f3.hist(
             f3_field_be,
@@ -198,7 +198,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
             labelpad=0,
         )
         ax_f3.set_ylabel(
-            r"$\mathrm{Field \: Mass \: (M_{\odot})}$",
+            r"$\mathrm{Mass \: (M_{\odot})}$",
             fontsize=8,
             labelpad=0,
         )
@@ -224,7 +224,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
             edgecolor="gray",
         )
         ax[0].text(
-            0.75,
+            0.73,
             0.95,
             "$f_{*} = 0.70$",
             transform=ax[0].transAxes,
@@ -233,7 +233,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
             bbox=props,
         )
         ax[1].text(
-            0.75,
+            0.73,
             0.95,
             "$f_{*} = 0.35$",
             transform=ax[1].transAxes,

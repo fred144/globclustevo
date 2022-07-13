@@ -55,7 +55,7 @@ with plt.rc_context(
         "mathtext.fontset": "cm",
         "xtick.labelsize": 8,
         "ytick.labelsize": 8,
-        "font.size": 12,
+        "font.size": 10,
     }
 ):
     cmap = cm.get_cmap("Set2")
@@ -66,7 +66,7 @@ with plt.rc_context(
         gridspec_kw={"height_ratios": [5, 3, 5, 3]},
         sharex="col",
         sharey="row",
-        figsize=(6, 8),
+        figsize=(6.5, 7),
         dpi=400,
     )
 
@@ -111,28 +111,28 @@ with plt.rc_context(
     ax[0, 0].set_yscale("log")
     ax[2, 0].set_yscale("log")
 
-    ax[0, 0].set_ylabel((r"$\mathrm{M}_{} \: (\mathrm{M}_{\odot})$"))
-    ax[1, 0].set_ylabel(r"$\mathrm{M_{BSC}} / \mathrm{M_{Total}}$")
+    ax[0, 0].set_ylabel(r"$\mathrm{M}_{} \: (\mathrm{M}_{\odot})$")
+    ax[1, 0].set_ylabel(r"$\mathrm{M_{BSC}} / \mathrm{M_{Total}}$", labelpad=10)
     ax[2, 0].set_ylabel(
         (
             r"$\mathrm{L}_{\lambda = 1500 \: \mathrm{\AA}} \:$"
             r"$(\mathrm{erg} \:\mathrm{s}^{-1} \:\mathrm{\AA}^{-1})$"
         )
     )
-    ax[3, 0].set_ylabel(r"$\mathrm{L_{BSC}} / \mathrm{L_{Total}}$")
+    ax[3, 0].set_ylabel(r"$\mathrm{L_{BSC}} / \mathrm{L_{Total}}$", labelpad=10)
 
     left_panel_twin_ax = ax[0, 0].twiny()
     left_panel_twin_ax.invert_xaxis()
 
     left_panel_twin_ax.set_xlim(left=f7_redshift.max(), right=f7_redshift.min())
     ax[3, 0].set_xlim(left=f7_t_sim_myr.min(), right=f7_t_sim_myr.max())
-    ax[1, 0].set_ylim(0.00, 1.05)
-    ax[3, 0].set_ylim(0.00, 1.05)
+    ax[1, 0].set_ylim(0.1, 1.05)
+    ax[3, 0].set_ylim(0.1, 1.05)
 
     ax[0, 0].legend(
         title="$f_{*} = 0.70$",
         loc="lower right",
-        fontsize=12,
+        fontsize=10,
     )
 
     # =================================30%============================================
@@ -186,7 +186,7 @@ with plt.rc_context(
     ax[0, 1].legend(
         title="$f_{*} = 0.35$",
         loc="lower right",
-        fontsize=12,
+        fontsize=10,
     )
 
     ax[0, 0].yaxis.labelpad = 10
@@ -200,7 +200,7 @@ with plt.rc_context(
     ax[3, 0].yaxis.set_major_locator(MaxNLocator(5))
 
     fig.text(0.5, 0.07, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
-    fig.text(0.5, 0.91, "$\mathrm{z}$", ha="center")
+    fig.text(0.5, 0.92, "$\mathrm{z}$", ha="center")
     plt.subplots_adjust(hspace=0, wspace=0)
 
     plt.savefig(

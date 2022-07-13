@@ -46,9 +46,9 @@ f7_pop2_matched, f7_matched_nums = find_matching_time(
 f7_halo_matched = get_snapshots(snapshot_file_list=f7_halo_ds, get_list=f7_matched_nums)
 
 # sampple idxs
-prof_start = 763
+prof_start = 600
 prof_end = 764
-prof_step = 1
+prof_step = 50
 
 fs070_p2 = f7_pop2_matched[prof_start:prof_end:prof_step]
 fs070_ds = f7_halo_matched[prof_start:prof_end:prof_step]
@@ -596,16 +596,16 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
 
         # save_name = os.path.join(runsavepath, "tracked_{}".format(output_num))
         plt.subplots_adjust(hspace=-0.01, wspace=0)
-
-    plt.savefig(
-        os.path.expanduser(
-            (
-                "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
-                "field_density_profile.png"
-            )
-        ),
-        dpi=800,
-        bbox_inches="tight",
-        pad_inches=0.05,
-        format="png",
-    )
+        plt.show()
+    # plt.savefig(
+    #     os.path.expanduser(
+    #         (
+    #             "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+    #             "field_density_profile.png"
+    #         )
+    #     ),
+    #     dpi=800,
+    #     bbox_inches="tight",
+    #     pad_inches=0.05,
+    #     format="png",
+    # )
