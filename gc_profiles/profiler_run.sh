@@ -2,8 +2,7 @@
 #SBATCH -J profiler_run
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
-#SBATCH --mem-per-cpu=7000  
-#SBATCH --exclusive
+#SBATCH --mem-per-cpu=6400  
 #SBATCH -t 96:00:00
 
 
@@ -15,6 +14,7 @@
 export LANG=en_US
 module load gcc
 module load openmpi
+source ~/py-virtual-envs/master/bin/activate
 
 SCRIPT="/lustre/fgarcia4/glob_clust_evo/gc_profiles/simulation_profiler.py"
 
