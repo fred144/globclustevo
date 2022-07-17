@@ -14,12 +14,12 @@ from modules.luminosity.lum_functions import unpack_pop_ii_data
 
 from scipy import stats
 
-strt = 113
-end = 1000
+strt = 154
+end = 1117
 step = 1
 
-halo_data_directory = r"./fs07_refine/fof_best"
-pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
+halo_data_directory = r"./fs035_ms10/fof_best"
+pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
 pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
 halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
 
