@@ -6,6 +6,7 @@ import os
 from modules.macros import filter_snapshots, ram_fields
 import yt
 
+yt.enable_parallelism()
 simulation_name = "fs07_refine"
 f7_sn_dir = " /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
 ft_p2_dir = r"../particle_data/pop_2_data/fs07_refine"
@@ -35,6 +36,7 @@ if not os.path.exists(temp_sequence_folder):
     os.makedirs(temp_sequence_folder)
 
 for i, (f7_sn, f7_p2) in enumerate(zip(f7_sn, f7_pop2)):
+    print("> Reading {}".format(f7_sn))
     output_num = f7_sn.split("_")[-1]
 
     cell_fields, epf = ram_fields()
@@ -61,9 +63,10 @@ for i, (f7_sn, f7_p2) in enumerate(zip(f7_sn, f7_pop2)):
     f7_gas = np.array(f7_gas_frb["gas", "density"])
     f7_temp = np.array(f7_temp_frb["gas", "temperature"])
 
-    np.savetxt(
-        os.path.join(dens_sequence_folder, "dens_{}.txt".format(output_num)), X=f7_gas
-    )
-    np.savetxt(
-        os.path.join(temp_sequence_folder, "temp_{}.txt".format(output_num)), X=f7_temp
-    )
+    gas_save = os.path.join(dens_sequence_folder, "dens_{}.txt".format(output_num))
+    print("> saved: {}".format(gas_save))
+
+    temp_save = os.path.join(dens_sequence_folder, "temp_{}.txt".format(output_num))
+    print("> saved: {}".format(gas_save))
+    np.savetxt(gas_save, X=f7_gas)
+    np.savetxt(temp_save, X=f7_temp)

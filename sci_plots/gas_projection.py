@@ -207,14 +207,14 @@ with plt.rc_context(
         f7_gas = ax[idx, 0].imshow(
             f7_gas,
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            cmap="viridis",
+            cmap="cubehelix",
             norm=LogNorm(0.008, 0.35),
             origin="lower",
         )
         f3_gas = ax[idx, 3].imshow(
             f3_gas,
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            cmap="viridis",
+            cmap="cubehelix",
             norm=LogNorm(0.008, 0.35),
             origin="lower",
         )
