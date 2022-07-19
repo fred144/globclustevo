@@ -169,11 +169,12 @@ with plt.rc_context(
         "mathtext.fontset": "cm",
         "xtick.labelsize": 10,
         "ytick.labelsize": 10,
+        "font.size": 12,
     }
 ):
     # mass function
-    fs70_mass, fs70_counts = log_data_function(m_sun_cloud_fs070, 20, (3e2, 8e4))
-    fs35_mass, fs35_counts = log_data_function(m_sun_cloud_fs035, 20, (3e2, 8e4))
+    fs70_mass, fs70_counts = log_data_function(m_sun_cloud_fs070, 15, (3e2, 8e4))
+    fs35_mass, fs35_counts = log_data_function(m_sun_cloud_fs035, 15, (3e2, 8e4))
 
     cmap = cm.get_cmap("Set2")
     cmap = cmap(np.linspace(0, 1, 8))
@@ -181,7 +182,7 @@ with plt.rc_context(
     fs70_color = cmap[1]
     fs35_color = cmap[2]
 
-    plt.figure(figsize=(9, 3.5), dpi=400)
+    plt.figure(figsize=(10.5, 3.5), dpi=400)
     plt.subplot(1, 2, 1)
     # 35% efficiency
     plt.plot(
@@ -222,7 +223,7 @@ with plt.rc_context(
         fontsize=12,
     )
     plt.ylabel(
-        r"$\mathrm{dN / d\log} \: \mathrm{M_{MC}} \:\: \left( \mathrm{M}_{\odot} \right )   $",
+        r"$\mathrm{dN / d\log} \:\: \left(\mathrm{M_{MC}}/\mathrm{M}_{\odot}\right )$",
         fontsize=12,
     )
     plt.xlim((3e2, 8e4))
@@ -238,8 +239,8 @@ with plt.rc_context(
 
     # metalicitty function
 
-    fs70_z, fs70_z_counts = log_data_function(metal_cloud_fs070, 20, (1e-4, 1e-2))
-    fs35_z, fs35_z_counts = log_data_function(metal_cloud_fs035, 20, (1e-4, 1e-2))
+    fs70_z, fs70_z_counts = log_data_function(metal_cloud_fs070, 15, (1e-4, 1e-2))
+    fs35_z, fs35_z_counts = log_data_function(metal_cloud_fs035, 15, (1e-4, 1e-2))
 
     plt.subplot(1, 2, 2)
     # 35% efficiency
@@ -282,14 +283,14 @@ with plt.rc_context(
         fontsize=12,
     )
     plt.ylabel(
-        r"$\mathrm{dN/d\log}\:\mathrm{Z_{MC}}\:\:\left(\mathrm{Z}_{\odot}\right)$",
+        r"$\mathrm{dN / d\log} \:\: \left(\mathrm{Z_{MC}}/\mathrm{Z}_{\odot}\right )$",
         fontsize=12,
         labelpad=0,
     )
     plt.xlim(1e-4, 1e-2)
-    # plt.ylim(.8, 2.75)
+    plt.ylim(bottom=0)
     plt.xscale("log")
-    plt.yscale("log")
+    # plt.yscale("log")
 
     plt.savefig(
         "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_mfunc.png",

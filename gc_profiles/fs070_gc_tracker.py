@@ -22,14 +22,15 @@ if not os.path.exists(runsavepath):
     os.makedirs(runsavepath)
 
 
-strt = 665
-end = 918
-step = 500
+strt = 342
+end = 350
+step = 1
 
 halo_data_directory = r"../halo_data/fs07_refine/fof_best"
 pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
 pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
 halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
+eff_label = "$f_{*} = 0.70$"
 
 # change font for entire module
 mpl.rc("font", family="serif")
@@ -46,7 +47,7 @@ def sci_notation(decimal_places, exp_string):
 
 
 project_plot_bins = 20
-radius = 20
+radius = 15
 cmap = cm.get_cmap("inferno")
 cmap = cmap(np.linspace(0, 1, 20))
 line_color = cmap[18]
@@ -66,7 +67,9 @@ for p2, ds in zip(pop2, halo_ds):
 
         halo_data = np.loadtxt(halo)
 
-        if 33387 in halo_data[:, 0]:  # the star id number was found via trial and error
+        if (
+            8555.0 in halo_data[:, 0]
+        ):  # the star id number was found via trial and error
             try:
                 halo_num = int(halo.split("/")[-1].split("_")[-1].split(".")[0])
                 gc_lum_mask = np.isin(ids, halo_data[:, 0])
@@ -149,7 +152,7 @@ for p2, ds in zip(pop2, halo_ds):
 
                     # calculated projected surface densities for each three projections
 
-                    xy_r, xy_rho, xy_err, _, _, xy_half_r, _ = projected_surf_densities(
+                    xy_r, xy_rho, xy_err, _, _, _, xy_half_r = projected_surf_densities(
                         x_coord=x,
                         y_coord=y,
                         lums=gc_lums,
@@ -289,7 +292,7 @@ for p2, ds in zip(pop2, halo_ds):
                     leg_font = font_manager.FontProperties(
                         family="serif", math_fontfamily="cm", size=9
                     )
-                    leg_font
+                    # leg_font
                     ax[1, 0].errorbar(
                         xy_r,
                         xy_rho,
@@ -508,9 +511,9 @@ for p2, ds in zip(pop2, halo_ds):
                     )
 
                     rect = patches.Rectangle(
-                        xy=(-radius * 1.2, -50),
+                        xy=(-radius * 1.2, -5),
                         width=0.25,
-                        height=100,
+                        height=10,
                         linewidth=0,
                         edgecolor="white",
                         facecolor="white",
@@ -549,7 +552,7 @@ for p2, ds in zip(pop2, halo_ds):
                     ax[0, 2].text(
                         radius * 0.9,
                         -radius * 0.9,
-                        "$f_{*} = 0.70$",
+                        eff_label,
                         size=12,
                         ha="right",
                         va="bottom",
@@ -589,8 +592,7 @@ for p2, ds in zip(pop2, halo_ds):
                         runsavepath, "tracked_{}".format(output_num)
                     )
 
-                    # plt.savefig(save_name, dpi=300, bbox_inches="tight")
-
+                    plt.savefig(save_name, dpi=300, bbox_inches="tight")
                 print(output_num, halo_num)
             except:
                 print(">skipping", output_num)

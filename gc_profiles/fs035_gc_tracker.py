@@ -289,7 +289,7 @@ for p2, ds in zip(pop2, halo_ds):
                     leg_font = font_manager.FontProperties(
                         family="serif", math_fontfamily="cm", size=9
                     )
-                    leg_font
+                    # leg_font
                     ax[1, 0].errorbar(
                         xy_r,
                         xy_rho,

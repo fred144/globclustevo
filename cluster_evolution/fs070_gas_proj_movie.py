@@ -8,7 +8,7 @@ import sys
 sys.path.insert(1, "/homes/fgarcia4/py-virtual-envs/master/lib/python3.7/site-packages")
 sys.path.append("..")  # makes sure that importing the modules work
 
-from modules.macros import code_age_to_myr
+from modules.macros import code_age_to_myr, sci_notation
 import matplotlib as mpl
 import matplotlib.font_manager as font_manager
 from matplotlib import cm
@@ -29,18 +29,18 @@ latest_sim_stats = np.loadtxt(
     "../sim_log_files/{}/latest_sim_stats.txt".format(simulation_run_name)
 )
 # ===================================local test=================================
-# datadir = os.path.relpath("../../cosm_test_data/refine")
-# parent_folder = "../rendering"
-# sequence_folder = "test_frames"
+datadir = os.path.relpath("../../cosm_test_data/refine")
+parent_folder = "../rendering"
+sequence_folder = "test_frames"
 # ===================================dt2 paths=================================
-datadir = os.path.expanduser(
-    "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
-).format(simulation_run_name)
-# save path
-parent_folder = "../rendering/gas/{}".format(simulation_run_name)
+# datadir = os.path.expanduser(
+#     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
+# ).format(simulation_run_name)
+# # save path
+# parent_folder = "../rendering/gas/{}".format(simulation_run_name)
 
-# TODO: edit for rendering runs
-sequence_folder = "log_gas_projected_density_z"
+# # TODO: edit for rendering runs
+# sequence_folder = "log_gas_projected_density_z"
 # ===================================save path=================================
 
 pop_2_save = "../particle_data/pop_2_data/{}".format(simulation_run_name)
@@ -68,8 +68,8 @@ sequence_title = "z_gas_log"
 slice_axis = "z"
 z_scale = "log"
 width = (400, "pc")
-start_step = 646  # fs07:113, fs035:154
-end_step = 1000
+start_step = 500  # fs07:113, fs035:154
+end_step = 500
 # cosmetics
 mpl.rc("font", family="serif")
 leg_font = font_manager.FontProperties(family="serif", math_fontfamily="cm")
@@ -112,7 +112,7 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
 
     # read in RAMSES data set
     ds = yt.load(infofile, fields=cell_fields, extra_particle_fields=epf)
-
+    #%%
     # get time-dependent params.
     redshft = ds.current_redshift
     current_hubble = ds.hubble_constant
@@ -282,7 +282,9 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
     for t in cb.ax.xaxis.get_ticklabels():
         t.set_family("serif")
     ax.set_title(
-        "Pop II Birth Time (Myr) | Count: {:.2e}".format(np.size(be_star)),
+        r"Pop II Birth Time (Myr) | Count: ${}$".format(
+            sci_notation(2, np.size(be_star))
+        ),
         c="white",
         fontsize=9,
         fontfamily="serif",

@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append("../")
+sys.path.append("..")
 import numpy as np
 import os
 from modules.macros import filter_snapshots, characterisitc_mass, sci_notation
@@ -46,9 +46,9 @@ f7_pop2_matched, f7_matched_nums = find_matching_time(
 f7_halo_matched = get_snapshots(snapshot_file_list=f7_halo_ds, get_list=f7_matched_nums)
 
 # sampple idxs
-prof_start = 763
+prof_start = 600
 prof_end = 764
-prof_step = 1
+prof_step = 50
 
 fs070_p2 = f7_pop2_matched[prof_start:prof_end:prof_step]
 fs070_ds = f7_halo_matched[prof_start:prof_end:prof_step]
@@ -56,51 +56,34 @@ fs035_p2 = f3_pop2[prof_start:prof_end:prof_step]
 fs035_ds = f3_halo[prof_start:prof_end:prof_step]
 
 # change font for entire module
-# mpl.rc("font", family="serif")
+mpl.rc("font", family="serif")
 
 
-profile_plot_bins = 40
+project_plot_bins = 40
 radius = 200
-star_bins = 200
-pxl_size = radius * 2 / star_bins
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
 efficiencies = ["$f_{*} = 0.70$", "$f_{*} = 0.35$"]
 eff_lcolor = [cmap[0], cmap[2]]
 eff_errcol = [cmap[1], cmap[3]]
 
-
+#%%
 # run thorugh each matched pair for time series
 for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
 
-    # with plt.style.context("dark_background"):
-    with plt.rc_context(
-        {
-            "font.family": "serif",
-            "mathtext.fontset": "cm",
-        }
-    ):
+    with plt.style.context("dark_background"):
         fig, ax = plt.subplots(
-            nrows=5,
+            nrows=4,
             ncols=3,
-            gridspec_kw={"height_ratios": [1, 1, 0.25, 1, 1]},
             sharex="row",
             sharey="row",
-            figsize=(8, 11.5),
+            figsize=(9, 12.5),
             dpi=300,
-            # facecolor=cm.Greys_r(0),
+            facecolor=cm.Greys_r(0),
         )
-        for h in range(3):
-            ax[2, h].set_visible(False)
+
         # used to loop through two times to get stacked 2*3s
         for i, (p2, ds) in enumerate(zip(eff_p2, eff_ds)):
-            # correction
-            if i == 0:
-                row_handler = 0
-                hndlr_2 = 1
-            else:
-                row_handler = 2 * i + 1
-                hndlr_2 = 2
 
             plt.subplots_adjust(hspace=-0.033, wspace=0)
             print(i)
@@ -124,7 +107,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             xy_lums, _, _ = np.histogram2d(
                 x,
                 y,
-                bins=star_bins,
+                bins=250,
                 weights=field_lums,
                 normed=False,
                 range=[[-radius, radius], [-radius, radius]],
@@ -133,7 +116,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             xz_lums, _, _ = np.histogram2d(
                 x,
                 z,
-                bins=star_bins,
+                bins=250,
                 weights=field_lums,
                 normed=False,
                 range=[[-radius, radius], [-radius, radius]],
@@ -142,7 +125,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             yz_lums, _, _ = np.histogram2d(
                 y,
                 z,
-                bins=star_bins,
+                bins=250,
                 weights=field_lums,
                 normed=False,
                 range=[[-radius, radius], [-radius, radius]],
@@ -153,54 +136,42 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             yz_lums = yz_lums.T
 
             # plot the luminosity projection for 3 viewing angles
+            xy = ax[2 * i, 0].imshow(
+                xy_lums,
+                cmap="inferno",
+                # interpolation="gaussian",
+                origin="lower",
+                extent=[-radius, radius, -radius, radius],
+                norm=LogNorm(vmin=2e32, vmax=1e35),
+            )
 
-            xy = ax[row_handler, 0].imshow(
-                xy_lums / pxl_size,
+            xz = ax[2 * i, 1].imshow(
+                xz_lums,
                 cmap="inferno",
                 # interpolation="gaussian",
                 origin="lower",
                 extent=[-radius, radius, -radius, radius],
-                norm=LogNorm(vmin=2e32, vmax=7e34),
+                norm=LogNorm(vmin=2e32, vmax=1e35),
             )
-            ax[row_handler, 0].set_facecolor(cm.Greys_r(0))
-            xz = ax[row_handler, 1].imshow(
-                xz_lums / pxl_size,
-                cmap="inferno",
-                # interpolation="gaussian",
-                origin="lower",
-                extent=[-radius, radius, -radius, radius],
-                norm=LogNorm(vmin=2e32, vmax=7e34),
-            )
-            ax[row_handler, 1].set_facecolor(cm.Greys_r(0))
-            yz = ax[row_handler, 2].imshow(
-                yz_lums / pxl_size,
-                cmap="inferno",
-                # interpolation="gaussian",
-                origin="lower",
-                extent=[-radius, radius, -radius, radius],
-                norm=LogNorm(vmin=2e32, vmax=7e34),
-            )
-            ax[row_handler, 2].set_facecolor(cm.Greys_r(0))
 
-            # handle the axes lines and ticks
-            for t in range(3):
-                ax[row_handler, t].spines["bottom"].set_color("white")
-                ax[row_handler, t].spines["top"].set_color("white")
-                if t != 2:
-                    ax[row_handler, t].spines["right"].set_color("white")
-                if t != 0:
-                    ax[row_handler, t].spines["left"].set_color("white")
-                    ax[row_handler, t].tick_params(colors="white")
-                    # ax[row_handler, t].xaxis.set_tick_params(labeltop="on")
+            yz = ax[2 * i, 2].imshow(
+                yz_lums,
+                cmap="inferno",
+                # interpolation="gaussian",
+                origin="lower",
+                extent=[-radius, radius, -radius, radius],
+                norm=LogNorm(vmin=2e32, vmax=1e35),
+            )
 
             # calculated projected surface densities for each three projections
+
             xy_r, xy_rho, xy_err, _, _, xy_half_r, _ = projected_surf_densities(
                 x_coord=x,
                 y_coord=y,
                 lums=field_lums,
                 masses=field_masses,
                 radius=radius,
-                num_bins=profile_plot_bins,
+                num_bins=project_plot_bins,
                 log_bins=True,
                 dr=None,
                 calc_half_r=True,
@@ -212,7 +183,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 lums=field_lums,
                 masses=field_masses,
                 radius=radius,
-                num_bins=profile_plot_bins,
+                num_bins=project_plot_bins,
                 log_bins=True,
                 dr=None,
                 calc_half_r=True,
@@ -224,7 +195,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 lums=field_lums,
                 masses=field_masses,
                 radius=radius,
-                num_bins=profile_plot_bins,
+                num_bins=project_plot_bins,
                 log_bins=True,
                 dr=None,
                 calc_half_r=True,
@@ -250,18 +221,18 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             )  # smooth version
             xy_theory_rho = modified_king_model(xy_theory_r, *fit_params)
             xy_plot_label = (
-                r"$R_{{\mathrm{{core}}}} = {:.1f} \: \mathrm{{pc}}$"
+                r"$R_{{core}} = {:.2f} \: \mathrm{{pc}}$"
                 "\n"
-                r"$\alpha = {:.1f} $"
+                r"$\alpha = {:.2f} $"
                 "\n"
-                r"$\Sigma_0 = {} \: \mathrm{{\frac{{M_{{\odot}}}}{{pc^{{2}}}}}}$"
+                r"$\Sigma_0 = {} (\mathrm{{M}}_{{\odot}} \; \mathrm{{pc}}^{{-2}})$"
                 "\n"
-                r"$M_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
+                r"$M_{{core}} = {} \: \mathrm{{M}}_{{\odot}}$"
             ).format(
                 xy_fit_r_c,
                 xy_fit_alpha,
-                sci_notation(1, xy_sigma_naught),
-                sci_notation(1, xy_core_mass),
+                sci_notation(2, xy_sigma_naught),
+                sci_notation(2, xy_core_mass),
             )
 
             fit_params, cov_matrix = curve_fit(
@@ -283,18 +254,18 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             )  # smooth version
             xz_theory_rho = modified_king_model(xz_theory_r, *fit_params)
             xz_plot_label = (
-                r"$R_{{\mathrm{{core}}}} = {:.1f} \: \mathrm{{pc}}$"
+                r"$R_{{core}} = {:.2f} \: \mathrm{{pc}}$"
                 "\n"
-                r"$\alpha = {:.1f} $"
+                r"$\alpha = {:.2f} $"
                 "\n"
-                r"$\Sigma_0 = {} \: \mathrm{{\frac{{M_{{\odot}}}}{{pc^{{2}}}}}}$"
+                r"$\Sigma_0 = {} (\mathrm{{M}}_{{\odot}} \; \mathrm{{pc}}^{{-2}})$"
                 "\n"
-                r"$M_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
+                r"$M_{{core}} = {} \: \mathrm{{M}}_{{\odot}}$"
             ).format(
                 xz_fit_r_c,
                 xz_fit_alpha,
-                sci_notation(1, xz_sigma_naught),
-                sci_notation(1, xz_core_mass),
+                sci_notation(2, xz_sigma_naught),
+                sci_notation(2, xz_core_mass),
             )
 
             fit_params, cov_matrix = curve_fit(
@@ -316,213 +287,184 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             )  # smooth version
             yz_theory_rho = modified_king_model(yz_theory_r, *fit_params)
             yz_plot_label = (
-                r"$R_{{\mathrm{{core}}}} = {:.1f} \: \mathrm{{pc}}$"
+                r"$R_{{core}} = {:.2f} \: \mathrm{{pc}}$"
                 "\n"
-                r"$\alpha = {:.1f} $"
+                r"$\alpha = {:.2f} $"
                 "\n"
-                r"$\Sigma_0 = {} \: \mathrm{{\frac{{M_{{odot}}}}{{pc^{{2}}}}}}$"
+                r"$\Sigma_0 = {} (\mathrm{{M}}_{{\odot}} \; \mathrm{{pc}}^{{-2}})$"
                 "\n"
-                r"$M_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
+                r"$M_{{core}} = {} \: \mathrm{{M}}_{{\odot}}$"
             ).format(
                 yz_fit_r_c,
                 yz_fit_alpha,
-                sci_notation(1, yz_sigma_naught),
-                sci_notation(1, yz_core_mass),
+                sci_notation(2, yz_sigma_naught),
+                sci_notation(2, yz_core_mass),
             )
 
             # plot the error bars and theory curves
-            leg_font = font_manager.FontProperties(family="serif", math_fontfamily="cm")
+            leg_font = font_manager.FontProperties(
+                family="serif", math_fontfamily="cm", size=9
+            )
             # leg_font
-            ax[2 * i + hndlr_2, 0].errorbar(
+            ax[2 * i + 1, 0].errorbar(
                 xy_r,
                 xy_rho,
                 yerr=xy_err,
+                # c="mediumpurple",
                 fmt="o",
-                ms=4,
                 capsize=5,
                 capthick=3,
                 elinewidth=3,
-                alpha=0.9,
+                alpha=0.8,
                 c=scatter_color,
-                label=(r"$R_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$").format(
-                    xy_half_r
-                ),
+                label=(r"$R_{{half}} = {:.2f} \: \mathrm{{pc}}$").format(xy_half_r),
+                # zorder=1,
             )
-            ax[2 * i + hndlr_2, 0].plot(
+            ax[2 * i + 1, 0].plot(
                 xy_theory_r,
                 xy_theory_rho,
+                # color="darkorange",
                 linewidth=4,
                 label=xy_plot_label,
                 alpha=0.8,
                 zorder=3,
                 color=line_color,
             )
-            ax[2 * i + hndlr_2, 0].legend(
-                loc="lower left",
-                framealpha=0.6,
-                edgecolor="k",
-                fontsize=8,
-                prop=leg_font,
-            )
+            ax[2 * i + 1, 0].legend(loc="lower left", fontsize=8, prop=leg_font)
 
-            ax[2 * i + hndlr_2, 1].errorbar(
+            ax[2 * i + 1, 1].errorbar(
                 xz_r,
                 xz_rho,
                 yerr=xz_err,
+                # c="mediumpurple",
                 fmt="o",
-                ms=4,
                 capsize=5,
                 capthick=3,
                 elinewidth=3,
-                label=(r"$R_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$").format(
-                    xz_half_r
-                ),
+                label=(r"$R_{{half}} = {:.2f} \: \mathrm{{pc}}$").format(xz_half_r),
                 c=scatter_color,
-                alpha=0.9,
+                alpha=0.8,
+                # zorder=1,
             )
-            ax[2 * i + hndlr_2, 1].plot(
+            ax[2 * i + 1, 1].plot(
                 xz_theory_r,
                 xz_theory_rho,
+                # color="darkorange",
                 linewidth=4,
                 label=xz_plot_label,
                 alpha=0.8,
                 zorder=3,
                 color=line_color,
             )
-            ax[2 * i + hndlr_2, 1].legend(
-                loc="lower left",
-                framealpha=0.6,
-                edgecolor="k",
-                fontsize=8,
-                prop=leg_font,
-            )
+            ax[2 * i + 1, 1].legend(loc="lower left", fontsize=8, prop=leg_font)
 
-            ax[2 * i + hndlr_2, 2].errorbar(
+            ax[2 * i + 1, 2].errorbar(
                 yz_r,
                 yz_rho,
                 yerr=yz_err,
+                # c="mediumpurple",
                 fmt="o",
-                ms=4,
                 capsize=5,
                 capthick=3,
                 elinewidth=3,
-                alpha=0.9,
+                alpha=0.8,
                 c=scatter_color,
-                label=(r"$R_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$").format(
-                    yz_half_r
-                ),
+                label=(r"$R_{{half}} = {:.2f} \: \mathrm{{pc}}$").format(yz_half_r),
+                # zorder=1,
             )
-            ax[2 * i + hndlr_2, 2].plot(
+            ax[2 * i + 1, 2].plot(
                 yz_theory_r,
                 yz_theory_rho,
+                # color="darkorange",
                 linewidth=4,
                 label=yz_plot_label,
                 alpha=0.8,
                 zorder=3,
                 color=line_color,
             )
-            ax[2 * i + hndlr_2, 2].legend(
-                loc="lower left",
-                framealpha=0.6,
-                edgecolor="k",
-                fontsize=8,
-                prop=leg_font,
-            )
+            ax[2 * i + 1, 2].legend(loc="lower left", fontsize=8, prop=leg_font)
 
             # edit ticks, remove the numbers
-            ax[row_handler, 0].axes.yaxis.set_ticklabels([])
-            ax[row_handler, 0].axes.xaxis.set_ticklabels([])
+            ax[2 * i, 0].axes.yaxis.set_ticklabels([])
+            ax[2 * i, 0].axes.xaxis.set_ticklabels([])
 
             # axes labels by using the subplot axes
-            ax[2 * i + hndlr_2, 0].set_ylabel(
+            ax[2 * i + 1, 0].set_ylabel(
                 r"$ \mathrm{\Sigma} \: (\mathrm{M}_{\odot} \; \mathrm{pc}^{-2})$",
                 fontproperties=leg_font,
                 fontsize=12,
             )
-            ax[2 * i + hndlr_2, 1].set_xlabel(
-                r"$ \mathrm{R} \: (\mathrm{pc})$",
-                fontproperties=leg_font,
-                fontsize=12,
-                labelpad=0,
-            )
-            # ax[row_handler, 1].set_xlabel(
-            #     r"$ \mathrm{R} \: (\mathrm{pc})$",
-            #     fontproperties=leg_font,
-            #     fontsize=12,
-            #     labelpad=0,
-            # )
 
             # edit bottom row limits
-            ax[2 * i + hndlr_2, 0].set_xlim(left=0.15, right=radius * 1.55)
-            ax[2 * i + hndlr_2, 0].set_ylim(bottom=3e-1, top=2.5e2)
-            ax[2 * i + hndlr_2, 0].set_xscale("log")
-            ax[2 * i + hndlr_2, 0].set_yscale("log")
+            ax[2 * i + 1, 0].set_xlim(left=0.15, right=radius * 1.5)
+            ax[2 * i + 1, 0].set_ylim(bottom=3e-1, top=5e2)
+            ax[2 * i + 1, 0].set_xscale("log")
+            ax[2 * i + 1, 0].set_yscale("log")
 
-            axes_ind = [("$x$", "$y$"), ("$x$", "$z$"), ("$y$", "$z$")]
+            axes_ind = [("x", "y"), ("x", "z"), ("y", "z")]
             for n, l in enumerate(axes_ind):
                 # remove x tick marks for the top row
-                ax[row_handler, n].tick_params(
+                ax[2 * i, n].tick_params(
                     axis="x",
                     which="both",
                     bottom=False,
                     top=False,
                     labelbottom=False,
                 )
-                # add axes indicators for the top rows
-                ax[row_handler, n].text(
+                # add axes indicators for the top row
+                ax[2 * i, n].text(
                     -radius * 0.55,
                     -radius * 0.9,
                     l[0],
-                    size=7,
+                    size=6,
                     ha="center",
                     va="center",
                     color="white",
                 )
-                ax[row_handler, n].text(
+                ax[2 * i, n].text(
                     -radius * 0.9,
                     -radius * 0.55,
                     l[1],
-                    size=7,
+                    size=6,
                     ha="center",
                     va="center",
                     color="white",
                 )
 
-                ax[row_handler, n].arrow(
+                ax[2 * i, n].arrow(
                     -radius * 0.9,
                     -radius * 0.9,
                     radius * 0.3,
                     0,
-                    head_width=5,
+                    head_width=3,
                     head_length=3,
                     linewidth=0.5,
                     color="w",
                     length_includes_head=True,
                 )
-                ax[row_handler, n].arrow(
+                ax[2 * i, n].arrow(
                     -radius * 0.9,
                     -radius * 0.9,
                     0,
                     radius * 0.3,
-                    head_width=5,
+                    head_width=3,
                     head_length=3,
                     linewidth=0.5,
                     color="w",
                     length_includes_head=True,
                 )
                 # grids for the bottom row
-                ax[2 * i + hndlr_2, n].grid(
+                ax[2 * i + 1, n].grid(
                     visible=True,
                     which="both",
                     axis="y",
                     ls="--",
-                    color="grey",
+                    color="dimgrey",
                     zorder=0.5,
-                    alpha=0.8,
                 )
 
             # add a scale
-            ax[row_handler, 0].set_ylabel(
+            ax[2 * i, 0].set_ylabel(
                 (r"$ \mathrm{100 \: pc}$" "\n"),
                 fontproperties=leg_font,
                 fontsize=12,
@@ -530,17 +472,17 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
 
             rect = patches.Rectangle(
                 xy=(-radius * 1.2, -50),
-                width=8,
+                width=5,
                 height=100,
                 linewidth=0,
-                edgecolor="black",
-                facecolor="black",
+                edgecolor="white",
+                facecolor="white",
                 clip_on=False,
             )
-            ax[row_handler, 0].add_patch(rect)
-            ax[row_handler, 0].set_xlim(-radius, radius)
-            ax[row_handler, 1].set_xlim(-radius, radius)
-            ax[row_handler, 2].set_xlim(-radius, radius)
+            ax[2 * i, 0].add_patch(rect)
+            ax[2 * i, 0].set_xlim(-radius, radius)
+            ax[2 * i, 1].set_xlim(-radius, radius)
+            ax[2 * i, 2].set_xlim(-radius, radius)
 
             # add time and redshift
             props = dict(
@@ -550,11 +492,11 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 linewidth=0.8,
                 edgecolor="white",
             )
-            ax[row_handler, 0].text(
+            ax[2 * i, 0].text(
                 -radius * 0.9,
                 radius * 0.9,
                 (
-                    r"$\mathrm{{t = {:.1f} \: Myr}}$" "\n" r"$\mathrm{{z = {:.1f} }}$"
+                    r"$\mathrm{{t = {:.2f} \: Myr}}$" "\n" r"$\mathrm{{z = {:.2f} }}$"
                 ).format(t_myr, redshift),
                 size=12,
                 ha="left",
@@ -564,113 +506,106 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 bbox=props,
             )
 
-            eff_prop = dict(
-                boxstyle="round",
-                facecolor="white",
-                alpha=0.5,
-                linewidth=0.8,
-                edgecolor="grey",
-            )
             # add efficiency label
-            ax[row_handler, 1].text(
-                0.5,
-                0.87,
+            ax[2 * i + 1, 0].text(
+                0.05,
+                0.9,
                 eff_label,
                 size=12,
-                ha="center",
+                ha="left",
                 va="bottom",
                 color="white",
-                transform=ax[row_handler, 1].transAxes,
+                transform=ax[2 * i + 1, 0].transAxes,
                 fontproperties=leg_font,
                 bbox=props,
             )
 
             # add a histogram of ages inside the cluster
             # [left, bottom, width, height]
-            with plt.style.context("dark_background"):
-                if i == 0:
-                    # top inset
-                    ax_inset = fig.add_axes([0.785, 0.73, 0.10, 0.07])
 
-                    # 0.70 numbers
-                    # ax[2 * i + hndlr_2, 0].axes.xaxis.set_ticklabels([])
-                    # ax[2 * i + hndlr_2, 1].axes.xaxis.set_ticklabels([])
-                    # ax[2 * i + hndlr_2, 2].axes.xaxis.set_ticklabels([])
-                else:
-                    # bottom inset
-                    ax_inset = fig.add_axes([0.785, 0.335, 0.10, 0.07])
+            if i == 0:
+                ax_inset = fig.add_axes([0.79, 0.715, 0.10, 0.07])
 
-                    # plot only for the bottom row
+                ax[2 * i + 1, 0].axes.xaxis.set_ticklabels([])
+                ax[2 * i + 1, 1].axes.xaxis.set_ticklabels([])
+                ax[2 * i + 1, 2].axes.xaxis.set_ticklabels([])
+            else:
+                ax_inset = fig.add_axes([0.79, 0.34, 0.10, 0.07])
 
-                ax_inset.patch.set_alpha(0.5)
-                bins = np.linspace(300, 600, 15)
-                ax_inset.hist(
-                    field_bes,
-                    bins,
-                    weights=field_masses,
-                    alpha=0.6,
-                    color="w",
-                    edgecolor="black",
-                )
-                ax_inset.axvline(x=t_myr, ls="--", color="white", lw=1)
-                ax_inset.tick_params(labelsize=5)
-                ax_inset.set_xlabel(
-                    "$\mathrm{Star \: Birth \: (Myr)}$",
+                # plot only for the bottom row
+                ax[2 * i + 1, 1].set_xlabel(
+                    r"$ \mathrm{R} \: (\mathrm{pc})$",
                     fontproperties=leg_font,
-                    fontsize=7,
-                    labelpad=0,
+                    fontsize=12,
                 )
-                ax_inset.set_ylabel(
-                    r"$\mathrm{Field \: Mass \: (M_{\odot})}$",
-                    fontproperties=leg_font,
-                    fontsize=7,
-                    labelpad=0,
-                )
-                ax_inset.text(
-                    t_myr + 10,
-                    2e3,
-                    r"$\mathrm{t_{sim}}$",
-                    fontproperties=leg_font,
-                    va="center",
-                    rotation=270,
-                    fontsize=7,
-                )
-                ax_inset.set_yscale("log")
-                # ax_inset.set_xlim("log")
-                ax_inset.set_xlim(300, 600)
-                ax_inset.set_ylim(1, 5e5)
+
+            ax_inset.patch.set_alpha(0.5)
+            bins = np.linspace(300, 600, 15)
+            ax_inset.hist(
+                field_bes,
+                bins,
+                weights=field_masses,
+                alpha=0.5,
+                color="w",
+                edgecolor="black",
+            )
+            ax_inset.axvline(x=t_myr, ls="--", color="white", lw=1)
+            ax_inset.tick_params(labelsize=5)
+            ax_inset.set_xlabel(
+                "$\mathrm{Star \: Birth \: (Myr)}$",
+                fontproperties=leg_font,
+                fontsize=7,
+                labelpad=0,
+            )
+            ax_inset.set_ylabel(
+                r"$\mathrm{Field \: Mass \: (M_{\odot})}$",
+                fontproperties=leg_font,
+                fontsize=7,
+                labelpad=0,
+            )
+            ax_inset.text(
+                t_myr + 10,
+                2e3,
+                r"$\mathrm{t_{sim}}$",
+                fontproperties=leg_font,
+                va="center",
+                rotation=270,
+                fontsize=7,
+            )
+            ax_inset.set_yscale("log")
+            # ax_inset.set_xlim("log")
+            ax_inset.set_xlim(300, 600)
+            ax_inset.set_ylim(1, 5e5)
 
         # add the luminosity color bar
         # fig.subplots_adjust(wspace=0, hspace=0, bottom=0.1)
         # [left, bottom, width, height]
-        cbar_ax = fig.add_axes([0.125, 0.88, 0.775, 0.005])
-        cbar = fig.colorbar(xz, cax=cbar_ax, pad=0, orientation="horizontal")
+        cbar_ax = fig.add_axes([0.90, 0.125, 0.01, 0.753])
+        cbar = fig.colorbar(xz, cax=cbar_ax, pad=0)
         cbar_label = (
             r"$\mathrm{Projected}\:\mathrm{Monochromatic}\:\mathrm{Luminosity}"
             r", \mathrm{\lambda = 1500 \: \AA \:}"
-            r"\mathrm{\left(erg \:\: s^{-1} \: \AA^{-1} \: pc^{-2} \right)} $"
+            r"\mathrm{\left(erg \:\: s^{-1} \: \AA^{-1} \right)} $"
         )
         cbar.set_label(
             label=cbar_label,
             fontsize=12,
-            labelpad=5,
+            labelpad=8,
             fontproperties=leg_font,
         )
-        cbar.ax.xaxis.set_ticks_position("top")
-        cbar.ax.xaxis.set_label_position("top")
-        cbar.ax.xaxis.set_tick_params(pad=2, labelsize=8)
-        # save_name = os.path.join(runsavepath, "tracked_{}".format(output_num))
-        plt.subplots_adjust(hspace=-0.033, wspace=0)
 
-        plt.savefig(
-            os.path.expanduser(
-                (
-                    "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
-                    "field_density_profile.png"
-                )
-            ),
-            dpi=800,
-            bbox_inches="tight",
-            pad_inches=0.05,
-            format="png",
-        )
+        # save_name = os.path.join(runsavepath, "tracked_{}".format(output_num))
+        plt.subplots_adjust(hspace=-0.01, wspace=0)
+        plt.show()
+    # plt.savefig(
+    #     os.path.expanduser(
+    #         (
+    #             "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+    #             "field_density_profile.png"
+    #         )
+    #     ),
+    #     dpi=800,
+    #     bbox_inches="tight",
+    #     pad_inches=0.05,
+    #     format="png",
+    # )

@@ -1,3 +1,7 @@
+"""
+BSC MF over time using strictly fof 
+"""
+
 import sys
 
 sys.path.append("..")
@@ -6,12 +10,17 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 from modules.macros import filter_snapshots, t_myr_from_z
+import matplotlib.lines as mlines
 from modules.match_t_sims import find_matching_time, get_snapshots
 from scipy.optimize import curve_fit
 
 
 def pwr_law(x, a, coeff):
     return coeff * x**a
+
+
+def gauss(x, amp, mean, sigma):
+    return amp * np.exp(-0.5 * ((x - mean) / sigma) ** 2)
 
 
 def log_data_function(data, num_bins, bin_range: tuple):
@@ -73,23 +82,55 @@ if __name__ == "__main__":
             nrows=len(fs070_matched),
             ncols=2,
             sharex=True,
-            sharey=True,
-            figsize=(7, 2.6 * len(fs070_matched)),
+            sharey="col",
+            figsize=(5, 2.5 * len(fs070_matched)),
             dpi=300,
         )
         plt.subplots_adjust(hspace=0, wspace=0)
         fig.text(
             0.5,
-            0.06,
+            0.08,
             r"$\mathrm{M} \:\:  \left( \mathrm{M}_{\odot} \right) $",
             ha="center",
         )
         fig.text(
-            0.04,
+            0.02,
             0.5,
-            r"$\mathrm{dN / d\log}\:\mathrm{M}\:\:\left(\mathrm{M}_{\odot} \right)$",
+            r"$\mathrm{dN / d\log}\:\:\left(\mathrm{M} / \mathrm{M}_{\odot} \right)$",
             va="center",
             rotation="vertical",
+        )
+        f7_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*}}}$"
+        f7_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
+        f3_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*}}}$"
+        f3_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
+        f7_legend_title = r"$f_{*} = 0.70$"
+        f3_legend_title = r"$f_{*} = 0.35$"
+        f70_imf = mlines.Line2D(
+            [], [], color=f7_mc_imf_clr, ls="-", lw=4, label=f7_imf_label
+        )
+        f70_bsc = mlines.Line2D(
+            [], [], color=f7_bsc_mf_clr, ls="-", lw=4, label=f7_bsc_label
+        )
+        f35_imf = mlines.Line2D(
+            [], [], color=f3_mc_imf_clr, ls="-", lw=4, label=f3_imf_label
+        )
+        f35_bsc = mlines.Line2D(
+            [], [], color=f3_bsc_mf_clr, ls="-", lw=4, label=f3_bsc_label
+        )
+        f7_leg_title = mlines.Line2D(
+            [], [], color=f7_mc_imf_clr, ls="", label=f7_legend_title
+        )
+        f3_leg_title = mlines.Line2D(
+            [], [], color=f3_mc_imf_clr, ls="", label=f3_legend_title
+        )
+        fig.legend(
+            # title="$\mathrm{SFE} \: (f_{*})$",
+            loc="lower center",
+            handles=[f7_leg_title, f70_imf, f70_bsc, f3_leg_title, f35_imf, f35_bsc],
+            bbox_to_anchor=(0.5, 0.88),
+            ncol=2,
+            edgecolor="k",
         )
 
     for i, (f7_ds, f3_ds) in enumerate(zip(fs070_matched, fs035_matched)):
@@ -131,9 +172,10 @@ if __name__ == "__main__":
         f7_mc_mask = fs070_log_sfc[:, 2] >= f7_redshift
         f7_mc_star_mass = fs070_log_sfc[:, 7][f7_mc_mask]
 
+        # log sfc
         mc_f7_mass, mc_f7_counts = log_data_function(f7_mc_star_mass, bns, x_range)
         mc_f3_mass, mc_f3_counts = log_data_function(f3_mc_star_mass, bns, x_range)
-
+        # BSC
         f7_vir_mass, f7_vir_counts = log_data_function(
             f7_masses_per_snapshot, bns, x_range
         )
@@ -142,25 +184,42 @@ if __name__ == "__main__":
             f3_masses_per_snapshot, bns, x_range
         )
         # fit
-        f7_fitting_mask = f7_vir_mass >= 2e3
-        f3_fitting_mask = f3_vir_mass >= 3e2
+        f7_fitting_mask = f7_vir_mass >= 3e2
+        f3_fitting_mask = f3_vir_mass >= 10
 
         f7_fit_params, _ = curve_fit(
-            f=pwr_law,
-            xdata=f7_vir_mass[f7_fitting_mask],
+            f=gauss,
+            xdata=np.log10(f7_vir_mass[f7_fitting_mask]),
             ydata=f7_vir_counts[f7_fitting_mask],
             #
         )
-        f7_theory_x = np.linspace(f7_vir_mass.min(), f7_vir_mass.max(), 100)
-        f7_theory_y = pwr_law(f7_theory_x, *f7_fit_params)
+        f7_theory_x = np.log10(np.geomspace(f7_vir_mass.min(), f7_vir_mass.max(), 100))
+        f7_theory_y = gauss(f7_theory_x, *f7_fit_params)
 
         f3_fit_params, _ = curve_fit(
-            f=pwr_law,
-            xdata=f3_vir_mass[f3_fitting_mask],
+            f=gauss,
+            xdata=np.log10(f3_vir_mass[f3_fitting_mask]),
             ydata=f3_vir_counts[f3_fitting_mask],
         )
-        f3_theory_x = np.linspace(f3_vir_mass.min(), f3_vir_mass.max(), 100)
-        f3_theory_y = pwr_law(f3_theory_x, *f3_fit_params)
+        f3_theory_x = np.log10(np.geomspace(f3_vir_mass.min(), f3_vir_mass.max(), 100))
+        f3_theory_y = gauss(f3_theory_x, *f3_fit_params)
+
+        # fit the logSFC
+        f7_mc_fit_params, _ = curve_fit(
+            f=gauss,
+            xdata=np.log10(mc_f7_mass),
+            ydata=mc_f7_counts,
+        )
+        f7_mc_theory_x = np.log10(np.geomspace(mc_f7_mass.min(), mc_f7_mass.max(), 100))
+        f7_mc_theory_y = gauss(f7_mc_theory_x, *f7_mc_fit_params)
+
+        f3_mc_fit_params, _ = curve_fit(
+            f=gauss,
+            xdata=np.log10(mc_f3_mass),
+            ydata=mc_f3_counts,
+        )
+        f3_mc_theory_x = np.log10(np.geomspace(mc_f3_mass.min(), mc_f3_mass.max(), 100))
+        f3_mc_theory_y = gauss(f3_mc_theory_x, *f3_mc_fit_params)
 
         with plt.rc_context(
             {
@@ -171,22 +230,13 @@ if __name__ == "__main__":
                 "font.size": 12,
             }
         ):
-            if i == 0:
-                f7_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*} \: MF}}$"
-                f7_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
-                f3_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*} \: MF}}$"
-                f3_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
+            f7_imf_label = "_nolegend_"
+            f7_bsc_label = "_nolegend_"
+            f3_imf_label = "_nolegend_"
+            f3_bsc_label = "_nolegend_"
 
-                f7_legend_title = r"$\mathrm{SFE} \: (f_{*}) = 0.70$"
-                f3_legend_title = r"$\mathrm{SFE} \: (f_{*}) = 0.35$"
-            else:
-                f7_imf_label = "_nolegend_"
-                f7_bsc_label = "_nolegend_"
-                f3_imf_label = "_nolegend_"
-                f3_bsc_label = "_nolegend_"
-
-                f7_legend_title = ""
-                f3_legend_title = ""
+            f7_legend_title = r"$\log_{{10}}\:(\mu,\:\sigma)$"
+            f3_legend_title = r"$\log_{{10}}\:(\mu,\:\sigma)$"
 
             ax[i, 0].plot(
                 mc_f7_mass,
@@ -239,22 +289,50 @@ if __name__ == "__main__":
             )
             # plot the theoretical power laws
             ax[i, 0].plot(
-                f7_theory_x,
+                10**f7_mc_theory_x,
+                f7_mc_theory_y,
+                ls=":",
+                linewidth=2,
+                alpha=0.8,
+                color="grey",
+                label=(r"$ ({:.2f}, {:.2f})$").format(
+                    f7_mc_fit_params[1], np.abs(f7_mc_fit_params[2])
+                ),
+            )
+            ax[i, 1].plot(
+                10**f3_mc_theory_x,
+                f3_mc_theory_y,
+                ls=":",
+                linewidth=2,
+                alpha=0.8,
+                color="grey",
+                label=(r"$({:.2f}, {:.2f})$").format(
+                    f3_mc_fit_params[1], np.abs(f3_mc_fit_params[2])
+                ),
+            )
+
+            ax[i, 0].plot(
+                10**f7_theory_x,
                 f7_theory_y,
                 ls="--",
                 linewidth=2,
                 alpha=0.8,
-                color="grey",
-                label=r"$\alpha = {:.2f}$".format(f7_fit_params[0]),
+                color="black",
+                label=(r"$({:.2f}, {:.2f})$").format(
+                    f7_fit_params[1], f7_fit_params[2]
+                ),
             )
+
             ax[i, 1].plot(
-                f3_theory_x,
+                10**f3_theory_x,
                 f3_theory_y,
                 ls="--",
                 linewidth=2,
                 alpha=0.8,
-                color="grey",
-                label=r"$\alpha = {:.2f}$".format(f3_fit_params[0]),
+                color="black",
+                label=(r"$({:.2f}, {:.2f})$").format(
+                    f3_fit_params[1], f3_fit_params[2]
+                ),
             )
 
             # current simulation time annotation
@@ -262,20 +340,20 @@ if __name__ == "__main__":
                 boxstyle="round",
                 facecolor="white",
                 alpha=0.5,
-                linewidth=0.8,
+                linewidth=0.5,
                 edgecolor="gray",
             )
             textstr_f7 = (
                 r"$\mathrm{{t}} = {:.1f} \: \mathrm{{Myr}}$"
-                "\n"
-                r"$\mathrm{{z}} = {:.1f}$"
-            ).format(f7_t_myr, f7_redshift)
+                # "\n"
+                # r"$\mathrm{{z}} = {:.1f}$"
+            ).format(f7_t_myr)
             ax[i, 0].text(
-                0.03,
-                0.95,
+                0.05,
+                0.06,
                 textstr_f7,
                 transform=ax[i, 0].transAxes,
-                verticalalignment="top",
+                verticalalignment="bottom",
                 bbox=props,
             )
             # textstr_f3 = (
@@ -293,16 +371,26 @@ if __name__ == "__main__":
             #     bbox=props,
             # )
             ax[i, 0].set_xlim(left=f7_vir_mass[0])
-            ax[i, 0].set_ylim(1, 800)
             ax[i, 0].set_xscale("log")
-            ax[i, 0].set_yscale("log")
+            # ax[i, 0].set_yscale("log")
+            ax[i, 0].set_ylim(bottom=0, top=165)
+            ax[i, 1].yaxis.tick_right()
+            ax[i, 1].set_ylim(bottom=0, top=450)
 
             ax[i, 0].legend(
-                title=f7_legend_title, loc="upper right", fontsize=10, title_fontsize=10
+                title=f7_legend_title,
+                loc="upper left",
+                framealpha=0.5,
+                title_fontsize=10,
+                fontsize=10,
             )
 
             ax[i, 1].legend(
-                title=f3_legend_title, loc="upper right", fontsize=10, title_fontsize=10
+                title=f3_legend_title,
+                loc="upper right",
+                framealpha=0.5,
+                title_fontsize=10,
+                fontsize=10,
             )
 
     plt.savefig(

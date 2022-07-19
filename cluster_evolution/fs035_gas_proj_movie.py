@@ -29,7 +29,7 @@ latest_sim_stats = np.loadtxt(
     "../sim_log_files/{}/latest_sim_stats.txt".format(simulation_run_name)
 )
 # ===================================local test=================================
-# datadir = os.path.relpath("../../cosm_test_data/refine")
+# datadir = os.path.relpath("../../cosm_test_data/fs035_ms10")
 # parent_folder = "../rendering"
 # sequence_folder = "test_frames"
 # ===================================dt2 paths=================================

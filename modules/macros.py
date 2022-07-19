@@ -173,6 +173,29 @@ def max_density_center_stable(
         return p, max_density_coord, x_pos, y_pos, z_pos
 
 
+def ram_fields():
+    cell_fields = [
+        "Density",
+        "x-velocity",
+        "y-velocity",
+        "z-velocity",
+        "Pressure",
+        "Metallicity",
+        # "dark_matter_density",
+        "xHI",
+        "xHII",
+        "xHeII",
+        "xHeIII",
+    ]
+    epf = [
+        ("particle_family", "b"),
+        ("particle_tag", "b"),
+        ("particle_birth_epoch", "d"),
+        ("particle_metallicity", "d"),
+    ]
+    return cell_fields, epf
+
+
 def sci_notation(decimal_places, float_num: float):
     """
     turns '1.00e+06' into scientific notation with times and power formatter
@@ -180,7 +203,12 @@ def sci_notation(decimal_places, float_num: float):
 
     """
     num = np.round(float_num, decimal_places)
-    exp_string = "{:.2e}".format(num)
+    if decimal_places == 1:
+        exp_string = "{:.1e}".format(num)
+    elif decimal_places == 2:
+        exp_string = "{:.2e}".format(num)
+    else:
+        print("decimal place not supported")
     start = decimal_places + 2
     end = decimal_places + 3
     return r"{}\:\times\:10^{:1} ".format(exp_string[:start], int(exp_string[end:]))
