@@ -310,3 +310,12 @@ with plt.rc_context(
         ax[idx, 0].set_xlim(axlims)
         ax[idx, 0].set_ylim(axlims)
 plt.subplots_adjust(hspace=0, wspace=-0.1)
+plt.savefig(
+    os.path.expanduser(
+        ("~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/" "gas_test.png")
+    ),
+    dpi=800,
+    bbox_inches="tight",
+    pad_inches=0.05,
+    format="png",
+)

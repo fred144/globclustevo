@@ -7,24 +7,26 @@ from modules.macros import filter_snapshots, ram_fields
 import yt
 
 yt.enable_parallelism()
-simulation_name = "fs035_ms10"
-f7_sn_dir = os.path.abspath("/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}".format(simulation_name))
-ft_p2_dir = "../particle_data/pop_2_data/{}".format(simulation_name)
+simulation_name = "fs07_refine"
+f7_sn_dir = os.path.abspath(
+    "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
+)
+ft_p2_dir = "../particle_data/pop_2_data/fs07_refine"
 
 slice_axis = "z"
 width = (400, "pc")
-res = 3000
+res = 1000
 
-f7_strt = 154
-f7_end = 1177
+f7_strt = 113
+f7_end = 1000
 step = 1
 
 f7_pop2 = filter_snapshots(ft_p2_dir, f7_strt, f7_end, step)
 f7_sn = filter_snapshots(f7_sn_dir, f7_strt, f7_end)
 
 parent_folder = "../gas_data/{}".format(simulation_name)
-dens_sequence_folder =  os.path.abspath(os.path.join(parent_folder, "gas_density"))
-temp_sequence_folder =  os.path.abspath(os.path.join(parent_folder, "temperature"))
+dens_sequence_folder = os.path.abspath(os.path.join(parent_folder, "gas_density"))
+temp_sequence_folder = os.path.abspath(os.path.join(parent_folder, "temperature"))
 
 
 if not os.path.exists(dens_sequence_folder):
@@ -35,11 +37,7 @@ if not os.path.exists(temp_sequence_folder):
     print("# Creating new sequence directory", temp_sequence_folder)
     os.makedirs(temp_sequence_folder)
 
-skip_frames = [1102]  # corrupted frames
-
 for i, (f7_sn, f7_p2) in enumerate(zip(f7_sn, f7_pop2)):
-    if output_num in skip_frames:
-        continue
     print("> Reading {}".format(f7_sn))
     output_num = f7_sn.split("_")[-1]
 
@@ -68,9 +66,9 @@ for i, (f7_sn, f7_p2) in enumerate(zip(f7_sn, f7_pop2)):
     f7_temp = np.array(f7_temp_frb["gas", "temperature"])
 
     gas_save = os.path.join(dens_sequence_folder, "dens_{}.txt".format(output_num))
+    np.savetxt(gas_save, X=f7_gas)
     print("> saved: {}".format(gas_save))
 
-    temp_save = os.path.join(dens_sequence_folder, "temp_{}.txt".format(output_num))
-    print("> saved: {}".format(gas_save))
-    np.savetxt(gas_save, X=f7_gas)
+    temp_save = os.path.join(temp_sequence_folder, "temp_{}.txt".format(output_num))
     np.savetxt(temp_save, X=f7_temp)
+    print("> saved: {}".format(temp_save))

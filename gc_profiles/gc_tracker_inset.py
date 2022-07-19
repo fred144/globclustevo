@@ -24,21 +24,21 @@ from scipy.optimize import curve_fit
 
 # 0.70 biggest cluster
 # strt = 421
-# end =873
-# step =452
+# end = 873
+# step = 452
 # tr_id = 33387
 
 # 0.70 old cluster
-strt = 342
-end = 1000
-step = end - strt
-tr_id = 6319.0
+# strt = 342
+# end = 1000
+# step = end - strt
+# tr_id = 6319.0
 
-halo_data_directory = r"../halo_data/fs07_refine/fof_best"
-pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
-pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
-halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
-efficiencies = 0.70
+# halo_data_directory = r"../halo_data/fs07_refine/fof_best"
+# pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
+# pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
+# halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
+# efficiencies = 0.70
 
 
 # 0.35  cluster
@@ -48,21 +48,21 @@ efficiencies = 0.70
 # tr_id = 21355
 
 # another 0.35
-# strt = 669
-# end = 1177
-# step = end - strt
-# tr_id = 25761.0
+strt = 669
+end = 1177
+step = end - strt
+tr_id = 25761.0
 
-# halo_data_directory = r"../halo_data/fs035_ms10/fof_best"
-# pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
-# pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
-# halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
-# efficiencies = 0.35
+halo_data_directory = r"../halo_data/fs035_ms10/fof_best"
+pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
+pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
+halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
+efficiencies = 0.35
 
 profile_plot_bins = 10
 m_rad = 200
 star_bins = 800
-pxl_size = m_rad * 2 / star_bins
+pxl_size = (m_rad * 2 / star_bins) ** 2
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
 eff_lcolor = "grey"  # cmap[0]
@@ -488,7 +488,7 @@ plt.savefig(
     os.path.expanduser(
         (
             "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
-            "f7_gc_tracked.png"
+            "f3_gc_tracked_1.png"
         )
     ),
     dpi=800,

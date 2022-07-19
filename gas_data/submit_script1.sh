@@ -3,7 +3,7 @@
 #SBATCH --ntasks=5
 #SBATCH --cpus-per-task=16
 #SBATCH --mem-per-cpu=6000  
-#SBATCH -t 36:00:00
+#SBATCH -t 48:00:00
 
 
 
@@ -18,7 +18,7 @@ module load gcc
 module load openmpi
 
 
-SCRIPT="/lustre/fgarcia4/glob_clust_evo/cluster_evolution/fs035_get_gas_data.py"
+SCRIPT="/lustre/fgarcia4/glob_clust_evo/gas_data/fs035_get_gas_data.py"
 #SCRIPT="profiler.py"
 source ~/py-virtual-envs/master/bin/activate
 # cd ~
