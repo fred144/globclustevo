@@ -8,8 +8,8 @@ import yt
 
 yt.enable_parallelism()
 simulation_name = "fs07_refine"
-f7_sn_dir = " /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
-ft_p2_dir = r"../particle_data/pop_2_data/fs07_refine"
+f7_sn_dir = os.path.abspath("/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine")
+ft_p2_dir = "../particle_data/pop_2_data/fs07_refine"
 
 slice_axis = "z"
 width = (400, "pc")
@@ -23,8 +23,8 @@ f7_pop2 = filter_snapshots(ft_p2_dir, f7_strt, f7_end, step)
 f7_sn = filter_snapshots(f7_sn_dir, f7_strt, f7_end)
 
 parent_folder = "../gas_data/{}".format(simulation_name)
-dens_sequence_folder = os.path.join(parent_folder, "gas_density")
-temp_sequence_folder = os.path.join(parent_folder, "temperature")
+dens_sequence_folder =  os.path.abspath(os.path.join(parent_folder, "gas_density"))
+temp_sequence_folder =  os.path.abspath(os.path.join(parent_folder, "temperature"))
 
 
 if not os.path.exists(dens_sequence_folder):
@@ -44,7 +44,7 @@ for i, (f7_sn, f7_p2) in enumerate(zip(f7_sn, f7_pop2)):
 
     f7_ds = yt.load(f7_info_file, fields=cell_fields, extra_particle_fields=epf)
 
-    print(i, "Loaded Snapshot Data")
+    print("Loaded Snapshot Data", output_num)
     # get pre processed data from pop2 data sets
 
     f7_code_ctr = np.loadtxt(f7_p2, max_rows=5)[2:5, 6]
