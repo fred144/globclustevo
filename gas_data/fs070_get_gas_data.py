@@ -17,7 +17,7 @@ slice_axis = "z"
 width = (400, "pc")
 res = 1000
 
-f7_strt = 113
+f7_strt = 880
 f7_end = 1000
 step = 1
 

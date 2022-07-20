@@ -2,7 +2,6 @@
 #SBATCH -J script_submit
 #SBATCH --ntasks=5
 #SBATCH --cpus-per-task=16
-#SBATCH --mem-per-cpu=6000  
 #SBATCH -t 48:00:00
 
 
