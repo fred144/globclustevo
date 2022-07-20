@@ -17,7 +17,7 @@ slice_axis = "z"
 width = (400, "pc")
 res = 1000
 
-f3_strt = 154
+f3_strt = 797
 f3_end = 1177
 step = 1
 
@@ -42,7 +42,7 @@ skip_frames = [1102]  # corrupted frames
 for i, (f3_sn, f3_p2) in enumerate(zip(f3_sn, f3_pop2)):
     print("> Reading {}".format(f3_sn))
     output_num = f3_sn.split("_")[-1]
-    if output_num in skip_frames:
+    if int(output_num) in skip_frames:
         continue
     cell_fields, epf = ram_fields()
     f3_info_file = os.path.join(f3_sn, "info_{}.txt".format(output_num))
