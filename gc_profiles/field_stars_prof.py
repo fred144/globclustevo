@@ -22,9 +22,9 @@ if not os.path.exists(runsavepath):
 
 
 f7_strt = 113
-f7_end = 918
+f7_end = 1000
 f3_strt = 154
-f3_end = 917
+f3_end = 1177
 step = 1
 
 f7_pop2 = filter_snapshots(
@@ -46,8 +46,8 @@ f7_pop2_matched, f7_matched_nums = find_matching_time(
 f7_halo_matched = get_snapshots(snapshot_file_list=f7_halo_ds, get_list=f7_matched_nums)
 
 # sampple idxs
-prof_start = 763
-prof_end = 764
+prof_start = 766
+prof_end = 767
 prof_step = 1
 
 fs070_p2 = f7_pop2_matched[prof_start:prof_end:prof_step]
@@ -62,14 +62,14 @@ fs035_ds = f3_halo[prof_start:prof_end:prof_step]
 profile_plot_bins = 40
 radius = 200
 star_bins = 200
-pxl_size = radius * 2 / star_bins
+pxl_size = (radius * 2 / star_bins) ** 2
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
 efficiencies = ["$f_{*} = 0.70$", "$f_{*} = 0.35$"]
 eff_lcolor = [cmap[0], cmap[2]]
 eff_errcol = [cmap[1], cmap[3]]
 
-
+#%%
 # run thorugh each matched pair for time series
 for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
 
@@ -246,7 +246,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             xy_fit_sigma_bg = fit_params[3]
             xy_core_mass = characterisitc_mass(x, y, field_masses, xy_fit_r_c)
             xy_theory_r = np.geomspace(
-                xy_r[0], radius, 200, endpoint=False
+                0.15, radius, 200, endpoint=False
             )  # smooth version
             xy_theory_rho = modified_king_model(xy_theory_r, *fit_params)
             xy_plot_label = (
@@ -279,7 +279,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             xz_fit_sigma_bg = fit_params[3]
             xz_core_mass = characterisitc_mass(x, z, field_masses, xz_fit_r_c)
             xz_theory_r = np.geomspace(
-                xz_r[0], radius, 200, endpoint=False
+                0.15, radius, 200, endpoint=False
             )  # smooth version
             xz_theory_rho = modified_king_model(xz_theory_r, *fit_params)
             xz_plot_label = (
@@ -312,7 +312,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             yz_fit_sigma_bg = fit_params[3]
             yz_core_mass = characterisitc_mass(y, z, field_masses, yz_fit_r_c)
             yz_theory_r = np.geomspace(
-                yz_r[0], radius, 200, endpoint=False
+                0.15, radius, 200, endpoint=False
             )  # smooth version
             yz_theory_rho = modified_king_model(yz_theory_r, *fit_params)
             yz_plot_label = (
@@ -320,7 +320,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 "\n"
                 r"$\alpha = {:.1f} $"
                 "\n"
-                r"$\Sigma_0 = {} \: \mathrm{{\frac{{M_{{odot}}}}{{pc^{{2}}}}}}$"
+                r"$\Sigma_0 = {} \: \mathrm{{\frac{{M_{{\odot}}}}{{pc^{{2}}}}}}$"
                 "\n"
                 r"$M_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
             ).format(
@@ -603,7 +603,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                     # plot only for the bottom row
 
                 ax_inset.patch.set_alpha(0.5)
-                bins = np.linspace(300, 600, 15)
+                bins = np.linspace(300, 650, 20)
                 ax_inset.hist(
                     field_bes,
                     bins,
@@ -637,7 +637,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 )
                 ax_inset.set_yscale("log")
                 # ax_inset.set_xlim("log")
-                ax_inset.set_xlim(300, 600)
+                ax_inset.set_xlim(300, 650)
                 ax_inset.set_ylim(1, 5e5)
 
         # add the luminosity color bar
@@ -646,7 +646,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
         cbar_ax = fig.add_axes([0.125, 0.88, 0.775, 0.005])
         cbar = fig.colorbar(xz, cax=cbar_ax, pad=0, orientation="horizontal")
         cbar_label = (
-            r"$\mathrm{Projected}\:\mathrm{Monochromatic}\:\mathrm{Luminosity}"
+            r"$\mathrm{\log_{10}\:\:Projected\:Monochromatic\:Luminosity}"
             r", \mathrm{\lambda = 1500 \: \AA \:}"
             r"\mathrm{\left(erg \:\: s^{-1} \: \AA^{-1} \: pc^{-2} \right)} $"
         )
@@ -659,8 +659,12 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
         cbar.ax.xaxis.set_ticks_position("top")
         cbar.ax.xaxis.set_label_position("top")
         cbar.ax.xaxis.set_tick_params(pad=2, labelsize=8)
+        # tick label mod
+        fig.canvas.draw()
+        x_labels = [i.get_text().replace("10^", "") for i in cbar_ax.get_xticklabels()]
+        cbar_ax.set_xticklabels(x_labels)
         # save_name = os.path.join(runsavepath, "tracked_{}".format(output_num))
-        plt.subplots_adjust(hspace=-0.033, wspace=0)
+        plt.subplots_adjust(hspace=-0.020, wspace=0)
 
         plt.savefig(
             os.path.expanduser(

@@ -265,6 +265,7 @@ with plt.rc_context(
         label=r"$0.35$",
         color=fs35_color,
         linewidth=4,
+        alpha=0.8,
     )
     ax[0].plot(
         t_myr_fs070,
@@ -272,6 +273,7 @@ with plt.rc_context(
         label=r"$0.70$",
         color=fs70_color,
         linewidth=4,
+        alpha=0.8,
     )
     # ax[0].set_ylim(bottom=5e3,top=2e6)
     # increase data points for 35 % efficiency
@@ -293,7 +295,7 @@ with plt.rc_context(
     # ax[0].scatter(fs070_interp_points, fs070_interp, label=r"0.70", s=1)
 
     ax[0].set_yscale("log")
-    ax[0].set_ylabel(r"$\mathrm{M}_{*} \: (\mathrm{M}_{\odot})$ ", labelpad=10)
+    ax[0].set_ylabel(r"$\mathrm{M_{*, total}} \: (\mathrm{M}_{\odot})$ ", labelpad=10)
     ax[0].legend(
         title="$\mathrm{SFE} \: (f_{*})$",
         loc="lower right",

@@ -167,9 +167,9 @@ with plt.rc_context(
     {
         "font.family": "serif",
         "mathtext.fontset": "cm",
-        "xtick.labelsize": 10,
-        "ytick.labelsize": 10,
-        "font.size": 12,
+        "xtick.labelsize": 12,
+        "ytick.labelsize": 12,
+        "font.size": 14,
     }
 ):
     # mass function
@@ -182,7 +182,7 @@ with plt.rc_context(
     fs70_color = cmap[1]
     fs35_color = cmap[2]
 
-    plt.figure(figsize=(10.5, 3.5), dpi=400)
+    plt.figure(figsize=(6, 3), dpi=300)
     plt.subplot(1, 2, 1)
     # 35% efficiency
     plt.plot(
@@ -220,22 +220,16 @@ with plt.rc_context(
     )
     plt.xlabel(
         r"$  \mathrm{M_{MC}} \:\:  \left( \mathrm{M}_{\odot} \right) $",
-        fontsize=12,
     )
     plt.ylabel(
         r"$\mathrm{dN / d\log} \:\: \left(\mathrm{M_{MC}}/\mathrm{M}_{\odot}\right )$",
-        fontsize=12,
     )
+
     plt.xlim((3e2, 8e4))
     plt.ylim(bottom=0)
+    # plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
     plt.xscale("log")
     # plt.yscale("log")
-    plt.legend(
-        title="$\mathrm{SFE} \: (f_{*})$",
-        loc="upper right",
-        title_fontsize=12,
-        fontsize=12,
-    )
 
     # metalicitty function
 
@@ -280,17 +274,28 @@ with plt.rc_context(
 
     plt.xlabel(
         r"$\mathrm{Z_{MC}} \:\:  \left( \mathrm{Z}_{\odot} \right) $",
-        fontsize=12,
     )
     plt.ylabel(
         r"$\mathrm{dN / d\log} \:\: \left(\mathrm{Z_{MC}}/\mathrm{Z}_{\odot}\right )$",
-        fontsize=12,
-        labelpad=0,
+        labelpad=2,
     )
+
+    plt.gca().yaxis.tick_right()
+    plt.gca().yaxis.tick_right()
+    plt.gca().yaxis.tick_right()
+    plt.gca().yaxis.set_label_position("right")
+
     plt.xlim(1e-4, 1e-2)
     plt.ylim(bottom=0)
     plt.xscale("log")
     # plt.yscale("log")
+
+    plt.legend(
+        title="$\mathrm{SFE} \: (f_{*})$",
+        loc="upper left",
+    )
+
+    plt.subplots_adjust(hspace=0, wspace=0.05)
 
     plt.savefig(
         "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_mfunc.png",

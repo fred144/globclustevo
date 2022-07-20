@@ -17,9 +17,9 @@ if not os.path.exists(runsavepath):
 
 
 f7_strt = 113
-f7_end = 918
+f7_end = 1000
 f3_strt = 154
-f3_end = 917
+f3_end = 1177
 step = 1
 
 f7_pop2 = filter_snapshots(
@@ -35,20 +35,20 @@ f3_pop2 = filter_snapshots(
 )
 f3_halo = filter_snapshots(r"../halo_data/fs035_ms10/fof_best", f3_strt, f3_end, step)
 
-f7_pop2_matched, f7_matched_nums = find_matching_time(
-    sequence=f3_pop2, look_up_sequence=f7_pop2
+f3_pop2_matched, f3_matched_nums = find_matching_time(
+    sequence=f7_pop2, look_up_sequence=f3_pop2
 )
-f7_halo_matched = get_snapshots(snapshot_file_list=f7_halo_ds, get_list=f7_matched_nums)
+f3_halo_matched = get_snapshots(snapshot_file_list=f3_halo, get_list=f3_matched_nums)
 
 # sampple idxs
-prof_start = 763
-prof_end = 764
+prof_start = 885
+prof_end = 886
 prof_step = 1
 
-fs070_p2 = f7_pop2_matched[prof_start:prof_end:prof_step]
-fs070_ds = f7_halo_matched[prof_start:prof_end:prof_step]
-fs035_p2 = f3_pop2[prof_start:prof_end:prof_step]
-fs035_ds = f3_halo[prof_start:prof_end:prof_step]
+fs070_p2 = f7_pop2[prof_start:prof_end:prof_step]
+fs070_ds = f7_halo_ds[prof_start:prof_end:prof_step]
+fs035_p2 = f3_pop2_matched[prof_start:prof_end:prof_step]
+fs035_ds = f3_halo_matched[prof_start:prof_end:prof_step]
 
 # cmap = cm.get_cmap("Set1")
 # cmap = cmap(np.linspace(0, 1, 9))
@@ -106,11 +106,11 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         }
     ):
         fig, ax = plt.subplots(
-            nrows=2,
-            ncols=1,
+            nrows=1,
+            ncols=2,
             sharex=True,
             sharey=True,
-            figsize=(4.5, 9),
+            figsize=(6, 3),
             dpi=300,
         )
 
@@ -124,16 +124,16 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         ax[1].set_ylim(-200, 200)
 
         # add histogram of ages
-        ax_f7 = fig.add_axes([0.24, 0.55, 0.20, 0.10])
+        ax_f7 = ax[0].inset_axes([0.17, 0.16, 0.23, 0.23])
         ax_f7.patch.set_alpha(0.5)
-        bins = np.linspace(300, 600, 25)
+        bins = np.linspace(300, 620, 35)
         ax_f7.hist(
             f7_field_be,
             bins,
             weights=f7_field_masses,
             alpha=0.6,
             color=field_clr,
-            edgecolor="black",
+            edgecolor="white",
             linewidth=0.5,
         )
         ax_f7.hist(
@@ -142,19 +142,19 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
             weights=f7_bound_masses,
             alpha=0.6,
             color=bound_clr,
-            edgecolor="black",
+            edgecolor="white",
             linewidth=0.5,
         )
         ax_f7.axvline(x=f7_t_myr, ls="--", color="black", lw=1)
         ax_f7.tick_params(labelsize=6)
         ax_f7.set_xlabel(
             "$\mathrm{Star \: Birth \: (Myr)}$",
-            fontsize=8,
+            fontsize=7,
             labelpad=0,
         )
         ax_f7.set_ylabel(
             r"$\mathrm{Mass \: (M_{\odot})}$",
-            fontsize=8,
+            fontsize=7,
             labelpad=0,
         )
         ax_f7.text(
@@ -167,10 +167,10 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         )
         ax_f7.set_yscale("log")
         # ax_f7.set_xlim("log")
-        ax_f7.set_xlim(300, 600)
+        ax_f7.set_xlim(300, 700)
         ax_f7.set_ylim(1, 5e5)
 
-        ax_f3 = fig.add_axes([0.24, 0.17, 0.20, 0.10])
+        ax_f3 = ax[1].inset_axes([0.17, 0.16, 0.23, 0.23])
         ax_f3.patch.set_alpha(0.5)
         ax_f3.hist(
             f3_field_be,
@@ -178,7 +178,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
             weights=f3_field_masses,
             alpha=0.6,
             color=field_clr,
-            edgecolor="black",
+            edgecolor="white",
             linewidth=0.5,
         )
         ax_f3.hist(
@@ -187,19 +187,19 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
             weights=f3_bound_masses,
             alpha=0.6,
             color=bound_clr,
-            edgecolor="black",
+            edgecolor="white",
             linewidth=0.5,
         )
         ax_f3.axvline(x=f3_t_myr, ls="--", color="black", lw=1)
         ax_f3.tick_params(labelsize=6)
         ax_f3.set_xlabel(
             "$\mathrm{Star \: Birth \: (Myr)}$",
-            fontsize=8,
+            fontsize=7,
             labelpad=0,
         )
         ax_f3.set_ylabel(
             r"$\mathrm{Mass \: (M_{\odot})}$",
-            fontsize=8,
+            fontsize=7,
             labelpad=0,
         )
         ax_f3.text(
@@ -212,7 +212,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         )
         ax_f3.set_yscale("log")
         # ax_f3.set_xlim("log")
-        ax_f3.set_xlim(300, 600)
+        ax_f3.set_xlim(300, 700)
         ax_f3.set_ylim(1, 5e5)
 
         # add efficiency labels
@@ -224,7 +224,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
             edgecolor="gray",
         )
         ax[0].text(
-            0.73,
+            0.69,
             0.95,
             "$f_{*} = 0.70$",
             transform=ax[0].transAxes,
@@ -233,7 +233,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
             bbox=props,
         )
         ax[1].text(
-            0.73,
+            0.69,
             0.95,
             "$f_{*} = 0.35$",
             transform=ax[1].transAxes,
@@ -264,8 +264,8 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         fig.legend(
             loc="lower right",
             title="$\mathrm{Pop \: II}$",
-            title_fontsize=12,
-            fontsize=11,
+            title_fontsize=10,
+            fontsize=10,
             handles=[bound, unbound],
             bbox_to_anchor=(0.90, 0.125),
             edgecolor="grey",
@@ -282,7 +282,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         ax[0].text(
             -180,
             180,
-            (r"$\mathrm{{t = {:.2f} \: Myr}}$" "\n" r"$\mathrm{{z = {:.2f} }}$").format(
+            (r"$\mathrm{{t = {:.1f} \: Myr}}$" "\n" r"$\mathrm{{z = {:.1f} }}$").format(
                 f7_t_myr, f7_redshift
             ),
             size=12,
@@ -305,13 +305,14 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         # )
 
         # add a top twin axis
-        top_ax = ax[0].twiny()
-        top_ax.set_xlabel("$\mathrm{100 \: pc}$", labelpad=10)
-        top_ax.set_xlim(-200, 200)
+        # top_ax = ax[0].twiny()
+        # top_ax.set_xlabel("$\mathrm{100 \: pc}$", labelpad=10)
+        # top_ax.set_xlim(-200, 200)
+        # top_ax.axes.xaxis.set_ticklabels([])
 
         # add a scale bar
         rect = patches.Rectangle(
-            xy=(-50, 215),
+            xy=(50, -150),
             width=100,
             height=3,
             linewidth=1,
@@ -319,14 +320,25 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
             facecolor="black",
             clip_on=False,
         )
+        ax[0].text(
+            0.68,
+            0.11,
+            "$\mathrm{100 \: pc}$",
+            transform=ax[0].transAxes,
+            fontsize=10,
+            verticalalignment="top",
+        )
         ax[0].add_patch(rect)
 
         # clean up edges
         ax[1].axes.xaxis.set_ticklabels([])
         ax[1].axes.yaxis.set_ticklabels([])
-        top_ax.axes.xaxis.set_ticklabels([])
+
         ax[0].tick_params(
             axis="y", which="both", left=False, right=False, labelbottom=False
+        )
+        ax[0].tick_params(
+            axis="x", which="both", top=False, bottom=False, labelbottom=False
         )
         ax[1].tick_params(
             axis="y", which="both", left=False, right=False, labelbottom=False

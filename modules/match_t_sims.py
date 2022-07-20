@@ -56,14 +56,19 @@ def find_matching_time(sequence, look_up_sequence):
 
 
 def get_snapshots(snapshot_file_list, get_list):
+
     filter_list = list(map(str, list(get_list)))
     filter_list = [f.zfill(5) for f in filter_list]
     filtered_lst = []
     for num in filter_list:
+
         for file in snapshot_file_list:
             if num in file:
+                # print(file)
                 filtered_lst.append(file)
                 break
+    if len(filtered_lst) != len(filter_list):
+        print("> Filter done, but missing some snapshots requested")
     return filtered_lst
 
 

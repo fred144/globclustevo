@@ -17,16 +17,18 @@ slice_axis = "z"
 width = (400, "pc")
 res = 1000
 
-f7_strt = 880
+f7_strt = 400
 f7_end = 1000
-step = 1
+step = 25
 
 f7_pop2 = filter_snapshots(ft_p2_dir, f7_strt, f7_end, step)
 f7_sn = filter_snapshots(f7_sn_dir, f7_strt, f7_end)
 
 parent_folder = "../gas_data/{}".format(simulation_name)
 dens_sequence_folder = os.path.abspath(os.path.join(parent_folder, "gas_density"))
-temp_sequence_folder = os.path.abspath(os.path.join(parent_folder, "temperature"))
+temp_sequence_folder = os.path.abspath(
+    os.path.join(parent_folder, "weighted_temperature")
+)
 
 
 if not os.path.exists(dens_sequence_folder):
@@ -52,23 +54,30 @@ for i, (f7_sn, f7_p2) in enumerate(zip(f7_sn, f7_pop2)):
     f7_code_ctr = np.loadtxt(f7_p2, max_rows=5)[2:5, 6]
 
     # start getting gas data
-    f7_p_gas = yt.ProjectionPlot(
-        f7_ds, slice_axis, ("gas", "density"), width=width, center=f7_code_ctr
-    )
+    # f7_p_gas = yt.ProjectionPlot(
+    #     f7_ds, slice_axis, ("gas", "density"), width=width, center=f7_code_ctr
+    # )
     f7_p_temp = yt.ProjectionPlot(
-        f7_ds, slice_axis, ("gas", "temperature"), width=width, center=f7_code_ctr
+        f7_ds,
+        slice_axis,
+        ("gas", "temperature"),
+        width=width,
+        center=f7_code_ctr,
+        weight_field=("gas", "density"),
     )
 
-    f7_gas_frb = f7_p_gas.data_source.to_frb(width, res)
+    # f7_gas_frb = f7_p_gas.data_source.to_frb(width, res)
     f7_temp_frb = f7_p_temp.data_source.to_frb(width, res)
 
-    f7_gas = np.array(f7_gas_frb["gas", "density"])
+    # f7_gas = np.array(f7_gas_frb["gas", "density"])
     f7_temp = np.array(f7_temp_frb["gas", "temperature"])
 
-    gas_save = os.path.join(dens_sequence_folder, "dens_{}.txt".format(output_num))
-    np.savetxt(gas_save, X=f7_gas)
-    print("> saved: {}".format(gas_save))
+    # gas_save = os.path.join(dens_sequence_folder, "dens_{}.txt".format(output_num))
+    # np.savetxt(gas_save, X=f7_gas)
+    # print("> saved: {}".format(gas_save))
 
-    temp_save = os.path.join(temp_sequence_folder, "temp_{}.txt".format(output_num))
+    temp_save = os.path.join(
+        temp_sequence_folder, "weight_temp_{}.txt".format(output_num)
+    )
     np.savetxt(temp_save, X=f7_temp)
     print("> saved: {}".format(temp_save))
