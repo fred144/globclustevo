@@ -93,7 +93,7 @@ star_t_range = (340, 595)
 evenly_spaced_times = np.arange(star_t_range[0], star_t_range[1], 0.5)
 cmap = star_map(np.linspace(0, 1, evenly_spaced_times.size))
 dense_norm = (0.007, 0.35)
-temp_norm = (8e28, 4e31)
+temp_norm = (8e28, 5e31)
 
 
 leg_font = font_manager.FontProperties(family="serif", math_fontfamily="cm", size=8)
