@@ -17,12 +17,13 @@ slice_axis = "z"
 width = (400, "pc")
 res = 1000
 
-f7_strt = 400
+f7_strt = 200
 f7_end = 1000
 step = 25
 
 f7_pop2 = filter_snapshots(ft_p2_dir, f7_strt, f7_end, step)
-f7_sn = filter_snapshots(f7_sn_dir, f7_strt, f7_end)
+f7_snap = filter_snapshots(f7_sn_dir, f7_strt,f7_end, step)
+print(f7_pop2)
 
 parent_folder = "../gas_data/{}".format(simulation_name)
 dens_sequence_folder = os.path.abspath(os.path.join(parent_folder, "gas_density"))
@@ -39,7 +40,7 @@ if not os.path.exists(temp_sequence_folder):
     print("# Creating new sequence directory", temp_sequence_folder)
     os.makedirs(temp_sequence_folder)
 
-for i, (f7_sn, f7_p2) in enumerate(zip(f7_sn, f7_pop2)):
+for i, (f7_sn, f7_p2) in enumerate(zip(f7_snap, f7_pop2)):
     print("> Reading {}".format(f7_sn))
     output_num = f7_sn.split("_")[-1]
 

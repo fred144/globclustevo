@@ -19,10 +19,10 @@ res = 1000
 
 f3_strt = 377
 f3_end = 1177
-step = 4
+step = 25
 
 f3_pop2 = filter_snapshots(ft_p2_dir, f3_strt, f3_end, step)
-f3_sn = filter_snapshots(f3_sn_dir, f3_strt, f3_end)
+f3_snap = filter_snapshots(f3_sn_dir, f3_strt, f3_end,step)
 
 parent_folder = "../gas_data/{}".format(simulation_name)
 dens_sequence_folder = os.path.abspath(os.path.join(parent_folder, "gas_density"))
@@ -41,7 +41,7 @@ if not os.path.exists(temp_sequence_folder):
 
 skip_frames = [1102]  # corrupted frames
 
-for i, (f3_sn, f3_p2) in enumerate(zip(f3_sn, f3_pop2)):
+for i, (f3_sn, f3_p2) in enumerate(zip(f3_snap, f3_pop2)):
     print("> Reading {}".format(f3_sn))
     output_num = f3_sn.split("_")[-1]
     if int(output_num) in skip_frames:

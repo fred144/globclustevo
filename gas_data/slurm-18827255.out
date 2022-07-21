@@ -1,0 +1,515 @@
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca mpi_cuda_support 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+[compute-b20-4.deepthought2.umd.edu:1670095] 4 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[compute-b20-4.deepthought2.umd.edu:1670095] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+# Creating new sequence directory /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00377
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00377
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00377
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00377
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+Loaded Snapshot Data 00377
+Loaded Snapshot Data 00377
+Loaded Snapshot Data 00377
+Loaded Snapshot Data 00377
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00377
+Loaded Snapshot Data 00377
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00377.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00402
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00377.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00402
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00377.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00402
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00377.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00402
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00377.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00402
+Loaded Snapshot Data 00402
+Loaded Snapshot Data 00402
+Loaded Snapshot Data 00402
+Loaded Snapshot Data 00402
+Loaded Snapshot Data 00402
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00402.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00427
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00402.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00427
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00402.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00427
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00402.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00427
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00402.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00427
+Loaded Snapshot Data 00427
+Loaded Snapshot Data 00427
+Loaded Snapshot Data 00427
+Loaded Snapshot Data 00427
+Loaded Snapshot Data 00427
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00427.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00452
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00427.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00452
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00427.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00452
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00427.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00452
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00427.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00452
+Loaded Snapshot Data 00452
+Loaded Snapshot Data 00452
+Loaded Snapshot Data 00452
+Loaded Snapshot Data 00452
+Loaded Snapshot Data 00452
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00452.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00477
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00452.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00477
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00452.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00477
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00452.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00477
+Loaded Snapshot Data 00477
+Loaded Snapshot Data 00477
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00452.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00477
+Loaded Snapshot Data 00477
+Loaded Snapshot Data 00477
+Loaded Snapshot Data 00477
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00477.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00502
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00477.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00502
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00477.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00502
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00477.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00502
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00477.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00502
+Loaded Snapshot Data 00502
+Loaded Snapshot Data 00502
+Loaded Snapshot Data 00502
+Loaded Snapshot Data 00502
+Loaded Snapshot Data 00502
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00502.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00527
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00502.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00527
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00502.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00527
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00502.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00527
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00502.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00527
+Loaded Snapshot Data 00527
+Loaded Snapshot Data 00527
+Loaded Snapshot Data 00527
+Loaded Snapshot Data 00527
+Loaded Snapshot Data 00527
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00527.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00552
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00527.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00552
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00527.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00552
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00527.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00552
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00527.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00552
+Loaded Snapshot Data 00552
+Loaded Snapshot Data 00552
+Loaded Snapshot Data 00552
+Loaded Snapshot Data 00552
+Loaded Snapshot Data 00552
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00552.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00577
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00552.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00577
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00552.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00577
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00552.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00577
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00552.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00577
+Loaded Snapshot Data 00577
+Loaded Snapshot Data 00577
+Loaded Snapshot Data 00577
+Loaded Snapshot Data 00577
+Loaded Snapshot Data 00577
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00577.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00602
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00577.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00602
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00577.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00602
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00577.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00602
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00577.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00602
+Loaded Snapshot Data 00602
+Loaded Snapshot Data 00602
+Loaded Snapshot Data 00602
+Loaded Snapshot Data 00602
+Loaded Snapshot Data 00602
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00602.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00627
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00602.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00627
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00602.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00627
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00602.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00627
+Loaded Snapshot Data 00627
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00602.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00627
+Loaded Snapshot Data 00627
+Loaded Snapshot Data 00627
+Loaded Snapshot Data 00627
+Loaded Snapshot Data 00627
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00627.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00652
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00627.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00652
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00627.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00652
+Loaded Snapshot Data 00652
+Loaded Snapshot Data 00652
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00627.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00652
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00627.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00652
+Loaded Snapshot Data 00652
+Loaded Snapshot Data 00652
+Loaded Snapshot Data 00652
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00652.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00677
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00652.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00677
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00652.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00677
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00652.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00677
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00652.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00677
+Loaded Snapshot Data 00677
+Loaded Snapshot Data 00677
+Loaded Snapshot Data 00677
+Loaded Snapshot Data 00677
+Loaded Snapshot Data 00677
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00677.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00702
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00677.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00702
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00677.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00702
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00677.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00702
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00677.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00702
+Loaded Snapshot Data 00702
+Loaded Snapshot Data 00702
+Loaded Snapshot Data 00702
+Loaded Snapshot Data 00702
+Loaded Snapshot Data 00702
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00702.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00727
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00702.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00727
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00702.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00727
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00702.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00727
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00702.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00727
+Loaded Snapshot Data 00727
+Loaded Snapshot Data 00727
+Loaded Snapshot Data 00727
+Loaded Snapshot Data 00727
+Loaded Snapshot Data 00727
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00727.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00752
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00727.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00752
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00727.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00752
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00727.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00752
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00727.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00752
+Loaded Snapshot Data 00752
+Loaded Snapshot Data 00752
+Loaded Snapshot Data 00752
+Loaded Snapshot Data 00752
+Loaded Snapshot Data 00752
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00752.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00777
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00752.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00777
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00752.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00777
+Loaded Snapshot Data 00777
+Loaded Snapshot Data 00777
+Loaded Snapshot Data 00777
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00752.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00777
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00752.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00777
+Loaded Snapshot Data 00777
+Loaded Snapshot Data 00777
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00777.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00802
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00777.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00802
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00777.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00802
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00777.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00802
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00777.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00802
+Loaded Snapshot Data 00802
+Loaded Snapshot Data 00802
+Loaded Snapshot Data 00802
+Loaded Snapshot Data 00802
+Loaded Snapshot Data 00802
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00802.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00827
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00802.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00827
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00802.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00827
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00802.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00827
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00802.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00827
+Loaded Snapshot Data 00827
+Loaded Snapshot Data 00827
+Loaded Snapshot Data 00827
+Loaded Snapshot Data 00827
+Loaded Snapshot Data 00827
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00827.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00852
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00827.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00852
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00827.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00852
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00827.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00852
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00827.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00852
+Loaded Snapshot Data 00852
+Loaded Snapshot Data 00852
+Loaded Snapshot Data 00852
+Loaded Snapshot Data 00852
+Loaded Snapshot Data 00852
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00852.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00877
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00852.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00877
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00852.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00877
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00852.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00877
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00852.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00877
+Loaded Snapshot Data 00877
+Loaded Snapshot Data 00877
+Loaded Snapshot Data 00877
+Loaded Snapshot Data 00877
+Loaded Snapshot Data 00877
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00877.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00902
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00877.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00902
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00877.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00902
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00877.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00902
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00877.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00902
+Loaded Snapshot Data 00902
+Loaded Snapshot Data 00902
+Loaded Snapshot Data 00902
+Loaded Snapshot Data 00902
+Loaded Snapshot Data 00902
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00902.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00927
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00902.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00927
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00902.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00927
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00902.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00927
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00902.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00927
+Loaded Snapshot Data 00927
+Loaded Snapshot Data 00927
+Loaded Snapshot Data 00927
+Loaded Snapshot Data 00927
+Loaded Snapshot Data 00927
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00927.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00952
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00927.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00952
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00927.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00952
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00927.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00952
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00927.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00952
+Loaded Snapshot Data 00952
+Loaded Snapshot Data 00952
+Loaded Snapshot Data 00952
+Loaded Snapshot Data 00952
+Loaded Snapshot Data 00952
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00952.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00977
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00952.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00977
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00952.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00977
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00952.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00977
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00952.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_00977
+Loaded Snapshot Data 00977
+Loaded Snapshot Data 00977
+Loaded Snapshot Data 00977
+Loaded Snapshot Data 00977
+Loaded Snapshot Data 00977
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00977.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01002
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00977.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01002
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00977.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01002
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00977.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01002
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_00977.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01002
+Loaded Snapshot Data 01002
+Loaded Snapshot Data 01002
+Loaded Snapshot Data 01002
+Loaded Snapshot Data 01002
+Loaded Snapshot Data 01002
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01002.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01027
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01002.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01027
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01002.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01027
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01002.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01027
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01002.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01027
+Loaded Snapshot Data 01027
+Loaded Snapshot Data 01027
+Loaded Snapshot Data 01027
+Loaded Snapshot Data 01027
+Loaded Snapshot Data 01027
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01027.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01052
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01027.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01052
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01027.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01052
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01027.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01052
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01027.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01052
+Loaded Snapshot Data 01052
+Loaded Snapshot Data 01052
+Loaded Snapshot Data 01052
+Loaded Snapshot Data 01052
+Loaded Snapshot Data 01052
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01052.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01077
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01052.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01077
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01052.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01077
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01052.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01077
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01052.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01077
+Loaded Snapshot Data 01077
+Loaded Snapshot Data 01077
+Loaded Snapshot Data 01077
+Loaded Snapshot Data 01077
+Loaded Snapshot Data 01077
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01077.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01102
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01127
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01077.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01102
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01127
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01077.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01102
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01127
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01077.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01102
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01127
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01077.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01102
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01127
+Loaded Snapshot Data 01127
+Loaded Snapshot Data 01127
+Loaded Snapshot Data 01127
+Loaded Snapshot Data 01127
+Loaded Snapshot Data 01127
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01127.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01152
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01127.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01152
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01127.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01152
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01127.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01152
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01127.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01152
+Loaded Snapshot Data 01152
+Loaded Snapshot Data 01152
+Loaded Snapshot Data 01152
+Loaded Snapshot Data 01152
+Loaded Snapshot Data 01152
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01152.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01177
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01152.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01177
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01152.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01177
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01152.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01177
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01152.txt
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10/output_01177
+Loaded Snapshot Data 01177
+Loaded Snapshot Data 01177
+Loaded Snapshot Data 01177
+Loaded Snapshot Data 01177
+Loaded Snapshot Data 01177
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01177.txt
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01177.txt
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01177.txt
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01177.txt
+> saved: /lustre/fgarcia4/glob_clust_evo/gas_data/fs035_ms10/weighted_temperature/weight_temp_01177.txt
