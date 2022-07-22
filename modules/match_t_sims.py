@@ -69,6 +69,7 @@ def get_snapshots(snapshot_file_list, get_list):
                 break
     if len(filtered_lst) != len(filter_list):
         print("> Filter done, but missing some snapshots requested")
+        print(filtered_lst)
     return filtered_lst
 
 

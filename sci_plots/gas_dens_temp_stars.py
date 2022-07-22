@@ -21,9 +21,9 @@ from matplotlib import colors
 from modules.match_t_sims import find_matching_time, get_snapshots
 
 
-f7_strt = 113
+f7_strt = 200
 f7_end = 1000
-f3_strt = 154
+f3_strt = 377
 f3_end = 1177
 step = 1
 
@@ -52,16 +52,23 @@ f3_pop2 = filter_snapshots(
 f7_dens = filter_snapshots(os.path.join(f7_gas_dir, "gas_density"), f7_strt, f7_end)
 f3_dens = filter_snapshots(os.path.join(f3_gas_dir, "gas_density"), f3_strt, f3_end)
 
-f7_temp = filter_snapshots(os.path.join(f7_gas_dir, "temperature"), f7_strt, f7_end)
-f3_temp = filter_snapshots(os.path.join(f3_gas_dir, "temperature"), f3_strt, f3_end)
+f7_temp = filter_snapshots(
+    os.path.join(f7_gas_dir, "weighted_temperature"), f7_strt, f7_end
+)
+f3_temp = filter_snapshots(
+    os.path.join(f3_gas_dir, "weighted_temperature"), f3_strt, f3_end
+)
 
 f7_halos = filter_snapshots(os.path.relpath(f7_halo_dir), f7_strt, f7_end)
 f3_halos = filter_snapshots(os.path.relpath(f3_halo_dir), f3_strt, f3_end)
 
 
 # dictate which snapshots will be plotted
-f7_sn_list = np.array([378, 489, 746, 1000])  # looks promising
-f3_sn_list = np.array([406, 569, 777, 1177])
+# f7_sn_list = np.array([378, 489, 746, 1000])  # looks promising
+# f3_sn_list = np.array([406, 569, 777, 1177])
+
+f7_sn_list = np.array([375, 500, 750, 1000])  # looks promising
+f3_sn_list = np.array([402, 577, 777, 1177])
 
 f7_gas_dens = get_snapshots(f7_dens, get_list=f7_sn_list)
 f3_gas_dens = get_snapshots(f3_dens, get_list=f3_sn_list)
@@ -82,7 +89,7 @@ cols = 5
 star_lum_bin = 1500
 pxl_size = width[0] / star_lum_bin
 proj_r = width[0] / 2
-axlims = (-100, 100)
+axlims = (-200, 200)
 star_cmap = "rainbow_r"
 dens_cmap = "cubehelix"
 temp_cmap = "gist_heat"
@@ -93,7 +100,7 @@ star_t_range = (340, 595)
 evenly_spaced_times = np.arange(star_t_range[0], star_t_range[1], 0.5)
 cmap = star_map(np.linspace(0, 1, evenly_spaced_times.size))
 dense_norm = (0.007, 0.35)
-temp_norm = (8e28, 5e31)
+temp_norm = (6e2, 6e4)
 
 
 leg_font = font_manager.FontProperties(family="serif", math_fontfamily="cm", size=8)
@@ -167,14 +174,14 @@ with plt.rc_context(
         )
 
         temp_proj_f7 = ax[i, 1].imshow(
-            f7_temp / f7_dens,
+            f7_temp,
             extent=[-proj_r, proj_r, -proj_r, proj_r],
             cmap=temp_cmap,
             norm=LogNorm(temp_norm[0], temp_norm[1]),
             origin="lower",
         )
         temp_proj_f3 = ax[i, 4].imshow(
-            f3_temp / f3_dens,
+            f3_temp,
             extent=[-proj_r, proj_r, -proj_r, proj_r],
             cmap=temp_cmap,
             norm=LogNorm(temp_norm[0], temp_norm[1]),
@@ -211,9 +218,9 @@ with plt.rc_context(
                         filtered_y,
                         marker=".",
                         c=color,
-                        s=0.1,
+                        s=0.01,
                         edgecolors=None,
-                        alpha=0.05,
+                        alpha=0.08,
                     )
         # clean up edges and add scale bars
         for t in range(cols):
@@ -259,8 +266,8 @@ with plt.rc_context(
             for sc in scales_cols:
                 scale = patches.Rectangle(
                     xy=(axlims[0] * 0.75, axlims[0] * 0.75),
-                    width=50,
-                    height=2,
+                    width=axlims[1] * 0.5,
+                    height=0.03 * axlims[1],
                     linewidth=0,
                     edgecolor="white",
                     facecolor="white",
@@ -268,7 +275,7 @@ with plt.rc_context(
                 ax[i, sc].text(
                     axlims[0] * 0.50,
                     axlims[0] * 0.87,
-                    r"$\mathrm{50 \: pc}$",
+                    r"$\mathrm{{{:.0f} \: pc}}$".format(axlims[1] * 0.5),
                     ha="center",
                     va="center",
                     color="white",
@@ -302,12 +309,13 @@ with plt.rc_context(
     dens_cbar.ax.xaxis.set_tick_params(labelsize=6)
     dens_cbar.set_label(
         label=(
-            r"$\mathrm{\log_{10}(Gas\:Density)}$"
-            "\n"
+            r"$\mathrm{\log_{10}\:Gas\:Density\:}$"
+            # "\n"
             r"$\mathrm{\left(g\:cm^{-2}\right)}$"
         ),
         fontproperties=leg_font,
         labelpad=1,
+        fontsize=7,
     )
     # tick label mod
     fig.canvas.draw()
@@ -320,11 +328,12 @@ with plt.rc_context(
     )
     temp_cbar.ax.xaxis.set_tick_params(labelsize=6)
     temp_cbar.set_label(
-        label=r"$\mathrm{\log_{10}(Scaled\:Temperature)}$"
-        "\n"
-        r"$\mathrm{\left(K / \:g\:cm^{-2}\right)}$",
+        label=r"$\mathrm{\log_{10}\:Weighted\:Temperature \:}$"
+        # "\n"
+        r"$\mathrm{(K)}$",
         fontproperties=leg_font,
         labelpad=1,
+        fontsize=7,
     )
     # tick label mod
     fig.canvas.draw()
@@ -341,9 +350,14 @@ with plt.rc_context(
     )
     star_cb.ax.tick_params(labelsize=6)
     star_cb.set_label(
-        (r"$\mathrm{Pop\:II\:Birth\:Time\:}$" "\n" r"$\mathrm{(Myr)}$"),
+        (
+            r"$\mathrm{Pop\:II\:Birth\:Time\:}$"
+            # "\n"
+            r"$\mathrm{(Myr)}$"
+        ),
         fontproperties=leg_font,
-        labelpad=1,
+        labelpad=1.5,
+        fontsize=7,
     )
 
 plt.subplots_adjust(hspace=0, wspace=-0.1)

@@ -1,3 +1,10 @@
+"""
+Master plot for bound unbound clusters with mass and luminosity,
+Using data only from the FOF. Not filtered by fittability by running through the 
+profiler.
+
+"""
+
 import sys
 
 sys.path.append("../../")
