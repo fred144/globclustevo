@@ -234,7 +234,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         ax.set_xscale("log")
         ax.set_yscale("log")
         ax.set_xlim(2e-4, 6e-3)
-        # ax.set_ylim(2, 5e4)
+        ax.set_ylim(top= 5e4)
         ax.set_xlabel(r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$")
         ax.set_ylabel(r"$\mathrm{\Sigma\:\left(M_{\odot}\:pc^{-2}\right)}$")
         # plt.grid(visible=True)
