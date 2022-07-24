@@ -45,9 +45,9 @@ _, f3_matched_nums = find_matching_time(
 f3_pro_ds = filter_snapshots(f3_prof_dir, f3_strt, f3_end, step)
 
 # sample the matched snapshots for plotting by indexing
-strt = 100
+strt = 800
 end = f3_matched_nums.size
-st = 750
+st = 1
 
 f7_pro_ds = filter_snapshots(f7_prof_dir, f7_strt, f7_end, step)[strt:end:st]
 f3_pro_ds = get_snapshots(f3_pro_ds, get_list=f3_matched_nums)[strt:end:st]
@@ -78,8 +78,8 @@ def metal_lookup(log_sfc_path, bsc_form_times):
 
 #%%
 for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
-    if i == 0:
-        continue
+    # if i == 0:
+    #     continue
     f7_prof_data = np.loadtxt(os.path.join(f7, "info.txt"))
     f3_prof_data = np.loadtxt(os.path.join(f3, "info.txt"))
 
@@ -234,7 +234,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         ax.set_xscale("log")
         ax.set_yscale("log")
         ax.set_xlim(2e-4, 6e-3)
-        ax.set_ylim(top= 5e4)
+        ax.set_ylim(bottom=5, top=5e4)
         ax.set_xlabel(r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$")
         ax.set_ylabel(r"$\mathrm{\Sigma\:\left(M_{\odot}\:pc^{-2}\right)}$")
         # plt.grid(visible=True)
