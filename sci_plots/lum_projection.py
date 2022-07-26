@@ -1,3 +1,6 @@
+"""
+Projected  luminosity time series plots.
+"""
 import sys
 
 sys.path.append("../")

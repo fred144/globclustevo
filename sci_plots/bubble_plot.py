@@ -45,7 +45,7 @@ _, f3_matched_nums = find_matching_time(
 f3_pro_ds = filter_snapshots(f3_prof_dir, f3_strt, f3_end, step)
 
 # sample the matched snapshots for plotting by indexing
-strt = 800
+strt = 887
 end = f3_matched_nums.size
 st = 1
 
@@ -129,15 +129,6 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     f3_tot_light = f3_prof_data[:, 17]
     f3_metal, f3_orig_mass = metal_lookup("../sim_log_files/fs035_ms10/logSFC", f3_bes)
 
-    # plt.figure()
-    # plt.errorbar(f7_metal, f7_sig_0, fmt="o")
-    # plt.errorbar(f3_metal, f3_sig_0, fmt="o")
-    # # plt.ylim(top=3)
-    # plt.xscale("log")
-    # plt.yscale("log")
-    # plt.xlabel("Metal")
-    # plt.ylabel("Sigma_0")
-
     with plt.rc_context(
         {
             "font.family": "serif",
@@ -147,238 +138,190 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             "font.size": 12,
         }
     ):
-        fig, ax = plt.subplots(1, 1, figsize=(4, 3.5), dpi=400)
+
         cmap = plt.cm.get_cmap("winter")
-        scale_factor = 50
+        scale_factor = 50  # scale factor for the sizes
         # map to differnt sizes for better plotting
         f7_half_radii = scale_factor * f7_half_mass_rad
         f3_half_radii = scale_factor * f3_half_mass_rad
 
-        f7_scatter = plt.scatter(
-            f7_metal,
-            f7_sig_0,
-            c=f7_bes,
-            edgecolors="None",
-            s=f7_half_radii,
-            alpha=0.8,
-            marker="o",
-            cmap=cmap,
-            linewidths=0,
-        )
-        f3_scatter = plt.scatter(
-            f3_metal,
-            f3_sig_0,
-            c=f3_bes,
-            s=f3_half_radii,
-            linewidths=1,
-            alpha=0.8,
-            edgecolors="k",
-            marker="o",
-            cmap=cmap,
-        )
+        x_vars = [
+            (f7_metal, f3_metal),
+            (f7_sig_0, f3_sig_0),
+            (f7_metal, f3_metal),
+            (f7_orig_mass, f3_orig_mass),
+            (f7_orig_mass, f3_orig_mass),
+            (f7_alpha, f3_alpha),
+            (f7_metal, f3_metal),
+            (f7_metal, f3_metal),
+            (f7_mass / f7_orig_mass, f3_mass / f3_orig_mass),
+            (f7_core_mass / f7_orig_mass, f3_core_mass / f3_orig_mass),
+            (f7_alpha, f3_alpha),
+        ]
+        y_vars = [
+            (f7_sig_0, f3_sig_0),
+            (f7_mass / f7_orig_mass, f3_mass / f3_orig_mass),
+            (f7_mass / f7_orig_mass, f3_mass / f3_orig_mass),
+            (f7_mass, f3_mass),
+            (f7_sig_0, f3_sig_0),
+            (f7_sig_0, f3_sig_0),
+            (f7_mass, f3_mass),
+            (f7_tot_light, f3_tot_light),
+            (f7_core_mass, f3_core_mass),
+            (f7_tot_light, f3_tot_light),
+            (f7_core_rad, f3_core_rad),
+        ]
+        x_labels = [
+            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\mathrm{\Sigma\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\mathrm{M_{SFC}}$",
+            r"$\mathrm{M_{SFC}}$",
+            r"$\alpha$",
+            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\mathrm{M_{BSC}\: / \: M_{SFC} }$",
+            r"$\mathrm{M_{core}\: / \: M_{SFC} }$",
+            r"$\alpha$",
+        ]
+        y_labels = [
+            r"$\mathrm{\Sigma\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            r"$\mathrm{M_{BSC}\: / \: M_{SFC} }$",
+            r"$\mathrm{M_{BSC}\: / \: M_{SFC} }$",
+            r"$\mathrm{M_{BSC}}$",
+            r"$\mathrm{\Sigma\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            r"$\mathrm{\Sigma\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            r"$\mathrm{M_{BSC}}$",
+            (
+                r"$\mathrm{Projected\:Luminosity}$"
+                r"$, \mathrm{\lambda = 1500 \: \AA \:}$"
+                "\n"
+                r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
+            ),
+            r"$M_{\mathrm{core}}$",
+            (
+                r"$\mathrm{Projected\:Luminosity}$"
+                r"$, \mathrm{\lambda = 1500 \: \AA \:}$"
+                "\n"
+                r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
+            ),
+            r"$R_{\mathrm{core}}$",
+        ]
+        xlims = [
+            (1e-4, 1e-2),
+            (5e0, 1e5),
+            (1e-4, 1e-2),
+            (2e1, 1e5),
+            (5e0, 1e5),
+            (1, 13),
+            (1e-4, 1e-2),
+            (1e-4, 1e-2),
+            (1e-3, 10),
+            (5e-4, 10),
+            (1, 13),
+        ]
+        ylims = [
+            (5e0, 1e5),
+            (5e-3, 1e1),
+            (5e-3, 1e1),
+            (2e1, 1e5),
+            (5e0, 1e5),
+            (5e0, 1e5),
+            (1e1, 8e4),
+            (1e33, 3e37),
+            (5, 1e5),
+            (1e33, 3e37),
+            (2e-2, 10),
+        ]
 
-        # manual legend, want to set sfes
-        f70 = mlines.Line2D(
-            [],
-            [],
-            color="grey",
-            marker="o",
-            ls="",
-            label=r"0.70",
-            alpha=0.8,
-            markeredgewidth=0,
-        )
-        f35 = mlines.Line2D(
-            [],
-            [],
-            color="grey",
-            marker="o",
-            ls="",
-            label=r"0.35",
-            alpha=0.8,
-            markeredgecolor="k",
-        )
-        sfe_legend = plt.legend(
-            title="$\mathrm{SFE} \: (f_{*})$",
-            loc="upper right",
-            title_fontsize=10,
-            fontsize=8,
-            handles=[f70, f35],
-            facecolor=(1, 1, 1, 0.5),
-        )
-        ax.add_artist(sfe_legend)
+        for i, (x, y) in enumerate(zip(x_vars, y_vars)):
 
-        # legend mapped to size
-        legend_properties = dict(
-            prop="sizes",
-            num=[0.50, 1.00, 1.50, 2.0],
-            color="grey",
-            fmt=" {x:.2f}",
-            func=lambda d: d / scale_factor,
-        )
-        legend = ax.legend(
-            *f7_scatter.legend_elements(**legend_properties),
-            loc="lower left",
-            title="$\mathrm{R_{half}\:(pc)}$ ",
-            fontsize=8,
-            title_fontsize=10,
-            facecolor=(1, 1, 1, 0.5),
-            ncol=2,
-        )
-        # color bars
-        cbar = plt.colorbar(
-            pad=0,
-        )
-        cbar.set_label(label="$\mathrm{t_{\mathrm{formation}}\: (Myr)}$", fontsize=14)
-        plt.clim(vmin=330, vmax=600)
-        ax.set_xscale("log")
-        ax.set_yscale("log")
-        ax.set_xlim(2e-4, 6e-3)
-        ax.set_ylim(bottom=5, top=5e4)
-        ax.set_xlabel(r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$")
-        ax.set_ylabel(r"$\mathrm{\Sigma\:\left(M_{\odot}\:pc^{-2}\right)}$")
-        # plt.grid(visible=True)
+            fig, ax = plt.subplots(1, 1, figsize=(4, 3.5), dpi=400)
 
-    # plt.figure()
-    # plt.errorbar(f7_sig_0, f7_mass / f7_orig_mass, fmt="o")
-    # plt.errorbar(f3_sig_0, f3_mass / f3_orig_mass, fmt="o")
-    # # plt.ylim(top=3)
-    # plt.xscale("log")
-    # plt.yscale("log")
-    # plt.xlabel("Sigma_0")
-    # plt.ylabel("mass/orig_mass")
+            f7_scatter = plt.scatter(
+                x[0],
+                y[0],
+                c=f7_bes,
+                edgecolors="None",
+                s=f7_half_radii,
+                alpha=0.8,
+                marker="o",
+                cmap=cmap,
+                linewidths=0,
+            )
+            f3_scatter = plt.scatter(
+                x[1],
+                y[1],
+                c=f3_bes,
+                s=f3_half_radii,
+                linewidths=1,
+                alpha=0.8,
+                edgecolors="k",
+                marker="o",
+                cmap=cmap,
+            )
 
-    # plt.figure()
-    # plt.errorbar(f7_metal, f7_mass / f7_orig_mass, fmt="o")
-    # plt.errorbar(f3_metal, f3_mass / f3_orig_mass, fmt="o")
-    # # plt.ylim(top=3)
-    # plt.xscale("log")
-    # plt.yscale("log")
-    # plt.xlabel("Metal")
-    # plt.ylabel("mass/orig_mass")
+            # manual legend, want to set sfes
+            f70 = mlines.Line2D(
+                [],
+                [],
+                color="grey",
+                marker="o",
+                ls="",
+                label=r"0.70",
+                alpha=0.8,
+                markeredgewidth=0,
+            )
+            f35 = mlines.Line2D(
+                [],
+                [],
+                color="grey",
+                marker="o",
+                ls="",
+                label=r"0.35",
+                alpha=0.8,
+                markeredgecolor="k",
+            )
+            sfe_legend = plt.legend(
+                title="$\mathrm{SFE} \: (f_{*})$",
+                loc="lower right",
+                title_fontsize=10,
+                fontsize=8,
+                handles=[f70, f35],
+                facecolor=(1, 1, 1, 0.5),
+            )
+            ax.add_artist(sfe_legend)
 
-    # plt.figure()
-    # plt.errorbar(f7_orig_mass, f7_mass, fmt="o")
-    # plt.errorbar(f3_orig_mass, f3_mass, fmt="o")
-    # # plt.ylim(top=3)
-    # plt.xscale("log")
-    # plt.yscale("log")
-    # plt.xlabel("orig_mass")
-    # plt.ylabel("current_mass")
+            # legend mapped to size
+            legend_properties = dict(
+                prop="sizes",
+                num=[0.50, 1.00, 1.50, 2.0],
+                color="grey",
+                fmt=" {x:.2f}",
+                func=lambda d: d / scale_factor,
+            )
+            legend = ax.legend(
+                *f7_scatter.legend_elements(**legend_properties),
+                loc="upper left",
+                title="$\mathrm{R_{half}\:(pc)}$ ",
+                fontsize=8,
+                title_fontsize=10,
+                facecolor=(1, 1, 1, 0.5),
+                ncol=2,
+            )
+            # color bars
+            cbar = plt.colorbar(
+                pad=0,
+            )
+            cbar.set_label(
+                label="$\mathrm{t_{\mathrm{formation}}\: (Myr)}$", fontsize=14
+            )
+            plt.clim(vmin=330, vmax=600)
+            ax.set_xscale("log")
+            ax.set_yscale("log")
 
-    # plt.figure()
-    # plt.errorbar(f7_orig_mass, f7_sig_0, fmt="o")
-    # plt.errorbar(f3_orig_mass, f3_sig_0, fmt="o")
-    # # plt.ylim(top=3)
-    # plt.xscale("log")
-    # plt.yscale("log")
-    # plt.xlabel("orig_mass")
-    # plt.ylabel("sig_0")
-
-    # plt.figure()
-    # plt.errorbar(f7_alpha, f7_sig_0, fmt="o")
-    # plt.errorbar(f3_alpha, f3_sig_0, fmt="o")
-    # # plt.ylim(top=3)
-    # plt.xscale("log")
-    # plt.yscale("log")
-    # plt.xlabel("alpha")
-    # plt.ylabel(" sig_0")
-
-    # plt.figure()
-    # plt.errorbar(f7_metal, f7_mass, fmt="o")
-    # plt.errorbar(f3_metal, f3_mass, fmt="o")
-    # # plt.ylim(top=3)
-    # plt.xscale("log")
-    # plt.yscale("log")
-    # plt.xlabel("Metal")
-    # plt.ylabel("mass")
-
-    # plt.figure()
-    # plt.errorbar(f7_metal, f7_tot_light, fmt="o")
-    # plt.errorbar(f3_metal, f3_tot_light, fmt="o")
-    # # plt.ylim(top=3)
-    # plt.xscale("log")
-    # plt.yscale("log")
-    # plt.xlabel("Metal")
-    # plt.ylabel("bsc light")
-
-    # plt.figure()
-    # plt.errorbar(f7_mass / f7_orig_mass, f7_core_mass, fmt="o")
-    # plt.errorbar(f3_mass / f3_orig_mass, f3_core_mass, fmt="o")
-    # # plt.ylim(top=3)
-    # plt.xscale("log")
-    # plt.yscale("log")
-    # plt.xlabel("mass / orig_mass")
-    # plt.ylabel("Core Mass")
-
-    # plt.figure()
-    # plt.errorbar(f7_core_mass / f7_mass, f7_tot_light, fmt="o")
-    # plt.errorbar(f3_core_mass / f3_mass, f3_tot_light, fmt="o")
-    # # plt.ylim(top=3)
-    # plt.xscale("log")
-    # plt.yscale("log")
-    # plt.xlabel("core_mass/ mass")
-    # plt.ylabel("total lum")
-
-
-# core_diameter = core_radii * 2
-
-# colors = np.random.uniform(size=masses.size)
-# norm = 5
-# # map to differnt sizes for better plotting
-# core_diameter_per_size = (500 * core_diameter) / norm
-
-# fig, ax = plt.subplots(figsize=(8, 8), dpi=200)
-
-# scatter = ax.scatter(
-#     ages,
-#     masses,
-#     c="black",
-#     s=core_diameter_per_size,
-#     cmap="Set3",
-#     alpha=0.2,
-#     linewidths=2,
-# )
-
-# # remap to actual sizes for legend
-# legend_properties = dict(
-#     prop="sizes",
-#     num=[0.50, 1.0, 1.50],
-#     color="black",
-#     fmt=" {x:.2f}",
-#     func=lambda d: (d * norm) / 500,
-# )
-# legend = ax.legend(
-#     *scatter.legend_elements(**legend_properties),
-#     loc="lower left",
-#     title="$d_{core}$ (pc)",
-#     title_fontsize=18,
-#     fontsize=15,
-# )
-# plt.grid(visible=True)
-
-# ax.set_title(r"$t_{{sim}}$ = {} Myr".format(current_time), fontsize=18)
-# ax.set_ylabel(r"GC Truncation Mass ($M_{\odot}$)", fontsize=18)
-# ax.set_xlabel(r"Formation Time (Myr)", fontsize=18)
-# ax.set_xlim(300, 500)
-# ax.set_ylim(10, 1e6)
-# ax.set_yscale("log")
-#     bubble_plot(
-#         masses=gc_out_masses,
-#         core_radii=gc_r_core,
-#         ages=t_myr - gc_char_age,
-#         current_time=t_myr,
-#     )
-
-# mass_function(masses=gc_out_masses, t_sim=t_myr, num_bins=10, m_core=gc_m_core)
-
-# except Exception as e:
-#     print(e)
-#     print("> Missing info file:", data_file)
-#     pass
-
-# if not os.path.exists(folder_name):
-#     print("# Creating new sequence directory", folder_name)
-#     os.makedirs(folder_name)
-
-# fig.savefig(folder_name + "/scatter.png", dpi=300)
+            ax.set_xlabel(x_labels[i])
+            ax.set_ylabel(y_labels[i])
+            ax.set_xlim(left=xlims[i][0], right=xlims[i][1])
+            ax.set_ylim(bottom=ylims[i][0], top=ylims[i][1])
+            # ax.grid(visible=True, zorder=0.5)
