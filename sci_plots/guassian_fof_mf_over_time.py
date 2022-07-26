@@ -23,10 +23,6 @@ def gauss(x, amp, mean, sigma):
     return amp * np.exp(-0.5 * ((x - mean) / sigma) ** 2)
 
 
-def bimodal(x, amp1, mean1, sigma1, amp2, mean2, sigma2):
-    return gauss(x, amp1, mean1, sigma1) + gauss(x, amp2, mean2, sigma2)
-
-
 def log_data_function(data, num_bins, bin_range: tuple):
     bin_range = np.log10(bin_range)
     log_data = np.log10(data)
@@ -46,7 +42,7 @@ if __name__ == "__main__":
     cmap = cmap(np.linspace(0, 1, 8))
 
     x_range = (10, 5e5)
-    bns = 15
+    bns = 20
 
     f7_mc_imf_clr = cmap[0]
     f7_bsc_mf_clr = cmap[1]
@@ -65,12 +61,16 @@ if __name__ == "__main__":
     fs070_dat_dir = r"../halo_data/fs07_refine/fof_best"
     fs035_dat_dir = r"../halo_data/fs035_ms10/fof_best"
 
-    fs070_matched = filter_snapshots(fs070_dat_dir, 113, 1000, 1)[250::200]
+    fs070_matched = filter_snapshots(fs070_dat_dir, 113, 1000, 1)
 
     fs035_matched = get_snapshots(
         snapshot_file_list=filter_snapshots(fs035_dat_dir, 154, 1177, 1),
         get_list=f3_matched_nums,
-    )[250::200]
+    )
+
+    wanted_idxs = [500, 600, 700, 887]
+    fs070_matched = [fs070_matched[x] for x in wanted_idxs]
+    fs035_matched = [fs035_matched[x] for x in wanted_idxs]
 
     fs035_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
     fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
@@ -99,7 +99,7 @@ if __name__ == "__main__":
             ha="center",
         )
         fig.text(
-            0.02,
+            0.01,
             0.5,
             r"$\mathrm{dN / d\log}\:\:\left(\mathrm{M} / \mathrm{M}_{\odot} \right)$",
             va="center",
@@ -160,7 +160,7 @@ if __name__ == "__main__":
             f3_redshift = f3_info_file[1]
             f3_masses_per_snapshot = f3_info_file[3]
 
-        # print(f7_t_myr, f3_t_myr)
+        print(f7_t_myr, f3_t_myr)
         # print(f7_redshift, f3_redshift)
 
         # gc_ages_per_snapshot = info_file[:, 1]
@@ -189,16 +189,16 @@ if __name__ == "__main__":
             f3_masses_per_snapshot, bns, x_range
         )
         # fit
-        f7_fitting_mask = f7_vir_mass >= 0  # 2e2
+        f7_fitting_mask = f7_vir_mass >= 2e2
         f3_fitting_mask = f3_vir_mass >= 10
         #!!! change these for bimodal
         f7_fit_params, _ = curve_fit(
-            f=bimodal,
+            f=gauss,
             xdata=np.log10(f7_vir_mass[f7_fitting_mask]),
             ydata=f7_vir_counts[f7_fitting_mask],
         )
         f7_theory_x = np.log10(np.geomspace(f7_vir_mass.min(), f7_vir_mass.max(), 100))
-        f7_theory_y = bimodal(f7_theory_x, *f7_fit_params)
+        f7_theory_y = gauss(f7_theory_x, *f7_fit_params)
 
         f3_fit_params, _ = curve_fit(
             f=gauss,
@@ -314,11 +314,6 @@ if __name__ == "__main__":
                     f3_mc_fit_params[1], np.abs(f3_mc_fit_params[2])
                 ),
             )
-            #!!!
-            first_bump_mu = np.min([f7_fit_params[1], f7_fit_params[4]])
-            first_bump_sig = np.abs(np.min([f7_fit_params[2], f7_fit_params[5]]))
-            second_bump_mu = np.max([f7_fit_params[1], f7_fit_params[4]])
-            second_bump_sig = np.abs(np.max([f7_fit_params[2], f7_fit_params[5]]))
 
             ax[i, 0].plot(
                 10**f7_theory_x,
@@ -327,14 +322,8 @@ if __name__ == "__main__":
                 linewidth=2,
                 alpha=0.8,
                 color="black",
-                # label=(r"$({:.2f}, {:.2f})$").format(
-                #     f7_fit_params[1], f7_fit_params[2]
-                # ),
-                label=(r"$({:.2f}, {:.2f})$" "\n" r"$({:.2f}, {:.2f})$").format(
-                    first_bump_mu,
-                    first_bump_sig,
-                    second_bump_mu,
-                    second_bump_sig,
+                label=(r"$({:.2f}, {:.2f})$").format(
+                    f7_fit_params[1], f7_fit_params[2]
                 ),
             )
 
@@ -360,20 +349,6 @@ if __name__ == "__main__":
             )
             textstr_f7 = (r"$\mathrm{{t}} = {:.1f} \: \mathrm{{Myr}}$").format(f7_t_myr)
 
-            # textstr_f3 = (
-            #     r"$\mathrm{{t}} = {:.1f} \: \mathrm{{Myr}}$"
-            #     "\n"
-            #     r"$\mathrm{{z}} = {:.1f}$"
-            # ).format(f3_t_myr, f3_redshift)
-
-            # ax[1].text(
-            #     0.03,
-            #     0.96,
-            #     textstr_f3,
-            #     transform=ax[1].transAxes,
-            #     verticalalignment="top",
-            #     bbox=props,
-            # )
             ax[i, 0].set_xlim(left=f7_vir_mass[0])
             ax[i, 0].set_xscale("log")
             # ax[i, 0].set_yscale("log")
@@ -399,7 +374,7 @@ if __name__ == "__main__":
 
             ax[i, 1].text(
                 0,
-                0.90,
+                0.94,
                 textstr_f7,
                 transform=ax[i, 1].transAxes,
                 verticalalignment="top",
@@ -412,7 +387,7 @@ if __name__ == "__main__":
         os.path.expanduser(
             (
                 "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
-                "bimodal_mf_overtime.png"
+                "gaussian_mf_overtime.png"
             )
         ),
         dpi=800,
