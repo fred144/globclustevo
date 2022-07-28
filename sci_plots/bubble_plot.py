@@ -45,6 +45,7 @@ _, f3_matched_nums = find_matching_time(
 f3_pro_ds = filter_snapshots(f3_prof_dir, f3_strt, f3_end, step)
 
 # sample the matched snapshots for plotting by indexing
+# try snapshot 873
 strt = 887
 end = f3_matched_nums.size
 st = 1
