@@ -129,15 +129,15 @@ if __name__ == "__main__":
         f3_leg_title = mlines.Line2D(
             [], [], color=f3_mc_imf_clr, ls="", label=f3_legend_title
         )
-        fig.legend(
+        leg = fig.legend(
             # title="$\mathrm{SFE} \: (f_{*})$",
             loc="lower center",
             handles=[f7_leg_title, f70_imf, f70_bsc, f3_leg_title, f35_imf, f35_bsc],
-            bbox_to_anchor=(0.5, 0.88),
+            bbox_to_anchor=(0.5, 0.885),
             ncol=2,
             edgecolor="k",
         )
-
+        leg.get_frame().set_boxstyle("Square")
     for i, (f7_ds, f3_ds) in enumerate(zip(fs070_matched, fs035_matched)):
         f7_info_file = np.loadtxt(os.path.join(f7_ds, "fof_info.txt"))
         f3_info_file = np.loadtxt(os.path.join(f3_ds, "fof_info.txt"))
@@ -392,6 +392,6 @@ if __name__ == "__main__":
         ),
         dpi=800,
         bbox_inches="tight",
-        pad_inches=0.05,
+        pad_inches=0.08,
         format="png",
     )

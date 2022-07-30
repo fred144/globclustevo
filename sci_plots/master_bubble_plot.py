@@ -138,7 +138,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             "mathtext.fontset": "cm",
             "xtick.labelsize": 7,
             "ytick.labelsize": 7,
-            "font.size": 10,
+            "font.size": 9,
         }
     ):
         leg_font = font_manager.FontProperties(
@@ -187,16 +187,16 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             "padax",
             "padax",
             # r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
-            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\log_{10}\:\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\log_{10}\:\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            r"$\log_{10}\:\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
             # r"$\mathrm{M_{SFC}}$",
             # r"$\mathrm{M_{SFC}}$",
-            r"$\alpha$",
+            r"$\log_{10}\:\alpha$",
             # r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\mathrm{M_{core}\: / \: M_{SFC} }$",
-            r"$\mathrm{M_{BSC}\: / \: M_{SFC} }$",
-            r"$\alpha$",
+            r"$\log_{10}\:\mathrm{M_{core}\: / \: M_{SFC} }$",
+            r"$\log_{10}\:\mathrm{M_{BSC}\: / \: M_{SFC} }$",
+            r"$\log_{10}\:\alpha$",
             # r"$\mathrm{M_{core}\: / \: M_{BSC} }$",
         ]
         y_labels = [
@@ -204,21 +204,21 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             "padax",
             # r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
             (
-                r"$\mathrm{L_{BSC, \: \mathrm{\lambda = 1500 \: \AA \:}}}$"
+                r"$\log_{10}\:\mathrm{L_{BSC, \: \mathrm{\lambda = 1500 \: \AA \:}}}$"
                 r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\right)}$"
             ),
-            r"$\mathrm{M_{BSC}\: / \: M_{SFC} }$",
-            r"$\mathrm{M_{BSC}\: / \: M_{SFC} }$",
+            r"$\log_{10}\:\mathrm{M_{BSC}\: / \: M_{SFC} }$",
+            r"$\log_{10}\:\mathrm{M_{BSC}\: / \: M_{SFC} }$",
             # r"$\mathrm{M_{BSC}}$",
             # r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
-            r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            r"$\log_{10}\:\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
             # r"$\mathrm{M_{BSC}}$",
             (
-                r"$\mathrm{L_{BSC, \: \mathrm{\lambda = 1500 \: \AA \:}}}$"
+                r"$\log_{10}\:\mathrm{L_{BSC, \: \mathrm{\lambda = 1500 \: \AA \:}}}$"
                 r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\right)}$"
             ),
-            r"$M_{\mathrm{core}}$",
-            r"$R_{\mathrm{core}}$",
+            r"$\log_{10}\:M_{\mathrm{core}}$",
+            r"$\log_{10}\:R_{\mathrm{core}}$",
             # (
             #     r"$\mathrm{L_{BSC}}$"
             #     r"$, \mathrm{\lambda = 1500 \: \AA \:}$"
@@ -313,7 +313,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 pad=0,
                 orientation="horizontal",
             )
-
+            cbar.set_alpha(0.8)
             cbar_ax.set_title(
                 label="$\mathrm{Time \: of \: Formation \: (Myr)}$",
                 fontproperties=leg_font,
@@ -339,7 +339,9 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             markeredgewidth=0,
             markersize=0,
         )
-
+        #
+        #
+        # =============================================================================
         f70 = mlines.Line2D(
             [],
             [],
@@ -405,3 +407,16 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             axs[i].set_xticklabels(x_labels)
             axs[i].set_yticklabels(y_labels)
         # ax.grid(visible=True, zorder=0.5)
+
+plt.savefig(
+    os.path.expanduser(
+        (
+            "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+            "bubble_plot_dashboard.png"
+        )
+    ),
+    dpi=800,
+    bbox_inches="tight",
+    pad_inches=0.05,
+    format="png",
+)
