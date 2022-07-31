@@ -81,6 +81,7 @@ def metal_lookup(log_sfc_path, bsc_form_times):
 #%%
 
 for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
+    # time series loop
     # if i == 0:
     #     continue
     f7_prof_data = np.loadtxt(os.path.join(f7, "info.txt"))
@@ -138,15 +139,15 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             "mathtext.fontset": "cm",
             "xtick.labelsize": 7,
             "ytick.labelsize": 7,
-            "font.size": 9,
+            "font.size": 10,
         }
     ):
         leg_font = font_manager.FontProperties(
-            family="serif", math_fontfamily="cm", size=12
+            family="serif", math_fontfamily="cm", size=10
         )
 
         cmap = plt.cm.get_cmap("winter")
-        scale_factor = 25  # scale factor for the sizes
+        scale_factor = 20  # scale factor for the sizes
         # map to differnt sizes for better plotting
         f7_half_radii = scale_factor * f7_half_mass_rad
         f3_half_radii = scale_factor * f3_half_mass_rad
@@ -205,9 +206,10 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             # r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
             (
                 r"$\log_{10}\:\mathrm{L_{BSC, \: \mathrm{\lambda = 1500 \: \AA \:}}}$"
+                "\n"
                 r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\right)}$"
             ),
-            r"$\log_{10}\:\mathrm{M_{BSC}\: / \: M_{SFC} }$",
+            r"$\log_{10}\:\mathrm{M_{BSC}\: / \: M_{SFC} }$" "\n",
             r"$\log_{10}\:\mathrm{M_{BSC}\: / \: M_{SFC} }$",
             # r"$\mathrm{M_{BSC}}$",
             # r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
@@ -215,6 +217,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             # r"$\mathrm{M_{BSC}}$",
             (
                 r"$\log_{10}\:\mathrm{L_{BSC, \: \mathrm{\lambda = 1500 \: \AA \:}}}$"
+                "\n"
                 r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\right)}$"
             ),
             r"$\log_{10}\:M_{\mathrm{core}}$",
@@ -260,12 +263,12 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         fig, ax = plt.subplots(
             nrows=3,
             ncols=3,
-            figsize=(7, 7),
+            figsize=(7, 6),
             dpi=400,
             # sharex=True,
             # sharey=True,
         )
-        plt.subplots_adjust(hspace=0.28, wspace=0.28)
+        plt.subplots_adjust(hspace=0.35, wspace=0.28)
         axs = ax.ravel()
 
         vmin = 330
@@ -278,19 +281,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 continue
 
             # print("test", i)
-            f7_scatter = axs[i].scatter(
-                x[0],
-                y[0],
-                c=f7_bes,
-                edgecolors="None",
-                s=f7_half_radii,
-                alpha=0.8,
-                marker="o",
-                cmap=cmap,
-                linewidths=0,
-                vmin=vmin,
-                vmax=vmax,
-            )
+
             f3_scatter = axs[i].scatter(
                 x[1],
                 y[1],
@@ -305,8 +296,22 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 vmax=vmax,
             )
 
+            f7_scatter = axs[i].scatter(
+                x[0],
+                y[0],
+                c=f7_bes,
+                edgecolors="None",
+                s=f7_half_radii,
+                alpha=0.8,
+                marker="o",
+                cmap=cmap,
+                linewidths=0,
+                vmin=vmin,
+                vmax=vmax,
+            )
+
             # color bars
-            cbar_ax = fig.add_axes([0.12, 0.84, 0.47, 0.02])
+            cbar_ax = fig.add_axes([0.09, 0.80, 0.5, 0.04])
             cbar = fig.colorbar(
                 f3_scatter,
                 cax=cbar_ax,
@@ -318,6 +323,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 label="$\mathrm{Time \: of \: Formation \: (Myr)}$",
                 fontproperties=leg_font,
             )
+            cbar.ax.tick_params(labelsize=7)
 
             axs[i].set_xscale("log")
             axs[i].set_yscale("log")
@@ -327,21 +333,19 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             axs[i].set_xlim(left=xlims[i][0], right=xlims[i][1])
             axs[i].set_ylim(bottom=ylims[i][0], top=ylims[i][1])
 
-        # manual legend, want to set sfes
-        title = mlines.Line2D(
-            [],
-            [],
-            color="white",
-            marker="o",
-            ls="",
-            label="$\mathrm{SFE}\:(f_{*})$",
-            alpha=0.0,
-            markeredgewidth=0,
-            markersize=0,
-        )
-        #
-        #
         # =============================================================================
+        # manual legend, want to set sfes
+        # title = mlines.Line2D(
+        #     [],
+        #     [],
+        #     color="white",
+        #     marker="o",
+        #     ls="",
+        #     label="SFE$\:(f_{*})$",
+        #     alpha=0.0,
+        #     markeredgewidth=0,
+        #     markersize=0,
+        # )
         f70 = mlines.Line2D(
             [],
             [],
@@ -366,14 +370,16 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         )
         sfe_legend = fig.legend(
             loc="lower left",
-            title_fontsize=12,
-            fontsize=10,
-            handles=[title, f70, f35],
-            bbox_to_anchor=(0.135, 0.75),
-            ncol=3,
+            title="$\mathrm{SFE}\:(f_{*})$",
+            title_fontsize=10,
+            fontsize=8,
+            handles=[f70, f35],
+            ncol=1,
+            bbox_to_anchor=(0.1, 0.63),
         )
         sfe_legend.get_frame().set_edgecolor("k")
         sfe_legend.get_frame().set_boxstyle("Square")
+
         # legend mapped to size
         legend_properties = dict(
             prop="sizes",
@@ -386,11 +392,10 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             *f7_scatter.legend_elements(**legend_properties),
             loc="lower left",
             title="$\mathrm{R_{half}\:(pc)}$ ",
-            title_fontsize=12,
-            fontsize=10,
-            bbox_to_anchor=(0.14, 0.625),
-            # facecolor=(1, 1, 1, 0.5),
+            title_fontsize=10,
+            fontsize=8,
             ncol=3,
+            bbox_to_anchor=(0.22, 0.63),
         )
         size_legend.get_frame().set_edgecolor("k")
         size_legend.get_frame().set_boxstyle("Square")

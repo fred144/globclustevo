@@ -8,7 +8,6 @@ import os
 from modules.macros import filter_snapshots, common_filter_snapshots, t_myr_from_z
 from modules.match_t_sims import find_matching_time, get_snapshots
 import matplotlib.lines as mlines
-import matplotlib.font_manager as font_manager
 
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
@@ -79,7 +78,6 @@ def metal_lookup(log_sfc_path, bsc_form_times):
 
 
 #%%
-
 for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     # if i == 0:
     #     continue
@@ -136,149 +134,112 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         {
             "font.family": "serif",
             "mathtext.fontset": "cm",
-            "xtick.labelsize": 7,
-            "ytick.labelsize": 7,
-            "font.size": 10,
+            "xtick.labelsize": 10,
+            "ytick.labelsize": 10,
+            "font.size": 12,
         }
     ):
-        leg_font = font_manager.FontProperties(
-            family="serif", math_fontfamily="cm", size=12
-        )
 
         cmap = plt.cm.get_cmap("winter")
-        scale_factor = 25  # scale factor for the sizes
+        scale_factor = 50  # scale factor for the sizes
         # map to differnt sizes for better plotting
         f7_half_radii = scale_factor * f7_half_mass_rad
         f3_half_radii = scale_factor * f3_half_mass_rad
 
         x_vars = [
-            np.nan,
-            np.nan,
-            # (f7_metal, f3_metal),
             (f7_metal, f3_metal),
             (f7_sig_0, f3_sig_0),
             (f7_metal, f3_metal),
-            # (f7_orig_mass, f3_orig_mass),
-            # (f7_orig_mass, f3_orig_mass),
+            (f7_orig_mass, f3_orig_mass),
+            (f7_orig_mass, f3_orig_mass),
             (f7_alpha, f3_alpha),
-            # (f7_metal, f3_metal),
-            (f7_core_mass / f7_orig_mass, f3_core_mass / f3_orig_mass),
+            (f7_metal, f3_metal),
+            (f7_metal, f3_metal),
             (f7_mass / f7_orig_mass, f3_mass / f3_orig_mass),
+            (f7_core_mass / f7_orig_mass, f3_core_mass / f3_orig_mass),
             (f7_alpha, f3_alpha),
-            # (f7_core_mass / f7_orig_mass, f3_core_mass / f3_orig_mass),
         ]
         y_vars = [
-            np.nan,
-            np.nan,
-            # (f7_sig_0, f3_sig_0),
-            (f7_tot_light, f3_tot_light),
-            (f7_mass / f7_orig_mass, f3_mass / f3_orig_mass),
-            (f7_mass / f7_orig_mass, f3_mass / f3_orig_mass),
-            # (f7_mass, f3_mass),
-            # (f7_sig_0, f3_sig_0),
             (f7_sig_0, f3_sig_0),
-            # (f7_mass, f3_mass),
+            (f7_mass / f7_orig_mass, f3_mass / f3_orig_mass),
+            (f7_mass / f7_orig_mass, f3_mass / f3_orig_mass),
+            (f7_mass, f3_mass),
+            (f7_sig_0, f3_sig_0),
+            (f7_sig_0, f3_sig_0),
+            (f7_mass, f3_mass),
             (f7_tot_light, f3_tot_light),
             (f7_core_mass, f3_core_mass),
+            (f7_tot_light, f3_tot_light),
             (f7_core_rad, f3_core_rad),
-            # (f7_tot_light, f3_tot_light),
         ]
         x_labels = [
-            "padax",
-            "padax",
-            # r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
             r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            r"$\mathrm{\Sigma\:\left(M_{\odot}\:pc^{-2}\right)}$",
             r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            # r"$\mathrm{M_{SFC}}$",
-            # r"$\mathrm{M_{SFC}}$",
+            r"$\mathrm{M_{SFC}}$",
+            r"$\mathrm{M_{SFC}}$",
             r"$\alpha$",
-            # r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\mathrm{M_{core}\: / \: M_{SFC} }$",
+            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
             r"$\mathrm{M_{BSC}\: / \: M_{SFC} }$",
+            r"$\mathrm{M_{core}\: / \: M_{SFC} }$",
             r"$\alpha$",
-            # r"$\mathrm{M_{core}\: / \: M_{BSC} }$",
         ]
         y_labels = [
-            "padax",
-            "padax",
-            # r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
-            (
-                r"$\mathrm{L_{BSC, \: \mathrm{\lambda = 1500 \: \AA \:}}}$"
-                r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\right)}$"
-            ),
+            r"$\mathrm{\Sigma\:\left(M_{\odot}\:pc^{-2}\right)}$",
             r"$\mathrm{M_{BSC}\: / \: M_{SFC} }$",
             r"$\mathrm{M_{BSC}\: / \: M_{SFC} }$",
-            # r"$\mathrm{M_{BSC}}$",
-            # r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
-            r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
-            # r"$\mathrm{M_{BSC}}$",
+            r"$\mathrm{M_{BSC}}$",
+            r"$\mathrm{\Sigma\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            r"$\mathrm{\Sigma\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            r"$\mathrm{M_{BSC}}$",
             (
-                r"$\mathrm{L_{BSC, \: \mathrm{\lambda = 1500 \: \AA \:}}}$"
-                r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\right)}$"
+                r"$\mathrm{Projected\:Luminosity}$"
+                r"$, \mathrm{\lambda = 1500 \: \AA \:}$"
+                "\n"
+                r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
             ),
             r"$M_{\mathrm{core}}$",
+            (
+                r"$\mathrm{Projected\:Luminosity}$"
+                r"$, \mathrm{\lambda = 1500 \: \AA \:}$"
+                "\n"
+                r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
+            ),
             r"$R_{\mathrm{core}}$",
-            # (
-            #     r"$\mathrm{L_{BSC}}$"
-            #     r"$, \mathrm{\lambda = 1500 \: \AA \:}$"
-            #     r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
-            # ),
         ]
         xlims = [
-            np.nan,
-            np.nan,
-            # (1e-4, 1e-2),
-            (1e-4, 7e-3),
-            (5, 5e4),
-            (3e-4, 1e-2),
-            # (1e2, 3e4),
-            # (2e2, 2e4),
-            (1, 11),
-            # (1e-4, 1e-2),
+            (1e-4, 1e-2),
+            (5e0, 1e5),
+            (1e-4, 1e-2),
+            (2e1, 1e5),
+            (5e0, 1e5),
+            (1, 13),
+            (1e-4, 1e-2),
+            (1e-4, 1e-2),
+            (1e-3, 10),
             (5e-4, 10),
-            (5e-3, 10),
-            (1, 11),
-            # (2e-2, 2),
+            (1, 13),
         ]
         ylims = [
-            np.nan,
-            np.nan,
-            # (5e0, 1e5),
-            (1e33, 3e37),
-            (6e-3, 1e1),
-            (5e-3, 1e1),
-            # (2e1, 1e5),
-            # (5e0, 1e5),
             (5e0, 1e5),
-            # (1e1, 8e4),
+            (5e-3, 1e1),
+            (5e-3, 1e1),
+            (2e1, 1e5),
+            (5e0, 1e5),
+            (5e0, 1e5),
+            (1e1, 8e4),
             (1e33, 3e37),
             (5, 1e5),
+            (1e33, 3e37),
             (2e-2, 10),
-            # (1e33, 3e37),
         ]
-        fig, ax = plt.subplots(
-            nrows=3,
-            ncols=3,
-            figsize=(7, 7),
-            dpi=400,
-            # sharex=True,
-            # sharey=True,
-        )
-        plt.subplots_adjust(hspace=0.28, wspace=0.28)
-        axs = ax.ravel()
-
-        vmin = 330
-        vmax = 610
 
         for i, (x, y) in enumerate(zip(x_vars, y_vars)):
 
-            if i == 0 or i == 1:
-                axs[i].set_visible(False)
-                continue
+            fig, ax = plt.subplots(1, 1, figsize=(4, 3.5), dpi=400)
 
-            # print("test", i)
-            f7_scatter = axs[i].scatter(
+            f7_scatter = plt.scatter(
                 x[0],
                 y[0],
                 c=f7_bes,
@@ -288,10 +249,8 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 marker="o",
                 cmap=cmap,
                 linewidths=0,
-                vmin=vmin,
-                vmax=vmax,
             )
-            f3_scatter = axs[i].scatter(
+            f3_scatter = plt.scatter(
                 x[1],
                 y[1],
                 c=f3_bes,
@@ -301,107 +260,69 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 edgecolors="k",
                 marker="o",
                 cmap=cmap,
-                vmin=vmin,
-                vmax=vmax,
             )
 
+            # manual legend, want to set sfes
+            f70 = mlines.Line2D(
+                [],
+                [],
+                color="grey",
+                marker="o",
+                ls="",
+                label=r"0.70",
+                alpha=0.8,
+                markeredgewidth=0,
+            )
+            f35 = mlines.Line2D(
+                [],
+                [],
+                color="grey",
+                marker="o",
+                ls="",
+                label=r"0.35",
+                alpha=0.8,
+                markeredgecolor="k",
+            )
+            sfe_legend = plt.legend(
+                title="$\mathrm{SFE} \: (f_{*})$",
+                loc="lower right",
+                title_fontsize=10,
+                fontsize=8,
+                handles=[f70, f35],
+                facecolor=(1, 1, 1, 0.5),
+            )
+            ax.add_artist(sfe_legend)
+
+            # legend mapped to size
+            legend_properties = dict(
+                prop="sizes",
+                num=[0.50, 1.00, 1.50, 2.0],
+                color="grey",
+                fmt=" {x:.2f}",
+                func=lambda d: d / scale_factor,
+            )
+            legend = ax.legend(
+                *f7_scatter.legend_elements(**legend_properties),
+                loc="upper left",
+                title="$\mathrm{R_{half}\:(pc)}$ ",
+                fontsize=8,
+                title_fontsize=10,
+                facecolor=(1, 1, 1, 0.5),
+                ncol=2,
+            )
             # color bars
-            cbar_ax = fig.add_axes([0.12, 0.84, 0.47, 0.02])
-            cbar = fig.colorbar(
-                f3_scatter,
-                cax=cbar_ax,
+            cbar = plt.colorbar(
                 pad=0,
-                orientation="horizontal",
             )
-
-            cbar_ax.set_title(
-                label="$\mathrm{Time \: of \: Formation \: (Myr)}$",
-                fontproperties=leg_font,
+            cbar.set_label(
+                label="$\mathrm{t_{\mathrm{formation}}\: (Myr)}$", fontsize=14
             )
+            plt.clim(vmin=330, vmax=600)
+            ax.set_xscale("log")
+            ax.set_yscale("log")
 
-            axs[i].set_xscale("log")
-            axs[i].set_yscale("log")
-            axs[i].minorticks_off()
-            axs[i].set_xlabel(x_labels[i], labelpad=0)
-            axs[i].set_ylabel(y_labels[i], labelpad=0)
-            axs[i].set_xlim(left=xlims[i][0], right=xlims[i][1])
-            axs[i].set_ylim(bottom=ylims[i][0], top=ylims[i][1])
-
-        # manual legend, want to set sfes
-        title = mlines.Line2D(
-            [],
-            [],
-            color="white",
-            marker="o",
-            ls="",
-            label="$\mathrm{SFE}\:(f_{*})$",
-            alpha=0.0,
-            markeredgewidth=0,
-            markersize=0,
-        )
-
-        f70 = mlines.Line2D(
-            [],
-            [],
-            color="grey",
-            marker="o",
-            ls="",
-            label=r"0.70",
-            alpha=0.8,
-            markeredgewidth=0,
-            markersize=8,
-        )
-        f35 = mlines.Line2D(
-            [],
-            [],
-            color="grey",
-            marker="o",
-            ls="",
-            label=r"0.35",
-            alpha=0.8,
-            markeredgecolor="k",
-            markersize=8,
-        )
-        sfe_legend = fig.legend(
-            loc="lower left",
-            title_fontsize=12,
-            fontsize=10,
-            handles=[title, f70, f35],
-            bbox_to_anchor=(0.135, 0.75),
-            ncol=3,
-        )
-        sfe_legend.get_frame().set_edgecolor("k")
-        sfe_legend.get_frame().set_boxstyle("Square")
-        # legend mapped to size
-        legend_properties = dict(
-            prop="sizes",
-            num=[0.5, 1.0, 1.5, 2.0, 2.5, 3.0],
-            color="grey",
-            fmt=" {x:.2f}",
-            func=lambda d: d / scale_factor,
-        )
-        size_legend = fig.legend(
-            *f7_scatter.legend_elements(**legend_properties),
-            loc="lower left",
-            title="$\mathrm{R_{half}\:(pc)}$ ",
-            title_fontsize=12,
-            fontsize=10,
-            bbox_to_anchor=(0.14, 0.625),
-            # facecolor=(1, 1, 1, 0.5),
-            ncol=3,
-        )
-        size_legend.get_frame().set_edgecolor("k")
-        size_legend.get_frame().set_boxstyle("Square")
-        plt.gca().add_artist(size_legend)
-
-        fig.canvas.draw()
-        for i in range(2, 9):
-            x_labels = [
-                t.get_text().replace("10^", "") for t in axs[i].get_xticklabels()
-            ]
-            y_labels = [
-                t.get_text().replace("10^", "") for t in axs[i].get_yticklabels()
-            ]
-            axs[i].set_xticklabels(x_labels)
-            axs[i].set_yticklabels(y_labels)
-        # ax.grid(visible=True, zorder=0.5)
+            ax.set_xlabel(x_labels[i])
+            ax.set_ylabel(y_labels[i])
+            ax.set_xlim(left=xlims[i][0], right=xlims[i][1])
+            ax.set_ylim(bottom=ylims[i][0], top=ylims[i][1])
+            # ax.grid(visible=True, zorder=0.5)

@@ -68,7 +68,7 @@ if __name__ == "__main__":
         get_list=f3_matched_nums,
     )
 
-    wanted_idxs = [500, 600, 700, 887]
+    wanted_idxs = [330, 500, 700, 885]
     fs070_matched = [fs070_matched[x] for x in wanted_idxs]
     fs035_matched = [fs035_matched[x] for x in wanted_idxs]
 
