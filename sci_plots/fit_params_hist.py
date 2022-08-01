@@ -45,7 +45,7 @@ _, f3_matched_nums = find_matching_time(
 f3_pro_ds = filter_snapshots(f3_prof_dir, f3_strt, f3_end, step)
 
 # sample the matched snapshots for plotting by indexing
-strt = 880
+strt = 887
 end = f3_matched_nums.size
 st = 1
 
@@ -87,7 +87,7 @@ fs35_face = np.copy(fs35_color)
 fs35_face[-1] = 0.40
 
 hist_bins = 20
-hist_ranges = (0, 1)
+
 #%%
 for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     # if i == 0:
@@ -141,141 +141,117 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     f3_tot_light = f3_prof_data[:, 17]
     f3_metal, f3_orig_mass = metal_lookup("../sim_log_files/fs035_ms10/logSFC", f3_bes)
 
+    f7_vars = [f7_core_rad, f7_sig_0, f7_alpha, f7_mass / f7_orig_mass]
+    f3_vars = [f3_core_rad, f3_sig_0, f3_alpha, f3_mass / f3_orig_mass]
+
+    labels = [
+        r"$R_\mathrm{{core}}\:\mathrm{(pc)}$",
+        r"$\Sigma_0\:\mathrm{\left(M_{\odot}\:pc^{-2}\right)}$",
+        r"$\alpha$",
+        r"$\mathrm{M_{BSC}\: / \: M_{SFC} }$",
+    ]
+
+    hist_ranges = [(0, 2), (10, 800), (1.5, 5), (0, 1)]
     with plt.rc_context(
         {
             "font.family": "serif",
             "mathtext.fontset": "cm",
-            "xtick.labelsize": 10,
-            "ytick.labelsize": 10,
-            "font.size": 12,
+            "xtick.labelsize": 8,
+            "ytick.labelsize": 8,
+            "font.size": 10,
         }
     ):
-        # fs70_z, fs70_z_counts = log_data_function(f7_metal, 15, (1e-4, 1e-2))
-        # fs35_z, fs35_z_counts = log_data_function(f3_metal, 15, (1e-4, 1e-2))
-        # plt.plot(
-        #     fs35_z,
-        #     fs35_z_counts,
-        #     label=r"$0.35$",
-        #     drawstyle="steps-mid",
-        #     linewidth=4,
-        #     alpha=0.8,
-        #     color=fs35_color,
-        # )
-        # plt.fill_between(
-        #     fs35_z,
-        #     fs35_z_counts,
-        #     step="mid",
-        #     alpha=0.4,
-        #     color=fs35_color,
-        # )
-        # # 70% efficiency
-        # plt.plot(
-        #     fs70_z,
-        #     fs70_z_counts,
-        #     label=r"$0.70$",
-        #     drawstyle="steps-mid",
-        #     linewidth=4,
-        #     alpha=0.8,
-        #     color=fs70_color,
-        # )
-        # plt.fill_between(
-        #     fs70_z,
-        #     fs70_z_counts,
-        #     step="mid",
-        #     alpha=0.4,
-        #     color=fs70_color,
-        # )
-
-        # plt.xlabel(
-        #     r"$\mathrm{Z_{MC}} \:\:  \left( \mathrm{Z}_{\odot} \right) $",
-        # )
-        # plt.ylabel(
-        #     r"$\mathrm{dN / d\log} \:\: \left(\mathrm{Z_{MC}}/\mathrm{Z}_{\odot}\right )$",
-        #     labelpad=2,
-        # )
-
-        # plt.xlim(1e-4, 1e-2)
-        # plt.ylim(bottom=0)
-        # plt.xscale("log")
 
         fig, ax = plt.subplots(
             nrows=1,
-            ncols=1,
-            figsize=(4, 4),
+            ncols=4,
+            sharey=True,
+            figsize=(8, 2),
             dpi=300,
         )
+        plt.subplots_adjust(wspace=0)
 
-        f7_count, f7_bin_edges = np.histogram(f7_core_rad, hist_bins, hist_ranges)
-        f7_right_edges = f7_bin_edges[1:]
-        f7_left_edges = f7_bin_edges[:-1]
-        f7_bin_ctrs = 0.5 * (f7_left_edges + f7_right_edges)
+        for i, (f7_var, f3_var) in enumerate(zip(f7_vars, f3_vars)):
+            f7_count, f7_bin_edges = np.histogram(f7_var, hist_bins, hist_ranges[i])
+            f7_right_edges = f7_bin_edges[1:]
+            f7_left_edges = f7_bin_edges[:-1]
+            f7_bin_ctrs = 0.5 * (f7_left_edges + f7_right_edges)
 
-        ax.plot(
-            f7_bin_ctrs,
-            f7_count,
-            label=r"$0.70$",
-            drawstyle="steps-mid",
-            linewidth=3,
-            alpha=0.8,
-            color=fs70_color,
+            ax[i].plot(
+                f7_bin_ctrs,
+                f7_count,
+                label=r"$0.70$",
+                drawstyle="steps-mid",
+                linewidth=2,
+                alpha=0.8,
+                color=fs70_color,
+            )
+            ax[i].fill_between(
+                f7_bin_ctrs,
+                f7_count,
+                step="mid",
+                alpha=0.4,
+                color=fs70_color,
+            )
+
+            f3_count, f3_bin_edges = np.histogram(f3_var, hist_bins, hist_ranges[i])
+            f3_right_edges = f3_bin_edges[1:]
+            f3_left_edges = f3_bin_edges[:-1]
+            f3_bin_ctrs = 0.5 * (f3_left_edges + f3_right_edges)
+
+            ax[i].plot(
+                f3_bin_ctrs,
+                f3_count,
+                label=r"$0.35$",
+                drawstyle="steps-mid",
+                linewidth=2,
+                alpha=0.8,
+                color=fs35_color,
+            )
+            ax[i].fill_between(
+                f3_bin_ctrs,
+                f3_count,
+                step="mid",
+                alpha=0.4,
+                color=fs35_color,
+            )
+            ax[i].set_xlim(left=f7_bin_ctrs[0], right=f7_bin_ctrs[-1])
+            ax[i].set_ylim(bottom=0, top=25)
+
+            ax[i].set_xlabel(labels[i])
+
+        ax[0].set_ylabel(r"$\mathrm{Number\:\:of\:\:BSCs}$")
+        ax[0].legend(title="$\mathrm{SFE} \: (f_{*})$", loc="upper right", fontsize=10)
+plt.savefig(
+    os.path.expanduser(
+        (
+            "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+            "fit_params_hist.png"
         )
-        ax.fill_between(
-            f7_bin_ctrs,
-            f7_count,
-            step="mid",
-            alpha=0.4,
-            color=fs70_color,
-        )
+    ),
+    dpi=800,
+    bbox_inches="tight",
+    pad_inches=0.05,
+    format="png",
+)
+# ax[0].hist(
+#     f7_core_rad,
+#     bins=bins,
+#     # alpha=0.8,
+#     edgecolor=fs70_color,
+#     histtype="step",
+#     lw=2,
+#     facecolor=fs70_face,
+#     fill=True,
+# )
 
-        f3_count, f3_bin_edges = np.histogram(f3_core_rad, hist_bins, hist_ranges)
-        f3_right_edges = f3_bin_edges[1:]
-        f3_left_edges = f3_bin_edges[:-1]
-        f3_bin_ctrs = 0.5 * (f3_left_edges + f3_right_edges)
-
-        ax.plot(
-            f3_bin_ctrs,
-            f3_count,
-            label=r"$0.35$",
-            drawstyle="steps-mid",
-            linewidth=3,
-            alpha=0.8,
-            color=fs35_color,
-        )
-        ax.fill_between(
-            f3_bin_ctrs,
-            f3_count,
-            step="mid",
-            alpha=0.4,
-            color=fs35_color,
-        )
-        ax.set_xlim(left=f7_bin_ctrs[0], right=f7_bin_ctrs[-1])
-        ax.set_ylim(bottom=0, top=20)
-
-        ax.set_xlabel(r"$\mathrm{BSC}z\:R_\mathrm{{core}}\:\mathrm{(pc)}$")
-        ax.set_ylabel(r"$\mathrm{Counts}$")
-        ax.legend(
-            title="$\mathrm{SFE} \: (f_{*})$",
-            loc="upper right",
-        )
-
-        # ax.hist(
-        #     f7_core_rad,
-        #     bins=bins,
-        #     # alpha=0.8,
-        #     edgecolor=fs70_color,
-        #     histtype="step",
-        #     lw=2,
-        #     facecolor=fs70_face,
-        #     fill=True,
-        # )
-
-        # ax.hist(
-        #     f3_core_rad,
-        #     bins=bins,
-        #     # alpha=0.8,
-        #     edgecolor=fs35_color,
-        #     histtype="step",
-        #     lw=2,
-        #     facecolor=fs35_face,
-        #     fill=True,
-        # )
+# ax[0].hist(
+#     f3_core_rad,
+#     bins=bins,
+#     # alpha=0.8,
+#     edgecolor=fs35_color,
+#     histtype="step",
+#     lw=2,
+#     facecolor=fs35_face,
+#     fill=True,
+# )

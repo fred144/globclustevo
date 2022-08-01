@@ -324,10 +324,20 @@ with plt.rc_context(
     ax[1].set_ylim(bottom=0)
     plt.subplots_adjust(hspace=0)
 
-    plt.savefig(
-        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_sfr.png",
-        dpi=800,
-        bbox_inches="tight",
-        pad_inches=0.05,
-        format="png",
-    )
+    # year_annotations = [
+    #     468.1533733654368,
+    #     503.74494157253463,
+    #     553.1560071977984,
+    #     592.4140693990269,
+    # ]
+    # for t in year_annotations:
+    #     ax[0].axvline(t, ls=":", color="grey")
+    #     ax[1].axvline(t, ls=":", color="grey")
+
+    # plt.savefig(
+    #     "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_sfr.png",
+    #     dpi=800,
+    #     bbox_inches="tight",
+    #     pad_inches=0.05,
+    #     format="png",
+    # )
