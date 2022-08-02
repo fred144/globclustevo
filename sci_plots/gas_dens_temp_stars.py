@@ -222,9 +222,9 @@ with plt.rc_context(
                         filtered_y,
                         marker=".",
                         c=color,
-                        s=0.01,
+                        s=1,
                         edgecolors=None,
-                        alpha=0.08,
+                        alpha=0.015,
                     )
         # clean up edges and add scale bars
         for t in range(cols):
@@ -372,8 +372,7 @@ plt.savefig(
             "projected_gas.png"
         )
     ),
-    dpi=800,
+    dpi=500,
     bbox_inches="tight",
     pad_inches=0.05,
-    format="png",
 )

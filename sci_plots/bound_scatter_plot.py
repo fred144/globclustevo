@@ -356,8 +356,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
                 "bound_unbound_scatter.png"
             )
         ),
-        dpi=800,
+        dpi=500,
         bbox_inches="tight",
         pad_inches=0.05,
-        format="png",
     )

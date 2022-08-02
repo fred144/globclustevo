@@ -334,10 +334,9 @@ with plt.rc_context(
     #     ax[0].axvline(t, ls=":", color="grey")
     #     ax[1].axvline(t, ls=":", color="grey")
 
-    # plt.savefig(
-    #     "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_sfr.png",
-    #     dpi=800,
-    #     bbox_inches="tight",
-    #     pad_inches=0.05,
-    #     format="png",
-    # )
+    plt.savefig(
+        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_sfr.png",
+        dpi=500,
+        bbox_inches="tight",
+        pad_inches=0.05,
+    )

@@ -417,11 +417,10 @@ if __name__ == "__main__":
         os.path.expanduser(
             (
                 "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
-                "bimodal_mf_overtime.png"
+                "cmf_bimodal_overtime.png"
             )
         ),
-        dpi=800,
+        dpi=500,
         bbox_inches="tight",
         pad_inches=0.08,
-        format="png",
     )

@@ -229,10 +229,9 @@ plt.savefig(
             "fit_params_hist.png"
         )
     ),
-    dpi=800,
+    dpi=500,
     bbox_inches="tight",
     pad_inches=0.05,
-    format="png",
 )
 # ax[0].hist(
 #     f7_core_rad,

@@ -184,8 +184,7 @@ with plt.rc_context(
 
     plt.savefig(
         "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_mass_sfe.png",
-        dpi=800,
+        dpi=500,
         bbox_inches="tight",
         pad_inches=0.05,
-        format="png",
     )

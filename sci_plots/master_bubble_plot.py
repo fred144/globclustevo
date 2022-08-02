@@ -420,8 +420,7 @@ plt.savefig(
             "bubble_plot_dashboard.png"
         )
     ),
-    dpi=800,
+    dpi=500,
     bbox_inches="tight",
     pad_inches=0.05,
-    format="png",
 )

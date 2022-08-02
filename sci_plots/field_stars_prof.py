@@ -83,7 +83,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
         fig, ax = plt.subplots(
             nrows=5,
             ncols=3,
-            gridspec_kw={"height_ratios": [1, 1, 0.25, 1, 1]},
+            gridspec_kw={"height_ratios": [1, 0.7, 0.32, 1, 0.7]},
             sharex="row",
             sharey="row",
             figsize=(8, 11.5),
@@ -254,14 +254,17 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 "\n"
                 r"$\alpha = {:.1f} $"
                 "\n"
-                r"$\Sigma_0 = {} \: \mathrm{{\frac{{M_{{\odot}}}}{{pc^{{2}}}}}}$"
+                r"$\Sigma_0 = {} \: \mathrm{{{{M_{{\odot}}}}{{pc^{{-2}}}}}}$"
                 "\n"
                 r"$M_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
+                "\n"
+                r"$R_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$"
             ).format(
                 xy_fit_r_c,
                 xy_fit_alpha,
                 sci_notation(1, xy_sigma_naught),
                 sci_notation(1, xy_core_mass),
+                xy_half_r,
             )
 
             fit_params, cov_matrix = curve_fit(
@@ -287,14 +290,17 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 "\n"
                 r"$\alpha = {:.1f} $"
                 "\n"
-                r"$\Sigma_0 = {} \: \mathrm{{\frac{{M_{{\odot}}}}{{pc^{{2}}}}}}$"
+                r"$\Sigma_0 = {} \: \mathrm{{{{M_{{\odot}}}}{{pc^{{-2}}}}}}$"
                 "\n"
                 r"$M_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
+                "\n"
+                r"$R_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$"
             ).format(
                 xz_fit_r_c,
                 xz_fit_alpha,
                 sci_notation(1, xz_sigma_naught),
                 sci_notation(1, xz_core_mass),
+                xz_half_r,
             )
 
             fit_params, cov_matrix = curve_fit(
@@ -320,14 +326,17 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 "\n"
                 r"$\alpha = {:.1f} $"
                 "\n"
-                r"$\Sigma_0 = {} \: \mathrm{{\frac{{M_{{\odot}}}}{{pc^{{2}}}}}}$"
+                r"$\Sigma_0 = {} \: \mathrm{{{{M_{{\odot}}}}{{pc^{{-2}}}}}}$"
                 "\n"
                 r"$M_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
+                "\n"
+                r"$R_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$"
             ).format(
                 yz_fit_r_c,
                 yz_fit_alpha,
                 sci_notation(1, yz_sigma_naught),
                 sci_notation(1, yz_core_mass),
+                yz_half_r,
             )
 
             # plot the error bars and theory curves
@@ -344,9 +353,6 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 elinewidth=3,
                 alpha=0.9,
                 c=scatter_color,
-                label=(r"$R_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$").format(
-                    xy_half_r
-                ),
             )
             ax[2 * i + hndlr_2, 0].plot(
                 xy_theory_r,
@@ -363,6 +369,8 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 edgecolor="k",
                 fontsize=8,
                 prop=leg_font,
+                handlelength=0,
+                handletextpad=0,
             )
 
             ax[2 * i + hndlr_2, 1].errorbar(
@@ -374,9 +382,6 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 capsize=5,
                 capthick=3,
                 elinewidth=3,
-                label=(r"$R_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$").format(
-                    xz_half_r
-                ),
                 c=scatter_color,
                 alpha=0.9,
             )
@@ -395,6 +400,8 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 edgecolor="k",
                 fontsize=8,
                 prop=leg_font,
+                handlelength=0,
+                handletextpad=0,
             )
 
             ax[2 * i + hndlr_2, 2].errorbar(
@@ -408,9 +415,6 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 elinewidth=3,
                 alpha=0.9,
                 c=scatter_color,
-                label=(r"$R_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$").format(
-                    yz_half_r
-                ),
             )
             ax[2 * i + hndlr_2, 2].plot(
                 yz_theory_r,
@@ -427,6 +431,8 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 edgecolor="k",
                 fontsize=8,
                 prop=leg_font,
+                handlelength=0,
+                handletextpad=0,
             )
 
             # edit ticks, remove the numbers
@@ -590,7 +596,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             with plt.style.context("dark_background"):
                 if i == 0:
                     # top inset
-                    ax_inset = fig.add_axes([0.785, 0.73, 0.10, 0.07])
+                    ax_inset = ax[i, 2].inset_axes([0.55, 0.20, 0.4, 0.4])
 
                     # 0.70 numbers
                     # ax[2 * i + hndlr_2, 0].axes.xaxis.set_ticklabels([])
@@ -598,7 +604,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                     # ax[2 * i + hndlr_2, 2].axes.xaxis.set_ticklabels([])
                 else:
                     # bottom inset
-                    ax_inset = fig.add_axes([0.785, 0.335, 0.10, 0.07])
+                    ax_inset = ax[3, 2].inset_axes([0.55, 0.20, 0.4, 0.4])
 
                     # plot only for the bottom row
 
@@ -643,7 +649,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
         # add the luminosity color bar
         # fig.subplots_adjust(wspace=0, hspace=0, bottom=0.1)
         # [left, bottom, width, height]
-        cbar_ax = fig.add_axes([0.125, 0.88, 0.775, 0.005])
+        cbar_ax = fig.add_axes([0.125, 0.8525, 0.775, 0.008])
         cbar = fig.colorbar(xz, cax=cbar_ax, pad=0, orientation="horizontal")
         cbar_label = (
             r"$\mathrm{\log_{10}\:\:Projected\:Monochromatic\:Luminosity}"
@@ -664,7 +670,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
         x_labels = [i.get_text().replace("10^", "") for i in cbar_ax.get_xticklabels()]
         cbar_ax.set_xticklabels(x_labels)
         # save_name = os.path.join(runsavepath, "tracked_{}".format(output_num))
-        plt.subplots_adjust(hspace=-0.020, wspace=0)
+        plt.subplots_adjust(hspace=-0.18, wspace=0)
 
         plt.savefig(
             os.path.expanduser(
@@ -673,8 +679,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                     "field_density_profile.png"
                 )
             ),
-            dpi=800,
+            dpi=500,
             bbox_inches="tight",
             pad_inches=0.05,
-            format="png",
         )
