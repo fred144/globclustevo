@@ -94,7 +94,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             ax[2, h].set_visible(False)
         # used to loop through two times to get stacked 2*3s
         for i, (p2, ds) in enumerate(zip(eff_p2, eff_ds)):
-            # correction
+            # correction for invisible row
             if i == 0:
                 row_handler = 0
                 hndlr_2 = 1
