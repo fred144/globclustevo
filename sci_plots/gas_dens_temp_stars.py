@@ -224,7 +224,7 @@ with plt.rc_context(
                         c=color,
                         s=1,
                         edgecolors=None,
-                        alpha=0.015,
+                        alpha=0.012,
                     )
         # clean up edges and add scale bars
         for t in range(cols):

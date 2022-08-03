@@ -88,11 +88,10 @@ def star_formation_efficiency(n_h, mass, metallicity):
     # with shell 6 times less dense. At t_relax 12 times less dense
     # f_s reduced by 5 for low met.
     # f_s increases with stronger B-field
-    n_crit = n_h * 0 + 1.0e3 / (4.0 * 2)
+    n_crit = (n_h * 0 + 1.0e3) / (4.0 * 2)
 
     efficiency = (
-        2.0e-2
-        / 5.0
+        (2.0e-2 / 5.0)
         * (metallicity / 1e-3) ** 0.5
         * (mass / 1.0e4) ** 0.4
         * (n_h / n_crit + 1.0) ** (0.91)

@@ -46,8 +46,8 @@ f7_pop2_matched, f7_matched_nums = find_matching_time(
 f7_halo_matched = get_snapshots(snapshot_file_list=f7_halo_ds, get_list=f7_matched_nums)
 
 # sampple idxs
-prof_start = 766
-prof_end = 767
+prof_start = 950
+prof_end = 951
 prof_step = 1
 
 fs070_p2 = f7_pop2_matched[prof_start:prof_end:prof_step]
