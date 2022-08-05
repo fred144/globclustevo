@@ -13,7 +13,7 @@ from matplotlib import colors
 import misc_visuals
 
 # 70% efficiency run
-strt = 126
+strt = 925
 end = 1000
 step = 1
 halo_data_directory = r"../halo_data/fs07_refine/fof_best"
