@@ -4,21 +4,24 @@ sys.path.append("../")
 import numpy as np
 import os
 import glob
-from modules.macros import filter_snapshots, characterisitc_mass, sci_notation
-from modules.luminosity.lum_functions import unpack_pop_ii_data
-
-import matplotlib as mpl
+from modules.macros import filter_snapshots
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
 import matplotlib.cm as cm
-import matplotlib.font_manager as font_manager
 import matplotlib.patches as patches
-from matplotlib.ticker import MaxNLocator
 from matplotlib import colors
-from matplotlib.gridspec import GridSpec
-
+import misc_visuals
 
 # 70% efficiency run
+strt = 126
+end = 1000
+step = 1
+halo_data_directory = r"../halo_data/fs07_refine/fof_best"
+pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
+sequence_dir = "../rendering/luminosity/fs07_refine/panel_t_series"
+if not os.path.exists(sequence_dir):
+    print("# Creating new sequence directory", sequence_dir)
+    os.makedirs(sequence_dir)
 fs70_ds = np.loadtxt("../sci_plots/fof_time_series/fs070_fof_best_113_1000.txt")[::1, :]
 fail_mask = fs70_ds[:, 3] > 30
 # all results are fit filtered
@@ -29,17 +32,14 @@ f7_lum_bound = fs70_ds[:, 4][fail_mask]
 f7_total_lum = f7_lum_field + f7_lum_bound
 
 
-strt = 126
-end = 1000
-step = 20
-halo_data_directory = r"../halo_data/fs07_refine/fof_best"
-pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
 pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
 halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
 
 plt_wdth = 400
 star_bins = 1000
 pxl_size = (plt_wdth / star_bins) ** 2  # pc
+lum_range = (2e32, 5e35)
+efficiency = 0.70
 
 
 with plt.style.context("dark_background"):
@@ -56,7 +56,7 @@ with plt.style.context("dark_background"):
         cmap = cmap(np.linspace(0, 1, 8))
 
         for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
-
+            output_num_string = ds.split("/")[-1].split("_")[-1]
             fig = plt.figure(
                 figsize=(12, 7),
                 dpi=400,
@@ -129,7 +129,30 @@ with plt.style.context("dark_background"):
                 color=cmap[0],
                 label="$\mathrm{Field}$",
             )
-            ax4.axvline(x=t_myr, ls="--", c="w")
+            # after current times
+            ax4.plot(
+                f7_t_sim_myr[~time_mask],
+                f7_total_lum[~time_mask],
+                lw=3,
+                alpha=0.5,
+                color="grey",
+            )
+            ax4.plot(
+                f7_t_sim_myr[~time_mask],
+                f7_lum_bound[~time_mask],
+                lw=3,
+                alpha=0.5,
+                color="grey",
+            )
+            ax4.plot(
+                f7_t_sim_myr[~time_mask],
+                f7_lum_field[~time_mask],
+                lw=3,
+                alpha=0.5,
+                color="grey",
+            )
+            ax4.axvline(x=t_myr, ls="--", c="w", lw=2, alpha=0.8)
+            ax4.axvspan(t_myr, f7_t_sim_myr.max(), alpha=0.1, color="grey")
 
             # time series plots set axis params
             ax4.set_xlabel("$\mathrm{t\:(Myr)}$")
@@ -149,7 +172,9 @@ with plt.style.context("dark_background"):
                 zorder=0.5,
                 alpha=0.8,
             )
-            ax4.legend(loc="lower right")
+            # draw the line plot legend and make it square
+            line_legend = ax4.legend(loc=(0.8, 0.09), borderpad=0.1)
+            line_legend.get_frame().set_boxstyle("Square")
             fig.canvas.draw()
             y_labels = [i.get_text().replace("10^", "") for i in ax4.get_yticklabels()]
             ax4.set_yticklabels(y_labels)
@@ -177,7 +202,7 @@ with plt.style.context("dark_background"):
                 # interpolation="gaussian",
                 origin="lower",
                 extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
-                norm=LogNorm(vmin=2e32, vmax=5e35),  #!!! mess arround
+                norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
             )
 
             ax2_im = ax2.imshow(
@@ -186,7 +211,7 @@ with plt.style.context("dark_background"):
                 # interpolation="gaussian",
                 origin="lower",
                 extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
-                norm=LogNorm(vmin=2e32, vmax=5e35),  #!!! mess arround
+                norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
             )
 
             ax3_im = ax3.imshow(
@@ -195,7 +220,7 @@ with plt.style.context("dark_background"):
                 # interpolation="gaussian",
                 origin="lower",
                 extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
-                norm=LogNorm(vmin=2e32, vmax=5e35),  #!!! mess arround
+                norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
             )
 
             # add scale
@@ -248,12 +273,12 @@ with plt.style.context("dark_background"):
                 0.165,
                 0.25,
                 (
-                    "$\quad\:\: f_{{*}} = 0.70$"
+                    "$\quad\:\: f_{{*}} = {:.2f}$"
                     "\n"
                     r"$\mathrm{{z = {:.2f} }}$"
                     "\n"
                     r"$\mathrm{{t = {:.2f} \: Myr}}$"
-                ).format(redshift, t_myr),
+                ).format(efficiency, redshift, t_myr),
                 ha="left",
                 va="top",
                 color="white",
@@ -267,3 +292,28 @@ with plt.style.context("dark_background"):
                     "pad": 0.42,
                 },
             )
+
+            # add fancy axes indicators
+            ax1_inset = ax1.inset_axes([0.03, 0.03, 0.15, 0.15])
+            misc_visuals.xy_ax_indicator(ax1_inset)
+            ax1_inset.set_alpha(0)
+
+            ax2_inset = ax2.inset_axes([0.03, 0.03, 0.15, 0.15])
+            misc_visuals.xz_ax_indicator(ax2_inset)
+            ax2_inset.set_alpha(0)
+
+            ax3_inset = ax3.inset_axes([0.03, 0.03, 0.15, 0.15])
+            misc_visuals.yz_ax_indicator(ax3_inset)
+            ax3_inset.set_alpha(0)
+
+            output_path = os.path.join(
+                sequence_dir, "lum_series_{}.png".format(output_num_string)
+            )
+            plt.savefig(
+                os.path.expanduser(output_path),
+                dpi=500,
+                bbox_inches="tight",
+                pad_inches=0.08,
+            )
+
+            print(">Saved:", output_path)
