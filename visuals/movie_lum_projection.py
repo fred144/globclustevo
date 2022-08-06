@@ -13,7 +13,7 @@ from matplotlib import colors
 import misc_visuals
 
 # 70% efficiency run
-strt = 925
+strt = 1000
 end = 1000
 step = 1
 halo_data_directory = r"../halo_data/fs07_refine/fof_best"
@@ -313,7 +313,7 @@ with plt.style.context("dark_background"):
                 os.path.expanduser(output_path),
                 dpi=500,
                 bbox_inches="tight",
-                pad_inches=0.08,
+                pad_inches=0.05,
             )
 
             print(">Saved:", output_path)
