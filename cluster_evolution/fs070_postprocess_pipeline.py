@@ -26,6 +26,9 @@ yt.enable_parallelism()
 simulation_run = "fs07_refine"
 finder_profiler_run = "fof_best"
 processor_number = 0  # 0 means one process unparalleled
+start_step = 1000  # fs07:113, fs035:154
+end_step = 1110
+step = 1
 # ===================================local test=================================
 # datadir = os.path.relpath("../../cosm_test_data/refine")
 # parent_folder = "../rendering"
@@ -46,7 +49,6 @@ profiler_run_save_path = "../gc_profiles/profile_runs/{}/{}".format(
     simulation_run, finder_profiler_run
 )
 
-
 if not os.path.exists(pop_2_save):
     print("# Creating new sequence directory", pop_2_save)
     os.makedirs(pop_2_save)
@@ -58,10 +60,6 @@ if not os.path.exists(psc_save):
     os.makedirs(psc_save)
 # ===================================plot params=================================
 
-
-start_step = 1000  # fs07:113, fs035:154
-end_step = 1000  # 1110
-step = 1
 
 # read fields explicitly, not recognized by YT from this ver of RAMSES
 cell_fields = [
@@ -220,8 +218,9 @@ for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
 # =============================================================================
 #!!! halo run post procesing
 # =============================================================================
+print("=============================================================================")
 print("RUNING HALO FINDER")
-
+print("=============================================================================")
 # local_snapshots = filter_snapshots(r"../../cosm_test_data/fs035_ms10", 500, 500, 1)
 
 datadir = os.path.expanduser(
@@ -400,7 +399,9 @@ for i, file_name in enumerate(local_snapshots):
 # =============================================================================
 #!!! bsc profiler post processor
 # =============================================================================
+print("=============================================================================")
 print("RUNING PROFILER")
+print("=============================================================================")
 plt.rcParams.update({"figure.max_open_warning": 0})
 
 
