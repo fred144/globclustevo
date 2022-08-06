@@ -9,7 +9,7 @@ sys.path.append("..")  # makes sure that importing the modules work
 
 from modules.macros import code_age_to_myr, common_filter_snapshots
 from gc_profiles.snapshot_profiler import run_profiler
-from matplotlib.pyplot import plt
+import matplotlib.pyplot as plt
 import numpy as np
 import h5py as h5
 import yt
