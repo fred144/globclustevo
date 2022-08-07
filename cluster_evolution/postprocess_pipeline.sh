@@ -1,8 +1,8 @@
 #!/bin/bash
-#SBATCH -J fof_halo_run
+#SBATCH -J postprocess_pipeline
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=20
-#SBATCH -t 24:00:00
+#SBATCH --cpus-per-task=8
+#SBATCH -t 48:00:00
 
 
 

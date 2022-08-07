@@ -1,0 +1,807 @@
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca mpi_cuda_support 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01000/info_01000.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01000_592_83_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01000_592_83_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01000_592_83_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01001/info_01001.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01001_593_04_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01001_593_04_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01001_593_04_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01002/info_01002.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01002_593_26_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01002_593_26_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01002_593_26_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01003/info_01003.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01003_593_47_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01003_593_47_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01003_593_47_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01004/info_01004.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01004_593_67_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01004_593_67_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01004_593_67_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01005/info_01005.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01005_593_87_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01005_593_87_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01005_593_87_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01006/info_01006.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01006_594_09_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01006_594_09_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01006_594_09_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01007/info_01007.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01007_594_30_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01007_594_30_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01007_594_30_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01008/info_01008.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01008_594_52_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01008_594_52_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01008_594_52_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01009/info_01009.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01009_594_74_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01009_594_74_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01009_594_74_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01010/info_01010.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01010_594_96_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01010_594_96_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01010_594_96_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01011/info_01011.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01011_595_16_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01011_595_16_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01011_595_16_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01012/info_01012.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01012_595_37_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01012_595_37_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01012_595_37_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01013/info_01013.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01013_595_58_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01013_595_58_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01013_595_58_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01014/info_01014.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01014_595_80_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01014_595_80_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01014_595_80_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01015/info_01015.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01015_596_02_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01015_596_02_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01015_596_02_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01016/info_01016.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01016_596_23_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01016_596_23_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01016_596_23_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01017/info_01017.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01017_596_44_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01017_596_44_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01017_596_44_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01018/info_01018.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01018_596_66_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01018_596_66_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01018_596_66_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01019/info_01019.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01019_596_86_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01019_596_86_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01019_596_86_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01020/info_01020.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01020_597_08_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01020_597_08_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01020_597_08_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01021/info_01021.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01021_597_29_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01021_597_29_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01021_597_29_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01022/info_01022.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01022_597_51_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01022_597_51_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01022_597_51_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01023/info_01023.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01023_597_72_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01023_597_72_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01023_597_72_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01024/info_01024.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01024_597_94_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01024_597_94_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01024_597_94_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01025/info_01025.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01025_598_16_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01025_598_16_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01025_598_16_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01026/info_01026.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01026_598_37_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01026_598_37_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01026_598_37_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01027/info_01027.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01027_598_57_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01027_598_57_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01027_598_57_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01028/info_01028.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01028_598_78_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01028_598_78_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01028_598_78_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01029/info_01029.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01029_598_98_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01029_598_98_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01029_598_98_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01030/info_01030.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01030_599_19_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01030_599_19_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01030_599_19_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01031/info_01031.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01031_599_40_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01031_599_40_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01031_599_40_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01032/info_01032.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01032_599_61_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01032_599_61_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01032_599_61_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01033/info_01033.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01033_599_81_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01033_599_81_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01033_599_81_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01034/info_01034.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01034_600_01_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01034_600_01_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01034_600_01_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01035/info_01035.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01035_600_23_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01035_600_23_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01035_600_23_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01036/info_01036.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01036_600_45_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01036_600_45_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01036_600_45_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01037/info_01037.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01037_600_66_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01037_600_66_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01037_600_66_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01038/info_01038.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01038_600_89_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01038_600_89_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01038_600_89_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01039/info_01039.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01039_601_11_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01039_601_11_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01039_601_11_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01040/info_01040.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01040_601_32_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01040_601_32_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01040_601_32_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01041/info_01041.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01041_601_53_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01041_601_53_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01041_601_53_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01042/info_01042.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01042_601_74_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01042_601_74_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01042_601_74_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01043/info_01043.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01043_601_96_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01043_601_96_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01043_601_96_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01044/info_01044.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01044_602_17_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01044_602_17_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01044_602_17_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01045/info_01045.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01045_602_40_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01045_602_40_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01045_602_40_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01046/info_01046.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01046_602_62_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01046_602_62_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01046_602_62_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01047/info_01047.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01047_602_82_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01047_602_82_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01047_602_82_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01048/info_01048.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01048_603_03_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01048_603_03_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01048_603_03_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01049/info_01049.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01049_603_24_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01049_603_24_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01049_603_24_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01050/info_01050.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01050_603_45_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01050_603_45_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01050_603_45_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01051/info_01051.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01051_603_67_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01051_603_67_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01051_603_67_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01052/info_01052.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01052_603_88_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01052_603_88_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01052_603_88_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01053/info_01053.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01053_604_09_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01053_604_09_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01053_604_09_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01054/info_01054.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01054_604_30_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01054_604_30_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01054_604_30_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01055/info_01055.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01055_604_51_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01055_604_51_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01055_604_51_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01056/info_01056.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01056_604_74_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01056_604_74_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01056_604_74_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01057/info_01057.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01057_604_95_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01057_604_95_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01057_604_95_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01058/info_01058.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01058_605_16_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01058_605_16_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01058_605_16_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01059/info_01059.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01059_605_37_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01059_605_37_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01059_605_37_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01060/info_01060.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01060_605_59_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01060_605_59_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01060_605_59_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01061/info_01061.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01061_605_81_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01061_605_81_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01061_605_81_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01062/info_01062.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01062_606_01_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01062_606_01_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01062_606_01_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01063/info_01063.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01063_606_22_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01063_606_22_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01063_606_22_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01064/info_01064.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01064_606_43_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01064_606_43_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01064_606_43_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01065/info_01065.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01065_606_66_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01065_606_66_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01065_606_66_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01066/info_01066.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01066_606_86_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01066_606_86_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01066_606_86_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01067/info_01067.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01067_607_06_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01067_607_06_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01067_607_06_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01068/info_01068.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01068_607_27_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01068_607_27_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01068_607_27_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01069/info_01069.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01069_607_49_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01069_607_49_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01069_607_49_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01070/info_01070.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01070_607_70_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01070_607_70_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01070_607_70_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01071/info_01071.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01071_607_92_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01071_607_92_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01071_607_92_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01072/info_01072.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01072_608_12_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01072_608_12_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01072_608_12_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01073/info_01073.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01073_608_34_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01073_608_34_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01073_608_34_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01074/info_01074.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01074_608_54_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01074_608_54_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01074_608_54_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01075/info_01075.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01075_608_75_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01075_608_75_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01075_608_75_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01076/info_01076.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01076_608_96_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01076_608_96_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01076_608_96_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01077/info_01077.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01077_609_18_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01077_609_18_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01077_609_18_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01078/info_01078.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01078_609_39_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01078_609_39_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01078_609_39_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01079/info_01079.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01079_609_59_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01079_609_59_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01079_609_59_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01080/info_01080.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01080_609_80_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01080_609_80_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01080_609_80_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01081/info_01081.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01081_610_02_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01081_610_02_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01081_610_02_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01082/info_01082.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01082_610_22_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01082_610_22_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01082_610_22_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01083/info_01083.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01083_610_43_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01083_610_43_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01083_610_43_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01084/info_01084.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01084_610_64_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01084_610_64_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01084_610_64_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01085/info_01085.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01085_610_85_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01085_610_85_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01085_610_85_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01086/info_01086.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01086_611_06_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01086_611_06_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01086_611_06_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01087/info_01087.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01087_611_28_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01087_611_28_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01087_611_28_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01088/info_01088.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01088_611_51_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01088_611_51_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01088_611_51_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01089/info_01089.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01089_611_72_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01089_611_72_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01089_611_72_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01090/info_01090.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01090_611_92_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01090_611_92_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01090_611_92_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01091/info_01091.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01091_612_12_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01091_612_12_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01091_612_12_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01092/info_01092.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01092_612_33_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01092_612_33_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01092_612_33_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01093/info_01093.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01093_612_55_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01093_612_55_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01093_612_55_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01094/info_01094.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01094_612_78_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01094_612_78_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01094_612_78_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01095/info_01095.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01095_612_98_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01095_612_98_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01095_612_98_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01096/info_01096.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01096_613_20_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01096_613_20_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01096_613_20_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01097/info_01097.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01097_613_41_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01097_613_41_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01097_613_41_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01098/info_01098.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01098_613_63_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01098_613_63_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01098_613_63_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01099/info_01099.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01099_613_85_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01099_613_85_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01099_613_85_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01100/info_01100.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01100_614_07_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01100_614_07_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01100_614_07_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01101/info_01101.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01101_614_28_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01101_614_28_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01101_614_28_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01102/info_01102.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01102_614_51_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01102_614_51_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01102_614_51_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01103/info_01103.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01103_614_72_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01103_614_72_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01103_614_72_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01104/info_01104.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01104_614_92_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01104_614_92_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01104_614_92_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01105/info_01105.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01105_615_13_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01105_615_13_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01105_615_13_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01106/info_01106.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01106_615_33_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01106_615_33_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01106_615_33_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01107/info_01107.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01107_615_55_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01107_615_55_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01107_615_55_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01108/info_01108.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01108_615_77_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01108_615_77_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01108_615_77_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01109/info_01109.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01109_615_98_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01109_615_98_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01109_615_98_myr.txt
+#________________________________________________________________
+# reading in /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01110/info_01110.txt
+# saved: ../particle_data/pop_2_data/fs07_refine/pos_01110_616_20_myr.txt
+# saved: ../particle_data/psc_data/fs07_refine/psc_01110_616_20_myr.txt
+# saved: ../particle_data/sfc_data/fs07_refine/sfc_01110_616_20_myr.txt
+=============================================================================
+RUNING HALO FINDER
+=============================================================================
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01000
+Link length is 0.000000
+Filling in 53435 particles
+Number of initial groups:25490
+Number of groups:159
+FOF CPU TIME: 0.042666 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01001
+Link length is 0.000000
+Filling in 53435 particles
+Number of initial groups:25570
+Number of groups:170
+FOF CPU TIME: 0.042424 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01002
+Link length is 0.000000
+Filling in 53435 particles
+Number of initial groups:25600
+Number of groups:161
+FOF CPU TIME: 0.043010 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01003
+Link length is 0.000000
+Filling in 53611 particles
+Number of initial groups:25722
+Number of groups:172
+FOF CPU TIME: 0.042569 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01004
+Link length is 0.000000
+Filling in 53611 particles
+Number of initial groups:25733
+Number of groups:189
+FOF CPU TIME: 0.043211 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01005
+Link length is 0.000000
+Filling in 53611 particles
+Number of initial groups:25717
+Number of groups:179
+FOF CPU TIME: 0.041734 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01006
+Link length is 0.000000
+Filling in 53681 particles
+Number of initial groups:25819
+Number of groups:177
+FOF CPU TIME: 0.041857 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01007
+Link length is 0.000000
+Filling in 53681 particles
+Number of initial groups:25883
+Number of groups:185
+FOF CPU TIME: 0.041926 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01008
+Link length is 0.000000
+Filling in 53681 particles
+Number of initial groups:25856
+Number of groups:186
+FOF CPU TIME: 0.042009 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01009
+Link length is 0.000000
+Filling in 53681 particles
+Number of initial groups:26118
+Number of groups:181
+FOF CPU TIME: 0.043220 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01010
+Link length is 0.000000
+Filling in 53681 particles
+Number of initial groups:26209
+Number of groups:193
+FOF CPU TIME: 0.040897 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01011
+Link length is 0.000000
+Filling in 53783 particles
+Number of initial groups:26175
+Number of groups:189
+FOF CPU TIME: 0.042408 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01012
+Link length is 0.000000
+Filling in 53783 particles
+Number of initial groups:26315
+Number of groups:192
+FOF CPU TIME: 0.043002 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01013
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26342
+Number of groups:173
+FOF CPU TIME: 0.043410 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01014
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26384
+Number of groups:177
+FOF CPU TIME: 0.043723 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01015
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26496
+Number of groups:163
+FOF CPU TIME: 0.042935 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01016
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26559
+Number of groups:161
+FOF CPU TIME: 0.042130 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01017
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26502
+Number of groups:163
+FOF CPU TIME: 0.040920 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01018
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26561
+Number of groups:173
+FOF CPU TIME: 0.042127 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01019
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26639
+Number of groups:154
+FOF CPU TIME: 0.041976 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01020
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26613
+Number of groups:154
+FOF CPU TIME: 0.042109 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01021
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26735
+Number of groups:153
+FOF CPU TIME: 0.041993 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01022
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26816
+Number of groups:152
+FOF CPU TIME: 0.041524 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01023
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26609
+Number of groups:161
+FOF CPU TIME: 0.041968 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01024
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26693
+Number of groups:141
+FOF CPU TIME: 0.040943 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01025
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26675
+Number of groups:143
+FOF CPU TIME: 0.042054 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01026
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26794
+Number of groups:139
+FOF CPU TIME: 0.042767 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01027
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26772
+Number of groups:141
+FOF CPU TIME: 0.042022 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01028
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26781
+Number of groups:151
+FOF CPU TIME: 0.042321 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01029
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26735
+Number of groups:167
+FOF CPU TIME: 0.041601 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01030
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26761
+Number of groups:158
+FOF CPU TIME: 0.041348 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01031
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26707
+Number of groups:154
+FOF CPU TIME: 0.042042 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01032
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26776
+Number of groups:146
+FOF CPU TIME: 0.041335 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01033
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26883
+Number of groups:158
+FOF CPU TIME: 0.041366 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01034
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26754
+Number of groups:156
+FOF CPU TIME: 0.041216 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01035
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26927
+Number of groups:155
+FOF CPU TIME: 0.041098 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01036
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:26971
+Number of groups:157
+FOF CPU TIME: 0.040902 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01037
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:27033
+Number of groups:152
+FOF CPU TIME: 0.040940 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01038
+Link length is 0.000000
+Filling in 53922 particles
+Number of initial groups:27032
+Number of groups:157
+FOF CPU TIME: 0.042144 secs
