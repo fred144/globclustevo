@@ -16,7 +16,7 @@ module load openmpi
 source ~/py-virtual-envs/master/bin/activate
 
 
-SCRIPT="/lustre/fgarcia4/glob_clust_evo/halo_data/fs070_postprocess_pipeline.py"
+SCRIPT="/lustre/fgarcia4/glob_clust_evo/halo_data/fs035_postprocess_pipeline.py"
 
 # source /homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh
 # which python
