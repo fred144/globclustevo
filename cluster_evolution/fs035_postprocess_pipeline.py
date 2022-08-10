@@ -26,7 +26,7 @@ yt.enable_parallelism()
 simulation_run = "fs035_ms10"
 finder_profiler_run = "fof_best"
 processor_number = 0  # 0 means one process unparalleled
-start_step = 1177  # fs07:113, fs035:154
+start_step = 1307  # fs07:113, fs035:154
 end_step = 1316
 step = 1
 # ===================================local test=================================
@@ -85,317 +85,317 @@ epf = [
 #!!! particle data post processing
 # =============================================================================
 
-for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
-    print("#________________________________________________________________")
-    infofile = os.path.abspath(
-        datadir + f"/output_{output_num:05}/info_{output_num:05}.txt"
-    )
-    print("# reading in", infofile)
+# for loop_num, output_num in enumerate(range(start_step, end_step + 1)):
+#     print("#________________________________________________________________")
+#     infofile = os.path.abspath(
+#         datadir + f"/output_{output_num:05}/info_{output_num:05}.txt"
+#     )
+#     print("# reading in", infofile)
 
-    # read in RAMSES data set
-    ds = yt.load(infofile, fields=cell_fields, extra_particle_fields=epf)
+#     # read in RAMSES data set
+#     ds = yt.load(infofile, fields=cell_fields, extra_particle_fields=epf)
 
-    # get time-dependent params.
-    redshft = ds.current_redshift
-    current_hubble = ds.hubble_constant
-    current_time = float(ds.current_time.in_units("Myr"))
+#     # get time-dependent params.
+#     redshft = ds.current_redshift
+#     current_hubble = ds.hubble_constant
+#     current_time = float(ds.current_time.in_units("Myr"))
 
-    # extract all data fields
-    ad = ds.all_data()
+#     # extract all data fields
+#     ad = ds.all_data()
 
-    # get SFC/PSC positions and other important fields,
-    # need to modify definitions to get these sinks
-    pos_sfcs = np.array(ad["SFC", "particle_position"])
-    pos_pscs = np.array(ad["PSC", "particle_position"])
+#     # get SFC/PSC positions and other important fields,
+#     # need to modify definitions to get these sinks
+#     pos_sfcs = np.array(ad["SFC", "particle_position"])
+#     pos_pscs = np.array(ad["PSC", "particle_position"])
 
-    # read POPII star info
-    star_id = np.array(ad["star", "particle_identity"])
-    be_star = ad["star", "particle_birth_epoch"]
-    x_pos = np.array(ad["star", "particle_position_x"])
-    y_pos = np.array(ad["star", "particle_position_y"])
-    z_pos = np.array(ad["star", "particle_position_z"])
+#     # read POPII star info
+#     star_id = np.array(ad["star", "particle_identity"])
+#     be_star = ad["star", "particle_birth_epoch"]
+#     x_pos = np.array(ad["star", "particle_position_x"])
+#     y_pos = np.array(ad["star", "particle_position_y"])
+#     z_pos = np.array(ad["star", "particle_position_z"])
 
-    # center based on star position distribution
-    x_center = np.mean(x_pos)
-    y_center = np.mean(y_pos)
-    z_center = np.mean(z_pos)
-    plt_ctr = np.array([x_center, y_center, z_center])
-    plt_ctr_in_pc = np.array(ds.arr(plt_ctr, "code_length").to("pc"))
+#     # center based on star position distribution
+#     x_center = np.mean(x_pos)
+#     y_center = np.mean(y_pos)
+#     z_center = np.mean(z_pos)
+#     plt_ctr = np.array([x_center, y_center, z_center])
+#     plt_ctr_in_pc = np.array(ds.arr(plt_ctr, "code_length").to("pc"))
 
-    # translate points to center
-    x_pos = x_pos - plt_ctr[0]
-    y_pos = y_pos - plt_ctr[1]
-    z_pos = z_pos - plt_ctr[2]
+#     # translate points to center
+#     x_pos = x_pos - plt_ctr[0]
+#     y_pos = y_pos - plt_ctr[1]
+#     z_pos = z_pos - plt_ctr[2]
 
-    pos_sfcs_recentered = pos_sfcs - plt_ctr
-    pos_pscs_recentered = pos_pscs - plt_ctr
+#     pos_sfcs_recentered = pos_sfcs - plt_ctr
+#     pos_pscs_recentered = pos_pscs - plt_ctr
 
-    # particle clumps by age; converts code age to relative ages
-    unique_birth_epochs = code_age_to_myr(
-        ad["star", "particle_birth_epoch"], current_hubble, unique_age=True
-    )
-    # calculate the age of the universe when the first star was born
-    # using the logSFC as a reference point for redshift when the first star
-    # was born. Every age is relative to this. Due to our mods of ramses.
-    log_sfc = np.loadtxt("../sim_log_files/{}/logSFC".format(simulation_run))
-    birth_start = np.round_(
-        float(ds.cosmology.t_from_z(log_sfc[0, 2]).in_units("Myr")), 0
-    )
+#     # particle clumps by age; converts code age to relative ages
+#     unique_birth_epochs = code_age_to_myr(
+#         ad["star", "particle_birth_epoch"], current_hubble, unique_age=True
+#     )
+#     # calculate the age of the universe when the first star was born
+#     # using the logSFC as a reference point for redshift when the first star
+#     # was born. Every age is relative to this. Due to our mods of ramses.
+#     log_sfc = np.loadtxt("../sim_log_files/{}/logSFC".format(simulation_run))
+#     birth_start = np.round_(
+#         float(ds.cosmology.t_from_z(log_sfc[0, 2]).in_units("Myr")), 0
+#     )
 
-    # all the birth epochs of the stars
-    converted_unfiltered = code_age_to_myr(
-        ad["star", "particle_birth_epoch"], current_hubble, unique_age=False
-    )
+#     # all the birth epochs of the stars
+#     converted_unfiltered = code_age_to_myr(
+#         ad["star", "particle_birth_epoch"], current_hubble, unique_age=False
+#     )
 
-    # ==========================luminosity mappping data extraction==============
+#     # ==========================luminosity mappping data extraction==============
 
-    abs_birth_epochs = np.round(converted_unfiltered + birth_start, 3)  #!
-    current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
-    extra_info = np.array(
-        [np.concatenate((np.array([current_time, redshft]), plt_ctr, plt_ctr_in_pc))]
-    )
-    extra_info.resize(np.size(current_ages))
-    star_info = np.array(
-        [
-            star_id,
-            current_ages,
-            ds.arr(x_pos, "code_length").to("pc"),
-            ds.arr(y_pos, "code_length").to("pc"),
-            ds.arr(z_pos, "code_length").to("pc"),
-            ds.arr(ad["star", "particle_mass"], "code_mass").to("msun"),
-            extra_info,
-        ]
-    )
+#     abs_birth_epochs = np.round(converted_unfiltered + birth_start, 3)  #!
+#     current_ages = np.round(current_time, 3) - np.round(abs_birth_epochs, 3)
+#     extra_info = np.array(
+#         [np.concatenate((np.array([current_time, redshft]), plt_ctr, plt_ctr_in_pc))]
+#     )
+#     extra_info.resize(np.size(current_ages))
+#     star_info = np.array(
+#         [
+#             star_id,
+#             current_ages,
+#             ds.arr(x_pos, "code_length").to("pc"),
+#             ds.arr(y_pos, "code_length").to("pc"),
+#             ds.arr(z_pos, "code_length").to("pc"),
+#             ds.arr(ad["star", "particle_mass"], "code_mass").to("msun"),
+#             extra_info,
+#         ]
+#     )
 
-    # =========================star positions save=================================
+#     # =========================star positions save=================================
 
-    star_info = np.array(star_info).T
-    save_time = str(format(current_time, ".2f")).replace(".", "_")
-    save_name = "{}/pos_{:05d}_{}_myr.txt".format(pop_2_save, output_num, save_time)
-    header = (
-        "\t\tID"
-        "\t\tCurrentAges[MYr]"
-        "\t\tX[pc]"
-        "\t\tY[pc]\t\t"
-        "Z[pc]\t\t"
-        "mass[Msun]"
-        "\t\tt_sim[Myr], z, ctr(code), ctr(pc)"
-    )
-    np.savetxt(save_name, X=star_info, header=header)
-    print("# saved:", save_name)
+#     star_info = np.array(star_info).T
+#     save_time = str(format(current_time, ".2f")).replace(".", "_")
+#     save_name = "{}/pos_{:05d}_{}_myr.txt".format(pop_2_save, output_num, save_time)
+#     header = (
+#         "\t\tID"
+#         "\t\tCurrentAges[MYr]"
+#         "\t\tX[pc]"
+#         "\t\tY[pc]\t\t"
+#         "Z[pc]\t\t"
+#         "mass[Msun]"
+#         "\t\tt_sim[Myr], z, ctr(code), ctr(pc)"
+#     )
+#     np.savetxt(save_name, X=star_info, header=header)
+#     print("# saved:", save_name)
 
-    # =========================== psc sfc save==================================
+#     # =========================== psc sfc save==================================
 
-    psc_kazu_radii = np.abs(
-        ds.arr(ad["PSC", "particle_metallicity"], "code_length").to("pc")
-    )
-    sfc_kazu_radii = np.abs(
-        ds.arr(ad["SFC", "particle_metallicity"], "code_length").to("pc")
-    )
-    pos_pscs = ds.arr(pos_pscs_recentered, "code_length").to("pc")
-    pos_sfcs = ds.arr(pos_sfcs_recentered, "code_length").to("pc")
+#     psc_kazu_radii = np.abs(
+#         ds.arr(ad["PSC", "particle_metallicity"], "code_length").to("pc")
+#     )
+#     sfc_kazu_radii = np.abs(
+#         ds.arr(ad["SFC", "particle_metallicity"], "code_length").to("pc")
+#     )
+#     pos_pscs = ds.arr(pos_pscs_recentered, "code_length").to("pc")
+#     pos_sfcs = ds.arr(pos_sfcs_recentered, "code_length").to("pc")
 
-    # particle tags, see if unique
-    psc_tag = np.array(ad["PSC", "particle_index"])
-    sfc_tag = np.array(ad["SFC", "particle_index"])
+#     # particle tags, see if unique
+#     psc_tag = np.array(ad["PSC", "particle_index"])
+#     sfc_tag = np.array(ad["SFC", "particle_index"])
 
-    # save paths
-    psc_path = "{}/psc_{:05d}_{}_myr.txt".format(psc_save, output_num, save_time)
-    sfc_path = "{}/sfc_{:05d}_{}_myr.txt".format(sfc_save, output_num, save_time)
-    # x(pc), y(pc), z(pc),radii at birth (pc), particle tag
-    psc_save_data = np.concatenate(
-        (pos_pscs, psc_kazu_radii[:, None], psc_tag[:, None]), axis=1
-    )
-    sfc_save_data = np.concatenate(
-        (pos_sfcs, sfc_kazu_radii[:, None], sfc_tag[:, None]), axis=1
-    )
-    test_particale_header = "x(pc), y(pc), z(pc),radii at birth (pc), particle tag"
-    print("# saved:", psc_path)
-    print("# saved:", sfc_path)
-    np.savetxt(psc_path, X=psc_save_data, header=test_particale_header)
-    np.savetxt(sfc_path, X=sfc_save_data, header=test_particale_header)
-
-
-# =============================================================================
-#!!! halo run post procesing
-# =============================================================================
-print("=============================================================================")
-print("RUNING HALO FINDER")
-print("=============================================================================")
-# local_snapshots = filter_snapshots(r"../../cosm_test_data/fs035_ms10", 500, 500, 1)
-
-datadir = os.path.expanduser(
-    "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
-).format(simulation_run)
-local_snapshots = filter_snapshots(datadir, start_step, end_step, 1)
-
-# if post processing isn't done alongside catalogue
-# fof_run_snapshots = filter_snapshots("../halo_data/fs07_refine/fof_best", 113, 918, 1)
-# pop_2_dataset = filter_snapshots(
-#     "../particle_data/pop_2_data/fs07_refine", 113, 918, 1
-# )
-# reduced_h5_list = common_filter_snapshots(fof_run_snapshots, local_snapshots)
-# reduced_pop2_list = common_filter_snapshots(pop_2_dataset, reduced_h5_list)
-# reduced_local_list = common_filter_snapshots(local_snapshots, reduced_h5_list)
+#     # save paths
+#     psc_path = "{}/psc_{:05d}_{}_myr.txt".format(psc_save, output_num, save_time)
+#     sfc_path = "{}/sfc_{:05d}_{}_myr.txt".format(sfc_save, output_num, save_time)
+#     # x(pc), y(pc), z(pc),radii at birth (pc), particle tag
+#     psc_save_data = np.concatenate(
+#         (pos_pscs, psc_kazu_radii[:, None], psc_tag[:, None]), axis=1
+#     )
+#     sfc_save_data = np.concatenate(
+#         (pos_sfcs, sfc_kazu_radii[:, None], sfc_tag[:, None]), axis=1
+#     )
+#     test_particale_header = "x(pc), y(pc), z(pc),radii at birth (pc), particle tag"
+#     print("# saved:", psc_path)
+#     print("# saved:", sfc_path)
+#     np.savetxt(psc_path, X=psc_save_data, header=test_particale_header)
+#     np.savetxt(sfc_path, X=sfc_save_data, header=test_particale_header)
 
 
-for i, file_name in enumerate(local_snapshots):
-    snapshot_num_string = file_name.split("_")[-1]
-    ds_file_name = os.path.join(file_name, "info_{}.txt".format(snapshot_num_string))
-    print("> Reading", file_name)
+# # =============================================================================
+# #!!! halo run post procesing
+# # =============================================================================
+# print("=============================================================================")
+# print("RUNING HALO FINDER")
+# print("=============================================================================")
+# # local_snapshots = filter_snapshots(r"../../cosm_test_data/fs035_ms10", 500, 500, 1)
 
-    ds = yt.load(ds_file_name, fields=cell_fields, extra_particle_fields=epf)
-    ad = ds.all_data()
-    hc = HaloCatalog(
-        data_ds=ds,
-        finder_method="fof",
-        finder_kwargs={
-            "ptype": "star",
-            "padding": 0.0001,
-            "link": 0.00001,  # "best"
-            # "link": 0.0000025, # "fof"
-            "dm_only": False,
-        },
-        output_dir="../halo_data/{}/{}/".format(simulation_run, finder_profiler_run),
-    )
+# datadir = os.path.expanduser(
+#     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
+# ).format(simulation_run)
+# local_snapshots = filter_snapshots(datadir, start_step, end_step, 1)
 
-    hc.create()
+# # if post processing isn't done alongside catalogue
+# # fof_run_snapshots = filter_snapshots("../halo_data/fs07_refine/fof_best", 113, 918, 1)
+# # pop_2_dataset = filter_snapshots(
+# #     "../particle_data/pop_2_data/fs07_refine", 113, 918, 1
+# # )
+# # reduced_h5_list = common_filter_snapshots(fof_run_snapshots, local_snapshots)
+# # reduced_pop2_list = common_filter_snapshots(pop_2_dataset, reduced_h5_list)
+# # reduced_local_list = common_filter_snapshots(local_snapshots, reduced_h5_list)
 
-    # read POPII star info
-    x_pos = np.array(ad["star", "particle_position_x"])
-    y_pos = np.array(ad["star", "particle_position_y"])
-    z_pos = np.array(ad["star", "particle_position_z"])
-    star_id = np.array(ad["star", "particle_identity"])
 
-    # center based on star position distribution
-    x_center = np.mean(x_pos)
-    y_center = np.mean(y_pos)
-    z_center = np.mean(z_pos)
-    plt_ctr = np.array([x_center, y_center, z_center])
+# for i, file_name in enumerate(local_snapshots):
+#     snapshot_num_string = file_name.split("_")[-1]
+#     ds_file_name = os.path.join(file_name, "info_{}.txt".format(snapshot_num_string))
+#     print("> Reading", file_name)
 
-    # some post processing
+#     ds = yt.load(ds_file_name, fields=cell_fields, extra_particle_fields=epf)
+#     ad = ds.all_data()
+#     hc = HaloCatalog(
+#         data_ds=ds,
+#         finder_method="fof",
+#         finder_kwargs={
+#             "ptype": "star",
+#             "padding": 0.0001,
+#             "link": 0.00001,  # "best"
+#             # "link": 0.0000025, # "fof"
+#             "dm_only": False,
+#         },
+#         output_dir="../halo_data/{}/{}/".format(simulation_run, finder_profiler_run),
+#     )
 
-    # read in the newly created hdf5 catalogue
+#     hc.create()
 
-    fof_catalogue = "../halo_data/{}/{}/info_{}/info_{}.{}.h5".format(
-        simulation_run,
-        finder_profiler_run,
-        snapshot_num_string,
-        snapshot_num_string,
-        processor_number,
-    )
-    cata_h5 = h5.File(fof_catalogue, "r")
+#     # read POPII star info
+#     x_pos = np.array(ad["star", "particle_position_x"])
+#     y_pos = np.array(ad["star", "particle_position_y"])
+#     z_pos = np.array(ad["star", "particle_position_z"])
+#     star_id = np.array(ad["star", "particle_identity"])
 
-    # need to read in using yt for virial radius for some reason unknown units in catalogue
-    cata_yt = yt.load(fof_catalogue)
+#     # center based on star position distribution
+#     x_center = np.mean(x_pos)
+#     y_center = np.mean(y_pos)
+#     z_center = np.mean(z_pos)
+#     plt_ctr = np.array([x_center, y_center, z_center])
 
-    # make a halo catalogue for yt overplot
-    halo_cat_plotting = HaloCatalog(halos_ds=cata_yt)
-    halo_cat_plotting.load()
+#     # some post processing
 
-    cata_yt = cata_yt.all_data()
+#     # read in the newly created hdf5 catalogue
 
-    pop2_data = np.loadtxt(
-        glob.glob(
-            "../particle_data/pop_2_data/{}/pos_{}_*.txt".format(
-                simulation_run, snapshot_num_string
-            )
-        )[0]
-    )
-    ctr_at_pc = pop2_data[5:8, 6]
-    ctr_at_code_length = pop2_data[2:5, 6]
-    star_ids = pop2_data[:, 0]
-    x_pos = pop2_data[:, 2]
-    y_pos = pop2_data[:, 3]
-    z_pos = pop2_data[:, 4]
+#     fof_catalogue = "../halo_data/{}/{}/info_{}/info_{}.{}.h5".format(
+#         simulation_run,
+#         finder_profiler_run,
+#         snapshot_num_string,
+#         snapshot_num_string,
+#         processor_number,
+#     )
+#     cata_h5 = h5.File(fof_catalogue, "r")
 
-    # get the halo centers
+#     # need to read in using yt for virial radius for some reason unknown units in catalogue
+#     cata_yt = yt.load(fof_catalogue)
 
-    halo_id = np.array(cata_h5["particle_identifier"])
+#     # make a halo catalogue for yt overplot
+#     halo_cat_plotting = HaloCatalog(halos_ds=cata_yt)
+#     halo_cat_plotting.load()
 
-    halo_x = np.array(cata_h5["particle_position_x"])
-    halo_y = np.array(cata_h5["particle_position_y"])
-    halo_z = np.array(cata_h5["particle_position_z"])
+#     cata_yt = cata_yt.all_data()
 
-    halo_x = np.array(ds.arr(halo_x, "code_length").to("pc")) - ctr_at_pc[0]
-    halo_y = np.array(ds.arr(halo_y, "code_length").to("pc")) - ctr_at_pc[1]
-    halo_z = np.array(ds.arr(halo_z, "code_length").to("pc")) - ctr_at_pc[2]
+#     pop2_data = np.loadtxt(
+#         glob.glob(
+#             "../particle_data/pop_2_data/{}/pos_{}_*.txt".format(
+#                 simulation_run, snapshot_num_string
+#             )
+#         )[0]
+#     )
+#     ctr_at_pc = pop2_data[5:8, 6]
+#     ctr_at_code_length = pop2_data[2:5, 6]
+#     star_ids = pop2_data[:, 0]
+#     x_pos = pop2_data[:, 2]
+#     y_pos = pop2_data[:, 3]
+#     z_pos = pop2_data[:, 4]
 
-    # get halo virial radii
-    halo_vir_rad = np.array(ds.arr(cata_yt["all", "virial_radius"], "cm").to("pc"))
+#     # get the halo centers
 
-    cat_pc = np.vstack((halo_id, halo_x, halo_y, halo_z, halo_vir_rad)).T
-    cat_save_name = "../halo_data/{}/{}/info_{}/catalogue_{}.txt".format(
-        simulation_run, finder_profiler_run, snapshot_num_string, snapshot_num_string
-    )
-    header = "halo_id \t x_coord [pc] \t y_coord [pc] \t z_coord [pc] \t vir_rad [pc]"
-    np.savetxt(cat_save_name, X=cat_pc, header=header)
+#     halo_id = np.array(cata_h5["particle_identifier"])
 
-    # get particles belonging to each halo
-    num_stars_in_halo = np.array(cata_h5["particle_number"])
-    start_of_new_halo = np.array(cata_h5["particle_index_start"])
-    halo_star_ids = np.array(cata_h5["particles/ids"])
+#     halo_x = np.array(cata_h5["particle_position_x"])
+#     halo_y = np.array(cata_h5["particle_position_y"])
+#     halo_z = np.array(cata_h5["particle_position_z"])
 
-    cata_h5.close()
-    for i, (new_h, h_id) in enumerate(zip(start_of_new_halo, halo_id), start=1):
+#     halo_x = np.array(ds.arr(halo_x, "code_length").to("pc")) - ctr_at_pc[0]
+#     halo_y = np.array(ds.arr(halo_y, "code_length").to("pc")) - ctr_at_pc[1]
+#     halo_z = np.array(ds.arr(halo_z, "code_length").to("pc")) - ctr_at_pc[2]
 
-        if i == np.size(
-            start_of_new_halo
-        ):  # cheeky over ride once it reaches end of list
-            star_ids_inside = halo_star_ids[new_h:]
-        else:
-            star_ids_inside = halo_star_ids[new_h : start_of_new_halo[i]]
+#     # get halo virial radii
+#     halo_vir_rad = np.array(ds.arr(cata_yt["all", "virial_radius"], "cm").to("pc"))
 
-        # translate stars, taking into account centers
-        gc_mask = np.isin(star_ids, star_ids_inside)
-        gc_x = x_pos[gc_mask]
-        gc_y = y_pos[gc_mask]
-        gc_z = z_pos[gc_mask]
+#     cat_pc = np.vstack((halo_id, halo_x, halo_y, halo_z, halo_vir_rad)).T
+#     cat_save_name = "../halo_data/{}/{}/info_{}/catalogue_{}.txt".format(
+#         simulation_run, finder_profiler_run, snapshot_num_string, snapshot_num_string
+#     )
+#     header = "halo_id \t x_coord [pc] \t y_coord [pc] \t z_coord [pc] \t vir_rad [pc]"
+#     np.savetxt(cat_save_name, X=cat_pc, header=header)
 
-        # take the x,y,z of individual clusters and subtract center of halo cluster
-        # this makes them all centered at the origin (0,0,0)
-        gc_stars = np.vstack((gc_x, gc_y, gc_z)).T - cat_pc[:, 1:-1][i - 1]
-        gc_stars = np.column_stack((star_ids_inside, gc_stars))
-        header = (
-            "star id \t star_x_coords [pc] \t star_y_coords [pc] \t star_z_coords [pc] "
-        )
+#     # get particles belonging to each halo
+#     num_stars_in_halo = np.array(cata_h5["particle_number"])
+#     start_of_new_halo = np.array(cata_h5["particle_index_start"])
+#     halo_star_ids = np.array(cata_h5["particles/ids"])
 
-        save_name = "../halo_data/{}/{}/info_{}/gc_vir_{}.txt".format(
-            simulation_run,
-            finder_profiler_run,
-            snapshot_num_string,
-            str(int(h_id)).zfill(3),
-        )
-        np.savetxt(save_name, X=gc_stars, header=header)
+#     cata_h5.close()
+#     for i, (new_h, h_id) in enumerate(zip(start_of_new_halo, halo_id), start=1):
 
-    # optionally plot the halod finder results and put in the catalogue directory
-    # width = (400, "pc")
-    # p = yt.ProjectionPlot(ds, "z", "density", width=width, center=ctr_at_code_length)
-    # p.annotate_particles(
-    #     width=width, ptype="star", alpha=0.5, p_size=0.2, marker=".", col="red"
-    # )
-    # p.annotate_halos(
-    #     halo_cat_plotting,
-    #     width=width,
-    # )
-    # p.set_cmap("density", "copper")
-    # p["gas", "density"].axes.scatter(
-    #     halo_x,
-    #     halo_y,
-    #     color="green",
-    #     alpha=1,
-    #     marker="x",
-    #     linewidths=0.1,
-    #     s=2,
-    # )
+#         if i == np.size(
+#             start_of_new_halo
+#         ):  # cheeky over ride once it reaches end of list
+#             star_ids_inside = halo_star_ids[new_h:]
+#         else:
+#             star_ids_inside = halo_star_ids[new_h : start_of_new_halo[i]]
 
-    # # p.set_figure_size(5)
-    # p.save(
-    #     "../halo_data/{}/{}/info_{}/annotated.png".format(
-    #         simulation_run, finder_profiler_run, snapshot_num_string
-    #     ),
-    #     mpl_kwargs={"bbox_inches": "tight", "dpi": 200, "pad_inches": 0.1},
-    # )
+#         # translate stars, taking into account centers
+#         gc_mask = np.isin(star_ids, star_ids_inside)
+#         gc_x = x_pos[gc_mask]
+#         gc_y = y_pos[gc_mask]
+#         gc_z = z_pos[gc_mask]
+
+#         # take the x,y,z of individual clusters and subtract center of halo cluster
+#         # this makes them all centered at the origin (0,0,0)
+#         gc_stars = np.vstack((gc_x, gc_y, gc_z)).T - cat_pc[:, 1:-1][i - 1]
+#         gc_stars = np.column_stack((star_ids_inside, gc_stars))
+#         header = (
+#             "star id \t star_x_coords [pc] \t star_y_coords [pc] \t star_z_coords [pc] "
+#         )
+
+#         save_name = "../halo_data/{}/{}/info_{}/gc_vir_{}.txt".format(
+#             simulation_run,
+#             finder_profiler_run,
+#             snapshot_num_string,
+#             str(int(h_id)).zfill(3),
+#         )
+#         np.savetxt(save_name, X=gc_stars, header=header)
+
+#     # optionally plot the halod finder results and put in the catalogue directory
+#     # width = (400, "pc")
+#     # p = yt.ProjectionPlot(ds, "z", "density", width=width, center=ctr_at_code_length)
+#     # p.annotate_particles(
+#     #     width=width, ptype="star", alpha=0.5, p_size=0.2, marker=".", col="red"
+#     # )
+#     # p.annotate_halos(
+#     #     halo_cat_plotting,
+#     #     width=width,
+#     # )
+#     # p.set_cmap("density", "copper")
+#     # p["gas", "density"].axes.scatter(
+#     #     halo_x,
+#     #     halo_y,
+#     #     color="green",
+#     #     alpha=1,
+#     #     marker="x",
+#     #     linewidths=0.1,
+#     #     s=2,
+#     # )
+
+#     # # p.set_figure_size(5)
+#     # p.save(
+#     #     "../halo_data/{}/{}/info_{}/annotated.png".format(
+#     #         simulation_run, finder_profiler_run, snapshot_num_string
+#     #     ),
+#     #     mpl_kwargs={"bbox_inches": "tight", "dpi": 200, "pad_inches": 0.1},
+#     # )
 
 # =============================================================================
 #!!! bsc profiler post processor
