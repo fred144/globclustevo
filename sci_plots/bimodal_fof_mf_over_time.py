@@ -54,8 +54,8 @@ if __name__ == "__main__":
     f3_bsc_mf_clr = cmap[3]
 
     # use particle data to initiate matching of frames
-    fs070 = filter_snapshots("../particle_data/pop_2_data/fs07_refine", 113, 1000, 1)
-    fs035 = filter_snapshots("../particle_data/pop_2_data/fs035_ms10", 154, 1177, 1)
+    fs070 = filter_snapshots("../particle_data/pop_2_data/fs07_refine", 113, 1110, 1)
+    fs035 = filter_snapshots("../particle_data/pop_2_data/fs035_ms10", 154, 1316, 1)
     # find matching fs = 0.35 snapshots in terms of time to fs = 0.70
     # smaller goes fist
     # in general, use the simulation with more snapshots as a lookup table and match
@@ -65,14 +65,14 @@ if __name__ == "__main__":
     fs070_dat_dir = r"../halo_data/fs07_refine/fof_best"
     fs035_dat_dir = r"../halo_data/fs035_ms10/fof_best"
 
-    fs070_matched = filter_snapshots(fs070_dat_dir, 113, 1000, 1)
+    fs070_matched = filter_snapshots(fs070_dat_dir, 113, 1110, 1)
 
     fs035_matched = get_snapshots(
-        snapshot_file_list=filter_snapshots(fs035_dat_dir, 154, 1177, 1),
+        snapshot_file_list=filter_snapshots(fs035_dat_dir, 154, 1316, 1),
         get_list=f3_matched_nums,
     )
 
-    wanted_idxs = [330, 500, 700, 885]
+    wanted_idxs = [330, 400, 700, 997]
     fs070_matched = [fs070_matched[x] for x in wanted_idxs]
     fs035_matched = [fs035_matched[x] for x in wanted_idxs]
 
@@ -195,7 +195,7 @@ if __name__ == "__main__":
         )
         # fit
         f7_fitting_mask = f7_vir_mass >= 0  # 2e2
-        f3_fitting_mask = f3_vir_mass >= 10
+        f3_fitting_mask = f3_vir_mass >= 0
         #!!! change these for bimodal
         f7_fit_params, _ = curve_fit(
             f=bimodal,
@@ -206,12 +206,12 @@ if __name__ == "__main__":
         f7_theory_y = bimodal(f7_theory_x, *f7_fit_params)
 
         f3_fit_params, _ = curve_fit(
-            f=gauss,
+            f=bimodal,
             xdata=np.log10(f3_vir_mass[f3_fitting_mask]),
             ydata=f3_vir_counts[f3_fitting_mask],
         )
         f3_theory_x = np.log10(np.geomspace(f3_vir_mass.min(), f3_vir_mass.max(), 100))
-        f3_theory_y = gauss(f3_theory_x, *f3_fit_params)
+        f3_theory_y = bimodal(f3_theory_x, *f3_fit_params)
 
         # fit the logSFC
         f7_mc_fit_params, _ = curve_fit(
@@ -320,10 +320,15 @@ if __name__ == "__main__":
                 ),
             )
             #!!!
-            first_bump_mu = np.min([f7_fit_params[1], f7_fit_params[4]])
-            first_bump_sig = np.abs(np.min([f7_fit_params[2], f7_fit_params[5]]))
-            second_bump_mu = np.max([f7_fit_params[1], f7_fit_params[4]])
-            second_bump_sig = np.abs(np.max([f7_fit_params[2], f7_fit_params[5]]))
+            first_bump_mu_f7 = np.min([f7_fit_params[1], f7_fit_params[4]])
+            first_bump_sig_f7 = np.abs(np.min([f7_fit_params[2], f7_fit_params[5]]))
+            second_bump_mu_f7 = np.max([f7_fit_params[1], f7_fit_params[4]])
+            second_bump_sig_f7 = np.abs(np.max([f7_fit_params[2], f7_fit_params[5]]))
+
+            first_bump_mu_f3 = np.min([f3_fit_params[1], f3_fit_params[4]])
+            first_bump_sig_f3 = np.abs(np.min([f3_fit_params[2], f3_fit_params[5]]))
+            second_bump_mu_f3 = np.max([f3_fit_params[1], f3_fit_params[4]])
+            second_bump_sig_f3 = np.abs(np.max([f3_fit_params[2], f3_fit_params[5]]))
 
             ax[i, 0].plot(
                 10**f7_theory_x,
@@ -336,10 +341,10 @@ if __name__ == "__main__":
                 #     f7_fit_params[1], f7_fit_params[2]
                 # ),
                 label=(r"$({:.2f}, {:.2f})$" "\n" r"$({:.2f}, {:.2f})$").format(
-                    first_bump_mu,
-                    first_bump_sig,
-                    second_bump_mu,
-                    second_bump_sig,
+                    first_bump_mu_f7,
+                    first_bump_sig_f7,
+                    second_bump_mu_f7,
+                    second_bump_sig_f7,
                 ),
             )
 
@@ -350,8 +355,11 @@ if __name__ == "__main__":
                 linewidth=2,
                 alpha=0.8,
                 color="black",
-                label=(r"$({:.2f}, {:.2f})$").format(
-                    f3_fit_params[1], f3_fit_params[2]
+                label=(r"$({:.2f}, {:.2f})$" "\n" r"$({:.2f}, {:.2f})$").format(
+                    first_bump_mu_f3,
+                    first_bump_sig_f3,
+                    second_bump_mu_f3,
+                    second_bump_sig_f3,
                 ),
             )
 

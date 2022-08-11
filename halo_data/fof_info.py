@@ -15,7 +15,7 @@ from modules.luminosity.lum_functions import unpack_pop_ii_data
 from scipy import stats
 
 strt = 1117
-end = 1177
+end = 1316
 step = 1
 
 halo_data_directory = r"./fs035_ms10/fof_best"
