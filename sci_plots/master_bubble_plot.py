@@ -239,8 +239,8 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             # (2e2, 2e4),
             (1, 11),
             # (1e-4, 1e-2),
-            (5e-4, 10),
-            (5e-3, 10),
+            (5e-4, 20),
+            (5e-3, 20),
             (1, 11),
             # (2e-2, 2),
         ]
@@ -249,8 +249,8 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             np.nan,
             # (5e0, 1e5),
             (1e33, 3e37),
-            (6e-3, 1e1),
-            (5e-3, 1e1),
+            (6e-3, 20),
+            (5e-3, 20),
             # (2e1, 1e5),
             # (5e0, 1e5),
             (5e0, 1e5),
@@ -402,25 +402,25 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         plt.gca().add_artist(size_legend)
 
         fig.canvas.draw()
-        for i in range(2, 9):
-            x_labels = [
-                t.get_text().replace("10^", "") for t in axs[i].get_xticklabels()
-            ]
-            y_labels = [
-                t.get_text().replace("10^", "") for t in axs[i].get_yticklabels()
-            ]
-            axs[i].set_xticklabels(x_labels)
-            axs[i].set_yticklabels(y_labels)
+        # for i in range(2, 9):
+        #     x_labels = [
+        #         t.get_text().replace("10^", "") for t in axs[i].get_xticklabels()
+        #     ]
+        #     y_labels = [
+        #         t.get_text().replace("10^", "") for t in axs[i].get_yticklabels()
+        #     ]
+        #     axs[i].set_xticklabels(x_labels)
+        #     axs[i].set_yticklabels(y_labels)
         # ax.grid(visible=True, zorder=0.5)
 
-plt.savefig(
-    os.path.expanduser(
-        (
-            "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
-            "bubble_plot_dashboard.png"
-        )
-    ),
-    dpi=500,
-    bbox_inches="tight",
-    pad_inches=0.05,
-)
+# plt.savefig(
+#     os.path.expanduser(
+#         (
+#             "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+#             "bubble_plot_dashboard.png"
+#         )
+#     ),
+#     dpi=500,
+#     bbox_inches="tight",
+#     pad_inches=0.05,
+# )

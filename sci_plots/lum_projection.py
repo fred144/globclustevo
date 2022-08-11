@@ -67,14 +67,14 @@ f7_plt_halo = get_snapshots(f7_halos, get_list=f7_sn_list)
 f3_plt_halo = get_snapshots(f3_halos, get_list=f3_sn_list)
 #%%
 
-width = 400
+width = 400  # pc
 rows = f7_sn_list.size
 cols = 2
 star_lum_bin = 2000
 pxl_size = (width / star_lum_bin) ** 2
 proj_r = width / 2
 row_lims = [(-100, 100), (-150, 150), (-150, 150), (-200, 200)]
-star_lum_range = (8e31, 5e36)
+star_lum_range = (8e30, 3e36)
 
 leg_font = font_manager.FontProperties(family="serif", math_fontfamily="cm", size=8)
 

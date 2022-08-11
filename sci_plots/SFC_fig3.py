@@ -226,10 +226,10 @@ with plt.rc_context(
     )
 
     plt.xlim((3e2, 8e4))
-    plt.ylim(bottom=0)
+    # plt.ylim(bottom=0)
     # plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
     plt.xscale("log")
-    # plt.yscale("log")
+    plt.yscale("log")
 
     # metalicitty function
 
@@ -286,9 +286,9 @@ with plt.rc_context(
     plt.gca().yaxis.set_label_position("right")
 
     plt.xlim(1e-4, 1e-2)
-    plt.ylim(bottom=0)
+    # plt.ylim(bottom=0)
     plt.xscale("log")
-    # plt.yscale("log")
+    plt.yscale("log")
 
     plt.legend(
         title="$\mathrm{SFE} \: (f_{*})$",

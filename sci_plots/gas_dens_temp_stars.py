@@ -142,8 +142,8 @@ with plt.rc_context(
         f7_t_myr, f7_redshift = np.loadtxt(f7_plt_p2[i], max_rows=2)[0:2, 6]
         f3_t_myr, f3_redshift = np.loadtxt(f3_plt_p2[i], max_rows=2)[0:2, 6]
 
-        f7_code_ctr = np.loadtxt(f7_plt_p2[i], max_rows=5)[2:5, 6]
-        f3_code_ctr = np.loadtxt(f3_plt_p2[i], max_rows=5)[2:5, 6]
+        # f7_code_ctr = np.loadtxt(f7_plt_p2[i], max_rows=5)[2:5, 6]
+        # f3_code_ctr = np.loadtxt(f3_plt_p2[i], max_rows=5)[2:5, 6]
 
         f7_field_stars = np.loadtxt(os.path.join(f7_plt_halo[i], "field_stars.txt"))
         f7_bound_stars = np.loadtxt(os.path.join(f7_plt_halo[i], "bound_stars.txt"))
