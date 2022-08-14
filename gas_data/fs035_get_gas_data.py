@@ -57,9 +57,9 @@ for i, (f3_sn, f3_p2) in enumerate(zip(f3_snap, f3_pop2)):
     f3_code_ctr = np.loadtxt(f3_p2, max_rows=5)[2:5, 6]
 
     # start getting gas data
-    # f3_p_gas = yt.ProjectionPlot(
-    #     f3_ds, slice_axis, ("gas", "density"), width=width, center=f3_code_ctr
-    # )
+    f3_p_gas = yt.ProjectionPlot(
+        f3_ds, slice_axis, ("gas", "density"), width=width, center=f3_code_ctr
+    )
     f3_p_temp = yt.ProjectionPlot(
         f3_ds,
         slice_axis,
@@ -69,15 +69,15 @@ for i, (f3_sn, f3_p2) in enumerate(zip(f3_snap, f3_pop2)):
         weight_field=("gas", "density"),
     )
 
-    # f3_gas_frb = f3_p_gas.data_source.to_frb(width, res)
+    f3_gas_frb = f3_p_gas.data_source.to_frb(width, res)
     f3_temp_frb = f3_p_temp.data_source.to_frb(width, res)
 
-    # f3_gas = np.array(f3_gas_frb["gas", "density"])
+    f3_gas = np.array(f3_gas_frb["gas", "density"])
     f3_temp = np.array(f3_temp_frb["gas", "temperature"])
 
-    # gas_save = os.path.join(dens_sequence_folder, "dens_{}.txt".format(output_num))
-    # np.savetxt(gas_save, X=f3_gas)
-    # print("> saved: {}".format(gas_save))
+    gas_save = os.path.join(dens_sequence_folder, "dens_{}.txt".format(output_num))
+    np.savetxt(gas_save, X=f3_gas)
+    print("> saved: {}".format(gas_save))
 
     temp_save = os.path.join(
         temp_sequence_folder, "weight_temp_{}.txt".format(output_num)
