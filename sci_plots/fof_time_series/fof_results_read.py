@@ -15,11 +15,11 @@ import os
 
 
 #%% get the gc results from halo finder only
-halo_data_directory = r"../../halo_data/fs07_refine/fof_best"
-pop2_data_directory = r"../../particle_data/pop_2_data/fs07_refine"
-save_pth = "./fs070_fof_best_113_1000.txt"
-strt = 113
-end = 1000
+halo_data_directory = r"../../halo_data/fs035_ms10/fof_best"
+pop2_data_directory = r"../../particle_data/pop_2_data/fs035_ms10"
+save_pth = "./fs035_fof_best_154_1316.txt"
+strt = 154
+end = 1316
 step = 1
 pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
 halos_ds = filter_snapshots(halo_data_directory, strt, end, step)

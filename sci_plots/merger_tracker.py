@@ -49,7 +49,7 @@ slice_axis = "z"
 width = (400, "pc")
 
 
-star_lum_bin = 1500
+star_lum_bin = 5000
 pxl_size = width[0] / star_lum_bin
 proj_r = width[0] / 2
 axlims = (-200, 200)
@@ -64,7 +64,7 @@ evenly_spaced_times = np.arange(star_t_range[0], star_t_range[1], 0.1)
 cmap = star_map(np.linspace(0, 1, evenly_spaced_times.size))
 dense_norm = (0.007, 0.35)
 temp_norm = (6e2, 6e4)
-lum_range = (2e32, 2e36)
+lum_range = (2e34, 2e36)  # (8e32, 2e37)
 efficiency = 0.70
 
 times = []
@@ -224,8 +224,7 @@ with plt.style.context("dark_background"):
         cbar = fig.colorbar(inset_image, cax=cbar_ax, pad=0, orientation="horizontal")
         cbar_units = r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
         cbar_label = (
-            r"$\mathrm{Projected \: Luminosity}$"
-            r"$, \mathrm{\lambda = 1500 \: \AA \:}$"
+            r"$\mathrm{Surface \: Brightness}$" r"$, \mathrm{\lambda = 1500 \: \AA \:}$"
         )
         cbar.set_label(
             label=cbar_units,

@@ -13,16 +13,18 @@ from matplotlib import colors
 import misc_visuals
 
 # 70% efficiency run
-strt = 1000
-end = 1000
+strt = 154
+end = 1316
 step = 1
-halo_data_directory = r"../halo_data/fs07_refine/fof_best"
-pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
-sequence_dir = "../rendering/luminosity/fs07_refine/panel_t_series"
+efficiency = 0.35
+sim_run = "fs035_ms10"
+halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
+pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
+sequence_dir = "../rendering/luminosity/{}/panel_t_series".format(sim_run)
 if not os.path.exists(sequence_dir):
     print("# Creating new sequence directory", sequence_dir)
     os.makedirs(sequence_dir)
-fs70_ds = np.loadtxt("../sci_plots/fof_time_series/fs070_fof_best_113_1000.txt")[::1, :]
+fs70_ds = np.loadtxt("../sci_plots/fof_time_series/fs035_fof_best_154_1316.txt")[::1, :]
 fail_mask = fs70_ds[:, 3] > 30
 # all results are fit filtered
 f7_t_sim_myr = fs70_ds[:, 0][fail_mask]
@@ -39,7 +41,6 @@ plt_wdth = 400
 star_bins = 1000
 pxl_size = (plt_wdth / star_bins) ** 2  # pc
 lum_range = (2e32, 5e35)
-efficiency = 0.70
 
 
 with plt.style.context("dark_background"):
@@ -258,7 +259,7 @@ with plt.style.context("dark_background"):
                 labelpad=2,
             )
             cbar_ax.set_title(
-                r"$\mathrm{Projected\:Luminosity},$"
+                r"$\mathrm{Surface\:Brightness},$"
                 r"$\mathrm{\lambda = 1500 \: \AA \:}$",
                 fontsize=12,
             )

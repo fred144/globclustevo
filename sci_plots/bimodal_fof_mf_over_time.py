@@ -46,7 +46,7 @@ if __name__ == "__main__":
     cmap = cmap(np.linspace(0, 1, 8))
 
     x_range = (10, 5e5)
-    bns = 20
+    bns = 25
 
     f7_mc_imf_clr = cmap[0]
     f7_bsc_mf_clr = cmap[1]
@@ -72,7 +72,7 @@ if __name__ == "__main__":
         get_list=f3_matched_nums,
     )
 
-    wanted_idxs = [330, 400, 700, 997]
+    wanted_idxs = [100, 245, 699, 970]
     fs070_matched = [fs070_matched[x] for x in wanted_idxs]
     fs035_matched = [fs035_matched[x] for x in wanted_idxs]
 
@@ -196,11 +196,15 @@ if __name__ == "__main__":
         # fit
         f7_fitting_mask = f7_vir_mass >= 0  # 2e2
         f3_fitting_mask = f3_vir_mass >= 0
-        #!!! change these for bimodal
+
         f7_fit_params, _ = curve_fit(
             f=bimodal,
             xdata=np.log10(f7_vir_mass[f7_fitting_mask]),
             ydata=f7_vir_counts[f7_fitting_mask],
+            # bounds=(
+            #     [-np.inf, -np.inf, -np.inf, -np.inf, -np.inf, -np.inf],
+            #     [600, np.inf, np.inf, 600, np.inf, np.inf],
+            # ),
         )
         f7_theory_x = np.log10(np.geomspace(f7_vir_mass.min(), f7_vir_mass.max(), 100))
         f7_theory_y = bimodal(f7_theory_x, *f7_fit_params)
@@ -209,11 +213,15 @@ if __name__ == "__main__":
             f=bimodal,
             xdata=np.log10(f3_vir_mass[f3_fitting_mask]),
             ydata=f3_vir_counts[f3_fitting_mask],
+            # bounds=(
+            #     [0, -np.inf, -np.inf, 0, -np.inf, -np.inf],
+            #     [600, np.inf, np.inf, 600, np.inf, np.inf],
+            # ),
         )
         f3_theory_x = np.log10(np.geomspace(f3_vir_mass.min(), f3_vir_mass.max(), 100))
         f3_theory_y = bimodal(f3_theory_x, *f3_fit_params)
 
-        # fit the logSFC
+        #!!! fit the logSFC
         f7_mc_fit_params, _ = curve_fit(
             f=gauss,
             xdata=np.log10(mc_f7_mass),
@@ -390,9 +398,9 @@ if __name__ == "__main__":
             ax[i, 0].set_xlim(left=f7_vir_mass[0])
             ax[i, 0].set_xscale("log")
             # ax[i, 0].set_yscale("log")
-            ax[i, 0].set_ylim(bottom=0, top=325)
+            ax[i, 0].set_ylim(bottom=0, top=430)
             ax[i, 1].yaxis.tick_right()
-            ax[i, 1].set_ylim(bottom=0, top=650)
+            ax[i, 1].set_ylim(bottom=0, top=860)
 
             ax[i, 0].legend(
                 title=f7_legend_title,

@@ -18,7 +18,8 @@ from matplotlib.colors import LogNorm
 import matplotlib.cm as cm
 import matplotlib.font_manager as font_manager
 import matplotlib.patches as patches
-from matplotlib.ticker import MaxNLocator
+from mpl_toolkits.axes_grid1.inset_locator import mark_inset
+
 from matplotlib import colors
 from scipy.optimize import curve_fit
 
@@ -61,7 +62,8 @@ efficiencies = 0.70
 
 profile_plot_bins = 10
 m_rad = 200
-star_bins = 800
+star_bins = 2000
+star_lum_range = (9e32, 2e37)
 pxl_size = (m_rad * 2 / star_bins) ** 2
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
@@ -175,7 +177,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         # interpolation="gaussian",
                         origin="lower",
                         extent=[-m_rad, m_rad, -m_rad, m_rad],
-                        norm=LogNorm(vmin=2e32, vmax=5e35),  #!!! mess arround
+                        norm=LogNorm(star_lum_range[0], star_lum_range[1]),
                     )
                     ax[idx].set_xticklabels([])
                     ax[idx].set_yticklabels([])
@@ -189,7 +191,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         origin="lower",
                         cmap="inferno",
                         extent=[-m_rad, m_rad, -m_rad, m_rad],
-                        norm=LogNorm(vmin=2e32, vmax=5e35),
+                        norm=LogNorm(star_lum_range[0], star_lum_range[1]),
                     )
                     #!!! make a 20 pc inset
                     axins.set_xlim(halo_center[0] - 10, halo_center[0] + 10)
@@ -199,14 +201,19 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                     axins.set_yticklabels([])
                     axins.xaxis.set_ticks_position("none")
                     axins.yaxis.set_ticks_position("none")
-                    ax[idx].indicate_inset_zoom(axins, edgecolor="white")
+
+                    mark_inset(
+                        ax[idx], axins, loc1=1, loc2=4, edgecolor="white", alpha=0.5
+                    )
 
                     # cleaned up inset for profiling
                     ax_clean_ins = ax[idx].inset_axes([0.10, 0.40, 0.25, 0.25])
                     gc_lums, _, _ = np.histogram2d(
                         halo_x,
                         halo_y,
-                        bins=int(20 / pxl_size),
+                        bins=int(
+                            0.05 * star_bins
+                        ),  # make sure the resolution is the same 20 pc inset
                         weights=halo_lums,
                         normed=False,
                         range=[[-10, 10], [-10, 10]],
@@ -217,10 +224,10 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         origin="lower",
                         cmap="inferno",
                         extent=[-10, 10, -10, 10],
-                        norm=LogNorm(vmin=2e32, vmax=5e35),
-                        alpha=0.8,
+                        norm=LogNorm(star_lum_range[0], star_lum_range[1]),
+                        alpha=1,
                     )
-                    ax_clean_ins.patch.set_alpha(0.8)
+                    ax_clean_ins.patch.set_alpha(1)
                     ax_clean_ins.set_xticklabels([])
                     ax_clean_ins.set_yticklabels([])
                     ax_clean_ins.xaxis.set_ticks_position("none")
@@ -447,7 +454,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                             r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
                         )
                         cbar_label = (
-                            r"$\mathrm{Projected \: Luminosity}$"
+                            r"$\mathrm{Surface\: Brightness}$"
                             r"$, \mathrm{\lambda = 1500 \: \AA \:}$"
                         )
                         cbar.set_label(

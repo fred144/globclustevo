@@ -25,9 +25,9 @@ from modules.match_t_sims import find_matching_time, get_snapshots
 
 
 f7_strt = 113
-f7_end = 1000
+f7_end = 1110
 f3_strt = 154
-f3_end = 1177
+f3_end = 1316
 step = 1
 
 
@@ -56,8 +56,8 @@ f3_halos = filter_snapshots(os.path.relpath(f3_halo_dir), f3_strt, f3_end)
 
 
 # dictate which snapshots will be plotted
-f7_sn_list = np.array([377, 750, 978, 1000])  # looks promising
-f3_sn_list = np.array([414, 688, 943, 1177])
+f7_sn_list = np.array([377, 502, 820, 1110])  # looks promising
+f3_sn_list = np.array([414, 492, 724, 1316])
 
 
 f7_plt_p2 = get_snapshots(f7_pop2, get_list=f7_sn_list)
@@ -65,16 +65,16 @@ f3_plt_p2 = get_snapshots(f3_pop2, get_list=f3_sn_list)
 
 f7_plt_halo = get_snapshots(f7_halos, get_list=f7_sn_list)
 f3_plt_halo = get_snapshots(f3_halos, get_list=f3_sn_list)
-#%%
+
 
 width = 400  # pc
 rows = f7_sn_list.size
 cols = 2
-star_lum_bin = 2000
+star_lum_bin = 5000
 pxl_size = (width / star_lum_bin) ** 2
 proj_r = width / 2
-row_lims = [(-100, 100), (-150, 150), (-150, 150), (-200, 200)]
-star_lum_range = (8e30, 3e36)
+row_lims = [(-100, 100), (-100, 100), (-150, 150), (-80, 80)]
+star_lum_range = (2e34, 2e36)
 
 leg_font = font_manager.FontProperties(family="serif", math_fontfamily="cm", size=8)
 
@@ -244,7 +244,7 @@ with plt.rc_context(
     cbar = fig.colorbar(f7_lums, cax=cbar_ax, pad=0, orientation="horizontal")
 
     cbar_label = (
-        r"$\mathrm{\log_{10}\:Projected\:Luminosity}$"
+        r"$\mathrm{\log_{10}\:Surface\:Brightness}$"
         r"$, \mathrm{\lambda = 1500 \: \AA \:}$"
         # "\n"
         r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"

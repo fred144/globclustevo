@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J renderer
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=20
+#SBATCH --cpus-per-task=16
 
 #SBATCH -t 24:00:00
 
