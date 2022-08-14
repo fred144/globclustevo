@@ -22,9 +22,9 @@ if not os.path.exists(runsavepath):
 
 
 f7_strt = 113
-f7_end = 1000
+f7_end = 1110
 f3_strt = 154
-f3_end = 1177
+f3_end = 1316
 step = 1
 
 f7_pop2 = filter_snapshots(
@@ -46,8 +46,8 @@ f7_pop2_matched, f7_matched_nums = find_matching_time(
 f7_halo_matched = get_snapshots(snapshot_file_list=f7_halo_ds, get_list=f7_matched_nums)
 
 # sampple idxs
-prof_start = 950
-prof_end = 951
+prof_start = 1160
+prof_end = 1161
 prof_step = 1
 
 fs070_p2 = f7_pop2_matched[prof_start:prof_end:prof_step]
@@ -643,7 +643,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 )
                 ax_inset.set_yscale("log")
                 # ax_inset.set_xlim("log")
-                ax_inset.set_xlim(300, 650)
+                ax_inset.set_xlim(300, 700)
                 ax_inset.set_ylim(1, 5e5)
 
         # add the luminosity color bar
@@ -652,7 +652,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
         cbar_ax = fig.add_axes([0.125, 0.8525, 0.775, 0.008])
         cbar = fig.colorbar(xz, cax=cbar_ax, pad=0, orientation="horizontal")
         cbar_label = (
-            r"$\mathrm{\log_{10}\:\:Projected\:Monochromatic\:Luminosity}"
+            r"$\mathrm{\log_{10}\:\:Surface\:Brightness}"
             r", \mathrm{\lambda = 1500 \: \AA \:}"
             r"\mathrm{\left(erg \:\: s^{-1} \: \AA^{-1} \: pc^{-2} \right)} $"
         )

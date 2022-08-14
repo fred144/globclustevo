@@ -17,12 +17,12 @@ slice_axis = "z"
 width = (400, "pc")
 res = 1000
 
-f3_strt = 377
-f3_end = 1177
+f3_strt = 1316
+f3_end = 1316
 step = 25
 
 f3_pop2 = filter_snapshots(ft_p2_dir, f3_strt, f3_end, step)
-f3_snap = filter_snapshots(f3_sn_dir, f3_strt, f3_end,step)
+f3_snap = filter_snapshots(f3_sn_dir, f3_strt, f3_end, step)
 
 parent_folder = "../gas_data/{}".format(simulation_name)
 dens_sequence_folder = os.path.abspath(os.path.join(parent_folder, "gas_density"))

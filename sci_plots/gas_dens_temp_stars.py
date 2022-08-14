@@ -26,9 +26,9 @@ from modules.match_t_sims import find_matching_time, get_snapshots
 
 
 f7_strt = 200
-f7_end = 1000
+f7_end = 1110
 f3_strt = 377
-f3_end = 1177
+f3_end = 1316
 step = 1
 
 
@@ -71,8 +71,8 @@ f3_halos = filter_snapshots(os.path.relpath(f3_halo_dir), f3_strt, f3_end)
 # f7_sn_list = np.array([378, 489, 746, 1000])  # looks promising
 # f3_sn_list = np.array([406, 569, 777, 1177])
 
-f7_sn_list = np.array([375, 500, 750, 1000])  # looks promising
-f3_sn_list = np.array([402, 577, 777, 1177])
+f7_sn_list = np.array([375, 500, 750, 1110])  # looks promising
+f3_sn_list = np.array([402, 577, 777, 1316])
 
 f7_gas_dens = get_snapshots(f7_dens, get_list=f7_sn_list)
 f3_gas_dens = get_snapshots(f3_dens, get_list=f3_sn_list)
@@ -85,7 +85,7 @@ f3_plt_p2 = get_snapshots(f3_pop2, get_list=f3_sn_list)
 
 f7_plt_halo = get_snapshots(f7_halos, get_list=f7_sn_list)
 f3_plt_halo = get_snapshots(f3_halos, get_list=f3_sn_list)
-#%%
+
 slice_axis = "z"
 width = (400, "pc")
 rows = f7_sn_list.size
@@ -94,12 +94,12 @@ star_lum_bin = 1500
 pxl_size = width[0] / star_lum_bin
 proj_r = width[0] / 2
 axlims = (-200, 200)
-star_cmap = "rainbow_r"
+star_cmap = "gist_rainbow"
 dens_cmap = "cubehelix"
 temp_cmap = "gist_heat"
 star_map = cm.get_cmap(star_cmap)
 
-star_t_range = (340, 595)
+star_t_range = (300, 635)
 # .5 Myr intervals
 evenly_spaced_times = np.arange(star_t_range[0], star_t_range[1], 0.5)
 cmap = star_map(np.linspace(0, 1, evenly_spaced_times.size))

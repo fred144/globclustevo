@@ -17,12 +17,12 @@ slice_axis = "z"
 width = (400, "pc")
 res = 1000
 
-f7_strt = 200
-f7_end = 1000
+f7_strt = 1110
+f7_end = 1110
 step = 25
 
 f7_pop2 = filter_snapshots(ft_p2_dir, f7_strt, f7_end, step)
-f7_snap = filter_snapshots(f7_sn_dir, f7_strt,f7_end, step)
+f7_snap = filter_snapshots(f7_sn_dir, f7_strt, f7_end, step)
 print(f7_pop2)
 
 parent_folder = "../gas_data/{}".format(simulation_name)
