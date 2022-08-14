@@ -175,8 +175,7 @@ def run_profiler(
             else:
 
                 radius = gc_radii[i]
-        # draw the king profile for each indiviaula gc
-        # TODO: GC Master plot
+
         (
             r,
             rho,
@@ -216,7 +215,8 @@ def run_profiler(
         gc_r_core.append(r_c)
         gc_err_rc.append(err_rc)
         gc_m_core.append(m_r_c)
-        gc_r_trunc.append(r_trunc)
+        gc_r_trunc.append(radius)
+        # gc_r_trunc.append(r_trunc) #!!! changed the radius to vir radius
         gc_char_age.append(char_age)
         gc_alpha.append(alpha)
         gc_err_alpha.append(err_alpha)
@@ -254,7 +254,6 @@ def run_profiler(
 
         plt.cla()
         plt.close()
-        #!!!
 
         # if the data has enough points
         # note, r and rho contain both theory and data (r, theory_r)

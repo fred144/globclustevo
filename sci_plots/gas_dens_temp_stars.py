@@ -71,8 +71,8 @@ f3_halos = filter_snapshots(os.path.relpath(f3_halo_dir), f3_strt, f3_end)
 # f7_sn_list = np.array([378, 489, 746, 1000])  # looks promising
 # f3_sn_list = np.array([406, 569, 777, 1177])
 
-f7_sn_list = np.array([375, 500, 750, 1110])  # looks promising
-f3_sn_list = np.array([402, 577, 777, 1316])
+f7_sn_list = np.array([375, 750, 1000, 1110])  # looks promising
+f3_sn_list = np.array([402, 777, 1177, 1316])
 
 f7_gas_dens = get_snapshots(f7_dens, get_list=f7_sn_list)
 f3_gas_dens = get_snapshots(f3_dens, get_list=f3_sn_list)
@@ -99,7 +99,7 @@ dens_cmap = "cubehelix"
 temp_cmap = "gist_heat"
 star_map = cm.get_cmap(star_cmap)
 
-star_t_range = (300, 635)
+star_t_range = (352, 635)
 # .5 Myr intervals
 evenly_spaced_times = np.arange(star_t_range[0], star_t_range[1], 0.5)
 cmap = star_map(np.linspace(0, 1, evenly_spaced_times.size))
@@ -222,7 +222,7 @@ with plt.rc_context(
                         filtered_y,
                         marker=".",
                         c=color,
-                        s=1,
+                        s=0.8,
                         edgecolors=None,
                         alpha=0.012,
                     )

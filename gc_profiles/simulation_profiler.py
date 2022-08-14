@@ -237,10 +237,10 @@ if __name__ == "__main__":
     # pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
     # halo_data_directory = r"../halo_data/fs07_refine/fof_best"
 
-    # save_path = "./profile_runs/fs07_refine/fof_best_v3"
+    # save_path = "./profile_runs/fs07_refine/fof_best"
 
-    # strt = 113
-    # end = 918
+    # strt = 1034
+    # end = 1034
     # step = 1
 
     pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
@@ -248,8 +248,8 @@ if __name__ == "__main__":
 
     save_path = "./profile_runs/fs035_ms10/fof_best"
 
-    strt = 1044
-    end = 1177
+    strt = 1210
+    end = 1210
     step = 1
 
     pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
