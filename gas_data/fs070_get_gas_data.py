@@ -55,17 +55,17 @@ for i, (f7_sn, f7_p2) in enumerate(zip(f7_snap, f7_pop2)):
     f7_code_ctr = np.loadtxt(f7_p2, max_rows=5)[2:5, 6]
 
     # start getting gas data
-    # f7_p_gas = yt.ProjectionPlot(
-    #     f7_ds, slice_axis, ("gas", "density"), width=width, center=f7_code_ctr
-    # )
-    f7_p_temp = yt.ProjectionPlot(
-        f7_ds,
-        slice_axis,
-        ("gas", "temperature"),
-        width=width,
-        center=f7_code_ctr,
-        weight_field=("gas", "density"),
+    f7_p_gas = yt.ProjectionPlot(
+        f7_ds, slice_axis, ("gas", "density"), width=width, center=f7_code_ctr
     )
+    # f7_p_temp = yt.ProjectionPlot(
+    #     f7_ds,
+    #     slice_axis,
+    #     ("gas", "temperature"),
+    #     width=width,
+    #     center=f7_code_ctr,
+    #     weight_field=("gas", "density"),
+    # )
 
     # f7_gas_frb = f7_p_gas.data_source.to_frb(width, res)
     f7_temp_frb = f7_p_temp.data_source.to_frb(width, res)
