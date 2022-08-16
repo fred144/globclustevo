@@ -234,23 +234,23 @@ def fof_profiler(pop2_data_set, halo_data_directory, run_save_path, gc_radii):
 
 if __name__ == "__main__":
 
-    # pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
-    # halo_data_directory = r"../halo_data/fs07_refine/fof_best"
+    pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
+    halo_data_directory = r"../halo_data/fs07_refine/fof_best"
 
-    # save_path = "./profile_runs/fs07_refine/fof_best"
+    save_path = "./profile_runs/fs07_refine/fof_best"
 
-    # strt = 1034
-    # end = 1034
-    # step = 1
-
-    pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
-    halo_data_directory = r"../halo_data/fs035_ms10/fof_best"
-
-    save_path = "./profile_runs/fs035_ms10/fof_best"
-
-    strt = 1210
-    end = 1210
+    strt = 1034
+    end = 1034
     step = 1
+
+    # pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
+    # halo_data_directory = r"../halo_data/fs035_ms10/fof_best"
+
+    # save_path = "./profile_runs/fs035_ms10/fof_best"
+
+    # strt = 1210
+    # end = 1210
+    # step = 1
 
     pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
     halos = filter_snapshots(halo_data_directory, strt, end, step)

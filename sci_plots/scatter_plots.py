@@ -92,7 +92,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     f7_bes = f7_t_myr - f7_ages
     f7_mass = f7_prof_data[:, 3]
     f7_core_mass = f7_prof_data[:, 4]
-    f7_trunc_rad = f7_prof_data[:, 5]
+    f7_vir_rad = f7_prof_data[:, 5]
     # derived qunatities
     f7_core_rad = f7_prof_data[:, 6]
     f7_core_err = f7_prof_data[:, 7]
@@ -115,7 +115,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     f3_bes = f3_t_myr - f3_ages
     f3_mass = f3_prof_data[:, 3]
     f3_core_mass = f3_prof_data[:, 4]
-    f3_trunc_rad = f3_prof_data[:, 5]
+    f3_vir_rad = f3_prof_data[:, 5]
     # derived qunatities
     f3_core_rad = f3_prof_data[:, 6]
     f3_core_err = f3_prof_data[:, 7]
@@ -130,9 +130,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     f3_half_light_rad = f3_prof_data[:, 16]
     f3_tot_light = f3_prof_data[:, 17]
     f3_metal, f3_orig_mass = metal_lookup("../sim_log_files/fs035_ms10/logSFC", f3_bes)
-    if f7_mass.max() > 1e4 or f3_mass.max() > 1e4:
-        continue
-    print(f7)
+
     with plt.rc_context(
         {
             "font.family": "serif",
@@ -143,63 +141,83 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         }
     ):
 
-        cmap = plt.cm.get_cmap("rainbow_r")
+        cmap = plt.cm.get_cmap("plasma")
         # scale_factor = 50  # scale factor for the sizes
         # # map to differnt sizes for better plotting
         # f7_half_radii = scale_factor * f7_half_mass_rad
         # f3_half_radii = scale_factor * f3_half_mass_rad
+        f7_mask = (f7_alpha < 5) & (f7_mass < 1e4)  # & (f7_vir_rad < 10)
+        f3_mask = (f3_alpha < 5) & (f3_mass < 1e4)  # & (f3_vir_rad < 10)
 
         x_vars = [
-            (f7_core_mass, f3_core_mass),
-            (f7_alpha, f3_alpha),
-            (f7_trunc_rad, f3_trunc_rad),
-            (f7_metal, f3_metal),
+            (f7_mass[f7_mask], f3_mass[f3_mask]),
+            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
+            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
+            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
+            (f7_metal[f7_mask], f3_metal[f3_mask]),
+            (f7_metal[f7_mask], f3_metal[f3_mask]),
+            (f7_metal[f7_mask], f3_metal[f3_mask]),
+            (f7_metal[f7_mask], f3_metal[f3_mask]),
+            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
+            (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
+            (f7_alpha[f7_mask], f3_alpha[f3_mask]),
+            (f7_alpha[f7_mask], f3_alpha[f3_mask]),
+            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
+            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
+            # (f7_bes[f7_mask], f3_bes[f3_mask]),
         ]
         y_vars = [
-            (f7_mass, f3_mass),
-            (f7_core_rad, f3_core_rad),
-            (f7_mass, f3_mass),
-            (f7_mass, f3_mass),
+            (f7_core_mass[f7_mask], f3_core_mass[f3_mask]),
+            (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
+            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
+            (f7_mass[f7_mask], f3_mass[f3_mask]),
+            (f7_mass[f7_mask], f3_mass[f3_mask]),
+            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
+            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
+            (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
+            (f7_sig_0[f7_mask], f3_sig_0[f3_mask]),
+            (f7_sig_0[f7_mask], f3_sig_0[f3_mask]),
+            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
+            (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
+            (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
+            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
+            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
         ]
         x_labels = [
-            r"$\mathrm{M_{core} }$",
-            r"$\alpha$",
-            r"$R$",
+            r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
+            r"$\mathrm{ R_{BSC} \:(pc)}$",
+            r"$\mathrm{ R_{BSC} \:(pc)}$",
+            r"$\mathrm{R_{BSC} \: (pc)}$",
             r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\mathrm{ R_{BSC} \:(pc)}$",
+            r"$R\mathrm{_{core} \: (pc)}$",
+            r"$\alpha$",
+            r"$\alpha$",
+            r"$\mathrm{ R_{BSC} \:(pc)}$",
+            r"$\mathrm{ R_{BSC} \:(pc)}$",
+            # "birth",
         ]
         y_labels = [
-            r"$\mathrm{M_{BSC}}$",
+            r"$\mathrm{M_{core}}\: \mathrm{(M_{\odot})}$",
+            r"$R\mathrm{_{core} \:(pc) }$",
+            r"$\mathrm{R_{half-mass}\:(pc)}$ ",
+            r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
+            r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
+            r"$\mathrm{ R_{BSC} \:(pc)}$",
+            r"$\mathrm{R_{half-mass}\:(pc)}$ ",
             r"$R\mathrm{_{core}}$",
-            r"$\mathrm{M_{BSC}}$",
-            r"$\mathrm{M_{BSC}}$",
+            r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            r"$\mathrm{R_{half-mass}\:(pc)}$ ",
+            r"$R\mathrm{_{core}}$",
+            r"$R\mathrm{_{core}}$",
+            r"$\mathrm{R_{half-mass}\:(pc)}$ ",
+            # "$\mathrm{R_{half}\:(pc)}$ ",
         ]
-        # xlims = [
-        #     (1e-4, 1e-2),
-        #     (5e0, 1e5),
-        #     (1e-4, 1e-2),
-        #     (2e1, 1e5),
-        #     (5e0, 1e5),
-        #     (1, 20),
-        #     (1e-4, 1e-2),
-        #     (1e-4, 1e-2),
-        #     (1e-3, 10),
-        #     (5e-4, 10),
-        #     (1, 13),
-        # ]
-        # ylims = [
-        #     (5e0, 1e5),
-        #     (5e-3, 1e1),
-        #     (5e-3, 1e1),
-        #     (2e1, 1e5),
-        #     (5e0, 1e5),
-        #     (5e0, 1e5),
-        #     (1e1, 8e4),
-        #     (1e33, 3e37),
-        #     (5, 1e5),
-        #     (1e33, 3e37),
-        #     (2e-2, 10),
-        # ]
-
+        # loop through some possible plots.
         for i, (x, y) in enumerate(zip(x_vars, y_vars)):
 
             fig, ax = plt.subplots(1, 1, figsize=(4, 3.5), dpi=400)
@@ -207,7 +225,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             f7_scatter = plt.scatter(
                 x[0],
                 y[0],
-                c=f7_bes,
+                c=f7_bes[f7_mask],
                 # s=f7_half_radii,
                 alpha=0.8,
                 edgecolors="none",
@@ -218,7 +236,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             f3_scatter = plt.scatter(
                 x[1],
                 y[1],
-                c=f3_bes,
+                c=f3_bes[f3_mask],
                 # s=f3_half_radii,
                 alpha=0.8,
                 edgecolors="none",
@@ -249,11 +267,12 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             )
             sfe_legend = plt.legend(
                 title="$\mathrm{SFE} \: (f_{*})$",
-                loc="upper right",
+                loc="lower right",
                 title_fontsize=10,
                 fontsize=8,
                 handles=[f70, f35],
                 facecolor=(1, 1, 1, 0.5),
+                framealpha=0.5,
             )
             ax.add_artist(sfe_legend)
 
@@ -275,33 +294,15 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                     # "pad": 0.42,
                 },
             )
-            # legend mapped to size
-            # legend_properties = dict(
-            #     prop="sizes",
-            #     num=[0.50, 1.00, 1.50, 2.0],
-            #     color="grey",
-            #     fmt=" {x:.2f}",
-            #     func=lambda d: d / scale_factor,
-            # )
-            # legend = ax.legend(
-            #     *f7_scatter.legend_elements(**legend_properties),
-            #     loc="upper left",
-            #     title="$\mathrm{R_{half}\:(pc)}$ ",
-            #     fontsize=8,
-            #     title_fontsize=10,
-            #     facecolor=(1, 1, 1, 0.5),
-            #     ncol=2,
-            # )
+
             # color bars
-            cbar = plt.colorbar(
-                pad=0,
-            )
-            cbar.set_label(
-                label="$\mathrm{t_{\mathrm{formation}}\: (Myr)}$", fontsize=14
-            )
+            cbar = plt.colorbar(pad=0)
+            cbar.set_label(label="$\mathrm{Time\;of\;Formation\;(Myr)}$", fontsize=12)
             plt.clim(vmin=330, vmax=600)
-            # ax.set_xscale("log")
-            # ax.set_yscale("log")
+
+            if i == 4 or i == 9:
+                ax.set_xscale("log")
+                ax.set_yscale("log")
 
             ax.set_xlabel(x_labels[i])
             ax.set_ylabel(y_labels[i])

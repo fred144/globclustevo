@@ -13,8 +13,8 @@ from matplotlib import colors
 import misc_visuals
 
 # 70% efficiency run
-strt = 154
-end = 1316
+strt = 178
+end = 200  # 1316
 step = 1
 efficiency = 0.35
 sim_run = "fs035_ms10"
@@ -64,7 +64,7 @@ with plt.style.context("dark_background"):
                 facecolor=cm.Greys_r(0),
                 # constrained_layout=True,
             )
-            fig.subplots_adjust(wspace=0, hspace=0)
+            fig.subplots_adjust(wspace=0, hspace=-0.001)
             gs = fig.add_gridspec(2, 3, height_ratios=[1, 0.70])
             ax1 = fig.add_subplot(gs[0])
             ax2 = fig.add_subplot(gs[1])
