@@ -13,8 +13,8 @@ from matplotlib import colors
 import misc_visuals
 
 # 70% efficiency run
-strt = 178
-end = 200  # 1316
+strt = 200
+end =  1316
 step = 1
 efficiency = 0.35
 sim_run = "fs035_ms10"
