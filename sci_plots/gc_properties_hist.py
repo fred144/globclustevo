@@ -170,7 +170,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     ]
 
     # hist_ranges = [(0, 2), (10, 800), (1.5, 5), (0, 1)]
-    num_bins = 20
+    num_bins = 15
     bins = [
         np.linspace(f7_core_rad.min(), f7_core_rad.max(), num_bins),
         np.linspace(f7_sig_0.min(), f7_sig_0.max(), num_bins),
@@ -209,7 +209,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 hatch="xxx",
                 # edgecolor="white",
                 alpha=0.7,
-                linewidth=1,
+                linewidth=2,
                 label=r"$0.35$",
             )
 
@@ -221,7 +221,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 hatch="++",
                 # edgecolor="white",
                 alpha=0.7,
-                linewidth=1,
+                linewidth=2,
                 label=r"$0.70$",
             )
 
@@ -275,7 +275,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 
         # ax[0].set_ylabel(r"$\mathrm{Number\:\:of\:\:BSCs}$")
 
-        ax[0].legend(title="$\mathrm{SFE} \: (f_{*})$", loc="upper left", fontsize=10)
+        ax[0].legend(title="$\mathrm{SFE} \: (f_{*})$", loc="upper right", fontsize=10)
         # ax[2].text(
         #     0.06,
         #     0.92,

@@ -77,6 +77,7 @@ def metal_lookup(log_sfc_path, bsc_form_times):
     return bsc_metals, bsc_m_sun_form
 
 
+#%%
 for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     # if i == 0:
     #     continue
@@ -151,70 +152,66 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 
         x_vars = [
             (f7_mass[f7_mask], f3_mass[f3_mask]),
-            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
-            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
-            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
+            (f7_mass[f7_mask], f3_mass[f3_mask]),
+            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
+            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
+            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
+            # (f7_metal[f7_mask], f3_metal[f3_mask]),
             (f7_metal[f7_mask], f3_metal[f3_mask]),
-            (f7_metal[f7_mask], f3_metal[f3_mask]),
-            (f7_metal[f7_mask], f3_metal[f3_mask]),
-            (f7_metal[f7_mask], f3_metal[f3_mask]),
-            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
+            # (f7_metal[f7_mask], f3_metal[f3_mask]),
+            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
+            # (f7_alpha[f7_mask], f3_alpha[f3_mask]),
             (f7_alpha[f7_mask], f3_alpha[f3_mask]),
-            (f7_alpha[f7_mask], f3_alpha[f3_mask]),
-            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
-            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
+            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             # (f7_bes[f7_mask], f3_bes[f3_mask]),
         ]
         y_vars = [
+            ((f7_core_mass / f7_mass)[f7_mask], (f3_core_mass / f3_mass)[f3_mask]),
             (f7_core_mass[f7_mask], f3_core_mass[f3_mask]),
             (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
-            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
+            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             (f7_mass[f7_mask], f3_mass[f3_mask]),
-            (f7_mass[f7_mask], f3_mass[f3_mask]),
-            (f7_vir_rad[f7_mask], f3_vir_rad[f3_mask]),
+            # (f7_mass[f7_mask], f3_mass[f3_mask]),
             (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
-            (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
+            # (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
             (f7_sig_0[f7_mask], f3_sig_0[f3_mask]),
             (f7_sig_0[f7_mask], f3_sig_0[f3_mask]),
-            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
+            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
-            (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
-            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
+            # (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
             # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
         ]
         x_labels = [
             r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
-            r"$\mathrm{ R_{BSC} \:(pc)}$",
-            r"$\mathrm{ R_{BSC} \:(pc)}$",
-            r"$\mathrm{R_{BSC} \: (pc)}$",
+            r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
+            r"$\mathrm{ R_{half-mass} \:(pc)}$",
+            # r"$\mathrm{ R_{half-mass} \:(pc)}$",
+            r"$\mathrm{R_{half-mass} \: (pc)}$",
+            # r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
             r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\mathrm{ R_{BSC} \:(pc)}$",
+            # r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\mathrm{ R_{half-mass} \:(pc)}$",
             r"$R\mathrm{_{core} \: (pc)}$",
+            # r"$\alpha$",
             r"$\alpha$",
-            r"$\alpha$",
-            r"$\mathrm{ R_{BSC} \:(pc)}$",
-            r"$\mathrm{ R_{BSC} \:(pc)}$",
+            # r"$\mathrm{ R_{half-mass} \:(pc)}$",
             # "birth",
         ]
         y_labels = [
+            r"$\mathrm{M_{core}}\: / M_{BSC} }$",
             r"$\mathrm{M_{core}}\: \mathrm{(M_{\odot})}$",
             r"$R\mathrm{_{core} \:(pc) }$",
-            r"$\mathrm{R_{half-mass}\:(pc)}$ ",
+            # r"$\mathrm{R_{half-mass}\:(pc)}$ ",
             r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
-            r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
-            r"$\mathrm{ R_{BSC} \:(pc)}$",
+            # r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
             r"$\mathrm{R_{half-mass}\:(pc)}$ ",
-            r"$R\mathrm{_{core}}$",
+            # r"$R\mathrm{_{core}}$",
             r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
             r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
-            r"$\mathrm{R_{half-mass}\:(pc)}$ ",
+            # r"$\mathrm{R_{half-mass}\:(pc)}$ ",
             r"$R\mathrm{_{core}}$",
-            r"$R\mathrm{_{core}}$",
-            r"$\mathrm{R_{half-mass}\:(pc)}$ ",
+            # r"$R\mathrm{_{core}}$",
             # "$\mathrm{R_{half}\:(pc)}$ ",
         ]
         # loop through some possible plots.
@@ -300,7 +297,11 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             cbar.set_label(label="$\mathrm{Time\;of\;Formation\;(Myr)}$", fontsize=12)
             plt.clim(vmin=330, vmax=600)
 
-            if i == 4 or i == 9:
+            if i == 7:
+                ax.set_yscale("log")
+            elif i == 0:
+                pass
+            else:
                 ax.set_xscale("log")
                 ax.set_yscale("log")
 

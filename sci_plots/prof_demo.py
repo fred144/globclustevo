@@ -1,6 +1,5 @@
 """
-Tracks a BSC given a star id in that GC.
-Two panels. give it the panels you want. 
+Shows how profiling works.
 """
 import sys
 
@@ -24,10 +23,15 @@ from matplotlib import colors
 from scipy.optimize import curve_fit
 
 # 0.70 biggest cluster
-strt = 421
-end = 873
-step = 452
-tr_id = 33387
+# strt = 421
+# end = 421
+# step = 1
+# tr_id = 33387
+
+# strt = 464
+# end = 464
+# step = 713
+# tr_id = 21355
 
 # 0.70 old cluster
 # strt = 342
@@ -44,33 +48,38 @@ tr_id = 33387
 
 # 0.35  cluster
 # strt = 464
-# end = 1177
+# end = 464
 # step = 713
 # tr_id = 21355
 
 # another 0.35
 # strt = 669
-# end = 1177
+# end = 667
 # step = end - strt
 # tr_id = 25761.0
-#!!!
-halo_data_directory = r"../halo_data/fs07_refine/fof_best"
-pop2_data_directory = r"../particle_data/pop_2_data/fs07_refine"
+
+strt = 448
+end = 448
+step = 1
+tr_id = 15516.0
+
+halo_data_directory = r"../halo_data/fs035_ms10/fof_best"
+pop2_data_directory = r"../particle_data/pop_2_data/fs035_ms10"
 pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
 halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
-efficiencies = 0.70
+efficiencies = 0.35
 
-profile_plot_bins = 10
-m_rad = 200
-star_bins = 2000
-star_lum_range = (9e32, 2e37)
+profile_plot_bins = 20
+m_rad = 100
+star_bins = 1000
+star_lum_range = (2e34, 2e36)  # (9e32, 2e37)  # (2e34, 2e36)
 pxl_size = (m_rad * 2 / star_bins) ** 2
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
 eff_lcolor = "grey"  # cmap[0]
 eff_errcol = "white"  # cmap[1]
 
-leg_font = font_manager.FontProperties(family="serif", math_fontfamily="cm", size=9)
+leg_font = font_manager.FontProperties(family="serif", math_fontfamily="cm", size=10)
 props = dict(
     boxstyle="round",
     facecolor="black",
@@ -97,8 +106,8 @@ with plt.style.context("dark_background"):
     ):
         fig, ax = plt.subplots(
             nrows=1,
-            ncols=2,
-            figsize=(12.0, 6.0),
+            ncols=1,
+            figsize=(6, 6.0),
             dpi=400,
             sharex="row",
             sharey="row",
@@ -171,7 +180,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         range=[[-m_rad, m_rad], [-m_rad, m_rad]],
                     )
                     xy_lums = xy_lums.T
-                    xy = ax[idx].imshow(
+                    xy = ax.imshow(
                         xy_lums / pxl_size,
                         cmap="inferno",
                         # interpolation="gaussian",
@@ -179,13 +188,13 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         extent=[-m_rad, m_rad, -m_rad, m_rad],
                         norm=LogNorm(star_lum_range[0], star_lum_range[1]),
                     )
-                    ax[idx].set_xticklabels([])
-                    ax[idx].set_yticklabels([])
-                    ax[idx].xaxis.set_ticks_position("none")
-                    ax[idx].yaxis.set_ticks_position("none")
+                    ax.set_xticklabels([])
+                    ax.set_yticklabels([])
+                    ax.xaxis.set_ticks_position("none")
+                    ax.yaxis.set_ticks_position("none")
 
                     # draw inset
-                    axins = ax[idx].inset_axes([0.10, 0.65, 0.25, 0.25])
+                    axins = ax.inset_axes([0.10, 0.65, 0.25, 0.25])
                     axins.imshow(
                         xy_lums / pxl_size,
                         origin="lower",
@@ -201,18 +210,17 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                     axins.set_yticklabels([])
                     axins.xaxis.set_ticks_position("none")
                     axins.yaxis.set_ticks_position("none")
+                    axins.patch.set_alpha(0.8)
 
-                    mark_inset(
-                        ax[idx], axins, loc1=1, loc2=4, edgecolor="white", alpha=0.5
-                    )
+                    mark_inset(ax, axins, loc1=1, loc2=3, edgecolor="white", alpha=0.5)
 
                     # cleaned up inset for profiling
-                    ax_clean_ins = ax[idx].inset_axes([0.10, 0.40, 0.25, 0.25])
+                    ax_clean_ins = ax.inset_axes([0.10, 0.40, 0.25, 0.25])
                     gc_lums, _, _ = np.histogram2d(
                         halo_x,
                         halo_y,
                         bins=int(
-                            0.05 * star_bins
+                            20 / (m_rad * 2 / 1000)
                         ),  # make sure the resolution is the same 20 pc inset
                         weights=halo_lums,
                         normed=False,
@@ -227,7 +235,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         norm=LogNorm(star_lum_range[0], star_lum_range[1]),
                         alpha=1,
                     )
-                    ax_clean_ins.patch.set_alpha(1)
+                    ax_clean_ins.patch.set_alpha(0.8)
                     ax_clean_ins.set_xticklabels([])
                     ax_clean_ins.set_yticklabels([])
                     ax_clean_ins.xaxis.set_ticks_position("none")
@@ -241,7 +249,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                             "font.size": 10,
                         }
                     ):
-                        ax_prof_ins = ax[idx].inset_axes([0.10, 0.15, 0.25, 0.25])
+                        ax_prof_ins = ax.inset_axes([0.10, 0.15, 0.25, 0.25])
                     r, rho, err, _, _, _, half_r = projected_surf_densities(
                         x_coord=halo_x,
                         y_coord=halo_y,
@@ -295,7 +303,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         theory_rho,
                         ls="--",
                         linewidth=2,
-                        alpha=0.5,
+                        alpha=0.6,
                         zorder=3,
                         color=eff_lcolor,
                     )
@@ -309,11 +317,11 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
 
                     ax_prof_ins.patch.set_alpha(0.8)
                     ax_prof_ins.set_ylabel(
-                        r"$\mathrm{\log_{10}(\Sigma)\:\:(M_{\odot}\:pc^{-2})}$",
+                        r"$\mathrm{\log_{10}\; \Sigma \:\:(M_{\odot}\:pc^{-2})}$",
                         fontproperties=leg_font,
                     )
                     ax_prof_ins.set_xlabel(
-                        r"$ \mathrm{\log_{10}(R)\:(pc)}$",
+                        r"$ \mathrm{\log_{10}\;  R \:(pc)}$",
                         fontproperties=leg_font,
                     )
                     ax_prof_ins.set_ylim(bottom=3, top=2e5)
@@ -359,49 +367,52 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         sci_notation(2, core_mass),
                         sci_notation(2, half_mass),
                     )
-                    ax[idx].text(
-                        -55,
-                        -44.5,
+                    ax.text(
+                        0.36,
+                        0.39,
                         fit_results,
                         fontsize=10,
                         ha="left",
                         va="top",
                         color="white",
                         fontproperties=leg_font,
+                        transform=ax.transAxes,
                         bbox={
                             "boxstyle": "Square",
                             # have control over edge alpha and face alpha
                             "facecolor": colors.to_rgba("black")[:-1] + (0.7,),
                             "linewidth": 0.8,
                             "edgecolor": "white",
-                            "pad": 0.42,
+                            "pad": 0.40,
                         },
                     )
 
                     # add scales
                     master_scale = patches.Rectangle(
-                        xy=(170, -50),
+                        xy=(0.85 * m_rad, -0.25 * m_rad),
                         width=2,
-                        height=100,
+                        height=m_rad / 2,
                         linewidth=0,
                         edgecolor="white",
                         facecolor="white",
+                        # transform=ax.transAxes,
                     )
-                    ax[idx].text(
-                        180,
+                    ax.text(
+                        0.92 * m_rad,
                         0,
-                        r"$\mathrm{100 \: pc}$",
+                        r"$\mathrm{{{:.0f}\: pc}}$".format(m_rad / 2),
                         ha="center",
                         va="center",
                         color="white",
                         rotation=270,
                         fontproperties=leg_font,
+                        # transform=ax.transAxes,
                     )
-                    ax[idx].add_patch(master_scale)
+                    ax.add_patch(master_scale)
 
                     inset_scale = patches.Rectangle(
                         xy=(halo_center[0] - 11.5, halo_center[1] - 5),
-                        width=0.25,
+                        width=0.5,
                         height=10,
                         linewidth=0,
                         alpha=1,
@@ -410,12 +421,12 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         clip_on=False,
                     )
                     axins.set_ylabel(
-                        r"$\mathrm{10\:pc}$", fontproperties=leg_font, labelpad=0
+                        r"$\mathrm{10\:pc}$", fontproperties=leg_font, labelpad=1
                     )
                     axins.add_patch(inset_scale)
 
                     #!!! add time and redshift
-                    ax[idx].text(
+                    ax.text(
                         m_rad * 0.51,
                         m_rad * -0.93,
                         (
@@ -433,7 +444,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                     if idx == 0:
 
                         #!!! add efficiency label
-                        ax[idx].text(
+                        ax.text(
                             m_rad * -0.93,
                             m_rad * 0.93,
                             r"$f_* = {:.2f}$".format(efficiencies),
@@ -446,7 +457,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         )
                         # !!! add the luminosity color bar
                         # [left, bottom, width, height]
-                        cbar_ax = fig.add_axes([0.32, 0.805, 0.18, 0.02])
+                        cbar_ax = fig.add_axes([0.52, 0.805, 0.35, 0.02])
                         cbar = fig.colorbar(
                             xy, cax=cbar_ax, pad=0, orientation="horizontal"
                         )
@@ -467,35 +478,35 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         cbar_ax.set_title(
                             cbar_label, fontsize=11, fontproperties=leg_font
                         )
-    #!!! enable for time evolution
-    # if idx == 1:
-    #     with plt.style.context("dark_background"):
-    #         with plt.rc_context(
-    #             {
-    #                 "font.family": "serif",
-    #                 "mathtext.fontset": "cm",
-    #                 "xtick.labelsize": 10,
-    #                 "ytick.labelsize": 10,
-    #                 "font.size": 12,
-    #             }
-    #         ):
-    #             fig, ax = plt.subplots(
-    #                 nrows=1,
-    #                 ncols=2,
-    #                 figsize=(12.0, 6.0),
-    #                 dpi=400,
-    #                 sharex="row",
-    #                 sharey="row",
-    #                 facecolor=cm.Greys_r(0),
-    #             )
-    # plt.subplots_adjust(hspace=0, wspace=-0.05)
+                    #!!! enable for time evolution
+                    # if idx == 1:
+                    #     with plt.style.context("dark_background"):
+                    #         with plt.rc_context(
+                    #             {
+                    #                 "font.family": "serif",
+                    #                 "mathtext.fontset": "cm",
+                    #                 "xtick.labelsize": 10,
+                    #                 "ytick.labelsize": 10,
+                    #                 "font.size": 12,
+                    #             }
+                    #         ):
+                    #             fig, ax = plt.subplots(
+                    #                 nrows=1,
+                    #                 ncols=2,
+                    #                 figsize=(12.0, 6.0),
+                    #                 dpi=400,
+                    #                 sharex="row",
+                    #                 sharey="row",
+                    #                 facecolor=cm.Greys_r(0),
+                    #             )
+                    # plt.subplots_adjust(hspace=0, wspace=-0.05)
 
-plt.subplots_adjust(hspace=0, wspace=-0.05)
+# plt.subplots_adjust(hspace=0)
 plt.savefig(
     os.path.expanduser(
         (
             "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
-            "gc_tracked_70.png"
+            "profiling_demo_f3.png"
         )
     ),
     dpi=500,

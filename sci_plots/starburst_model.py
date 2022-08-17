@@ -12,12 +12,12 @@ with plt.rc_context(
     {
         "font.family": "serif",
         "mathtext.fontset": "cm",
-        "xtick.labelsize": 10,
-        "ytick.labelsize": 10,
-        "font.size": 12,
+        "xtick.labelsize": 8,
+        "ytick.labelsize": 8,
+        "font.size": 10,
     }
 ):
-    fig, ax = plt.subplots(1, 1, figsize=(4, 3.5), dpi=400)
+    fig, ax = plt.subplots(1, 1, figsize=(3, 2.8), dpi=400)
     legend = (
         r"$\alpha = 2.35$"
         "\n"
@@ -29,10 +29,8 @@ with plt.rc_context(
     ax.plot(time_myr, luminosity_a235, label=legend, color="grey", lw=4)
     ax.set_xscale("log")
     ax.set_yscale("log")
-    ax.set_xlabel(r"$\mathrm{Stellar\: Age \: (Myr)}$")
-    ax.set_ylabel(
-        r"$\mathrm{Stellar\:Luminosity \: \left(erg\:\:s^{-1}\:\AA^{-1}\right)}$"
-    )
+    ax.set_xlabel(r"$\mathrm{Age \: (Myr)}$")
+    ax.set_ylabel(r"$\mathrm{Luminosity \: \left(erg\:\:s^{-1}\:\AA^{-1}\right)}$")
     ax.set_xlim(time_myr[0], time_myr[-1])
     ax.legend()
 
