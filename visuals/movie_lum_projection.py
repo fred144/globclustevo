@@ -13,7 +13,7 @@ from matplotlib import colors
 import misc_visuals
 
 # 70% efficiency run
-strt = 200
+strt = 1009
 end =  1316
 step = 1
 efficiency = 0.35
