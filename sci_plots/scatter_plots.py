@@ -8,6 +8,7 @@ import os
 from modules.macros import filter_snapshots, common_filter_snapshots, t_myr_from_z
 from modules.match_t_sims import find_matching_time, get_snapshots
 import matplotlib.lines as mlines
+from scipy import stats
 
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
@@ -77,7 +78,16 @@ def metal_lookup(log_sfc_path, bsc_form_times):
     return bsc_metals, bsc_m_sun_form
 
 
-#%%
+def lin_model(x, slope, intercept):
+    return (slope * x) + intercept
+
+
+cmap = cm.get_cmap("Set2")
+cmap = cmap(np.linspace(0, 1, 8))
+
+fs70_color = cmap[1]
+fs35_color = cmap[2]
+
 for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     # if i == 0:
     #     continue
@@ -159,12 +169,13 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             # (f7_metal[f7_mask], f3_metal[f3_mask]),
             (f7_metal[f7_mask], f3_metal[f3_mask]),
             # (f7_metal[f7_mask], f3_metal[f3_mask]),
-            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
+            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
             # (f7_alpha[f7_mask], f3_alpha[f3_mask]),
             (f7_alpha[f7_mask], f3_alpha[f3_mask]),
             # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             # (f7_bes[f7_mask], f3_bes[f3_mask]),
+            (f7_metal[f7_mask], f3_metal[f3_mask]),
         ]
         y_vars = [
             ((f7_core_mass / f7_mass)[f7_mask], (f3_core_mass / f3_mass)[f3_mask]),
@@ -175,53 +186,79 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             # (f7_mass[f7_mask], f3_mass[f3_mask]),
             (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             # (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
-            (f7_sig_0[f7_mask], f3_sig_0[f3_mask]),
+            # (f7_sig_0[f7_mask], f3_sig_0[f3_mask]),
             (f7_sig_0[f7_mask], f3_sig_0[f3_mask]),
             # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
             # (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
             # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
+            (
+                (f7_core_mass / f7_core_rad**3)[f7_mask],
+                (f3_core_mass / f3_core_rad**3)[f3_mask],
+            ),
         ]
         x_labels = [
-            r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
-            r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
-            r"$\mathrm{ R_{half-mass} \:(pc)}$",
+            r"$ \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
+            r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
+            r"$\log_{10} \: \mathrm{ R_{half-mass} \:(pc)}$",
             # r"$\mathrm{ R_{half-mass} \:(pc)}$",
-            r"$\mathrm{R_{half-mass} \: (pc)}$",
+            r"$\log_{10} \: \mathrm{R_{half-mass} \: (pc)}$",
             # r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\log_{10} \: \mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
             # r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\mathrm{ R_{half-mass} \:(pc)}$",
-            r"$R\mathrm{_{core} \: (pc)}$",
+            # r"$\mathrm{ R_{half-mass} \:(pc)}$",
+            r"$\log_{10} \: R\mathrm{_{core} \: (pc)}$",
             # r"$\alpha$",
             r"$\alpha$",
             # r"$\mathrm{ R_{half-mass} \:(pc)}$",
             # "birth",
+            r"$\log_{10} \: \mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
         ]
         y_labels = [
-            r"$\mathrm{M_{core}}\: / M_{BSC} }$",
-            r"$\mathrm{M_{core}}\: \mathrm{(M_{\odot})}$",
-            r"$R\mathrm{_{core} \:(pc) }$",
+            r"$\mathrm{M_{core}\: / M_{BSC} }$",
+            r"$\log_{10} \: \mathrm{M_{core}}\: \mathrm{(M_{\odot})}$",
+            r"$\log_{10} \: R\mathrm{_{core} \:(pc) }$",
             # r"$\mathrm{R_{half-mass}\:(pc)}$ ",
-            r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
+            r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
             # r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
-            r"$\mathrm{R_{half-mass}\:(pc)}$ ",
+            r"$\log_{10} \: \mathrm{R_{half-mass}\:(pc)}$ ",
             # r"$R\mathrm{_{core}}$",
-            r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
-            r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            # r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            r"$\log_{10} \: \mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
             # r"$\mathrm{R_{half-mass}\:(pc)}$ ",
-            r"$R\mathrm{_{core}}$",
+            r"$\log_{10} \: R\mathrm{_{core}}$",
             # r"$R\mathrm{_{core}}$",
             # "$\mathrm{R_{half}\:(pc)}$ ",
+            r"$\log_{10} \: \mathrm{M_{\odot} \: pc^{-3}}$",
         ]
         # loop through some possible plots.
         for i, (x, y) in enumerate(zip(x_vars, y_vars)):
 
             fig, ax = plt.subplots(1, 1, figsize=(4, 3.5), dpi=400)
 
+            if i == 6:
+                f7_x = x[0]
+                f3_x = x[1]
+
+                f7_y = np.log10(y[0])
+                f3_y = np.log10(y[1])
+
+            elif i == 0:
+                f7_x = x[0]
+                f3_x = x[1]
+
+                f7_y = y[0]
+                f3_y = y[1]
+            else:
+                f7_x = np.log10(x[0])
+                f3_x = np.log10(x[1])
+
+                f7_y = np.log10(y[0])
+                f3_y = np.log10(y[1])
+
             f7_scatter = plt.scatter(
-                x[0],
-                y[0],
+                f7_x,
+                f7_y,
                 c=f7_bes[f7_mask],
                 # s=f7_half_radii,
                 alpha=0.8,
@@ -231,8 +268,8 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 linewidths=0,
             )
             f3_scatter = plt.scatter(
-                x[1],
-                y[1],
+                f3_x,
+                f3_y,
                 c=f3_bes[f3_mask],
                 # s=f3_half_radii,
                 alpha=0.8,
@@ -241,7 +278,69 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 cmap=cmap,
             )
 
-            # manual legend, want to set sfes
+            dont_fit = [0, 3, 7]
+            # fit them
+            if i not in dont_fit:
+
+                f7_params = stats.linregress(x=f7_x, y=f7_y)
+                f3_params = stats.linregress(x=f3_x, y=f3_y)
+
+                # f7_params, f7_pcov = curve_fit(f=lin_model, xdata=f7_x, ydata=f7_y)
+                # f3_params, f3_pcov = curve_fit(f=lin_model, xdata=f3_x, ydata=f3_y)
+
+                theory_x = np.linspace(f3_x.min() - 0.3, f3_x.max() + 0.3, 100)
+
+                ax.plot(
+                    theory_x,
+                    lin_model(theory_x, f7_params[0], f7_params[1]),
+                    lw=2,
+                    ls="--",
+                    color=fs70_color,
+                    label="$\mathrm{{ k = {:.2f} \pm {:.2f}}}$"
+                    "\n"
+                    "$\mathrm{{R^2 = {:.2f}}}$".format(
+                        f7_params[0], f7_params[4], f7_params[2] ** 2
+                    ),
+                )
+                ax.plot(
+                    theory_x,
+                    lin_model(theory_x, f3_params[0], f3_params[1]),
+                    lw=2,
+                    ls="--",
+                    color=fs35_color,
+                    label="$\mathrm{{ k = {:.2f} \pm {:.2f}}}$"
+                    "\n"
+                    "$\mathrm{{R^2 = {:.2f} }}$".format(
+                        f3_params[0], f3_params[4], f3_params[2] ** 2
+                    ),
+                )
+
+                # ax.fill_between(
+                #     theory_x,
+                #     lin_model(theory_x, *(f7_params - np.sqrt(np.diag(f7_pcov)))),
+                #     lin_model(theory_x, *(f7_params + np.sqrt(np.diag(f7_pcov)))),
+                #     lw=2,
+                #     # ls="-.",
+                #     color=fs70_color,
+                #     alpha=0.5,
+                #     edgecolor="none",
+                # )
+
+                # ax.fill_between(
+                #     theory_x,
+                #     lin_model(theory_x, *(f3_params - np.sqrt(np.diag(f3_pcov)))),
+                #     lin_model(theory_x, *(f3_params + np.sqrt(np.diag(f3_pcov)))),
+                #     lw=2,
+                #     # ls="-.",
+                #     color=fs35_color,
+                #     alpha=0.5,
+                #     edgecolor="none",
+                # )
+
+                ax.set_xlim(theory_x.min(), theory_x.max())
+                ax.legend(fontsize=8, loc="lower left")
+
+            # # manual legend, want to set sfes
             f70 = mlines.Line2D(
                 [],
                 [],
@@ -262,7 +361,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 alpha=0.8,
                 markeredgecolor="none",
             )
-            sfe_legend = plt.legend(
+            sfe_legend = fig.legend(
                 title="$\mathrm{SFE} \: (f_{*})$",
                 loc="lower right",
                 title_fontsize=10,
@@ -297,17 +396,17 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             cbar.set_label(label="$\mathrm{Time\;of\;Formation\;(Myr)}$", fontsize=12)
             plt.clim(vmin=330, vmax=600)
 
-            if i == 7:
-                ax.set_yscale("log")
-            elif i == 0:
-                pass
-            else:
-                ax.set_xscale("log")
-                ax.set_yscale("log")
+            # if i == 6:
+            #     ax.set_yscale("log")
+            # elif i == 0:
+            #     pass
+            # else:
+            #     ax.set_xscale("log")
+            #     ax.set_yscale("log")
 
             ax.set_xlabel(x_labels[i])
             ax.set_ylabel(y_labels[i])
-            # ax.set_xlim(0, 5000)
+
             # ax.set_ylim(0, 10000)
             # ax.set_ylim(bottom=ylims[i][0], top=ylims[i][1])
             # ax.grid(visible=True, zorder=0.5)
