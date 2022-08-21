@@ -146,9 +146,9 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         {
             "font.family": "serif",
             "mathtext.fontset": "cm",
-            "xtick.labelsize": 10,
-            "ytick.labelsize": 10,
-            "font.size": 12,
+            "xtick.labelsize": 7,
+            "ytick.labelsize": 7,
+            "font.size": 10,
         }
     ):
 
@@ -161,11 +161,13 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         f3_mask = (f3_alpha < 5) & (f3_mass < 1e4)  # & (f3_vir_rad < 10)
 
         x_vars = [
+            np.nan,
+            (f7_metal[f7_mask], f3_metal[f3_mask]),
             (f7_mass[f7_mask], f3_mass[f3_mask]),
+            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             (f7_mass[f7_mask], f3_mass[f3_mask]),
             (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
-            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             # (f7_metal[f7_mask], f3_metal[f3_mask]),
             (f7_metal[f7_mask], f3_metal[f3_mask]),
             # (f7_metal[f7_mask], f3_metal[f3_mask]),
@@ -175,14 +177,18 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             (f7_alpha[f7_mask], f3_alpha[f3_mask]),
             # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             # (f7_bes[f7_mask], f3_bes[f3_mask]),
-            (f7_metal[f7_mask], f3_metal[f3_mask]),
         ]
         y_vars = [
+            np.nan,
+            (
+                (f7_core_mass / f7_core_rad**3)[f7_mask],
+                (f3_core_mass / f3_core_rad**3)[f3_mask],
+            ),
             ((f7_core_mass / f7_mass)[f7_mask], (f3_core_mass / f3_mass)[f3_mask]),
+            (f7_mass[f7_mask], f3_mass[f3_mask]),
             (f7_core_mass[f7_mask], f3_core_mass[f3_mask]),
             (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
             # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
-            (f7_mass[f7_mask], f3_mass[f3_mask]),
             # (f7_mass[f7_mask], f3_mass[f3_mask]),
             (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             # (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
@@ -192,17 +198,15 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
             # (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
             # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
-            (
-                (f7_core_mass / f7_core_rad**3)[f7_mask],
-                (f3_core_mass / f3_core_rad**3)[f3_mask],
-            ),
         ]
         x_labels = [
-            r"$ \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
+            np.nan,
+            r"$\log_{10} \: \mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
+            r"$\log_{10} \: \mathrm{R_{half-mass} \: (pc)}$",
             r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
             r"$\log_{10} \: \mathrm{ R_{half-mass} \:(pc)}$",
             # r"$\mathrm{ R_{half-mass} \:(pc)}$",
-            r"$\log_{10} \: \mathrm{R_{half-mass} \: (pc)}$",
             # r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
             r"$\log_{10} \: \mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
             # r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
@@ -212,14 +216,15 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             r"$\alpha$",
             # r"$\mathrm{ R_{half-mass} \:(pc)}$",
             # "birth",
-            r"$\log_{10} \: \mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
         ]
         y_labels = [
+            np.nan,
+            r"$\log_{10} \: \mathrm{M_{\odot} \: pc^{-3}}$",
             r"$\mathrm{M_{core}\: / M_{BSC} }$",
+            r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
             r"$\log_{10} \: \mathrm{M_{core}}\: \mathrm{(M_{\odot})}$",
             r"$\log_{10} \: R\mathrm{_{core} \:(pc) }$",
             # r"$\mathrm{R_{half-mass}\:(pc)}$ ",
-            r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
             # r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
             r"$\log_{10} \: \mathrm{R_{half-mass}\:(pc)}$ ",
             # r"$R\mathrm{_{core}}$",
@@ -229,23 +234,38 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             r"$\log_{10} \: R\mathrm{_{core}}$",
             # r"$R\mathrm{_{core}}$",
             # "$\mathrm{R_{half}\:(pc)}$ ",
-            r"$\log_{10} \: \mathrm{M_{\odot} \: pc^{-3}}$",
         ]
         # loop through some possible plots.
+        fig, ax = plt.subplots(3, 3, figsize=(7, 6), dpi=400)
+        plt.subplots_adjust(hspace=0.35, wspace=0.35)
+        axs = ax.ravel()
+        axs[0].set_visible(False)
+
+        subplt_lbl = [
+            "",
+            "$\mathrm{(a)}$",
+            "$\mathrm{(b)}$",
+            "$\mathrm{(c)}$",
+            "$\mathrm{(d)}$",
+            "$\mathrm{(e)}$",
+            "$\mathrm{(f)}$",
+            "$\mathrm{(g)}$",
+            "$\mathrm{(h)}$",
+        ]
         for i, (x, y) in enumerate(zip(x_vars, y_vars)):
+            if i == 0:
+                continue
 
-            fig, ax = plt.subplots(1, 1, figsize=(4, 3.5), dpi=400)
-
-            if i == 6:
+            if i == 8:
                 f7_x = x[0]
                 f3_x = x[1]
 
                 f7_y = np.log10(y[0])
                 f3_y = np.log10(y[1])
 
-            elif i == 0:
-                f7_x = x[0]
-                f3_x = x[1]
+            elif i == 2:
+                f7_x = np.log10(x[0])
+                f3_x = np.log10(x[1])
 
                 f7_y = y[0]
                 f3_y = y[1]
@@ -256,29 +276,31 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 f7_y = np.log10(y[0])
                 f3_y = np.log10(y[1])
 
-            f7_scatter = plt.scatter(
+            f7_scatter = axs[i].scatter(
                 f7_x,
                 f7_y,
                 c=f7_bes[f7_mask],
                 # s=f7_half_radii,
-                alpha=0.8,
+                alpha=0.7,
                 edgecolors="none",
                 marker="o",
                 cmap=cmap,
                 linewidths=0,
+                s=20,
             )
-            f3_scatter = plt.scatter(
+            f3_scatter = axs[i].scatter(
                 f3_x,
                 f3_y,
                 c=f3_bes[f3_mask],
                 # s=f3_half_radii,
-                alpha=0.8,
+                alpha=0.7,
                 edgecolors="none",
                 marker="P",
+                s=20,
                 cmap=cmap,
             )
-
-            dont_fit = [0, 3, 7]
+            # plot index of not to fit
+            dont_fit = [1, 2, 3]
             # fit them
             if i not in dont_fit:
 
@@ -288,34 +310,33 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 # f7_params, f7_pcov = curve_fit(f=lin_model, xdata=f7_x, ydata=f7_y)
                 # f3_params, f3_pcov = curve_fit(f=lin_model, xdata=f3_x, ydata=f3_y)
 
-                theory_x = np.linspace(f3_x.min() - 0.3, f3_x.max() + 0.3, 100)
+                theory_x = np.linspace(f3_x.min() - 0.5, f3_x.max() + 0.5, 100)
 
-                ax.plot(
+                axs[i].plot(
                     theory_x,
                     lin_model(theory_x, f7_params[0], f7_params[1]),
                     lw=2,
-                    ls="--",
                     color=fs70_color,
-                    label="$\mathrm{{ k = {:.2f} \pm {:.2f}}}$"
-                    "\n"
+                    label="$\mathrm{{k = {:.2f} \pm {:.2f}}}$, "
+                    # "\n"
                     "$\mathrm{{R^2 = {:.2f}}}$".format(
                         f7_params[0], f7_params[4], f7_params[2] ** 2
                     ),
                 )
-                ax.plot(
+                axs[i].plot(
                     theory_x,
                     lin_model(theory_x, f3_params[0], f3_params[1]),
                     lw=2,
                     ls="--",
                     color=fs35_color,
-                    label="$\mathrm{{ k = {:.2f} \pm {:.2f}}}$"
-                    "\n"
+                    label="$\mathrm{{ k = {:.2f} \pm {:.2f}}}$, "
+                    # "\n"
                     "$\mathrm{{R^2 = {:.2f} }}$".format(
                         f3_params[0], f3_params[4], f3_params[2] ** 2
                     ),
                 )
 
-                # ax.fill_between(
+                # axs[i].fill_between(
                 #     theory_x,
                 #     lin_model(theory_x, *(f7_params - np.sqrt(np.diag(f7_pcov)))),
                 #     lin_model(theory_x, *(f7_params + np.sqrt(np.diag(f7_pcov)))),
@@ -326,7 +347,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 #     edgecolor="none",
                 # )
 
-                # ax.fill_between(
+                # axs[i].fill_between(
                 #     theory_x,
                 #     lin_model(theory_x, *(f3_params - np.sqrt(np.diag(f3_pcov)))),
                 #     lin_model(theory_x, *(f3_params + np.sqrt(np.diag(f3_pcov)))),
@@ -337,76 +358,79 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 #     edgecolor="none",
                 # )
 
-                ax.set_xlim(theory_x.min(), theory_x.max())
-                ax.legend(fontsize=8, loc="lower left")
+                # fit parameter legend
+                axs[i].set_xlim(theory_x.min(), theory_x.max())
+                fit = axs[i].legend(fontsize=6, loc="lower center")
+                fit.get_frame().set_edgecolor("w")
 
-            # # manual legend, want to set sfes
-            f70 = mlines.Line2D(
-                [],
-                [],
-                color="grey",
-                marker="o",
-                ls="",
-                label=r"0.70",
-                alpha=0.8,
-                markeredgewidth=0,
-            )
-            f35 = mlines.Line2D(
-                [],
-                [],
-                color="grey",
-                marker="P",
-                ls="",
-                label=r"0.35",
-                alpha=0.8,
-                markeredgecolor="none",
-            )
-            sfe_legend = fig.legend(
-                title="$\mathrm{SFE} \: (f_{*})$",
-                loc="lower right",
-                title_fontsize=10,
-                fontsize=8,
-                handles=[f70, f35],
-                facecolor=(1, 1, 1, 0.5),
-                framealpha=0.5,
-            )
-            ax.add_artist(sfe_legend)
+            axs[i].set_xlabel(x_labels[i], labelpad=0)
+            axs[i].set_ylabel(y_labels[i])
 
-            ax.text(
+            # supblot letter label
+            axs[i].text(
                 0.05,
                 0.95,
-                r"$\mathrm{{t = {:.0f} \: Myr}}$".format(f3_t_myr),
-                ha="left",
-                va="top",
-                transform=ax.transAxes,
-                fontsize=10,
-                bbox={
-                    "boxstyle": "round",
-                    # have control over edge alpha and face alpha
-                    "linewidth": 1,
-                    "edgecolor": "grey",
-                    "alpha": 0.5,
-                    "facecolor": "white",
-                    # "pad": 0.42,
-                },
+                subplt_lbl[i],
+                horizontalalignment="left",
+                verticalalignment="top",
+                transform=axs[i].transAxes,
+                fontsize=8,
             )
-
             # color bars
-            cbar = plt.colorbar(pad=0)
-            cbar.set_label(label="$\mathrm{Time\;of\;Formation\;(Myr)}$", fontsize=12)
-            plt.clim(vmin=330, vmax=600)
 
-            # if i == 6:
-            #     ax.set_yscale("log")
-            # elif i == 0:
-            #     pass
-            # else:
-            #     ax.set_xscale("log")
-            #     ax.set_yscale("log")
+        f70 = mlines.Line2D(
+            [],
+            [],
+            color="grey",
+            marker="o",
+            ls="",
+            label=r"$f_{*} = 0.70$",
+            alpha=0.8,
+            markeredgewidth=0,
+        )
+        f35 = mlines.Line2D(
+            [],
+            [],
+            color="grey",
+            marker="P",
+            ls="",
+            label=r"$f_{*} = 0.35$",
+            alpha=0.8,
+            markeredgecolor="none",
+        )
+        sfe_legend = fig.legend(
+            loc=(0.13, 0.69),
+            title=r"$\mathrm{{t = {:.0f} \: Myr}}$".format(f3_t_myr),
+            # loc="upper left",
+            title_fontsize=10,
+            fontsize=10,
+            handles=[f70, f35],
+            # bbox_to_anchor=(0.315, 0.76),
+        )
+        sfe_legend.get_frame().set_edgecolor("k")
+        sfe_legend.get_frame().set_boxstyle("Square")
+        # axs[i].add_artist(sfe_legend)
+        cbar_ax = fig.add_axes([0.11, 0.80, 0.22, 0.04])
+        cbar = fig.colorbar(
+            f3_scatter,
+            cax=cbar_ax,
+            pad=0,
+            orientation="horizontal",
+        )
+        cbar.set_alpha(0.8)
+        cbar_ax.set_title(
+            label="$\mathrm{Time \: of \: Formation \: (Myr)}$", fontsize=10
+        )
+        cbar.ax.tick_params(labelsize=7)
 
-            ax.set_xlabel(x_labels[i])
-            ax.set_ylabel(y_labels[i])
-
-            # ax.set_ylim(0, 10000)
-            # ax.set_ylim(bottom=ylims[i][0], top=ylims[i][1])
-            # ax.grid(visible=True, zorder=0.5)
+plt.savefig(
+    os.path.expanduser(
+        (
+            "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+            "bubble_plot_dashboard.png"
+        )
+    ),
+    dpi=500,
+    bbox_inches="tight",
+    pad_inches=0.05,
+)

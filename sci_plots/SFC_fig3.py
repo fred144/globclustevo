@@ -185,24 +185,20 @@ with plt.rc_context(
     }
 ):
     x_range = (3e2, 3e4)  # (10, 5e5)
-    bns = 15
+    bns = 18
     metal_xrange = (1e-4, 1e-2)
     # mass function
     fs70_mass, fs70_counts = log_data_function(m_sun_cloud_fs070, bns, x_range)
     fs35_mass, fs35_counts = log_data_function(m_sun_cloud_fs035, bns, x_range)
 
     f7_fit_params, _ = curve_fit(
-        f=gauss,
-        xdata=np.nan_to_num(np.log10(fs70_mass), neginf=0),
-        ydata=np.nan_to_num(np.log10(fs70_counts), neginf=0),
+        f=gauss, xdata=np.nan_to_num(np.log10(fs70_mass), neginf=0), ydata=fs70_counts
     )
     f7_theory_x = np.log10(np.geomspace(fs70_mass.min(), fs70_mass.max(), 100))
     f7_theory_y = gauss(f7_theory_x, *f7_fit_params)
 
     f3_fit_params, _ = curve_fit(
-        f=gauss,
-        xdata=np.nan_to_num(np.log10(fs35_mass), neginf=0),
-        ydata=np.nan_to_num(np.log10(fs35_counts), neginf=0),
+        f=gauss, xdata=np.nan_to_num(np.log10(fs35_mass), neginf=0), ydata=fs35_counts
     )
     f3_theory_x = np.log10(np.geomspace(fs35_mass.min(), fs35_mass.max(), 100))
     f3_theory_y = gauss(f3_theory_x, *f3_fit_params)
@@ -261,11 +257,11 @@ with plt.rc_context(
         alpha=0.4,
         color=fs70_color,
     )
-    # plot the fits
 
+    # plot the fits
     ax[0].plot(
         10**f3_theory_x,
-        10**f3_theory_y,
+        f3_theory_y,
         ls=":",
         linewidth=2,
         alpha=1,
@@ -276,7 +272,7 @@ with plt.rc_context(
     )
     ax[0].plot(
         10**f7_theory_x,
-        10**f7_theory_y,
+        f7_theory_y,
         ls=":",
         linewidth=2,
         alpha=1,
@@ -315,7 +311,7 @@ with plt.rc_context(
     f7_fit_params, _ = curve_fit(
         f=bimodal,
         xdata=np.log10(fs70_z),
-        ydata=np.nan_to_num(np.log10(fs70_z_counts), neginf=0),
+        ydata=np.nan_to_num(fs70_z_counts, neginf=0),
     )
 
     f7_theory_x = np.log10(np.geomspace(fs70_z.min(), fs70_z.max(), 100))
@@ -324,7 +320,7 @@ with plt.rc_context(
     f3_fit_params, _ = curve_fit(
         f=bimodal,
         xdata=np.log10(fs35_z),
-        ydata=np.nan_to_num(np.log10(fs35_z_counts), neginf=0),
+        ydata=np.nan_to_num(fs35_z_counts, neginf=0),
     )
 
     f3_theory_x = np.log10(np.geomspace(fs35_z.min(), fs35_z.max(), 100))
@@ -376,7 +372,7 @@ with plt.rc_context(
 
     ax[1].plot(
         10**f3_theory_x,
-        10**f3_theory_y,
+        f3_theory_y,
         ls=":",
         linewidth=2,
         alpha=1,
@@ -390,7 +386,7 @@ with plt.rc_context(
     )
     ax[1].plot(
         10**f7_theory_x,
-        10**f7_theory_y,
+        f7_theory_y,
         ls=":",
         linewidth=2,
         alpha=1,

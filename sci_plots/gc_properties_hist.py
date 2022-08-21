@@ -146,8 +146,8 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     f3_tot_light = f3_prof_data[:, 17]
     f3_metal, f3_orig_mass = metal_lookup("../sim_log_files/fs035_ms10/logSFC", f3_bes)
 
-    f7_mask = f7_alpha < 8  # & (f7_mass < 1e4)   & (f7_vir_rad < 10)
-    f3_mask = f3_alpha < 8  # & (f3_mass < 1e4)   & (f3_vir_rad < 10)
+    f7_mask = f7_alpha < 5  # & (f7_mass < 1e4)   & (f7_vir_rad < 10)
+    f3_mask = f3_alpha < 5  # & (f3_mass < 1e4)   & (f3_vir_rad < 10)
 
     f7_vars = [
         f7_core_rad[f7_mask],
@@ -172,11 +172,13 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     # hist_ranges = [(0, 2), (10, 800), (1.5, 5), (0, 1)]
     num_bins = 15
     bins = [
-        np.linspace(f7_core_rad.min(), f7_core_rad.max(), num_bins),
-        np.linspace(f7_sig_0.min(), f7_sig_0.max(), num_bins),
-        np.linspace(f7_alpha.min(), f7_alpha.max(), num_bins),
-        np.linspace(
-            (f7_mass / f7_orig_mass).min(), (f7_mass / f7_orig_mass).max(), num_bins
+        np.geomspace(f3_core_rad[f3_mask].min(), f3_core_rad[f3_mask].max(), num_bins),
+        np.geomspace(f3_sig_0[f3_mask].min(), f3_sig_0[f3_mask].max(), num_bins),
+        np.linspace(f3_alpha[f3_mask].min(), f3_alpha[f3_mask].max(), num_bins),
+        np.geomspace(
+            (f3_mass / f3_orig_mass)[f3_mask].min(),
+            (f3_mass / f3_orig_mass)[f3_mask].max(),
+            num_bins,
         ),
     ]
     with plt.rc_context(
@@ -192,7 +194,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         fig, ax = plt.subplots(
             nrows=2,
             ncols=2,
-            sharey=True,
+            sharey="row",
             figsize=(4, 4.3),
             dpi=300,
         )
@@ -224,7 +226,13 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 linewidth=2,
                 label=r"$0.70$",
             )
+            if i == 2:
+                ax[i].set_yscale("log")
 
+            else:
+                ax[i].set_xscale("log")
+                ax[i].set_yscale("log")
+            ax[i].set_ylim(0.8, 50)
             # f7_count, f7_bin_edges = np.histogram(f7_var, hist_bins, hist_ranges[i])
             # f7_right_edges = f7_bin_edges[1:]
             # f7_left_edges = f7_bin_edges[:-1]
@@ -275,7 +283,15 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 
         # ax[0].set_ylabel(r"$\mathrm{Number\:\:of\:\:BSCs}$")
 
-        ax[0].legend(title="$\mathrm{SFE} \: (f_{*})$", loc="upper right", fontsize=10)
+        leg = ax[1].legend(
+            title="$\mathrm{SFE} \: (f_{*})$",
+            loc="upper center",
+            ncol=2,
+            title_fontsize=8,
+            fontsize=8,
+            bbox_to_anchor=(0.0, 1.02),
+        )
+        # leg.get_frame().set_edgecolor("grey")
         # ax[2].text(
         #     0.06,
         #     0.92,

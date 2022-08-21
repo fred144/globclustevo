@@ -93,7 +93,9 @@ cols = 5
 star_lum_bin = 1500
 pxl_size = width[0] / star_lum_bin
 proj_r = width[0] / 2
-axlims = (-200, 200)
+row_lims = [(-80, 80), (-150, 150), (-200, 200), (-200, 200)]
+
+
 star_cmap = "gist_rainbow"
 dens_cmap = "cubehelix"
 temp_cmap = "gist_heat"
@@ -123,12 +125,12 @@ with plt.rc_context(
         gridspec_kw={"width_ratios": [1, 1, 0.1, 1, 1]},
         figsize=(7, 1.75 * rows),
         dpi=400,
-        sharex=True,
-        sharey=True,
+        sharex="row",
+        sharey="row",
     )
 
     for i, (f7, f3) in enumerate(zip(f7_sn_list, f3_sn_list)):
-
+        axlims = row_lims[i]
         ax[i, 2].set_visible(False)
 
         # get gas data

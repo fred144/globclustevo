@@ -56,8 +56,8 @@ f3_halos = filter_snapshots(os.path.relpath(f3_halo_dir), f3_strt, f3_end)
 
 
 # dictate which snapshots will be plotted
-f7_sn_list = np.array([377, 502, 820, 1110])  # looks promising
-f3_sn_list = np.array([414, 492, 724, 1316])
+f7_sn_list = np.array([377, 502, 820, 1069])  # looks promising
+f3_sn_list = np.array([414, 492, 730, 1277])
 
 
 f7_plt_p2 = get_snapshots(f7_pop2, get_list=f7_sn_list)
@@ -73,7 +73,7 @@ cols = 2
 star_lum_bin = 5000
 pxl_size = (width / star_lum_bin) ** 2
 proj_r = width / 2
-row_lims = [(-100, 100), (-100, 100), (-150, 150), (-80, 80)]
+row_lims = [(-80, 80), (-100, 100), (-100, 100), (-100, 100)]
 star_lum_range = (2e34, 2e36)
 
 leg_font = font_manager.FontProperties(family="serif", math_fontfamily="cm", size=8)
