@@ -24,11 +24,9 @@ from scipy import stats
 yt.enable_parallelism()
 
 # warnings.simplefilter(action="ignore", category=RuntimeWarning)
-
 print("=============================================================================")
 print("fs035_ms10 post processing")
 print("=============================================================================")
-
 # ==============================================================================
 simulation_run = "fs035_ms10"
 finder_profiler_run = "fof_best"
