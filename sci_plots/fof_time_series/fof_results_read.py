@@ -14,6 +14,21 @@ from modules.macros import filter_snapshots, common_filter_snapshots
 import os
 
 
+# time_series_data_save = "/home/fabg/globclustevo/sci_plots/fof_time_series"
+# tseries_dir = sorted(os.listdir(time_series_data_save))
+# snapshots = []
+# item_num = []
+# for i, f in enumerate(tseries_dir):
+#     try:
+#         latest_snap = int(f.split("_")[-1].split(".")[0])
+#         snapshots.append(latest_snap)
+#         item_num.append(i)
+#     except:
+#         pass
+# latest_run = tseries_dir[int(item_num[int(np.argmax(snapshots))])]
+# old_tseries_data = np.loadtxt(os.path.join(time_series_data_save, latest_run))
+
+
 #%% get the gc results from halo finder only
 halo_data_directory = r"../../halo_data/fs035_ms10/fof_best"
 pop2_data_directory = r"../../particle_data/pop_2_data/fs035_ms10"
@@ -24,7 +39,7 @@ step = 1
 pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
 halos_ds = filter_snapshots(halo_data_directory, strt, end, step)
 pop2_ds = common_filter_snapshots(pop2, halos_ds)
-#%% fof bound and unbound
+# fof bound and unbound
 
 t = []
 rdshift = []

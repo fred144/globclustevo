@@ -99,19 +99,22 @@ def filter_snapshots(folder_path, start_snap: int, end_snap: int, sampling=1):
     of time range based on snapshot number.
 
     """
+
     strt_string = str(start_snap).zfill(5)
     end_string = str(end_snap).zfill(5)
 
     files = sorted(os.listdir(folder_path))
+    try:
+        strt_idx = [i for i, s in enumerate(files) if strt_string in s][0]
+        end_idx = [i for i, s in enumerate(files) if end_string in s][0]
 
-    strt_idx = [i for i, s in enumerate(files) if strt_string in s][0]
-    end_idx = [i for i, s in enumerate(files) if end_string in s][0]
+        filtered_files = files[strt_idx : end_idx + 1 : sampling]
 
-    filtered_files = files[strt_idx : end_idx + 1 : sampling]
+        abs_paths = [os.path.join(folder_path, file) for file in filtered_files]
 
-    abs_paths = [os.path.join(folder_path, file) for file in filtered_files]
-
-    return abs_paths
+        return abs_paths
+    except:
+        print("!!!Either the start or end snapshot does not exist!!!")
 
 
 def succ_distance(current, previous):
