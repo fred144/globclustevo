@@ -2,7 +2,7 @@
 #SBATCH -J postprocess_pipeline
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
-#SBATCH -t 48:00:00
+#SBATCH -t 72:00:00
 
 
 
