@@ -15,8 +15,8 @@ import yt
 from modules.macros import filter_snapshots, ram_fields
 
 yt.enable_parallelism()
-strt = 113
-end = 113  # 1196
+strt = 126
+end = 1196
 step = 1
 efficiency = 0.70
 sim_run = "fs07_refine"
@@ -128,7 +128,7 @@ with plt.style.context("dark_background"):
                 facecolor=cm.Greys_r(0),
                 # constrained_layout=True,
             )
-            fig.subplots_adjust(wspace=0, hspace=-0.001)
+            fig.subplots_adjust(wspace=0, hspace=-0.016)
             gs = fig.add_gridspec(2, 3, height_ratios=[1, 0.70])
             ax1 = fig.add_subplot(gs[0])
             ax2 = fig.add_subplot(gs[1])
@@ -310,7 +310,7 @@ with plt.style.context("dark_background"):
             ax3.add_patch(scale)
 
             # add the luminosity color bar
-            cbar_ax = fig.add_axes([0.129, 0.30, 0.20, 0.025])
+            cbar_ax = fig.add_axes([0.130, 0.30, 0.20, 0.025])
             cbar = fig.colorbar(
                 ax3_lum_im, cax=cbar_ax, pad=-1, orientation="horizontal"
             )
@@ -332,7 +332,7 @@ with plt.style.context("dark_background"):
             cbar_ax.set_xticklabels(x_labels)
 
             # add the gas color bar
-            gas_cbar_gas_ax = fig.add_axes([0.129, 0.26, 0.20, 0.025])
+            gas_cbar_gas_ax = fig.add_axes([0.130, 0.26, 0.20, 0.025])
             gas_cbar = fig.colorbar(
                 ax3_gas_im, cax=gas_cbar_gas_ax, pad=0, orientation="horizontal"
             )
