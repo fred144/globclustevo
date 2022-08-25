@@ -1,0 +1,1091 @@
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca mpi_cuda_support 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00126.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00127.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00128.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00129.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00130.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00131.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00132.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00133.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00134.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00135.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00136.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00137.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00138.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00139.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00140.png
+Processing z
+Processing y
+Processing x
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00141.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00142.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00143.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00144.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00145.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00146.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00147.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00148.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00149.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00150.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00151.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00152.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00153.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00154.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00155.png
+Processing z
+Processing y
+Processing x
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00156.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00157.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00158.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00159.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00160.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00161.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00162.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00163.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00164.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00165.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00166.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00167.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00168.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00169.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00170.png
+Processing z
+Processing y
+Processing x
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00171.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00172.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00173.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00174.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00175.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00176.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00177.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00178.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00179.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00180.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00181.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00182.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00183.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00184.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00185.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00186.png
+Processing z
+Processing y
+Processing x
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00187.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00188.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00189.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00190.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00191.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00192.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00193.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00194.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00195.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00196.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00197.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00198.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00199.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00200.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00201.png
+Processing z
+Processing y
+Processing x
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00202.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00203.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00204.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00205.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00206.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00207.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00208.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00209.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00210.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00211.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00212.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00213.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00214.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00215.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00216.png
+Processing z
+Processing y
+Processing x
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00217.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00218.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00219.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00220.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00221.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00222.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00223.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00224.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00225.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00226.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00227.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00228.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00229.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00230.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00231.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00232.png
+Processing z
+Processing y
+Processing x
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:332: UserWarning: FixedFormatter should only be used together with FixedLocator
+  cbar_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:351: UserWarning: FixedFormatter should only be used together with FixedLocator
+  gas_cbar_gas_ax.set_xticklabels(x_labels)
+/lustre/fgarcia4/glob_clust_evo/visuals/movie_gas_projection.py:231: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax4.set_yticklabels(y_labels)
+>Saved: ../rendering/gas/fs07_refine/panel_t_series/lum_series_00233.png
