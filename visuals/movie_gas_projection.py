@@ -14,13 +14,14 @@ import misc_visuals
 import yt
 from modules.macros import filter_snapshots, ram_fields
 
-strt = 373
-end = 373
+yt.enable_parallelism()
+strt = 113
+end = 113  # 1196
 step = 1
 efficiency = 0.70
 sim_run = "fs07_refine"
 snap_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}".format(sim_run)
-snap_dir = os.path.relpath("../../cosm_test_data/refine")
+# snap_dir = os.path.relpath("../../cosm_test_data/refine")
 halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
 pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
 
@@ -32,7 +33,9 @@ sequence_dir = "../rendering/gas/{}/panel_t_series".format(sim_run)
 if not os.path.exists(sequence_dir):
     print("# Creating new sequence directory", sequence_dir)
     os.makedirs(sequence_dir)
-fs70_ds = np.loadtxt("../sci_plots/fof_time_series/fs035_fof_best_154_1316.txt")[::1, :]
+fs70_ds = np.loadtxt("../sci_plots/fof_time_series/fs07_refine_fof_best_113_1196.txt")[
+    ::1, :
+]
 fail_mask = fs70_ds[:, 3] > 30
 # all results are fit filtered
 f7_t_sim_myr = fs70_ds[:, 0][fail_mask]
