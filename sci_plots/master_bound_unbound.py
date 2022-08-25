@@ -21,7 +21,7 @@ from matplotlib.ticker import MaxNLocator
 
 
 # 70% efficiency run
-fs70_ds = np.loadtxt("./fof_time_series/fs070_fof_best_113_1110.txt")[::1, :]
+fs70_ds = np.loadtxt("./fof_time_series/fs07_refine_fof_best_113_1196.txt")[::1, :]
 fail_mask = fs70_ds[:, 3] > 30
 
 # all results are fit filtered
@@ -36,7 +36,7 @@ f7_lum_in_gc = fs70_ds[:, 4][fail_mask]
 
 
 # 35% efficiency run
-fs35_ds = np.loadtxt("./fof_time_series/fs035_fof_best_154_1316.txt")[::1, :]
+fs35_ds = np.loadtxt("./fof_time_series/fs035_ms10_fof_best_154_1368.txt")[::1, :]
 fail_mask = fs35_ds[:, 3] > 30
 
 # all results are fit filtered

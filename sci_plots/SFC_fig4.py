@@ -221,7 +221,7 @@ from matplotlib import cm
 fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
 redshft_fs070 = fs070_log_sfc[:, 2]
 r_pc_cloud_fs070 = fs070_log_sfc[:, 4]
-m_sun_cloud_fs070 = fs070_log_sfc[:, 7]
+m_star_fs070 = fs070_log_sfc[:, 7]
 n_hydrogen_fs070 = fs070_log_sfc[:, 8]
 metal_cloud_fs070 = fs070_log_sfc[:, 9]
 t_myr_fs070 = t_myr_from_z(redshft_fs070)
@@ -229,17 +229,17 @@ t_myr_fs070 = t_myr_from_z(redshft_fs070)
 fs035_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
 redshft_fs035 = fs035_log_sfc[:, 2]
 r_pc_cloud_fs035 = fs035_log_sfc[:, 4]
-m_sun_cloud_fs035 = fs035_log_sfc[:, 7]
+m_star_fs035 = fs035_log_sfc[:, 7]
 n_hydrogen_fs035 = fs035_log_sfc[:, 8]
 metal_cloud_fs035 = fs035_log_sfc[:, 9]
 t_myr_fs035 = t_myr_from_z(redshft_fs035)
 
 # plt.figure(figsize=(7, 10), dpi=300)
 # ax1 = plt.subplot(2, 1, 1)
-# plt.plot(t_myr_fs070, np.cumsum(m_sun_cloud_fs070))
+# plt.plot(t_myr_fs070, np.cumsum(m_star_fs070))
 # plt.yscale("log")
 # ax1_twin = ax1.twiny()
-# ax1_twin.plot(redshft_fs070 ,  np.cumsum(m_sun_cloud_fs070))
+# ax1_twin.plot(redshft_fs070 ,  np.cumsum(m_star_fs070))
 # ax1_twin.invert_xaxis()
 
 with plt.rc_context(
@@ -257,11 +257,11 @@ with plt.rc_context(
     fs70_color = cmap[1]
     fs35_color = cmap[2]
 
-    fig, ax = plt.subplots(nrows=2, ncols=1, sharex=True, figsize=(5, 3), dpi=300)
-
+    fig, ax = plt.subplots(nrows=3, ncols=1, sharex=True, figsize=(5, 4.5), dpi=300)
+    plt.subplots_adjust(hspace=0)
     ax[0].plot(
         t_myr_fs035,
-        np.cumsum(m_sun_cloud_fs035),
+        np.cumsum(m_star_fs035),
         label=r"$0.35$",
         color=fs35_color,
         linewidth=4,
@@ -269,7 +269,7 @@ with plt.rc_context(
     )
     ax[0].plot(
         t_myr_fs070,
-        np.cumsum(m_sun_cloud_fs070),
+        np.cumsum(m_star_fs070),
         label=r"$0.70$",
         color=fs70_color,
         linewidth=4,
@@ -281,7 +281,7 @@ with plt.rc_context(
     fs035_interp = np.interp(
         fs035_interp_points,
         xp=t_myr_fs035,
-        fp=np.cumsum(m_sun_cloud_fs035),
+        fp=np.cumsum(m_star_fs035),
     )
     # ax[0].scatter(fs035_interp_points, fs035_interp, label=r"0.35", s=1)
 
@@ -290,7 +290,7 @@ with plt.rc_context(
     fs070_interp = np.interp(
         fs070_interp_points,
         xp=t_myr_fs070,
-        fp=np.cumsum(m_sun_cloud_fs070),
+        fp=np.cumsum(m_star_fs070),
     )
     # ax[0].scatter(fs070_interp_points, fs070_interp, label=r"0.70", s=1)
 
@@ -322,8 +322,57 @@ with plt.rc_context(
         r"$\mathrm{SFR} \: \left( \mathrm{M}_{\odot} \: \mathrm{yr}^{-1} \right)$"
     )
     ax[1].set_ylim(bottom=0)
-    plt.subplots_adjust(hspace=0)
 
+    # do the efficiencies
+
+    dm_data = np.loadtxt("kazu_data/halo1_historyHe19.dat")
+    dm_tmyr = t_myr_from_z(dm_data[:, 1])
+    dm_mass = dm_data[:, 3]
+
+    fs070_dm_interp = np.interp(
+        fs070_interp_points,
+        xp=dm_tmyr,
+        fp=dm_mass,
+    )
+    fs070_mask = dm_tmyr >= fs070_interp_points.min()
+    fs070_dm_mask = fs070_interp_points <= dm_tmyr.max()
+    fs070_efficiency = (
+        fs070_interp[fs070_dm_mask] / fs070_dm_interp[fs070_dm_mask]
+    ) * 100
+
+    # ax[2].scatter(dm_tmyr[fs070_mask], dm_mass[fs070_mask])
+    ax[2].plot(
+        fs070_interp_points[fs070_dm_mask],
+        fs070_efficiency,
+        c=fs70_color,
+        linewidth=4,
+        alpha=0.8,
+    )
+
+    fs035_dm_interp = np.interp(
+        fs035_interp_points,
+        xp=dm_tmyr,
+        fp=dm_mass,
+    )
+    fs035_mask = dm_tmyr >= fs035_interp_points.min()
+    fs035_dm_mask = fs035_interp_points <= dm_tmyr.max()
+    fs035_efficiency = (
+        fs035_interp[fs035_dm_mask] / fs035_dm_interp[fs035_dm_mask]
+    ) * 100
+
+    # ax[2].scatter(dm_tmyr[fs035_mask], dm_mass[fs035_mask])
+    ax[2].plot(
+        fs035_interp_points[fs035_dm_mask],
+        fs035_efficiency,
+        c=fs35_color,
+        linewidth=4,
+        alpha=0.8,
+    )
+    ax[2].set_ylabel(r"$\mathrm{Efficiency (\%)}$", labelpad=10)
+    ax[2].set_ylim(bottom=0, top=0.37)
+
+    # ax[0].plot(fs035_interp_points[fs035_dm_mask], fs035_dm_interp[fs035_dm_mask])
+    # ax[0].plot(fs070_interp_points[fs070_dm_mask], fs070_dm_interp[fs070_dm_mask])
     # year_annotations = [
     #     468.1533733654368,
     #     503.74494157253463,

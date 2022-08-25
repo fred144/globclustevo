@@ -157,87 +157,66 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         # # map to differnt sizes for better plotting
         # f7_half_radii = scale_factor * f7_half_mass_rad
         # f3_half_radii = scale_factor * f3_half_mass_rad
-        f7_mask = (f7_alpha < 5) & (f7_mass < 1e4)  # & (f7_vir_rad < 10)
-        f3_mask = (f3_alpha < 5) & (f3_mass < 1e4)  # & (f3_vir_rad < 10)
+        f7_mask = f7_alpha < 5  # & (f7_mass < 1e4)  # & (f7_vir_rad < 10)
+        f3_mask = f3_alpha < 5  # & (f3_mass < 1e4)  # & (f3_vir_rad < 10)
 
         x_vars = [
             np.nan,
+            (f7_mass[f7_mask], f3_mass[f3_mask]),
             (f7_metal[f7_mask], f3_metal[f3_mask]),
             (f7_mass[f7_mask], f3_mass[f3_mask]),
+            # (f7_mass[f7_mask], f3_mass[f3_mask]),  #
             (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
-            (f7_mass[f7_mask], f3_mass[f3_mask]),
-            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
-            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
-            # (f7_metal[f7_mask], f3_metal[f3_mask]),
+            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),  #
             (f7_metal[f7_mask], f3_metal[f3_mask]),
-            # (f7_metal[f7_mask], f3_metal[f3_mask]),
-            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
-            # (f7_alpha[f7_mask], f3_alpha[f3_mask]),
             (f7_alpha[f7_mask], f3_alpha[f3_mask]),
-            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
-            # (f7_bes[f7_mask], f3_bes[f3_mask]),
         ]
         y_vars = [
             np.nan,
+            (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             (
                 (f7_core_mass / f7_core_rad**3)[f7_mask],
                 (f3_core_mass / f3_core_rad**3)[f3_mask],
             ),
-            ((f7_core_mass / f7_mass)[f7_mask], (f3_core_mass / f3_mass)[f3_mask]),
-            (f7_mass[f7_mask], f3_mass[f3_mask]),
             (f7_core_mass[f7_mask], f3_core_mass[f3_mask]),
-            (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
-            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
-            # (f7_mass[f7_mask], f3_mass[f3_mask]),
+            # ((f7_core_mass / f7_mass)[f7_mask], (f3_core_mass / f3_mass)[f3_mask]),  #
+            ((f7_core_rad)[f7_mask], (f3_core_rad)[f3_mask]),
+            # (
+            #     (f7_core_rad / f7_half_mass_rad)[f7_mask],
+            #     (f3_core_rad / f3_half_mass_rad)[f3_mask],
+            # ),  #
             (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
-            # (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
-            # (f7_sig_0[f7_mask], f3_sig_0[f3_mask]),
             (f7_sig_0[f7_mask], f3_sig_0[f3_mask]),
-            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
             (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
-            # (f7_core_rad[f7_mask], f3_core_rad[f3_mask]),
-            # (f7_half_mass_rad[f7_mask], f3_half_mass_rad[f3_mask]),
         ]
         x_labels = [
             np.nan,
+            r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
             r"$\log_{10} \: \mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
             r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
-            r"$\log_{10} \: \mathrm{R_{half-mass} \: (pc)}$",
-            r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
-            r"$\log_{10} \: \mathrm{ R_{half-mass} \:(pc)}$",
-            # r"$\mathrm{ R_{half-mass} \:(pc)}$",
-            # r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
+            # r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",  #
+            r"$\log_{10} \: \mathrm{ R_{half} \:(pc)}$",
+            # r"$\log_{10} \: \mathrm{ R_{half} \:(pc)}$",  #
             r"$\log_{10} \: \mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            # r"$\mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            # r"$\mathrm{ R_{half-mass} \:(pc)}$",
             r"$\log_{10} \: R\mathrm{_{core} \: (pc)}$",
-            # r"$\alpha$",
             r"$\alpha$",
-            # r"$\mathrm{ R_{half-mass} \:(pc)}$",
-            # "birth",
         ]
         y_labels = [
             np.nan,
-            r"$\log_{10} \: \mathrm{M_{\odot} \: pc^{-3}}$",
-            r"$\mathrm{M_{core}\: / M_{BSC} }$",
-            r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
+            r"$\log_{10} \: \mathrm{R_{half} \: (pc)}$",
+            r"$\log_{10} \: \rho_{\mathrm{core }} \: (\mathrm{M_{\odot} \: pc^{-3}})$",
             r"$\log_{10} \: \mathrm{M_{core}}\: \mathrm{(M_{\odot})}$",
-            r"$\log_{10} \: R\mathrm{_{core} \:(pc) }$",
-            # r"$\mathrm{R_{half-mass}\:(pc)}$ ",
-            # r"$\mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
-            r"$\log_{10} \: \mathrm{R_{half-mass}\:(pc)}$ ",
-            # r"$R\mathrm{_{core}}$",
-            # r"$\mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
+            # r"$\log_{10} \: \mathrm{M_{core}}\: / \mathrm{M_{BSC}}}$",  #
+            r"$\log_{10} \: R_{\mathrm{core}} \mathrm{(pc)}$",
+            # r"$\log_{10} \: R_{\mathrm{core}} / \mathrm{R_{half}}$",  #
+            r"$\log_{10} \: \mathrm{R_{half}\:(pc)}$ ",
             r"$\log_{10} \: \mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
-            # r"$\mathrm{R_{half-mass}\:(pc)}$ ",
             r"$\log_{10} \: R\mathrm{_{core}}$",
-            # r"$R\mathrm{_{core}}$",
-            # "$\mathrm{R_{half}\:(pc)}$ ",
         ]
         # loop through some possible plots.
-        fig, ax = plt.subplots(3, 3, figsize=(7, 6), dpi=400)
-        plt.subplots_adjust(hspace=0.35, wspace=0.35)
+        fig, ax = plt.subplots(4, 2, figsize=(4, 8), dpi=400)
+        plt.subplots_adjust(hspace=0.35, wspace=0.40)
         axs = ax.ravel()
         axs[0].set_visible(False)
 
@@ -256,19 +235,13 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             if i == 0:
                 continue
 
-            if i == 8:
+            if i == 7:
                 f7_x = x[0]
                 f3_x = x[1]
 
                 f7_y = np.log10(y[0])
                 f3_y = np.log10(y[1])
 
-            elif i == 2:
-                f7_x = np.log10(x[0])
-                f3_x = np.log10(x[1])
-
-                f7_y = y[0]
-                f3_y = y[1]
             else:
                 f7_x = np.log10(x[0])
                 f3_x = np.log10(x[1])
@@ -281,26 +254,26 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 f7_y,
                 c=f7_bes[f7_mask],
                 # s=f7_half_radii,
-                alpha=0.7,
+                alpha=0.8,
                 edgecolors="none",
                 marker="o",
                 cmap=cmap,
                 linewidths=0,
-                s=20,
+                s=15,
             )
             f3_scatter = axs[i].scatter(
                 f3_x,
                 f3_y,
                 c=f3_bes[f3_mask],
                 # s=f3_half_radii,
-                alpha=0.7,
+                alpha=0.8,
                 edgecolors="none",
                 marker="P",
-                s=20,
+                s=15,
                 cmap=cmap,
             )
             # plot index of not to fit
-            dont_fit = [1, 2, 3]
+            dont_fit = [1, 2]
             # fit them
             if i not in dont_fit:
 
@@ -317,7 +290,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                     lin_model(theory_x, f7_params[0], f7_params[1]),
                     lw=2,
                     color=fs70_color,
-                    label="$\mathrm{{k = {:.2f} \pm {:.2f}}}$, "
+                    label="$\mathrm{{{:.2f} \pm {:.2f}}}$, "
                     # "\n"
                     "$\mathrm{{R^2 = {:.2f}}}$".format(
                         f7_params[0], f7_params[4], f7_params[2] ** 2
@@ -329,7 +302,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                     lw=2,
                     ls="--",
                     color=fs35_color,
-                    label="$\mathrm{{ k = {:.2f} \pm {:.2f}}}$, "
+                    label="$\mathrm{{{:.2f} \pm {:.2f}}}$, "
                     # "\n"
                     "$\mathrm{{R^2 = {:.2f} }}$".format(
                         f3_params[0], f3_params[4], f3_params[2] ** 2
@@ -358,13 +331,19 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 #     edgecolor="none",
                 # )
 
-                # fit parameter legend
+                # tweak some limits
                 axs[i].set_xlim(theory_x.min(), theory_x.max())
+                axs[i].set_ylim(f3_y.min() - 1.5, f3_y.max() + 0.5)
+
+                # fit parameter legend
                 fit = axs[i].legend(fontsize=6, loc="lower center")
                 fit.get_frame().set_edgecolor("w")
 
+            if i == 1:
+                axs[i].set_ylim(-1, 1.1)
+
             axs[i].set_xlabel(x_labels[i], labelpad=0)
-            axs[i].set_ylabel(y_labels[i])
+            axs[i].set_ylabel(y_labels[i], labelpad=0)
 
             # supblot letter label
             axs[i].text(
@@ -399,7 +378,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             markeredgecolor="none",
         )
         sfe_legend = fig.legend(
-            loc=(0.13, 0.69),
+            loc=(0.12, 0.76),
             title=r"$\mathrm{{t = {:.0f} \: Myr}}$".format(f3_t_myr),
             # loc="upper left",
             title_fontsize=10,
@@ -410,7 +389,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         sfe_legend.get_frame().set_edgecolor("k")
         sfe_legend.get_frame().set_boxstyle("Square")
         # axs[i].add_artist(sfe_legend)
-        cbar_ax = fig.add_axes([0.11, 0.80, 0.22, 0.04])
+        cbar_ax = fig.add_axes([0.05, 0.82, 0.39, 0.04])
         cbar = fig.colorbar(
             f3_scatter,
             cax=cbar_ax,

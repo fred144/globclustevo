@@ -22,9 +22,9 @@ if not os.path.exists(runsavepath):
 
 
 f7_strt = 113
-f7_end = 1110
+f7_end = 1196
 f3_strt = 154
-f3_end = 1316
+f3_end = 1368
 step = 1
 
 f7_pop2 = filter_snapshots(
@@ -46,8 +46,8 @@ f7_pop2_matched, f7_matched_nums = find_matching_time(
 f7_halo_matched = get_snapshots(snapshot_file_list=f7_halo_ds, get_list=f7_matched_nums)
 
 # sampple idxs
-prof_start = 1160
-prof_end = 1161
+prof_start = 1214
+prof_end = 1215
 prof_step = 1
 
 fs070_p2 = f7_pop2_matched[prof_start:prof_end:prof_step]
@@ -593,58 +593,58 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
 
             # add a histogram of ages inside the cluster
             # [left, bottom, width, height]
-            with plt.style.context("dark_background"):
-                if i == 0:
-                    # top inset
-                    ax_inset = ax[i, 2].inset_axes([0.55, 0.20, 0.4, 0.4])
+            # with plt.style.context("dark_background"):
+            #     if i == 0:
+            #         # top inset
+            #         ax_inset = ax[i, 2].inset_axes([0.55, 0.20, 0.4, 0.4])
 
-                    # 0.70 numbers
-                    # ax[2 * i + hndlr_2, 0].axes.xaxis.set_ticklabels([])
-                    # ax[2 * i + hndlr_2, 1].axes.xaxis.set_ticklabels([])
-                    # ax[2 * i + hndlr_2, 2].axes.xaxis.set_ticklabels([])
-                else:
-                    # bottom inset
-                    ax_inset = ax[3, 2].inset_axes([0.55, 0.20, 0.4, 0.4])
+            #         # 0.70 numbers
+            #         # ax[2 * i + hndlr_2, 0].axes.xaxis.set_ticklabels([])
+            #         # ax[2 * i + hndlr_2, 1].axes.xaxis.set_ticklabels([])
+            #         # ax[2 * i + hndlr_2, 2].axes.xaxis.set_ticklabels([])
+            #     else:
+            #         # bottom inset
+            #         ax_inset = ax[3, 2].inset_axes([0.55, 0.20, 0.4, 0.4])
 
-                    # plot only for the bottom row
+            #         # plot only for the bottom row
 
-                ax_inset.patch.set_alpha(0.5)
-                bins = np.linspace(300, 650, 20)
-                ax_inset.hist(
-                    field_bes,
-                    bins,
-                    weights=field_masses,
-                    alpha=0.6,
-                    color="w",
-                    edgecolor="black",
-                )
-                ax_inset.axvline(x=t_myr, ls="--", color="white", lw=1)
-                ax_inset.tick_params(labelsize=5)
-                ax_inset.set_xlabel(
-                    "$\mathrm{Star \: Birth \: (Myr)}$",
-                    fontproperties=leg_font,
-                    fontsize=7,
-                    labelpad=0,
-                )
-                ax_inset.set_ylabel(
-                    r"$\mathrm{Field \: Mass \: (M_{\odot})}$",
-                    fontproperties=leg_font,
-                    fontsize=7,
-                    labelpad=0,
-                )
-                ax_inset.text(
-                    t_myr + 10,
-                    2e3,
-                    r"$\mathrm{t_{sim}}$",
-                    fontproperties=leg_font,
-                    va="center",
-                    rotation=270,
-                    fontsize=7,
-                )
-                ax_inset.set_yscale("log")
-                # ax_inset.set_xlim("log")
-                ax_inset.set_xlim(300, 700)
-                ax_inset.set_ylim(1, 5e5)
+            #     ax_inset.patch.set_alpha(0.5)
+            #     bins = np.linspace(300, 650, 20)
+            #     ax_inset.hist(
+            #         field_bes,
+            #         bins,
+            #         weights=field_masses,
+            #         alpha=0.6,
+            #         color="w",
+            #         edgecolor="black",
+            #     )
+            #     ax_inset.axvline(x=t_myr, ls="--", color="white", lw=1)
+            #     ax_inset.tick_params(labelsize=5)
+            #     ax_inset.set_xlabel(
+            #         "$\mathrm{Star \: Birth \: (Myr)}$",
+            #         fontproperties=leg_font,
+            #         fontsize=7,
+            #         labelpad=0,
+            #     )
+            #     ax_inset.set_ylabel(
+            #         r"$\mathrm{Field \: Mass \: (M_{\odot})}$",
+            #         fontproperties=leg_font,
+            #         fontsize=7,
+            #         labelpad=0,
+            #     )
+            #     ax_inset.text(
+            #         t_myr + 10,
+            #         2e3,
+            #         r"$\mathrm{t_{sim}}$",
+            #         fontproperties=leg_font,
+            #         va="center",
+            #         rotation=270,
+            #         fontsize=7,
+            #     )
+            #     ax_inset.set_yscale("log")
+            #     # ax_inset.set_xlim("log")
+            #     ax_inset.set_xlim(300, 700)
+            #     ax_inset.set_ylim(1, 5e5)
 
         # add the luminosity color bar
         # fig.subplots_adjust(wspace=0, hspace=0, bottom=0.1)

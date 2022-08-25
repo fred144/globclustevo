@@ -110,9 +110,9 @@ if __name__ == "__main__":
             rotation="vertical",
         )
         f7_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*}}}$"
-        f7_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
+        f7_bsc_label = r"$\mathrm{{CMF }} $"
         f3_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*}}}$"
-        f3_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
+        f3_bsc_label = r"$\mathrm{{CMF}} $"
         f7_legend_title = r"$f_{*} = 0.70$"
         f3_legend_title = r"$f_{*} = 0.35$"
         f70_imf = mlines.Line2D(

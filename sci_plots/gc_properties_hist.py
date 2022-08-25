@@ -23,9 +23,9 @@ f3_mc_imf_clr = cmap[2]
 f3_bsc_mf_clr = cmap[3]
 
 f7_strt = 113
-f7_end = 1110
+f7_end = 1196
 f3_strt = 154
-f3_end = 1316
+f3_end = 1368
 step = 1
 
 
@@ -50,9 +50,9 @@ _, f3_matched_nums = find_matching_time(
 f3_pro_ds = filter_snapshots(f3_prof_dir, f3_strt, f3_end, step)
 
 # sample the matched snapshots for plotting by indexing
-strt = 921
-end = 922
-st = 1
+strt = 300  # 921
+end = 301  # 922
+st = end - strt
 
 f7_pro_ds = filter_snapshots(f7_prof_dir, f7_strt, f7_end, step)[strt:end:st]
 f3_pro_ds = get_snapshots(f3_pro_ds, get_list=f3_matched_nums)[strt:end:st]
@@ -310,6 +310,23 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         #         # "pad": 0.42,
         #     },
         # )
+        fig.text(
+            0.5,
+            0.45,
+            (r"$\mathrm{{t = {:.1f} \: Myr}}$").format(f3_t_myr),
+            ha="center",
+            va="top",
+            color="black",
+            fontsize=8,
+            bbox={
+                "boxstyle": "Round",
+                # have control over edge alpha and face alpha
+                "facecolor": "white",
+                "linewidth": 0.5,
+                "edgecolor": "grey",
+                # "pad": 0.42,
+            },
+        )
         fig.text(
             0.01,
             0.5,
