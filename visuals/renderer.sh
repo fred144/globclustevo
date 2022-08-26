@@ -2,7 +2,7 @@
 #SBATCH -J renderer
 #SBATCH --ntasks=5
 #SBATCH --cpus-per-task=16
-#SBATCH -t 36:00:00
+#SBATCH -t 12:00:00
 
 # needed for bash in deepthought2 (cf. https://www.glue.umd.edu/hpcc/help/jobs.html#basic)
 . ~/.profile
