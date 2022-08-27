@@ -15,19 +15,19 @@ import yt
 from modules.macros import filter_snapshots, ram_fields
 
 yt.enable_parallelism()
-strt = 500
-end = 500
+strt = 126
+end = 1196
 step = 1
 efficiency = 0.70
 sim_run = "fs07_refine"
 snap_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}".format(sim_run)
-snap_dir = os.path.relpath("../../cosm_test_data/refine")
+# snap_dir = os.path.relpath("../../cosm_test_data/refine")
 halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
 pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
 
 snapshots = filter_snapshots(snap_dir, strt, end, 1)
 
-sequence_dir = "../rendering/gas/{}/panel_t_series".format(sim_run)
+sequence_dir = "../rendering/gas_lum/{}/gas_lum_projection".format(sim_run)
 
 
 if not os.path.exists(sequence_dir):
@@ -51,7 +51,7 @@ halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
 plt_wdth = 400
 star_bins = 2000
 pxl_size = (plt_wdth / star_bins) ** 2  # pc
-lum_range = (4e33, 4e36)  # (2e32, 5e35)
+lum_range = (3e33, 3e36)  # (2e32, 5e35)
 gas_alpha = 0.5
 lum_alpha = 1
 cell_fields, epf = ram_fields()
@@ -231,6 +231,35 @@ with plt.style.context("dark_background"):
             y_labels = [i.get_text().replace("10^", "") for i in ax4.get_yticklabels()]
             ax4.set_yticklabels(y_labels)
 
+            # luminosity
+            ax1.imshow(
+                viewing_lums[0] / pxl_size,
+                cmap="inferno",
+                # interpolation="gaussian",
+                origin="lower",
+                extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
+                norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
+                alpha=lum_alpha,
+            )
+            ax2.imshow(
+                viewing_lums[1] / pxl_size,
+                cmap="inferno",
+                # interpolation="gaussian",
+                origin="lower",
+                extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
+                norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
+                alpha=lum_alpha,
+            )
+            ax3_lum_im = ax3.imshow(
+                viewing_lums[2] / pxl_size,
+                cmap="inferno",
+                # interpolation="gaussian",
+                origin="lower",
+                extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
+                norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
+                alpha=lum_alpha,
+            )
+
             # three panels gas density
             ax1.imshow(
                 viewing_gas[0],
@@ -258,35 +287,6 @@ with plt.style.context("dark_background"):
                 extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
                 norm=LogNorm(0.008, 0.32),
                 alpha=gas_alpha,
-            )
-
-            # luminosity alpha
-            ax1.imshow(
-                viewing_lums[0] / pxl_size,
-                cmap="inferno",
-                # interpolation="gaussian",
-                origin="lower",
-                extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
-                norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
-                alpha=lum_alpha,
-            )
-            ax2.imshow(
-                viewing_lums[1] / pxl_size,
-                cmap="inferno",
-                # interpolation="gaussian",
-                origin="lower",
-                extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
-                norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
-                alpha=lum_alpha,
-            )
-            ax3_lum_im = ax3.imshow(
-                viewing_lums[2] / pxl_size,
-                cmap="inferno",
-                # interpolation="gaussian",
-                origin="lower",
-                extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
-                norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
-                alpha=lum_alpha,
             )
 
             # add scale
@@ -390,7 +390,7 @@ with plt.style.context("dark_background"):
             ax3_inset.set_alpha(0)
 
             output_path = os.path.join(
-                sequence_dir, "lum_series_{}.png".format(output_num_string)
+                sequence_dir, "gas_lum_series_{}.png".format(output_num_string)
             )
             # plt.show()
             plt.savefig(
