@@ -15,13 +15,13 @@ import yt
 from modules.macros import filter_snapshots, ram_fields
 
 yt.enable_parallelism()
-strt = 500  # 178
-end = 500  # 1368
+strt = 178
+end = 1368
 step = 1
 efficiency = 0.35
 sim_run = "fs035_ms10"
-# snap_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}".format(sim_run)
-snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+snap_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}".format(sim_run)
+# snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
 pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
 
