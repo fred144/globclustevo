@@ -1,0 +1,53 @@
+/var/spool/slurmd/job18928867/slurm_script: line 17: /lustre/fgarcia4/glob_clust_evo/visuals/fs035_gas_panel_projection.py: Permission denied
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas_lum/fs07_refine/gas_lum_projection/gas_lum_series_00351.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas_lum/fs07_refine/gas_lum_projection/gas_lum_series_00352.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas_lum/fs07_refine/gas_lum_projection/gas_lum_series_00353.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas_lum/fs07_refine/gas_lum_projection/gas_lum_series_00354.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas_lum/fs07_refine/gas_lum_projection/gas_lum_series_00355.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas_lum/fs07_refine/gas_lum_projection/gas_lum_series_00356.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas_lum/fs07_refine/gas_lum_projection/gas_lum_series_00357.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas_lum/fs07_refine/gas_lum_projection/gas_lum_series_00358.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas_lum/fs07_refine/gas_lum_projection/gas_lum_series_00359.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas_lum/fs07_refine/gas_lum_projection/gas_lum_series_00360.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas_lum/fs07_refine/gas_lum_projection/gas_lum_series_00361.png
+Processing z
+Processing y
+Processing x
+>Saved: ../rendering/gas_lum/fs07_refine/gas_lum_projection/gas_lum_series_00362.png
+Processing z
