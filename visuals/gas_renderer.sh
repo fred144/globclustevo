@@ -2,6 +2,7 @@
 #SBATCH -J gas_renderer
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
+#SBATCH --mem-per-cpu=6400  
 #SBATCH -t 72:00:00
 
 # needed for bash in deepthought2 (cf. https://www.glue.umd.edu/hpcc/help/jobs.html#basic)

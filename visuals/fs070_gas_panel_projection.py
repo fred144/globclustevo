@@ -15,7 +15,7 @@ import yt
 from modules.macros import filter_snapshots, ram_fields
 
 yt.enable_parallelism()
-strt = 351 #126
+strt = 606 #126
 end = 1196
 step = 1
 efficiency = 0.70
@@ -399,5 +399,5 @@ with plt.style.context("dark_background"):
                 bbox_inches="tight",
                 pad_inches=0.05,
             )
-
+            plt.close("all") 
             print(">Saved:", output_path)
