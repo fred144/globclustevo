@@ -14,9 +14,9 @@ module load gcc
 module load openmpi
 source ~/py-virtual-envs/master/bin/activate
 
-SCRIPT="/lustre/fgarcia4/glob_clust_evo/visuals/fs070_gas_panel_projection.py"
+#SCRIPT="/lustre/fgarcia4/glob_clust_evo/visuals/fs070_gas_panel_projection.py"
 SCRIPT1= "/lustre/fgarcia4/glob_clust_evo/visuals/fs035_gas_panel_projection.py"
 
 # number of cores specified above
-mpirun python3 $SCRIPT  2>&1 
+#mpirun python3 $SCRIPT  2>&1 
 mpirun python3 $SCRIPT1  2>&1 
