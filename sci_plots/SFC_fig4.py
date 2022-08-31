@@ -338,7 +338,7 @@ with plt.rc_context(
     fs070_dm_mask = fs070_interp_points <= dm_tmyr.max()
     fs070_efficiency = (
         fs070_interp[fs070_dm_mask] / fs070_dm_interp[fs070_dm_mask]
-    ) * 100
+    )  # * 100
 
     # ax[2].scatter(dm_tmyr[fs070_mask], dm_mass[fs070_mask])
     ax[2].plot(
@@ -358,7 +358,7 @@ with plt.rc_context(
     fs035_dm_mask = fs035_interp_points <= dm_tmyr.max()
     fs035_efficiency = (
         fs035_interp[fs035_dm_mask] / fs035_dm_interp[fs035_dm_mask]
-    ) * 100
+    )  # * 100
 
     # ax[2].scatter(dm_tmyr[fs035_mask], dm_mass[fs035_mask])
     ax[2].plot(
@@ -368,8 +368,9 @@ with plt.rc_context(
         linewidth=4,
         alpha=0.8,
     )
-    ax[2].set_ylabel(r"$\mathrm{Efficiency (\%)}$", labelpad=10)
-    ax[2].set_ylim(bottom=0, top=0.37)
+    ax[2].set_ylabel(r"$\mathrm{M_{*} / M_{DM}}$", labelpad=10)
+    # ax[2].set_ylim(bottom=0, top=0.37)
+    ax[2].set_yscale("log")
 
     # ax[0].plot(fs035_interp_points[fs035_dm_mask], fs035_dm_interp[fs035_dm_mask])
     # ax[0].plot(fs070_interp_points[fs070_dm_mask], fs070_dm_interp[fs070_dm_mask])
