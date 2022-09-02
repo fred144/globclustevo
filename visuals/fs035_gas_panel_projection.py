@@ -15,7 +15,7 @@ import yt
 from modules.macros import filter_snapshots, ram_fields
 
 yt.enable_parallelism()
-strt = 1005
+strt = 1281
 end = 1368
 step = 1
 efficiency = 0.35
