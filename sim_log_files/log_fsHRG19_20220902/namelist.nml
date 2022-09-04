@@ -1,0 +1,253 @@
+&RUN_PARAMS
+cosmo=.true.
+pic=.true.
+poisson=.true.
+hydro=.true.
+nrestart=262
+nremap=1
+nsubcycle=1,1,1,1,1,1,1,1,1,2,2,2
+ncontrol=1
+verbose=.false.
+rt=.true.			!Keep this on even if you don't want RT sources if using my patches
+sink=.true.
+clumpfind=.false.
+fof_find=.true.
+omega_b0=0.044		! ** DM ONLY ** MUSIC file doesn't seem to contain it (Jongwon's new feature)
+/
+
+&FOF_PARAMS
+fof_level=15
+npmin=100
+f_fof=0.25		! fraction for linking length (b=fl)
+!fof_update=3d-3         ! FoF update time interval (Myr)
+/
+
+&POISSON_PARAMS
+cic_levelmax=25
+/
+
+&OUTPUT_PARAMS
+!delta_aout=0.005
+!aend=0.25
+aout= 0.01960784,0.02439024,0.02777778,0.03225806,0.03448276,0.03703704,0.03846154,0.04,0.04166667,0.04347826,0.04545455,0.04761905,0.05,0.05263158,0.05555556,0.05882353,0.0625,0.06451613,0.06666667,0.06896552,0.07142857,0.07407407,0.07692308,0.08, 0.08333333,0.08695652,0.09090909,0.09302326,0.0952381,0.09756098,0.1, 0.143 
+noutput=32
+foutput=1000000
+fout_xa=-1
+fout_cb=-1
+fout_sp=-1
+fout_hl = -1
+fout_rhmx = -1
+fout_phmn = -1
+dtexpout_Myr=5
+maxruntime=336
+/
+
+&INIT_PARAMS
+filetype='grafic'
+initfile(1)='ics/level_005'
+initfile(2)='ics/level_006'
+initfile(3)='ics/level_007'
+initfile(4)='ics/level_008'
+initfile(5)='ics/level_009'
+initfile(6)='ics/level_010'
+initfile(7)='ics/level_011'
+initfile(8)='ics/level_012'
+initfile(9)='ics/level_013'
+initfile(10)='ics/level_014'
+!initfile(11) 
+!initfile(12)
+!initfile(13)
+/
+
+&AMR_PARAMS
+levelmin=5
+levelmax=25
+nexpand=2,2,2,2,2,2,4,4,1,1
+ngridtot=50000000
+nparttot=100000000
+/
+
+&REFINE_PARAMS
+m_refine=20*8
+jeans_refine=9*0,2,4,6*8,3*4
+mass_cut_refine=4.54747e-13
+interpol_var=1
+interpol_type=0
+ivar_refine=11
+var_cut_refine=0.1
+/
+
+&HYDRO_PARAMS
+gamma=1.666667         ! gamma for the equation of state
+courant_factor=0.8     ! courant factor
+slope_type=1           ! recommended by Romain for cosmological simulations
+scheme='muscl'         ! don't change
+riemann='hllc'         ! reimann solver
+pressure_fix=.true.    ! recommended by Romain for cosmological simulations
+beta_fix=0.5           ! recommended by Romain for cosmological simulations
+/
+
+&PHYSICS_PARAMS
+cooling=.true.
+neq_chem=.true.         	! need this on for ramses_rt, otherwise turn to false
+metal=.true.
+
+met_switch=.false.      	! turn this on to create a metal floor of z_ave after a specific redshift 
+!met_z_start=30.
+!z_ave=1.0d-5           		! initial metallicity floor
+cloudy_metal_cooling=.true.	! grackle tabular cooling
+cloudy_metal_file='CHtab_files/cloudy_metal_HM12_z.bin'
+T2_star=0.0d0           ! Temperature for polytropic EOS. (Set this to Teq/(3^(g_star-1) for n_star=nj/3  or Teq for n_star=nj)
+eps_star=0.10d0
+g_star=1.3333333
+n_star=-1d0
+eta_sn=0.1d0
+!eta_sn=0         ! see http://arxiv.org/pdf/1501.05655v1.pdf for this choice of value for a chabrier IMF
+yield=0.05              ! see http://arxiv.org/pdf/1501.05655v1.pdf for this choice of value for a chabrier IMF
+delayed_cooling=.false.
+!t_diss=10.0d0       !dissipation timescale for delayed cooling in Myr
+spread_feedback=.false.  !Harley's new algorithm to spread feedback over 19 cells
+
+m_star = 1e1
+
+
+f_w=0
+
+Zpop3=1d-5
+dpop3=-1
+mpop3max=100                  ! maximum Pop III star mass - Msun
+
+z_reion=40                    !! 
+
+haardt_madau=.false.          	!! UV background (HK) & X-ray background (JP)
+!  otfbg=.true.                 !! On-the-fly radiation background.
+sec_ion = .false.
+                                !! set false to use original prescription
+self_shielding=.true.   	!! self shielding for RT (only used with UV background)
+smbh=.true.
+
+!  addrho=.true.		!! Add rho to minihaloese based on NFW profile.
+!  halo_refine=.true.	!! force halo refinement
+  halo_ref_level=13
+  addrho_min=10
+  nprof=100
+  rfraction=0.01
+  cind=5
+  prt_cell=.false.
+
+!chemical/thermal model	
+H2_chem_cool=.false.
+attn_after_chem=.true.
+fclump_H2dust = 1d0!clumping factor multiplied with the dust surface H2 formation rate
+
+!Pop II/Pop III/BH models (KS ADDED)
+pop2_model=4
+pop3_model=1
+BH_model=1
+pop2_njeans=4d0
+pop3_dist_min_pc=1d2 !minimum stellar distance for pop3 formation (pc)
+Tpop2 = 1d3
+pop2_stochastic_SN=.true.
+nonlocal_depletion=.true.
+flg_thin_star_cell=.true.
+tage_thin_star_cell=1d1
+pop2_H2depSF = .false. !whether PopII SF efficiency is multiplied by the H2 abundance or not
+pop2_sESN = 1d50     ! Pop II SN specific energy, pop2_sESN = ESN/mejecta [erg/Msun] 
+
+SFC_dist_min_pc=1d2
+SFC_nH_min=-1d0
+SFC_f_nH_min=0.1d0
+SFC_fate='crop'
+SFC_f_star=-1d0
+SFC_f_rhocrop=2d0
+SFC_f_rhoSF=1d0
+SFC_distribution='mass_weight'
+SFC_rsize_min_pc=1d0 !minimum sie for simulataneous SFC formation (pc)  
+SFC_flg_thin=.false.
+SFC_t_life = 1d1 !life time of active SFC in Myr
+modify_pressure_fix_cond  = .true.
+nH_postSF=-1d2
+nHmax_preSN=1d2
+
+flg_voffset_ini = .false. !whether velocity ofseet is added or not
+voffset_x = 0d0 !velocity offset in x-direction in km/s
+voffset_y = 0d0 !velocity offset in y-direction in km/s
+voffset_z = 0d0 !velocity offset in z-direction in km/s  
+strict_Npart_refine = .true.
+/
+
+&SINK_PARAMS
+create_sinks=.true.            !! must be turned on to use bhpop3
+bhpop3=.true.                 !! forms black hole out of Pop III star
+accretion_scheme='bondi'
+eddington_limit=.true.        !! Bondi-Hoyle accretion capped by Eddington limit
+nsinkmax=500
+ir_cloud=4                 !! Radius of cloud region in unit of grid spacing (i.e. the ACCRETION RADIUS)
+
+
+  !mass_sink_seed=1d8
+  !d_sink=1d-3
+  !mass_halo_AGN=1d5
+  !mass_clump_AGN=1d5
+/
+
+&CLUMPFIND_PARAMS
+  ivar_clump=0
+  density_threshold=200
+  saddle_threshold=100
+  mass_threshold=10.
+/
+
+&RT_PARAMS
+isHe=.true.                     ! is there helium
+isH2=.true.                     ! is there molecular hydrogen
+isH2Katz=.true.                 ! Katz algorithm for molecular hydrogen
+SS_LVG=.false.                  ! large-velocity gradient approximation for H2 self-shielding
+X=7.6d-1                        ! mass fraction of hydrogen
+Y=2.4d-1                        ! mass fraction of helium
+rt_output_coolstats=.true.      ! for additional cooling information
+rt_flux_scheme='glf'            ! always use glf solver
+rt_smooth=.true.                ! use this parameter, see rosdahl paper
+rt_courant_factor=0.8           ! courant number for RT timesteps
+rt_c_fraction=30*0.01
+rt_otsa=.true.                  ! OTSA
+!rt_err_grad_xHII=0.1           ! refine on gradient in HII
+rt_star=.true.                 ! do we want star particles to emit radiation?
+rt_esc_frac=1.0d0                ! escape fraction of radiation from those star particles
+sed_dir='SED/bc03_Chabrier'
+sedprops_update=1              ! how often to up mean energies and cross sections
+LWgroup = 1                     ! Group index of the lyman werner background.  Treated slightly differently because of self shielding
+rt_nsubcycle=10
+
+uv_file=''
+
+isXray=.true.                   ! X-ray radiation from hypernova. Compile with NGROUPS = 6.
+Xgroup=6                        ! index for the X-ray group. Use 6.
+/
+
+!The lowest energy bin is useful when you care about dust.  Next energy bin is LW band which you need for H2.  I wouldn't recommed changing these as you will need all of them.
+
+&RT_GROUPS    
+group_egy       = 12.44, 14.40, 19.90, 35.079
+groupL0       = 11.20, 13.60, 24.59, 54.42
+groupL1       = 13.60, 24.59, 54.42, 200.0
+
+spec2group    = 1,2,3,4             ! H2, HI, HeI, HeII -> pck
+/
+
+&VTK_PARAMS
+vtk=.false.
+astartvtk=0.01
+aendvtk=0.10
+ivtk=1
+ivtkout=1000
+nx_vtk=256
+ny_vtk=256
+nz_vtk=256
+xminvtk=0.45
+xmaxvtk=0.55
+yminvtk=0.45
+ymaxvtk=0.55
+zminvtk=0.45
+zmaxvtk=0.55
+/
