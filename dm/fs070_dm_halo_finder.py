@@ -30,15 +30,15 @@ step = 2
 print("=============================================================================")
 print("RUNING DM HALO FINDER")
 print("=============================================================================")
-# datadir = os.path.expanduser(
-#     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
-# ).format(simulation_run)
-
 datadir = os.path.expanduser(
-    "/home/fabg/cosm_test_data/refine"  # lustre data path
+    "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
 ).format(simulation_run)
 
-local_snapshots = filter_snapshots(datadir, start_step, end_step, 1)
+# datadir = os.path.expanduser(
+#     "/home/fabg/cosm_test_data/refine"  # lustre data path
+# ).format(simulation_run)
+
+local_snapshots = filter_snapshots(datadir, start_step, end_step, step)
 
 # if post processing isn't done alongside catalogue
 # fof_run_snapshots = filter_snapshots("../halo_data/fs07_refine/fof_best", 113, 918, 1)

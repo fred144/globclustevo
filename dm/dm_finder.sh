@@ -1,8 +1,8 @@
 #!/bin/bash
-#SBATCH -J postprocess_pipeline
+#SBATCH -J dm_finder
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=16
-#SBATCH -t 1:00:00
+#SBATCH --cpus-per-task=20
+#SBATCH -t 48:00:00
 
 
 
@@ -16,8 +16,8 @@ module load openmpi
 source ~/py-virtual-envs/master/bin/activate
 
 
-SCRIPT1="/lustre/fgarcia4/glob_clust_evo/cluster_evolution/fs070_dm_halo_finder.py"
-SCRIPT2="/lustre/fgarcia4/glob_clust_evo/cluster_evolution/fs035_postprocess_pipeline.py"
+SCRIPT1="/lustre/fgarcia4/glob_clust_evo/dm/fs070_dm_halo_finder.py"
+SCRIPT2="/lustre/fgarcia4/glob_clust_evo/dm/fs035_dm_halo_finder.py"
 
 # source /homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh
 # which python
