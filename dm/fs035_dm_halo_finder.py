@@ -24,7 +24,7 @@ finder_profiler_run = "dm_hop"
 processor_number = 0  # 0 means one process unparalleled
 start_step = 154
 end_step = 1368
-step = 2
+step = 4
 
 
 print("=============================================================================")
