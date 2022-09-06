@@ -46,7 +46,7 @@ if __name__ == "__main__":
     cmap = cmap(np.linspace(0, 1, 8))
 
     x_range = (10, 5e5)
-    bns = 25
+    bns = 20
 
     f7_mc_imf_clr = cmap[0]
     f7_bsc_mf_clr = cmap[1]
@@ -147,23 +147,32 @@ if __name__ == "__main__":
         f7_info_file = np.loadtxt(os.path.join(f7_ds, "fof_info.txt"))
         f3_info_file = np.loadtxt(os.path.join(f3_ds, "fof_info.txt"))
 
+        star_mass_min = 200
         try:
             f7_t_myr = f7_info_file[0, 0]
             f7_redshift = f7_info_file[0, 1]
             f7_masses_per_snapshot = f7_info_file[:, 3]
+            mask = f7_masses_per_snapshot > star_mass_min
+            f7_masses_per_snapshot = f7_masses_per_snapshot[mask]
         except:  # if there is only once cluster
             f7_t_myr = f7_info_file[0]
             f7_redshift = f7_info_file[1]
             f7_masses_per_snapshot = f7_info_file[3]
+            mask = f7_masses_per_snapshot > star_mass_min
+            f7_masses_per_snapshot = f7_masses_per_snapshot[mask]
 
         try:  # if there is only once cluster
             f3_t_myr = f3_info_file[0, 0]
             f3_redshift = f3_info_file[0, 1]
             f3_masses_per_snapshot = f3_info_file[:, 3]
+            mask = f3_masses_per_snapshot > star_mass_min
+            f3_masses_per_snapshot = f3_masses_per_snapshot[mask]
         except:
             f3_t_myr = f3_info_file[0]
             f3_redshift = f3_info_file[1]
             f3_masses_per_snapshot = f3_info_file[3]
+            mask = f3_masses_per_snapshot > star_mass_min
+            f3_masses_per_snapshot = f3_masses_per_snapshot[mask]
 
         print(f7_t_myr, f3_t_myr)
         # print(f7_redshift, f3_redshift)
@@ -197,29 +206,29 @@ if __name__ == "__main__":
         f7_fitting_mask = f7_vir_mass >= 0  # 2e2
         f3_fitting_mask = f3_vir_mass >= 0
 
-        f7_fit_params, _ = curve_fit(
-            f=bimodal,
-            xdata=np.log10(f7_vir_mass[f7_fitting_mask]),
-            ydata=f7_vir_counts[f7_fitting_mask],
-            # bounds=(
-            #     [-np.inf, -np.inf, -np.inf, -np.inf, -np.inf, -np.inf],
-            #     [600, np.inf, np.inf, 600, np.inf, np.inf],
-            # ),
-        )
-        f7_theory_x = np.log10(np.geomspace(f7_vir_mass.min(), f7_vir_mass.max(), 100))
-        f7_theory_y = bimodal(f7_theory_x, *f7_fit_params)
+        # f7_fit_params, _ = curve_fit(
+        #     f=bimodal,
+        #     xdata=np.log10(f7_vir_mass[f7_fitting_mask]),
+        #     ydata=f7_vir_counts[f7_fitting_mask],
+        #     # bounds=(
+        #     #     [-np.inf, -np.inf, -np.inf, -np.inf, -np.inf, -np.inf],
+        #     #     [600, np.inf, np.inf, 600, np.inf, np.inf],
+        #     # ),
+        # )
+        # f7_theory_x = np.log10(np.geomspace(f7_vir_mass.min(), f7_vir_mass.max(), 100))
+        # f7_theory_y = bimodal(f7_theory_x, *f7_fit_params)
 
-        f3_fit_params, _ = curve_fit(
-            f=bimodal,
-            xdata=np.log10(f3_vir_mass[f3_fitting_mask]),
-            ydata=f3_vir_counts[f3_fitting_mask],
-            # bounds=(
-            #     [0, -np.inf, -np.inf, 0, -np.inf, -np.inf],
-            #     [600, np.inf, np.inf, 600, np.inf, np.inf],
-            # ),
-        )
-        f3_theory_x = np.log10(np.geomspace(f3_vir_mass.min(), f3_vir_mass.max(), 100))
-        f3_theory_y = bimodal(f3_theory_x, *f3_fit_params)
+        # f3_fit_params, _ = curve_fit(
+        #     f=bimodal,
+        #     xdata=np.log10(f3_vir_mass[f3_fitting_mask]),
+        #     ydata=f3_vir_counts[f3_fitting_mask],
+        #     # bounds=(
+        #     #     [0, -np.inf, -np.inf, 0, -np.inf, -np.inf],
+        #     #     [600, np.inf, np.inf, 600, np.inf, np.inf],
+        #     # ),
+        # )
+        # f3_theory_x = np.log10(np.geomspace(f3_vir_mass.min(), f3_vir_mass.max(), 100))
+        # f3_theory_y = bimodal(f3_theory_x, *f3_fit_params)
 
         #!!! fit the logSFC
         f7_mc_fit_params, _ = curve_fit(
@@ -328,48 +337,48 @@ if __name__ == "__main__":
                 ),
             )
             #!!!
-            first_bump_mu_f7 = np.min([f7_fit_params[1], f7_fit_params[4]])
-            first_bump_sig_f7 = np.abs(np.min([f7_fit_params[2], f7_fit_params[5]]))
-            second_bump_mu_f7 = np.max([f7_fit_params[1], f7_fit_params[4]])
-            second_bump_sig_f7 = np.abs(np.max([f7_fit_params[2], f7_fit_params[5]]))
+            # first_bump_mu_f7 = np.min([f7_fit_params[1], f7_fit_params[4]])
+            # first_bump_sig_f7 = np.abs(np.min([f7_fit_params[2], f7_fit_params[5]]))
+            # second_bump_mu_f7 = np.max([f7_fit_params[1], f7_fit_params[4]])
+            # second_bump_sig_f7 = np.abs(np.max([f7_fit_params[2], f7_fit_params[5]]))
 
-            first_bump_mu_f3 = np.min([f3_fit_params[1], f3_fit_params[4]])
-            first_bump_sig_f3 = np.abs(np.min([f3_fit_params[2], f3_fit_params[5]]))
-            second_bump_mu_f3 = np.max([f3_fit_params[1], f3_fit_params[4]])
-            second_bump_sig_f3 = np.abs(np.max([f3_fit_params[2], f3_fit_params[5]]))
+            # first_bump_mu_f3 = np.min([f3_fit_params[1], f3_fit_params[4]])
+            # first_bump_sig_f3 = np.abs(np.min([f3_fit_params[2], f3_fit_params[5]]))
+            # second_bump_mu_f3 = np.max([f3_fit_params[1], f3_fit_params[4]])
+            # second_bump_sig_f3 = np.abs(np.max([f3_fit_params[2], f3_fit_params[5]]))
 
-            ax[i, 0].plot(
-                10**f7_theory_x,
-                f7_theory_y,
-                ls="--",
-                linewidth=2,
-                alpha=0.8,
-                color="black",
-                # label=(r"$({:.2f}, {:.2f})$").format(
-                #     f7_fit_params[1], f7_fit_params[2]
-                # ),
-                label=(r"$({:.2f}, {:.2f})$" "\n" r"$({:.2f}, {:.2f})$").format(
-                    first_bump_mu_f7,
-                    first_bump_sig_f7,
-                    second_bump_mu_f7,
-                    second_bump_sig_f7,
-                ),
-            )
+            # ax[i, 0].plot(
+            #     10**f7_theory_x,
+            #     f7_theory_y,
+            #     ls="--",
+            #     linewidth=2,
+            #     alpha=0.8,
+            #     color="black",
+            #     # label=(r"$({:.2f}, {:.2f})$").format(
+            #     #     f7_fit_params[1], f7_fit_params[2]
+            #     # ),
+            #     label=(r"$({:.2f}, {:.2f})$" "\n" r"$({:.2f}, {:.2f})$").format(
+            #         first_bump_mu_f7,
+            #         first_bump_sig_f7,
+            #         second_bump_mu_f7,
+            #         second_bump_sig_f7,
+            #     ),
+            # )
 
-            ax[i, 1].plot(
-                10**f3_theory_x,
-                f3_theory_y,
-                ls="--",
-                linewidth=2,
-                alpha=0.8,
-                color="black",
-                label=(r"$({:.2f}, {:.2f})$" "\n" r"$({:.2f}, {:.2f})$").format(
-                    first_bump_mu_f3,
-                    first_bump_sig_f3,
-                    second_bump_mu_f3,
-                    second_bump_sig_f3,
-                ),
-            )
+            # ax[i, 1].plot(
+            #     10**f3_theory_x,
+            #     f3_theory_y,
+            #     ls="--",
+            #     linewidth=2,
+            #     alpha=0.8,
+            #     color="black",
+            #     label=(r"$({:.2f}, {:.2f})$" "\n" r"$({:.2f}, {:.2f})$").format(
+            #         first_bump_mu_f3,
+            #         first_bump_sig_f3,
+            #         second_bump_mu_f3,
+            #         second_bump_sig_f3,
+            #     ),
+            # )
 
             # current simulation time annotation
             props = dict(
@@ -397,10 +406,13 @@ if __name__ == "__main__":
             # )
             ax[i, 0].set_xlim(left=f7_vir_mass[0])
             ax[i, 0].set_xscale("log")
-            # ax[i, 0].set_yscale("log")
-            ax[i, 0].set_ylim(bottom=0, top=430)
+            ax[i, 0].set_yscale("log")
+            ax[i, 0].set_ylim(0.8, 4000)
+
             ax[i, 1].yaxis.tick_right()
-            ax[i, 1].set_ylim(bottom=0, top=860)
+            ax[i, 1].set_xscale("log")
+            ax[i, 1].set_yscale("log")
+            ax[i, 1].set_ylim(0.8, 4000)
 
             ax[i, 0].legend(
                 title=f7_legend_title,
