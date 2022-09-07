@@ -22,9 +22,9 @@ cell_fields, epf = ram_fields()
 simulation_run = "fs035_ms10"
 finder_profiler_run = "dm_hop"
 processor_number = 0  # 0 means one process unparalleled
-start_step = 154
+start_step = 1214
 end_step = 1368
-step = 4
+step = 10
 
 
 print("=============================================================================")
