@@ -55,7 +55,7 @@ def find_matching_time(sequence, look_up_sequence):
     return common_items, look_up_sequence_same_time
 
 
-def get_snapshots(snapshot_file_list, get_list):
+def get_snapshots(snapshot_file_list, get_list, verbose=True):
 
     filter_list = list(map(str, list(get_list)))
     filter_list = [f.zfill(5) for f in filter_list]
@@ -67,7 +67,7 @@ def get_snapshots(snapshot_file_list, get_list):
                 # print(file)
                 filtered_lst.append(file)
                 break
-    if len(filtered_lst) != len(filter_list):
+    if len(filtered_lst) != len(filter_list) and verbose is True:
         print("> Filter done, but missing some snapshots requested")
         print(filtered_lst)
     return filtered_lst

@@ -33,7 +33,7 @@ def log_data_function(data, num_bins, bin_range: tuple):
     # normalize with width of the bins
     counts_per_log_solar_mass = count / (right_edges - left_edges)
 
-    return 10**bin_ctrs, counts_per_log_solar_mass
+    return 10**bin_ctrs, counts_per_log_solar_mass  # * count * 10
 
 
 if __name__ == "__main__":
@@ -50,8 +50,8 @@ if __name__ == "__main__":
     f3_bsc_mf_clr = cmap[3]
 
     # use particle data to initiate matching of frames
-    fs070 = filter_snapshots("../particle_data/pop_2_data/fs07_refine", 113, 1000, 1)
-    fs035 = filter_snapshots("../particle_data/pop_2_data/fs035_ms10", 154, 1177, 1)
+    fs070 = filter_snapshots("../particle_data/pop_2_data/fs07_refine", 113, 1110, 1)
+    fs035 = filter_snapshots("../particle_data/pop_2_data/fs035_ms10", 154, 1316, 1)
     # find matching fs = 0.35 snapshots in terms of time to fs = 0.70
     # smaller goes fist
     # in general, use the simulation with more snapshots as a lookup table and match
@@ -61,14 +61,14 @@ if __name__ == "__main__":
     fs070_dat_dir = r"../halo_data/fs07_refine/fof_best"
     fs035_dat_dir = r"../halo_data/fs035_ms10/fof_best"
 
-    fs070_matched = filter_snapshots(fs070_dat_dir, 113, 1000, 1)
+    fs070_matched = filter_snapshots(fs070_dat_dir, 113, 1196, 1)
 
     fs035_matched = get_snapshots(
-        snapshot_file_list=filter_snapshots(fs035_dat_dir, 154, 1177, 1),
+        snapshot_file_list=filter_snapshots(fs035_dat_dir, 154, 1368, 1),
         get_list=f3_matched_nums,
     )
 
-    wanted_idxs = [330, 500, 700, 885]
+    wanted_idxs = [230, 475, 699, 922]
     fs070_matched = [fs070_matched[x] for x in wanted_idxs]
     fs035_matched = [fs035_matched[x] for x in wanted_idxs]
 
@@ -106,9 +106,9 @@ if __name__ == "__main__":
             rotation="vertical",
         )
         f7_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*}}}$"
-        f7_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
+        f7_bsc_label = r"$\mathrm{{CMF }} $"
         f3_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*}}}$"
-        f3_bsc_label = r"$\mathrm{{BSC \: M_{{vir}} }} $"
+        f3_bsc_label = r"$\mathrm{{CMF}} $"
         f7_legend_title = r"$f_{*} = 0.70$"
         f3_legend_title = r"$f_{*} = 0.35$"
         f70_imf = mlines.Line2D(
@@ -138,27 +138,38 @@ if __name__ == "__main__":
             edgecolor="k",
         )
         leg.get_frame().set_boxstyle("Square")
+
     for i, (f7_ds, f3_ds) in enumerate(zip(fs070_matched, fs035_matched)):
         f7_info_file = np.loadtxt(os.path.join(f7_ds, "fof_info.txt"))
         f3_info_file = np.loadtxt(os.path.join(f3_ds, "fof_info.txt"))
+
+        star_mass_min = 250  # solar mass per bin
 
         try:
             f7_t_myr = f7_info_file[0, 0]
             f7_redshift = f7_info_file[0, 1]
             f7_masses_per_snapshot = f7_info_file[:, 3]
+            mask = f7_masses_per_snapshot > star_mass_min
+            f7_masses_per_snapshot = f7_masses_per_snapshot[mask]
         except:  # if there is only once cluster
             f7_t_myr = f7_info_file[0]
             f7_redshift = f7_info_file[1]
             f7_masses_per_snapshot = f7_info_file[3]
+            mask = f7_masses_per_snapshot > star_mass_min
+            f7_masses_per_snapshot = f7_masses_per_snapshot[mask]
 
         try:  # if there is only once cluster
             f3_t_myr = f3_info_file[0, 0]
             f3_redshift = f3_info_file[0, 1]
             f3_masses_per_snapshot = f3_info_file[:, 3]
+            mask = f3_masses_per_snapshot > star_mass_min
+            f3_masses_per_snapshot = f3_masses_per_snapshot[mask]
         except:
             f3_t_myr = f3_info_file[0]
             f3_redshift = f3_info_file[1]
             f3_masses_per_snapshot = f3_info_file[3]
+            mask = f3_masses_per_snapshot > star_mass_min
+            f3_masses_per_snapshot = f3_masses_per_snapshot[mask]
 
         print(f7_t_myr, f3_t_myr)
         # print(f7_redshift, f3_redshift)
@@ -188,14 +199,20 @@ if __name__ == "__main__":
         f3_vir_mass, f3_vir_counts = log_data_function(
             f3_masses_per_snapshot, bns, x_range
         )
+        print(len(f7_masses_per_snapshot), len(f7_mc_star_mass))
+        print(len(f3_masses_per_snapshot), len(f3_mc_star_mass))
         # fit
-        f7_fitting_mask = f7_vir_mass >= 2e2
-        f3_fitting_mask = f3_vir_mass >= 10
-        #!!! change these for bimodal
+        f7_fitting_mask = f7_vir_mass >= 0  # 2e2
+        f3_fitting_mask = f3_vir_mass >= 0
+
         f7_fit_params, _ = curve_fit(
             f=gauss,
             xdata=np.log10(f7_vir_mass[f7_fitting_mask]),
             ydata=f7_vir_counts[f7_fitting_mask],
+            # bounds=(
+            #     [-np.inf, -np.inf, -np.inf, -np.inf, -np.inf, -np.inf],
+            #     [600, np.inf, np.inf, 600, np.inf, np.inf],
+            # ),
         )
         f7_theory_x = np.log10(np.geomspace(f7_vir_mass.min(), f7_vir_mass.max(), 100))
         f7_theory_y = gauss(f7_theory_x, *f7_fit_params)
@@ -204,11 +221,15 @@ if __name__ == "__main__":
             f=gauss,
             xdata=np.log10(f3_vir_mass[f3_fitting_mask]),
             ydata=f3_vir_counts[f3_fitting_mask],
+            # bounds=(
+            #     [0, -np.inf, -np.inf, 0, -np.inf, -np.inf],
+            #     [600, np.inf, np.inf, 600, np.inf, np.inf],
+            # ),
         )
         f3_theory_x = np.log10(np.geomspace(f3_vir_mass.min(), f3_vir_mass.max(), 100))
         f3_theory_y = gauss(f3_theory_x, *f3_fit_params)
 
-        # fit the logSFC
+        #!!! fit the logSFC
         f7_mc_fit_params, _ = curve_fit(
             f=gauss,
             xdata=np.log10(mc_f7_mass),
@@ -314,6 +335,7 @@ if __name__ == "__main__":
                     f3_mc_fit_params[1], np.abs(f3_mc_fit_params[2])
                 ),
             )
+            #!!! plot the BSC fit
 
             ax[i, 0].plot(
                 10**f7_theory_x,
@@ -323,7 +345,8 @@ if __name__ == "__main__":
                 alpha=0.8,
                 color="black",
                 label=(r"$({:.2f}, {:.2f})$").format(
-                    f7_fit_params[1], f7_fit_params[2]
+                    f7_fit_params[1],
+                    abs(f7_fit_params[2]),
                 ),
             )
 
@@ -335,7 +358,8 @@ if __name__ == "__main__":
                 alpha=0.8,
                 color="black",
                 label=(r"$({:.2f}, {:.2f})$").format(
-                    f3_fit_params[1], f3_fit_params[2]
+                    f3_fit_params[1],
+                    abs(f3_fit_params[2]),
                 ),
             )
 
@@ -349,12 +373,31 @@ if __name__ == "__main__":
             )
             textstr_f7 = (r"$\mathrm{{t}} = {:.1f} \: \mathrm{{Myr}}$").format(f7_t_myr)
 
+            # textstr_f3 = (
+            #     r"$\mathrm{{t}} = {:.1f} \: \mathrm{{Myr}}$"
+            #     "\n"
+            #     r"$\mathrm{{z}} = {:.1f}$"
+            # ).format(f3_t_myr, f3_redshift)
+
+            # ax[1].text(
+            #     0.03,
+            #     0.96,
+            #     textstr_f3,
+            #     transform=ax[1].transAxes,
+            #     verticalalignment="top",
+            #     bbox=props,
+            # )
             ax[i, 0].set_xlim(left=f7_vir_mass[0])
             ax[i, 0].set_xscale("log")
-            # ax[i, 0].set_yscale("log")
-            ax[i, 0].set_ylim(bottom=0, top=325)
+            ax[i, 0].set_yscale("log")
+            ax[i, 0].set_ylim(1, 8000)
+            # ax[i, 0].set_ylim(10, 500000)
+
             ax[i, 1].yaxis.tick_right()
-            ax[i, 1].set_ylim(bottom=0, top=650)
+            ax[i, 1].set_xscale("log")
+            ax[i, 1].set_yscale("log")
+            ax[i, 1].set_ylim(1, 8000)
+            # ax[i, 1].set_ylim(10, 500000)
 
             ax[i, 0].legend(
                 title=f7_legend_title,
@@ -387,7 +430,7 @@ if __name__ == "__main__":
         os.path.expanduser(
             (
                 "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
-                "cmf_gaussian.png"
+                "cmf_overtime.png"
             )
         ),
         dpi=500,

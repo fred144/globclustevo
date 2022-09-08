@@ -323,7 +323,7 @@ with plt.rc_context(
     )
     ax[1].set_ylim(bottom=0)
 
-    # do the efficiencies
+    # do the efficiencies using kazu's data
 
     dm_data = np.loadtxt("kazu_data/halo1_historyHe19.dat")
     dm_tmyr = t_myr_from_z(dm_data[:, 1])
@@ -383,6 +383,36 @@ with plt.rc_context(
     # for t in year_annotations:
     #     ax[0].axvline(t, ls=":", color="grey")
     #     ax[1].axvline(t, ls=":", color="grey")
+
+    # DM halo finder data
+    f3_halo = np.loadtxt("./dm_data/fs035_dm_halo_evo.txt")
+    f7_halo = np.loadtxt("./dm_data/fs070_dm_halo_evo.txt")
+
+    f7_dm_mass = f7_halo[:, 3]
+    f3_dm_mass = f3_halo[:, 3]
+
+    f7_star_mass = f7_halo[:, 5]
+    f3_star_mass = f3_halo[:, 5]
+
+    ax[2].plot(
+        f7_halo[:, 1],
+        f7_star_mass / f7_dm_mass,
+        c=fs70_color,
+        linewidth=4,
+        alpha=1,
+        ls=":",
+    )
+
+    ax[2].plot(
+        f3_halo[:, 1],
+        f3_star_mass / f3_dm_mass,
+        c=fs35_color,
+        linewidth=4,
+        alpha=1,
+        ls=":",
+    )
+
+    ax[2].set_xlim(right=f7_halo[:, 1].max())
 
     plt.savefig(
         "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_sfr.png",
