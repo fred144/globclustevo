@@ -102,6 +102,7 @@ def projected_surf_densities(
     distances = np.sqrt(np.sum(np.square(all_positions), axis=1))
 
     mass_per_bin, bin_edges = np.histogram(distances, bins=r, weights=masses)
+
     lum_per_bin, _ = np.histogram(distances, bins=r, weights=lums)
     count_per_bin, _ = np.histogram(distances, bins=r)
 

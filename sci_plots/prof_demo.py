@@ -18,7 +18,6 @@ import matplotlib.cm as cm
 import matplotlib.font_manager as font_manager
 import matplotlib.patches as patches
 from mpl_toolkits.axes_grid1.inset_locator import mark_inset
-
 from matplotlib import colors
 from scipy.optimize import curve_fit
 
