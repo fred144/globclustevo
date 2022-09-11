@@ -317,7 +317,7 @@ with plt.rc_context(
     sfr_fs07 = np.gradient(fs070_interp) / 1e6
     ax[1].plot(fs070_interp_points, sfr_fs07, color=fs70_color)
 
-    ax[1].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
+    ax[2].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
     ax[1].set_ylabel(
         r"$\mathrm{SFR} \: \left( \mathrm{M}_{\odot} \: \mathrm{yr}^{-1} \right)$"
     )
@@ -369,6 +369,7 @@ with plt.rc_context(
         alpha=0.8,
     )
     ax[2].set_ylabel(r"$\mathrm{M_{*} / M_{DM}}$", labelpad=10)
+
     # ax[2].set_ylim(bottom=0, top=0.37)
     ax[2].set_yscale("log")
 

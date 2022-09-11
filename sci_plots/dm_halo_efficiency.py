@@ -34,11 +34,11 @@ with plt.rc_context(
 
     fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(4.5, 4), dpi=300)
 
-    sample_rate = 10
+    sample_rate = 6
 
     ax.scatter(
-        f7_dm_mass[::sample_rate],
-        (f7_star_mass / f7_dm_mass)[::sample_rate],
+        np.log10(f7_dm_mass[::sample_rate]),
+        np.log10((f7_star_mass / f7_dm_mass)[::sample_rate]),
         color=fs70_color,
         s=10,
         alpha=1,
@@ -47,8 +47,8 @@ with plt.rc_context(
     )
 
     ax.scatter(
-        (f3_dm_mass)[::sample_rate],
-        (f3_star_mass / f3_dm_mass)[::sample_rate],
+        np.log10((f3_dm_mass)[::sample_rate]),
+        np.log10((f3_star_mass / f3_dm_mass)[::sample_rate]),
         color=fs35_color,
         s=10,
         alpha=1,
@@ -57,9 +57,10 @@ with plt.rc_context(
     )
 
     ax.set(
-        yscale="log",
-        xlabel="$\mathrm{M_{DM} \: (M_{\odot})}$",
-        ylabel="$\mathrm{M_* / M_{DM}}$",
+        # yscale="log",
+        # xscale="log",
+        xlabel="$\mathrm{\log_{10} \: M_{DM} \: (M_{\odot})  }$",
+        ylabel="$\mathrm{\log_{10} \: ( M_* / M_{DM}} ) $",
     )
 
     ax.legend(title="$f_*$")

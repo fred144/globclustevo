@@ -18,10 +18,10 @@ f7_bsc_mf_clr = cmap[1]
 f3_mc_imf_clr = cmap[2]
 f3_bsc_mf_clr = cmap[3]
 
-f7_strt = 113
-f7_end = 1110
-f3_strt = 154
-f3_end = 1316
+f7_strt = 973
+f7_end = 974
+f3_strt = 1151
+f3_end = 1152
 step = 1
 
 
@@ -47,8 +47,8 @@ f3_pro_ds = filter_snapshots(f3_prof_dir, f3_strt, f3_end, step)
 
 # sample the matched snapshots for plotting by indexing
 # try snapshot 873
-strt = 921  # 800
-end = 922  # f3_matched_nums.size
+strt = 1  # 800
+end = 2  # f3_matched_nums.size
 st = 1
 
 f7_pro_ds = filter_snapshots(f7_prof_dir, f7_strt, f7_end, step)[strt:end:st]
@@ -157,8 +157,8 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         # # map to differnt sizes for better plotting
         # f7_half_radii = scale_factor * f7_half_mass_rad
         # f3_half_radii = scale_factor * f3_half_mass_rad
-        f7_mask = f7_alpha < 5  # & (f7_mass < 1e4)  # & (f7_vir_rad < 10)
-        f3_mask = f3_alpha < 5  # & (f3_mass < 1e4)  # & (f3_vir_rad < 10)
+        f7_mask = f7_mass > 250  # or  (f3_alpha < 5)  # & & (f7_vir_rad < 10)
+        f3_mask = f3_mass > 250  # or ( f3_alpha < 5 )  #& & (f3_vir_rad < 10)
 
         x_vars = [
             np.nan,
@@ -283,17 +283,20 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 # f7_params, f7_pcov = curve_fit(f=lin_model, xdata=f7_x, ydata=f7_y)
                 # f3_params, f3_pcov = curve_fit(f=lin_model, xdata=f3_x, ydata=f3_y)
 
-                theory_x = np.linspace(f3_x.min() - 0.5, f3_x.max() + 0.5, 100)
+                theory_x = np.linspace(f3_x.min() - 1, f3_x.max() + 1, 100)
 
                 axs[i].plot(
                     theory_x,
                     lin_model(theory_x, f7_params[0], f7_params[1]),
                     lw=2,
                     color=fs70_color,
-                    label="$\mathrm{{{:.2f} \pm {:.2f}}}$, "
-                    # "\n"
-                    "$\mathrm{{R^2 = {:.2f}}}$".format(
-                        f7_params[0], f7_params[4], f7_params[2] ** 2
+                    label="$\mathrm{{ m = {:.2f} \pm {:.2f}}}$, "
+                    "\n"
+                    "$\mathrm{{ b = {:.2f} \pm {:.2f}}}$, ".format(
+                        f7_params[0],
+                        f7_params[4],
+                        f7_params[1],
+                        f7_params.intercept_stderr,
                     ),
                 )
                 axs[i].plot(
@@ -302,10 +305,13 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                     lw=2,
                     ls="--",
                     color=fs35_color,
-                    label="$\mathrm{{{:.2f} \pm {:.2f}}}$, "
-                    # "\n"
-                    "$\mathrm{{R^2 = {:.2f} }}$".format(
-                        f3_params[0], f3_params[4], f3_params[2] ** 2
+                    label="$\mathrm{{ m = {:.2f} \pm {:.2f}}}$, "
+                    "\n"
+                    "$\mathrm{{ b = {:.2f} \pm {:.2f} }}$, ".format(
+                        f3_params[0],
+                        f3_params[4],
+                        f3_params[1],
+                        f3_params.intercept_stderr,
                     ),
                 )
 
@@ -333,14 +339,14 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 
                 # tweak some limits
                 axs[i].set_xlim(theory_x.min(), theory_x.max())
-                axs[i].set_ylim(f3_y.min() - 1.5, f3_y.max() + 0.5)
+                axs[i].set_ylim(f3_y.min() - 1.5, f3_y.max() + 1)
 
                 # fit parameter legend
                 fit = axs[i].legend(fontsize=6, loc="lower center")
                 fit.get_frame().set_edgecolor("w")
 
-            if i == 1:
-                axs[i].set_ylim(-1, 1.1)
+            # if i == 1:
+            #     axs[i].set_ylim(-1, 1.1)
 
             axs[i].set_xlabel(x_labels[i], labelpad=0)
             axs[i].set_ylabel(y_labels[i], labelpad=0)
