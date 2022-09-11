@@ -17,7 +17,10 @@ def find_matching_time(sequence, look_up_sequence):
     look_up_sequence_output_nums = []
     look_up_sequence_output_times = []
     for file_name in look_up_sequence:
-        out_num = int(file_name.split("/")[-1].split("_")[1])
+        try:
+            out_num = int(file_name.split("/")[-1].split("_")[1])
+        except:
+            out_num = int(file_name.split("\\")[-1].split("_")[1])
         sim_time = np.loadtxt(file_name, max_rows=2)[0, 6]
         look_up_sequence_output_nums.append(out_num)
         look_up_sequence_output_times.append(sim_time)
@@ -60,9 +63,11 @@ def get_snapshots(snapshot_file_list, get_list, verbose=True):
     filter_list = list(map(str, list(get_list)))
     filter_list = [f.zfill(5) for f in filter_list]
     filtered_lst = []
+    # print(filter_list)
     for num in filter_list:
-
+        # print(num)
         for file in snapshot_file_list:
+            # print(snapshot_file_list)
             if num in file:
                 # print(file)
                 filtered_lst.append(file)

@@ -429,7 +429,7 @@ if __name__ == "__main__":
     plt.savefig(
         os.path.expanduser(
             (
-                "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+                "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
                 "cmf_overtime.png"
             )
         ),
