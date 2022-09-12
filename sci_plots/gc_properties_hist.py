@@ -10,7 +10,12 @@ from matplotlib import cm
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-from modules.macros import filter_snapshots, common_filter_snapshots, t_myr_from_z
+from modules.macros import (
+    filter_snapshots,
+    common_filter_snapshots,
+    t_myr_from_z,
+    z_from_t_myr,
+)
 from modules.match_t_sims import find_matching_time, get_snapshots
 import matplotlib.lines as mlines
 
@@ -28,9 +33,14 @@ f3_strt = 154
 f3_end = 1368
 step = 1
 
+profiler_data = (
+    "/home/fabg/g_drive/Research/AstrophysicsSimulation/DesktopEnvironment/"
+    "data_globular_cluster/gc_profiles/profile_runs/"
+)
 
-f7_prof_dir = r"../gc_profiles/profile_runs/fs07_refine/fof_best"
-f3_prof_dir = r"../gc_profiles/profile_runs/fs035_ms10/fof_best"
+f7_prof_dir = profiler_data + "fs07_refine/fof_best"
+f3_prof_dir = profiler_data + "fs035_ms10/fof_best"
+
 
 f7_halo_dir = r"../halo_data/fs07_refine/fof_best"
 f3_halo_dir = r"../halo_data/fs035_ms10/fof_best"
@@ -50,8 +60,8 @@ _, f3_matched_nums = find_matching_time(
 f3_pro_ds = filter_snapshots(f3_prof_dir, f3_strt, f3_end, step)
 
 # sample the matched snapshots for plotting by indexing
-strt = 300  # 921
-end = 301  # 922
+strt = 1070
+end = 1071
 st = end - strt
 
 f7_pro_ds = filter_snapshots(f7_prof_dir, f7_strt, f7_end, step)[strt:end:st]
@@ -146,8 +156,8 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     f3_tot_light = f3_prof_data[:, 17]
     f3_metal, f3_orig_mass = metal_lookup("../sim_log_files/fs035_ms10/logSFC", f3_bes)
 
-    f7_mask = f7_alpha < 5  # & (f7_mass < 1e4)   & (f7_vir_rad < 10)
-    f3_mask = f3_alpha < 5  # & (f3_mass < 1e4)   & (f3_vir_rad < 10)
+    f7_mask = (f7_mass > 250) & (f7_alpha < 5)  # & (f7_vir_rad < 10)
+    f3_mask = (f3_mass > 250) & (f3_alpha < 5)  # & (f3_vir_rad < 10)
 
     f7_vars = [
         f7_core_rad[f7_mask],

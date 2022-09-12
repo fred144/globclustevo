@@ -232,3 +232,20 @@ def t_myr_from_z(z):
     t_myr = np.array(co.t_from_z(z).in_units("Myr"))
 
     return t_myr
+
+
+def z_from_t_myr(t_myr):
+    """
+    The times are in reasonable agreement, within 1 Myr, deviations due
+    to the used value of parameters, which change somewhat over cosmic
+    time
+    """
+    co = Cosmology(
+        hubble_constant=0.7,
+        omega_matter=0.270000010728836,
+        omega_radiation=0.0,
+        omega_lambda=0.730000019073486,
+    )
+    z = np.array(co.z_from_t(t_myr).in_units("Myr"))
+
+    return z

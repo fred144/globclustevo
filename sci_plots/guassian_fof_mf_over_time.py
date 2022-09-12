@@ -50,7 +50,7 @@ if __name__ == "__main__":
     f3_bsc_mf_clr = cmap[3]
 
     # use particle data to initiate matching of frames
-    fs070 = filter_snapshots("../particle_data/pop_2_data/fs07_refine", 113, 1110, 1)
+    fs070 = filter_snapshots("../particle_data/pop_2_data/fs07_refine", 113, 1196, 1)
     fs035 = filter_snapshots("../particle_data/pop_2_data/fs035_ms10", 154, 1316, 1)
     # find matching fs = 0.35 snapshots in terms of time to fs = 0.70
     # smaller goes fist
@@ -58,8 +58,16 @@ if __name__ == "__main__":
     # the ones with less
     _, f3_matched_nums = find_matching_time(sequence=fs070, look_up_sequence=fs035)
 
-    fs070_dat_dir = r"../halo_data/fs07_refine/fof_best"
-    fs035_dat_dir = r"../halo_data/fs035_ms10/fof_best"
+    # fs070_dat_dir = r"../halo_data/fs07_refine/fof_best"
+    # fs035_dat_dir = r"../halo_data/fs035_ms10/fof_best"
+
+    profiler_data = (
+        "/home/fabg/g_drive/Research/AstrophysicsSimulation/DesktopEnvironment/"
+        "data_globular_cluster/gc_profiles/profile_runs/"
+    )
+
+    fs070_dat_dir = profiler_data + "fs07_refine/fof_best"
+    fs035_dat_dir = profiler_data + "fs035_ms10/fof_best"
 
     fs070_matched = filter_snapshots(fs070_dat_dir, 113, 1196, 1)
 
@@ -68,7 +76,7 @@ if __name__ == "__main__":
         get_list=f3_matched_nums,
     )
 
-    wanted_idxs = [230, 475, 699, 922]
+    wanted_idxs = [233, 475, 699, 922]
     fs070_matched = [fs070_matched[x] for x in wanted_idxs]
     fs035_matched = [fs035_matched[x] for x in wanted_idxs]
 
@@ -140,35 +148,44 @@ if __name__ == "__main__":
         leg.get_frame().set_boxstyle("Square")
 
     for i, (f7_ds, f3_ds) in enumerate(zip(fs070_matched, fs035_matched)):
-        f7_info_file = np.loadtxt(os.path.join(f7_ds, "fof_info.txt"))
-        f3_info_file = np.loadtxt(os.path.join(f3_ds, "fof_info.txt"))
+        f7_info_file = np.loadtxt(os.path.join(f7_ds, "info.txt"))
+        f3_info_file = np.loadtxt(os.path.join(f3_ds, "info.txt"))
 
         star_mass_min = 250  # solar mass per bin
-
+        max_alpha = 4.2
         try:
             f7_t_myr = f7_info_file[0, 0]
-            f7_redshift = f7_info_file[0, 1]
+            # f7_redshift = f7_info_file[0, 1]
+            # f7_redshift = f7_redshift
             f7_masses_per_snapshot = f7_info_file[:, 3]
-            mask = f7_masses_per_snapshot > star_mass_min
+            f7_alpha = f7_info_file[:, 8]
+            mask = (f7_masses_per_snapshot > star_mass_min) & (f7_alpha < max_alpha)
+
             f7_masses_per_snapshot = f7_masses_per_snapshot[mask]
         except:  # if there is only once cluster
             f7_t_myr = f7_info_file[0]
-            f7_redshift = f7_info_file[1]
+            # f7_redshift = f7_info_file[1]
             f7_masses_per_snapshot = f7_info_file[3]
-            mask = f7_masses_per_snapshot > star_mass_min
+            f7_alpha = f7_info_file[8]
+            mask = (f7_masses_per_snapshot > star_mass_min) & (f7_alpha < max_alpha)
+
             f7_masses_per_snapshot = f7_masses_per_snapshot[mask]
 
         try:  # if there is only once cluster
             f3_t_myr = f3_info_file[0, 0]
-            f3_redshift = f3_info_file[0, 1]
+            # f3_redshift = f3_info_file[0, 1]
             f3_masses_per_snapshot = f3_info_file[:, 3]
-            mask = f3_masses_per_snapshot > star_mass_min
+            f3_alpha = f3_info_file[:, 8]
+            mask = (f3_masses_per_snapshot > star_mass_min) & (f3_alpha < max_alpha)
+
             f3_masses_per_snapshot = f3_masses_per_snapshot[mask]
         except:
             f3_t_myr = f3_info_file[0]
-            f3_redshift = f3_info_file[1]
+            # f3_redshift = f3_info_file[1]
             f3_masses_per_snapshot = f3_info_file[3]
-            mask = f3_masses_per_snapshot > star_mass_min
+            f3_alpha = f3_info_file[8]
+            mask = (f3_masses_per_snapshot > star_mass_min) & (f3_alpha < max_alpha)
+
             f3_masses_per_snapshot = f3_masses_per_snapshot[mask]
 
         print(f7_t_myr, f3_t_myr)
@@ -180,12 +197,12 @@ if __name__ == "__main__":
         # from the fof profiler
 
         # from the logSFC
-        f3_birth_z = fs035_log_sfc[:, 2]
-        f3_mc_mask = fs035_log_sfc[:, 2] >= f3_redshift
+        f3_birth_myr = t_myr_from_z(fs035_log_sfc[:, 2])
+        f3_mc_mask = f3_birth_myr <= f3_t_myr
         f3_mc_star_mass = fs035_log_sfc[:, 7][f3_mc_mask]
 
-        f7_birth_z = fs070_log_sfc[:, 2]
-        f7_mc_mask = fs070_log_sfc[:, 2] >= f7_redshift
+        f7_birth_myr = t_myr_from_z(fs070_log_sfc[:, 2])
+        f7_mc_mask = f7_birth_myr <= f7_t_myr
         f7_mc_star_mass = fs070_log_sfc[:, 7][f7_mc_mask]
 
         # log sfc

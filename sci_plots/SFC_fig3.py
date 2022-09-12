@@ -133,20 +133,25 @@ import matplotlib.lines as mlines
 initial mass functions and metaliccity function for the molecular clouds or
 star forming clouds.
 """
+latest_redshift = 8.3
 
 fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
 redshft_fs070 = fs070_log_sfc[:, 2]
-r_pc_cloud_fs070 = fs070_log_sfc[:, 4]
-m_sun_cloud_fs070 = fs070_log_sfc[:, 5]
-n_hydrogen_fs070 = fs070_log_sfc[:, 8]
-metal_cloud_fs070 = fs070_log_sfc[:, 9]
+mask = redshft_fs070 > latest_redshift
+redshft_fs070 = redshft_fs070[mask]
+r_pc_cloud_fs070 = fs070_log_sfc[:, 4][mask]
+m_sun_cloud_fs070 = fs070_log_sfc[:, 5][mask]
+n_hydrogen_fs070 = fs070_log_sfc[:, 8][mask]
+metal_cloud_fs070 = fs070_log_sfc[:, 9][mask]
 
 fs035_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
 redshft_fs035 = fs035_log_sfc[:, 2]
-r_pc_cloud_fs035 = fs035_log_sfc[:, 4]
-m_sun_cloud_fs035 = fs035_log_sfc[:, 5]
-n_hydrogen_fs035 = fs035_log_sfc[:, 8]
-metal_cloud_fs035 = fs035_log_sfc[:, 9]
+mask = redshft_fs035 > latest_redshift
+redshft_fs035 = redshft_fs035[mask]
+r_pc_cloud_fs035 = fs035_log_sfc[:, 4][mask]
+m_sun_cloud_fs035 = fs035_log_sfc[:, 5][mask]
+n_hydrogen_fs035 = fs035_log_sfc[:, 8][mask]
+metal_cloud_fs035 = fs035_log_sfc[:, 9][mask]
 
 
 def gauss(x, amp, mean, sigma):
@@ -154,7 +159,9 @@ def gauss(x, amp, mean, sigma):
 
 
 def bimodal(x, amp1, mean1, sigma1, amp2, mean2, sigma2):
-    return gauss(x, amp1, mean1, sigma1) + gauss(x, amp2, mean2, sigma2)
+    return amp1 * np.exp(-0.5 * ((x - mean1) / sigma1) ** 2) + amp2 * np.exp(
+        -0.5 * ((x - mean2) / sigma2) ** 2
+    )
 
 
 def log_data_function(data, num_bins, bin_range: tuple):
@@ -209,10 +216,23 @@ with plt.rc_context(
         figsize=(5, 2.5),
         dpi=300,
     )
-    f70_leg = mlines.Line2D([], [], color=fs70_color, ls="-", lw=4, label="$0.70$")
-    f35_leg = mlines.Line2D([], [], color=fs35_color, ls="-", lw=4, label="$0.35$")
+    f70_leg = mlines.Line2D(
+        [], [], color=fs70_color, ls="-", lw=4, label="$f_{*} = 0.70$"
+    )
+    f35_leg = mlines.Line2D(
+        [], [], color=fs35_color, ls="-", lw=4, label="$f_{*} =0.35$"
+    )
+    # leg_title = mlines.Line2D(
+    #     [], [], color="white", ls="", label="$\mathrm{SFE} \: (f_{*})$"
+    # )
     leg_title = mlines.Line2D(
-        [], [], color="white", ls="", label="$\mathrm{SFE} \: (f_{*})$"
+        [],
+        [],
+        color="white",
+        ls="",
+        label="$\mathrm{{z = {:.2f}}}$".format(
+            np.min(np.concatenate([redshft_fs070, redshft_fs035]))
+        ),
     )
     leg = fig.legend(
         # title=,
@@ -360,14 +380,14 @@ with plt.rc_context(
     )
 
     first_bump_mu_f7 = np.min([f7_fit_params[1], f7_fit_params[4]])
-    first_bump_sig_f7 = np.abs(np.min([f7_fit_params[2], f7_fit_params[5]]))
+    first_bump_sig_f7 = np.max(np.abs([f7_fit_params[2], f7_fit_params[5]]))
     second_bump_mu_f7 = np.max([f7_fit_params[1], f7_fit_params[4]])
-    second_bump_sig_f7 = np.abs(np.max([f7_fit_params[2], f7_fit_params[5]]))
+    second_bump_sig_f7 = np.min(np.abs([f7_fit_params[2], f7_fit_params[5]]))
 
     first_bump_mu_f3 = np.min([f3_fit_params[1], f3_fit_params[4]])
-    first_bump_sig_f3 = np.abs(np.min([f3_fit_params[2], f3_fit_params[5]]))
+    first_bump_sig_f3 = np.max(np.abs([f3_fit_params[2], f3_fit_params[5]]))
     second_bump_mu_f3 = np.max([f3_fit_params[1], f3_fit_params[4]])
-    second_bump_sig_f3 = np.abs(np.max([f3_fit_params[2], f3_fit_params[5]]))
+    second_bump_sig_f3 = np.min(np.abs([f3_fit_params[2], f3_fit_params[5]]))
     # plot the fits
 
     ax[1].plot(

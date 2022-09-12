@@ -325,53 +325,51 @@ with plt.rc_context(
 
     # do the efficiencies using kazu's data
 
-    dm_data = np.loadtxt("kazu_data/halo1_historyHe19.dat")
-    dm_tmyr = t_myr_from_z(dm_data[:, 1])
-    dm_mass = dm_data[:, 3]
+    # dm_data = np.loadtxt("kazu_data/halo1_historyHe19.dat")
+    # dm_tmyr = t_myr_from_z(dm_data[:, 1])
+    # dm_mass = dm_data[:, 3]
 
-    fs070_dm_interp = np.interp(
-        fs070_interp_points,
-        xp=dm_tmyr,
-        fp=dm_mass,
-    )
-    fs070_mask = dm_tmyr >= fs070_interp_points.min()
-    fs070_dm_mask = fs070_interp_points <= dm_tmyr.max()
-    fs070_efficiency = (
-        fs070_interp[fs070_dm_mask] / fs070_dm_interp[fs070_dm_mask]
-    )  # * 100
+    # fs070_dm_interp = np.interp(
+    #     fs070_interp_points,
+    #     xp=dm_tmyr,
+    #     fp=dm_mass,
+    # )
+    # fs070_mask = dm_tmyr >= fs070_interp_points.min()
+    # fs070_dm_mask = fs070_interp_points <= dm_tmyr.max()
+    # fs070_efficiency = (
+    #     fs070_interp[fs070_dm_mask] / fs070_dm_interp[fs070_dm_mask]
+    # )  # * 100
 
-    # ax[2].scatter(dm_tmyr[fs070_mask], dm_mass[fs070_mask])
-    ax[2].plot(
-        fs070_interp_points[fs070_dm_mask],
-        fs070_efficiency,
-        c=fs70_color,
-        linewidth=4,
-        alpha=0.8,
-    )
+    # # ax[2].scatter(dm_tmyr[fs070_mask], dm_mass[fs070_mask])
+    # ax[2].plot(
+    #     fs070_interp_points[fs070_dm_mask],
+    #     fs070_efficiency,
+    #     c=fs70_color,
+    #     linewidth=4,
+    #     alpha=0.8,
+    # )
 
-    fs035_dm_interp = np.interp(
-        fs035_interp_points,
-        xp=dm_tmyr,
-        fp=dm_mass,
-    )
-    fs035_mask = dm_tmyr >= fs035_interp_points.min()
-    fs035_dm_mask = fs035_interp_points <= dm_tmyr.max()
-    fs035_efficiency = (
-        fs035_interp[fs035_dm_mask] / fs035_dm_interp[fs035_dm_mask]
-    )  # * 100
+    # fs035_dm_interp = np.interp(
+    #     fs035_interp_points,
+    #     xp=dm_tmyr,
+    #     fp=dm_mass,
+    # )
+    # fs035_mask = dm_tmyr >= fs035_interp_points.min()
+    # fs035_dm_mask = fs035_interp_points <= dm_tmyr.max()
+    # fs035_efficiency = (
+    #     fs035_interp[fs035_dm_mask] / fs035_dm_interp[fs035_dm_mask]
+    # )  # * 100
 
-    # ax[2].scatter(dm_tmyr[fs035_mask], dm_mass[fs035_mask])
-    ax[2].plot(
-        fs035_interp_points[fs035_dm_mask],
-        fs035_efficiency,
-        c=fs35_color,
-        linewidth=4,
-        alpha=0.8,
-    )
-    ax[2].set_ylabel(r"$\mathrm{M_{*} / M_{DM}}$", labelpad=10)
-
-    # ax[2].set_ylim(bottom=0, top=0.37)
-    ax[2].set_yscale("log")
+    # # ax[2].scatter(dm_tmyr[fs035_mask], dm_mass[fs035_mask])
+    # ax[2].plot(
+    #     fs035_interp_points[fs035_dm_mask],
+    #     fs035_efficiency,
+    #     c=fs35_color,
+    #     linewidth=4,
+    #     alpha=0.8,
+    # )
+    #
+    # # ax[2].set_ylim(bottom=0, top=0.37)
 
     # ax[0].plot(fs035_interp_points[fs035_dm_mask], fs035_dm_interp[fs035_dm_mask])
     # ax[0].plot(fs070_interp_points[fs070_dm_mask], fs070_dm_interp[fs070_dm_mask])
@@ -401,7 +399,7 @@ with plt.rc_context(
         c=fs70_color,
         linewidth=4,
         alpha=1,
-        ls=":",
+        # ls=":",
     )
 
     ax[2].plot(
@@ -410,10 +408,12 @@ with plt.rc_context(
         c=fs35_color,
         linewidth=4,
         alpha=1,
-        ls=":",
+        # ls=":",
     )
 
     ax[2].set_xlim(right=f7_halo[:, 1].max())
+    ax[2].set_yscale("log")
+    ax[2].set_ylabel(r"$\mathrm{M_{*} / M_{DM}}$", labelpad=10)
 
     plt.savefig(
         "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_sfr.png",
