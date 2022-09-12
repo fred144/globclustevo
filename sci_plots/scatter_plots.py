@@ -18,18 +18,31 @@ f7_bsc_mf_clr = cmap[1]
 f3_mc_imf_clr = cmap[2]
 f3_bsc_mf_clr = cmap[3]
 
-f7_strt = 973
-f7_end = 974
-f3_strt = 1151
-f3_end = 1152
+f7_strt = 113
+f7_end = 1196
+f3_strt = 154
+f3_end = 1368
 step = 1
 
+# sample the matched snapshots for plotting by indexing
+# try snapshot 873
+strt = 1083  # 800
+end = 1084  # f3_matched_nums.size
+st = 1
 
-f7_prof_dir = r"../gc_profiles/profile_runs/fs07_refine/fof_best"
-f3_prof_dir = r"../gc_profiles/profile_runs/fs035_ms10/fof_best"
+# f7_prof_dir = r"../gc_profiles/profile_runs/fs07_refine/fof_best"
+# f3_prof_dir = r"../gc_profiles/profile_runs/fs035_ms10/fof_best"
 
 f7_halo_dir = r"../halo_data/fs07_refine/fof_best"
 f3_halo_dir = r"../halo_data/fs035_ms10/fof_best"
+
+profiler_data = (
+    "/home/fabg/g_drive/Research/AstrophysicsSimulation/DesktopEnvironment/"
+    "data_globular_cluster/gc_profiles/profile_runs/"
+)
+
+f7_prof_dir = profiler_data + "fs07_refine/fof_best"
+f3_prof_dir = profiler_data + "fs035_ms10/fof_best"
 
 # using pop2 data to construct lookuptables
 f7_pop2_ds = filter_snapshots(
@@ -45,11 +58,6 @@ _, f3_matched_nums = find_matching_time(
 )
 f3_pro_ds = filter_snapshots(f3_prof_dir, f3_strt, f3_end, step)
 
-# sample the matched snapshots for plotting by indexing
-# try snapshot 873
-strt = 1  # 800
-end = 2  # f3_matched_nums.size
-st = 1
 
 f7_pro_ds = filter_snapshots(f7_prof_dir, f7_strt, f7_end, step)[strt:end:st]
 f3_pro_ds = get_snapshots(f3_pro_ds, get_list=f3_matched_nums)[strt:end:st]
@@ -157,8 +165,8 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         # # map to differnt sizes for better plotting
         # f7_half_radii = scale_factor * f7_half_mass_rad
         # f3_half_radii = scale_factor * f3_half_mass_rad
-        f7_mask = f7_mass > 250  # or  (f3_alpha < 5)  # & & (f7_vir_rad < 10)
-        f3_mask = f3_mass > 250  # or ( f3_alpha < 5 )  #& & (f3_vir_rad < 10)
+        f7_mask = (f7_mass > 250) & (f7_alpha < 5)  # & & (f7_vir_rad < 10)
+        f3_mask = (f3_mass > 250) & (f3_alpha < 5)  # & & (f3_vir_rad < 10)
 
         x_vars = [
             np.nan,
@@ -215,7 +223,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             r"$\log_{10} \: R\mathrm{_{core}}$",
         ]
         # loop through some possible plots.
-        fig, ax = plt.subplots(4, 2, figsize=(4, 8), dpi=400)
+        fig, ax = plt.subplots(4, 2, figsize=(4, 8.5), dpi=400)
         plt.subplots_adjust(hspace=0.35, wspace=0.40)
         axs = ax.ravel()
         axs[0].set_visible(False)
@@ -283,16 +291,21 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 # f7_params, f7_pcov = curve_fit(f=lin_model, xdata=f7_x, ydata=f7_y)
                 # f3_params, f3_pcov = curve_fit(f=lin_model, xdata=f3_x, ydata=f3_y)
 
-                theory_x = np.linspace(f3_x.min() - 1, f3_x.max() + 1, 100)
+                x_extremas = np.array([f3_x.min(), f3_x.max(), f3_x.max(), f7_x.max()])
+                y_extremas = np.array([f3_y.min(), f3_y.max(), f3_y.max(), f7_y.max()])
+
+                theory_x = np.linspace(
+                    x_extremas.min() - 0.5, x_extremas.max() + 0.5, 100
+                )
 
                 axs[i].plot(
                     theory_x,
                     lin_model(theory_x, f7_params[0], f7_params[1]),
                     lw=2,
                     color=fs70_color,
-                    label="$\mathrm{{ m = {:.2f} \pm {:.2f}}}$, "
-                    "\n"
-                    "$\mathrm{{ b = {:.2f} \pm {:.2f}}}$, ".format(
+                    label="$\mathrm{{{:.2f} \pm {:.2f}}}$, "
+                    # "\n"
+                    "$\mathrm{{{:.2f} \pm {:.2f}}}$".format(
                         f7_params[0],
                         f7_params[4],
                         f7_params[1],
@@ -305,9 +318,9 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                     lw=2,
                     ls="--",
                     color=fs35_color,
-                    label="$\mathrm{{ m = {:.2f} \pm {:.2f}}}$, "
-                    "\n"
-                    "$\mathrm{{ b = {:.2f} \pm {:.2f} }}$, ".format(
+                    label="$\mathrm{{{:.2f} \pm {:.2f}}}$, "
+                    # "\n"
+                    "$\mathrm{{{:.2f} \pm {:.2f} }}$".format(
                         f3_params[0],
                         f3_params[4],
                         f3_params[1],
@@ -339,11 +352,18 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 
                 # tweak some limits
                 axs[i].set_xlim(theory_x.min(), theory_x.max())
-                axs[i].set_ylim(f3_y.min() - 1.5, f3_y.max() + 1)
+                axs[i].set_ylim(y_extremas.min() - 1, y_extremas.max() + 0.1)
 
                 # fit parameter legend
-                fit = axs[i].legend(fontsize=6, loc="lower center")
-                fit.get_frame().set_edgecolor("w")
+                fit = axs[i].legend(
+                    title="$\mathrm{\log_{10}(slope,\:intercept)}$",
+                    ncol=1,
+                    fontsize=6,
+                    title_fontsize=7,
+                    loc="lower center",
+                )
+                fit.get_frame().set_edgecolor("grey")
+                fit.get_frame().set_alpha(0.2)
 
             # if i == 1:
             #     axs[i].set_ylim(-1, 1.1)
@@ -410,10 +430,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 
 plt.savefig(
     os.path.expanduser(
-        (
-            "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
-            "bubble_plot_dashboard.png"
-        )
+        ("~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/" "gc_scatter.png")
     ),
     dpi=500,
     bbox_inches="tight",

@@ -31,8 +31,8 @@ print("=========================================================================
 simulation_run = "fs07_refine"
 finder_profiler_run = "fof_best"
 processor_number = 0  # 0 means one process unparalleled
-start_step = 1110
-end_step = 1196
+start_step = 1196
+end_step = 1297
 step = 1
 absolute_start = 113
 
