@@ -1,0 +1,648 @@
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca mpi_cuda_support 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+=============================================================================
+fs07_refine post processing
+=============================================================================
+=============================================================================
+RUNING HALO FINDER
+=============================================================================
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01196
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29844
+Number of groups:142
+FOF CPU TIME: 0.047977 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01197
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29787
+Number of groups:125
+FOF CPU TIME: 0.048151 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01198
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29852
+Number of groups:135
+FOF CPU TIME: 0.048559 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01199
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29765
+Number of groups:145
+FOF CPU TIME: 0.048282 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01200
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29724
+Number of groups:143
+FOF CPU TIME: 0.048156 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01201
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29593
+Number of groups:136
+FOF CPU TIME: 0.047930 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01202
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29518
+Number of groups:141
+FOF CPU TIME: 0.048141 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01203
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29463
+Number of groups:141
+FOF CPU TIME: 0.048358 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01204
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29436
+Number of groups:127
+FOF CPU TIME: 0.048195 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01205
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29404
+Number of groups:127
+FOF CPU TIME: 0.048355 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01206
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29346
+Number of groups:136
+FOF CPU TIME: 0.048120 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01207
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29349
+Number of groups:131
+FOF CPU TIME: 0.047447 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01208
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29341
+Number of groups:150
+FOF CPU TIME: 0.047360 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01209
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29415
+Number of groups:134
+FOF CPU TIME: 0.047268 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01210
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29395
+Number of groups:129
+FOF CPU TIME: 0.047726 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01211
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29307
+Number of groups:139
+FOF CPU TIME: 0.047769 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01212
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29249
+Number of groups:135
+FOF CPU TIME: 0.047868 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01213
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29299
+Number of groups:156
+FOF CPU TIME: 0.048388 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01214
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29277
+Number of groups:162
+FOF CPU TIME: 0.047532 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01215
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29270
+Number of groups:156
+FOF CPU TIME: 0.047220 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01216
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29255
+Number of groups:164
+FOF CPU TIME: 0.047423 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01217
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29297
+Number of groups:154
+FOF CPU TIME: 0.048068 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01218
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29259
+Number of groups:150
+FOF CPU TIME: 0.048164 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01219
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29433
+Number of groups:160
+FOF CPU TIME: 0.047744 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01220
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29331
+Number of groups:164
+FOF CPU TIME: 0.047998 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01221
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29457
+Number of groups:176
+FOF CPU TIME: 0.047811 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01222
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29407
+Number of groups:160
+FOF CPU TIME: 0.047851 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01223
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29321
+Number of groups:169
+FOF CPU TIME: 0.047747 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01224
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29419
+Number of groups:184
+FOF CPU TIME: 0.047387 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01225
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29364
+Number of groups:160
+FOF CPU TIME: 0.047800 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01226
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29406
+Number of groups:157
+FOF CPU TIME: 0.047213 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01227
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29485
+Number of groups:172
+FOF CPU TIME: 0.047447 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01228
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29332
+Number of groups:171
+FOF CPU TIME: 0.047809 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01229
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29398
+Number of groups:186
+FOF CPU TIME: 0.047589 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01230
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29468
+Number of groups:171
+FOF CPU TIME: 0.047512 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01231
+Link length is 0.000000
+Filling in 54615 particles
+Number of initial groups:29439
+Number of groups:173
+FOF CPU TIME: 0.047533 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01232
+Link length is 0.000000
+Filling in 55156 particles
+Number of initial groups:29450
+Number of groups:153
+FOF CPU TIME: 0.048870 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01233
+Link length is 0.000000
+Filling in 55156 particles
+Number of initial groups:29441
+Number of groups:167
+FOF CPU TIME: 0.049057 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01234
+Link length is 0.000000
+Filling in 55156 particles
+Number of initial groups:29529
+Number of groups:169
+FOF CPU TIME: 0.049361 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01235
+Link length is 0.000000
+Filling in 55156 particles
+Number of initial groups:29594
+Number of groups:166
+FOF CPU TIME: 0.049172 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01236
+Link length is 0.000000
+Filling in 55156 particles
+Number of initial groups:29474
+Number of groups:174
+FOF CPU TIME: 0.048676 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01237
+Link length is 0.000000
+Filling in 55156 particles
+Number of initial groups:29503
+Number of groups:183
+FOF CPU TIME: 0.049123 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01238
+Link length is 0.000000
+Filling in 55156 particles
+Number of initial groups:29406
+Number of groups:174
+FOF CPU TIME: 0.048259 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01239
+Link length is 0.000000
+Filling in 55882 particles
+Number of initial groups:29374
+Number of groups:176
+FOF CPU TIME: 0.049946 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01240
+Link length is 0.000000
+Filling in 56306 particles
+Number of initial groups:29556
+Number of groups:174
+FOF CPU TIME: 0.050790 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01241
+Link length is 0.000000
+Filling in 56306 particles
+Number of initial groups:29574
+Number of groups:182
+FOF CPU TIME: 0.051167 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01242
+Link length is 0.000000
+Filling in 56306 particles
+Number of initial groups:29458
+Number of groups:169
+FOF CPU TIME: 0.050823 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01243
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:29493
+Number of groups:162
+FOF CPU TIME: 0.051349 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01244
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:29424
+Number of groups:165
+FOF CPU TIME: 0.051123 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01245
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:29342
+Number of groups:154
+FOF CPU TIME: 0.050566 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01246
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:29395
+Number of groups:164
+FOF CPU TIME: 0.050646 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01247
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:29239
+Number of groups:173
+FOF CPU TIME: 0.050488 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01248
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:29203
+Number of groups:173
+FOF CPU TIME: 0.050367 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01249
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:29263
+Number of groups:184
+FOF CPU TIME: 0.050469 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01250
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:29019
+Number of groups:167
+FOF CPU TIME: 0.050714 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01251
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:29068
+Number of groups:172
+FOF CPU TIME: 0.050753 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01252
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:29032
+Number of groups:158
+FOF CPU TIME: 0.050844 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01253
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:28938
+Number of groups:170
+FOF CPU TIME: 0.050720 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01254
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:28955
+Number of groups:195
+FOF CPU TIME: 0.051054 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01255
+Link length is 0.000000
+Filling in 56456 particles
+Number of initial groups:28742
+Number of groups:189
+FOF CPU TIME: 0.050543 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01256
+Link length is 0.000000
+Filling in 57144 particles
+Number of initial groups:28662
+Number of groups:192
+FOF CPU TIME: 0.052533 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01257
+Link length is 0.000000
+Filling in 57144 particles
+Number of initial groups:28521
+Number of groups:189
+FOF CPU TIME: 0.052141 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01258
+Link length is 0.000000
+Filling in 57144 particles
+Number of initial groups:28420
+Number of groups:194
+FOF CPU TIME: 0.051870 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01259
+Link length is 0.000000
+Filling in 57144 particles
+Number of initial groups:28352
+Number of groups:204
+FOF CPU TIME: 0.052062 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01260
+Link length is 0.000000
+Filling in 57144 particles
+Number of initial groups:28321
+Number of groups:210
+FOF CPU TIME: 0.052436 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01261
+Link length is 0.000000
+Filling in 57144 particles
+Number of initial groups:28202
+Number of groups:205
+FOF CPU TIME: 0.052491 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01262
+Link length is 0.000000
+Filling in 57144 particles
+Number of initial groups:28256
+Number of groups:201
+FOF CPU TIME: 0.052123 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01263
+Link length is 0.000000
+Filling in 57144 particles
+Number of initial groups:28216
+Number of groups:234
+FOF CPU TIME: 0.052139 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01264
+Link length is 0.000000
+Filling in 57144 particles
+Number of initial groups:28251
+Number of groups:228
+FOF CPU TIME: 0.052348 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01265
+Link length is 0.000000
+Filling in 57144 particles
+Number of initial groups:28137
+Number of groups:233
+FOF CPU TIME: 0.052268 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01266
+Link length is 0.000000
+Filling in 57144 particles
+Number of initial groups:28230
+Number of groups:245
+FOF CPU TIME: 0.051647 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01267
+Link length is 0.000000
+Filling in 58640 particles
+Number of initial groups:28437
+Number of groups:228
+FOF CPU TIME: 0.055957 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01268
+Link length is 0.000000
+Filling in 58885 particles
+Number of initial groups:28650
+Number of groups:237
+FOF CPU TIME: 0.058386 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01269
+Link length is 0.000000
+Filling in 58885 particles
+Number of initial groups:28577
+Number of groups:234
+FOF CPU TIME: 0.056424 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01270
+Link length is 0.000000
+Filling in 59213 particles
+Number of initial groups:28659
+Number of groups:224
+FOF CPU TIME: 0.056517 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01271
+Link length is 0.000000
+Filling in 59213 particles
+Number of initial groups:28756
+Number of groups:214
+FOF CPU TIME: 0.056115 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01272
+Link length is 0.000000
+Filling in 59442 particles
+Number of initial groups:29023
+Number of groups:210
+FOF CPU TIME: 0.055911 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01273
+Link length is 0.000000
+Filling in 59442 particles
+Number of initial groups:29371
+Number of groups:227
+FOF CPU TIME: 0.055279 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01274
+Link length is 0.000000
+Filling in 59442 particles
+Number of initial groups:29565
+Number of groups:222
+FOF CPU TIME: 0.055173 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01275
+Link length is 0.000000
+Filling in 59442 particles
+Number of initial groups:29660
+Number of groups:208
+FOF CPU TIME: 0.054244 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01276
+Link length is 0.000000
+Filling in 59442 particles
+Number of initial groups:29685
+Number of groups:217
+FOF CPU TIME: 0.053863 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01277
+Link length is 0.000000
+Filling in 59442 particles
+Number of initial groups:30136
+Number of groups:192
+FOF CPU TIME: 0.053992 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01278
+Link length is 0.000000
+Filling in 59442 particles
+Number of initial groups:30168
+Number of groups:201
+FOF CPU TIME: 0.053293 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01279
+Link length is 0.000000
+Filling in 59587 particles
+Number of initial groups:30387
+Number of groups:207
+FOF CPU TIME: 0.053095 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01280
+Link length is 0.000000
+Filling in 59691 particles
+Number of initial groups:30478
+Number of groups:193
+FOF CPU TIME: 0.052893 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01281
+Link length is 0.000000
+Filling in 60071 particles
+Number of initial groups:30703
+Number of groups:184
+FOF CPU TIME: 0.053657 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01282
+Link length is 0.000000
+Filling in 60071 particles
+Number of initial groups:30847
+Number of groups:191
+FOF CPU TIME: 0.053348 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01283
+Link length is 0.000000
+Filling in 60071 particles
+Number of initial groups:30998
+Number of groups:178
+FOF CPU TIME: 0.052797 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01284
+Link length is 0.000000
+Filling in 60071 particles
+Number of initial groups:31102
+Number of groups:182
+FOF CPU TIME: 0.052789 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01285
+Link length is 0.000000
+Filling in 60071 particles
+Number of initial groups:31164
+Number of groups:190
+FOF CPU TIME: 0.052645 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01286
+Link length is 0.000000
+Filling in 60071 particles
+Number of initial groups:31432
+Number of groups:194
+FOF CPU TIME: 0.052361 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01287
+Link length is 0.000000
+Filling in 60071 particles
+Number of initial groups:31591
+Number of groups:177
+FOF CPU TIME: 0.050855 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01288
+Link length is 0.000000
+Filling in 60071 particles
+Number of initial groups:31694
+Number of groups:202
+FOF CPU TIME: 0.051584 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01289
+Link length is 0.000000
+Filling in 60071 particles
+Number of initial groups:31888
+Number of groups:188
+FOF CPU TIME: 0.051992 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01290
+Link length is 0.000000
+Filling in 60071 particles
+Number of initial groups:32137
+Number of groups:187
+FOF CPU TIME: 0.051518 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01291
+Link length is 0.000000
+Filling in 60137 particles
+Number of initial groups:32188
+Number of groups:193
+FOF CPU TIME: 0.051429 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01292
+Link length is 0.000000
+Filling in 60137 particles
+Number of initial groups:32203
+Number of groups:201
+FOF CPU TIME: 0.051324 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01293
+Link length is 0.000000
+Filling in 60137 particles
+Number of initial groups:32190
+Number of groups:187
+FOF CPU TIME: 0.051456 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01294
+Link length is 0.000000
+Filling in 60137 particles
+Number of initial groups:32500
+Number of groups:196
+FOF CPU TIME: 0.051199 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01295
+Link length is 0.000000
+Filling in 60137 particles
+Number of initial groups:32503
+Number of groups:196
+FOF CPU TIME: 0.050902 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01296
+Link length is 0.000000
+Filling in 60137 particles
+Number of initial groups:32691
+Number of groups:178
+FOF CPU TIME: 0.051270 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01297
+Link length is 0.000000
+Filling in 60593 particles
+Number of initial groups:32878
+Number of groups:172
+FOF CPU TIME: 0.050738 secs
+Traceback (most recent call last):
+  File "/lustre/fgarcia4/glob_clust_evo/cluster_evolution/fs070_postprocess_pipeline.py", line 338, in <module>
+    )[0]
+IndexError: list index out of range
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[33169,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
