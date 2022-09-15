@@ -68,6 +68,39 @@ def get_cluster(
             return x, y, masked_lums, masked_masses, masked_ages
 
 
+def surface_density(x_coord, y_coord, z_coord, masses, radius, num_bins):
+    """
+    Gets 3d density profile of a DM halo.
+
+    """
+
+    starting_point = 0.01  # in parsecs
+    r = np.geomspace(starting_point, radius, num=num_bins, endpoint=True)
+
+    all_positions = np.vstack((x_coord, y_coord, z_coord)).T
+
+    distances = np.sqrt(np.sum(np.square(all_positions), axis=1))
+    mass_per_bin, bin_edges = np.histogram(distances, bins=r, weights=masses)
+    count_per_bin, _ = np.histogram(distances, bins=r)
+
+    # mask out empty bins
+    mask = count_per_bin > 0
+    mass_per_bin = mass_per_bin[mask]
+    count_per_bin = count_per_bin[mask]
+
+    # getting bin properties
+    right_edges = bin_edges[1:]
+    left_edges = bin_edges[:-1]
+    bin_ctrs = 0.5 * (left_edges + right_edges)[mask]
+    # calculate the mass per thin surface area of a sphere
+    surface_areas = 4 * np.pi * (right_edges**2 - left_edges**2)[mask]
+    surf_mass_density = mass_per_bin / surface_areas
+    avg_star_masses = mass_per_bin / count_per_bin
+    err_surf_mass_density = np.sqrt(count_per_bin) * (avg_star_masses / surface_areas)
+
+    return bin_ctrs, surf_mass_density, err_surf_mass_density
+
+
 def projected_surf_densities(
     x_coord,
     y_coord,
@@ -133,7 +166,7 @@ def projected_surf_densities(
 
     if calc_half_r is not None:
         # reevaluate with increased bin resolition to get as close to the actual values
-        dr = 0.01
+        dr = 0.1
         high_res_r = np.arange(0, radius + 0.01, 0.01)
         high_res_m_per_bin, _ = np.histogram(distances, bins=high_res_r, weights=masses)
         high_res_l_per_bin, _ = np.histogram(distances, bins=high_res_r, weights=lums)
