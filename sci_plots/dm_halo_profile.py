@@ -33,8 +33,8 @@ _, f7_matched_nums = find_matching_time(sequence=fs035, look_up_sequence=fs070)
 fs070_dat_dir = r"../dm/fs07_refine/dm_hop"
 fs035_dat_dir = r"../dm/fs035_ms10/dm_hop"
 
-samp_strt = 10
-samp_end = 260
+samp_strt = 1
+samp_end = 200
 step = 10
 
 fs035_matched = filter_snapshots(fs035_dat_dir, 154, 1364, 1)[samp_strt:samp_end:step]
@@ -44,7 +44,7 @@ fs070_matched = get_snapshots(
     verbose=False,
 )[samp_strt:samp_end:step]
 # 100
-bins = 800
+bins = 500
 plt_rad = 2000  # pc
 pxl_size = (plt_rad * 2 / bins) ** 2
 profile_plot_bins = 25
@@ -86,6 +86,11 @@ for i, (f3, f7) in enumerate(zip(fs035_matched, fs070_matched)):
         except:
             out_num = int(s.split("\\")[-1].split("_")[-1])
 
+        if int(out_num) not in f3_series[:, 0] and plt_idx == 0:
+            break
+        if int(out_num) not in f7_series[:, 0] and plt_idx == 1:
+            break
+
         dm_part_data = np.loadtxt(os.path.join(s, "dm_data.txt"))
         time = float(series[plt_idx][:, 1][series[plt_idx][:, 0] == out_num])
         vir_rad = float(series[plt_idx][:, 4][series[plt_idx][:, 0] == out_num])
@@ -97,9 +102,9 @@ for i, (f3, f7) in enumerate(zip(fs035_matched, fs070_matched)):
 
         recentered = np.average(np.vstack((x, y, z)).T, axis=0)
 
-        #  x =  dm_part_data[:, 1] - recentered[0]
-        #  y =  dm_part_data[:, 2] - recentered[1]
-        #  z =  dm_part_data[:, 3] - recentered[2]
+        # x = dm_part_data[:, 1] - recentered[0]
+        # y = dm_part_data[:, 2] - recentered[1]
+        # z = dm_part_data[:, 3] - recentered[2]
 
         xy_mass, _, _ = np.histogram2d(
             x,
@@ -125,20 +130,20 @@ for i, (f3, f7) in enumerate(zip(fs035_matched, fs070_matched)):
                 xy = ax[plt_idx].imshow(
                     xy_mass,
                     cmap="viridis",
-                    interpolation="gaussian",
+                    # interpolation="gaussian",
                     origin="lower",
                     extent=[-plt_rad, plt_rad, -plt_rad, plt_rad],
                     norm=LogNorm(),
                 )
-                ax[plt_idx].scatter([0], [0], marker="+", alpha=0.5, color="red", s=40)
-                ax[plt_idx].scatter(
-                    recentered[0],
-                    recentered[1],
-                    marker="x",
-                    alpha=0.8,
-                    color="orange",
-                    s=40,
-                )
+                ax[plt_idx].scatter([0], [0], marker="+", alpha=0.2, color="red", s=70)
+                # ax[plt_idx].scatter(
+                #     recentered[0],
+                #     recentered[1],
+                #     marker="x",
+                #     alpha=0.8,
+                #     color="orange",
+                #     s=40,
+                # )
                 ax[plt_idx].set_facecolor(cm.viridis(0))
                 ax[plt_idx].set_xticklabels([])
                 ax[plt_idx].set_yticklabels([])
@@ -206,18 +211,21 @@ for i, (f3, f7) in enumerate(zip(fs035_matched, fs070_matched)):
                     alpha=1,
                     c="w",
                 )
-                concentration_param = 2
+                concentration_param = 4
+                rho_not = 1e-2
+                r_s = vir_rad / concentration_param
+                rho_not = 0.20 * np.sum(mass) / r_s**3
                 nfw = nav_fre_whi(
-                    r,
-                    rho[0],
+                    np.geomspace(r.min(), r.max() * 1.5, 100),
+                    rho_not,
                     vir_rad / concentration_param,
                 )
                 prof.plot(
-                    r,
+                    np.geomspace(r.min(), r.max() * 1.5, 100),
                     nfw,
                     label=r"$ R_{{\mathrm{{vir}}}} \:/ \:r_{{\mathrm{{s}}}} = {:.1f} $"
                     "\n"
-                    r"$\rho_0 = {:.1f}$".format(concentration_param, rho[0]),
+                    r"$\rho_0 = {:.3f}$".format(concentration_param, rho_not),
                 )
 
                 prof.set(
@@ -225,8 +233,8 @@ for i, (f3, f7) in enumerate(zip(fs035_matched, fs070_matched)):
                     yscale="log",
                     xlabel=r"$ \mathrm{R \:(pc)}$",
                     ylabel=r"$\mathrm{\rho \:\:(M_{\odot}\:pc^{-3})}$",
-                    ylim=(0.2, 300),
-                    xlim=(6, 3000),
+                    # ylim=(0.2, 300),
+                    # xlim=(6, 3000),
                 )
 
                 prof_leg = prof.legend(fontsize=10, loc="lower left")
@@ -286,3 +294,4 @@ for i, (f3, f7) in enumerate(zip(fs035_matched, fs070_matched)):
                         # fontproperties=leg_font,
                         fontsize=14,
                     )
+    # plt.show()

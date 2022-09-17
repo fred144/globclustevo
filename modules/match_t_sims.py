@@ -5,7 +5,7 @@ import numpy as np
 from modules.macros import filter_snapshots
 
 
-def find_matching_time(sequence, look_up_sequence):
+def find_matching_time(sequence, look_up_sequence, orig_seq_out_num=False):
     r"""
     given a sequence, return files from look_up sequence with the same time
     Example:
@@ -55,7 +55,25 @@ def find_matching_time(sequence, look_up_sequence):
                 common_items.append(file)
                 break
 
-    return common_items, look_up_sequence_same_time
+    if orig_seq_out_num is True:
+
+        orig_sequence_output_nums = []
+        orig_sequence_output_times = []
+        for file_name in sequence:
+            try:
+                out_num = int(file_name.split("/")[-1].split("_")[1])
+            except:
+                out_num = int(file_name.split("\\")[-1].split("_")[1])
+            sim_time = np.loadtxt(file_name, max_rows=2)[0, 6]
+            orig_sequence_output_nums.append(out_num)
+            orig_sequence_output_times.append(sim_time)
+        orig_sequence_output_nums = np.array(orig_sequence_output_nums)
+        orig_sequence_output_times = np.array(orig_sequence_output_times)
+
+        return common_items, look_up_sequence_same_time, orig_sequence_output_nums
+    else:
+
+        return common_items, look_up_sequence_same_time
 
 
 def get_snapshots(snapshot_file_list, get_list, verbose=True):

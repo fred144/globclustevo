@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from modules.macros import t_myr_from_z
 from matplotlib import cm
+from scipy import interpolate
 
 #%%
 
@@ -277,21 +278,28 @@ with plt.rc_context(
     )
     # ax[0].set_ylim(bottom=5e3,top=2e6)
     # increase data points for 35 % efficiency
-    fs035_interp_points = np.arange(t_myr_fs035.min(), t_myr_fs035.max(), 1)
-    fs035_interp = np.interp(
-        fs035_interp_points,
-        xp=t_myr_fs035,
-        fp=np.cumsum(m_star_fs035),
+    bin_width_myr = 0.1
+    fs035_interp_points = np.arange(t_myr_fs035.min(), t_myr_fs035.max(), bin_width_myr)
+    fs035_interp = interpolate.interp1d(
+        x=t_myr_fs035, y=np.cumsum(m_star_fs035), kind="previous"
     )
+    # fs035_interp = np.interp(
+    #     fs035_interp_points,
+    #     xp=t_myr_fs035,
+    #     fp=np.cumsum(m_star_fs035),
+    # )
     # ax[0].scatter(fs035_interp_points, fs035_interp, label=r"0.35", s=1)
 
     # increase data points for 70 % efficiency
-    fs070_interp_points = np.arange(t_myr_fs070.min(), t_myr_fs070.max(), 1)
-    fs070_interp = np.interp(
-        fs070_interp_points,
-        xp=t_myr_fs070,
-        fp=np.cumsum(m_star_fs070),
+    fs070_interp_points = np.arange(t_myr_fs070.min(), t_myr_fs070.max(), bin_width_myr)
+    fs070_interp = interpolate.interp1d(
+        x=t_myr_fs070, y=np.cumsum(m_star_fs070), kind="previous"
     )
+    # fs070_interp = np.interp(
+    #     fs070_interp_points,
+    #     xp=t_myr_fs070,
+    #     fp=np.cumsum(m_star_fs070),
+    # )
     # ax[0].scatter(fs070_interp_points, fs070_interp, label=r"0.70", s=1)
 
     ax[0].set_yscale("log")
@@ -311,11 +319,11 @@ with plt.rc_context(
     ax1_twin.set(xlabel="$\mathrm{z}$")
 
     # plot the star formation rates, or the derivatives of the lines
-    sfr_fs035 = np.gradient(fs035_interp) / 1e6
-    ax[1].plot(fs035_interp_points, sfr_fs035, color=fs35_color)
+    sfr_fs035 = np.gradient(fs035_interp(fs035_interp_points)) / (bin_width_myr * 1e6)
+    ax[1].plot(fs035_interp_points, sfr_fs035, color=fs35_color, lw=1, alpha=0.6)
 
-    sfr_fs07 = np.gradient(fs070_interp) / 1e6
-    ax[1].plot(fs070_interp_points, sfr_fs07, color=fs70_color)
+    sfr_fs07 = np.gradient(fs070_interp(fs070_interp_points)) / (bin_width_myr * 1e6)
+    ax[1].plot(fs070_interp_points, sfr_fs07, color=fs70_color, lw=1, alpha=0.6)
 
     ax[2].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
     ax[1].set_ylabel(
@@ -398,7 +406,7 @@ with plt.rc_context(
         f7_star_mass / f7_dm_mass,
         c=fs70_color,
         linewidth=4,
-        alpha=1,
+        alpha=0.8,
         # ls=":",
     )
 
@@ -407,11 +415,12 @@ with plt.rc_context(
         f3_star_mass / f3_dm_mass,
         c=fs35_color,
         linewidth=4,
-        alpha=1,
+        alpha=0.8,
         # ls=":",
     )
 
     ax[2].set_xlim(right=f7_halo[:, 1].max())
+    # ax[2].set_xlim(415, 450)
     ax[2].set_yscale("log")
     ax[2].set_ylabel(r"$\mathrm{M_{*} / M_{DM}}$", labelpad=10)
 
