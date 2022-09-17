@@ -93,12 +93,12 @@ def surface_density(x_coord, y_coord, z_coord, masses, radius, num_bins):
     left_edges = bin_edges[:-1]
     bin_ctrs = 0.5 * (left_edges + right_edges)[mask]
     # calculate the mass per thin surface area of a sphere
-    surface_areas = 4 * np.pi * (right_edges**2 - left_edges**2)[mask]
-    surf_mass_density = mass_per_bin / surface_areas
+    d_volume = (4 / 3) * np.pi * (right_edges**3 - left_edges**3)[mask]
+    mass_density = mass_per_bin / d_volume
     avg_star_masses = mass_per_bin / count_per_bin
-    err_surf_mass_density = np.sqrt(count_per_bin) * (avg_star_masses / surface_areas)
+    err_surf_mass_density = np.sqrt(count_per_bin) * (avg_star_masses / d_volume)
 
-    return bin_ctrs, surf_mass_density, err_surf_mass_density
+    return bin_ctrs, mass_density, err_surf_mass_density
 
 
 def projected_surf_densities(
