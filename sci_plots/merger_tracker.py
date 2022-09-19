@@ -158,6 +158,7 @@ with plt.style.context("dark_background"):
         ]
 
         for i, coords in enumerate(inset_coords):
+            # loop through the positions with each inset determined by the ordered pair
             inset = ax.inset_axes([coords[0], coords[1], 0.20, 0.20])
             inset_image = inset.imshow(
                 images[i],
