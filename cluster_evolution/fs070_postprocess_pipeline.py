@@ -31,13 +31,13 @@ print("=========================================================================
 simulation_run = "fs07_refine"
 finder_profiler_run = "fof_best"
 processor_number = 0  # 0 means one process unparalleled
-start_step = 1196
-end_step = 1296
+start_step = 1296
+end_step = 1318
 step = 1
 absolute_start = 113
 
 
-particle_data_proc = False #True
+particle_data_proc = True
 halo_finder_proc = True
 gc_profiler_proc = True
 fof_info_proc = True

@@ -1,0 +1,48 @@
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca mpi_cuda_support 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+=============================================================================
+fs07_refine post processing
+=============================================================================
+=============================================================================
+RUNING HALO FINDER
+=============================================================================
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01296
+Link length is 0.000000
+Filling in 60137 particles
+Number of initial groups:32691
+Number of groups:178
+FOF CPU TIME: 0.051282 secs
+> Reading /lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine/output_01297
+Link length is 0.000000
+Filling in 60593 particles
+Number of initial groups:32878
+Number of groups:172
+FOF CPU TIME: 0.051628 secs
+Traceback (most recent call last):
+  File "/lustre/fgarcia4/glob_clust_evo/cluster_evolution/fs070_postprocess_pipeline.py", line 338, in <module>
+    )[0]
+IndexError: list index out of range
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[10045,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
