@@ -1,0 +1,171 @@
+Collecting mpi4py
+  Downloading mpi4py-3.1.3.tar.gz (2.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 29.7 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: mpi4py
+  Building wheel for mpi4py (pyproject.toml): started
+  Building wheel for mpi4py (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for mpi4py (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [148 lines of output]
+      running bdist_wheel
+      running build
+      running build_src
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-cpython-37
+      creating build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/bench.py -> build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/__init__.py -> build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/__main__.py -> build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/run.py -> build/lib.linux-x86_64-cpython-37/mpi4py
+      creating build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/__init__.py -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/aplus.py -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/_core.py -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/server.py -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/pool.py -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/__main__.py -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/_lib.py -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/_base.py -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      creating build/lib.linux-x86_64-cpython-37/mpi4py/util
+      copying src/mpi4py/util/__init__.py -> build/lib.linux-x86_64-cpython-37/mpi4py/util
+      copying src/mpi4py/util/pkl5.py -> build/lib.linux-x86_64-cpython-37/mpi4py/util
+      copying src/mpi4py/util/dtlib.py -> build/lib.linux-x86_64-cpython-37/mpi4py/util
+      copying src/mpi4py/py.typed -> build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/run.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/__main__.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/__init__.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/bench.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/MPI.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/dl.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/__init__.pxd -> build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/MPI.pxd -> build/lib.linux-x86_64-cpython-37/mpi4py
+      copying src/mpi4py/libmpi.pxd -> build/lib.linux-x86_64-cpython-37/mpi4py
+      creating build/lib.linux-x86_64-cpython-37/mpi4py/include
+      creating build/lib.linux-x86_64-cpython-37/mpi4py/include/mpi4py
+      copying src/mpi4py/include/mpi4py/mpi4py.h -> build/lib.linux-x86_64-cpython-37/mpi4py/include/mpi4py
+      copying src/mpi4py/include/mpi4py/mpi4py.MPI_api.h -> build/lib.linux-x86_64-cpython-37/mpi4py/include/mpi4py
+      copying src/mpi4py/include/mpi4py/mpi4py.MPI.h -> build/lib.linux-x86_64-cpython-37/mpi4py/include/mpi4py
+      copying src/mpi4py/include/mpi4py/mpi4py.i -> build/lib.linux-x86_64-cpython-37/mpi4py/include/mpi4py
+      copying src/mpi4py/include/mpi4py/mpi.pxi -> build/lib.linux-x86_64-cpython-37/mpi4py/include/mpi4py
+      copying src/mpi4py/futures/aplus.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/__main__.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/__init__.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/pool.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/_lib.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/server.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/futures/_core.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py/futures
+      copying src/mpi4py/util/pkl5.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py/util
+      copying src/mpi4py/util/__init__.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py/util
+      copying src/mpi4py/util/dtlib.pyi -> build/lib.linux-x86_64-cpython-37/mpi4py/util
+      running build_clib
+      MPI configuration: [mpi] from 'mpi.cfg'
+      checking for library 'lmpe' ...
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -c _configtest.c -o _configtest.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc _configtest.o -llmpe -o _configtest
+      /usr/bin/ld: cannot find -llmpe
+      collect2: error: ld returned 1 exit status
+      failure.
+      removing: _configtest.c _configtest.o
+      building 'mpe' dylib library
+      creating build/temp.linux-x86_64-cpython-37
+      creating build/temp.linux-x86_64-cpython-37/src
+      creating build/temp.linux-x86_64-cpython-37/src/lib-pmpi
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -c src/lib-pmpi/mpe.c -o build/temp.linux-x86_64-cpython-37/src/lib-pmpi/mpe.o
+      creating build/lib.linux-x86_64-cpython-37/mpi4py/lib-pmpi
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -shared -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/gettext-0.20.1-nk3puhz5pczyaas7tvumfpdsqfaghges/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/readline-8.0-aszoke6xnrm6zkqvplojvij5cpuqy6s7/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/ncurses-6.2-vew4hjem74g3yeboe2sdrfqixbwbcnjh/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openssl-1.1.1f-33xl33ejntmob4j5b74trv3nvolzhqzp/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/sqlite-3.31.1-chkcv7ec7ts5qmvz3icugeunmqd7okpz/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/gdbm-1.18.1-phftr7uys4eoqjxgft5e7yqsj6zcrht3/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libnsl-1.2.0-u2rel3aszefhq57gm6t4tjsqlyumu74w/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/zlib-1.2.11-bg5nclwio545yf45bptwcza37yssk4oq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/bzip2-1.0.8-asolbivof7usevrenepdpakiduzuywoq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/xz-5.2.5-vtmhoigekbuetzfgbgs5pcsvbhpdg5ai/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/expat-2.2.9-cxvbsvln2fveuw2p6swdzedfxi6mn4hq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libffi-3.3-xn5c4ukyjv57pq4pz22ix3cfthptces4/lib64 -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tk-8.5.19-cj54lu56duafguyouqoook427zz2vx7r/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tcl-8.5.19-rlltvmt3slla3o4wvltvgpebulbwxo3g/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tix-8.4.3-l52jp7j5aa3pcegmhmpgr66pze6qkn7z/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libuuid-1.0.3-4qjbtny4ho6hgefcyypi3dxxthigsi73/lib -Wl,--no-as-needed build/temp.linux-x86_64-cpython-37/src/lib-pmpi/mpe.o -o build/lib.linux-x86_64-cpython-37/mpi4py/lib-pmpi/libmpe.so
+      checking for library 'vt-mpi' ...
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -c _configtest.c -o _configtest.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc _configtest.o -lvt-mpi -o _configtest
+      /usr/bin/ld: cannot find -lvt-mpi
+      collect2: error: ld returned 1 exit status
+      failure.
+      removing: _configtest.c _configtest.o
+      checking for library 'vt.mpi' ...
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -c _configtest.c -o _configtest.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc _configtest.o -lvt.mpi -o _configtest
+      /usr/bin/ld: cannot find -lvt.mpi
+      collect2: error: ld returned 1 exit status
+      failure.
+      removing: _configtest.c _configtest.o
+      building 'vt' dylib library
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -c src/lib-pmpi/vt.c -o build/temp.linux-x86_64-cpython-37/src/lib-pmpi/vt.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -shared -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/gettext-0.20.1-nk3puhz5pczyaas7tvumfpdsqfaghges/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/readline-8.0-aszoke6xnrm6zkqvplojvij5cpuqy6s7/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/ncurses-6.2-vew4hjem74g3yeboe2sdrfqixbwbcnjh/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openssl-1.1.1f-33xl33ejntmob4j5b74trv3nvolzhqzp/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/sqlite-3.31.1-chkcv7ec7ts5qmvz3icugeunmqd7okpz/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/gdbm-1.18.1-phftr7uys4eoqjxgft5e7yqsj6zcrht3/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libnsl-1.2.0-u2rel3aszefhq57gm6t4tjsqlyumu74w/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/zlib-1.2.11-bg5nclwio545yf45bptwcza37yssk4oq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/bzip2-1.0.8-asolbivof7usevrenepdpakiduzuywoq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/xz-5.2.5-vtmhoigekbuetzfgbgs5pcsvbhpdg5ai/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/expat-2.2.9-cxvbsvln2fveuw2p6swdzedfxi6mn4hq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libffi-3.3-xn5c4ukyjv57pq4pz22ix3cfthptces4/lib64 -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tk-8.5.19-cj54lu56duafguyouqoook427zz2vx7r/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tcl-8.5.19-rlltvmt3slla3o4wvltvgpebulbwxo3g/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tix-8.4.3-l52jp7j5aa3pcegmhmpgr66pze6qkn7z/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libuuid-1.0.3-4qjbtny4ho6hgefcyypi3dxxthigsi73/lib -Wl,--no-as-needed build/temp.linux-x86_64-cpython-37/src/lib-pmpi/vt.o -o build/lib.linux-x86_64-cpython-37/mpi4py/lib-pmpi/libvt.so
+      checking for library 'vt-mpi' ...
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -c _configtest.c -o _configtest.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc _configtest.o -lvt-mpi -o _configtest
+      /usr/bin/ld: cannot find -lvt-mpi
+      collect2: error: ld returned 1 exit status
+      failure.
+      removing: _configtest.c _configtest.o
+      checking for library 'vt.mpi' ...
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -c _configtest.c -o _configtest.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc _configtest.o -lvt.mpi -o _configtest
+      /usr/bin/ld: cannot find -lvt.mpi
+      collect2: error: ld returned 1 exit status
+      failure.
+      removing: _configtest.c _configtest.o
+      building 'vt-mpi' dylib library
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -c src/lib-pmpi/vt-mpi.c -o build/temp.linux-x86_64-cpython-37/src/lib-pmpi/vt-mpi.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -shared -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/gettext-0.20.1-nk3puhz5pczyaas7tvumfpdsqfaghges/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/readline-8.0-aszoke6xnrm6zkqvplojvij5cpuqy6s7/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/ncurses-6.2-vew4hjem74g3yeboe2sdrfqixbwbcnjh/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openssl-1.1.1f-33xl33ejntmob4j5b74trv3nvolzhqzp/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/sqlite-3.31.1-chkcv7ec7ts5qmvz3icugeunmqd7okpz/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/gdbm-1.18.1-phftr7uys4eoqjxgft5e7yqsj6zcrht3/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libnsl-1.2.0-u2rel3aszefhq57gm6t4tjsqlyumu74w/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/zlib-1.2.11-bg5nclwio545yf45bptwcza37yssk4oq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/bzip2-1.0.8-asolbivof7usevrenepdpakiduzuywoq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/xz-5.2.5-vtmhoigekbuetzfgbgs5pcsvbhpdg5ai/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/expat-2.2.9-cxvbsvln2fveuw2p6swdzedfxi6mn4hq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libffi-3.3-xn5c4ukyjv57pq4pz22ix3cfthptces4/lib64 -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tk-8.5.19-cj54lu56duafguyouqoook427zz2vx7r/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tcl-8.5.19-rlltvmt3slla3o4wvltvgpebulbwxo3g/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tix-8.4.3-l52jp7j5aa3pcegmhmpgr66pze6qkn7z/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libuuid-1.0.3-4qjbtny4ho6hgefcyypi3dxxthigsi73/lib -Wl,--no-as-needed build/temp.linux-x86_64-cpython-37/src/lib-pmpi/vt-mpi.o -o build/lib.linux-x86_64-cpython-37/mpi4py/lib-pmpi/libvt-mpi.so
+      checking for library 'vt-hyb' ...
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -c _configtest.c -o _configtest.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc _configtest.o -lvt-hyb -o _configtest
+      /usr/bin/ld: cannot find -lvt-hyb
+      collect2: error: ld returned 1 exit status
+      failure.
+      removing: _configtest.c _configtest.o
+      checking for library 'vt.ompi' ...
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -c _configtest.c -o _configtest.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc _configtest.o -lvt.ompi -o _configtest
+      /usr/bin/ld: cannot find -lvt.ompi
+      collect2: error: ld returned 1 exit status
+      failure.
+      removing: _configtest.c _configtest.o
+      building 'vt-hyb' dylib library
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -c src/lib-pmpi/vt-hyb.c -o build/temp.linux-x86_64-cpython-37/src/lib-pmpi/vt-hyb.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -shared -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/gettext-0.20.1-nk3puhz5pczyaas7tvumfpdsqfaghges/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/readline-8.0-aszoke6xnrm6zkqvplojvij5cpuqy6s7/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/ncurses-6.2-vew4hjem74g3yeboe2sdrfqixbwbcnjh/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openssl-1.1.1f-33xl33ejntmob4j5b74trv3nvolzhqzp/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/sqlite-3.31.1-chkcv7ec7ts5qmvz3icugeunmqd7okpz/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/gdbm-1.18.1-phftr7uys4eoqjxgft5e7yqsj6zcrht3/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libnsl-1.2.0-u2rel3aszefhq57gm6t4tjsqlyumu74w/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/zlib-1.2.11-bg5nclwio545yf45bptwcza37yssk4oq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/bzip2-1.0.8-asolbivof7usevrenepdpakiduzuywoq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/xz-5.2.5-vtmhoigekbuetzfgbgs5pcsvbhpdg5ai/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/expat-2.2.9-cxvbsvln2fveuw2p6swdzedfxi6mn4hq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libffi-3.3-xn5c4ukyjv57pq4pz22ix3cfthptces4/lib64 -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tk-8.5.19-cj54lu56duafguyouqoook427zz2vx7r/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tcl-8.5.19-rlltvmt3slla3o4wvltvgpebulbwxo3g/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tix-8.4.3-l52jp7j5aa3pcegmhmpgr66pze6qkn7z/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libuuid-1.0.3-4qjbtny4ho6hgefcyypi3dxxthigsi73/lib -Wl,--no-as-needed build/temp.linux-x86_64-cpython-37/src/lib-pmpi/vt-hyb.o -o build/lib.linux-x86_64-cpython-37/mpi4py/lib-pmpi/libvt-hyb.so
+      running build_ext
+      MPI configuration: [mpi] from 'mpi.cfg'
+      checking for dlopen() availability ...
+      checking for header 'dlfcn.h' ...
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -I/homes/fgarcia4/py-virtual-envs/clean-install/include -I/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include/python3.7m -c _configtest.c -o _configtest.o
+      success!
+      removing: _configtest.c _configtest.o
+      success!
+      checking for library 'dl' ...
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -I/homes/fgarcia4/py-virtual-envs/clean-install/include -I/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include/python3.7m -c _configtest.c -o _configtest.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc _configtest.o -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib -Lbuild/temp.linux-x86_64-cpython-37 -Wl,--enable-new-dtags,-R/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib -ldl -o _configtest
+      success!
+      removing: _configtest.c _configtest.o _configtest
+      checking for function 'dlopen' ...
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -I/homes/fgarcia4/py-virtual-envs/clean-install/include -I/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include/python3.7m -c _configtest.c -o _configtest.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc _configtest.o -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib -Lbuild/temp.linux-x86_64-cpython-37 -Wl,--enable-new-dtags,-R/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib -ldl -o _configtest
+      success!
+      removing: _configtest.c _configtest.o _configtest
+      building 'mpi4py.dl' extension
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -DHAVE_DLFCN_H=1 -DHAVE_DLOPEN=1 -I/homes/fgarcia4/py-virtual-envs/clean-install/include -I/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include/python3.7m -c src/dynload.c -o build/temp.linux-x86_64-cpython-37/src/dynload.o
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -shared -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/gettext-0.20.1-nk3puhz5pczyaas7tvumfpdsqfaghges/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/readline-8.0-aszoke6xnrm6zkqvplojvij5cpuqy6s7/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/ncurses-6.2-vew4hjem74g3yeboe2sdrfqixbwbcnjh/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/openssl-1.1.1f-33xl33ejntmob4j5b74trv3nvolzhqzp/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/sqlite-3.31.1-chkcv7ec7ts5qmvz3icugeunmqd7okpz/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/gdbm-1.18.1-phftr7uys4eoqjxgft5e7yqsj6zcrht3/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libnsl-1.2.0-u2rel3aszefhq57gm6t4tjsqlyumu74w/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/zlib-1.2.11-bg5nclwio545yf45bptwcza37yssk4oq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/bzip2-1.0.8-asolbivof7usevrenepdpakiduzuywoq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/xz-5.2.5-vtmhoigekbuetzfgbgs5pcsvbhpdg5ai/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/expat-2.2.9-cxvbsvln2fveuw2p6swdzedfxi6mn4hq/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libffi-3.3-xn5c4ukyjv57pq4pz22ix3cfthptces4/lib64 -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tk-8.5.19-cj54lu56duafguyouqoook427zz2vx7r/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tcl-8.5.19-rlltvmt3slla3o4wvltvgpebulbwxo3g/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/tix-8.4.3-l52jp7j5aa3pcegmhmpgr66pze6qkn7z/lib -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/libuuid-1.0.3-4qjbtny4ho6hgefcyypi3dxxthigsi73/lib build/temp.linux-x86_64-cpython-37/src/dynload.o -L/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib -Lbuild/temp.linux-x86_64-cpython-37 -Wl,--enable-new-dtags,-R/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/lib -ldl -o build/lib.linux-x86_64-cpython-37/mpi4py/dl.cpython-37m-x86_64-linux-gnu.so
+      checking for MPI compile and link ...
+      /software/spack-software/2020.05.14/linux-rhel8-x86_64/gcc-rh8-8.3.1/gcc-8.4.0-vblibp6qsuo6rbkdn6femxo5kcfnwvry/bin/gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -I/homes/fgarcia4/py-virtual-envs/clean-install/include -I/software/spack-software/2020.05.14/linux-rhel8-ivybridge/gcc-8.4.0/python-3.7.7-zgcjuclie3fiis4ljkrfp4c4j6fkoa62/include/python3.7m -c _configtest.c -o _configtest.o
+      _configtest.c:2:10: fatal error: mpi.h: No such file or directory
+       #include <mpi.h>
+                ^~~~~~~
+      compilation terminated.
+      failure.
+      removing: _configtest.c _configtest.o
+      error: Cannot compile MPI programs. Check your configuration!!!
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for mpi4py
+Failed to build mpi4py
+ERROR: Could not build wheels for mpi4py, which is required to install pyproject.toml-based projects

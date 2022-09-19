@@ -1,0 +1,5 @@
+cd ~/ramses/dwarf/ramses_dBH/bin
+module purge
+module load intel
+make -f makefiles/Makefile_zoom0X.dt2 clean
+make -f makefiles/Makefile_zoom0X.dt2
