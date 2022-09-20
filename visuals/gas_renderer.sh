@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J gas_renderer
-#SBATCH --ntasks=1
+#SBATCH --ntasks=4
 #SBATCH --cpus-per-task=16
 #SBATCH --mem-per-cpu=6400  
 #SBATCH -t 72:00:00
@@ -15,7 +15,7 @@ module load openmpi
 source ~/py-virtual-envs/master/bin/activate
 
 #SCRIPT="/lustre/fgarcia4/glob_clust_evo/visuals/fs070_gas_panel_projection.py"
-SCRIPT1= "/lustre/fgarcia4/glob_clust_evo/visuals/fs035_gas_panel_projection.py"
+SCRIPT1= "/lustre/fgarcia4/glob_clust_evo/visuals/two_panel"
 
 # number of cores specified above
 #mpirun python3 $SCRIPT  2>&1 
