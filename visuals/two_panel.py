@@ -18,11 +18,11 @@ from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 
 yt.enable_parallelism()
 
-# f7_snap_range = (599, 1296)
-# f3_snap_range = (179, 1469)
+f7_snap_range = (599, 1296)
+f3_snap_range = (179, 1469)
 
-f7_snap_range = (500, 500)
-f3_snap_range = (500, 500)
+# f7_snap_range = (500, 500)
+# f3_snap_range = (500, 500)
 
 fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
 fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
