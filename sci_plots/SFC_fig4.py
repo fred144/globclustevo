@@ -278,7 +278,7 @@ with plt.rc_context(
     )
     # ax[0].set_ylim(bottom=5e3,top=2e6)
     # increase data points for 35 % efficiency
-    bin_width_myr = 0.1
+    bin_width_myr = 0.5
     fs035_interp_points = np.arange(t_myr_fs035.min(), t_myr_fs035.max(), bin_width_myr)
     fs035_interp = interpolate.interp1d(
         x=t_myr_fs035, y=np.cumsum(m_star_fs035), kind="previous"
