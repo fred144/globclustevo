@@ -320,10 +320,10 @@ with plt.rc_context(
 
     # plot the star formation rates, or the derivatives of the lines
     sfr_fs035 = np.gradient(fs035_interp(fs035_interp_points)) / (bin_width_myr * 1e6)
-    ax[1].plot(fs035_interp_points, sfr_fs035, color=fs35_color, lw=1, alpha=0.6)
+    ax[1].plot(fs035_interp_points, sfr_fs035, color=fs35_color, lw=1.5, alpha=0.8)
 
     sfr_fs07 = np.gradient(fs070_interp(fs070_interp_points)) / (bin_width_myr * 1e6)
-    ax[1].plot(fs070_interp_points, sfr_fs07, color=fs70_color, lw=1, alpha=0.6)
+    ax[1].plot(fs070_interp_points, sfr_fs07, color=fs70_color, lw=1.5, alpha=0.8)
 
     ax[2].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
     ax[1].set_ylabel(
