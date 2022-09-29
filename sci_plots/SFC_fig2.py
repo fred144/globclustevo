@@ -88,13 +88,13 @@ def star_formation_efficiency(n_h, mass, metallicity):
     # with shell 6 times less dense. At t_relax 12 times less dense
     # f_s reduced by 5 for low met.
     # f_s increases with stronger B-field
-    n_crit = (n_h * 0 + 1.0e3) / (4.0 * 2)
+    n_crit = 100.0  # (n_h * 0 + 1.0e3) / (4.0 * 2)
 
     efficiency = (
         (2.0e-2 / 5.0)
-        * (metallicity / 1e-3) ** 0.5
         * (mass / 1.0e4) ** 0.4
         * (n_h / n_crit + 1.0) ** (0.91)
+        * (metallicity / 1e-3) ** 0.2
     )
     # f_s=4.e-3*(mass/1.e4)**0.4*(n_H/n_crit+1.0)**(0.91)
     efficiency = np.where(efficiency < 0.9, efficiency, 0.9)
@@ -168,6 +168,9 @@ with plt.rc_context(
     plt.ylabel(r"$ \mathrm{SFE}\:(\%)$", fontsize=12)
     plt.xscale("log")
     plt.yscale("log")
+    plt.axhline(y=70, color="black", ls="--")
+    plt.axhline(y=35, color="black", ls="--")
+    # plt.anno(800, 75, "70")
     plt.xlim(5e2, 5e4)
     plt.ylim(5, 100)
     # manual legend, want to customize colors
@@ -175,7 +178,7 @@ with plt.rc_context(
     f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"$0.35$")
     plt.legend(
         title="$\mathrm{SFE} \: (f_{*})$",
-        loc="upper left",
+        loc="lower right",
         title_fontsize=12,
         fontsize=12,
         handles=[f35, f70],
