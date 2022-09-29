@@ -165,6 +165,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         # # map to differnt sizes for better plotting
         # f7_half_radii = scale_factor * f7_half_mass_rad
         # f3_half_radii = scale_factor * f3_half_mass_rad
+        # a cluster should have at least 25 stars
         f7_mask = (f7_mass > 250) & (f7_alpha < 5)  # & & (f7_vir_rad < 10)
         f3_mask = (f3_mass > 250) & (f3_alpha < 5)  # & & (f3_vir_rad < 10)
 
