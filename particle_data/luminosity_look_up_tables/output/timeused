@@ -1,0 +1,13 @@
+Job on coaticook.stsci.edu started at Thu Sep 29 00:35:00 EDT 2022
+ 
+ METALLICITY RESET to Z=0.002!
+ Note: IEEE floating-point exception flags raised: 
+    Inexact;  Underflow; 
+ See the Numerical Computation Guide, ieee_flags(3M) 
+
+real    25:46.3
+user    25:44.3
+sys         1.4
+ 
+Save synthesis-files to /data/coaticook2/httpd/cgi-bin/tmp/TMP60443/output/salpeter.*1
+Done at Thu Sep 29 01:00:47 EDT 2022
