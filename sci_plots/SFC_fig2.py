@@ -94,7 +94,7 @@ def star_formation_efficiency(n_h, mass, metallicity):
         (2.0e-2 / 5.0)
         * (mass / 1.0e4) ** 0.4
         * (n_h / n_crit + 1.0) ** (0.91)
-        * (metallicity / 1e-3) ** 0.2
+        * (metallicity / 1e-3) ** 0.25
     )
     # f_s=4.e-3*(mass/1.e4)**0.4*(n_H/n_crit+1.0)**(0.91)
     efficiency = np.where(efficiency < 0.9, efficiency, 0.9)
@@ -126,6 +126,10 @@ with plt.rc_context(
     plt.subplots(1, 1, figsize=(4, 3.5), dpi=400)
 
     cmap = plt.cm.get_cmap("summer")
+    plt.axhline(y=70, color="grey", ls="--", zorder=1)
+    plt.axhline(y=35, color="grey", ls="--", zorder=1)
+    plt.annotate("$70 \%$", (7e2, 75), color="grey")
+    plt.annotate("$35 \%$", (7e2, 38), color="grey")
 
     plt.scatter(
         m_sun_cloud_fs070,
@@ -168,8 +172,7 @@ with plt.rc_context(
     plt.ylabel(r"$ \mathrm{SFE}\:(\%)$", fontsize=12)
     plt.xscale("log")
     plt.yscale("log")
-    plt.axhline(y=70, color="black", ls="--")
-    plt.axhline(y=35, color="black", ls="--")
+
     # plt.anno(800, 75, "70")
     plt.xlim(5e2, 5e4)
     plt.ylim(5, 100)
