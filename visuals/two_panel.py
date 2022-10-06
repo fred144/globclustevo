@@ -197,7 +197,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                 dpi=400,
                 facecolor=cm.Greys_r(0),
             )
-            fig.subplots_adjust(wspace=-0.047, hspace=0)
+            fig.subplots_adjust(wspace=-0.0475, hspace=0)
 
             # lum rendering
             f7_lum_image = ax[0].imshow(
@@ -520,7 +520,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                         xlim=(f7_series[:, 0].min(), f7_series[:, 0].max()),
                     )
                     time_series_ax_f7.set_title(
-                        r"$\mathrm{Surface\: Brightness}\:$"
+                        r"$\mathrm{L_{\lambda = 1500 \: \AA \:}}\:$"
                         r"$\left(\mathrm{erg} \:\mathrm{s}^{-1} \:\mathrm{\AA}^{-1}\right)$",
                         fontsize=10,
                     )
@@ -540,7 +540,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                         xlim=(f3_series[:, 0].min(), f3_series[:, 0].max()),
                     )
                     time_series_ax_f3.set_title(
-                        r"$\mathrm{Surface\: Brightness}\:$"
+                        r"$\mathrm{L_{\lambda = 1500 \: \AA \:}}\:$"
                         r"$\left(\mathrm{erg} \:\mathrm{s}^{-1} \:\mathrm{\AA}^{-1}\right)$",
                         fontsize=10,
                     )
@@ -555,8 +555,8 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                     f3_leg.get_frame().set_alpha(0)
 
             # declar the color bar axes
-            dens_cbar_ax = fig.add_axes([0.5130, 0.095, 0.3777, 0.030])
-            lums_cbar_ax = fig.add_axes([0.1345, 0.095, 0.3777, 0.030])
+            dens_cbar_ax = ax[1].inset_axes([0, -0.035, 1, 0.035])
+            lums_cbar_ax = ax[0].inset_axes([0, -0.035, 1, 0.035])
 
             dens_cbar = fig.colorbar(
                 f7_gas_image, cax=dens_cbar_ax, pad=-1, orientation="horizontal"
