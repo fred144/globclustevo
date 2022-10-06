@@ -18,17 +18,17 @@ from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 
 yt.enable_parallelism()
 
-f7_snap_range = (599, 1296)
-f3_snap_range = (179, 1469)
+# f7_snap_range = (599, 1296)
+# f3_snap_range = (179, 1469)
 
-# f7_snap_range = (500, 500)
-# f3_snap_range = (500, 500)
+f7_snap_range = (500, 500)
+f3_snap_range = (500, 500)
 
-fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
-fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
+# fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
+# fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
 
-# fs070_dir = os.path.relpath("../../cosm_test_data/refine"),
-# fs035_dir =  os.path.relpath("../../cosm_test_data/fs035_ms10/"),
+fs070_dir = os.path.relpath("../../cosm_test_data/refine")
+fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 
 fs070_snap_dir = filter_snapshots(
     fs070_dir,
@@ -592,5 +592,5 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         bbox_inches="tight",
         pad_inches=0.05,
     )
-    plt.close("all")
+    # plt.close("all")
     print(">Saved:", output_path)
