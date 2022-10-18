@@ -62,7 +62,7 @@ if __name__ == "__main__":
     # fs035_dat_dir = r"../halo_data/fs035_ms10/fof_best"
 
     profiler_data = (
-        "/home/fabg/g_drive/Research/AstrophysicsSimulation/DesktopEnvironment/"
+        "../../g_drive/Research/AstrophysicsSimulation/DesktopEnvironment/"
         "data_globular_cluster/gc_profiles/profile_runs/"
     )
 
