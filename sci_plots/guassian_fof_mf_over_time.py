@@ -159,34 +159,34 @@ if __name__ == "__main__":
             # f7_redshift = f7_redshift
             f7_masses_per_snapshot = f7_info_file[:, 3]
             f7_alpha = f7_info_file[:, 8]
-            mask = (f7_masses_per_snapshot > star_mass_min) & (f7_alpha < max_alpha)
+            f7_mask = (f7_masses_per_snapshot > star_mass_min) & (f7_alpha < max_alpha)
 
-            f7_masses_per_snapshot = f7_masses_per_snapshot[mask]
+            f7_masses_per_snapshot = f7_masses_per_snapshot[f7_mask]
         except:  # if there is only once cluster
             f7_t_myr = f7_info_file[0]
             # f7_redshift = f7_info_file[1]
             f7_masses_per_snapshot = f7_info_file[3]
             f7_alpha = f7_info_file[8]
-            mask = (f7_masses_per_snapshot > star_mass_min) & (f7_alpha < max_alpha)
+            f7_mask = (f7_masses_per_snapshot > star_mass_min) & (f7_alpha < max_alpha)
 
-            f7_masses_per_snapshot = f7_masses_per_snapshot[mask]
+            f7_masses_per_snapshot = f7_masses_per_snapshot[f7_mask]
 
         try:  # if there is only once cluster
             f3_t_myr = f3_info_file[0, 0]
             # f3_redshift = f3_info_file[0, 1]
             f3_masses_per_snapshot = f3_info_file[:, 3]
             f3_alpha = f3_info_file[:, 8]
-            mask = (f3_masses_per_snapshot > star_mass_min) & (f3_alpha < max_alpha)
+            f3_mask = (f3_masses_per_snapshot > star_mass_min) & (f3_alpha < max_alpha)
 
-            f3_masses_per_snapshot = f3_masses_per_snapshot[mask]
+            f3_masses_per_snapshot = f3_masses_per_snapshot[f3_mask]
         except:
             f3_t_myr = f3_info_file[0]
             # f3_redshift = f3_info_file[1]
             f3_masses_per_snapshot = f3_info_file[3]
             f3_alpha = f3_info_file[8]
-            mask = (f3_masses_per_snapshot > star_mass_min) & (f3_alpha < max_alpha)
+            f3_mask = (f3_masses_per_snapshot > star_mass_min) & (f3_alpha < max_alpha)
 
-            f3_masses_per_snapshot = f3_masses_per_snapshot[mask]
+            f3_masses_per_snapshot = f3_masses_per_snapshot[f3_mask]
 
         print(f7_t_myr, f3_t_myr)
         # print(f7_redshift, f3_redshift)
