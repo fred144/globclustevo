@@ -1,5 +1,4 @@
-
-Personal repo for astrophysical simulation analyses.
+Astrophysical simulation analyses for RAMSES and yt.
 
 Some visualizations.
 
