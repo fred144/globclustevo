@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.lines as mlines
-
+from mpl_toolkits.axes_grid1.axes_divider import make_axes_locatable
 
 # def read_cat(filen):
 #     t = []
@@ -123,15 +123,15 @@ with plt.rc_context(
         "ytick.labelsize": 10,
     }
 ):
-    plt.subplots(1, 1, figsize=(4, 3.5), dpi=400)
+    fig, ax = plt.subplots(1, 1, figsize=(4.5, 4.25), dpi=400)
 
     cmap = plt.cm.get_cmap("summer")
-    plt.axhline(y=70, color="grey", ls="--", zorder=1)
-    plt.axhline(y=35, color="grey", ls="--", zorder=1)
-    plt.annotate("$70 \%$", (7e2, 75), color="grey")
-    plt.annotate("$35 \%$", (7e2, 38), color="grey")
+    ax.axhline(y=70, color="grey", ls="--", zorder=1)
+    ax.axhline(y=35, color="grey", ls="--", zorder=1)
+    ax.annotate("$70 \%$", (7e2, 75), color="grey")
+    ax.annotate("$35 \%$", (7e2, 38), color="grey")
 
-    plt.scatter(
+    im2 = ax.scatter(
         m_sun_cloud_fs070,
         star_formation_efficiency(
             n_hydrogen_fs070, m_sun_cloud_fs070, metal_zun_cloud_fs070
@@ -143,11 +143,11 @@ with plt.rc_context(
         marker="o",
         edgecolors="black",
         linewidth=0.5,
-        s=20,
+        s=40,
         alpha=0.8,
     )
 
-    plt.scatter(
+    ax.scatter(
         m_sun_cloud_fs035,
         star_formation_efficiency(
             n_hydrogen_fs035, m_sun_cloud_fs035, metal_zun_cloud_fs035
@@ -159,33 +159,49 @@ with plt.rc_context(
         marker="P",
         edgecolors="black",
         linewidth=0.5,
-        s=20,
+        s=40,
         alpha=0.8,
     )
-    cbar = plt.colorbar(pad=0)
-    cbar.set_label(
+    # cbar = plt.colorbar(pad=0, orientation = 'horizontal')
+    # cbar.set_label(
+    #     label=(r"$\log_{10}\:\overline{n_\mathrm{H}}\:\left(\mathrm{cm}^{-3} \right)$"),
+    #     fontsize=14,
+    # )
+
+    ax_divider = make_axes_locatable(ax)
+    cax2 = ax_divider.append_axes("top", size="5%", pad="2%")
+    cb2 = fig.colorbar(im2, cax=cax2, orientation="horizontal")
+    cb2.set_label(
         label=(r"$\log_{10}\:\overline{n_\mathrm{H}}\:\left(\mathrm{cm}^{-3} \right)$"),
         fontsize=14,
+        labelpad=6,
     )
+    cb2.ax.tick_params(axis="x", direction="in", which="both")
+    cb2.ax.locator_params(nbins=6)
+    cb2.ax.xaxis.set_ticks_position("top")
+    cb2.ax.xaxis.set_label_position("top")
 
-    plt.xlabel(r"$\mathrm{M_{MC}} (\mathrm{M}_{\odot})$", fontsize=12)
-    plt.ylabel(r"$ \mathrm{SFE}\:(\%)$", fontsize=12)
-    plt.xscale("log")
-    plt.yscale("log")
+    ax.set_xlabel(r"$\mathrm{M_{MC}} (\mathrm{M}_{\odot})$", fontsize=12)
+    ax.set_ylabel(r"$\mathrm{SFE}\:(\%)$", fontsize=12)
+    ax.set_xscale("log")
+    ax.set_yscale("log")
 
     # plt.anno(800, 75, "70")
-    plt.xlim(5e2, 5e4)
-    plt.ylim(5, 100)
+    ax.set_xlim(5e2, 5e4)
+    ax.set_ylim(5, 100)
     # manual legend, want to customize colors
-    f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"$0.70$")
-    f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"$0.35$")
-    plt.legend(
-        title="$\mathrm{SFE} \: (f_{*})$",
-        loc="lower right",
-        title_fontsize=12,
-        fontsize=12,
-        handles=[f35, f70],
-    )
+    # f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"$0.70$")
+    # f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"$0.35$")
+    # ax.legend(
+    #     title="$\mathrm{SFE} \: (f_{*})$",
+    #     loc="lower right",
+    #     title_fontsize=12,
+    #     fontsize=12,
+    #     handles=[f35, f70],
+    # )
+
+    ax.tick_params(axis="y", direction="in", which="both")
+    ax.tick_params(axis="x", direction="in", which="both")
 
     plt.savefig(
         "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_mass_sfe.png",

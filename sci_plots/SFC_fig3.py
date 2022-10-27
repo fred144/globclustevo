@@ -213,8 +213,8 @@ with plt.rc_context(
     fig, ax = plt.subplots(
         nrows=1,
         ncols=2,
-        figsize=(5, 2.5),
-        dpi=300,
+        figsize=(9, 4),
+        dpi=500,
     )
     f70_leg = mlines.Line2D(
         [], [], color=fs70_color, ls="-", lw=4, label="$f_{*} = 0.70$"
@@ -225,24 +225,27 @@ with plt.rc_context(
     # leg_title = mlines.Line2D(
     #     [], [], color="white", ls="", label="$\mathrm{SFE} \: (f_{*})$"
     # )
-    leg_title = mlines.Line2D(
-        [],
-        [],
-        color="white",
-        ls="",
-        label="$\mathrm{{z = {:.2f}}}$".format(
+    # leg_title = mlines.Line2D(
+    #     [],
+    #     [],
+    #     color="white",
+    #     ls="",
+    #     label="$\mathrm{{z = {:.2f}}}$".format(
+    #         np.min(np.concatenate([redshft_fs070, redshft_fs035]))
+    #     ),
+    # )
+    leg = fig.legend(
+        title="$\mathrm{{z = {:.2f}}}$".format(
             np.min(np.concatenate([redshft_fs070, redshft_fs035]))
         ),
+        loc="upper left",
+        handles=[f70_leg, f35_leg],
+        bbox_to_anchor=(0.13, 0.878),
+        ncol=1,
+        # edgecolor="grey",
+        # fontsize=10,
     )
-    leg = fig.legend(
-        # title=,
-        loc="lower center",
-        handles=[leg_title, f70_leg, f35_leg],
-        bbox_to_anchor=(0.51, 0.89),
-        ncol=3,
-        edgecolor="k",
-    )
-    leg.get_frame().set_boxstyle("Square")
+    # leg.get_frame().set_boxstyle("Square")
 
     # 35% efficiency
     ax[0].plot(
@@ -317,10 +320,10 @@ with plt.rc_context(
     ax[0].set_yscale("log")
     ax[0].legend(
         title=r"$\log_{{10}}\:(\mu,\:\sigma)$",
-        loc="upper left",
+        loc="upper right",
         # ncol=2,
-        fontsize=8,
-        title_fontsize=8,
+        # fontsize=10,
+        # title_fontsize=10,
     )
 
     #!!! metalicitty function
@@ -429,7 +432,7 @@ with plt.rc_context(
     ax[1].yaxis.tick_right()
     ax[1].yaxis.set_label_position("right")
 
-    ax[1].set_xlim(metal_xrange[0], metal_xrange[1])
+    ax[1].set_xlim(metal_xrange[0], metal_xrange[1] + 0.001)
     ax[1].set_ylim(1, 9e4)
 
     ax[1].set_xscale("log")
@@ -437,15 +440,18 @@ with plt.rc_context(
 
     ax[1].legend(
         title=r"$\log_{{10}}\:(\mu,\:\sigma)$",
-        loc="upper left",
-        # ncol=2,
-        fontsize=8,
-        title_fontsize=8,
+        loc="upper center",
+        ncol=2,
+        # fontsize=10,
+        # title_fontsize=10,
     )
     # plt.legend(
     #     title="$\mathrm{SFE} \: (f_{*})$",
     #     loc="upper left",
     # )
+
+    ax[1].tick_params(axis="both", direction="in", which="both")
+    ax[0].tick_params(axis="both", direction="in", which="both")
 
     plt.subplots_adjust(hspace=0, wspace=0.05)
 

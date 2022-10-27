@@ -422,7 +422,16 @@ with plt.rc_context(
     ax[2].set_xlim(right=f7_halo[:, 1].max())
     # ax[2].set_xlim(415, 450)
     ax[2].set_yscale("log")
-    ax[2].set_ylabel(r"$\mathrm{M_{*} / M_{DM}}$", labelpad=10)
+    ax[2].set_ylabel(r"$\mathrm{M_{*} / M_{halo}}$", labelpad=10)
+
+    ax1_twin.tick_params(axis="y", direction="in", which="both")
+    ax1_twin.tick_params(axis="x", direction="in", which="both")
+    ax[0].tick_params(axis="y", direction="in", which="both")
+    ax[0].tick_params(axis="x", direction="in", which="both")
+    ax[1].tick_params(axis="y", direction="in", which="both")
+    ax[1].tick_params(axis="x", direction="in", which="both")
+    ax[2].tick_params(axis="y", direction="in", which="both")
+    ax[2].tick_params(axis="x", direction="in", which="both")
 
     plt.savefig(
         "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_sfr.png",

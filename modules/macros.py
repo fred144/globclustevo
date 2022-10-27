@@ -246,6 +246,6 @@ def z_from_t_myr(t_myr):
         omega_radiation=0.0,
         omega_lambda=0.730000019073486,
     )
-    z = np.array(co.z_from_t(t_myr).in_units("Myr"))
+    z = np.array(co.z_from_t(t_myr * 1e6 * 3.154 * 1e7))
 
     return z

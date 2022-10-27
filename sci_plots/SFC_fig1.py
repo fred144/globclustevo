@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib as mpl
 import matplotlib.lines as mlines
+from mpl_toolkits.axes_grid1.axes_divider import make_axes_locatable
 
 
 # def read_cat(filen):
@@ -105,10 +106,10 @@ with plt.rc_context(
     }
 ):
 
-    plt.subplots(1, 1, figsize=(4, 3.5), dpi=400)
+    fig, ax = plt.subplots(1, 1, figsize=(4.5, 4.25), dpi=400)
     cmap = plt.cm.get_cmap("autumn_r")
 
-    plt.scatter(
+    im2 = ax.scatter(
         metal_zun_cloud_fs070,
         n_hydrogen_fs070,
         c=redshft_fs070,
@@ -117,10 +118,10 @@ with plt.rc_context(
         marker="o",
         edgecolors="black",
         linewidth=0.5,
-        s=20,
+        s=40,
         alpha=0.8,
     )
-    plt.scatter(
+    ax.scatter(
         metal_zun_cloud_fs035,
         n_hydrogen_fs035,
         c=redshft_fs035,
@@ -129,38 +130,49 @@ with plt.rc_context(
         marker="P",
         edgecolors="black",
         linewidth=0.5,
-        s=20,
+        s=40,
         alpha=0.8,
     )
-    cbar = plt.colorbar(pad=0)
-    cbar.ax.invert_yaxis()
-    cbar.set_label(label="$\mathrm{z}_{\mathrm{formation}}$", fontsize=16)
+    # cbar = plt.colorbar(pad=0)
+    # cbar.ax.invert_yaxis()
+    # cbar.set_label(label="$\mathrm{z}_{\mathrm{formation}}$", fontsize=16)
 
-    plt.xlabel(r"$ \mathrm{Z_{MC}\:}(\mathrm{Z}_{\odot})$", fontsize=12)
-    # plt.ylabel(
-    #     r"$\mathrm{Mean\:Gas\:Number\:Density\:}\left( \mathrm{cm} ^{-3} \right)$",
-    #     fontsize=12,
-    # )
-    plt.ylabel(
+    ax_divider = make_axes_locatable(ax)
+
+    cax2 = ax_divider.append_axes("top", size="5%", pad="2%")
+    cb2 = fig.colorbar(im2, cax=cax2, orientation="horizontal")
+    cb2.set_label(label="$\mathrm{z}_{\mathrm{formation}}$", fontsize=16, labelpad=6)
+    cb2.ax.tick_params(axis="x", direction="in", which="both")
+    cb2.ax.xaxis.set_ticks_position("top")
+    cb2.ax.xaxis.set_label_position("top")
+    cb2.ax.invert_xaxis()
+    # cb2.ax.locator_params(nbins=9)
+    # cb2.set_ticks([9, 10, 11, 12])
+    ax.set_xlabel(r"$ \mathrm{Z_{MC}\:}(\mathrm{Z}_{\odot})$", fontsize=12)
+    ax.set_ylabel(
         r"$\overline{n_\mathrm{H}} \: \left( \mathrm{cm} ^{-3} \right)$",
         fontsize=12,
     )
+    # ax.set_ylabel(
+    #     r"$\overline{n_\mathrm{H}} \: \left( \mathrm{cm} ^{-3} \right)$",
+    # )
 
-    plt.xscale("log")
-    plt.yscale("log")
-    plt.xlim(1e-4, 8e-3)
-    plt.ylim(2e3, 1e5)
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.set_xlim(1e-4, 8e-3)
+    ax.set_ylim(2e3, 1e5)
     # manual legend, want to customize colors
     f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"$0.70$")
     f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"$0.35$")
-    plt.legend(
+    ax.legend(
         title="$\mathrm{SFE} \: (f_{*})$",
         loc="upper right",
         title_fontsize=12,
         fontsize=12,
         handles=[f35, f70],
     )
-
+    ax.tick_params(axis="y", direction="in", which="both")
+    ax.tick_params(axis="x", direction="in", which="both")
     plt.savefig(
         "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_metal_nden.png",
         dpi=500,

@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
 from scipy.optimize import curve_fit
+from modules.macros import z_from_t_myr
 
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
@@ -31,6 +32,8 @@ f3_dm_mass = f3_dm_mass
 f7_star_mass = f7_halo[:, 5]
 f3_star_mass = f3_halo[:, 5]
 
+f7_time = f7_halo[:, 1]
+f3_time = f3_halo[:, 1]
 with plt.rc_context(
     {
         "font.family": "serif",
@@ -41,17 +44,24 @@ with plt.rc_context(
     }
 ):
 
-    fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(4, 4), dpi=300)
+    fig, ax = plt.subplots(
+        nrows=2,
+        ncols=1,
+        figsize=(5, 4.5),
+        dpi=300,
+        gridspec_kw={"height_ratios": [5, 4]},
+    )
+    plt.subplots_adjust(hspace=0.35)
 
     sample_rate = 50
 
     f7_sample_rate = np.geomspace(1, f7_dm_mass.size - 1, sample_rate).astype(int)
 
-    ax.scatter(
+    ax[0].scatter(
         np.log10(f7_dm_mass[f7_sample_rate]),
         np.log10((f7_star_mass / f7_dm_mass)[f7_sample_rate]),
         color=fs70_color,
-        s=10,
+        s=15,
         alpha=1,
         # ls=":",
         # label="$0.70$",
@@ -63,22 +73,31 @@ with plt.rc_context(
         np.log10((f7_star_mass / f7_dm_mass)[f7_sample_rate]),
     )
 
-    plt.plot(
-        np.log10(f7_dm_mass[f7_sample_rate]),
-        lin(np.log10(f7_dm_mass[f7_sample_rate]), *f7_params),
+    thoery_x = np.geomspace(
+        f7_dm_mass[f7_sample_rate].min() * 0.9,
+        f7_dm_mass[f7_sample_rate].max() * 1.2,
+        100,
+    )
+
+    ax[0].plot(
+        np.log10(thoery_x),
+        lin(np.log10(thoery_x), *f7_params),
         color=fs70_color,
-        label=r"$\alpha_{{\: 70\%}} = {:.2f} \pm {:.2f}$".format(
+        # ls="--",
+        lw=2,
+        alpha=0.8,
+        label=r"${:.2f} \pm {:.2f}$".format(
             f7_params[0],
             np.sqrt(np.diag(f7_pcov))[0],
         ),
     )
 
     f3_sample_rate = np.geomspace(1, f3_dm_mass.size - 1, sample_rate).astype(int)
-    ax.scatter(
+    ax[0].scatter(
         np.log10((f3_dm_mass)[f3_sample_rate]),
         np.log10((f3_star_mass / f3_dm_mass)[f3_sample_rate]),
         color=fs35_color,
-        s=10,
+        s=15,
         alpha=1,
         # ls=":",
         # label="$0.35$",
@@ -90,12 +109,14 @@ with plt.rc_context(
         np.log10((f3_star_mass / f3_dm_mass)[f3_sample_rate]),
     )
 
-    plt.plot(
-        np.log10(f3_dm_mass[f3_sample_rate]),
-        lin(np.log10(f3_dm_mass[f3_sample_rate]), *f3_params),
+    ax[0].plot(
+        np.log10(thoery_x),
+        lin(np.log10(thoery_x), *f3_params),
         color=fs35_color,
-        label=r"$\alpha_{{\: 35 \%}} = {:.2f} \pm {:.2f}$"
-        "\n".format(
+        # ls="--",
+        lw=2,
+        alpha=0.8,
+        label=r"${:.2f} \pm {:.2f}$".format(
             f3_params[0],
             np.sqrt(np.diag(f3_pcov))[0],
             # f3_params[1],
@@ -103,19 +124,45 @@ with plt.rc_context(
             # r"$\log_{{10}} \: \varepsilon_{{\: 35 \%}} = {:.2f} \pm {:.2f}$".
         ),
     )
-
-    ax.set(
+    ax[0].tick_params(axis="y", direction="in", which="both")
+    ax[0].tick_params(axis="x", direction="in", which="both")
+    ax[0].set(
         # yscale="log",
         # xscale="log",
         xlabel=r"$\mathrm{ \log_{10} \: M_{halo} \: \left( \: M_{\odot} \right) }$",
         ylabel=r"$\mathrm{\log_{10} \: ( M_* / M_{halo} } )  $",
+        xlim=(
+            np.log10(f7_dm_mass[f7_sample_rate].min() * 0.9),
+            np.log10(f7_dm_mass[f7_sample_rate].max() * 1.2),
+        ),
     )
 
-    legend = ax.legend(fontsize=11)
-    legend.get_frame().set_alpha(0)
+    legend = ax[0].legend(
+        fontsize=12,
+        # loc="lower right"
+    )
+
+    ax[1].plot(
+        z_from_t_myr(f7_time), np.log10(f7_dm_mass), lw=2, alpha=1, color=fs70_color
+    )
+    ax[1].plot(
+        z_from_t_myr(f3_time), np.log10(f3_dm_mass), lw=2, alpha=1, color=fs35_color
+    )
+    ax[1].invert_xaxis()
+    ax[1].set(
+        xlabel="$\mathrm{z}$",
+        ylabel=r"$\mathrm{\log_{10} \: M_{halo} \left( \: M_{\odot} \right)}$",
+        xlim=(
+            z_from_t_myr(f3_time).max(),
+            z_from_t_myr(f3_time).min(),
+        ),
+    )
+    ax[1].tick_params(axis="both", direction="in", which="both")
+
+    # legend.get_frame().set_alpha(0)
 plt.savefig(
-    "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/halo_eff.png",
+    "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/halo_history.png",
     dpi=500,
     bbox_inches="tight",
-    # pad_inches=0.25,
+    pad_inches=0.05,
 )
