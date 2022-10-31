@@ -82,7 +82,7 @@ with plt.rc_context(
         f7_total_mass,
         label=r"$\mathrm{Total}$",
         color=cmap[0],
-        lw=3,
+        lw=2,
         alpha=0.8,
     )
     ax[0, 0].plot(
@@ -90,15 +90,15 @@ with plt.rc_context(
         f7_mass_in_gc,
         label="$\mathrm{BSC}$",
         color=cmap[1],
-        lw=3,
+        lw=2,
         alpha=0.8,
     )
-    ax[1, 0].plot(f7_t_sim_myr, f7_bound_total_mass_ratio, lw=3, c="grey")
+    ax[1, 0].plot(f7_t_sim_myr, f7_bound_total_mass_ratio, lw=2, c="grey")
     ax[2, 0].plot(
         f7_t_sim_myr,
         f7_total_lum,
         label=r"$\mathrm{Total}$",
-        lw=3,
+        lw=2,
         c=cmap[0],
         alpha=0.8,
     )
@@ -106,11 +106,11 @@ with plt.rc_context(
         f7_t_sim_myr,
         f7_lum_in_gc,
         label=r"$\mathrm{BSC}$",
-        lw=3,
+        lw=2,
         c=cmap[1],
         alpha=0.8,
     )
-    ax[3, 0].plot(f7_t_sim_myr, f7_bound_total_light_ratio, lw=3, c="grey")
+    ax[3, 0].plot(f7_t_sim_myr, f7_bound_total_light_ratio, lw=2, c="grey")
 
     ax[1, 0].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
     ax[3, 0].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
@@ -149,7 +149,7 @@ with plt.rc_context(
         f3_total_mass,
         label=r"$\mathrm{Total}$",
         color=cmap[2],
-        lw=3,
+        lw=2,
         alpha=0.8,
     )
     ax[0, 1].plot(
@@ -157,15 +157,15 @@ with plt.rc_context(
         f3_mass_in_gc,
         label="$\mathrm{BSC}$",
         color=cmap[3],
-        lw=3,
+        lw=2,
         alpha=0.8,
     )
-    ax[1, 1].plot(f3_t_sim_myr, f3_bound_total_mass_ratio, lw=3, c="grey")
+    ax[1, 1].plot(f3_t_sim_myr, f3_bound_total_mass_ratio, lw=2, c="grey")
     ax[2, 1].plot(
         f3_t_sim_myr,
         f3_total_lum,
         label=r"$\mathrm{Total}$",
-        lw=3,
+        lw=2,
         c=cmap[2],
         alpha=0.8,
     )
@@ -173,11 +173,11 @@ with plt.rc_context(
         f3_t_sim_myr,
         f3_lum_in_gc,
         label=r"$\mathrm{BSC}$",
-        lw=3,
+        lw=2,
         c=cmap[3],
         alpha=0.8,
     )
-    ax[3, 1].plot(f3_t_sim_myr, f3_bound_total_light_ratio, lw=3, c="grey")
+    ax[3, 1].plot(f3_t_sim_myr, f3_bound_total_light_ratio, lw=2, c="grey")
 
     ax[1, 1].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
     ax[3, 1].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
@@ -207,6 +207,15 @@ with plt.rc_context(
     fig.text(0.5, 0.07, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
     fig.text(0.5, 0.93, "$\mathrm{z}$", ha="center")
     plt.subplots_adjust(hspace=0, wspace=0)
+
+    ax[0, 0].tick_params(axis="both", direction="in", which="both")
+    ax[1, 0].tick_params(axis="both", direction="in", which="both")
+    ax[2, 0].tick_params(axis="both", direction="in", which="both")
+    ax[3, 0].tick_params(axis="both", direction="in", which="both")
+    ax[0, 1].tick_params(axis="both", direction="in", which="both")
+    ax[1, 1].tick_params(axis="both", direction="in", which="both")
+    ax[2, 1].tick_params(axis="both", direction="in", which="both")
+    ax[3, 1].tick_params(axis="both", direction="in", which="both")
 
     plt.savefig(
         os.path.expanduser(
@@ -253,20 +262,20 @@ with plt.rc_context(
 #         f7_total_mass[mask],
 #         label=r"$\mathrm{Total}$",
 #         color=cmap[0],
-#         lw=3,
+#         lw=2,
 #     )
 #     ax[0, 0].plot(
 #         f7_t_sim_myr[mask],
 #         f7_mass_in_gc[mask],
 #         label="$\mathrm{Bound}$",
 #         color=cmap[1],
-#         lw=3,
+#         lw=2,
 #     )
 #     ax[0, 0].plot(
 #         f7_t_sim_myr[mask],
 #         f7_field_mass[mask],
 #         label=r"$\mathrm{Field}$",
-#         lw=3,
+#         lw=2,
 #         c=cmap[4],
 #     )
 
@@ -305,7 +314,7 @@ with plt.rc_context(
 #     ax1_twin.xaxis.set_major_locator(MaxNLocator(5))
 #     ax1_twin.set_xlim(left=np.max(f7_redshift), right=np.min(f7_redshift))
 
-#     ax[1, 0].plot(f7_t_sim_myr[mask], f7_bound_field[mask], lw=3, c="grey")
+#     ax[1, 0].plot(f7_t_sim_myr[mask], f7_bound_field[mask], lw=2, c="grey")
 
 #     ax[1, 0].axhline(y=1, ls="--", c="grey", alpha=0.8)
 #     ax[1, 0].set_yscale("log")
@@ -327,13 +336,13 @@ with plt.rc_context(
 #         f3_mass_in_gc,
 #         label="$\mathrm{Bound}$",
 #         color=cmap[3],
-#         lw=3,
+#         lw=2,
 #     )
 #     ax[0, 1].plot(
 #         f3_t_sim_myr[mask],
 #         f3_field_mass[mask],
 #         label=r"$\mathrm{Field}$",
-#         lw=3,
+#         lw=2,
 #         c=cmap[5],
 #     )
 #     ax[0, 1].legend(
@@ -369,7 +378,7 @@ with plt.rc_context(
 #     ax2_twin.xaxis.set_major_locator(MaxNLocator(5))
 #     ax2_twin.set_xlim(left=np.max(f3_redshift), right=np.min(f3_redshift))
 
-#     ax[1, 1].plot(f3_t_sim_myr[mask], f3_bound_field[mask], lw=3, c="grey")
+#     ax[1, 1].plot(f3_t_sim_myr[mask], f3_bound_field[mask], lw=2, c="grey")
 
 #     ax[1, 1].axhline(y=1, ls="--", c="grey", alpha=0.8)
 

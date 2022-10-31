@@ -23,7 +23,7 @@ def gauss(x, amp, mean, sigma):
     return amp * np.exp(-0.5 * ((x - mean) / sigma) ** 2)
 
 
-def log_data_function(data, num_bins, bin_range: tuple):
+def log_data_function(data, num_bins, bin_range: tuple, return_counts=False):
     bin_range = np.log10(bin_range)
     log_data = np.log10(data)
     count, bin_edges = np.histogram(log_data, num_bins, bin_range)
@@ -33,7 +33,10 @@ def log_data_function(data, num_bins, bin_range: tuple):
     # normalize with width of the bins
     counts_per_log_solar_mass = count / (right_edges - left_edges)
 
-    return 10**bin_ctrs, counts_per_log_solar_mass  # * count * 10
+    if return_counts is True:
+        return 10**bin_ctrs, count  # * count * 10
+    else:
+        return 10**bin_ctrs, counts_per_log_solar_mass
 
 
 if __name__ == "__main__":
@@ -106,10 +109,17 @@ if __name__ == "__main__":
             r"$\mathrm{M} \:\:  \left( \mathrm{M}_{\odot} \right) $",
             ha="center",
         )
+        # fig.text(
+        #     0.01,
+        #     0.5,
+        #     r"$\mathrm{dN / d\log}\:\:\left(\mathrm{M} / \mathrm{M}_{\odot} \right)$",
+        #     va="center",
+        #     rotation="vertical",
+        # )
         fig.text(
             0.01,
             0.5,
-            r"$\mathrm{dN / d\log}\:\:\left(\mathrm{M} / \mathrm{M}_{\odot} \right)$",
+            r"$\mathrm{N_{BSC}}$",
             va="center",
             rotation="vertical",
         )
@@ -206,15 +216,19 @@ if __name__ == "__main__":
         f7_mc_star_mass = fs070_log_sfc[:, 7][f7_mc_mask]
 
         # log sfc
-        mc_f7_mass, mc_f7_counts = log_data_function(f7_mc_star_mass, bns, x_range)
-        mc_f3_mass, mc_f3_counts = log_data_function(f3_mc_star_mass, bns, x_range)
+        mc_f7_mass, mc_f7_counts = log_data_function(
+            f7_mc_star_mass, bns, x_range, return_counts=True
+        )
+        mc_f3_mass, mc_f3_counts = log_data_function(
+            f3_mc_star_mass, bns, x_range, return_counts=True
+        )
         # BSC
         f7_vir_mass, f7_vir_counts = log_data_function(
-            f7_masses_per_snapshot, bns, x_range
+            f7_masses_per_snapshot, bns, x_range, return_counts=True
         )
 
         f3_vir_mass, f3_vir_counts = log_data_function(
-            f3_masses_per_snapshot, bns, x_range
+            f3_masses_per_snapshot, bns, x_range, return_counts=True
         )
         print(len(f7_masses_per_snapshot), len(f7_mc_star_mass))
         print(len(f3_masses_per_snapshot), len(f3_mc_star_mass))
@@ -277,8 +291,12 @@ if __name__ == "__main__":
             f3_imf_label = "_nolegend_"
             f3_bsc_label = "_nolegend_"
 
-            f7_legend_title = r"$\log_{{10}}\:(\mu,\:\sigma)$"
-            f3_legend_title = r"$\log_{{10}}\:(\mu,\:\sigma)$"
+            if i == 0:
+                f7_legend_title = r"$\log_{{10}}\:(\mu,\:\sigma)$"
+                f3_legend_title = r"$\log_{{10}}\:(\mu,\:\sigma)$"
+            else:
+                f7_legend_title = ""
+                f3_legend_title = ""
 
             ax[i, 0].plot(
                 mc_f7_mass,
@@ -404,23 +422,24 @@ if __name__ == "__main__":
             #     verticalalignment="top",
             #     bbox=props,
             # )
-            ax[i, 0].set_xlim(left=f7_vir_mass[0])
+            ax[i, 0].set_xlim(left=50, right=8e4)
             ax[i, 0].set_xscale("log")
             ax[i, 0].set_yscale("log")
-            ax[i, 0].set_ylim(1, 8000)
+            ax[i, 0].set_ylim(0.8, 380)
             # ax[i, 0].set_ylim(10, 500000)
 
             ax[i, 1].yaxis.tick_right()
+            ax[i, 1].set_yticklabels([])
             ax[i, 1].set_xscale("log")
             ax[i, 1].set_yscale("log")
-            ax[i, 1].set_ylim(1, 8000)
+            ax[i, 1].set_ylim(0.8, 380)
             # ax[i, 1].set_ylim(10, 500000)
 
             ax[i, 0].legend(
                 title=f7_legend_title,
                 loc="upper left",
                 framealpha=0.5,
-                title_fontsize=10,
+                title_fontsize=11,
                 fontsize=10,
             )
 
@@ -428,7 +447,7 @@ if __name__ == "__main__":
                 title=f3_legend_title,
                 loc="upper right",
                 framealpha=0.5,
-                title_fontsize=10,
+                title_fontsize=11,
                 fontsize=10,
             )
 
@@ -442,6 +461,9 @@ if __name__ == "__main__":
                 bbox=props,
                 clip_on=False,
             )
+            ax[i, 1].tick_params(axis="both", direction="in", which="both")
+            ax[i, 0].tick_params(axis="both", direction="in", which="both")
+            ax[i, 1].set_yticklabels([])
 
     plt.savefig(
         os.path.expanduser(

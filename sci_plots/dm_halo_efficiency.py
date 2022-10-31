@@ -1,8 +1,12 @@
+import sys
+
+sys.path.append("..")
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
 from scipy.optimize import curve_fit
-from modules.macros import z_from_t_myr
+from modules.macros import filter_snapshots, z_from_t_myr
 
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
@@ -25,8 +29,8 @@ f7_halo = np.loadtxt("./dm_data/fs070_dm_halo_evo.txt")
 f7_dm_mass = f7_halo[:, 3]
 f3_dm_mass = f3_halo[:, 3]
 
-f7_dm_mass = f7_dm_mass
-f3_dm_mass = f3_dm_mass
+# f7_dm_mass = f7_dm_mass
+# f3_dm_mass = f3_dm_mass
 
 
 f7_star_mass = f7_halo[:, 5]
@@ -34,6 +38,19 @@ f3_star_mass = f3_halo[:, 5]
 
 f7_time = f7_halo[:, 1]
 f3_time = f3_halo[:, 1]
+
+f7_z = z_from_t_myr(f7_time)
+f3_z = z_from_t_myr(f3_time)
+
+f7_z_mask = f7_z >= 11.5
+f3_z_mask = f3_z >= 11.5
+
+# check the mass discrepancy.
+print(f7_z[f7_z_mask][-1], f3_z[f3_z_mask][-1])
+
+f7_test_mass = f7_dm_mass[f7_z_mask][-1]
+f3_test_mass = f3_dm_mass[f3_z_mask][-1]
+
 with plt.rc_context(
     {
         "font.family": "serif",
