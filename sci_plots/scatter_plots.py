@@ -160,7 +160,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         }
     ):
 
-        cmap = plt.cm.get_cmap("plasma")
+        cmap = plt.cm.get_cmap("viridis")
         # scale_factor = 50  # scale factor for the sizes
         # # map to differnt sizes for better plotting
         # f7_half_radii = scale_factor * f7_half_mass_rad
@@ -224,8 +224,8 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             r"$\log_{10} \: R\mathrm{_{core}}$",
         ]
         # loop through some possible plots.
-        fig, ax = plt.subplots(4, 2, figsize=(4, 8.5), dpi=400)
-        plt.subplots_adjust(hspace=0.35, wspace=0.40)
+        fig, ax = plt.subplots(2, 4, figsize=(8.5, 4), dpi=400)
+        plt.subplots_adjust(hspace=0.30, wspace=0.35)
         axs = ax.ravel()
         axs[0].set_visible(False)
 
@@ -302,8 +302,8 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 axs[i].plot(
                     theory_x,
                     lin_model(theory_x, f7_params[0], f7_params[1]),
-                    lw=2,
-                    color=fs70_color,
+                    lw=1.5,
+                    color="grey",
                     label="$\mathrm{{{:.2f} \pm {:.2f}}}$, "
                     # "\n"
                     "$\mathrm{{{:.2f} \pm {:.2f}}}$".format(
@@ -316,9 +316,9 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 axs[i].plot(
                     theory_x,
                     lin_model(theory_x, f3_params[0], f3_params[1]),
-                    lw=2,
+                    lw=1.5,
                     ls="--",
-                    color=fs35_color,
+                    color="grey",
                     label="$\mathrm{{{:.2f} \pm {:.2f}}}$, "
                     # "\n"
                     "$\mathrm{{{:.2f} \pm {:.2f} }}$".format(
@@ -328,6 +328,61 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                         f3_params.intercept_stderr,
                     ),
                 )
+
+                # best fit variations
+                # f3_var1 = lin_model(
+                #     theory_x,
+                #     f3_params[0] - f3_params[4],
+                #     f3_params[1] - f3_params.intercept_stderr,
+                # )
+                # f3_var2 = lin_model(
+                #     theory_x,
+                #     f3_params[0] + f3_params[4],
+                #     f3_params[1] + f3_params.intercept_stderr,
+                # )
+                # f3_var3 = lin_model(
+                #     theory_x,
+                #     f3_params[0] + f3_params[4],
+                #     f3_params[1] - f3_params.intercept_stderr,
+                # )
+                # f3_var4 = lin_model(
+                #     theory_x,
+                #     f3_params[0] - f3_params[4],
+                #     f3_params[1] + f3_params.intercept_stderr,
+                # )
+
+                # axs[i].fill_between(
+                #     theory_x,
+                #     f3_var1,
+                #     f3_var2,
+                #     lw=0,
+                #     # ls="-.",
+                #     color=fs35_color,
+                #     alpha=0.5,
+                #     # edgecolor="none",
+                # )
+
+                # axs[i].fill_between(
+                #     theory_x,
+                #     f3_var3,
+                #     f3_var4,
+                #     lw=0,
+                #     # ls="-.",
+                #     color=fs35_color,
+                #     alpha=0.5,
+                #     # edgecolor="none",
+                # )
+
+                # axs[i].fill_between(
+                #     theory_x,
+                #     lin_model(theory_x, *(f3_params - np.sqrt(np.diag(f3_pcov)))),
+                #     lin_model(theory_x, *(f3_params + np.sqrt(np.diag(f3_pcov)))),
+                #     lw=2,
+                #     # ls="-.",
+                #     color=fs35_color,
+                #     alpha=0.5,
+                #     edgecolor="none",
+                # )
 
                 # axs[i].fill_between(
                 #     theory_x,
@@ -382,6 +437,8 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 transform=axs[i].transAxes,
                 fontsize=8,
             )
+            axs[i].tick_params(axis="both", direction="in", which="both")
+
             # color bars
 
         f70 = mlines.Line2D(
@@ -389,7 +446,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             [],
             color="grey",
             marker="o",
-            ls="",
+            ls="-",
             label=r"$f_{*} = 0.70$",
             alpha=0.8,
             markeredgewidth=0,
@@ -399,13 +456,13 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             [],
             color="grey",
             marker="P",
-            ls="",
+            ls="--",
             label=r"$f_{*} = 0.35$",
             alpha=0.8,
             markeredgecolor="none",
         )
         sfe_legend = fig.legend(
-            loc=(0.12, 0.76),
+            loc=(0.08, 0.55),
             title=r"$\mathrm{{t = {:.0f} \: Myr}}$".format(f3_t_myr),
             # loc="upper left",
             title_fontsize=10,
@@ -416,18 +473,18 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         sfe_legend.get_frame().set_edgecolor("k")
         sfe_legend.get_frame().set_boxstyle("Square")
         # axs[i].add_artist(sfe_legend)
-        cbar_ax = fig.add_axes([0.05, 0.82, 0.39, 0.04])
+        cbar_ax = fig.add_axes([0.1, 0.75, 0.17, 0.05])
         cbar = fig.colorbar(
             f3_scatter,
             cax=cbar_ax,
             pad=0,
             orientation="horizontal",
         )
+
         cbar.set_alpha(0.8)
-        cbar_ax.set_title(
-            label="$\mathrm{Time \: of \: Formation \: (Myr)}$", fontsize=10
-        )
-        cbar.ax.tick_params(labelsize=7)
+        cbar_ax.set_title(label="$\mathrm{t_{formation} \: (Myr)}$", fontsize=12)
+
+        cbar.ax.tick_params(axis="x", direction="in", which="both", labelsize=7)
 
 plt.savefig(
     os.path.expanduser(

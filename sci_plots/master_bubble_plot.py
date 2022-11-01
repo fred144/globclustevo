@@ -24,9 +24,17 @@ f3_strt = 154
 f3_end = 1177
 step = 1
 
+profiler_data = (
+    "../../g_drive/Research/AstrophysicsSimulation/DesktopEnvironment/"
+    "data_globular_cluster/gc_profiles/profile_runs/"
+)
 
-f7_prof_dir = r"../gc_profiles/profile_runs/fs07_refine/fof_best"
-f3_prof_dir = r"../gc_profiles/profile_runs/fs035_ms10/fof_best"
+# f7_prof_dir = r"../gc_profiles/profile_runs/fs07_refine/fof_best"
+# f3_prof_dir = r"../gc_profiles/profile_runs/fs035_ms10/fof_best"
+
+# point to google drice for profiler runs.
+f7_prof_dir = profiler_data + "fs07_refine/fof_best"
+f3_prof_dir = profiler_data + "fs035_ms10/fof_best"
 
 f7_halo_dir = r"../halo_data/fs07_refine/fof_best"
 f3_halo_dir = r"../halo_data/fs035_ms10/fof_best"
