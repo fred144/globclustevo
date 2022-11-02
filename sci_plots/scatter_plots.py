@@ -10,6 +10,91 @@ from modules.match_t_sims import find_matching_time, get_snapshots
 import matplotlib.lines as mlines
 from scipy import stats
 
+# can easily be done with seaborn linregress, but here is a confidence band scripts
+# for matplotlib, scipy , and numpy only
+# https://gist.github.com/rsnemmen/f2c03beb391db809c90f
+def scatterfit(x, y, a=None, b=None):
+    """
+    Compute the mean deviation of the data about the linear model given if A,B
+    (y=ax+b) provided as arguments. Otherwise, compute the mean deviation about
+    the best-fit line.
+
+    x,y assumed to be Numpy arrays. a,b scalars.
+    Returns the float sd with the mean deviation.
+
+    Author: Rodrigo Nemmen
+    """
+
+    if a == None:
+        # Performs linear regression
+        a, b, r, p, err = stats.linregress(x, y)
+
+    # Std. deviation of an individual measurement (Bevington, eq. 6.15)
+    N = np.size(x)
+    sd = 1.0 / (N - 2.0) * np.sum((y - a * x - b) ** 2)
+    sd = np.sqrt(sd)
+
+    return sd
+
+
+def confband(xd, yd, a, b, conf=0.6827, x=None):
+    """
+    Calculates the confidence band of the linear regression model at the desired confidence
+    level, using analytical methods. The 2sigma confidence interval is 95% sure to contain
+    the best-fit regression line. This is not the same as saying it will contain 95% of
+    the data points.
+
+    Arguments:
+    - conf: desired confidence level, by default 0.95 (2 sigma)
+    - xd,yd: data arrays
+    - a,b: linear fit parameters as in y=ax+b
+    - x: (optional) array with x values to calculate the confidence band. If none is provided, will
+      by default generate 100 points in the original x-range of the data.
+
+    Returns:
+    Sequence (lcb,ucb,x) with the arrays holding the lower and upper confidence bands
+    corresponding to the [input] x array.
+
+    Usage:
+    >>> lcb,ucb,x=nemmen.confband(all.kp,all.lg,a,b,conf=0.95)
+    calculates the confidence bands for the given input arrays
+
+    >>> pylab.fill_between(x, lcb, ucb, alpha=0.3, facecolor='gray')
+    plots a shaded area containing the confidence band
+
+    References:
+    1. http://en.wikipedia.org/wiki/Simple_linear_regression, see Section Confidence intervals
+    2. http://www.weibull.com/DOEWeb/confidence_intervals_in_simple_linear_regression.htm
+
+    Author: Rodrigo Nemmen
+    v1 Dec. 2011
+    v2 Jun. 2012: corrected bug in computing dy
+    """
+    alpha = 1.0 - conf  # significance
+    n = xd.size  # data sample size
+
+    if x == None:
+        x = np.linspace(xd.min() - 1.0, xd.max() + 1.0, 100)
+
+    # Predicted values (best-fit model)
+    y = a * x + b
+
+    # Auxiliary definitions
+    sd = scatterfit(xd, yd, a, b)  # Scatter of data about the model
+    sxd = np.sum((xd - xd.mean()) ** 2)
+    sx = (x - xd.mean()) ** 2  # array
+
+    # Quantile of Student's t distribution for p=1-alpha/2
+    q = stats.t.ppf(1.0 - alpha / 2.0, n - 2)
+
+    # Confidence band
+    dy = q * sd * np.sqrt(1.0 / n + sx / sxd)
+    ucb = y + dy  # Upper confidence band
+    lcb = y - dy  # Lower confidence band
+
+    return lcb, ucb, x
+
+
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
 
@@ -264,10 +349,10 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 c=f7_bes[f7_mask],
                 # s=f7_half_radii,
                 alpha=0.8,
-                edgecolors="none",
+                edgecolors="k",
                 marker="o",
                 cmap=cmap,
-                linewidths=0,
+                linewidths=0.25,
                 s=15,
             )
             f3_scatter = axs[i].scatter(
@@ -276,8 +361,9 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 c=f3_bes[f3_mask],
                 # s=f3_half_radii,
                 alpha=0.8,
-                edgecolors="none",
+                edgecolors="k",
                 marker="P",
+                linewidths=0.25,
                 s=15,
                 cmap=cmap,
             )
@@ -289,6 +375,16 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 f7_params = stats.linregress(x=f7_x, y=f7_y)
                 f3_params = stats.linregress(x=f3_x, y=f3_y)
 
+                f7_slope = f7_params[0]
+                f7_slope_err = f7_params[4]
+                f7_intercept = f7_params[1]
+                f7_intercept_err = f7_params.intercept_stderr
+
+                f3_slope = f3_params[0]
+                f3_slope_err = f3_params[4]
+                f3_intercept = f3_params[1]
+                f3_intercept_err = f3_params.intercept_stderr
+
                 # f7_params, f7_pcov = curve_fit(f=lin_model, xdata=f7_x, ydata=f7_y)
                 # f3_params, f3_pcov = curve_fit(f=lin_model, xdata=f3_x, ydata=f3_y)
 
@@ -299,10 +395,38 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                     x_extremas.min() - 0.5, x_extremas.max() + 0.5, 100
                 )
 
+                f7_upper_conf, f7_lower_conf, f7_x = confband(
+                    f7_x, f7_y, f7_slope, f7_intercept
+                )
+
+                f3_upper_conf, f3_lower_conf, f3_x = confband(
+                    f3_x, f3_y, f3_slope, f3_intercept
+                )
+
+                axs[i].fill_between(
+                    f3_x,
+                    f3_lower_conf,
+                    f3_upper_conf,
+                    color="grey",
+                    alpha=0.4,
+                    lw=0,
+                    zorder=0,
+                )
+
+                axs[i].fill_between(
+                    f7_x,
+                    f7_lower_conf,
+                    f7_upper_conf,
+                    color="grey",
+                    alpha=0.4,
+                    lw=0,
+                    zorder=0,
+                )
+
                 axs[i].plot(
                     theory_x,
                     lin_model(theory_x, f7_params[0], f7_params[1]),
-                    lw=1.5,
+                    lw=1,
                     color="grey",
                     label="$\mathrm{{{:.2f} \pm {:.2f}}}$, "
                     # "\n"
@@ -316,7 +440,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 axs[i].plot(
                     theory_x,
                     lin_model(theory_x, f3_params[0], f3_params[1]),
-                    lw=1.5,
+                    lw=1,
                     ls="--",
                     color="grey",
                     label="$\mathrm{{{:.2f} \pm {:.2f}}}$, "
@@ -412,7 +536,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 
                 # fit parameter legend
                 fit = axs[i].legend(
-                    title="$\mathrm{\log_{10}(slope,\:intercept)}$",
+                    # title="$\mathrm{\log_{10}(slope,\:intercept)}$",
                     ncol=1,
                     fontsize=6,
                     title_fontsize=7,
