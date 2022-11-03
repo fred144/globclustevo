@@ -426,12 +426,12 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                     )
                     f7_inset.add_patch(scale_ins)
 
-                    mark_inset(
-                        ax[0], f7_inset, loc1=2, loc2=4, edgecolor="white", alpha=0.4
-                    )
-                    mark_inset(
-                        ax[1], f3_inset, loc1=1, loc2=3, edgecolor="white", alpha=0.4
-                    )
+                    # mark_inset(
+                    #     ax[0], f7_inset, loc1=2, loc2=4, edgecolor="white", alpha=0.4
+                    # )
+                    # mark_inset(
+                    #     ax[1], f3_inset, loc1=1, loc2=3, edgecolor="white", alpha=0.4
+                    # )
 
                     # time series line plots
                     time_series_ax_f7 = ax[0].inset_axes([0.56, 0.10, 0.40, 0.2])
