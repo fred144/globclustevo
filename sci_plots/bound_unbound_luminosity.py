@@ -1,5 +1,5 @@
 """
-Master plot for bound unbound clusters with mass and luminosity,
+bound unbound clusters with  luminosity,
 Using data only from the FOF. Not filtered by fittability by running through the 
 profiler.
 
@@ -22,7 +22,7 @@ from matplotlib.ticker import MaxNLocator
 
 # 70% efficiency run
 fs70_ds = np.loadtxt("./fof_time_series/fs07_refine_fof_best_113_1196.txt")[::1, :]
-fail_mask = fs70_ds[:, 3] > 30
+fail_mask = fs70_ds[:, 3] > 10
 
 # all results are fit filtered
 f7_t_sim_myr = fs70_ds[:, 0][fail_mask]
@@ -37,7 +37,7 @@ f7_lum_in_gc = fs70_ds[:, 4][fail_mask]
 
 # 35% efficiency run
 fs35_ds = np.loadtxt("./fof_time_series/fs035_ms10_fof_best_154_1368.txt")[::1, :]
-fail_mask = fs35_ds[:, 3] > 30
+fail_mask = fs35_ds[:, 3] > 10
 
 # all results are fit filtered
 f3_t_sim_myr = fs35_ds[:, 0][fail_mask]
@@ -68,33 +68,16 @@ with plt.rc_context(
     cmap = cm.get_cmap("Set2")
     cmap = cmap(np.linspace(0, 1, 8))
     fig, ax = plt.subplots(
-        nrows=4,
+        nrows=2,
         ncols=2,
-        gridspec_kw={"height_ratios": [5, 3, 5, 3]},
+        gridspec_kw={"height_ratios": [5, 3]},
         sharex="col",
         sharey="row",
-        figsize=(4, 6),
+        figsize=(4, 3),
         dpi=400,
     )
 
     ax[0, 0].plot(
-        f7_t_sim_myr,
-        f7_total_mass,
-        label=r"$\mathrm{Total}$",
-        color=cmap[0],
-        lw=2,
-        alpha=0.8,
-    )
-    ax[0, 0].plot(
-        f7_t_sim_myr,
-        f7_mass_in_gc,
-        label="$\mathrm{BSC}$",
-        color=cmap[1],
-        lw=2,
-        alpha=0.8,
-    )
-    ax[1, 0].plot(f7_t_sim_myr, f7_bound_total_mass_ratio, lw=2, c="grey")
-    ax[2, 0].plot(
         f7_t_sim_myr,
         f7_total_lum,
         label=r"$\mathrm{Total}$",
@@ -102,7 +85,7 @@ with plt.rc_context(
         c=cmap[0],
         alpha=0.8,
     )
-    ax[2, 0].plot(
+    ax[0, 0].plot(
         f7_t_sim_myr,
         f7_lum_in_gc,
         label=r"$\mathrm{BSC}$",
@@ -110,58 +93,34 @@ with plt.rc_context(
         c=cmap[1],
         alpha=0.8,
     )
-    ax[3, 0].plot(f7_t_sim_myr, f7_bound_total_light_ratio, lw=2, c="grey")
+    ax[1, 0].plot(f7_t_sim_myr, f7_bound_total_light_ratio, lw=2, c="grey")
 
     ax[1, 0].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
-    ax[3, 0].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
 
     ax[0, 0].set_yscale("log")
-    ax[2, 0].set_yscale("log")
-
-    ax[0, 0].set_ylabel(r"$\mathrm{M}_{} \: (\mathrm{M}_{\odot})$", labelpad=10)
-    ax[1, 0].set_ylabel(r"$\mathrm{M_{BSC}} / \mathrm{M_{Total}}$", labelpad=5)
-    ax[2, 0].set_ylabel(
+    ax[0, 0].set_ylim(bottom=8e34)
+    ax[0, 0].set_ylabel(
         (
             r"$\mathrm{L}_{\lambda = 1500 \: \mathrm{\AA}} \:$"
             r"$(\mathrm{erg} \:\mathrm{s}^{-1} \:\mathrm{\AA}^{-1})$"
         )
     )
-    ax[3, 0].set_ylabel(r"$\mathrm{L_{BSC}} / \mathrm{L_{Total}}$", labelpad=5)
+
+    ax[1, 0].set_ylabel(r"$\mathrm{L_{BSC}} / \mathrm{L_{Total}}$", labelpad=5)
 
     left_panel_twin_ax = ax[0, 0].twiny()
     left_panel_twin_ax.invert_xaxis()
-
+    left_panel_twin_ax.tick_params(axis="both", direction="in", which="both")
     left_panel_twin_ax.set_xlim(left=f7_redshift.max(), right=f7_redshift.min())
-    ax[3, 0].set_xlim(left=f7_t_sim_myr.min(), right=f7_t_sim_myr.max())
-    ax[1, 0].set_ylim(0.01, 1.1)
-    ax[3, 0].set_ylim(0.01, 1.1)
 
-    ax[0, 0].legend(
-        title="$f_{*} = 0.70$",
-        loc="lower right",
-        fontsize=10,
-    )
+    ax[1, 0].set_xlim(left=f7_t_sim_myr.min(), right=f7_t_sim_myr.max())
+    ax[1, 0].set_ylim(0.01, 1.1)
+
+    ax[0, 0].legend(title="$f_{*} = 0.70$", loc="lower right", fontsize=8)
 
     # =================================30%============================================
 
     ax[0, 1].plot(
-        f3_t_sim_myr,
-        f3_total_mass,
-        label=r"$\mathrm{Total}$",
-        color=cmap[2],
-        lw=2,
-        alpha=0.8,
-    )
-    ax[0, 1].plot(
-        f3_t_sim_myr,
-        f3_mass_in_gc,
-        label="$\mathrm{BSC}$",
-        color=cmap[3],
-        lw=2,
-        alpha=0.8,
-    )
-    ax[1, 1].plot(f3_t_sim_myr, f3_bound_total_mass_ratio, lw=2, c="grey")
-    ax[2, 1].plot(
         f3_t_sim_myr,
         f3_total_lum,
         label=r"$\mathrm{Total}$",
@@ -169,7 +128,7 @@ with plt.rc_context(
         c=cmap[2],
         alpha=0.8,
     )
-    ax[2, 1].plot(
+    ax[0, 1].plot(
         f3_t_sim_myr,
         f3_lum_in_gc,
         label=r"$\mathrm{BSC}$",
@@ -177,51 +136,39 @@ with plt.rc_context(
         c=cmap[3],
         alpha=0.8,
     )
-    ax[3, 1].plot(f3_t_sim_myr, f3_bound_total_light_ratio, lw=2, c="grey")
+    ax[1, 1].plot(f3_t_sim_myr, f3_bound_total_light_ratio, lw=2, c="grey")
 
     ax[1, 1].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
-    ax[3, 1].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
 
     right_panel_twin_ax = ax[0, 1].twiny()
     right_panel_twin_ax.invert_xaxis()
-
+    right_panel_twin_ax.tick_params(axis="both", direction="in", which="both")
     right_panel_twin_ax.set_xlim(left=f3_redshift.max(), right=f3_redshift.min())
-    ax[3, 1].set_xlim(left=f3_t_sim_myr.min(), right=f3_t_sim_myr.max())
-    # ax[1, 1].set_ylim(0.05, 1.05)
-    # ax[3, 1].set_ylim(0.05, 1.05)
 
-    ax[0, 1].legend(
-        title="$f_{*} = 0.35$",
-        loc="lower right",
-        fontsize=10,
-    )
+    ax[1, 1].set_xlim(left=f3_t_sim_myr.min(), right=f3_t_sim_myr.max())
+    ax[0, 1].legend(title="$f_{*} = 0.35$", loc="lower right", fontsize=8)
 
     left_panel_twin_ax.xaxis.set_major_locator(MaxNLocator(5))
-    ax[3, 0].xaxis.set_major_locator(MaxNLocator(5))
+
     right_panel_twin_ax.xaxis.set_major_locator(MaxNLocator(5))
-    ax[3, 1].xaxis.set_major_locator(MaxNLocator(4))
 
     ax[1, 0].yaxis.set_major_locator(MaxNLocator(5))
-    ax[3, 0].yaxis.set_major_locator(MaxNLocator(5))
 
-    fig.text(0.5, 0.07, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
-    fig.text(0.5, 0.93, "$\mathrm{z}$", ha="center")
+    fig.text(0.5, 0.01, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
+    fig.text(0.5, 0.95, "$\mathrm{z}$", ha="center")
     plt.subplots_adjust(hspace=0, wspace=0)
 
     ax[0, 0].tick_params(axis="both", direction="in", which="both")
     ax[1, 0].tick_params(axis="both", direction="in", which="both")
-    ax[2, 0].tick_params(axis="both", direction="in", which="both")
-    ax[3, 0].tick_params(axis="both", direction="in", which="both")
+
     ax[0, 1].tick_params(axis="both", direction="in", which="both")
     ax[1, 1].tick_params(axis="both", direction="in", which="both")
-    ax[2, 1].tick_params(axis="both", direction="in", which="both")
-    ax[3, 1].tick_params(axis="both", direction="in", which="both")
 
     plt.savefig(
         os.path.expanduser(
             (
                 "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
-                "bound_unbound.png"
+                "luminosity_bound_unbound.png"
             )
         ),
         dpi=500,

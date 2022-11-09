@@ -170,8 +170,8 @@ with plt.rc_context(
         xlabel="$\mathrm{z}$",
         ylabel=r"$\mathrm{\log_{10} \: M_{halo} \left( \: M_{\odot} \right)}$",
         xlim=(
-            z_from_t_myr(f3_time).max(),
-            z_from_t_myr(f3_time).min(),
+            z_from_t_myr(f7_time).max(),
+            z_from_t_myr(f7_time).min(),
         ),
     )
     ax[1].tick_params(axis="both", direction="in", which="both")
