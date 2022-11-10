@@ -44,8 +44,8 @@ if __name__ == "__main__":
     cmap = cm.get_cmap("Set2")
     cmap = cmap(np.linspace(0, 1, 8))
 
-    x_range = (10, 5e5)
-    bns = 20
+    x_range = (60, 6e5)
+    bns = 23
 
     f7_mc_imf_clr = cmap[0]
     f7_bsc_mf_clr = cmap[1]
@@ -161,7 +161,7 @@ if __name__ == "__main__":
         f7_info_file = np.loadtxt(os.path.join(f7_ds, "info.txt"))
         f3_info_file = np.loadtxt(os.path.join(f3_ds, "info.txt"))
 
-        star_mass_min = 250  # solar mass per bin
+        star_mass_min = 250  # minimum solar mass minimum oer bsc
         max_alpha = 4.2
         try:
             f7_t_myr = f7_info_file[0, 0]
@@ -232,14 +232,25 @@ if __name__ == "__main__":
         )
         print(len(f7_masses_per_snapshot), len(f7_mc_star_mass))
         print(len(f3_masses_per_snapshot), len(f3_mc_star_mass))
-        # fit
-        f7_fitting_mask = f7_vir_mass >= 0  # 2e2
-        f3_fitting_mask = f3_vir_mass >= 0
+
+        # fit the BSC
+        # f7_fitting_mask = f7_vir_mass >= 500  # 2e2
+        # f3_fitting_mask = f3_vir_mass >= 500
+
+        # count below 500, set it to 0, prevents the fit from weighing low mass
+
+        f7_bsc_fitting = np.where(f7_vir_mass >= 500, f7_vir_counts, 0)
+        f3_bsc_fitting = np.where(f3_vir_mass >= 500, f3_vir_counts, 0)
+
+        # f7_vir_counts[f7_fitting_mask] = 0
+        # f7_vir_mass[f7_fitting_mask] = 0
+        # f3_vir_counts[f3_fitting_mask] = 0
+        # f3_vir_mass[f3_fitting_mask] = 0
 
         f7_fit_params, _ = curve_fit(
             f=gauss,
-            xdata=np.log10(f7_vir_mass[f7_fitting_mask]),
-            ydata=f7_vir_counts[f7_fitting_mask],
+            xdata=np.log10(f7_vir_mass),
+            ydata=f7_bsc_fitting,
             # bounds=(
             #     [-np.inf, -np.inf, -np.inf, -np.inf, -np.inf, -np.inf],
             #     [600, np.inf, np.inf, 600, np.inf, np.inf],
@@ -250,8 +261,8 @@ if __name__ == "__main__":
 
         f3_fit_params, _ = curve_fit(
             f=gauss,
-            xdata=np.log10(f3_vir_mass[f3_fitting_mask]),
-            ydata=f3_vir_counts[f3_fitting_mask],
+            xdata=np.log10(f3_vir_mass),
+            ydata=f3_bsc_fitting,
             # bounds=(
             #     [0, -np.inf, -np.inf, 0, -np.inf, -np.inf],
             #     [600, np.inf, np.inf, 600, np.inf, np.inf],
@@ -308,8 +319,8 @@ if __name__ == "__main__":
                 color=f7_mc_imf_clr,
             )
             ax[i, 0].plot(
-                f7_vir_mass[f7_fitting_mask],
-                f7_vir_counts[f7_fitting_mask],
+                f7_vir_mass,  # [f7_fitting_mask]
+                f7_vir_counts,  # [f7_fitting_mask]
                 label=f7_bsc_label,
                 drawstyle="steps-mid",
                 linewidth=4,
@@ -327,8 +338,8 @@ if __name__ == "__main__":
                 color=f3_mc_imf_clr,
             )
             ax[i, 1].plot(
-                f3_vir_mass[f3_fitting_mask],
-                f3_vir_counts[f3_fitting_mask],
+                f3_vir_mass,  # [f3_fitting_mask]
+                f3_vir_counts,  # [f3_fitting_mask]
                 label=f3_bsc_label,
                 drawstyle="steps-mid",
                 linewidth=4,
