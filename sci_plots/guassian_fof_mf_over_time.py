@@ -23,6 +23,10 @@ def gauss(x, amp, mean, sigma):
     return amp * np.exp(-0.5 * ((x - mean) / sigma) ** 2)
 
 
+def lgauss(x, amp, mean, sigma):
+    return np.log10(amp * np.exp(-0.5 * ((x - mean) / sigma) ** 2))
+
+
 def log_data_function(data, num_bins, bin_range: tuple, return_counts=False):
     bin_range = np.log10(bin_range)
     log_data = np.log10(data)
@@ -45,7 +49,7 @@ if __name__ == "__main__":
     cmap = cmap(np.linspace(0, 1, 8))
 
     x_range = (60, 6e5)
-    bns = 23
+    bns = 20
 
     f7_mc_imf_clr = cmap[0]
     f7_bsc_mf_clr = cmap[1]
@@ -79,7 +83,7 @@ if __name__ == "__main__":
         get_list=f3_matched_nums,
     )
 
-    wanted_idxs = [233, 475, 699, 922]
+    wanted_idxs = [300, 450, 800, 1005]
     fs070_matched = [fs070_matched[x] for x in wanted_idxs]
     fs035_matched = [fs035_matched[x] for x in wanted_idxs]
 
@@ -239,9 +243,14 @@ if __name__ == "__main__":
 
         # count below 500, set it to 0, prevents the fit from weighing low mass
 
-        f7_bsc_fitting = np.where(f7_vir_mass >= 500, f7_vir_counts, 0)
-        f3_bsc_fitting = np.where(f3_vir_mass >= 500, f3_vir_counts, 0)
+        # make the errors not strictly dependent on mass.
+        #
 
+        # f7_bsc_fitting = np.where(f7_vir_mass >= 500, f7_vir_counts, 0)
+        # f3_bsc_fitting = np.where(f3_vir_mass >= 500, f3_vir_counts, 0)
+
+        f7_weights = np.where(f7_vir_mass > 600, 1 / f7_vir_mass, 1)
+        f3_weights = np.where(f3_vir_mass > 600, 1 / f3_vir_mass, 1)
         # f7_vir_counts[f7_fitting_mask] = 0
         # f7_vir_mass[f7_fitting_mask] = 0
         # f3_vir_counts[f3_fitting_mask] = 0
@@ -250,7 +259,9 @@ if __name__ == "__main__":
         f7_fit_params, _ = curve_fit(
             f=gauss,
             xdata=np.log10(f7_vir_mass),
-            ydata=f7_bsc_fitting,
+            ydata=f7_vir_counts,
+            sigma=f7_weights,
+            absolute_sigma=True
             # bounds=(
             #     [-np.inf, -np.inf, -np.inf, -np.inf, -np.inf, -np.inf],
             #     [600, np.inf, np.inf, 600, np.inf, np.inf],
@@ -262,7 +273,9 @@ if __name__ == "__main__":
         f3_fit_params, _ = curve_fit(
             f=gauss,
             xdata=np.log10(f3_vir_mass),
-            ydata=f3_bsc_fitting,
+            ydata=f3_vir_counts,
+            sigma=f3_weights,
+            absolute_sigma=True
             # bounds=(
             #     [0, -np.inf, -np.inf, 0, -np.inf, -np.inf],
             #     [600, np.inf, np.inf, 600, np.inf, np.inf],
