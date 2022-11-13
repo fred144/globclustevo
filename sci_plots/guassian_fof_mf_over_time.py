@@ -83,7 +83,7 @@ if __name__ == "__main__":
         get_list=f3_matched_nums,
     )
 
-    wanted_idxs = [300, 450, 800, 1005]
+    wanted_idxs = [344, 505, 1000, 1030]
     fs070_matched = [fs070_matched[x] for x in wanted_idxs]
     fs035_matched = [fs035_matched[x] for x in wanted_idxs]
 
@@ -249,8 +249,8 @@ if __name__ == "__main__":
         # f7_bsc_fitting = np.where(f7_vir_mass >= 500, f7_vir_counts, 0)
         # f3_bsc_fitting = np.where(f3_vir_mass >= 500, f3_vir_counts, 0)
 
-        f7_weights = np.where(f7_vir_mass > 600, 1 / f7_vir_mass, 1)
-        f3_weights = np.where(f3_vir_mass > 600, 1 / f3_vir_mass, 1)
+        f7_weights = np.where(f7_vir_mass > 450, 1 / f7_vir_mass, 1)
+        f3_weights = np.where(f3_vir_mass > 450, 1 / f3_vir_mass, 1)
         # f7_vir_counts[f7_fitting_mask] = 0
         # f7_vir_mass[f7_fitting_mask] = 0
         # f3_vir_counts[f3_fitting_mask] = 0
@@ -430,7 +430,7 @@ if __name__ == "__main__":
                 linewidth=0.5,
                 edgecolor="black",
             )
-            textstr_f7 = (r"$\mathrm{{t}} = {:.1f} \: \mathrm{{Myr}}$").format(f7_t_myr)
+            textstr_f7 = (r"$\mathrm{{t}} = {:.0f} \: \mathrm{{Myr}}$").format(f7_t_myr)
 
             # textstr_f3 = (
             #     r"$\mathrm{{t}} = {:.1f} \: \mathrm{{Myr}}$"
