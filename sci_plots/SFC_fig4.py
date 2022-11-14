@@ -240,7 +240,7 @@ print(
     "70% largest mass cloud",
     np.max(fs070_log_sfc[:, 5]),
     "with stellar mass",
-    np.max(fs070_log_sfc[:, 7]),
+    fs070_log_sfc[:, 7][np.argmax(fs070_log_sfc[:, 5])],
     "with metallicity of",
     metal_cloud_fs070[np.argmax(fs070_log_sfc[:, 5])],
 )
@@ -248,9 +248,9 @@ print(
     "35% largest mass cloud",
     np.max(fs035_log_sfc[:, 5]),
     "with stellar mass",
-    np.max(fs035_log_sfc[:, 7]),
+    fs035_log_sfc[:, 7][np.argmax(fs035_log_sfc[:, 7])],
     "with metallicity of",
-    metal_cloud_fs035[np.argmax(fs035_log_sfc[:, 5])],
+    metal_cloud_fs035[np.argmax(fs035_log_sfc[:, 7])],
 )
 
 # plt.figure(figsize=(7, 10), dpi=300)
