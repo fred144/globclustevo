@@ -235,6 +235,7 @@ with plt.style.context("dark_background"):
         )
         cbar.ax.xaxis.set_tick_params(pad=2, labelsize=10)
         cbar_ax.set_title(cbar_label, fontsize=14)
+        cbar_ax.tick_params(axis="both", direction="in", which="both")
 
         # efficiency
         props = dict(
@@ -257,10 +258,15 @@ with plt.style.context("dark_background"):
             transform=ax.transAxes,
         )
 
+        ax.spines["right"].set_visible(False)
+        ax.spines["bottom"].set_visible(False)
+        ax.spines["top"].set_visible(False)
+        ax.spines["left"].set_visible(False)
+
         plt.savefig(
             os.path.expanduser(
                 (
-                    "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+                    "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
                     "gc_merger.png"
                 )
             ),

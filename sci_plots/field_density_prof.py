@@ -507,7 +507,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                     # ylabel=r"$\mathrm{\log_{10}\; \Sigma \:\:(M_{\odot}\:pc^{-2})}$",
                     # xlabel=r"$ \mathrm{\log_{10}\;  R \:(pc)}$",
                 )
-
+                # annotate the fit parameters
                 col0_fit.text(
                     0.53,
                     0.95,
@@ -521,9 +521,9 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                     # bbox=props,
                 )
                 col1_fit.text(
-                    0.55,
-                    0.93,
-                    xy_plot_label,
+                    0.53,
+                    0.95,
+                    xz_plot_label,
                     size=7,
                     ha="left",
                     va="top",
@@ -533,9 +533,9 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                     # bbox=props,
                 )
                 col2_fit.text(
-                    0.55,
-                    0.93,
-                    xy_plot_label,
+                    0.53,
+                    0.95,
+                    yz_plot_label,
                     size=7,
                     ha="left",
                     va="top",
@@ -601,28 +601,33 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
 
             # add the luminosity color bar
             # fig.subplots_adjust(wspace=0, hspace=0, bottom=0.1)
+            cbar_ax = ax[1, 2].inset_axes([0.50, 0.10, 0.40, 0.05])
             # [left, bottom, width, height]
             # cbar_ax = fig.add_axes([0.125, 0.8525, 0.775, 0.008])
-            # cbar = fig.colorbar(xz, cax=cbar_ax, pad=0, orientation="horizontal")
-            # cbar_label = (
-            #     r"$\mathrm{\log_{10}\:\:Surface\:Brightness}"
-            #     r", \mathrm{\lambda = 1500 \: \AA \:}"
-            #     r"\mathrm{\left(erg \:\: s^{-1} \: \AA^{-1} \: pc^{-2} \right)} $"
-            # )
-            # cbar.set_label(
-            #     label=cbar_label,
-            #     fontsize=12,
-            #     labelpad=5,
-            #     fontproperties=leg_font,
-            # )
-            # cbar.ax.xaxis.set_ticks_position("top")
-            # cbar.ax.xaxis.set_label_position("top")
-            # cbar.ax.xaxis.set_tick_params(pad=2, labelsize=8)
-            # # tick label mod
-            # fig.canvas.draw()
-            # x_labels = [i.get_text().replace("10^", "") for i in cbar_ax.get_xticklabels()]
-            # cbar_ax.set_xticklabels(x_labels)
-            # save_name = os.path.join(runsavepath, "tracked_{}".format(output_num))
+            cbar = fig.colorbar(xz, cax=cbar_ax, pad=0, orientation="horizontal")
+            cbar_label = (
+                # r"$\mathrm{\log\:\:Surface\:Brightness}, "
+                r"$\mathrm{\lambda = 1500 \: \AA \:}$"
+                "\n"
+                r"$\mathrm{\left(erg \:\: s^{-1} \: \AA^{-1} \: pc^{-2} \right)} $"
+            )
+            cbar.set_label(
+                label=cbar_label,
+                fontsize=8,
+                labelpad=5,
+                # fontproperties=leg_font,
+            )
+            cbar.ax.xaxis.set_ticks_position("bottom")
+            cbar.ax.xaxis.set_label_position("top")
+            cbar_ax.tick_params(axis="both", direction="in", which="both")
+            cbar.ax.xaxis.set_tick_params(pad=2, labelsize=7)
+            # tick label mod
+            fig.canvas.draw()
+            x_labels = [
+                i.get_text().replace("10^", "") for i in cbar_ax.get_xticklabels()
+            ]
+            cbar_ax.set_xticklabels(x_labels)
+            save_name = os.path.join(runsavepath, "tracked_{}".format(output_num))
             # plt.subplots_adjust(hspace=-0.18, wspace=0)
             # add a scale
 
@@ -670,14 +675,26 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 # bbox=props,
             )
 
+            ax[0, 0].spines["left"].set_visible(False)
+            ax[0, 0].spines["top"].set_visible(False)
+            ax[0, 1].spines["top"].set_visible(False)
+            ax[0, 2].spines["top"].set_visible(False)
+            ax[0, 2].spines["right"].set_visible(False)
+
+            ax[1, 0].spines["left"].set_visible(False)
+            ax[1, 0].spines["bottom"].set_visible(False)
+            ax[1, 1].spines["bottom"].set_visible(False)
+            ax[1, 2].spines["bottom"].set_visible(False)
+            ax[1, 2].spines["right"].set_visible(False)
+
             plt.savefig(
                 os.path.expanduser(
                     (
-                        "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+                        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
                         "field_density_profile.png"
                     )
                 ),
                 dpi=500,
                 bbox_inches="tight",
-                pad_inches=0.05,
+                pad_inches=0.0,
             )
