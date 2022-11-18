@@ -351,7 +351,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                     f7_inset.imshow(
                         f7_lums / pxl_size,
                         cmap="inferno",
-                        # interpolation="gaussian",
+                        interpolation="gaussian",
                         origin="lower",
                         extent=[
                             -plt_wdth / 2,
@@ -365,7 +365,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                     f3_inset.imshow(
                         f3_lums / pxl_size,
                         cmap="inferno",
-                        # interpolation="gaussian",
+                        interpolation="gaussian",
                         origin="lower",
                         extent=[
                             -plt_wdth / 2,
