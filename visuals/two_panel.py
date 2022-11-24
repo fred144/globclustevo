@@ -183,9 +183,9 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
             {
                 "font.family": "serif",
                 "mathtext.fontset": "cm",
-                "xtick.labelsize": 10,
-                "ytick.labelsize": 10,
-                "font.size": 12,
+                "xtick.labelsize": 8,
+                "ytick.labelsize": 8,
+                "font.size": 10,
             }
         ):
             fig, ax = plt.subplots(
@@ -203,7 +203,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
             f7_lum_image = ax[0].imshow(
                 f7_lums / pxl_size,
                 cmap="inferno",
-                # interpolation="gaussian",
+                interpolation="gaussian",
                 origin="lower",
                 extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
                 norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
@@ -212,7 +212,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
             ax[1].imshow(
                 f3_lums / pxl_size,
                 cmap="inferno",
-                # interpolation="gaussian",
+                interpolation="gaussian",
                 origin="lower",
                 extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
                 norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
@@ -252,10 +252,11 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
             ax[0].yaxis.set_ticks_position("none")
 
             # add some scale bar
+
             scale = patches.Rectangle(
-                xy=(plt_wdth / 2 * 0.38, -plt_wdth / 2 * 0.78),
+                xy=(plt_wdth / 2 * 0.38, -plt_wdth / 2 * 0.80),
                 width=plt_wdth / 2 * 0.5,
-                height=0.025 * plt_wdth / 2,
+                height=0.020 * plt_wdth / 2,
                 linewidth=0,
                 edgecolor="white",
                 facecolor="white",
@@ -268,7 +269,6 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                 va="center",
                 color="white",
                 # fontproperties=leg_font,
-                fontsize=14,
             )
             ax[1].add_patch(scale)
 
@@ -289,7 +289,6 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                 ha="left",
                 va="top",
                 color="white",
-                fontsize=14,
                 transform=ax[0].transAxes,
                 bbox=box_style,
             )
@@ -301,7 +300,6 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                 ha="left",
                 va="top",
                 color="white",
-                fontsize=14,
                 transform=ax[0].transAxes,
                 bbox=box_style,
             )
@@ -312,7 +310,6 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                 ha="left",
                 va="top",
                 color="white",
-                fontsize=14,
                 transform=ax[1].transAxes,
                 bbox=box_style,
             )
@@ -328,7 +325,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                     }
                 ):
                     f7_inset = ax[0].inset_axes([0.05, 0.05, 0.30, 0.30])
-                    f3_inset = ax[1].inset_axes([0.05, 0.65, 0.30, 0.30])
+                    f3_inset = ax[1].inset_axes([0.05, 0.05, 0.30, 0.30])
                     inset_width = 40
                     f7_inset.set(
                         xlim=(-inset_width / 2, inset_width / 2),
@@ -422,16 +419,16 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                         ha="center",
                         va="center",
                         color="white",
-                        fontsize=12,
                     )
+
                     f7_inset.add_patch(scale_ins)
 
-                    # mark_inset(
-                    #     ax[0], f7_inset, loc1=2, loc2=4, edgecolor="white", alpha=0.4
-                    # )
-                    # mark_inset(
-                    #     ax[1], f3_inset, loc1=1, loc2=3, edgecolor="white", alpha=0.4
-                    # )
+                    mark_inset(
+                        ax[0], f7_inset, loc1=2, loc2=4, edgecolor="white", alpha=0.4
+                    )
+                    mark_inset(
+                        ax[1], f3_inset, loc1=2, loc2=4, edgecolor="white", alpha=0.4
+                    )
 
                     # time series line plots
                     # time_series_ax_f7 = ax[0].inset_axes([0.56, 0.10, 0.40, 0.2])
@@ -564,22 +561,24 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                 f7_gas_image, cax=dens_cbar_ax, pad=-1, orientation="horizontal"
             )
             dens_cbar.set_label(
-                label=r"$\log_{10} \: \mathrm{Surface \:Density\:(g \: cm^{-2})}$",
-                fontsize=15,
+                label=r"$\log \: \mathrm{Surface \:Density\:(g \: cm^{-2})}$" "\n",
+                fontsize=12,
                 labelpad=5,
             )
-            dens_cbar.ax.xaxis.set_tick_params(pad=2, labelsize=12)
+            dens_cbar.ax.xaxis.set_tick_params(pad=2)
 
             lums_cbar = fig.colorbar(
                 f7_lum_image, cax=lums_cbar_ax, pad=-1, orientation="horizontal"
             )
             lums_cbar.set_label(
-                label=r"$\log_{10} \: \mathrm{\lambda = 1500 \: \AA \:}$"  # r"$\mathrm{Surface\:Brightness}$"
-                r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$",
-                fontsize=15,
+                label=r"$\log \: \mathrm{\lambda = 1500 \: \AA \:}$"
+                # r"$\mathrm{Surface\:Brightness}$"
+                # r"$\mathrm{Integrated\:Brightness}$"
+                r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$" "\n",
+                fontsize=12,
                 labelpad=5,
             )
-            lums_cbar.ax.xaxis.set_tick_params(pad=2, labelsize=12)
+            lums_cbar.ax.xaxis.set_tick_params(pad=2)
             fig.canvas.draw()
 
             x_labels = [
@@ -599,7 +598,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     )
     plt.savefig(
         os.path.expanduser(output_path),
-        dpi=300,
+        dpi=400,
         bbox_inches="tight",
         pad_inches=0.05,
     )
