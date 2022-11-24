@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #SBATCH -J gas_renderer
 #SBATCH --ntasks=2
 #SBATCH --cpus-per-task=16
