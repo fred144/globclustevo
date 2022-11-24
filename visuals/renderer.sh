@@ -10,12 +10,14 @@
 
 # designed to be submitted/ ran in the script directory
 export LANG=en_US
+module unload intel
+module unload intel-mpi
 module load gcc
 module load openmpi
 source ~/py-virtual-envs/master/bin/activate
 
 #SCRIPT="/lustre/fgarcia4/glob_clust_evo/visuals/fs070_gas_panel_projection.py"
-SCRIPT= "/lustre/fgarcia4/glob_clust_evo/visuals/two_panel_sfr.py"
+SCRIPT= "/scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/visuals/two_panel_sfr.py"
 
 # number of cores specified above
 #mpirun python3 $SCRIPT  2>&1 
