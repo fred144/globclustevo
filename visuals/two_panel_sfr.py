@@ -1,10 +1,10 @@
 import sys
 
 sys.path.append("../")
-sys.path.insert(
-    1,
-    "/scratch/zt1/project/ricotti-prj/user/fgarcia4/master/lib/python3.7/site-packages",
-)
+# sys.path.insert(
+#     1,
+#     "/scratch/zt1/project/ricotti-prj/user/fgarcia4/master/lib/python3.7/site-packages",
+# )
 import numpy as np
 import os
 import glob
