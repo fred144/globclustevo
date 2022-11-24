@@ -22,9 +22,9 @@ if not os.path.exists(runsavepath):
 
 
 f7_strt = 113
-f7_end = 1196
+f7_end = 1318
 f3_strt = 154
-f3_end = 1368
+f3_end = 1469
 step = 1
 
 f7_pop2 = filter_snapshots(
@@ -46,9 +46,9 @@ f7_pop2_matched, f7_matched_nums = find_matching_time(
 f7_halo_matched = get_snapshots(snapshot_file_list=f7_halo_ds, get_list=f7_matched_nums)
 
 # sampple idxs
-prof_start = 1213
-prof_end = 1214
-prof_step = 1
+prof_start = 1240
+prof_end = 1241
+prof_step = 10
 
 fs070_p2 = f7_pop2_matched[prof_start:prof_end:prof_step]
 fs070_ds = f7_halo_matched[prof_start:prof_end:prof_step]
@@ -57,7 +57,7 @@ fs035_ds = f3_halo[prof_start:prof_end:prof_step]
 
 # change font for entire module
 # mpl.rc("font", family="serif")
-
+#%%
 
 profile_plot_bins = 20
 radius = 200
@@ -65,7 +65,7 @@ star_bins = 1000
 pxl_size = (radius * 2 / star_bins) ** 2
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
-efficiencies = ["$f_{*} = 0.70$", "$f_{*} = 0.35$"]
+efficiencies = ["$\mathrm{high-SFE}$", "$\mathrm{low-SFE}$"]
 # eff_lcolor = [cmap[0], cmap[2]]
 # eff_errcol = [cmap[1], cmap[3]]
 # eff_lcolor = ["white", "white"]
@@ -119,7 +119,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 output_num = int(ds.split("/")[-1].split("_")[-1])
                 t_myr = np.loadtxt(p2, max_rows=2)[0, 6]
                 redshift = np.loadtxt(p2, max_rows=2)[1, 6]
-
+                print(t_myr)
                 field_stars = np.loadtxt(os.path.join(ds, "field_stars.txt"))
                 x = field_stars[:, 3]
                 y = field_stars[:, 4]
@@ -388,8 +388,14 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 #     alpha=1,
                 #     c="white",
                 # )
+                col0_fit.plot(xy_r, xy_rho, color=data_clr, alpha=0.8)
                 col0_fit.fill_between(
-                    xy_r, xy_rho - xy_err, xy_rho + xy_err, color=data_clr, alpha=0.5
+                    xy_r,
+                    xy_rho - xy_err,
+                    xy_rho + xy_err,
+                    color=data_clr,
+                    alpha=0.5,
+                    linewidth=0.0,
                 )
                 col0_fit.plot(
                     xy_theory_r,
@@ -423,8 +429,14 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 #     alpha=1,
                 #     c="white",
                 # )
+                col1_fit.plot(xz_r, xz_rho, color=data_clr, alpha=0.8)
                 col1_fit.fill_between(
-                    xz_r, xz_rho - xz_err, xz_rho + xz_err, color=data_clr, alpha=0.5
+                    xz_r,
+                    xz_rho - xz_err,
+                    xz_rho + xz_err,
+                    color=data_clr,
+                    alpha=0.5,
+                    linewidth=0.0,
                 )
                 col1_fit.plot(
                     xz_theory_r,
@@ -458,9 +470,14 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 #     alpha=1,
                 #     c="white",
                 # )
-
+                col2_fit.plot(yz_r, yz_rho, color=data_clr, alpha=0.8)
                 col2_fit.fill_between(
-                    yz_r, yz_rho - yz_err, yz_rho + yz_err, color=data_clr, alpha=0.5
+                    yz_r,
+                    yz_rho - yz_err,
+                    yz_rho + yz_err,
+                    color=data_clr,
+                    alpha=0.5,
+                    linewidth=0.0,
                 )
 
                 col2_fit.plot(
@@ -560,16 +577,6 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 col1_fit.set_yticklabels(y_labels)
                 col2_fit.set_yticklabels(y_labels)
 
-                # col2_fit .legend(
-                #     loc="lower left",
-                #     framealpha=0.6,
-                #     edgecolor="k",
-                #     fontsize=8,
-                #     prop=leg_font,
-                #     handlelength=0,
-                #     handletextpad=0,
-                # )
-
                 ax[i, 0].set(xlim=(-radius, radius), xticklabels=[], yticklabels=[])
                 ax[i, 1].set(xlim=(-radius, radius), xticklabels=[], yticklabels=[])
                 ax[i, 2].set(xlim=(-radius, radius), xticklabels=[], yticklabels=[])
@@ -577,37 +584,28 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                     ax[i, column].xaxis.set_ticks_position("none")
                     ax[i, column].yaxis.set_ticks_position("none")
 
-                eff_prop = dict(
-                    boxstyle="round",
-                    facecolor="white",
-                    alpha=0.5,
-                    linewidth=0.8,
-                    edgecolor="grey",
+                # efficiencies
+                col2_fit.text(
+                    0.95,
+                    0.05,
+                    eff_label,
+                    ha="right",
+                    va="bottom",
+                    color="white",
+                    transform=ax[i, 2].transAxes,
+                    fontsize=10,
+                    # fontproperties=leg_font,
+                    # bbox=props,
                 )
 
-                # add efficiency label
-                # ax[i, 2].text(
-                #     0.9,
-                #     0.9,
-                #     eff_label,
-                #     # size=10,
-                #     ha="right",
-                #     va="top",
-                #     color="white",
-                #     transform=ax[i, 2].transAxes,
-                #     fontproperties=leg_font,
-                #     # bbox=props,
-                # )
-
             # add the luminosity color bar
-            # fig.subplots_adjust(wspace=0, hspace=0, bottom=0.1)
-            cbar_ax = ax[1, 2].inset_axes([0.50, 0.10, 0.40, 0.05])
             # [left, bottom, width, height]
-            # cbar_ax = fig.add_axes([0.125, 0.8525, 0.775, 0.008])
+            cbar_ax = ax[1, 0].inset_axes([0.1, 0.85, 0.40, 0.05])
+
             cbar = fig.colorbar(xz, cax=cbar_ax, pad=0, orientation="horizontal")
             cbar_label = (
                 # r"$\mathrm{\log\:\:Surface\:Brightness}, "
-                r"$\mathrm{\lambda = 1500 \: \AA \:}$"
+                r"$\mathrm{\log_{10} \: \lambda = 1500 \: \AA \:}$"
                 "\n"
                 r"$\mathrm{\left(erg \:\: s^{-1} \: \AA^{-1} \: pc^{-2} \right)} $"
             )
@@ -628,15 +626,8 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             ]
             cbar_ax.set_xticklabels(x_labels)
             save_name = os.path.join(runsavepath, "tracked_{}".format(output_num))
-            # plt.subplots_adjust(hspace=-0.18, wspace=0)
+
             # add a scale
-
-            # ax[0, 0].set_ylabel(
-            #     (r"$ \mathrm{100 \: pc}$" "\n"),
-            #     fontproperties=leg_font,
-            #     fontsize=12,
-            # )
-
             rect = patches.Rectangle(
                 xy=(50, -radius * 0.8),
                 width=100,

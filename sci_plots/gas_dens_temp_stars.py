@@ -170,6 +170,7 @@ with plt.rc_context(
             cmap=dens_cmap,
             norm=LogNorm(dense_norm[0], dense_norm[1]),
             origin="lower",
+            interpolation="gaussian",
         )
         dens_proj_f3 = ax[i, 3].imshow(
             f3_dens,
@@ -177,6 +178,7 @@ with plt.rc_context(
             cmap=dens_cmap,
             norm=LogNorm(dense_norm[0], dense_norm[1]),
             origin="lower",
+            interpolation="gaussian",
         )
 
         temp_proj_f7 = ax[i, 1].imshow(
@@ -185,6 +187,7 @@ with plt.rc_context(
             cmap=temp_cmap,
             norm=LogNorm(temp_norm[0], temp_norm[1]),
             origin="lower",
+            interpolation="gaussian",
         )
         temp_proj_f3 = ax[i, 4].imshow(
             f3_temp,
@@ -192,6 +195,7 @@ with plt.rc_context(
             cmap=temp_cmap,
             norm=LogNorm(temp_norm[0], temp_norm[1]),
             origin="lower",
+            interpolation="gaussian",
         )
 
         # annotate with stars using a loop
@@ -262,7 +266,7 @@ with plt.rc_context(
                     "boxstyle": "Square",
                     # have control over edge alpha and face alpha
                     "facecolor": colors.to_rgba("black")[:-1] + (0.5,),
-                    "linewidth": 0.5,
+                    "linewidth": 0,
                     "edgecolor": "white",
                     # "pad": 0.42,
                 },
@@ -309,6 +313,7 @@ with plt.rc_context(
     # add color bars
 
     dens_cbar_ax = fig.add_axes([0.135, 0.108, 0.25, 0.012])
+    dens_cbar_ax.tick_params(axis="both", direction="in", which="both")
     dens_cbar = fig.colorbar(
         dens_proj_f7, cax=dens_cbar_ax, pad=0, orientation="horizontal"
     )
@@ -329,6 +334,7 @@ with plt.rc_context(
     dens_cbar_ax.set_xticklabels(x_labels)
 
     temp_cbar_ax = fig.add_axes([0.389, 0.108, 0.25, 0.012])
+    temp_cbar_ax.tick_params(axis="both", direction="in", which="both")
     temp_cbar = fig.colorbar(
         temp_proj_f3, cax=temp_cbar_ax, pad=0, orientation="horizontal"
     )
@@ -347,6 +353,7 @@ with plt.rc_context(
     temp_cbar_ax.set_xticklabels(x_labels)
 
     star_cbar_ax = fig.add_axes([0.642, 0.108, 0.25, 0.012])
+    star_cbar_ax.tick_params(axis="both", direction="in", which="both")
     star_cb = mpl.colorbar.ColorbarBase(
         star_cbar_ax,
         norm=mpl.colors.Normalize(star_t_range[0], star_t_range[1]),
@@ -371,7 +378,7 @@ plt.savefig(
     os.path.expanduser(
         (
             "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
-            "projected_gas.png"
+            "gas_dens_temp_stars.png"
         )
     ),
     dpi=500,

@@ -434,135 +434,137 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                     # )
 
                     # time series line plots
-                    time_series_ax_f7 = ax[0].inset_axes([0.56, 0.10, 0.40, 0.2])
-                    time_series_ax_f3 = ax[1].inset_axes([0.10, 0.10, 0.40, 0.2])
-                    time_series_ax_f7.spines["right"].set_visible(False)
-                    time_series_ax_f7.spines["top"].set_visible(False)
-                    time_series_ax_f3.spines["right"].set_visible(False)
-                    time_series_ax_f3.spines["top"].set_visible(False)
-                    time_series_ax_f7.patch.set_alpha(0.5)
-                    time_series_ax_f3.patch.set_alpha(0.5)
+                    # time_series_ax_f7 = ax[0].inset_axes([0.56, 0.10, 0.40, 0.2])
+                    # time_series_ax_f3 = ax[1].inset_axes([0.10, 0.10, 0.40, 0.2])
+                    # time_series_ax_f7.spines["right"].set_visible(False)
+                    # time_series_ax_f7.spines["top"].set_visible(False)
+                    # time_series_ax_f3.spines["right"].set_visible(False)
+                    # time_series_ax_f3.spines["top"].set_visible(False)
+                    # time_series_ax_f7.patch.set_alpha(0.5)
+                    # time_series_ax_f3.patch.set_alpha(0.5)
 
-                    f7_lum_field = f7_series[:, 5]
-                    f7_lum_bound = f7_series[:, 4]
-                    f3_lum_field = f3_series[:, 5]
-                    f3_lum_bound = f3_series[:, 4]
+                    # f7_lum_field = f7_series[:, 5]
+                    # f7_lum_bound = f7_series[:, 4]
+                    # f3_lum_field = f3_series[:, 5]
+                    # f3_lum_bound = f3_series[:, 4]
 
-                    f7_time_mask = f7_series[:, 0] <= f7_t_myr
-                    f3_time_mask = f3_series[:, 0] <= f3_t_myr
+                    # f7_time_mask = f7_series[:, 0] <= f7_t_myr
+                    # f3_time_mask = f3_series[:, 0] <= f3_t_myr
 
-                    time_series_ax_f7.plot(
-                        f7_series[:, 0][f7_time_mask],
-                        (f7_lum_bound + f7_lum_field)[f7_time_mask],
-                        color=cmap[0],
-                        label="Total",
-                    )
-                    time_series_ax_f7.plot(
-                        f7_series[:, 0][f7_time_mask],
-                        f7_lum_bound[f7_time_mask],
-                        color=cmap[1],
-                        label="Bound",
-                        alpha=0.8,
-                    )
-                    time_series_ax_f3.plot(
-                        f3_series[:, 0][f3_time_mask],
-                        (f3_lum_bound + f3_lum_field)[f3_time_mask],
-                        color=cmap[2],
-                        label="Total",
-                    )
-                    time_series_ax_f3.plot(
-                        f3_series[:, 0][f3_time_mask],
-                        f3_lum_bound[f3_time_mask],
-                        color=cmap[3],
-                        label="Bound",
-                        alpha=0.8,
-                    )
-                    # after current times
-                    time_series_ax_f7.plot(
-                        f7_series[:, 0][~f7_time_mask],
-                        (f7_lum_bound + f7_lum_field)[~f7_time_mask],
-                        alpha=0.5,
-                        color="grey",
-                    )
-                    time_series_ax_f7.plot(
-                        f7_series[:, 0][~f7_time_mask],
-                        f7_lum_bound[~f7_time_mask],
-                        alpha=0.5,
-                        color="grey",
-                    )
-                    time_series_ax_f3.plot(
-                        f3_series[:, 0][~f3_time_mask],
-                        (f3_lum_bound + f3_lum_field)[~f3_time_mask],
-                        alpha=0.5,
-                        color="grey",
-                    )
-                    time_series_ax_f3.plot(
-                        f3_series[:, 0][~f3_time_mask],
-                        f3_lum_bound[~f3_time_mask],
-                        alpha=0.5,
-                        color="grey",
-                    )
+                    # time_series_ax_f7.plot(
+                    #     f7_series[:, 0][f7_time_mask],
+                    #     (f7_lum_bound + f7_lum_field)[f7_time_mask],
+                    #     color=cmap[0],
+                    #     label="Total",
+                    # )
+                    # time_series_ax_f7.plot(
+                    #     f7_series[:, 0][f7_time_mask],
+                    #     f7_lum_bound[f7_time_mask],
+                    #     color=cmap[1],
+                    #     label="Bound",
+                    #     alpha=0.8,
+                    # )
+                    # time_series_ax_f3.plot(
+                    #     f3_series[:, 0][f3_time_mask],
+                    #     (f3_lum_bound + f3_lum_field)[f3_time_mask],
+                    #     color=cmap[2],
+                    #     label="Total",
+                    # )
+                    # time_series_ax_f3.plot(
+                    #     f3_series[:, 0][f3_time_mask],
+                    #     f3_lum_bound[f3_time_mask],
+                    #     color=cmap[3],
+                    #     label="Bound",
+                    #     alpha=0.8,
+                    # )
+                    # # after current times
+                    # time_series_ax_f7.plot(
+                    #     f7_series[:, 0][~f7_time_mask],
+                    #     (f7_lum_bound + f7_lum_field)[~f7_time_mask],
+                    #     alpha=0.5,
+                    #     color="grey",
+                    # )
+                    # time_series_ax_f7.plot(
+                    #     f7_series[:, 0][~f7_time_mask],
+                    #     f7_lum_bound[~f7_time_mask],
+                    #     alpha=0.5,
+                    #     color="grey",
+                    # )
+                    # time_series_ax_f3.plot(
+                    #     f3_series[:, 0][~f3_time_mask],
+                    #     (f3_lum_bound + f3_lum_field)[~f3_time_mask],
+                    #     alpha=0.5,
+                    #     color="grey",
+                    # )
+                    # time_series_ax_f3.plot(
+                    #     f3_series[:, 0][~f3_time_mask],
+                    #     f3_lum_bound[~f3_time_mask],
+                    #     alpha=0.5,
+                    #     color="grey",
+                    # )
 
-                    time_series_ax_f7.grid(
-                        visible=True,
-                        which="major",
-                        axis="y",
-                        ls=":",
-                        color="white",
-                        zorder=0.5,
-                        alpha=0.8,
-                    )
+                    # time_series_ax_f7.grid(
+                    #     visible=True,
+                    #     which="major",
+                    #     axis="y",
+                    #     ls=":",
+                    #     color="white",
+                    #     zorder=0.5,
+                    #     alpha=0.8,
+                    # )
 
-                    time_series_ax_f7.set(
-                        yscale="log",
-                        xlabel="$\mathrm{time\:(Myr)}$",
-                        ylim=(2e35, 1e39),
-                        xlim=(f7_series[:, 0].min(), f7_series[:, 0].max()),
-                    )
-                    time_series_ax_f7.set_title(
-                        r"$\mathrm{L_{\lambda = 1500 \: \AA \:}}\:$"
-                        r"$\left(\mathrm{erg} \:\mathrm{s}^{-1} \:\mathrm{\AA}^{-1}\right)$",
-                        fontsize=10,
-                    )
-                    time_series_ax_f3.grid(
-                        visible=True,
-                        which="major",
-                        axis="y",
-                        ls=":",
-                        color="white",
-                        zorder=0.5,
-                        alpha=0.8,
-                    )
-                    time_series_ax_f3.set(
-                        yscale="log",
-                        xlabel="$\mathrm{time\:(Myr)}$",
-                        ylim=(2e35, 1e39),
-                        xlim=(f3_series[:, 0].min(), f3_series[:, 0].max()),
-                    )
-                    time_series_ax_f3.set_title(
-                        r"$\mathrm{L_{\lambda = 1500 \: \AA \:}}\:$"
-                        r"$\left(\mathrm{erg} \:\mathrm{s}^{-1} \:\mathrm{\AA}^{-1}\right)$",
-                        fontsize=10,
-                    )
-                    f7_leg = time_series_ax_f7.legend(
-                        loc="lower right", ncol=2, fontsize=8
-                    )
-                    f3_leg = time_series_ax_f3.legend(
-                        loc="lower right", ncol=2, fontsize=8
-                    )
+                    # time_series_ax_f7.set(
+                    #     yscale="log",
+                    #     xlabel="$\mathrm{time\:(Myr)}$",
+                    #     ylim=(2e35, 1e39),
+                    #     xlim=(f7_series[:, 0].min(), f7_series[:, 0].max()),
+                    # )
+                    # time_series_ax_f7.set_title(
+                    #     r"$\mathrm{L_{\lambda = 1500 \: \AA \:}}\:$"
+                    #     r"$\left(\mathrm{erg} \:\mathrm{s}^{-1} \:\mathrm{\AA}^{-1}\right)$",
+                    #     fontsize=10,
+                    # )
+                    # time_series_ax_f3.grid(
+                    #     visible=True,
+                    #     which="major",
+                    #     axis="y",
+                    #     ls=":",
+                    #     color="white",
+                    #     zorder=0.5,
+                    #     alpha=0.8,
+                    # )
+                    # time_series_ax_f3.set(
+                    #     yscale="log",
+                    #     xlabel="$\mathrm{time\:(Myr)}$",
+                    #     ylim=(2e35, 1e39),
+                    #     xlim=(f3_series[:, 0].min(), f3_series[:, 0].max()),
+                    # )
+                    # time_series_ax_f3.set_title(
+                    #     r"$\mathrm{L_{\lambda = 1500 \: \AA \:}}\:$"
+                    #     r"$\left(\mathrm{erg} \:\mathrm{s}^{-1} \:\mathrm{\AA}^{-1}\right)$",
+                    #     fontsize=10,
+                    # )
+                    # f7_leg = time_series_ax_f7.legend(
+                    #     loc="lower right", ncol=2, fontsize=8
+                    # )
+                    # f3_leg = time_series_ax_f3.legend(
+                    #     loc="lower right", ncol=2, fontsize=8
+                    # )
 
-                    f7_leg.get_frame().set_alpha(0)
-                    f3_leg.get_frame().set_alpha(0)
+                    # f7_leg.get_frame().set_alpha(0)
+                    # f3_leg.get_frame().set_alpha(0)
 
             # declar the color bar axes
             dens_cbar_ax = ax[1].inset_axes([0, -0.035, 1, 0.035])
             lums_cbar_ax = ax[0].inset_axes([0, -0.035, 1, 0.035])
+            dens_cbar_ax.tick_params(axis="both", direction="in", which="both")
+            lums_cbar_ax.tick_params(axis="both", direction="in", which="both")
 
             dens_cbar = fig.colorbar(
                 f7_gas_image, cax=dens_cbar_ax, pad=-1, orientation="horizontal"
             )
             dens_cbar.set_label(
-                label=r"$\mathrm{Surface \:Density\:(g \: cm^{-2})}$",
+                label=r"$\log_{10} \: \mathrm{Surface \:Density\:(g \: cm^{-2})}$",
                 fontsize=15,
                 labelpad=5,
             )
@@ -572,13 +574,22 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                 f7_lum_image, cax=lums_cbar_ax, pad=-1, orientation="horizontal"
             )
             lums_cbar.set_label(
-                label=r"$\mathrm{Surface\:Brightness}$"
-                r"$\: \mathrm{\lambda = 1500 \: \AA \:}$"
+                label=r"$\log_{10} \: \mathrm{\lambda = 1500 \: \AA \:}$"  # r"$\mathrm{Surface\:Brightness}$"
                 r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$",
                 fontsize=15,
                 labelpad=5,
             )
             lums_cbar.ax.xaxis.set_tick_params(pad=2, labelsize=12)
+            fig.canvas.draw()
+
+            x_labels = [
+                i.get_text().replace("10^", "") for i in dens_cbar_ax.get_xticklabels()
+            ]
+            dens_cbar_ax.set_xticklabels(x_labels)
+            x_labels = [
+                i.get_text().replace("10^", "") for i in lums_cbar_ax.get_xticklabels()
+            ]
+            lums_cbar_ax.set_xticklabels(x_labels)
 
     output_path = os.path.join(
         sequence_dir,
