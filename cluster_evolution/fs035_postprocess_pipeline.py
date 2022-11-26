@@ -5,7 +5,11 @@ built up thus far. Not optimized at all.
 
 import sys
 
-sys.path.insert(1, "/homes/fgarcia4/py-virtual-envs/master/lib/python3.7/site-packages")
+sys.path.insert(
+    1,
+    "/scratch/zt1/project/ricotti-prj/user/fgarcia4/master/lib/python3.7/site-packages",
+)
+# sys.path.insert(1, "/homes/fgarcia4/py-virtual-envs/master/lib/python3.7/site-packages")
 sys.path.append("..")  # makes sure that importing the modules work
 
 from modules.luminosity.lum_functions import unpack_pop_ii_data
@@ -31,8 +35,8 @@ print("=========================================================================
 simulation_run = "fs035_ms10"
 finder_profiler_run = "fof_best"
 processor_number = 0  # 0 means one process unparalleled
-start_step = 1368
-end_step = 1469
+start_step = 1469
+end_step = 1575
 step = 1
 absolute_start = 154
 
@@ -47,8 +51,11 @@ t_series_proc = True
 # parent_folder = "../rendering"
 # sequence_folder = "test_frames"
 # ===================================dt2 paths=================================
+# datadir = os.path.expanduser(
+#     "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
+# ).format(simulation_run)
 datadir = os.path.expanduser(
-    "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
+    "/scratch/dt2/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"
 ).format(simulation_run)
 # ===================================save path=================================
 

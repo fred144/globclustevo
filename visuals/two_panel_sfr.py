@@ -84,11 +84,11 @@ fs035_halo_f = get_snapshots(
     ),
     get_list=f3_nums,
 )
+f7_snap_f = get_snapshots(fs070_snap_dir, get_list=f7_nums)
+f3_snap_f = get_snapshots(fs035_snap_dir, get_list=f3_nums)
 
 # get SFR data
 bin_width_myr = 1  # interpolation equal width
-f7_snap_f = get_snapshots(fs070_snap_dir, get_list=f7_nums)
-f3_snap_f = get_snapshots(fs035_snap_dir, get_list=f3_nums)
 f7_series = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
 f3_series = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
 redshift_hi = f7_series[:, 2]

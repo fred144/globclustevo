@@ -161,15 +161,12 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 
     f7_vars = [
         f7_core_rad[f7_mask],
-        f7_half_mass_rad[f7_mask],
         f7_sig_0[f7_mask],
         f7_alpha[f7_mask],
         (f7_mass / f7_orig_mass)[f7_mask],
-        f7_half_mass_rad[f7_mask],
     ]
     f3_vars = [
         f3_core_rad[f3_mask],
-        f3_half_mass_rad[f3_mask],
         f3_sig_0[f3_mask],
         f3_alpha[f3_mask],
         (f3_mass / f3_orig_mass)[f3_mask],
@@ -177,18 +174,14 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 
     labels = [
         r"$R_\mathrm{{core}}\:\mathrm{(pc)}$",
-        r"$R_\mathrm{{half}}\:\mathrm{(pc)}$",
         r"$\Sigma_0\:\mathrm{\left(M_{\odot}\:pc^{-2}\right)}$",
         r"$\alpha$",
-        r"$\mathrm{M_{BSC}\: / \: M_{SC} }$",
+        r"$\mathrm{M_{BSC}\: / \: M_{SFC} }$",
     ]
 
     # hist_ranges = [(0, 2), (10, 800), (1.5, 5), (0, 1)]
     num_bins = 15
     bins = [
-        np.geomspace(
-            f3_half_mass_rad[f3_mask].min(), f3_half_mass_rad[f3_mask].max(), num_bins
-        ),
         np.geomspace(f3_core_rad[f3_mask].min(), f3_core_rad[f3_mask].max(), num_bins),
         np.geomspace(f3_sig_0[f3_mask].min(), f3_sig_0[f3_mask].max(), num_bins),
         np.linspace(f3_alpha[f3_mask].min(), f3_alpha[f3_mask].max(), num_bins),
@@ -209,10 +202,10 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     ):
 
         fig, ax = plt.subplots(
-            nrows=3,
+            nrows=2,
             ncols=2,
             sharey="row",
-            figsize=(3.5, 6.0),
+            figsize=(4, 4.3),
             dpi=300,
         )
         plt.subplots_adjust(wspace=0, hspace=0.4)
@@ -220,7 +213,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 
         for i, (f7_var, f3_var) in enumerate(zip(f7_vars, f3_vars)):
 
-            ax[i + 1].hist(
+            ax[i].hist(
                 f3_var,
                 bins=bins[i],
                 color=fs35_color,
@@ -232,7 +225,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 label=r"$0.35$",
             )
 
-            ax[i + 1].hist(
+            ax[i].hist(
                 f7_var,
                 bins=bins[i],
                 color=fs70_color,
@@ -243,16 +236,13 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 linewidth=2,
                 label=r"$0.70$",
             )
-            if i == 3:
-                ax[i + 1].set_yscale("log")
+            if i == 2:
+                ax[i].set_yscale("log")
 
             else:
-                ax[i + 1].set_xscale("log")
-                ax[i + 1].set_yscale("log")
-
-            ax[i + 1].set_ylim(0.8, 50)
-            ax[i + 1].tick_params(axis="both", direction="in", which="both")
-
+                ax[i].set_xscale("log")
+                ax[i].set_yscale("log")
+            ax[i].set_ylim(0.8, 50)
             # f7_count, f7_bin_edges = np.histogram(f7_var, hist_bins, hist_ranges[i])
             # f7_right_edges = f7_bin_edges[1:]
             # f7_left_edges = f7_bin_edges[:-1]
@@ -299,23 +289,19 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             # ax[i].set_xlim(left=f7_bin_ctrs[0], right=f7_bin_ctrs[-1])
             # ax[i].set_ylim(bottom=0, top=25)
 
-            ax[i + 1].set_xlabel(labels[i])
+            ax[i].set_xlabel(labels[i])
 
-        ax[0].axis("off")
+        # ax[0].set_ylabel(r"$\mathrm{Number\:\:of\:\:BSCs}$")
 
         leg = ax[1].legend(
-            title=r"$\mathrm{{t = {:.1f} \: Myr}}$"
-            "\n"
-            "$\;\;\;\;\; \mathrm{{SFE}} \: (f_{{*}})$".format(f3_t_myr),
+            title="$\mathrm{SFE} \: (f_{*})$",
             loc="upper center",
-            # ncol=2,
-            title_fontsize=10,
-            fontsize=10,
-            bbox_to_anchor=(-0.5, 0.9),
+            ncol=2,
+            title_fontsize=8,
+            fontsize=8,
+            bbox_to_anchor=(0.0, 1.02),
         )
-        # leg._legend_box.align = "center"
-        leg.get_frame().set_edgecolor("black")
-        leg.get_frame().set_boxstyle("square")
+        # leg.get_frame().set_edgecolor("grey")
         # ax[2].text(
         #     0.06,
         #     0.92,
@@ -334,24 +320,23 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         #         # "pad": 0.42,
         #     },
         # )
-        # ax[0].text(
-        #     0.5,
-        #     0.25,
-        #     (r"$\mathrm{{t = {:.1f} \: Myr}}$").format(f3_t_myr),
-        #     ha="center",
-        #     va="top",
-        #     color="black",
-        #     fontsize=8,
-        #     bbox={
-        #         "boxstyle": "square",
-        #         # have control over edge alpha and face alpha
-        #         "facecolor": "white",
-        #         "linewidth": 0.5,
-        #         "edgecolor": "black",
-        #         # "pad": 0.42,
-        #     },
-        #     transform=ax[0].transAxes,
-        # )
+        fig.text(
+            0.5,
+            0.45,
+            (r"$\mathrm{{t = {:.1f} \: Myr}}$").format(f3_t_myr),
+            ha="center",
+            va="top",
+            color="black",
+            fontsize=8,
+            bbox={
+                "boxstyle": "Round",
+                # have control over edge alpha and face alpha
+                "facecolor": "white",
+                "linewidth": 0.5,
+                "edgecolor": "grey",
+                # "pad": 0.42,
+            },
+        )
         fig.text(
             0.01,
             0.5,
