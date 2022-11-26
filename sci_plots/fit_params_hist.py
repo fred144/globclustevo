@@ -180,7 +180,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         r"$R_\mathrm{{half}}\:\mathrm{(pc)}$",
         r"$\Sigma_0\:\mathrm{\left(M_{\odot}\:pc^{-2}\right)}$",
         r"$\alpha$",
-        r"$\mathrm{M_{BSC}\: / \: M_{MC M_*} }$",
+        r"$\mathrm{M_{BSC}\: / \: M_{SC} }$",
     ]
 
     # hist_ranges = [(0, 2), (10, 800), (1.5, 5), (0, 1)]
