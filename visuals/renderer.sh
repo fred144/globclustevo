@@ -14,7 +14,7 @@ module unload intel
 module unload intel-mpi
 module load gcc
 module load openmpi
-source ~/py-virtual-envs/master/bin/activate
+# source ~/py-virtual-envs/master/bin/activate
 
 #SCRIPT="/lustre/fgarcia4/glob_clust_evo/visuals/fs070_gas_panel_projection.py"
 SCRIPT= "/scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/visuals/two_panel_sfr.py"

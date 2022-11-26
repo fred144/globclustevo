@@ -191,6 +191,10 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                     ax.set_yticklabels([])
                     ax.xaxis.set_ticks_position("none")
                     ax.yaxis.set_ticks_position("none")
+                    ax.spines["left"].set_visible(False)
+                    ax.spines["top"].set_visible(False)
+                    ax.spines["bottom"].set_visible(False)
+                    ax.spines["right"].set_visible(False)
 
                     # draw inset
                     axins = ax.inset_axes([0.10, 0.65, 0.25, 0.25])
@@ -249,6 +253,10 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         }
                     ):
                         ax_prof_ins = ax.inset_axes([0.10, 0.15, 0.25, 0.25])
+                        ax_prof_ins.tick_params(
+                            axis="both", direction="in", which="both"
+                        )
+
                     r, rho, err, _, _, _, half_r = projected_surf_densities(
                         x_coord=halo_x,
                         y_coord=halo_y,
@@ -327,6 +335,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                     ax_prof_ins.set_xlim(left=0.010, right=20)
                     ax_prof_ins.set_xscale("log")
                     ax_prof_ins.set_yscale("log")
+
                     # ax_prof_ins.yaxis.set_major_locator(MaxNLocator(5))
                     ax_prof_ins.yaxis.set_major_locator(
                         mpl.ticker.LogLocator(base=10, numticks=10)
@@ -438,7 +447,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         va="bottom",
                         color="white",
                         fontproperties=leg_font,
-                        bbox=props,
+                        # bbox=props,
                     )
                     if idx == 0:
 
@@ -452,7 +461,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                             va="top",
                             color="white",
                             fontproperties=leg_font,
-                            bbox=props,
+                            # bbox=props,
                         )
                         # !!! add the luminosity color bar
                         # [left, bottom, width, height]
@@ -460,23 +469,25 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         cbar = fig.colorbar(
                             xy, cax=cbar_ax, pad=0, orientation="horizontal"
                         )
-                        cbar_units = (
+                        # cbar_units = (
+                        #     r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
+                        # )
+                        cbar_label = (
+                            # r"$\mathrm{Surface\: Brightness}$"
+                            r"$\mathrm{\lambda = 1500 \: \AA \:}$"
                             r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
                         )
-                        cbar_label = (
-                            r"$\mathrm{Surface\: Brightness}$"
-                            r"$, \mathrm{\lambda = 1500 \: \AA \:}$"
-                        )
-                        cbar.set_label(
-                            label=cbar_units,
-                            labelpad=2,
-                            fontproperties=leg_font,
-                            fontsize=10,
-                        )
+                        # cbar.set_label(
+                        #     label=cbar_units,
+                        #     labelpad=2,
+                        #     fontproperties=leg_font,
+                        #     fontsize=10,
+                        # )
                         cbar.ax.xaxis.set_tick_params(pad=2, labelsize=8)
                         cbar_ax.set_title(
                             cbar_label, fontsize=11, fontproperties=leg_font
                         )
+                        cbar_ax.tick_params(axis="both", direction="in", which="both")
                     #!!! enable for time evolution
                     # if idx == 1:
                     #     with plt.style.context("dark_background"):
