@@ -135,8 +135,8 @@ if particle_data_proc is True:
 
         # get SFC/PSC positions and other important fields,
         # need to modify definitions to get these sinks
-        pos_sfcs = np.array(ad["SFC", "particle_position"])
-        pos_pscs = np.array(ad["PSC", "particle_position"])
+        # pos_sfcs = np.array(ad["SFC", "particle_position"])
+        # pos_pscs = np.array(ad["PSC", "particle_position"])
 
         # read POPII star info
         star_id = np.array(ad["star", "particle_identity"])
@@ -157,8 +157,8 @@ if particle_data_proc is True:
         y_pos = y_pos - plt_ctr[1]
         z_pos = z_pos - plt_ctr[2]
 
-        pos_sfcs_recentered = pos_sfcs - plt_ctr
-        pos_pscs_recentered = pos_pscs - plt_ctr
+        # pos_sfcs_recentered = pos_sfcs - plt_ctr
+        # pos_pscs_recentered = pos_pscs - plt_ctr
 
         # particle clumps by age; converts code age to relative ages
         unique_birth_epochs = code_age_to_myr(
@@ -220,34 +220,34 @@ if particle_data_proc is True:
 
         # =========================== psc sfc save==================================
 
-        psc_kazu_radii = np.abs(
-            ds.arr(ad["PSC", "particle_metallicity"], "code_length").to("pc")
-        )
-        sfc_kazu_radii = np.abs(
-            ds.arr(ad["SFC", "particle_metallicity"], "code_length").to("pc")
-        )
-        pos_pscs = ds.arr(pos_pscs_recentered, "code_length").to("pc")
-        pos_sfcs = ds.arr(pos_sfcs_recentered, "code_length").to("pc")
+        # psc_kazu_radii = np.abs(
+        #     ds.arr(ad["PSC", "particle_metallicity"], "code_length").to("pc")
+        # )
+        # sfc_kazu_radii = np.abs(
+        #     ds.arr(ad["SFC", "particle_metallicity"], "code_length").to("pc")
+        # )
+        # pos_pscs = ds.arr(pos_pscs_recentered, "code_length").to("pc")
+        # pos_sfcs = ds.arr(pos_sfcs_recentered, "code_length").to("pc")
 
         # particle tags, see if unique
-        psc_tag = np.array(ad["PSC", "particle_index"])
-        sfc_tag = np.array(ad["SFC", "particle_index"])
+        # psc_tag = np.array(ad["PSC", "particle_index"])
+        # sfc_tag = np.array(ad["SFC", "particle_index"])
 
         # save paths
-        psc_path = "{}/psc_{:05d}_{}_myr.txt".format(psc_save, output_num, save_time)
-        sfc_path = "{}/sfc_{:05d}_{}_myr.txt".format(sfc_save, output_num, save_time)
-        # x(pc), y(pc), z(pc),radii at birth (pc), particle tag
-        psc_save_data = np.concatenate(
-            (pos_pscs, psc_kazu_radii[:, None], psc_tag[:, None]), axis=1
-        )
-        sfc_save_data = np.concatenate(
-            (pos_sfcs, sfc_kazu_radii[:, None], sfc_tag[:, None]), axis=1
-        )
-        test_particale_header = "x(pc), y(pc), z(pc),radii at birth (pc), particle tag"
-        print("# saved:", psc_path)
-        print("# saved:", sfc_path)
-        np.savetxt(psc_path, X=psc_save_data, header=test_particale_header)
-        np.savetxt(sfc_path, X=sfc_save_data, header=test_particale_header)
+        # psc_path = "{}/psc_{:05d}_{}_myr.txt".format(psc_save, output_num, save_time)
+        # sfc_path = "{}/sfc_{:05d}_{}_myr.txt".format(sfc_save, output_num, save_time)
+        # # x(pc), y(pc), z(pc),radii at birth (pc), particle tag
+        # psc_save_data = np.concatenate(
+        #     (pos_pscs, psc_kazu_radii[:, None], psc_tag[:, None]), axis=1
+        # )
+        # sfc_save_data = np.concatenate(
+        #     (pos_sfcs, sfc_kazu_radii[:, None], sfc_tag[:, None]), axis=1
+        # )
+        # test_particale_header = "x(pc), y(pc), z(pc),radii at birth (pc), particle tag"
+        # print("# saved:", psc_path)
+        # print("# saved:", sfc_path)
+        # np.savetxt(psc_path, X=psc_save_data, header=test_particale_header)
+        # np.savetxt(sfc_path, X=sfc_save_data, header=test_particale_header)
 
 
 # =============================================================================
