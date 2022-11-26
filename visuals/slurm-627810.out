@@ -21,3 +21,6 @@ Loading openmpi/gcc/11.3.0/zen2/4.1.4
   ERROR: Module evaluation aborted
 /var/spool/slurmd/job627810/slurm_script: line 15: /home/fgarcia4/py-virtual-envs/master/bin/activate: No such file or directory
 /var/spool/slurmd/job627810/slurm_script: line 18: /lustre/fgarcia4/glob_clust_evo/visuals/two_panel_sfr.py: No such file or directory
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 627810.0 ON compute-a7-21 CANCELLED AT 2022-11-26T05:06:25 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 627810 ON compute-a7-21 CANCELLED AT 2022-11-26T05:06:25 DUE TO TIME LIMIT ***
