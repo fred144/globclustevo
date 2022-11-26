@@ -5,10 +5,10 @@ built up thus far. Not optimized at all.
 
 import sys
 
-sys.path.insert(
-    1,
-    "/scratch/zt1/project/ricotti-prj/user/fgarcia4/master/lib/python3.7/site-packages",
-)
+# sys.path.insert(
+#     1,
+#     "/scratch/zt1/project/ricotti-prj/user/fgarcia4/master/lib/python3.7/site-packages",
+# )
 # sys.path.insert(1, "/homes/fgarcia4/py-virtual-envs/master/lib/python3.7/site-packages")
 sys.path.append("..")  # makes sure that importing the modules work
 
