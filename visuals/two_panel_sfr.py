@@ -49,12 +49,12 @@ fs070_snap_dir = filter_snapshots(
 )
 fs035_snap_dir = filter_snapshots(
     fs035_dir,
-    f7_snap_range[0],
-    f7_snap_range[1],
+    f3_snap_range[0],
+    f3_snap_range[1],
     1,
 )
 
-
+print(fs035_snap_dir)
 fs070_pop2_f = filter_snapshots(
     "../particle_data/pop_2_data/fs07_refine", f7_snap_range[0], f7_snap_range[1], 1
 )
