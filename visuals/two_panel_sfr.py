@@ -26,7 +26,7 @@ yt.enable_parallelism()
 # f7_snap_range = (599, 1296)
 # f3_snap_range = (179, 1469)
 f7_snap_range = (1142, 1318)
-f3_snap_range = (1318, 1469)
+f3_snap_range = (1469, 1502)
 # f7_snap_range = (500, 500)
 # f3_snap_range = (500, 500)
 
