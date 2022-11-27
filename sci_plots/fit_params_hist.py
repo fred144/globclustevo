@@ -176,7 +176,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         r"$R_\mathrm{{core}}\:\mathrm{(pc)}$",
         r"$\Sigma_0\:\mathrm{\left(M_{\odot}\:pc^{-2}\right)}$",
         r"$\alpha$",
-        r"$\mathrm{M_{BSC}\: / \: M_{SFC} }$",
+        r"$\mathrm{M_{BSC}\: / \: M_{SC} }$",
     ]
 
     # hist_ranges = [(0, 2), (10, 800), (1.5, 5), (0, 1)]
@@ -275,7 +275,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             #     f3_count,
             #     label=r"$0.35$",
             #     drawstyle="steps-mid",
-            #     linewidth=2,
+            #     linewidth=2,Fraction of stars in BSCs and their mass functions
             #     alpha=0.8,
             #     color=fs35_color,
             # )
@@ -288,7 +288,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             # )
             # ax[i].set_xlim(left=f7_bin_ctrs[0], right=f7_bin_ctrs[-1])
             # ax[i].set_ylim(bottom=0, top=25)
-
+            ax[i].tick_params(axis="both", direction="in", which="both")
             ax[i].set_xlabel(labels[i])
 
         # ax[0].set_ylabel(r"$\mathrm{Number\:\:of\:\:BSCs}$")
@@ -301,6 +301,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             fontsize=8,
             bbox_to_anchor=(0.0, 1.02),
         )
+
         # leg.get_frame().set_edgecolor("grey")
         # ax[2].text(
         #     0.06,

@@ -223,6 +223,7 @@ fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
 redshft_fs070 = fs070_log_sfc[:, 2]
 r_pc_cloud_fs070 = fs070_log_sfc[:, 4]
 m_star_fs070 = fs070_log_sfc[:, 7]
+m_cloud_fs070 = fs070_log_sfc[:, 5]
 n_hydrogen_fs070 = fs070_log_sfc[:, 8]
 metal_cloud_fs070 = fs070_log_sfc[:, 9]
 t_myr_fs070 = t_myr_from_z(redshft_fs070)
@@ -231,10 +232,13 @@ fs035_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
 redshft_fs035 = fs035_log_sfc[:, 2]
 r_pc_cloud_fs035 = fs035_log_sfc[:, 4]
 m_star_fs035 = fs035_log_sfc[:, 7]
+m_cloud_fs035 = fs035_log_sfc[:, 5]
 n_hydrogen_fs035 = fs035_log_sfc[:, 8]
 metal_cloud_fs035 = fs035_log_sfc[:, 9]
 t_myr_fs035 = t_myr_from_z(redshft_fs035)
 
+
+#%%
 # metallicity of most massive cloud
 print(
     "70% largest mass cloud",

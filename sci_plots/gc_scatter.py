@@ -256,7 +256,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 
         x_vars = [
             np.nan,
-            (f7_mass[f7_mask], f3_mass[f3_mask]),
+            ((f7_mass * 0.5)[f7_mask], (f3_mass * 0.5)[f3_mask]),
             (f7_metal[f7_mask], f3_metal[f3_mask]),
             (f7_mass[f7_mask], f3_mass[f3_mask]),
             # (f7_mass[f7_mask], f3_mass[f3_mask]),  #
@@ -286,7 +286,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         ]
         x_labels = [
             np.nan,
-            r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})} $",
+            r"$\log_{10} \: \mathrm{M_{half}} \: \mathrm{(M_{\odot})} $",
             r"$\log_{10} \: \mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
             r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
             # r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",  #
@@ -342,6 +342,52 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 
                 f7_y = np.log10(y[0])
                 f3_y = np.log10(y[1])
+
+            if i == 1:
+                power = 1.315
+                intercept = -4.947
+                rho_of_r_prefactor = 3 * 10**intercept / 4 * np.pi
+                power_of_r = 3 - power
+                axs[i].plot(
+                    np.linspace(f7_x.min() - 0.5, f7_x.max() + 0.5, 100),
+                    power * np.linspace(f7_x.min() - 0.5, f7_x.max() + 0.5, 100)
+                    + intercept,
+                    lw=1,
+                    ls="--",
+                    color="grey",
+                )
+                axs[i].text(
+                    0.5,
+                    0.60,
+                    r"$\mathrm{R_{half} = 10^{-4.95} \: M_{half}^{1.32}}$",
+                    rotation=60,
+                    horizontalalignment="left",
+                    verticalalignment="top",
+                    transform=axs[i].transAxes,
+                    fontsize=7,
+                )
+                # leg.get_frame().set_edgecolor("w")
+                axs[i].set_xlim(f7_x.min() - 0.2, f7_x.max() + 0.2)
+                axs[i].set_ylim(f7_y.min() - 0.1, f7_y.max() + 0.1)
+
+            if i == 4 or i == 6:
+                axs[i].axvspan(
+                    np.log10(0.001),
+                    np.log10(0.1),
+                    alpha=0.3,
+                    color="grey",
+                    edgecolor=None,
+                    lw=0,
+                )
+            if i == 1 or i == 5 or i == 7:
+                axs[i].axhspan(
+                    np.log10(0.001),
+                    np.log10(0.1),
+                    alpha=0.3,
+                    color="grey",
+                    edgecolor=None,
+                    lw=0,
+                )
 
             f7_scatter = axs[i].scatter(
                 f7_x,
@@ -531,6 +577,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 # )
 
                 # tweak some limits
+
                 axs[i].set_xlim(theory_x.min(), theory_x.max())
                 axs[i].set_ylim(y_extremas.min() - 1, y_extremas.max() + 0.1)
 
