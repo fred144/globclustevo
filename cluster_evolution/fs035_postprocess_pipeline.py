@@ -36,7 +36,7 @@ simulation_run = "fs035_ms10"
 finder_profiler_run = "fof_best"
 processor_number = 0  # 0 means one process unparalleled
 start_step = 1469
-end_step = 1575
+end_step = 1502
 step = 1
 absolute_start = 154
 
@@ -264,7 +264,7 @@ if halo_finder_proc is True:
         "============================================================================="
     )
     datadir = os.path.expanduser(
-        "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
+        "/scratch/dt2/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
     ).format(simulation_run)
     local_snapshots = filter_snapshots(datadir, start_step, end_step, 1)
 
