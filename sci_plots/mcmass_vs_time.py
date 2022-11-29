@@ -31,11 +31,14 @@ n_hydrogen_fs035 = fs035_log_sfc[:, 8]
 metal_cloud_fs035 = fs035_log_sfc[:, 9]
 t_myr_fs035 = t_myr_from_z(redshft_fs035)
 
-fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(5, 3), dpi=300)
-ax.scatter(t_myr_fs070, m_cloud_fs070, s=1)
-ax.scatter(t_myr_fs035, m_cloud_fs035, s=1)
-ax.set(yscale="log")
-fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(5, 3), dpi=300)
-ax.scatter(t_myr_fs070, m_cloud_fs070, s=1)
-ax.scatter(t_myr_fs035, m_cloud_fs035, s=1)
-ax.set(yscale="log")
+fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(5, 6), dpi=300)
+ax[0].scatter(t_myr_fs070, m_cloud_fs070, s=1, label="70 per cent")
+ax[0].scatter(t_myr_fs035, m_cloud_fs035, s=1, label="35 per cent")
+ax[0].set(yscale="log", ylabel=r"MC Mass ($M_{\odot}$)", xlabel="Myr")
+
+ax[0].legend()
+# fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(5, 3), dpi=300)
+ax[1].hist(t_myr_fs070, alpha=0.5)
+ax[1].hist(t_myr_fs035, alpha=0.5)
+ax[1].set(ylabel=r"Number of MCs Meeting Threshold", xlabel="Myr")
+# ax[1].set(yscale="log")

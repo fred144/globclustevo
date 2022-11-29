@@ -1,10 +1,6 @@
 import sys
 
 sys.path.append("../")
-# sys.path.insert(
-#     1,
-#     "/scratch/zt1/project/ricotti-prj/user/fgarcia4/master/lib/python3.7/site-packages",
-# )
 import numpy as np
 import os
 import glob
@@ -17,29 +13,22 @@ import matplotlib.patches as patches
 from matplotlib import colors
 import misc_visuals
 import yt
-from modules.macros import filter_snapshots, ram_fields, t_myr_from_z
+from modules.macros import filter_snapshots, ram_fields
 from mpl_toolkits.axes_grid1.inset_locator import mark_inset
-from scipy import interpolate
 
 yt.enable_parallelism()
 
 # f7_snap_range = (599, 1296)
 # f3_snap_range = (179, 1469)
-f7_snap_range = (1142, 1318)
-f3_snap_range = (1318, 1502)
-# f7_snap_range = (500, 500)
-# f3_snap_range = (500, 500)
+
+f7_snap_range = (500, 500)
+f3_snap_range = (500, 500)
 
 # fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
 # fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
 
-master_data_dir = "/scratch/dt2/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/"
-
-fs070_dir = os.path.join(master_data_dir, "fs07_refine")
-fs035_dir = os.path.join(master_data_dir, "fs035_ms10")
-
-# fs070_dir = os.path.relpath("../../cosm_test_data/refine")
-# fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+fs070_dir = os.path.relpath("../../cosm_test_data/refine")
+fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 
 fs070_snap_dir = filter_snapshots(
     fs070_dir,
@@ -49,12 +38,12 @@ fs070_snap_dir = filter_snapshots(
 )
 fs035_snap_dir = filter_snapshots(
     fs035_dir,
-    f3_snap_range[0],
-    f3_snap_range[1],
+    f7_snap_range[0],
+    f7_snap_range[1],
     1,
 )
 
-print(fs035_snap_dir)
+
 fs070_pop2_f = filter_snapshots(
     "../particle_data/pop_2_data/fs07_refine", f7_snap_range[0], f7_snap_range[1], 1
 )
@@ -84,32 +73,14 @@ fs035_halo_f = get_snapshots(
     ),
     get_list=f3_nums,
 )
+
 f7_snap_f = get_snapshots(fs070_snap_dir, get_list=f7_nums)
 f3_snap_f = get_snapshots(fs035_snap_dir, get_list=f3_nums)
 
-# get SFR data
-bin_width_myr = 1  # interpolation equal width
-f7_series = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
-f3_series = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
-redshift_hi = f7_series[:, 2]
-redshift_lo = f3_series[:, 2]
-tmyr_hi = t_myr_from_z(redshift_hi)
-tmyr_lo = t_myr_from_z(redshift_lo)
-
-hi_tot_m = np.cumsum(f7_series[:, 7])
-lo_tot_m = np.cumsum(f3_series[:, 7])
-
-lo_interp_points = np.arange(tmyr_lo.min(), tmyr_lo.max(), bin_width_myr)
-lo_interp = interpolate.interp1d(x=tmyr_lo, y=lo_tot_m, kind="previous")
-
-hi_interp_points = np.arange(tmyr_hi.min(), tmyr_hi.max(), bin_width_myr)
-hi_interp = interpolate.interp1d(x=tmyr_hi, y=hi_tot_m, kind="previous")
-
-sfr_fs035 = np.gradient(lo_interp(lo_interp_points)) / (bin_width_myr * 1e6)
-sfr_fs070 = np.gradient(hi_interp(hi_interp_points)) / (bin_width_myr * 1e6)
-
-lo_tot_m = lo_interp(lo_interp_points)
-hi_tot_m = hi_interp(hi_interp_points)
+f7_series = np.loadtxt("../sci_plots/fof_time_series/fs07_refine_fof_best_113_1318.txt")
+f7_series = f7_series[f7_series[:, 3] > 30]
+f3_series = np.loadtxt("../sci_plots/fof_time_series/fs035_ms10_fof_best_154_1469.txt")
+f3_series = f3_series[f3_series[:, 3] > 30]
 
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
@@ -124,7 +95,7 @@ lum_alpha = 1
 cell_fields, epf = ram_fields()
 
 
-sequence_dir = "../rendering/gas_lum/two_panel_sfr"
+sequence_dir = "../rendering/gas_lum/two_panel"
 if not os.path.exists(sequence_dir):
     print("# Creating new sequence directory", sequence_dir)
     os.makedirs(sequence_dir)
@@ -138,16 +109,8 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     # read ramses data
     f7_info_file = os.path.join(f7_gas, "info_{}.txt".format(outnum_f7))
     f3_info_file = os.path.join(f3_gas, "info_{}.txt".format(outnum_f3))
-    f7_ram_ds = yt.load(
-        f7_info_file,
-        fields=cell_fields,
-        # extra_particle_fields=epf,
-    )
-    f3_ram_ds = yt.load(
-        f3_info_file,
-        fields=cell_fields,
-        # extra_particle_fields=epf,
-    )
+    f7_ram_ds = yt.load(f7_info_file, fields=cell_fields, extra_particle_fields=epf)
+    f3_ram_ds = yt.load(f3_info_file, fields=cell_fields, extra_particle_fields=epf)
     # post processed star data
     f7_code_ctr = np.loadtxt(fs070_pop2_f[m_i], max_rows=5)[2:5, 6]
     f7_t_myr = np.loadtxt(fs070_pop2_f[m_i], max_rows=2)[0, 6]
@@ -246,7 +209,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                 norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
                 alpha=lum_alpha,
             )
-            f3_lum_image = ax[1].imshow(
+            ax[1].imshow(
                 f3_lums / pxl_size,
                 cmap="inferno",
                 interpolation="gaussian",
@@ -266,7 +229,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                 norm=LogNorm(gas_range[0], gas_range[1]),
                 alpha=gas_alpha,
             )
-            f3_gas_image = ax[1].imshow(
+            ax[1].imshow(
                 f3_gas_array,
                 cmap="cubehelix",
                 interpolation="gaussian",
@@ -322,7 +285,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                 0.95,
                 (
                     r"$\mathrm{{t = {:.2f} \: Myr}}$" "\n" r"$\mathrm{{z = {:.2f} }}$"
-                ).format(f7_t_myr, f7_redshift),
+                ).format(f7_redshift, f7_t_myr),
                 ha="left",
                 va="top",
                 color="white",
@@ -362,7 +325,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                     }
                 ):
                     f7_inset = ax[0].inset_axes([0.05, 0.05, 0.30, 0.30])
-                    f3_inset = ax[1].inset_axes([0.05, 0.65, 0.30, 0.30])
+                    f3_inset = ax[1].inset_axes([0.05, 0.05, 0.30, 0.30])
                     inset_width = 40
                     f7_inset.set(
                         xlim=(-inset_width / 2, inset_width / 2),
@@ -460,129 +423,132 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
 
                     f7_inset.add_patch(scale_ins)
 
-                    # mark_inset(
-                    #     ax[0], f7_inset, loc1=2, loc2=4, edgecolor="white", alpha=0.4
-                    # )
-                    # mark_inset(
-                    #     ax[1], f3_inset, loc1=2, loc2=4, edgecolor="white", alpha=0.4
-                    # )
+                    mark_inset(
+                        ax[0], f7_inset, loc1=2, loc2=4, edgecolor="white", alpha=0.4
+                    )
+                    mark_inset(
+                        ax[1], f3_inset, loc1=2, loc2=4, edgecolor="white", alpha=0.4
+                    )
 
                     # time series line plots
-                    totm_series = ax[0].inset_axes([0.56, 0.10, 0.40, 0.2])
-                    sfr_series = ax[1].inset_axes([0.10, 0.10, 0.40, 0.2])
-                    totm_series.spines["right"].set_visible(False)
-                    totm_series.spines["top"].set_visible(False)
-                    sfr_series.spines["right"].set_visible(False)
-                    sfr_series.spines["top"].set_visible(False)
-                    totm_series.patch.set_alpha(0.5)
-                    sfr_series.patch.set_alpha(0.5)
+                    # time_series_ax_f7 = ax[0].inset_axes([0.56, 0.10, 0.40, 0.2])
+                    # time_series_ax_f3 = ax[1].inset_axes([0.10, 0.10, 0.40, 0.2])
+                    # time_series_ax_f7.spines["right"].set_visible(False)
+                    # time_series_ax_f7.spines["top"].set_visible(False)
+                    # time_series_ax_f3.spines["right"].set_visible(False)
+                    # time_series_ax_f3.spines["top"].set_visible(False)
+                    # time_series_ax_f7.patch.set_alpha(0.5)
+                    # time_series_ax_f3.patch.set_alpha(0.5)
 
-                    interp_mask_hi = hi_interp_points <= f7_t_myr
-                    interp_mask_lo = lo_interp_points <= f3_t_myr
+                    # f7_lum_field = f7_series[:, 5]
+                    # f7_lum_bound = f7_series[:, 4]
+                    # f3_lum_field = f3_series[:, 5]
+                    # f3_lum_bound = f3_series[:, 4]
 
-                    # plot total masses
-                    totm_series.plot(
-                        hi_interp_points[interp_mask_hi],
-                        np.log10(hi_tot_m[interp_mask_hi]),
-                        color=cmap[2],
-                        alpha=0.8,
-                        label=r"$70 \%$",
-                    )
-                    # after current time
-                    totm_series.plot(
-                        hi_interp_points[~interp_mask_hi],
-                        np.log10(hi_tot_m[~interp_mask_hi]),
-                        alpha=0.3,
-                        color="grey",
-                    )
+                    # f7_time_mask = f7_series[:, 0] <= f7_t_myr
+                    # f3_time_mask = f3_series[:, 0] <= f3_t_myr
 
-                    totm_series.plot(
-                        lo_interp_points[interp_mask_lo],
-                        np.log10(lo_tot_m[interp_mask_lo]),
-                        color=cmap[1],
-                        alpha=0.8,
-                        label=r"$35 \%$",
-                    )
-                    # after current time
-                    totm_series.plot(
-                        lo_interp_points[~interp_mask_lo],
-                        np.log10(lo_tot_m[~interp_mask_lo]),
-                        color="grey",
-                        alpha=0.3,
-                    )
+                    # time_series_ax_f7.plot(
+                    #     f7_series[:, 0][f7_time_mask],
+                    #     (f7_lum_bound + f7_lum_field)[f7_time_mask],
+                    #     color=cmap[0],
+                    #     label="Total",
+                    # )
+                    # time_series_ax_f7.plot(
+                    #     f7_series[:, 0][f7_time_mask],
+                    #     f7_lum_bound[f7_time_mask],
+                    #     color=cmap[1],
+                    #     label="Bound",
+                    #     alpha=0.8,
+                    # )
+                    # time_series_ax_f3.plot(
+                    #     f3_series[:, 0][f3_time_mask],
+                    #     (f3_lum_bound + f3_lum_field)[f3_time_mask],
+                    #     color=cmap[2],
+                    #     label="Total",
+                    # )
+                    # time_series_ax_f3.plot(
+                    #     f3_series[:, 0][f3_time_mask],
+                    #     f3_lum_bound[f3_time_mask],
+                    #     color=cmap[3],
+                    #     label="Bound",
+                    #     alpha=0.8,
+                    # )
+                    # # after current times
+                    # time_series_ax_f7.plot(
+                    #     f7_series[:, 0][~f7_time_mask],
+                    #     (f7_lum_bound + f7_lum_field)[~f7_time_mask],
+                    #     alpha=0.5,
+                    #     color="grey",
+                    # )
+                    # time_series_ax_f7.plot(
+                    #     f7_series[:, 0][~f7_time_mask],
+                    #     f7_lum_bound[~f7_time_mask],
+                    #     alpha=0.5,
+                    #     color="grey",
+                    # )
+                    # time_series_ax_f3.plot(
+                    #     f3_series[:, 0][~f3_time_mask],
+                    #     (f3_lum_bound + f3_lum_field)[~f3_time_mask],
+                    #     alpha=0.5,
+                    #     color="grey",
+                    # )
+                    # time_series_ax_f3.plot(
+                    #     f3_series[:, 0][~f3_time_mask],
+                    #     f3_lum_bound[~f3_time_mask],
+                    #     alpha=0.5,
+                    #     color="grey",
+                    # )
 
-                    # plot star formation rates
-                    sfr_series.plot(
-                        hi_interp_points[interp_mask_hi],
-                        sfr_fs070[interp_mask_hi],
-                        color=cmap[2],
-                        alpha=0.8,
-                        lw=1,
-                    )
-                    sfr_series.plot(
-                        lo_interp_points[interp_mask_lo],
-                        sfr_fs035[interp_mask_lo],
-                        color=cmap[1],
-                        alpha=0.8,
-                        lw=1,
-                    )
+                    # time_series_ax_f7.grid(
+                    #     visible=True,
+                    #     which="major",
+                    #     axis="y",
+                    #     ls=":",
+                    #     color="white",
+                    #     zorder=0.5,
+                    #     alpha=0.8,
+                    # )
 
-                    sfr_series.plot(
-                        hi_interp_points[~interp_mask_hi],
-                        sfr_fs070[~interp_mask_hi],
-                        color="grey",
-                        alpha=0.3,
-                        lw=1,
-                    )
-                    sfr_series.plot(
-                        lo_interp_points[~interp_mask_lo],
-                        sfr_fs035[~interp_mask_lo],
-                        color="grey",
-                        alpha=0.3,
-                        lw=1,
-                    )
+                    # time_series_ax_f7.set(
+                    #     yscale="log",
+                    #     xlabel="$\mathrm{time\:(Myr)}$",
+                    #     ylim=(2e35, 1e39),
+                    #     xlim=(f7_series[:, 0].min(), f7_series[:, 0].max()),
+                    # )
+                    # time_series_ax_f7.set_title(
+                    #     r"$\mathrm{L_{\lambda = 1500 \: \AA \:}}\:$"
+                    #     r"$\left(\mathrm{erg} \:\mathrm{s}^{-1} \:\mathrm{\AA}^{-1}\right)$",
+                    #     fontsize=10,
+                    # )
+                    # time_series_ax_f3.grid(
+                    #     visible=True,
+                    #     which="major",
+                    #     axis="y",
+                    #     ls=":",
+                    #     color="white",
+                    #     zorder=0.5,
+                    #     alpha=0.8,
+                    # )
+                    # time_series_ax_f3.set(
+                    #     yscale="log",
+                    #     xlabel="$\mathrm{time\:(Myr)}$",
+                    #     ylim=(2e35, 1e39),
+                    #     xlim=(f3_series[:, 0].min(), f3_series[:, 0].max()),
+                    # )
+                    # time_series_ax_f3.set_title(
+                    #     r"$\mathrm{L_{\lambda = 1500 \: \AA \:}}\:$"
+                    #     r"$\left(\mathrm{erg} \:\mathrm{s}^{-1} \:\mathrm{\AA}^{-1}\right)$",
+                    #     fontsize=10,
+                    # )
+                    # f7_leg = time_series_ax_f7.legend(
+                    #     loc="lower right", ncol=2, fontsize=8
+                    # )
+                    # f3_leg = time_series_ax_f3.legend(
+                    #     loc="lower right", ncol=2, fontsize=8
+                    # )
 
-                    totm_series.grid(
-                        visible=True,
-                        which="major",
-                        axis="y",
-                        ls=":",
-                        color="white",
-                        zorder=0.5,
-                        alpha=0.8,
-                    )
-
-                    totm_series.set(
-                        xlabel="$\mathrm{time\:(Myr)}$",
-                        ylim=(3, 6.5),
-                        xlim=(hi_interp_points.min(), hi_interp_points.max()),
-                    )
-                    totm_series.set_title(
-                        r"$\mathrm{\log M_{\star, total} \: (M_{\odot})}\: $",
-                        fontsize=10,
-                    )
-                    sfr_series.grid(
-                        visible=True,
-                        which="major",
-                        axis="y",
-                        ls=":",
-                        color="white",
-                        zorder=0.5,
-                        alpha=0.8,
-                    )
-                    sfr_series.set(
-                        xlabel="$\mathrm{time\:(Myr)}$",
-                        ylim=(0, 0.05),
-                        xlim=(hi_interp_points.min(), hi_interp_points.max()),
-                    )
-                    sfr_series.set_title(
-                        r"$\mathrm{SFR\:\left(M_{\odot}\:yr^{-1}\right)}$",
-                        fontsize=10,
-                    )
-                    f7_leg = totm_series.legend(loc="lower right", fontsize=8)
-                    # f3_leg = sfr_series.legend(loc="lower right",  fontsize=8)
-
-                    f7_leg.get_frame().set_alpha(0)
+                    # f7_leg.get_frame().set_alpha(0)
                     # f3_leg.get_frame().set_alpha(0)
 
             # declar the color bar axes
