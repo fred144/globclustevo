@@ -126,25 +126,59 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         # add histogram of ages
         ax_f7 = ax[0].inset_axes([0.12, 0.12, 0.30, 0.30])
         ax_f7.patch.set_alpha(0.5)
-        bins = np.linspace(300, 620, 20)
+        bins = np.linspace(300, 619, 75)
+
+        # f7_field_be, bin_edges = np.histogram(
+        #     f7_field_be,
+        #     bins=bins,
+        #     weights=f7_field_masses,
+        # )
+        # right_edges = bin_edges[1:]
+        # left_edges = bin_edges[:-1]
+        # bin_centers = 0.5 * (left_edges + right_edges)
+
+        # ax_f7.plot(
+        #     bin_centers,
+        #     f7_field_be,
+        #     linewidth=0.5,
+        #     alpha=0.8,
+        #     color=field_clr,
+        #     drawstyle="steps-mid",
+        # )
+
+        # f7_bound_be, bin_edges = np.histogram(
+        #     f7_bound_be,
+        #     bins=bins,
+        #     weights=f7_bound_masses,
+        # )
+        # ax_f7.plot(
+        #     bin_centers,
+        #     f7_bound_be,
+        #     linewidth=0.5,
+        #     alpha=0.8,
+        #     color=bound_clr,
+        #     drawstyle="steps-mid",
+        # )
+
         ax_f7.hist(
-            f7_field_be,
+            [f7_bound_be, f7_field_be],
             bins,
-            weights=f7_field_masses,
+            weights=[f7_bound_masses, f7_field_masses],
             alpha=1,
-            color=field_clr,
+            color=[bound_clr, field_clr],
             edgecolor="white",
-            linewidth=0.5,
+            linewidth=0.25,
+            stacked=True,
         )
-        ax_f7.hist(
-            f7_bound_be,
-            bins,
-            weights=f7_bound_masses,
-            alpha=0.6,
-            color=bound_clr,
-            edgecolor="white",
-            linewidth=0.5,
-        )
+        # ax_f7.hist(
+        #     f7_bound_be,
+        #     bins,
+        #     weights=f7_bound_masses,
+        #     alpha=0.6,
+        #     color=bound_clr,
+        #     # edgecolor="white",
+        #     linewidth=0.5,
+        # )
         # ax_f7.axvline(x=f7_t_myr, ls="--", color="black", lw=1)
         ax_f7.tick_params(labelsize=6)
         ax_f7.set_xlabel(
@@ -167,30 +201,42 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         # )
         ax_f7.set_yscale("log")
         # ax_f7.set_xlim("log")
-        ax_f7.set_xlim(300, 700)
+        ax_f7.set_xlim(300, 650)
         ax_f7.set_ylim(1, 5e5)
         ax_f7.tick_params(axis="both", direction="in", which="both")
 
         ax_f3 = ax[1].inset_axes([0.12, 0.12, 0.30, 0.30])
         ax_f3.patch.set_alpha(0.5)
+        # ax_f3.hist(
+        #     f3_field_be,
+        #     bins,
+        #     weights=f3_field_masses,
+        #     alpha=1,
+        #     color=field_clr,
+        #     edgecolor="white",
+        #     linewidth=0.5,
+        # )
+        # ax_f3.hist(
+        #     f3_bound_be,
+        #     bins,
+        #     weights=f3_bound_masses,
+        #     alpha=0.6,
+        #     color=bound_clr,
+        #     edgecolor="white",
+        #     linewidth=0.5,
+        # )
+
         ax_f3.hist(
-            f3_field_be,
+            [f3_bound_be, f3_field_be],
             bins,
-            weights=f3_field_masses,
+            weights=[f3_bound_masses, f3_field_masses],
             alpha=1,
-            color=field_clr,
+            color=[bound_clr, field_clr],
             edgecolor="white",
-            linewidth=0.5,
+            linewidth=0.25,
+            stacked=True,
         )
-        ax_f3.hist(
-            f3_bound_be,
-            bins,
-            weights=f3_bound_masses,
-            alpha=0.6,
-            color=bound_clr,
-            edgecolor="white",
-            linewidth=0.5,
-        )
+
         # ax_f3.axvline(x=f3_t_myr, ls="--", color="black", lw=1)
         ax_f3.tick_params(labelsize=6)
         ax_f3.set_xlabel(
@@ -213,7 +259,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         # )
         ax_f3.set_yscale("log")
         # ax_f3.set_xlim("log")
-        ax_f3.set_xlim(300, 700)
+        ax_f3.set_xlim(300, 650)
         ax_f3.set_ylim(1, 5e5)
         ax_f3.tick_params(axis="both", direction="in", which="both")
 
