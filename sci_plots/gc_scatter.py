@@ -131,7 +131,7 @@ f7_halo_dir = r"../halo_data/fs07_refine/fof_best"
 f3_halo_dir = r"../halo_data/fs035_ms10/fof_best"
 
 profiler_data = (
-    "/home/fabg/g_drive/Research/AstrophysicsSimulation/DesktopEnvironment/"
+    "../../g_drive/Research/AstrophysicsSimulation/DesktopEnvironment/"
     "data_globular_cluster/gc_profiles/profile_runs/"
 )
 
@@ -244,7 +244,22 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     f3_tot_light = f3_prof_data[:, 17]
     f3_metal, f3_orig_mass = metal_lookup("../sim_log_files/fs035_ms10/logSFC", f3_bes)
     f3_redshift = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")[:, 2]
+    f7_mask = (f7_mass > 250) & (f7_alpha < 5)  # & & (f7_vir_rad < 10)
+    f3_mask = (f3_mass > 250) & (f3_alpha < 5)  # & & (f3_vir_rad < 10)
 
+    print("35 % has BSCs")
+    print("- Minimum total mass of", np.min(f3_mass[f3_mask]))
+    print("- with rhalf", f3_half_mass_rad[f3_mask][np.argmin(f3_mass[f3_mask])])
+    print("- Maximum total mass of", np.max(f3_mass[f3_mask]))
+    print("- with rhalf", f3_half_mass_rad[f3_mask][np.argmax(f3_mass[f3_mask])])
+
+    print("70 % has BSCs")
+    print("- Minimum total mass of", np.min(f7_mass[f7_mask]))
+    print("- with rhalf", f7_half_mass_rad[f7_mask][np.argmin(f7_mass[f7_mask])])
+    print("- Maximum total mass of", np.max(f7_mass[f7_mask]))
+    print("- with rhalf", f7_half_mass_rad[f7_mask][np.argmax(f7_mass[f7_mask])])
+
+    #%%
     with plt.rc_context(
         {
             "font.family": "serif",
@@ -261,8 +276,6 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         # f7_half_radii = scale_factor * f7_half_mass_rad
         # f3_half_radii = scale_factor * f3_half_mass_rad
         # a cluster should have at least 25 stars
-        f7_mask = (f7_mass > 250) & (f7_alpha < 5)  # & & (f7_vir_rad < 10)
-        f3_mask = (f3_mass > 250) & (f3_alpha < 5)  # & & (f3_vir_rad < 10)
 
         x_vars = [
             np.nan,

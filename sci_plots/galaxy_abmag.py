@@ -181,7 +181,7 @@ with plt.style.context("dark_background"):
                 np.where(f7_ab_mag >= 0, 0, f7_ab_mag),
                 extent=[-proj_r, proj_r, -proj_r, proj_r],
                 cmap="cubehelix_r",
-                vmin=-15,
+                vmin=-20,
                 vmax=0,
                 origin="lower",
                 interpolation="gaussian",
@@ -191,7 +191,7 @@ with plt.style.context("dark_background"):
                 np.where(f3_ab_mag >= 0, 0, f3_ab_mag),
                 extent=[-proj_r, proj_r, -proj_r, proj_r],
                 cmap="cubehelix_r",
-                vmin=-15,
+                vmin=-20,
                 vmax=0,
                 origin="lower",
                 interpolation="gaussian",
@@ -362,11 +362,11 @@ ax[1, 1].spines["right"].set_visible(False)
 ax[1, 1].spines["bottom"].set_visible(False)
 
 plt.subplots_adjust(hspace=0, wspace=0)
-plt.savefig(
-    os.path.expanduser(
-        ("~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/" "ab_mag.png")
-    ),
-    dpi=500,
-    bbox_inches="tight",
-    pad_inches=0.00,
-)
+# plt.savefig(
+#     os.path.expanduser(
+#         ("~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/" "ab_mag.png")
+#     ),
+#     dpi=500,
+#     bbox_inches="tight",
+#     pad_inches=0.00,
+# )

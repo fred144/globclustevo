@@ -26,10 +26,12 @@ yt.enable_parallelism()
 
 # f7_snap_range = (599, 1296)
 # f3_snap_range = (179, 1469)
-f7_snap_range = (924, 1318)
-f3_snap_range = (1103, 1502)
+# f7_snap_range = (924, 1318)
+# f3_snap_range = (1103, 1502)
 # f7_snap_range = (500, 500)
 # f3_snap_range = (500, 500)
+f7_snap_range = (1318, 1318)
+f3_snap_range = (1502, 1502)
 
 # fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
 # fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
@@ -145,10 +147,113 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         fields=cell_fields,
         # extra_particle_fields=epf,
     )
+    ad70 = f7_ram_ds.all_data()
+    print("70 percent: gas density, surface density ")
+    print(
+        "mean",
+        np.mean(ad70["gas", "density"].to("Msun/pc**3")),
+        np.mean(
+            ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+            * ad70["gas", "mass"].to("Msun") ** (1 / 3)
+        ),
+    )
+    print(
+        "median",
+        np.median(ad70["gas", "density"].to("Msun/pc**3")),
+        np.median(
+            ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+            * ad70["gas", "mass"].to("Msun") ** (1 / 3)
+        ),
+    )
+    print(
+        "max",
+        np.max(ad70["gas", "density"].to("Msun/pc**3")),
+        np.max(
+            ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+            * ad70["gas", "mass"].to("Msun") ** (1 / 3)
+        ),
+    )
+    print(
+        "min",
+        np.min(ad70["gas", "density"].to("Msun/pc**3")),
+        np.min(
+            ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+            * ad70["gas", "mass"].to("Msun") ** (1 / 3)
+        ),
+    )
+    print(
+        "std",
+        np.std(ad70["gas", "density"].to("Msun/pc**3")),
+        np.std(
+            ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+            * ad70["gas", "mass"].to("Msun") ** (1 / 3)
+        ),
+    )
+    print(
+        "75 percentile",
+        np.percentile(ad70["gas", "density"].to("Msun/pc**3"), 75),
+        np.percentile(
+            ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+            * ad70["gas", "mass"].to("Msun") ** (1 / 3),
+            75,
+        ),
+    )
+
     f3_ram_ds = yt.load(
         f3_info_file,
         fields=cell_fields,
         # extra_particle_fields=epf,
+    )
+    ad35 = f3_ram_ds.all_data()
+    print("35 percent: gas density, surface density ")
+    print(
+        "mean",
+        np.mean(ad35["gas", "density"].to("Msun/pc**3")),
+        np.mean(
+            ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+            * ad35["gas", "mass"].to("Msun") ** (1 / 3)
+        ),
+    )
+    print(
+        "median",
+        np.median(ad35["gas", "density"].to("Msun/pc**3")),
+        np.median(
+            ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+            * ad35["gas", "mass"].to("Msun") ** (1 / 3)
+        ),
+    )
+    print(
+        "max",
+        np.max(ad35["gas", "density"].to("Msun/pc**3")),
+        np.max(
+            ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+            * ad35["gas", "mass"].to("Msun") ** (1 / 3)
+        ),
+    )
+    print(
+        "min",
+        np.min(ad35["gas", "density"].to("Msun/pc**3")),
+        np.min(
+            ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+            * ad35["gas", "mass"].to("Msun") ** (1 / 3)
+        ),
+    )
+    print(
+        "std",
+        np.std(ad35["gas", "density"].to("Msun/pc**3")),
+        np.std(
+            ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+            * ad35["gas", "mass"].to("Msun") ** (1 / 3)
+        ),
+    )
+    print(
+        "75 percentile",
+        np.percentile(ad35["gas", "density"].to("Msun/pc**3"), 75),
+        np.percentile(
+            ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+            * ad35["gas", "mass"].to("Msun") ** (1 / 3),
+            75,
+        ),
     )
     # post processed star data
     f7_code_ctr = np.loadtxt(fs070_pop2_f[m_i], max_rows=5)[2:5, 6]
