@@ -133,7 +133,7 @@ import matplotlib.lines as mlines
 initial mass functions and metaliccity function for the molecular clouds or
 star forming clouds.
 """
-latest_redshift = 8.3
+latest_redshift = 8.0
 
 fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
 redshft_fs070 = fs070_log_sfc[:, 2]
@@ -152,6 +152,9 @@ r_pc_cloud_fs035 = fs035_log_sfc[:, 4][mask]
 m_sun_cloud_fs035 = fs035_log_sfc[:, 5][mask]
 n_hydrogen_fs035 = fs035_log_sfc[:, 8][mask]
 metal_cloud_fs035 = fs035_log_sfc[:, 9][mask]
+
+print("Total mass in MCs for 70%", np.sum(m_sun_cloud_fs070))
+print("Total mass in MCs for 35%", np.sum(m_sun_cloud_fs035))
 
 
 def gauss(x, amp, mean, sigma):
@@ -191,9 +194,9 @@ with plt.rc_context(
         "font.size": 12,
     }
 ):
-    x_range = (3e2, 3e4)  # (10, 5e5)
-    bns = 18
-    metal_xrange = (1e-4, 1e-2)
+    x_range = (3e2, 4e4)  # (10, 5e5)
+    bns = 22
+    metal_xrange = (1.5e-4, 1e-2)
     # mass function
     fs70_mass, fs70_counts = log_data_function(m_sun_cloud_fs070, bns, x_range)
     fs35_mass, fs35_counts = log_data_function(m_sun_cloud_fs035, bns, x_range)
@@ -212,16 +215,17 @@ with plt.rc_context(
 
     fig, ax = plt.subplots(
         nrows=1,
-        ncols=2,
-        figsize=(9, 4),
+        ncols=3,
+        figsize=(10, 3),
         dpi=500,
     )
-    f70_leg = mlines.Line2D(
-        [], [], color=fs70_color, ls="-", lw=4, label="$f_{*} = 0.70$"
-    )
-    f35_leg = mlines.Line2D(
-        [], [], color=fs35_color, ls="-", lw=4, label="$f_{*} =0.35$"
-    )
+
+    # f70_leg = mlines.Line2D(
+    #     [], [], color=fs70_color, ls="-", lw=4, label="$f_{*} = 0.70$"
+    # )
+    # f35_leg = mlines.Line2D(
+    #     [], [], color=fs35_color, ls="-", lw=4, label="$f_{*} =0.35$"
+    # )
     # leg_title = mlines.Line2D(
     #     [], [], color="white", ls="", label="$\mathrm{SFE} \: (f_{*})$"
     # )
@@ -234,17 +238,17 @@ with plt.rc_context(
     #         np.min(np.concatenate([redshft_fs070, redshft_fs035]))
     #     ),
     # )
-    leg = fig.legend(
-        title="$\mathrm{{z = {:.2f}}}$".format(
-            np.min(np.concatenate([redshft_fs070, redshft_fs035]))
-        ),
-        loc="upper left",
-        handles=[f70_leg, f35_leg],
-        bbox_to_anchor=(0.13, 0.878),
-        ncol=1,
-        # edgecolor="grey",
-        # fontsize=10,
-    )
+    # leg = fig.legend(
+    #     title="$\mathrm{{z = {:.2f}}}$".format(
+    #         np.min(np.concatenate([redshft_fs070, redshft_fs035]))
+    #     ),
+    #     loc="upper left",
+    #     handles=[f70_leg, f35_leg],
+    #     bbox_to_anchor=(0.40, 0.89),
+    #     ncol=1,
+    #     # edgecolor="grey",
+    #     # fontsize=10,
+    # )
     # leg.get_frame().set_boxstyle("Square")
 
     # 35% efficiency
@@ -314,15 +318,15 @@ with plt.rc_context(
     )
 
     ax[0].set_xlim(x_range[0], x_range[1])
-    ax[0].set_ylim(1, 9e4)
+    ax[0].set_ylim(1, 2e4)
 
     ax[0].set_xscale("log")
     ax[0].set_yscale("log")
     ax[0].legend(
-        title=r"$\log_{{10}}\:(\mu,\:\sigma)$",
-        loc="upper right",
+        title=r"$\log_{{10}}\:(\mu,\:\Sigma)$",
+        loc="upper left",
         # ncol=2,
-        # fontsize=10,
+        fontsize=10,
         # title_fontsize=10,
     )
 
@@ -331,23 +335,23 @@ with plt.rc_context(
     fs70_z, fs70_z_counts = log_data_function(metal_cloud_fs070, bns, metal_xrange)
     fs35_z, fs35_z_counts = log_data_function(metal_cloud_fs035, bns, metal_xrange)
 
-    f7_fit_params, _ = curve_fit(
-        f=bimodal,
-        xdata=np.log10(fs70_z),
-        ydata=np.nan_to_num(fs70_z_counts, neginf=0),
-    )
+    # f7_fit_params, _ = curve_fit(
+    #     f=bimodal,
+    #     xdata=np.log10(fs70_z),
+    #     ydata=np.nan_to_num(fs70_z_counts, neginf=0),
+    # )
 
-    f7_theory_x = np.log10(np.geomspace(fs70_z.min(), fs70_z.max(), 100))
-    f7_theory_y = bimodal(f7_theory_x, *f7_fit_params)
+    # f7_theory_x = np.log10(np.geomspace(fs70_z.min(), fs70_z.max(), 100))
+    # f7_theory_y = bimodal(f7_theory_x, *f7_fit_params)
 
-    f3_fit_params, _ = curve_fit(
-        f=bimodal,
-        xdata=np.log10(fs35_z),
-        ydata=np.nan_to_num(fs35_z_counts, neginf=0),
-    )
+    # f3_fit_params, _ = curve_fit(
+    #     f=bimodal,
+    #     xdata=np.log10(fs35_z),
+    #     ydata=np.nan_to_num(fs35_z_counts, neginf=0),
+    # )
 
-    f3_theory_x = np.log10(np.geomspace(fs35_z.min(), fs35_z.max(), 100))
-    f3_theory_y = bimodal(f3_theory_x, *f3_fit_params)
+    # f3_theory_x = np.log10(np.geomspace(fs35_z.min(), fs35_z.max(), 100))
+    # f3_theory_y = bimodal(f3_theory_x, *f3_fit_params)
 
     # 35% efficiency
     ax[1].plot(
@@ -357,6 +361,7 @@ with plt.rc_context(
         linewidth=4,
         alpha=0.8,
         color=fs35_color,
+        label=r"$f_* = 0.35$",
     )
     ax[1].fill_between(
         fs35_z,
@@ -373,6 +378,7 @@ with plt.rc_context(
         linewidth=4,
         alpha=0.8,
         color=fs70_color,
+        label=r"$f_* = 0.70$",
     )
     ax[1].fill_between(
         fs70_z,
@@ -382,45 +388,51 @@ with plt.rc_context(
         color=fs70_color,
     )
 
-    first_bump_mu_f7 = np.min([f7_fit_params[1], f7_fit_params[4]])
-    first_bump_sig_f7 = np.max(np.abs([f7_fit_params[2], f7_fit_params[5]]))
-    second_bump_mu_f7 = np.max([f7_fit_params[1], f7_fit_params[4]])
-    second_bump_sig_f7 = np.min(np.abs([f7_fit_params[2], f7_fit_params[5]]))
-
-    first_bump_mu_f3 = np.min([f3_fit_params[1], f3_fit_params[4]])
-    first_bump_sig_f3 = np.max(np.abs([f3_fit_params[2], f3_fit_params[5]]))
-    second_bump_mu_f3 = np.max([f3_fit_params[1], f3_fit_params[4]])
-    second_bump_sig_f3 = np.min(np.abs([f3_fit_params[2], f3_fit_params[5]]))
-    # plot the fits
-
-    ax[1].plot(
-        10**f3_theory_x,
-        f3_theory_y,
-        ls=":",
-        linewidth=2,
-        alpha=1,
-        color="grey",
-        label=(r"$({:.1f}, {:.1f})$" "\n" r"$({:.1f}, {:.1f})$").format(
-            first_bump_mu_f3,
-            first_bump_sig_f3,
-            second_bump_mu_f3,
-            second_bump_sig_f3,
+    ax[1].legend(
+        title=r"$\mathrm{{z = {:.2f}}}$".format(
+            np.min(np.concatenate([redshft_fs070, redshft_fs035]))
         ),
+        fontsize=10,
     )
-    ax[1].plot(
-        10**f7_theory_x,
-        f7_theory_y,
-        ls=":",
-        linewidth=2,
-        alpha=1,
-        color="black",
-        label=(r"$({:.1f}, {:.1f})$" "\n" r"$({:.1f}, {:.1f})$").format(
-            first_bump_mu_f7,
-            first_bump_sig_f7,
-            second_bump_mu_f7,
-            second_bump_sig_f7,
-        ),
-    )
+    # first_bump_mu_f7 = np.min([f7_fit_params[1], f7_fit_params[4]])
+    # first_bump_sig_f7 = np.max(np.abs([f7_fit_params[2], f7_fit_params[5]]))
+    # second_bump_mu_f7 = np.max([f7_fit_params[1], f7_fit_params[4]])
+    # second_bump_sig_f7 = np.min(np.abs([f7_fit_params[2], f7_fit_params[5]]))
+
+    # first_bump_mu_f3 = np.min([f3_fit_params[1], f3_fit_params[4]])
+    # first_bump_sig_f3 = np.max(np.abs([f3_fit_params[2], f3_fit_params[5]]))
+    # second_bump_mu_f3 = np.max([f3_fit_params[1], f3_fit_params[4]])
+    # second_bump_sig_f3 = np.min(np.abs([f3_fit_params[2], f3_fit_params[5]]))
+    # # plot the fits
+
+    # ax[1].plot(
+    #     10**f3_theory_x,
+    #     f3_theory_y,
+    #     ls=":",
+    #     linewidth=2,
+    #     alpha=1,
+    #     color="grey",
+    #     label=(r"$({:.1f}, {:.1f})$" "\n" r"$({:.1f}, {:.1f})$").format(
+    #         first_bump_mu_f3,
+    #         first_bump_sig_f3,
+    #         second_bump_mu_f3,
+    #         second_bump_sig_f3,
+    #     ),
+    # )
+    # ax[1].plot(
+    #     10**f7_theory_x,
+    #     f7_theory_y,
+    #     ls=":",
+    #     linewidth=2,
+    #     alpha=1,
+    #     color="black",
+    #     label=(r"$({:.1f}, {:.1f})$" "\n" r"$({:.1f}, {:.1f})$").format(
+    #         first_bump_mu_f7,
+    #         first_bump_sig_f7,
+    #         second_bump_mu_f7,
+    #         second_bump_sig_f7,
+    #     ),
+    # )
     ax[1].set_xlabel(
         r"$\mathrm{Z_{MC}} \:\:  \left( \mathrm{Z}_{\odot} \right) $",
     )
@@ -429,22 +441,68 @@ with plt.rc_context(
         labelpad=2,
     )
 
-    ax[1].yaxis.tick_right()
-    ax[1].yaxis.set_label_position("right")
+    # ax[1].yaxis.tick_right()
+    # ax[1].yaxis.set_label_position("right")
 
     ax[1].set_xlim(metal_xrange[0], metal_xrange[1] + 0.001)
-    ax[1].set_ylim(1, 9e4)
+    ax[1].set_ylim(1, 2e4)
 
     ax[1].set_xscale("log")
     ax[1].set_yscale("log")
 
-    ax[1].legend(
-        title=r"$\log_{{10}}\:(\mu,\:\sigma)$",
-        loc="upper center",
-        ncol=2,
-        # fontsize=10,
-        # title_fontsize=10,
+    f7_count, bin_edges = np.histogram(
+        r_pc_cloud_fs070, bins=np.linspace(0.8, 3, bns), density=True
     )
+    f3_count, bin_edges = np.histogram(
+        r_pc_cloud_fs035, bins=np.linspace(0.8, 3, bns), density=True
+    )
+    right_edges = bin_edges[1:]
+    left_edges = bin_edges[:-1]
+    bin_ctrs = 0.5 * (left_edges + right_edges)
+
+    ax[2].plot(
+        bin_ctrs,
+        f3_count,
+        drawstyle="steps-mid",
+        linewidth=4,
+        alpha=0.8,
+        color=fs35_color,
+    )
+    ax[2].fill_between(
+        bin_ctrs,
+        f3_count,
+        step="mid",
+        alpha=0.4,
+        color=fs35_color,
+    )
+    ax[2].plot(
+        bin_ctrs,
+        f7_count,
+        drawstyle="steps-mid",
+        linewidth=4,
+        alpha=0.8,
+        color=fs70_color,
+    )
+    ax[2].fill_between(
+        bin_ctrs,
+        f7_count,
+        step="mid",
+        alpha=0.4,
+        color=fs70_color,
+    )
+    ax[2].set(
+        xlabel=r"$\mathrm{R_{MC} \: (pc)}$",
+        ylabel=r"$f(\mathrm{R_{MC}})$",
+        ylim=(0, 1.70),
+    )
+
+    # ax[1].legend(
+    #     title=r"$\log_{{10}}\:(\mu,\:\sigma)$",
+    #     loc="upper center",
+    #     ncol=2,
+    #     # fontsize=10,
+    #     # title_fontsize=10,
+    # )
     # plt.legend(
     #     title="$\mathrm{SFE} \: (f_{*})$",
     #     loc="upper left",
@@ -453,7 +511,7 @@ with plt.rc_context(
     ax[1].tick_params(axis="both", direction="in", which="both")
     ax[0].tick_params(axis="both", direction="in", which="both")
 
-    plt.subplots_adjust(hspace=0, wspace=0.05)
+    plt.subplots_adjust(hspace=0, wspace=0.32)
 
     plt.savefig(
         "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_mfunc.png",

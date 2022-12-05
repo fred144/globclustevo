@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-lum_model = np.loadtxt("../particle_data/luminosity_look_up_tables/l1500_inst_e.txt")
+lum_model = np.loadtxt("../../particle_data/luminosity_look_up_tables/l1500_inst_e.txt")
 # Monochromatic luminosity at 1500 Å vs. time. Star-formation law: instantaneous.
 # Solid line: alpha -2.35
 time_myr = lum_model[:, 0] / 1e6

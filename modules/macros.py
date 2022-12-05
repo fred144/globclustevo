@@ -224,7 +224,7 @@ def t_myr_from_z(z):
     time
     """
     co = Cosmology(
-        hubble_constant=0.7,
+        hubble_constant=0.70,
         omega_matter=0.270000010728836,
         omega_radiation=0.0,
         omega_lambda=0.730000019073486,
@@ -241,7 +241,7 @@ def z_from_t_myr(t_myr):
     time
     """
     co = Cosmology(
-        hubble_constant=0.7,
+        hubble_constant=0.70,
         omega_matter=0.270000010728836,
         omega_radiation=0.0,
         omega_lambda=0.730000019073486,

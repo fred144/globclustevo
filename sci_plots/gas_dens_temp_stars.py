@@ -140,6 +140,9 @@ with plt.rc_context(
         f7_temp = np.loadtxt(f7_gas_temp[i])
         f3_temp = np.loadtxt(f3_gas_temp[i])
 
+        print(np.mean(f7_dens) ** (3 / 2))
+        print(np.mean(f3_dens) ** (3 / 2))
+
         # get pre processed data from pop2 data sets
         f7_t_myr, f7_redshift = np.loadtxt(f7_plt_p2[i], max_rows=2)[0:2, 6]
         f3_t_myr, f3_redshift = np.loadtxt(f3_plt_p2[i], max_rows=2)[0:2, 6]

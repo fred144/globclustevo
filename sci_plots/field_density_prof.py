@@ -62,7 +62,10 @@ fs035_ds = f3_halo[prof_start:prof_end:prof_step]
 profile_plot_bins = 20
 radius = 200
 star_bins = 1000
+
 pxl_size = (radius * 2 / star_bins) ** 2
+pc2_to_cm2 = 9.52140614e36
+
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
 efficiencies = ["$\mathrm{high-SFE}$", "$\mathrm{low-SFE}$"]
@@ -162,30 +165,30 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 # plot the luminosity projection for 3 viewing angles
 
                 xy = ax[i, 0].imshow(
-                    xy_lums / pxl_size,
+                    xy_lums / (pxl_size * pc2_to_cm2),
                     cmap="inferno",
                     interpolation="gaussian",
                     origin="lower",
                     extent=[-radius, radius, -radius, radius],
-                    norm=LogNorm(vmin=2e32, vmax=7e34),
+                    norm=LogNorm(vmin=2e32 / pc2_to_cm2, vmax=7e34 / pc2_to_cm2),
                 )
                 ax[i, 0].set_facecolor(cm.Greys_r(0))
                 xz = ax[i, 1].imshow(
-                    xz_lums / pxl_size,
+                    xz_lums / (pxl_size * pc2_to_cm2),
                     cmap="inferno",
                     interpolation="gaussian",
                     origin="lower",
                     extent=[-radius, radius, -radius, radius],
-                    norm=LogNorm(vmin=2e32, vmax=7e34),
+                    norm=LogNorm(vmin=2e32 / pc2_to_cm2, vmax=7e34 / pc2_to_cm2),
                 )
                 ax[i, 1].set_facecolor(cm.Greys_r(0))
                 yz = ax[i, 2].imshow(
-                    yz_lums / pxl_size,
+                    yz_lums / (pxl_size * pc2_to_cm2),
                     cmap="inferno",
                     interpolation="gaussian",
                     origin="lower",
                     extent=[-radius, radius, -radius, radius],
-                    norm=LogNorm(vmin=2e32, vmax=7e34),
+                    norm=LogNorm(vmin=2e32 / pc2_to_cm2, vmax=7e34 / pc2_to_cm2),
                 )
                 ax[i, 2].set_facecolor(cm.Greys_r(0))
 
@@ -600,7 +603,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
 
             # add the luminosity color bar
             # [left, bottom, width, height]
-            cbar_ax = ax[1, 0].inset_axes([0.1, 0.85, 0.40, 0.05])
+            cbar_ax = ax[1, 0].inset_axes([0.50, 0.1, 0.40, 0.05])
 
             cbar = fig.colorbar(xz, cax=cbar_ax, pad=0, orientation="horizontal")
             cbar_label = (

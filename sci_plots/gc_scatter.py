@@ -5,7 +5,12 @@ from matplotlib import cm
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-from modules.macros import filter_snapshots, common_filter_snapshots, t_myr_from_z
+from modules.macros import (
+    filter_snapshots,
+    common_filter_snapshots,
+    t_myr_from_z,
+    z_from_t_myr,
+)
 from modules.match_t_sims import find_matching_time, get_snapshots
 import matplotlib.lines as mlines
 from scipy import stats
@@ -103,12 +108,16 @@ f7_bsc_mf_clr = cmap[1]
 f3_mc_imf_clr = cmap[2]
 f3_bsc_mf_clr = cmap[3]
 
+# f7_strt = 113
+# f7_end = 1318
+# f3_strt = 154
+# f3_end = 1469
+# step = 1
 f7_strt = 113
 f7_end = 1196
 f3_strt = 154
 f3_end = 1368
 step = 1
-
 # sample the matched snapshots for plotting by indexing
 # try snapshot 873
 strt = 1083  # 800
@@ -211,7 +220,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     f7_half_light_rad = f7_prof_data[:, 16]
     f7_tot_light = f7_prof_data[:, 17]
     f7_metal, f7_orig_mass = metal_lookup("../sim_log_files/fs07_refine/logSFC", f7_bes)
-
+    f7_redshift = np.loadtxt("../sim_log_files/fs07_refine/logSFC")[:, 2]
     # half efficiency
     f3_t_myr = f3_prof_data[0, 0]
     f3_labels = f3_prof_data[:, 1]
@@ -234,6 +243,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     f3_half_light_rad = f3_prof_data[:, 16]
     f3_tot_light = f3_prof_data[:, 17]
     f3_metal, f3_orig_mass = metal_lookup("../sim_log_files/fs035_ms10/logSFC", f3_bes)
+    f3_redshift = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")[:, 2]
 
     with plt.rc_context(
         {
@@ -344,27 +354,84 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 f3_y = np.log10(y[1])
 
             if i == 1:
-                power = 1.315
-                intercept = -4.947
-                rho_of_r_prefactor = 3 * 10**intercept / 4 * np.pi
-                power_of_r = 3 - power
+                # power = 1.315
+                # intercept = -4.947
+                # rho_of_r_prefactor = 3 * 10**intercept / 4 * np.pi
+                # power_of_r = 3 - power
+                # convert to linear values to find an average density to us
+                f7_x = np.array(10**f7_x)
+                f7_y = np.array(10**f7_y)
+                max_rho = np.max((f7_x / f7_y**3) * (0.75 / np.pi))
+                tenth_max_rho = max_rho / 10
+                tenthousandth_max_rho = max_rho / 10000
+                ana_mhalf = np.linspace(f7_x.min() * 0.5, f7_x.max() * 1.5, 100)
+                ana_rhalf = ((ana_mhalf / max_rho) * (0.75 / np.pi)) ** (1 / 3)
+
+                print(f7_y)
+                print(f7_x)
+                # print(avg_rho)
+                print(max_rho)
                 axs[i].plot(
-                    np.linspace(f7_x.min() - 0.5, f7_x.max() + 0.5, 100),
-                    power * np.linspace(f7_x.min() - 0.5, f7_x.max() + 0.5, 100)
-                    + intercept,
+                    np.log10(ana_mhalf),
+                    np.log10(ana_rhalf),
                     lw=1,
                     ls="--",
                     color="grey",
+                    zorder=0,
                 )
+                axs[i].plot(
+                    np.log10(ana_mhalf),
+                    np.log10(((ana_mhalf / tenth_max_rho) * (0.75 / np.pi)) ** (1 / 3)),
+                    lw=1,
+                    ls="--",
+                    color="grey",
+                    zorder=0,
+                )
+                axs[i].plot(
+                    np.log10(ana_mhalf),
+                    np.log10(
+                        ((ana_mhalf / tenthousandth_max_rho) * (0.75 / np.pi))
+                        ** (1 / 3)
+                    ),
+                    lw=1,
+                    ls="--",
+                    color="grey",
+                    zorder=0,
+                )
+                # convert back to log log values for scatter
+                f7_x = np.log10(f7_x)
+                f7_y = np.log10(f7_y)
                 axs[i].text(
-                    0.5,
-                    0.60,
-                    r"$\mathrm{R_{half} = 10^{-4.95} \: M_{half}^{1.32}}$",
-                    rotation=60,
+                    0.42,
+                    0.34,
+                    r"$\mathrm{\rho_{h}^0 \sim5.4\times10^{4} M_{\odot} pc^{-3}}$",
+                    rotation=23,
                     horizontalalignment="left",
                     verticalalignment="top",
                     transform=axs[i].transAxes,
-                    fontsize=7,
+                    fontsize=6,
+                )
+
+                axs[i].text(
+                    0.80,
+                    0.50,
+                    r"$\mathrm{0.1\rho_{h}^0}$",
+                    rotation=23,
+                    horizontalalignment="left",
+                    verticalalignment="top",
+                    transform=axs[i].transAxes,
+                    fontsize=6,
+                )
+
+                axs[i].text(
+                    0.63,
+                    0.98,
+                    r"$\mathrm{10^{-4}\rho_{h}^0 }$",
+                    rotation=23,
+                    horizontalalignment="left",
+                    verticalalignment="top",
+                    transform=axs[i].transAxes,
+                    fontsize=6,
                 )
                 # leg.get_frame().set_edgecolor("w")
                 axs[i].set_xlim(f7_x.min() - 0.2, f7_x.max() + 0.2)
@@ -633,8 +700,10 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             markeredgecolor="none",
         )
         sfe_legend = fig.legend(
-            loc=(0.08, 0.55),
-            title=r"$\mathrm{{t = {:.0f} \: Myr}}$".format(f3_t_myr),
+            loc=(0.063, 0.55),
+            title=r"$\mathrm{{t = {:.0f} \: Myr, \: z = {:.2f}}}$".format(
+                f3_t_myr, z_from_t_myr(f3_t_myr)
+            ),
             # loc="upper left",
             title_fontsize=10,
             fontsize=10,

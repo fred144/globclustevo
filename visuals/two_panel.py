@@ -118,7 +118,8 @@ plt_wdth = 400
 
 star_bins = 2000
 pxl_size = (plt_wdth / star_bins) ** 2  # pc
-lum_range = (3e33, 3e36)  # (2e32, 5e35)
+pc2_to_cm2 = 9.52140614e36
+lum_range = (3e33 / pc2_to_cm2, 3e36 / pc2_to_cm2)  # (2e32, 5e35)
 gas_range = (0.008, 0.32)
 gas_alpha = 0.5
 lum_alpha = 1
@@ -239,7 +240,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
 
             # lum rendering
             f7_lum_image = ax[0].imshow(
-                f7_lums / pxl_size,
+                f7_lums / (pxl_size * pc2_to_cm2),
                 cmap="inferno",
                 interpolation="gaussian",
                 origin="lower",
@@ -248,7 +249,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                 alpha=lum_alpha,
             )
             f3_lum_image = ax[1].imshow(
-                f3_lums / pxl_size,
+                f3_lums / (pxl_size * pc2_to_cm2),
                 cmap="inferno",
                 interpolation="gaussian",
                 origin="lower",
