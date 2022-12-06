@@ -108,20 +108,23 @@ f7_bsc_mf_clr = cmap[1]
 f3_mc_imf_clr = cmap[2]
 f3_bsc_mf_clr = cmap[3]
 
-# f7_strt = 113
-# f7_end = 1318
-# f3_strt = 154
-# f3_end = 1469
-# step = 1
 f7_strt = 113
-f7_end = 1196
+f7_end = 1318
 f3_strt = 154
-f3_end = 1368
+f3_end = 1499
 step = 1
+# f7_strt = 113
+# f7_end = 1196
+# f3_strt = 154
+# f3_end = 1368
+# step = 1
 # sample the matched snapshots for plotting by indexing
 # try snapshot 873
-strt = 1083  # 800
-end = 1084  # f3_matched_nums.size
+# strt = 1083  # 800
+# end = 1084  # f3_matched_nums.size
+# st = 1
+strt = 1200  # 800
+end = 1201  # f3_matched_nums.size
 st = 1
 
 # f7_prof_dir = r"../gc_profiles/profile_runs/fs07_refine/fof_best"
