@@ -10,6 +10,7 @@ from modules.macros import (
     common_filter_snapshots,
     t_myr_from_z,
     z_from_t_myr,
+    sci_notation,
 )
 from modules.match_t_sims import find_matching_time, get_snapshots
 import matplotlib.lines as mlines
@@ -111,7 +112,7 @@ f3_bsc_mf_clr = cmap[3]
 f7_strt = 113
 f7_end = 1318
 f3_strt = 154
-f3_end = 1499
+f3_end = 1502
 step = 1
 # f7_strt = 113
 # f7_end = 1196
@@ -123,8 +124,8 @@ step = 1
 # strt = 1083  # 800
 # end = 1084  # f3_matched_nums.size
 # st = 1
-strt = 1200  # 800
-end = 1201  # f3_matched_nums.size
+strt = 1205  # 800
+end = 1206  # f3_matched_nums.size
 st = 1
 
 # f7_prof_dir = r"../gc_profiles/profile_runs/fs07_refine/fof_best"
@@ -383,8 +384,8 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 ana_mhalf = np.linspace(f7_x.min() * 0.5, f7_x.max() * 1.5, 100)
                 ana_rhalf = ((ana_mhalf / max_rho) * (0.75 / np.pi)) ** (1 / 3)
 
-                print(f7_y)
-                print(f7_x)
+                # print(f7_y)
+                # print(f7_x)
                 # print(avg_rho)
                 print(max_rho)
                 axs[i].plot(
@@ -418,9 +419,11 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 f7_x = np.log10(f7_x)
                 f7_y = np.log10(f7_y)
                 axs[i].text(
-                    0.42,
-                    0.34,
-                    r"$\mathrm{\rho_{h}^0 \sim5.4\times10^{4} M_{\odot} pc^{-3}}$",
+                    0.40,
+                    0.36,
+                    r"$\mathrm{{\rho_{{h}}^0 \sim {} M_{{\odot}} pc^{{-3}}}}$".format(
+                        sci_notation(1, max_rho)
+                    ),
                     rotation=23,
                     horizontalalignment="left",
                     verticalalignment="top",
@@ -429,8 +432,8 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 )
 
                 axs[i].text(
-                    0.80,
-                    0.50,
+                    0.75,
+                    0.53,
                     r"$\mathrm{0.1\rho_{h}^0}$",
                     rotation=23,
                     horizontalalignment="left",
@@ -440,8 +443,8 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 )
 
                 axs[i].text(
-                    0.63,
-                    0.98,
+                    0.35,
+                    0.94,
                     r"$\mathrm{10^{-4}\rho_{h}^0 }$",
                     rotation=23,
                     horizontalalignment="left",

@@ -214,7 +214,7 @@ def sci_notation(decimal_places, float_num: float):
         print("decimal place not supported")
     start = decimal_places + 2
     end = decimal_places + 3
-    return r"{}\:\times\:10^{:1} ".format(exp_string[:start], int(exp_string[end:]))
+    return r"{}\times10^{:1} ".format(exp_string[:start], int(exp_string[end:]))
 
 
 def t_myr_from_z(z):
