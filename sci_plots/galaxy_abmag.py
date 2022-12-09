@@ -143,7 +143,7 @@ with plt.style.context("dark_background"):
             f7_xy_lums = f7_xy_lums.T
             f7_flux_den_freq = (
                 3.34e4 * (1500) ** 2 * (f7_xy_lums / (pxl_size * pc2_to_cm2))
-            )
+            )  # jansky
             f7_ab_mag = (
                 -2.5
                 * np.log10(
@@ -165,7 +165,7 @@ with plt.style.context("dark_background"):
             f3_xy_lums = f3_xy_lums.T
             f3_flux_den_freq = (
                 3.34e4 * (1500) ** 2 * (f3_xy_lums / (pxl_size * pc2_to_cm2))
-            )
+            )  # jansky
             f3_ab_mag = (
                 -2.5
                 * np.log10(
