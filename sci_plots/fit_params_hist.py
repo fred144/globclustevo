@@ -34,7 +34,7 @@ f3_end = 1368
 step = 1
 
 profiler_data = (
-    "/home/fabg/g_drive/Research/AstrophysicsSimulation/DesktopEnvironment/"
+    "../../g_drive/Research/AstrophysicsSimulation/DesktopEnvironment/"
     "data_globular_cluster/gc_profiles/profile_runs/"
 )
 
@@ -176,7 +176,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         r"$R_\mathrm{{core}}\:\mathrm{(pc)}$",
         r"$\Sigma_0\:\mathrm{\left(M_{\odot}\:pc^{-2}\right)}$",
         r"$\alpha$",
-        r"$\mathrm{M_{BSC}\: / \: M_{SC} }$",
+        r"$\mathrm{M_{BSC}\: / \:  f_* M_{MC} }$",
     ]
 
     # hist_ranges = [(0, 2), (10, 800), (1.5, 5), (0, 1)]
@@ -204,11 +204,11 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         fig, ax = plt.subplots(
             nrows=2,
             ncols=2,
-            sharey="row",
+            # sharey="row",
             figsize=(4, 4.3),
             dpi=300,
         )
-        plt.subplots_adjust(wspace=0, hspace=0.4)
+        plt.subplots_adjust(wspace=0.25, hspace=0.35)
         ax = ax.ravel()
 
         for i, (f7_var, f3_var) in enumerate(zip(f7_vars, f3_vars)):
@@ -223,6 +223,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 alpha=0.7,
                 linewidth=2,
                 label=r"$0.35$",
+                density=True,
             )
 
             ax[i].hist(
@@ -235,6 +236,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 alpha=0.7,
                 linewidth=2,
                 label=r"$0.70$",
+                density=True,
             )
             if i == 2:
                 ax[i].set_yscale("log")
@@ -242,7 +244,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             else:
                 ax[i].set_xscale("log")
                 ax[i].set_yscale("log")
-            ax[i].set_ylim(0.8, 50)
+            # ax[i].set_ylim(0.8, 50)
             # f7_count, f7_bin_edges = np.histogram(f7_var, hist_bins, hist_ranges[i])
             # f7_right_edges = f7_bin_edges[1:]
             # f7_left_edges = f7_bin_edges[:-1]
@@ -294,15 +296,18 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         # ax[0].set_ylabel(r"$\mathrm{Number\:\:of\:\:BSCs}$")
 
         leg = ax[1].legend(
-            title="$\mathrm{SFE} \: (f_{*})$",
+            title="$\mathrm{{SFE}} \: (f_{{*}}), \mathrm{{t}} = {:.0f}$".format(
+                f3_t_myr
+            ),
             loc="upper center",
             ncol=2,
-            title_fontsize=8,
+            title_fontsize=9,
             fontsize=8,
-            bbox_to_anchor=(0.0, 1.02),
+            bbox_to_anchor=(-0.15, 1.40),
         )
 
-        # leg.get_frame().set_edgecolor("grey")
+        leg.get_frame().set_edgecolor("black")
+        leg.get_frame().set_boxstyle("square")
         # ax[2].text(
         #     0.06,
         #     0.92,
@@ -321,34 +326,34 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         #         # "pad": 0.42,
         #     },
         # )
-        fig.text(
-            0.5,
-            0.45,
-            (r"$\mathrm{{t = {:.1f} \: Myr}}$").format(f3_t_myr),
-            ha="center",
-            va="top",
-            color="black",
-            fontsize=8,
-            bbox={
-                "boxstyle": "Round",
-                # have control over edge alpha and face alpha
-                "facecolor": "white",
-                "linewidth": 0.5,
-                "edgecolor": "grey",
-                # "pad": 0.42,
-            },
-        )
+        # fig.text(
+        #     0.5,
+        #     0.52,
+        #     (r"$\mathrm{{t = {:.1f} \: Myr}}$").format(f3_t_myr),
+        #     ha="center",
+        #     va="top",
+        #     color="black",
+        #     fontsize=8,
+        #     bbox={
+        #         "boxstyle": "Round",
+        #         # have control over edge alpha and face alpha
+        #         "facecolor": "white",
+        #         "linewidth": 0.5,
+        #         "edgecolor": "grey",
+        #         # "pad": 0.42,
+        #     },
+        # )
         fig.text(
             0.01,
             0.5,
-            r"$\mathrm{Number\:\:of\:\:BSCs}$",
+            r"$\mathrm{PDF}$",
             va="center",
             rotation="vertical",
         )
 plt.savefig(
     os.path.expanduser(
         (
-            "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+            "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
             "fit_params_hist.png"
         )
     ),

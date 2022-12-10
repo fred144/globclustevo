@@ -127,9 +127,9 @@ if __name__ == "__main__":
             va="center",
             rotation="vertical",
         )
-        f7_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*}}}$"
+        f7_imf_label = r"$ \mathrm{ICMF}$"
         f7_bsc_label = r"$\mathrm{{CMF }} $"
-        f3_imf_label = r"$ \mathrm{{MC}} \: \mathrm{{M_{*}}}$"
+        f3_imf_label = r"$ \mathrm{ICMF}$"
         f3_bsc_label = r"$\mathrm{{CMF}} $"
         f7_legend_title = r"$f_{*} = 0.70$"
         f3_legend_title = r"$f_{*} = 0.35$"
@@ -256,7 +256,7 @@ if __name__ == "__main__":
         # f3_vir_counts[f3_fitting_mask] = 0
         # f3_vir_mass[f3_fitting_mask] = 0
 
-        f7_fit_params, _ = curve_fit(
+        f7_fit_params, f7pcov = curve_fit(
             f=pwr_law,
             xdata=f7_vir_mass,
             ydata=f7_vir_counts,
@@ -267,10 +267,12 @@ if __name__ == "__main__":
             #     [600, np.inf, np.inf, 600, np.inf, np.inf],
             # ),
         )
+        f7_pwr_law_sig = np.sqrt(np.diag(f7pcov))
+
         f7_theory_x = np.linspace(f7_vir_mass.min(), f7_vir_mass.max(), 100)
         f7_theory_y = pwr_law(f7_theory_x, *f7_fit_params)
 
-        f3_fit_params, _ = curve_fit(
+        f3_fit_params, f3pcov = curve_fit(
             f=pwr_law,
             xdata=f3_vir_mass,
             ydata=f3_vir_counts,
@@ -283,6 +285,7 @@ if __name__ == "__main__":
         )
         f3_theory_x = np.linspace(f3_vir_mass.min(), f3_vir_mass.max(), 100)
         f3_theory_y = pwr_law(f3_theory_x, *f3_fit_params)
+        f3_pwr_law_sig = np.sqrt(np.diag(f3pcov))
 
         #!!! fit the logSFC
         f7_mc_fit_params, _ = curve_fit(
@@ -405,7 +408,7 @@ if __name__ == "__main__":
                 linewidth=2,
                 alpha=0.8,
                 color="black",
-                label=(r"$ \alpha = {:.2f}$").format(f7_fit_params[0]),
+                label=(r"$ \alpha = {:.2f} $").format(f7_fit_params[0]),
             )
 
             ax[i, 1].plot(
@@ -415,7 +418,9 @@ if __name__ == "__main__":
                 linewidth=2,
                 alpha=0.8,
                 color="black",
-                label=(r"$ \alpha = {:.2f}$").format(f3_fit_params[0]),
+                label=(r"$ \alpha = {:.2f} $").format(
+                    f7_fit_params[0],
+                ),
             )
 
             # current simulation time annotation
