@@ -392,7 +392,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                     np.log10(ana_mhalf),
                     np.log10(ana_rhalf),
                     lw=1,
-                    ls="--",
+                    ls=":",
                     color="grey",
                     zorder=0,
                 )
@@ -400,7 +400,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                     np.log10(ana_mhalf),
                     np.log10(((ana_mhalf / tenth_max_rho) * (0.75 / np.pi)) ** (1 / 3)),
                     lw=1,
-                    ls="--",
+                    ls=":",
                     color="grey",
                     zorder=0,
                 )
@@ -411,7 +411,7 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                         ** (1 / 3)
                     ),
                     lw=1,
-                    ls="--",
+                    ls=":",
                     color="grey",
                     zorder=0,
                 )

@@ -256,7 +256,7 @@ with plt.rc_context(
         fs35_mass,
         fs35_counts,
         drawstyle="steps-mid",
-        linewidth=4,
+        linewidth=2.5,
         alpha=0.8,
         color=fs35_color,
     )
@@ -273,7 +273,7 @@ with plt.rc_context(
         fs70_mass,
         fs70_counts,
         drawstyle="steps-mid",
-        linewidth=4,
+        linewidth=2.5,
         alpha=0.8,
         color=fs70_color,
     )
@@ -358,7 +358,7 @@ with plt.rc_context(
         fs35_z,
         fs35_z_counts,
         drawstyle="steps-mid",
-        linewidth=4,
+        linewidth=2.5,
         alpha=0.8,
         color=fs35_color,
         label=r"$f_* = 0.35$",
@@ -375,7 +375,7 @@ with plt.rc_context(
         fs70_z,
         fs70_z_counts,
         drawstyle="steps-mid",
-        linewidth=4,
+        linewidth=2.5,
         alpha=0.8,
         color=fs70_color,
         label=r"$f_* = 0.70$",
@@ -464,9 +464,10 @@ with plt.rc_context(
         bin_ctrs,
         f3_count,
         drawstyle="steps-mid",
-        linewidth=4,
+        linewidth=2.5,
         alpha=0.8,
         color=fs35_color,
+        label=r"$\mu = {:.2f}$".format(np.mean(r_pc_cloud_fs035)),
     )
     ax[2].fill_between(
         bin_ctrs,
@@ -479,9 +480,10 @@ with plt.rc_context(
         bin_ctrs,
         f7_count,
         drawstyle="steps-mid",
-        linewidth=4,
+        linewidth=2.5,
         alpha=0.8,
         color=fs70_color,
+        label=r"$\mu = {:.2f}$".format(np.mean(r_pc_cloud_fs070)),
     )
     ax[2].fill_between(
         bin_ctrs,
@@ -492,10 +494,10 @@ with plt.rc_context(
     )
     ax[2].set(
         xlabel=r"$\mathrm{R_{MC} \: (pc)}$",
-        ylabel=r"$f(\mathrm{R_{MC}})$",
+        ylabel=r"$\mathrm{PDF \: (R_{MC})}$",
         ylim=(0, 1.70),
     )
-
+    ax[2].legend(fontsize=10)
     # ax[1].legend(
     #     title=r"$\log_{{10}}\:(\mu,\:\sigma)$",
     #     loc="upper center",

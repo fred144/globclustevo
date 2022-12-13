@@ -126,7 +126,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         # add histogram of ages
         ax_f7 = ax[0].inset_axes([0.12, 0.12, 0.30, 0.30])
         ax_f7.patch.set_alpha(0.5)
-        bins = np.linspace(300, 619, 75)
+        bins = np.linspace(300, 619, 40)
 
         # f7_field_be, bin_edges = np.histogram(
         #     f7_field_be,

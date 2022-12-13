@@ -211,7 +211,7 @@ with plt.style.context("dark_background"):
             "font.size": 7,
         }
     ):
-        fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(4, 8), dpi=400)
+        fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(4, 8), dpi=200)
         # plt.subplots_adjust(hspace=0, wspace=0)
 
         ax[0].text(
@@ -329,14 +329,14 @@ with plt.style.context("dark_background"):
             }
         ):
 
-            mag_ax = f7_zoom.inset_axes([0.05, 0.08, 0.40, 0.04])
-            cbar = fig.colorbar(f7_mag, cax=mag_ax, pad=0, orientation="horizontal")
+            cbar_ax = f7_zoom.inset_axes([0.05, 0.08, 0.40, 0.04])
+            cbar = fig.colorbar(f7_mag, cax=cbar_ax, pad=0, orientation="horizontal")
             cbar.ax.locator_params(nbins=5)
             cbar_label = r"$\mathrm{AB\: Magnitude}$"
             cbar.set_label(label=cbar_label, size=8)
             cbar.ax.xaxis.set_ticks_position("bottom")
             cbar.ax.xaxis.set_label_position("top")
-            cbar_ax.tick_params(axis="both", direction="in", which="both")
+            cbar_ax.tick_params(direction="in")
             cbar.ax.xaxis.set_tick_params(pad=2)
 
         f7_zoom2_1 = f7_zoom.inset_axes([1, 0.5, 0.5, 0.5])
@@ -447,7 +447,7 @@ with plt.style.context("dark_background"):
             alpha=0.6,
         )
         mark_inset(
-            ax[1], f3_zoom, loc1=3, loc2=3, edgecolor="white", ls="--", alpha=0.4
+            ax[1], f3_zoom, loc1=2, loc2=2, edgecolor="white", ls="--", alpha=0.4
         )
 
         f3_zoom2_1 = f3_zoom.inset_axes([1, 0, 0.5, 0.5])
@@ -480,17 +480,169 @@ with plt.style.context("dark_background"):
             f3_zoom, f3_zoom2_2, loc1=2, loc2=2, edgecolor="white", ls="--", alpha=0.4
         )
 
-        ax[1].inset_axes([0, -1.25, 1.25, 1.25])
-        ax[1].inset_axes([1.25, -1.25, 1.25, 1.25])
+        # =============================================================================
+        # render late stage evo of plots
+        # =============================================================================
+        f7_late_ax = ax[1].inset_axes([0, -1.0, 1.0, 1.0])
+        f3_late_ax = ax[1].inset_axes([1.5, -1.0, 1.0, 1.0])
 
-        # ax[0].tick_params(axis="both", which="both", length=0)
-        # ax[1].tick_params(axis="both", which="both", length=0)
-        # f7_zoom.tick_params(axis="both", which="both", length=0)
-        # f7_zoom2_1.tick_params(axis="both", which="both", length=0)
-        # f7_zoom2_2.tick_params(axis="both", which="both", length=0)
-        # f3_zoom.tick_params(axis="both", which="both", length=0)
-        # f3_zoom2_1.tick_params(axis="both", which="both", length=0)
-        # f3_zoom2_2.tick_params(axis="both", which="both", length=0)
+        f7_late_render = f7_late_ax.imshow(
+            high_jansky[1],
+            extent=[-proj_r, proj_r, -proj_r, proj_r],
+            norm=LogNorm(8e7, 8e10),
+            cmap="inferno",
+            origin="lower",
+            interpolation="gaussian",
+        )
+        f7_late_ax.set(
+            xlim=row_lims[1], ylim=row_lims[1], xticklabels=[], yticklabels=[]
+        )
+        scale = patches.Rectangle(
+            xy=(row_lims[1][0] * 0.80, row_lims[1][0] * 0.80),
+            width=row_lims[1][1] * 0.5,
+            height=0.025 * row_lims[1][1],
+            linewidth=0,
+            edgecolor="white",
+            facecolor="white",
+        )
+        f7_late_ax.add_patch(scale)
+        f7_late_ax.text(
+            row_lims[1][0] * 0.55,
+            row_lims[1][0] * 0.87,
+            r"$\mathrm{{{:.0f} \: pc}}$".format(row_lims[1][1] * 0.5),
+            ha="center",
+            va="center",
+            color="white",
+            fontproperties=leg_font,
+        )
+        f3_late_render = f3_late_ax.imshow(
+            low_jansky[1],
+            extent=[-proj_r, proj_r, -proj_r, proj_r],
+            norm=LogNorm(8e7, 8e10),
+            cmap="inferno",
+            origin="lower",
+            interpolation="gaussian",
+        )
+        f3_late_ax.set(
+            xlim=row_lims[1], ylim=row_lims[1], xticklabels=[], yticklabels=[]
+        )
+
+        f7_late_ax_zoom = f7_late_ax.inset_axes([1, 0.5, 0.5, 0.5])
+        f3_late_ax_zoom = f3_late_ax.inset_axes([-0.5, 0, 0.5, 0.5])
+        f7_late_ax_zoom.imshow(
+            high_jansky[1],
+            extent=[-proj_r, proj_r, -proj_r, proj_r],
+            norm=LogNorm(8e7, 8e10),
+            cmap="inferno",
+            origin="lower",
+            interpolation="gaussian",
+        )
+        f3_late_ax_zoom.imshow(
+            low_jansky[1],
+            extent=[-proj_r, proj_r, -proj_r, proj_r],
+            norm=LogNorm(8e7, 8e10),
+            cmap="inferno",
+            origin="lower",
+            interpolation="gaussian",
+        )
+        f7_late_ax_zoom.set(
+            xlim=(-25, 25), ylim=(-25, 25), xticklabels=[], yticklabels=[]
+        )
+        f3_late_ax_zoom.set(
+            xlim=(-25, 25), ylim=(-10, 40), xticklabels=[], yticklabels=[]
+        )
+        mark_inset(
+            f7_late_ax,
+            f7_late_ax_zoom,
+            loc1=2,
+            loc2=2,
+            edgecolor="white",
+            ls="--",
+            alpha=0.4,
+        )
+        mark_inset(
+            f3_late_ax,
+            f3_late_ax_zoom,
+            loc1=4,
+            loc2=4,
+            edgecolor="white",
+            ls="--",
+            alpha=0.4,
+        )
+
+        f7_late_ax.text(
+            0.05,
+            0.95,
+            r"$\mathrm{{high-SFE}}$"
+            "\n"
+            r"$\mathrm{{ t = {:.1f} \: Myr}}$"
+            "\n"
+            r"$\mathrm{{z = {:.1f} }}$".format(high_times[1], high_redshifts[1]),
+            ha="left",
+            va="top",
+            color="white",
+            transform=f7_late_ax.transAxes,
+            fontsize=9,
+        )
+        f3_late_ax.text(
+            0.05,
+            0.95,
+            r"$\mathrm{{low-SFE}}$"
+            "\n"
+            r"$\mathrm{{ t = {:.1f} \: Myr}}$"
+            "\n"
+            r"$\mathrm{{z = {:.1f} }}$".format(low_times[1], low_redshifts[1]),
+            ha="left",
+            va="top",
+            color="white",
+            transform=f3_late_ax.transAxes,
+            fontsize=9,
+        )
+
+        with plt.rc_context(
+            {
+                "font.family": "serif",
+                "mathtext.fontset": "cm",
+                "xtick.labelsize": 7,
+                "ytick.labelsize": 7,
+                "font.size": 8,
+            }
+        ):
+            cbar_ax = f7_late_ax.inset_axes([0.55, 0.12, 0.40, 0.04])
+            cbar = fig.colorbar(
+                f7_late_render, cax=cbar_ax, pad=0, orientation="horizontal"
+            )
+            cbar_label = (
+                r"$\mathrm{\lambda = 1500 \: \AA \:}$"
+                r"$\mathrm{\left(Jansky\right)} $"
+            )
+            cbar.set_label(
+                label=cbar_label,
+                # fontsize=10,
+                size=8
+                # fontproperties=leg_font,
+            )
+            cbar.ax.xaxis.set_ticks_position("bottom")
+            cbar.ax.xaxis.set_label_position("top")
+            cbar_ax.tick_params(axis="both", direction="in", which="both")
+            cbar.ax.xaxis.set_tick_params(pad=2)
+
+        ax[0].tick_params(axis="both", which="both", length=0)
+        ax[1].tick_params(axis="both", which="both", length=0)
+        f7_zoom.tick_params(axis="both", which="both", length=0)
+        f3_zoom.tick_params(axis="both", which="both", length=0)
+
+        f7_zoom2_1.tick_params(axis="both", which="both", direction="in")
+        f7_zoom2_2.tick_params(axis="both", which="both", direction="in")
+
+        f3_zoom2_1.tick_params(axis="both", which="both", direction="in")
+        f3_zoom2_2.tick_params(axis="both", which="both", direction="in")
+
+        f3_late_ax.tick_params(axis="both", which="both", length=0)
+        f7_late_ax.tick_params(axis="both", which="both", length=0)
+
+        f3_late_ax_zoom.tick_params(axis="both", which="both", direction="in")
+        f7_late_ax_zoom.tick_params(axis="both", which="both", direction="in")
 
         plt.subplots_adjust(hspace=-0.0002, wspace=0)
 

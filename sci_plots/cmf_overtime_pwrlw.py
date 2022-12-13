@@ -405,10 +405,10 @@ if __name__ == "__main__":
                 f7_theory_x,
                 f7_theory_y,
                 ls="--",
-                linewidth=2,
+                linewidth=1.25,
                 alpha=0.8,
                 color="black",
-                label=(r"$ \alpha = {:.2f} $").format(f7_fit_params[0]),
+                label=(r"$ \Gamma = {:.2f} $").format(f7_fit_params[0]),
             )
 
             ax[i, 1].plot(
@@ -418,8 +418,8 @@ if __name__ == "__main__":
                 linewidth=2,
                 alpha=0.8,
                 color="black",
-                label=(r"$ \alpha = {:.2f} $").format(
-                    f7_fit_params[0],
+                label=(r"$ \Gamma = {:.2f} $").format(
+                    f3_fit_params[0],
                 ),
             )
 
