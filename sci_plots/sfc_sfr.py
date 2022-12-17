@@ -3,7 +3,7 @@ import sys
 sys.path.append("..")
 import matplotlib.pyplot as plt
 import numpy as np
-from modules.macros import t_myr_from_z
+from modules.macros import t_myr_from_z, z_from_t_myr
 from matplotlib import cm
 from scipy import interpolate
 
@@ -219,10 +219,20 @@ from scipy import interpolate
 # plt.show()
 
 #%%
+
+
+def match_halofinder_logsfc(finder_time, log_time, finder_mass):
+    # look_up_lumi = data[:, column_idx]
+    residuals = np.abs(finder_time - log_time[:, np.newaxis])
+    closest_match_idxs = np.argmin(residuals, axis=1)
+    log_sfc_dm_mass = finder_mass[closest_match_idxs]
+    return log_sfc_dm_mass
+
+
 fs070_log_sfc = np.loadtxt("../sim_log_files/fs07_refine/logSFC")
 redshft_fs070 = fs070_log_sfc[:, 2]
 r_pc_cloud_fs070 = fs070_log_sfc[:, 4]
-m_star_fs070 = fs070_log_sfc[:, 7]
+m_star_fs070 = fs070_log_sfc[:, 6] * 10
 m_cloud_fs070 = fs070_log_sfc[:, 5]
 n_hydrogen_fs070 = fs070_log_sfc[:, 8]
 metal_cloud_fs070 = fs070_log_sfc[:, 9]
@@ -231,7 +241,7 @@ t_myr_fs070 = t_myr_from_z(redshft_fs070)
 fs035_log_sfc = np.loadtxt("../sim_log_files/fs035_ms10/logSFC")
 redshft_fs035 = fs035_log_sfc[:, 2]
 r_pc_cloud_fs035 = fs035_log_sfc[:, 4]
-m_star_fs035 = fs035_log_sfc[:, 7]
+m_star_fs035 = fs035_log_sfc[:, 6] * 10
 m_cloud_fs035 = fs035_log_sfc[:, 5]
 n_hydrogen_fs035 = fs035_log_sfc[:, 8]
 metal_cloud_fs035 = fs035_log_sfc[:, 9]
@@ -264,7 +274,8 @@ print(
 # ax1_twin = ax1.twiny()
 # ax1_twin.plot(redshft_fs070 ,  np.cumsum(m_star_fs070))
 # ax1_twin.invert_xaxis()
-
+f3_halo = np.loadtxt("./dm_data/fs035_dm_halo_evo.txt")
+f7_halo = np.loadtxt("./dm_data/fs070_dm_halo_evo.txt")
 with plt.rc_context(
     {
         "font.family": "serif",
@@ -282,41 +293,61 @@ with plt.rc_context(
 
     fig, ax = plt.subplots(nrows=3, ncols=1, sharex=True, figsize=(5, 4.5), dpi=300)
     plt.subplots_adjust(hspace=0)
-    ax[0].plot(
-        t_myr_fs035,
-        np.cumsum(m_star_fs035),
-        label=r"$0.35$",
-        color=fs35_color,
-        linewidth=4,
-        alpha=0.8,
-    )
-    ax[0].plot(
-        t_myr_fs070,
-        np.cumsum(m_star_fs070),
-        label=r"$0.70$",
-        color=fs70_color,
-        linewidth=4,
-        alpha=0.8,
-    )
-    # ax[0].set_ylim(bottom=5e3,top=2e6)
+
+    # ax[0].plot(
+    #     t_myr_fs035,
+    #     np.log10(np.cumsum(m_star_fs035)),
+    #     label=r"$0.35$",
+    #     color=fs35_color,
+    #     linewidth=4,
+    #     alpha=0.8,
+    # )
+
+    # ax[0].plot(
+    #     t_myr_fs070,
+    #     np.log10(np.cumsum(m_star_fs070)),
+    #     label=r"$0.70$",
+    #     color=fs70_color,
+    #     linewidth=4,
+    #     alpha=0.8,
+    # )
+
     # increase data points for 35 % efficiency
     bin_width_myr = 1
     fs035_interp_points = np.arange(t_myr_fs035.min(), t_myr_fs035.max(), bin_width_myr)
     fs035_interp = interpolate.interp1d(
         x=t_myr_fs035, y=np.cumsum(m_star_fs035), kind="previous"
     )
+    # increase data points for 70 % efficiency
+    fs070_interp_points = np.arange(t_myr_fs070.min(), t_myr_fs070.max(), bin_width_myr)
+    fs070_interp = interpolate.interp1d(
+        x=t_myr_fs070, y=np.cumsum(m_star_fs070), kind="previous"
+    )
+    # ax[0].plot(f3_halo[:, 1], np.log10(f3_halo[:, 5]))
+    # ax[0].plot(f7_halo[:, 1], np.log10(f7_halo[:, 5]))
+    ax[0].plot(
+        fs035_interp_points,
+        np.log10(fs035_interp(fs035_interp_points)),
+        label=r"$0.35$",
+        color=fs35_color,
+        linewidth=4,
+        alpha=0.8,
+    )
+    ax[0].plot(
+        fs070_interp_points,
+        np.log10(fs070_interp(fs070_interp_points)),
+        label=r"$0.70$",
+        color=fs70_color,
+        linewidth=4,
+        alpha=0.8,
+    )
+
     # fs035_interp = np.interp(
     #     fs035_interp_points,
     #     xp=t_myr_fs035,
     #     fp=np.cumsum(m_star_fs035),
     # )
     # ax[0].scatter(fs035_interp_points, fs035_interp, label=r"0.35", s=1)
-
-    # increase data points for 70 % efficiency
-    fs070_interp_points = np.arange(t_myr_fs070.min(), t_myr_fs070.max(), bin_width_myr)
-    fs070_interp = interpolate.interp1d(
-        x=t_myr_fs070, y=np.cumsum(m_star_fs070), kind="previous"
-    )
     # fs070_interp = np.interp(
     #     fs070_interp_points,
     #     xp=t_myr_fs070,
@@ -324,21 +355,13 @@ with plt.rc_context(
     # )
     # ax[0].scatter(fs070_interp_points, fs070_interp, label=r"0.70", s=1)
 
-    ax[0].set_yscale("log")
-    ax[0].set_ylabel(r"$\mathrm{M_{*, total}} \: (\mathrm{M}_{\odot})$ ", labelpad=10)
+    # ax[0].set_yscale("log")
+    ax[0].set_ylabel(r"$\mathrm{\log\:M_{*}}\:(\mathrm{M}_{\odot})$ ", labelpad=20)
     ax[0].legend(
         title="$\mathrm{SFE} \: (f_{*})$",
         loc="lower right",
         fontsize=12,
     )
-
-    # the limits are controlled by 0.70 efficiency
-    # add a twin axis
-    plt.xlim(left=np.min(t_myr_fs070), right=np.max(t_myr_fs070))
-    ax1_twin = ax[0].twiny()
-    ax1_twin.invert_xaxis()
-    ax1_twin.set_xlim(left=np.max(redshft_fs070), right=np.min(redshft_fs070))
-    ax1_twin.set(xlabel="$\mathrm{z}$")
 
     # plot the star formation rates, or the derivatives of the lines
     sfr_fs035 = np.gradient(fs035_interp(fs035_interp_points)) / (bin_width_myr * 1e6)
@@ -349,7 +372,7 @@ with plt.rc_context(
 
     ax[2].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
     ax[1].set_ylabel(
-        r"$\mathrm{SFR} \: \left( \mathrm{M}_{\odot} \: \mathrm{yr}^{-1} \right)$"
+        r"$\mathrm{SFR} \: \left( \mathrm{M}_{\odot} \: \mathrm{yr}^{-1} \right)$",
     )
     ax[1].set_ylim(bottom=0)
 
@@ -414,37 +437,87 @@ with plt.rc_context(
     #     ax[1].axvline(t, ls=":", color="grey")
 
     # DM halo finder data
-    f3_halo = np.loadtxt("./dm_data/fs035_dm_halo_evo.txt")
-    f7_halo = np.loadtxt("./dm_data/fs070_dm_halo_evo.txt")
 
-    f7_dm_mass = f7_halo[:, 3]
-    f3_dm_mass = f3_halo[:, 3]
+    # make masks; dm halo finder was not ran till the latest snapshot
+    # we have sfc data that is later than DM data.
+    f3_mask = fs035_interp_points < f3_halo[:, 1].max()
+    f7_mask = fs070_interp_points < f7_halo[:, 1].max()
 
-    f7_star_mass = f7_halo[:, 5]
-    f3_star_mass = f3_halo[:, 5]
+    f3_logsfc_dm_mass = match_halofinder_logsfc(
+        f3_halo[:, 1], fs035_interp_points, f3_halo[:, 3]
+    )[f3_mask]
 
+    f7_logsfc_dm_mass = match_halofinder_logsfc(
+        f7_halo[:, 1], fs070_interp_points, f7_halo[:, 3]
+    )[f7_mask]
+
+    # using interpolated that had been masked
     ax[2].plot(
-        f7_halo[:, 1],
-        f7_star_mass / f7_dm_mass,
+        fs070_interp_points[f7_mask],
+        np.log10(fs070_interp(fs070_interp_points)[f7_mask] / f7_logsfc_dm_mass),
         c=fs70_color,
         linewidth=4,
         alpha=0.8,
-        # ls=":",
     )
 
     ax[2].plot(
-        f3_halo[:, 1],
-        f3_star_mass / f3_dm_mass,
+        fs035_interp_points[f3_mask],
+        np.log10(fs035_interp(fs035_interp_points)[f3_mask] / f3_logsfc_dm_mass),
         c=fs35_color,
         linewidth=4,
         alpha=0.8,
-        # ls=":",
     )
 
-    ax[2].set_xlim(right=f7_halo[:, 1].max())
+    # using halo finder data exclusively.
+    # f3_halo = np.loadtxt("./dm_data/fs035_dm_halo_evo.txt")
+    # f7_halo = np.loadtxt("./dm_data/fs070_dm_halo_evo.txt")
+    # f7_dm_mass = f7_halo[:, 3]
+    # f3_dm_mass = f3_halo[:, 3]
+    # f7_star_mass = f7_halo[:, 5]
+    # f3_star_mass = f3_halo[:, 5]
+    # ax[2].plot(
+    #     f7_halo[:, 1],
+    #     np.log10(f7_star_mass / f7_dm_mass),
+    #     c=fs70_color,
+    #     linewidth=4,
+    #     alpha=0.8
+    #     # ls=":",
+    # )
+    # ax[2].plot(
+    #     f3_halo[:, 1],
+    #     np.log10(f3_star_mass / f3_dm_mass),
+    #     c=fs35_color,
+    #     linewidth=4,
+    #     alpha=0.8
+    #     # ls=":",
+    # )
+
+    ax[2].set_xlim(right=t_myr_fs070.max())
     # ax[2].set_xlim(415, 450)
-    ax[2].set_yscale("log")
-    ax[2].set_ylabel(r"$\mathrm{M_{*} / M_{halo}}$", labelpad=10)
+    # ax[2].set_yscale("log")
+    ax[2].set_ylabel(r"$\mathrm{\log (M_{*} / M_{halo})}$", labelpad=10)
+
+    # the limits are controlled by 0.70 efficiency
+    # add a twin axis
+    plt.xlim(left=np.min(t_myr_fs070), right=np.max(t_myr_fs070))
+
+    ax1_twin = ax[0].twiny()
+    ax1_twin.plot(
+        fs070_interp_points,
+        np.log10(fs070_interp(fs070_interp_points)),
+        # label=r"$0.70$",
+        color="w",
+        linewidth=0,
+        alpha=0.8,
+    )
+    # ax1_twin.invert_xaxis()
+    # ax1_twin.set_xticks([100,80,50])
+    # ax1_twin.xaxis.set_ticks(fs070_interp_points)
+    ax1_twin.set_xticklabels(
+        list(np.round(z_from_t_myr(ax1_twin.get_xticks()), 1).astype("str"))
+    )
+    ax1_twin.set_xlim(left=np.min(t_myr_fs070), right=np.max(t_myr_fs070))
+    ax1_twin.set(xlabel="$\mathrm{z}$")
 
     ax1_twin.tick_params(axis="y", direction="in", which="both")
     ax1_twin.tick_params(axis="x", direction="in", which="both")

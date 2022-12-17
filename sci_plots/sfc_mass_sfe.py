@@ -123,7 +123,7 @@ with plt.rc_context(
         "ytick.labelsize": 10,
     }
 ):
-    fig, ax = plt.subplots(1, 1, figsize=(4.5, 4.25), dpi=400)
+    fig, ax = plt.subplots(1, 1, figsize=(4.8, 4.25), dpi=400)
 
     cmap = plt.cm.get_cmap("summer")
     ax.axhline(y=70, color="grey", ls="--", zorder=1)
@@ -202,10 +202,20 @@ with plt.rc_context(
 
     ax.tick_params(axis="y", direction="in", which="both")
     ax.tick_params(axis="x", direction="in", which="both")
+    # manual legend, want to customize colors
+    f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"$0.70$")
+    f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"$0.35$")
+    ax.legend(
+        title="$\mathrm{SFE} \: (f_{*})$",
+        loc="lower right",
+        title_fontsize=12,
+        fontsize=12,
+        handles=[f35, f70],
+    )
 
     plt.savefig(
         "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_mass_sfe.png",
-        dpi=500,
+        dpi=400,
         bbox_inches="tight",
         pad_inches=0.05,
     )

@@ -28,9 +28,9 @@ f3_mc_imf_clr = cmap[2]
 f3_bsc_mf_clr = cmap[3]
 
 f7_strt = 113
-f7_end = 1196
+f7_end = 1318
 f3_strt = 154
-f3_end = 1368
+f3_end = 1502
 step = 1
 
 profiler_data = (
@@ -60,8 +60,8 @@ _, f3_matched_nums = find_matching_time(
 f3_pro_ds = filter_snapshots(f3_prof_dir, f3_strt, f3_end, step)
 
 # sample the matched snapshots for plotting by indexing
-strt = 1070
-end = 1071
+strt = 1200
+end = 1201
 st = end - strt
 
 f7_pro_ds = filter_snapshots(f7_prof_dir, f7_strt, f7_end, step)[strt:end:st]
@@ -220,8 +220,8 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 histtype="step",
                 hatch="xxx",
                 # edgecolor="white",
-                alpha=0.7,
-                linewidth=2,
+                alpha=0.9,
+                linewidth=1,
                 label=r"$0.35$",
                 density=True,
             )
@@ -233,14 +233,25 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 histtype="step",
                 hatch="++",
                 # edgecolor="white",
-                alpha=0.7,
-                linewidth=2,
+                alpha=0.9,
+                linewidth=1,
                 label=r"$0.70$",
                 density=True,
             )
             if i == 2:
                 ax[i].set_yscale("log")
-
+            elif i == 0:
+                ax[i].set_xscale("log")
+                ax[i].set_yscale("log")
+                ax[i].axvspan(
+                    0.05,
+                    0.1,
+                    alpha=0.4,
+                    color="grey",
+                    edgecolor=None,
+                    lw=0,
+                )
+                ax[i].set_xlim(left=0.05)
             else:
                 ax[i].set_xscale("log")
                 ax[i].set_yscale("log")

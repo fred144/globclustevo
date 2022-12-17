@@ -3,7 +3,10 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.lines as mlines
 from mpl_toolkits.axes_grid1.axes_divider import make_axes_locatable
-
+import matplotlib.lines as mlines
+from matplotlib import cm
+import matplotlib
+from matplotlib.ticker import MaxNLocator
 
 # def read_cat(filen):
 #     t = []
@@ -96,7 +99,18 @@ r_pc_cloud_fs035 = fs035_log_sfc[:, 4]
 m_sun_cloud_fs035 = fs035_log_sfc[:, 5]
 n_hydrogen_fs035 = fs035_log_sfc[:, 8]
 metal_zun_cloud_fs035 = fs035_log_sfc[:, 9]
+cmap = cm.get_cmap("Set2")
+cmap = cmap(np.linspace(0, 1, 8))
+fs70_color = cmap[1]
+fs35_color = cmap[2]
 
+f7_mtot_metal = np.sum(metal_zun_cloud_fs070 * m_sun_cloud_fs070)
+f3_mtot_metal = np.sum(metal_zun_cloud_fs035 * m_sun_cloud_fs035)
+
+print("Total mass in metals locked in MCs for 70%", f7_mtot_metal)
+print("Total mass in metals locked in MCs for 35%", f3_mtot_metal)
+print(f3_mtot_metal / f7_mtot_metal)
+#%%
 with plt.rc_context(
     {
         "font.family": "serif",
@@ -106,7 +120,7 @@ with plt.rc_context(
     }
 ):
 
-    fig, ax = plt.subplots(1, 1, figsize=(4.5, 4.25), dpi=400)
+    fig, ax = plt.subplots(1, 1, figsize=(3.8, 4.20), dpi=400)
     cmap = plt.cm.get_cmap("autumn_r")
 
     im2 = ax.scatter(
@@ -160,7 +174,7 @@ with plt.rc_context(
     ax.set_xscale("log")
     ax.set_yscale("log")
     ax.set_xlim(1e-4, 8e-3)
-    ax.set_ylim(2e3, 1e5)
+    ax.set_ylim(2e3, 5e4)
     # manual legend, want to customize colors
     f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"$0.70$")
     f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"$0.35$")
@@ -173,9 +187,62 @@ with plt.rc_context(
     )
     ax.tick_params(axis="y", direction="in", which="both")
     ax.tick_params(axis="x", direction="in", which="both")
+
+    with plt.rc_context(
+        {
+            "font.family": "serif",
+            "mathtext.fontset": "cm",
+            "xtick.labelsize": 8,
+            "ytick.labelsize": 8,
+        }
+    ):
+
+        hist_ax = ax.inset_axes([1.02, 0, 0.30, 1], sharey=ax)
+
+        num_bins = 30
+        bins = np.geomspace(2e3, 5e4, num_bins)
+        hist_ax.hist(
+            n_hydrogen_fs035,
+            bins=bins,
+            color=fs35_color,
+            histtype="step",
+            # histtype="stepfilled",
+            hatch="xxx",
+            # edgecolor="white",
+            alpha=0.9,
+            # linewidth=1.5,
+            label=r"$0.35$",
+            density=True,
+            orientation="horizontal",
+        )
+
+        hist_ax.hist(
+            n_hydrogen_fs070,
+            bins=bins,
+            color=fs70_color,
+            histtype="step",
+            # histtype="stepfilled",
+            hatch="++",
+            # edgecolor="white",
+            alpha=0.9,
+            # linewidth=1.5,
+            label=r"$0.70$",
+            density=True,
+            orientation="horizontal",
+        )
+        hist_ax.legend(loc="upper center")
+        hist_ax.set_xlabel(
+            r"$\mathrm{PDF (\overline{n_\mathrm{H}})}$", fontsize=12, labelpad=6
+        )
+
+        hist_ax.tick_params(axis="y", labelleft=False)
+
+        # hist_ax.tick_params(axis="y", direction="in", which="both")
+        hist_ax.tick_params(axis="x", direction="in", which="both")
+
     plt.savefig(
         "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_metal_nden.png",
-        dpi=500,
+        dpi=400,
         bbox_inches="tight",
         pad_inches=0.05,
     )

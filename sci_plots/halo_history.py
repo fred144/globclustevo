@@ -20,18 +20,20 @@ def lin(x, m, b):
 
 
 # DM halo finder data
+
 f3_halo = np.loadtxt("./dm_data/fs035_dm_halo_evo.txt")
 f7_halo = np.loadtxt("./dm_data/fs070_dm_halo_evo.txt")
 
 # f3_halo[f3_halo[:, 3].argsort()]
 # f7_halo[f3_halo[:, 3].argsort()]
-
+# =============================================================================
+# header is mislabeled in the file
+# =============================================================================
 f7_dm_mass = f7_halo[:, 3]
 f3_dm_mass = f3_halo[:, 3]
 
 # f7_dm_mass = f7_dm_mass
 # f3_dm_mass = f3_dm_mass
-
 
 f7_star_mass = f7_halo[:, 5]
 f3_star_mass = f3_halo[:, 5]
@@ -70,60 +72,28 @@ with plt.rc_context(
     )
     plt.subplots_adjust(hspace=0.35)
 
-    sample_rate = 50
-
+    sample_rate = 20
     f7_sample_rate = np.geomspace(1, f7_dm_mass.size - 1, sample_rate).astype(int)
-
-    ax[0].scatter(
-        np.log10(f7_dm_mass[f7_sample_rate]),
-        np.log10((f7_star_mass / f7_dm_mass)[f7_sample_rate]),
-        color=fs70_color,
-        s=15,
-        alpha=1,
-        # ls=":",
-        # label="$0.70$",
-    )
-
-    f7_params, f7_pcov = curve_fit(
-        lin,
-        np.log10(f7_dm_mass[f7_sample_rate]),
-        np.log10((f7_star_mass / f7_dm_mass)[f7_sample_rate]),
-    )
-
-    thoery_x = np.geomspace(
-        f7_dm_mass[f7_sample_rate].min() * 0.9,
-        f7_dm_mass[f7_sample_rate].max() * 1.2,
-        100,
-    )
-
-    ax[0].plot(
-        np.log10(thoery_x),
-        lin(np.log10(thoery_x), *f7_params),
-        color=fs70_color,
-        # ls="--",
-        lw=2,
-        alpha=0.8,
-        label=r"${:.2f} \pm {:.2f}$".format(
-            f7_params[0],
-            np.sqrt(np.diag(f7_pcov))[0],
-        ),
-    )
-
     f3_sample_rate = np.geomspace(1, f3_dm_mass.size - 1, sample_rate).astype(int)
+    f7_sample_rate[0] = 0
+    f3_sample_rate[0] = 0
+
+    thoery_x = np.geomspace(f7_dm_mass.min() * 0.9, f7_dm_mass.max() * 1.2, 100)
+
     ax[0].scatter(
-        np.log10((f3_dm_mass)[f3_sample_rate]),
-        np.log10((f3_star_mass / f3_dm_mass)[f3_sample_rate]),
+        np.log10(f3_dm_mass)[f3_sample_rate],
+        np.log10(f3_star_mass / f3_dm_mass)[f3_sample_rate],
         color=fs35_color,
         s=15,
-        alpha=1,
+        alpha=1
         # ls=":",
         # label="$0.35$",
     )
 
     f3_params, f3_pcov = curve_fit(
         lin,
-        np.log10(f3_dm_mass[f3_sample_rate]),
-        np.log10((f3_star_mass / f3_dm_mass)[f3_sample_rate]),
+        np.log10(f3_dm_mass)[f3_sample_rate],
+        np.log10(f3_star_mass / f3_dm_mass)[f3_sample_rate],
     )
 
     ax[0].plot(
@@ -141,16 +111,46 @@ with plt.rc_context(
             # r"$\log_{{10}} \: \varepsilon_{{\: 35 \%}} = {:.2f} \pm {:.2f}$".
         ),
     )
+
+    ax[0].scatter(
+        np.log10(f7_dm_mass)[f7_sample_rate],
+        np.log10(f7_star_mass / f7_dm_mass)[f7_sample_rate],
+        color=fs70_color,
+        s=15,
+        alpha=1,
+        # ls=":",
+        # label="$0.70$",
+    )
+
+    f7_params, f7_pcov = curve_fit(
+        lin,
+        np.log10(f7_dm_mass)[f7_sample_rate],
+        np.log10(f7_star_mass / f7_dm_mass)[f7_sample_rate],
+    )
+
+    ax[0].plot(
+        np.log10(thoery_x),
+        lin(np.log10(thoery_x), *f7_params),
+        color=fs70_color,
+        # ls="--",
+        lw=2,
+        alpha=0.8,
+        label=r"${:.2f} \pm {:.2f}$".format(
+            f7_params[0],
+            np.sqrt(np.diag(f7_pcov))[0],
+        ),
+    )
+
     ax[0].tick_params(axis="y", direction="in", which="both")
     ax[0].tick_params(axis="x", direction="in", which="both")
     ax[0].set(
         # yscale="log",
         # xscale="log",
-        xlabel=r"$\mathrm{ \log_{10} \: M_{halo} \: \left( \: M_{\odot} \right) }$",
-        ylabel=r"$\mathrm{\log_{10} \: ( M_* / M_{halo} } )  $",
+        xlabel=r"$\mathrm{ \log \: M_{halo} \: \left( \: M_{\odot} \right) }$",
+        ylabel=r"$\mathrm{\log \: ( M_* / M_{halo} } )  $",
         xlim=(
-            np.log10(f7_dm_mass[f7_sample_rate].min() * 0.9),
-            np.log10(f7_dm_mass[f7_sample_rate].max() * 1.2),
+            np.log10(f3_dm_mass.min()),
+            np.log10(f3_dm_mass.max()),
         ),
     )
 
@@ -168,7 +168,7 @@ with plt.rc_context(
     ax[1].invert_xaxis()
     ax[1].set(
         xlabel="$\mathrm{z}$",
-        ylabel=r"$\mathrm{\log_{10} \: M_{halo} \left( \: M_{\odot} \right)}$",
+        ylabel=r"$\mathrm{\log \: M_{halo} \left( \: M_{\odot} \right)}$",
         xlim=(
             z_from_t_myr(f7_time).max(),
             z_from_t_myr(f7_time).min(),
