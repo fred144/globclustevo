@@ -74,7 +74,8 @@ width = 400  # pc
 rows = f7_sn_list.size
 cols = 2
 star_lum_bin = 5000
-pxl_size = (width / star_lum_bin) ** 2  # pc^2
+pxl_width = width / star_lum_bin
+pxl_size = (pxl_width) ** 2  # pc^2
 proj_r = width / 2
 row_lims = [(-60, 60), (-100, 100)]
 pc2_to_cm2 = 9.52140614e36
@@ -92,15 +93,21 @@ low_times = []
 high_times = []
 low_m_ab = []
 high_m_ab = []
+low_surf_b = []
+high_surf_b = []
 
-z = 11
+lum_distnaces = [117645.8, 58648.1]
+redshifts = [11, 6]
 wavelength_angstrom = 1500
-# luminosity_distance = 58648.1  # mpc at z=6
-luminosity_distance = 117645.8  # mpc at z=11
-# angular_size_distance = luminosity_distance / (1 + z) ** 2
+rad_to_arsec = np.pi / (180 * 60 * 60)
+
+
 # theta = (width / star_lum_bin) / angular_size_distance
 
 for i, (f7, f3) in enumerate(zip(f7_sn_list, f3_sn_list)):
+    luminosity_distance = lum_distnaces[i]
+    angular_size_distance = luminosity_distance / (1 + redshifts[i]) ** 2
+    print(((width / 1e6) / angular_size_distance) / rad_to_arsec)
 
     # get pre processed data from pop2 data sets
     f7_t_myr, f7_redshift = np.loadtxt(f7_plt_p2[i], max_rows=2)[0:2, 6]
@@ -169,6 +176,13 @@ for i, (f7, f3) in enumerate(zip(f7_sn_list, f3_sn_list)):
         )
         + 8.9
     )
+    f3_surface_brigthness = f3_ab_abs_mag + 2.5 * np.log10(
+        (pxl_width / (10 * rad_to_arsec)) ** 2
+    )
+    f7_surface_brigthness = f7_ab_abs_mag + 2.5 * np.log10(
+        (pxl_width / (10 * rad_to_arsec)) ** 2
+    )
+
     # compute AB magnitude at z=6,
     f3_ab_apparent_mag = f3_ab_abs_mag + 5 * np.log10(luminosity_distance / 10) + 30
     f7_ab_apparent_mag = f7_ab_abs_mag + 5 * np.log10(luminosity_distance / 10) + 30
@@ -185,8 +199,18 @@ for i, (f7, f3) in enumerate(zip(f7_sn_list, f3_sn_list)):
         + 5 * np.log10(luminosity_distance / 10)
         + 30
     )
-    print("apparent m_AB of f3 galaxy", f3_integrated_ab_apparent_mag, "at z =", z)
-    print("apparent m_AB of f7 galaxy", f7_integrated_ab_apparent_mag, "at z =", z)
+    print(
+        "apparent m_AB of f3 galaxy",
+        f3_integrated_ab_apparent_mag,
+        "at z =",
+        redshifts[i],
+    )
+    print(
+        "apparent m_AB of f7 galaxy",
+        f7_integrated_ab_apparent_mag,
+        "at z =",
+        redshifts[i],
+    )
 
     # f7_integrated_ab_apparent_mag
 
@@ -198,6 +222,9 @@ for i, (f7, f3) in enumerate(zip(f7_sn_list, f3_sn_list)):
     high_times.append(f7_t_myr)
     low_m_ab.append(np.where(f3_ab_abs_mag >= 0, 0, f3_ab_abs_mag))
     high_m_ab.append(np.where(f7_ab_abs_mag >= 0, 0, f7_ab_abs_mag))
+    # account for empty bins.
+    low_surf_b.append(np.where(f3_surface_brigthness >= 5, 7, f3_surface_brigthness))
+    high_surf_b.append(np.where(f7_surface_brigthness >= 5, 7, f7_surface_brigthness))
 
 
 #%%
@@ -287,10 +314,10 @@ with plt.style.context("dark_background"):
 
         f7_zoom = ax[0].inset_axes([1, 0, 1, 1])
         f7_mag = f7_zoom.imshow(
-            high_m_ab[0],
+            high_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            vmin=-28,
-            vmax=0,
+            vmin=-6,
+            vmax=5,
             cmap="cubehelix_r",
             origin="lower",
             interpolation="gaussian",
@@ -332,7 +359,7 @@ with plt.style.context("dark_background"):
             cbar_ax = f7_zoom.inset_axes([0.05, 0.08, 0.40, 0.04])
             cbar = fig.colorbar(f7_mag, cax=cbar_ax, pad=0, orientation="horizontal")
             cbar.ax.locator_params(nbins=5)
-            cbar_label = r"$\mathrm{AB\: Magnitude}$"
+            cbar_label = r"$\mathrm{SB \: (M_{AB} \: arcsec^{-2})}$"
             cbar.set_label(label=cbar_label, size=8)
             cbar.ax.xaxis.set_ticks_position("bottom")
             cbar.ax.xaxis.set_label_position("top")
@@ -341,10 +368,10 @@ with plt.style.context("dark_background"):
 
         f7_zoom2_1 = f7_zoom.inset_axes([1, 0.5, 0.5, 0.5])
         f7_zoom2_1.imshow(
-            high_m_ab[0],
+            high_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            vmin=-28,
-            vmax=0,
+            vmin=-6,
+            vmax=5,
             cmap="cubehelix_r",
             origin="lower",
             interpolation="gaussian",
@@ -356,10 +383,10 @@ with plt.style.context("dark_background"):
 
         f7_zoom2_2 = f7_zoom.inset_axes([1, 0, 0.5, 0.5])
         f7_zoom2_2.imshow(
-            high_m_ab[0],
+            high_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            vmin=-28,
-            vmax=0,
+            vmin=-6,
+            vmax=5,
             cmap="cubehelix_r",
             origin="lower",
             interpolation="gaussian",
@@ -417,10 +444,10 @@ with plt.style.context("dark_background"):
 
         f3_zoom = ax[1].inset_axes([1, 0, 1, 1])
         f3_mag = f3_zoom.imshow(
-            low_m_ab[0],
+            low_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            vmin=-28,
-            vmax=0,
+            vmin=-6,
+            vmax=5,
             cmap="cubehelix_r",
             origin="lower",
             interpolation="gaussian",
@@ -452,10 +479,10 @@ with plt.style.context("dark_background"):
 
         f3_zoom2_1 = f3_zoom.inset_axes([1, 0, 0.5, 0.5])
         f3_zoom2_1.imshow(
-            low_m_ab[0],
+            low_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            vmin=-28,
-            vmax=0,
+            vmin=-6,
+            vmax=5,
             cmap="cubehelix_r",
             origin="lower",
             interpolation="gaussian",
@@ -467,10 +494,10 @@ with plt.style.context("dark_background"):
 
         f3_zoom2_2 = f3_zoom.inset_axes([1, 0.5, 0.5, 0.5])
         f3_zoom2_2.imshow(
-            low_m_ab[0],
+            low_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            vmin=-28,
-            vmax=0,
+            vmin=-6,
+            vmax=5,
             cmap="cubehelix_r",
             origin="lower",
             interpolation="gaussian",
