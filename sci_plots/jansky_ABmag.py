@@ -361,7 +361,7 @@ with plt.style.context("dark_background"):
             cbar = fig.colorbar(f7_render, cax=cbar_ax, pad=0, orientation="horizontal")
 
             cbar_label = (
-                r"$ I_{\mathrm{\lambda= 1500 \: \AA \:}}$"
+                r"$I_\lambda (\mathrm{\lambda = 1500 \: \AA \:} )$"
                 r"$\mathrm{\left(Jy \: arcsec^{-2}\right)} $"
             )
             cbar.set_label(
@@ -703,7 +703,7 @@ with plt.style.context("dark_background"):
                 f7_late_render, cax=cbar_ax, pad=0, orientation="horizontal"
             )
             cbar_label = (
-                r"$ I_{\mathrm{\lambda= 1500 \: \AA \:}}$"
+                r"$I_\lambda (\mathrm{\lambda = 1500 \: \AA \:} )$"
                 r"$\mathrm{\left(Jy \: arcsec^{-2}\right)} $"
             )
             cbar.set_label(

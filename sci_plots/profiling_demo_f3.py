@@ -324,11 +324,11 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
 
                     ax_prof_ins.patch.set_alpha(0.8)
                     ax_prof_ins.set_ylabel(
-                        r"$\mathrm{\log_{10}\; \Sigma \:\:(M_{\odot}\:pc^{-2})}$",
+                        r"$\mathrm{\log_{10}\; \Sigma (r) \:\:(M_{\odot}\:pc^{-2})}$",
                         fontproperties=leg_font,
                     )
                     ax_prof_ins.set_xlabel(
-                        r"$ \mathrm{\log_{10}\;  R \:(pc)}$",
+                        r"$ \mathrm{\log_{10}\;  r \:(pc)}$",
                         fontproperties=leg_font,
                     )
                     ax_prof_ins.set_ylim(bottom=3, top=2e5)
@@ -356,17 +356,17 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
 
                     # fit results
                     fit_results = (
-                        r"$R_{{\mathrm{{core}}}} = {:.2f} \: \mathrm{{pc}}$"
+                        r"$r_{{\mathrm{{core}}}} = {:.2f} \: \mathrm{{pc}}$"
                         "\n"
-                        r"$R_{{\mathrm{{half}}}} = {:.2f} \: \mathrm{{pc}}$"
+                        r"$r_{{\mathrm{{half}}}} = {:.2f} \: \mathrm{{pc}}$"
                         "\n"
                         r"$\alpha = {:.2f} $"
                         "\n"
                         r"$\Sigma_0={}\:\left(\mathrm{{M_{{\odot}}{{pc^{{2}}}}}}\right)$"
                         "\n"
-                        r"$M_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
+                        r"$m_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
                         "\n"
-                        r"$M_{{\mathrm{{half}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
+                        r"$m_{{\mathrm{{half}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
                     ).format(
                         fit_r_c,
                         half_r,
@@ -465,7 +465,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         )
                         # !!! add the luminosity color bar
                         # [left, bottom, width, height]
-                        cbar_ax = fig.add_axes([0.52, 0.805, 0.35, 0.02])
+                        cbar_ax = fig.add_axes([0.50, 0.805, 0.38, 0.02])
                         cbar = fig.colorbar(
                             xy, cax=cbar_ax, pad=0, orientation="horizontal"
                         )
@@ -474,7 +474,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         # )
                         cbar_label = (
                             # r"$\mathrm{Surface\: Brightness}$"
-                            r"$\mathrm{\lambda = 1500 \: \AA \:}$"
+                            r"$\mathrm{I_{\lambda} (\lambda = 1500 \: \AA \:)}$"
                             r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
                         )
                         # cbar.set_label(

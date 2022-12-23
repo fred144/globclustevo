@@ -173,10 +173,10 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     ]
 
     labels = [
-        r"$R_\mathrm{{core}}\:\mathrm{(pc)}$",
+        r"$r_\mathrm{{core}}\:\mathrm{(pc)}$",
         r"$\Sigma_0\:\mathrm{\left(M_{\odot}\:pc^{-2}\right)}$",
         r"$\alpha$",
-        r"$\mathrm{M_{BSC}\: / \:  f_* M_{MC} }$",
+        r"$m\mathrm{_{BSC}}  \:/ \:  m_{\mathrm{SC}}$",
     ]
 
     # hist_ranges = [(0, 2), (10, 800), (1.5, 5), (0, 1)]

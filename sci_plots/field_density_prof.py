@@ -261,15 +261,15 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 )  # smooth version
                 xy_theory_rho = modified_king_model(xy_theory_r, *fit_params)
                 xy_plot_label = (
-                    r"$R_{{\mathrm{{core}}}} = {:.1f} \: \mathrm{{pc}}$"
+                    r"$r_{{\mathrm{{core}}}} = {:.1f} \: \mathrm{{pc}}$"
                     "\n"
                     r"$\alpha = {:.1f} $"
                     "\n"
                     r"$\Sigma_0 = {} \: \mathrm{{{{M_{{\odot}}}}{{pc^{{-2}}}}}}$"
                     "\n"
-                    r"$M_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
+                    r"$m_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
                     "\n"
-                    r"$R_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$"
+                    r"$r_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$"
                 ).format(
                     xy_fit_r_c,
                     xy_fit_alpha,
@@ -297,15 +297,15 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 )  # smooth version
                 xz_theory_rho = modified_king_model(xz_theory_r, *fit_params)
                 xz_plot_label = (
-                    r"$R_{{\mathrm{{core}}}} = {:.1f} \: \mathrm{{pc}}$"
+                    r"$r_{{\mathrm{{core}}}} = {:.1f} \: \mathrm{{pc}}$"
                     "\n"
                     r"$\alpha = {:.1f} $"
                     "\n"
                     r"$\Sigma_0 = {} \: \mathrm{{{{M_{{\odot}}}}{{pc^{{-2}}}}}}$"
                     "\n"
-                    r"$M_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
+                    r"$m_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
                     "\n"
-                    r"$R_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$"
+                    r"$r_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$"
                 ).format(
                     xz_fit_r_c,
                     xz_fit_alpha,
@@ -333,15 +333,15 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 )  # smooth version
                 yz_theory_rho = modified_king_model(yz_theory_r, *fit_params)
                 yz_plot_label = (
-                    r"$R_{{\mathrm{{core}}}} = {:.1f} \: \mathrm{{pc}}$"
+                    r"$r_{{\mathrm{{core}}}} = {:.1f} \: \mathrm{{pc}}$"
                     "\n"
                     r"$\alpha = {:.1f} $"
                     "\n"
                     r"$\Sigma_0 = {} \: \mathrm{{{{M_{{\odot}}}}{{pc^{{-2}}}}}}$"
                     "\n"
-                    r"$M_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
+                    r"$m_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
                     "\n"
-                    r"$R_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$"
+                    r"$r_{{\mathrm{{half}}}} = {:.1f} \: \mathrm{{pc}}$"
                 ).format(
                     yz_fit_r_c,
                     yz_fit_alpha,
@@ -500,8 +500,8 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                         xscale="log",
                         xlim=(0.2, radius * 1.55),
                         ylim=(3e-1, 2.5e2),
-                        ylabel=r"$\mathrm{\log\; \Sigma \:\:(M_{\odot}\:pc^{-2})}$",
-                        xlabel=r"$ \mathrm{\log\;  R \:(pc)}$",
+                        ylabel=r"$\mathrm{\log\; \Sigma (r) \:\:(M_{\odot}\:pc^{-2})}$",
+                        xlabel=r"$ \mathrm{\log\;  r \:(pc)}$",
                     )
 
                 col0_fit.set(
@@ -510,7 +510,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                     xlim=(0.2, radius * 1.55),
                     ylim=(3e-1, 2.5e2),
                     # ylabel=r"$\mathrm{\log\; \Sigma \:\:(M_{\odot}\:pc^{-2})}$",
-                    # xlabel=r"$ \mathrm{\log\;  R \:(pc)}$",
+                    # xlabel=r"$ \mathrm{\log\;  r \:(pc)}$",
                 )
                 col1_fit.set(
                     yscale="log",
@@ -518,7 +518,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                     xlim=(0.2, radius * 1.55),
                     ylim=(3e-1, 2.5e2),
                     # ylabel=r"$\mathrm{\log\; \Sigma \:\:(M_{\odot}\:pc^{-2})}$",
-                    # xlabel=r"$ \mathrm{\log\;  R \:(pc)}$",
+                    # xlabel=r"$ \mathrm{\log\;  r \:(pc)}$",
                 )
                 col2_fit.set(
                     yscale="log",
@@ -526,7 +526,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                     xlim=(0.2, radius * 1.55),
                     ylim=(3e-1, 2.5e2),
                     # ylabel=r"$\mathrm{\log_{10}\; \Sigma \:\:(M_{\odot}\:pc^{-2})}$",
-                    # xlabel=r"$ \mathrm{\log_{10}\;  R \:(pc)}$",
+                    # xlabel=r"$ \mathrm{\log_{10}\;  r \:(pc)}$",
                 )
                 # annotate the fit parameters
                 col0_fit.text(
@@ -609,7 +609,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             cbar = fig.colorbar(xz, cax=cbar_ax, pad=0, orientation="horizontal")
             cbar_label = (
                 # r"$\mathrm{\log\:\:Surface\:Brightness}, "
-                r"$I_{\mathrm{\lambda= 1500 \: \AA \:}}$"
+                r"$I_\lambda (\mathrm{\lambda = 1500 \: \AA \:} )$"
                 "\n"
                 r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
             )

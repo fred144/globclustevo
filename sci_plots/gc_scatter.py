@@ -313,27 +313,27 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         ]
         x_labels = [
             np.nan,
-            r"$\log_{10} \: \mathrm{M_{half}} \: \mathrm{(M_{\odot})} $",
+            r"$\log_{10} \: m\mathrm{_{half}} \: \mathrm{(M_{\odot})} $",
             r"$\log_{10} \: \mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",
+            r"$\log_{10} \: m\mathrm{_{BSC}} \: \mathrm{(M_{\odot})}$",
             # r"$\log_{10} \: \mathrm{M_{BSC}} \: \mathrm{(M_{\odot})}$",  #
-            r"$\log_{10} \: \mathrm{ R_{half} \:(pc)}$",
+            r"$\log_{10} \:  r\mathrm{_{half} \:(pc)}$",
             # r"$\log_{10} \: \mathrm{ R_{half} \:(pc)}$",  #
-            r"$\log_{10} \: \mathrm{Z_{BSC}\:\left(Z_{\odot}\right)}$",
-            r"$\log_{10} \: R\mathrm{_{core} \: (pc)}$",
+            r"$\log_{10} \: Z\mathrm{_{BSC}\:\left(Z_{\odot}\right)}$",
+            r"$\log_{10} \: r\mathrm{_{core} \: (pc)}$",
             r"$\alpha$",
         ]
         y_labels = [
             np.nan,
-            r"$\log_{10} \: \mathrm{R_{half} \: (pc)}$",
+            r"$\log_{10} \: r\mathrm{_{half} \: (pc)}$",
             r"$\log_{10} \: \rho_{\mathrm{core }} \: (\mathrm{M_{\odot} \: pc^{-3}})$",
-            r"$\log_{10} \: \mathrm{M_{core}}\: \mathrm{(M_{\odot})}$",
+            r"$\log_{10} \: m\mathrm{_{core}}\: \mathrm{(M_{\odot})}$",
             # r"$\log_{10} \: \mathrm{M_{core}}\: / \mathrm{M_{BSC}}}$",  #
-            r"$\log_{10} \: R_{\mathrm{core}} \mathrm{(pc)}$",
+            r"$\log_{10} \: r_{\mathrm{core}} \mathrm{(pc)}$",
             # r"$\log_{10} \: R_{\mathrm{core}} / \mathrm{R_{half}}$",  #
-            r"$\log_{10} \: \mathrm{R_{half}\:(pc)}$ ",
+            r"$\log_{10} \: r\mathrm{_{half}\:(pc)}$ ",
             r"$\log_{10} \: \mathrm{\Sigma_0\:\left(M_{\odot}\:pc^{-2}\right)}$",
-            r"$\log_{10} \: R\mathrm{_{core}}$",
+            r"$\log_{10} \: r\mathrm{_{core}}$",
         ]
         # loop through some possible plots.
         fig, ax = plt.subplots(2, 4, figsize=(8.5, 4), dpi=400)
