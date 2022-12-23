@@ -96,9 +96,9 @@ high_m_ab = []
 low_surf_b = []
 high_surf_b = []
 
-lum_distnaces = np.round([117645.8, 58648.1], -4)  # mpc
+lum_distnaces = np.round([117645.8, 107989.8], -4)  # mpc
 # lum_distnaces = [118321.3, 63724.7]
-redshifts = [11, 6]
+redshifts = [11, 11]
 wavelength_angstrom = 1500
 rad_per_arsec = np.pi / (180 * 60 * 60)
 
@@ -322,7 +322,7 @@ with plt.style.context("dark_background"):
         f7_render = ax[0].imshow(
             high_jansky[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(),
+            norm=LogNorm(6e-8, 8e-6),
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -361,8 +361,8 @@ with plt.style.context("dark_background"):
             cbar = fig.colorbar(f7_render, cax=cbar_ax, pad=0, orientation="horizontal")
 
             cbar_label = (
-                r"$\mathrm{\lambda = 1500 \: \AA \:}$"
-                r"$\mathrm{\left(Jansky\right)} $"
+                r"$ I_{\mathrm{\lambda= 1500 \: \AA \:}}$"
+                r"$\mathrm{\left(Jy \: arcsec^{-2}\right)} $"
             )
             cbar.set_label(
                 label=cbar_label,
@@ -379,7 +379,7 @@ with plt.style.context("dark_background"):
         f7_mag = f7_zoom.imshow(
             high_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            # vmin=-6,
+            vmin=19,
             vmax=30,
             cmap="cubehelix_r",
             origin="lower",
@@ -422,7 +422,7 @@ with plt.style.context("dark_background"):
             cbar_ax = f7_zoom.inset_axes([0.05, 0.08, 0.40, 0.04])
             cbar = fig.colorbar(f7_mag, cax=cbar_ax, pad=0, orientation="horizontal")
             cbar.ax.locator_params(nbins=5)
-            cbar_label = r"$\mathrm{SB \: (M_{AB} \: arcsec^{-2})}$"
+            cbar_label = r"$\mathrm{\mu_{AB} \: (mag \: arcsec^{-2})}$"
             cbar.set_label(label=cbar_label, size=8)
             cbar.ax.xaxis.set_ticks_position("bottom")
             cbar.ax.xaxis.set_label_position("top")
@@ -433,7 +433,7 @@ with plt.style.context("dark_background"):
         f7_zoom2_1.imshow(
             high_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            # vmin=-6,
+            vmin=19,
             vmax=30,
             cmap="cubehelix_r",
             origin="lower",
@@ -448,7 +448,7 @@ with plt.style.context("dark_background"):
         f7_zoom2_2.imshow(
             high_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            # vmin=-6,
+            vmin=19,
             vmax=30,
             cmap="cubehelix_r",
             origin="lower",
@@ -479,7 +479,7 @@ with plt.style.context("dark_background"):
         f3_render = ax[1].imshow(
             low_jansky[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(),
+            norm=LogNorm(6e-8, 8e-6),
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -509,7 +509,7 @@ with plt.style.context("dark_background"):
         f3_mag = f3_zoom.imshow(
             low_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            # vmin=-6,
+            vmin=19,
             vmax=30,
             cmap="cubehelix_r",
             origin="lower",
@@ -544,7 +544,7 @@ with plt.style.context("dark_background"):
         f3_zoom2_1.imshow(
             low_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            # vmin=-6,
+            vmin=19,
             vmax=30,
             cmap="cubehelix_r",
             origin="lower",
@@ -559,7 +559,7 @@ with plt.style.context("dark_background"):
         f3_zoom2_2.imshow(
             low_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            # vmin=-6,
+            vmin=19,
             vmax=30,
             cmap="cubehelix_r",
             origin="lower",
@@ -579,7 +579,7 @@ with plt.style.context("dark_background"):
         f7_late_render = f7_late_ax.imshow(
             high_jansky[1],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(),  # 8e7, 8e10
+            norm=LogNorm(2e-8, 5e-6),  # 8e7, 8e10
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -608,7 +608,7 @@ with plt.style.context("dark_background"):
         f3_late_render = f3_late_ax.imshow(
             low_jansky[1],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(),
+            norm=LogNorm(2e-8, 5e-6),
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -622,7 +622,7 @@ with plt.style.context("dark_background"):
         f7_late_ax_zoom.imshow(
             high_jansky[1],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(),
+            norm=LogNorm(2e-8, 5e-6),
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -630,7 +630,7 @@ with plt.style.context("dark_background"):
         f3_late_ax_zoom.imshow(
             low_jansky[1],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(),
+            norm=LogNorm(2e-8, 5e-6),
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -703,8 +703,8 @@ with plt.style.context("dark_background"):
                 f7_late_render, cax=cbar_ax, pad=0, orientation="horizontal"
             )
             cbar_label = (
-                r"$\mathrm{\lambda = 1500 \: \AA \:}$"
-                r"$\mathrm{\left(Jansky\right)} $"
+                r"$ I_{\mathrm{\lambda= 1500 \: \AA \:}}$"
+                r"$\mathrm{\left(Jy \: arcsec^{-2}\right)} $"
             )
             cbar.set_label(
                 label=cbar_label,
