@@ -456,7 +456,24 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 axs[i].set_xlim(f7_x.min() - 0.2, f7_x.max() + 0.2)
                 axs[i].set_ylim(f7_y.min() - 0.1, f7_y.max() + 0.1)
 
-            if i == 4 or i == 6:
+            if i == 4:
+                axs[i].axvspan(
+                    np.log10(0.001),
+                    np.log10(0.1),
+                    alpha=0.3,
+                    color="grey",
+                    edgecolor=None,
+                    lw=0,
+                )
+                axs[i].axhspan(
+                    np.log10(0.001),
+                    np.log10(0.1),
+                    alpha=0.3,
+                    color="grey",
+                    edgecolor=None,
+                    lw=0,
+                )
+            if i == 6:
                 axs[i].axvspan(
                     np.log10(0.001),
                     np.log10(0.1),

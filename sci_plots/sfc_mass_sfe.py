@@ -187,7 +187,7 @@ with plt.rc_context(
     ax.set_yscale("log")
 
     # plt.anno(800, 75, "70")
-    ax.set_xlim(5e2, 5e4)
+    ax.set_xlim(5e2, 3e4)
     ax.set_ylim(5, 100)
     # manual legend, want to customize colors
     # f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"$0.70$")

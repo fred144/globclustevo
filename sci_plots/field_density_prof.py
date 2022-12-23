@@ -62,8 +62,8 @@ fs035_ds = f3_halo[prof_start:prof_end:prof_step]
 profile_plot_bins = 20
 radius = 200
 star_bins = 1000
-
-pxl_size = (radius * 2 / star_bins) ** 2
+wavelength_angstrom = 1500
+pxl_area = (radius * 2 / star_bins) ** 2  # pc^2
 pc2_to_cm2 = 9.52140614e36
 
 cmap = cm.get_cmap("Set2")
@@ -165,31 +165,32 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 # plot the luminosity projection for 3 viewing angles
 
                 xy = ax[i, 0].imshow(
-                    xy_lums / (pxl_size * pc2_to_cm2),
+                    xy_lums / pxl_area,
                     cmap="inferno",
                     interpolation="gaussian",
                     origin="lower",
                     extent=[-radius, radius, -radius, radius],
-                    norm=LogNorm(vmin=2e32 / pc2_to_cm2, vmax=7e34 / pc2_to_cm2),
+                    norm=LogNorm(1e32, 5e34),
                 )
                 ax[i, 0].set_facecolor(cm.Greys_r(0))
                 xz = ax[i, 1].imshow(
-                    xz_lums / (pxl_size * pc2_to_cm2),
+                    xz_lums / pxl_area,
                     cmap="inferno",
                     interpolation="gaussian",
                     origin="lower",
                     extent=[-radius, radius, -radius, radius],
-                    norm=LogNorm(vmin=2e32 / pc2_to_cm2, vmax=7e34 / pc2_to_cm2),
+                    norm=LogNorm(1e32, 5e34),
                 )
                 ax[i, 1].set_facecolor(cm.Greys_r(0))
                 yz = ax[i, 2].imshow(
-                    yz_lums / (pxl_size * pc2_to_cm2),
+                    yz_lums / pxl_area,
                     cmap="inferno",
                     interpolation="gaussian",
                     origin="lower",
                     extent=[-radius, radius, -radius, radius],
-                    norm=LogNorm(vmin=2e32 / pc2_to_cm2, vmax=7e34 / pc2_to_cm2),
+                    norm=LogNorm(1e32, 5e34),
                 )
+                # vmin=2e32 / pc2_to_cm2, vmax=7e34 / pc2_to_cm2
                 ax[i, 2].set_facecolor(cm.Greys_r(0))
 
                 # handle the axes lines and ticks
@@ -608,9 +609,9 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             cbar = fig.colorbar(xz, cax=cbar_ax, pad=0, orientation="horizontal")
             cbar_label = (
                 # r"$\mathrm{\log\:\:Surface\:Brightness}, "
-                r"$\mathrm{\log_{10} \: \lambda = 1500 \: \AA \:}$"
+                r"$I_{\mathrm{\lambda= 1500 \: \AA \:}}$"
                 "\n"
-                r"$\mathrm{\left(erg \:\: s^{-1} \: \AA^{-1} \: pc^{-2} \right)} $"
+                r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
             )
             cbar.set_label(
                 label=cbar_label,
@@ -623,12 +624,11 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             cbar_ax.tick_params(axis="both", direction="in", which="both")
             cbar.ax.xaxis.set_tick_params(pad=2, labelsize=7)
             # tick label mod
-            fig.canvas.draw()
-            x_labels = [
-                i.get_text().replace("10^", "") for i in cbar_ax.get_xticklabels()
-            ]
-            cbar_ax.set_xticklabels(x_labels)
-            save_name = os.path.join(runsavepath, "tracked_{}".format(output_num))
+            # fig.canvas.draw()
+            # x_labels = [
+            #     i.get_text().replace("10^", "") for i in cbar_ax.get_xticklabels()
+            # ]
+            # cbar_ax.set_xticklabels(x_labels)
 
             # add a scale
             rect = patches.Rectangle(
@@ -682,7 +682,10 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             ax[1, 2].spines["right"].set_visible(False)
 
             plt.savefig(
-                os.path.expanduser(("field_density_profile.png")),
+                os.path.expanduser(
+                    "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+                    "field_density_profile.png"
+                ),
                 dpi=500,
                 bbox_inches="tight",
                 pad_inches=0.0,

@@ -75,7 +75,7 @@ rows = f7_sn_list.size
 cols = 2
 star_lum_bin = 5000
 pxl_width = width / star_lum_bin
-pxl_size = (pxl_width) ** 2  # pc^2
+pxl_area = (pxl_width) ** 2  # pc^2
 proj_r = width / 2
 row_lims = [(-60, 60), (-100, 100)]
 pc2_to_cm2 = 9.52140614e36
@@ -96,10 +96,11 @@ high_m_ab = []
 low_surf_b = []
 high_surf_b = []
 
-lum_distnaces = [117645.8, 58648.1]
+lum_distnaces = np.round([117645.8, 58648.1], -4)  # mpc
+# lum_distnaces = [118321.3, 63724.7]
 redshifts = [11, 6]
 wavelength_angstrom = 1500
-rad_to_arsec = np.pi / (180 * 60 * 60)
+rad_per_arsec = np.pi / (180 * 60 * 60)
 
 
 # theta = (width / star_lum_bin) / angular_size_distance
@@ -107,7 +108,12 @@ rad_to_arsec = np.pi / (180 * 60 * 60)
 for i, (f7, f3) in enumerate(zip(f7_sn_list, f3_sn_list)):
     luminosity_distance = lum_distnaces[i]
     angular_size_distance = luminosity_distance / (1 + redshifts[i]) ** 2
-    print(((width / 1e6) / angular_size_distance) / rad_to_arsec)
+    print(
+        "entire galaxy size",
+        ((width / 1e6) / angular_size_distance) / rad_per_arsec,
+        "at z = ",
+        redshifts[i],
+    )
 
     # get pre processed data from pop2 data sets
     f7_t_myr, f7_redshift = np.loadtxt(f7_plt_p2[i], max_rows=2)[0:2, 6]
@@ -140,6 +146,8 @@ for i, (f7, f3) in enumerate(zip(f7_sn_list, f3_sn_list)):
         range=[[-proj_r, proj_r], [-proj_r, proj_r]],
     )
     f7_xy_lums = f7_xy_lums.T
+    f7_surface_brigthness = f7_xy_lums / pxl_area
+
     f3_xy_lums, _, _ = np.histogram2d(
         f3_pos_pc[:, 0],
         f3_pos_pc[:, 1],
@@ -149,82 +157,137 @@ for i, (f7, f3) in enumerate(zip(f7_sn_list, f3_sn_list)):
         range=[[-proj_r, proj_r], [-proj_r, proj_r]],
     )
     f3_xy_lums = f3_xy_lums.T
+    f3_surface_brigthness = f3_xy_lums / pxl_area
 
-    f7_jansky = (
-        3.34e4 * (wavelength_angstrom) ** 2 * (f7_xy_lums / (pxl_size * pc2_to_cm2))
+    f7_jy_per_arcsec2 = (
+        1.56e-6 * (f7_surface_brigthness / 1e36) * ((1 + redshifts[i]) / 10) ** -4
     )
-
-    f3_jansky = (
-        3.34e4 * (wavelength_angstrom) ** 2 * (f3_xy_lums / (pxl_size * pc2_to_cm2))
+    f3_jy_per_arcsec2 = (
+        1.56e-6 * (f3_surface_brigthness / 1e36) * ((1 + redshifts[i]) / 10) ** -4
     )
-
-    f3_ab_abs_mag = (
+    f7_mag_per_arcsec2 = (
         -2.5
         * np.log10(
-            f3_jansky,
-            out=np.zeros_like(f3_jansky),
-            where=(f3_jansky != 0),
+            f7_surface_brigthness / 1e36,
+            out=np.full_like(f7_surface_brigthness, np.nan),
+            where=(f7_surface_brigthness != 0),
         )
-        + 8.9
+        + 10 * np.log10((1 + redshifts[i]) / 10)
+        + 23.4
     )
-    f7_ab_abs_mag = (
+    f3_mag_per_arcsec2 = (
         -2.5
         * np.log10(
-            f7_jansky,
-            out=np.zeros_like(f7_jansky),
-            where=(f7_jansky != 0),
+            f3_surface_brigthness / 1e36,
+            out=np.full_like(f3_surface_brigthness, np.nan),
+            where=(f3_surface_brigthness != 0),
         )
-        + 8.9
-    )
-    f3_surface_brigthness = f3_ab_abs_mag + 2.5 * np.log10(
-        (pxl_width / (10 * rad_to_arsec)) ** 2
-    )
-    f7_surface_brigthness = f7_ab_abs_mag + 2.5 * np.log10(
-        (pxl_width / (10 * rad_to_arsec)) ** 2
+        + 10 * np.log10((1 + redshifts[i]) / 10)
+        + 23.4
     )
 
-    # compute AB magnitude at z=6,
-    f3_ab_apparent_mag = f3_ab_abs_mag + 5 * np.log10(luminosity_distance / 10) + 30
-    f7_ab_apparent_mag = f7_ab_abs_mag + 5 * np.log10(luminosity_distance / 10) + 30
+    # f7_jansky = (
+    #     3.34e4 * (wavelength_angstrom) ** 2 * (f7_xy_lums / (pxl_area * pc2_to_cm2))
+    # )
 
-    f3_integrated_ab_apparent_mag = (
-        -2.5 * np.log10(np.sum(f3_jansky))
-        + 8.9
-        + 5 * np.log10(luminosity_distance / 10)
-        + 30
-    )
-    f7_integrated_ab_apparent_mag = (
-        -2.5 * np.log10(np.sum(f7_jansky))
-        + 8.9
-        + 5 * np.log10(luminosity_distance / 10)
-        + 30
-    )
-    print(
-        "apparent m_AB of f3 galaxy",
-        f3_integrated_ab_apparent_mag,
-        "at z =",
-        redshifts[i],
-    )
-    print(
-        "apparent m_AB of f7 galaxy",
-        f7_integrated_ab_apparent_mag,
-        "at z =",
-        redshifts[i],
-    )
+    # f3_jansky = (
+    #     3.34e4 * (wavelength_angstrom) ** 2 * (f3_xy_lums / (pxl_area * pc2_to_cm2))
+    # )
+
+    # f3_ab_abs_mag = (
+    #     -2.5
+    #     * np.log10(
+    #         f3_jansky,
+    #         out=np.zeros_like(f3_jansky),
+    #         where=(f3_jansky != 0),
+    #     )
+    #     + 8.9
+    # )
+    # f7_ab_abs_mag = (
+    #     -2.5
+    #     * np.log10(
+    #         f7_jansky,
+    #         out=np.zeros_like(f7_jansky),
+    #         where=(f7_jansky != 0),
+    #     )
+    #     + 8.9
+    # )
+    # f3_surface_brigthness = f3_ab_abs_mag + 2.5 * np.log10(
+    #     (pxl_width / (10 * rad_per_arsec)) ** 2
+    # )
+    # f7_surface_brigthness = f7_ab_abs_mag + 2.5 * np.log10(
+    #     (pxl_width / (10 * rad_per_arsec)) ** 2
+    # )
+
+    # # f3_ab_apparent_mag = f3_ab_abs_mag + 5 * np.log10(luminosity_distance / 10) + 30
+    # # f7_ab_apparent_mag = f7_ab_abs_mag + 5 * np.log10(luminosity_distance / 10) + 30
+
+    # # find the flux density for the entire galaxy
+    # f7_integrated_jansky = (
+    #     3.34e4
+    #     * (wavelength_angstrom) ** 2
+    #     * (np.sum(f7_xy_lums) / (width**2 * pc2_to_cm2))
+    # )
+    # f3_integrated_jansky = (
+    #     3.34e4
+    #     * (wavelength_angstrom) ** 2
+    #     * (np.sum(f3_xy_lums) / (width**2 * pc2_to_cm2))
+    # )
+    # # find corresponding absolute magnitude
+    # f3_integrated_absmag = -2.5 * np.log10(f7_integrated_jansky) + 8.9
+    # f7_integrated_absmag = -2.5 * np.log10(f3_integrated_jansky) + 8.9
+
+    # # find the apparent magnitude
+    # # recall, luminosity distance is in Mpc, that's why 30 is added
+    # f3_integtrate_appmag = (
+    #     f3_integrated_absmag + 5 * np.log10(luminosity_distance / 10) + 30
+    # )
+    # f7_integtrate_appmag = (
+    #     f7_integrated_absmag + 5 * np.log10(luminosity_distance / 10) + 30
+    # )
+
+    # # + 5 * np.log10(luminosity_distance / 10)
+    # # + 30
+    # print(
+    #     "M_AB of f3 galaxy",
+    #     f3_integrated_absmag,
+    #     "at z =",
+    #     redshifts[i],
+    # )
+    # print(
+    #     "M_AB of f7 galaxy",
+    #     f7_integrated_absmag,
+    #     "at z =",
+    #     redshifts[i],
+    # )
+    # print(
+    #     "m_AB of f3 galaxy",
+    #     f3_integtrate_appmag,
+    #     "at z =",
+    #     redshifts[i],
+    # )
+    # print(
+    #     "m_AB of f7 galaxy",
+    #     f7_integtrate_appmag,
+    #     "at z =",
+    #     redshifts[i],
+    # )
 
     # f7_integrated_ab_apparent_mag
 
-    low_jansky.append(f3_jansky)
-    high_jansky.append(f7_jansky)
+    low_jansky.append(f3_jy_per_arcsec2)
+    high_jansky.append(f7_jy_per_arcsec2)
     low_redshifts.append(f3_redshift)
     high_redshifts.append(f7_redshift)
     low_times.append(f3_t_myr)
     high_times.append(f7_t_myr)
-    low_m_ab.append(np.where(f3_ab_abs_mag >= 0, 0, f3_ab_abs_mag))
-    high_m_ab.append(np.where(f7_ab_abs_mag >= 0, 0, f7_ab_abs_mag))
+    # low_m_ab.append(np.where(f3_ab_abs_mag >= 100, 0, f3_ab_abs_mag))
+    # high_m_ab.append(np.where(f7_ab_abs_mag >= 100, 0, f7_ab_abs_mag))
     # account for empty bins.
-    low_surf_b.append(np.where(f3_surface_brigthness >= 5, 7, f3_surface_brigthness))
-    high_surf_b.append(np.where(f7_surface_brigthness >= 5, 7, f7_surface_brigthness))
+    f3_mag_per_arcsec2[np.isnan(f3_mag_per_arcsec2)] = 30
+    f7_mag_per_arcsec2[np.isnan(f7_mag_per_arcsec2)] = 30
+    low_surf_b.append(f3_mag_per_arcsec2)
+    high_surf_b.append(f7_mag_per_arcsec2)
 
 
 #%%
@@ -259,7 +322,7 @@ with plt.style.context("dark_background"):
         f7_render = ax[0].imshow(
             high_jansky[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(3e8, 8e11),
+            norm=LogNorm(),
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -316,8 +379,8 @@ with plt.style.context("dark_background"):
         f7_mag = f7_zoom.imshow(
             high_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            vmin=-6,
-            vmax=5,
+            # vmin=-6,
+            vmax=30,
             cmap="cubehelix_r",
             origin="lower",
             interpolation="gaussian",
@@ -370,8 +433,8 @@ with plt.style.context("dark_background"):
         f7_zoom2_1.imshow(
             high_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            vmin=-6,
-            vmax=5,
+            # vmin=-6,
+            vmax=30,
             cmap="cubehelix_r",
             origin="lower",
             interpolation="gaussian",
@@ -385,8 +448,8 @@ with plt.style.context("dark_background"):
         f7_zoom2_2.imshow(
             high_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            vmin=-6,
-            vmax=5,
+            # vmin=-6,
+            vmax=30,
             cmap="cubehelix_r",
             origin="lower",
             interpolation="gaussian",
@@ -416,7 +479,7 @@ with plt.style.context("dark_background"):
         f3_render = ax[1].imshow(
             low_jansky[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(3e8, 8e11),
+            norm=LogNorm(),
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -446,8 +509,8 @@ with plt.style.context("dark_background"):
         f3_mag = f3_zoom.imshow(
             low_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            vmin=-6,
-            vmax=5,
+            # vmin=-6,
+            vmax=30,
             cmap="cubehelix_r",
             origin="lower",
             interpolation="gaussian",
@@ -481,8 +544,8 @@ with plt.style.context("dark_background"):
         f3_zoom2_1.imshow(
             low_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            vmin=-6,
-            vmax=5,
+            # vmin=-6,
+            vmax=30,
             cmap="cubehelix_r",
             origin="lower",
             interpolation="gaussian",
@@ -496,8 +559,8 @@ with plt.style.context("dark_background"):
         f3_zoom2_2.imshow(
             low_surf_b[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            vmin=-6,
-            vmax=5,
+            # vmin=-6,
+            vmax=30,
             cmap="cubehelix_r",
             origin="lower",
             interpolation="gaussian",
@@ -516,7 +579,7 @@ with plt.style.context("dark_background"):
         f7_late_render = f7_late_ax.imshow(
             high_jansky[1],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(8e7, 8e10),
+            norm=LogNorm(),  # 8e7, 8e10
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -545,7 +608,7 @@ with plt.style.context("dark_background"):
         f3_late_render = f3_late_ax.imshow(
             low_jansky[1],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(8e7, 8e10),
+            norm=LogNorm(),
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -559,7 +622,7 @@ with plt.style.context("dark_background"):
         f7_late_ax_zoom.imshow(
             high_jansky[1],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(8e7, 8e10),
+            norm=LogNorm(),
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -567,7 +630,7 @@ with plt.style.context("dark_background"):
         f3_late_ax_zoom.imshow(
             low_jansky[1],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(8e7, 8e10),
+            norm=LogNorm(),
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",

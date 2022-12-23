@@ -81,7 +81,7 @@ def sfc_temperature(n_h, redshifts, ra):
     """
     # x = 1.0 / ra
     # n_0=10.*n_H/(10.*x**3+3-3*x)
-    n_0 = 2.5 * n_h
+    n_0 = 3.84 * n_h
     return 100.0 * (n_0 / 5.0e4 / ((1.0 + redshifts) / 10.0) ** 2)
 
 
@@ -138,7 +138,7 @@ fs35_color = cmap[2]
 cmap = cm.get_cmap("Set3")
 cmap = cmap(np.linspace(0, 1, 11))
 cvals = [0.1, 3]
-colors = ["orangered", "violet"]
+colors = ["orangered", "cyan"]
 norm = plt.Normalize(min(cvals), max(cvals))
 tuples = list(zip(map(norm, cvals), colors))
 cmap = matplotlib.colors.LinearSegmentedColormap.from_list("", tuples)
@@ -153,14 +153,14 @@ with plt.rc_context(
 ):
     fig, ax = plt.subplots(1, 1, figsize=(3.8, 4.20), dpi=400)
 
-    # cmap = plt.cm.get_cmap("rainbow")
+    # cmap = plt.cm.get_cmap("summer")
     # ax.axhline(y=70, color="grey", ls="--", zorder=1)
     # ax.axhline(y=35, color="grey", ls="--", zorder=1)
     # ax.annotate("$70 \%$", (7e2, 75), color="grey")
     # ax.annotate("$35 \%$", (7e2, 38), color="grey")
     f7_temp = sfc_temperature(n_hydrogen_fs070, redshft_fs070, r_pc_cloud_fs070)
     f3_temp = sfc_temperature(n_hydrogen_fs035, redshft_fs035, r_pc_cloud_fs035)
-    ax.scatter(
+    im2 = ax.scatter(
         metal_zun_cloud_fs035,
         f3_temp,
         c=r_pc_cloud_fs035,
@@ -171,6 +171,7 @@ with plt.rc_context(
         linewidth=0.5,
         s=40,
         alpha=0.8,
+        vmax=2.8,
     )
 
     im2 = ax.scatter(
@@ -184,7 +185,7 @@ with plt.rc_context(
         linewidth=0.5,
         s=40,
         alpha=0.8,
-        # vmax=3.09,
+        vmax=2.8,
     )
 
     # cbar = plt.colorbar(pad=0, orientation = 'horizontal')
@@ -204,7 +205,7 @@ with plt.rc_context(
 
     ax.set(
         xlim=[1e-4, 8e-3],
-        ylim=[9, 150],
+        ylim=[15, 230],
         xscale="log",
         yscale="log",
     )
@@ -245,26 +246,23 @@ with plt.rc_context(
             bins=bins,
             color=fs35_color,
             histtype="step",
-            # histtype="stepfilled",
-            hatch="xxx",
-            # edgecolor="white",
+            hatch="////",
+            edgecolor=fs35_color,
             alpha=0.9,
-            # linewidth=1.5,
+            linewidth=1.25,
             label=r"$0.35$",
             density=True,
             orientation="horizontal",
         )
-
         hist_ax.hist(
             f7_temp,
             bins=bins,
             color=fs70_color,
             histtype="step",
-            # histtype="stepfilled",
-            hatch="++",
-            # edgecolor="white",
+            hatch="\\\\\\\\",
+            edgecolor=fs70_color,
             alpha=0.9,
-            # linewidth=1.5,
+            linewidth=1.25,
             label=r"$0.70$",
             density=True,
             orientation="horizontal",

@@ -195,7 +195,7 @@ with plt.rc_context(
     }
 ):
     x_range = (3e2, 4e4)  # (10, 5e5)
-    bns = 22
+    bns = 15
     metal_xrange = (1.5e-4, 1e-2)
     # mass function
     fs70_mass, fs70_counts = log_data_function(m_sun_cloud_fs070, bns, x_range)
@@ -318,7 +318,7 @@ with plt.rc_context(
     )
 
     ax[0].set_xlim(x_range[0], x_range[1])
-    ax[0].set_ylim(1, 2e4)
+    ax[0].set_ylim(1, 4e4)
 
     ax[0].set_xscale("log")
     ax[0].set_yscale("log")
@@ -445,16 +445,16 @@ with plt.rc_context(
     # ax[1].yaxis.set_label_position("right")
 
     ax[1].set_xlim(metal_xrange[0], metal_xrange[1] + 0.001)
-    ax[1].set_ylim(1, 2e4)
+    ax[1].set_ylim(1, 4e4)
 
     ax[1].set_xscale("log")
     ax[1].set_yscale("log")
 
     f7_count, bin_edges = np.histogram(
-        r_pc_cloud_fs070, bins=np.linspace(0.8, 3, bns), density=True
+        r_pc_cloud_fs070, bins=np.arange(0.6, 3.6, 0.2), density=True
     )
     f3_count, bin_edges = np.histogram(
-        r_pc_cloud_fs035, bins=np.linspace(0.8, 3, bns), density=True
+        r_pc_cloud_fs035, bins=np.arange(0.6, 3.6, 0.2), density=True
     )
     right_edges = bin_edges[1:]
     left_edges = bin_edges[:-1]
@@ -509,7 +509,7 @@ with plt.rc_context(
     #     title="$\mathrm{SFE} \: (f_{*})$",
     #     loc="upper left",
     # )
-
+    ax[2].tick_params(axis="both", direction="in", which="both")
     ax[1].tick_params(axis="both", direction="in", which="both")
     ax[0].tick_params(axis="both", direction="in", which="both")
 

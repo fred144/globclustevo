@@ -18,7 +18,7 @@ from scipy.interpolate import InterpolatedUnivariateSpline
 from scipy.interpolate import CubicSpline
 from scipy.signal import find_peaks, find_peaks_cwt, savgol_filter
 from matplotlib.ticker import MaxNLocator
-
+from modules.macros import t_myr_from_z, z_from_t_myr
 
 # 70% efficiency run
 fs70_ds = np.loadtxt("./fof_time_series/fs07_refine_fof_best_113_1196.txt")[::1, :]
@@ -109,9 +109,12 @@ with plt.rc_context(
     ax[1, 0].set_ylabel(r"$\mathrm{L_{BSC}} / \mathrm{L_{Total}}$", labelpad=5)
 
     left_panel_twin_ax = ax[0, 0].twiny()
-    left_panel_twin_ax.invert_xaxis()
+    left_panel_twin_ax.plot(f7_t_sim_myr, f7_lum_in_gc, lw=0)
+    left_panel_twin_ax.set_xticklabels(
+        list(np.round(z_from_t_myr(left_panel_twin_ax.get_xticks()), 1).astype("str"))
+    )
+    left_panel_twin_ax.set_xlim(left=np.min(f7_t_sim_myr), right=np.max(f7_t_sim_myr))
     left_panel_twin_ax.tick_params(axis="both", direction="in", which="both")
-    left_panel_twin_ax.set_xlim(left=f7_redshift.max(), right=f7_redshift.min())
 
     ax[1, 0].set_xlim(left=f7_t_sim_myr.min(), right=f7_t_sim_myr.max())
     ax[1, 0].set_ylim(0.01, 1.1)
@@ -140,19 +143,18 @@ with plt.rc_context(
 
     ax[1, 1].axhline(y=0.5, ls="--", c="grey", alpha=0.8)
 
-    right_panel_twin_ax = ax[0, 1].twiny()
-    right_panel_twin_ax.invert_xaxis()
-    right_panel_twin_ax.tick_params(axis="both", direction="in", which="both")
-    right_panel_twin_ax.set_xlim(left=f3_redshift.max(), right=f3_redshift.min())
-
     ax[1, 1].set_xlim(left=f3_t_sim_myr.min(), right=f3_t_sim_myr.max())
     ax[0, 1].legend(title="$f_{*} = 0.35$", loc="lower right", fontsize=8)
 
-    left_panel_twin_ax.xaxis.set_major_locator(MaxNLocator(5))
+    right_panel_twin_ax = ax[0, 1].twiny()
+    right_panel_twin_ax.plot(f3_t_sim_myr, f3_lum_in_gc, lw=0)
+    right_panel_twin_ax.set_xticklabels(
+        list(np.round(z_from_t_myr(right_panel_twin_ax.get_xticks()), 1).astype("str"))
+    )
+    right_panel_twin_ax.set_xlim(left=np.min(f3_t_sim_myr), right=np.max(f3_t_sim_myr))
+    right_panel_twin_ax.tick_params(axis="both", direction="in", which="both")
 
-    right_panel_twin_ax.xaxis.set_major_locator(MaxNLocator(5))
-
-    ax[1, 0].yaxis.set_major_locator(MaxNLocator(5))
+    # ax[1, 0].yaxis.set_major_locator(MaxNLocator(5))
 
     fig.text(0.5, 0.01, "$\mathrm{t } \:(\mathrm{Myr})$", ha="center")
     fig.text(0.5, 0.95, "$\mathrm{z}$", ha="center")
