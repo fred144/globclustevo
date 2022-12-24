@@ -226,7 +226,7 @@ with plt.style.context("dark_background"):
         cbar_ax = fig.add_axes([0.46, 0.805, 0.40, 0.02])
         cbar = fig.colorbar(inset_image, cax=cbar_ax, pad=0, orientation="horizontal")
         cbar_units = r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
-        cbar_label = r"$ I_{\mathrm{\lambda= 1500 \: \AA \:}}$"
+        cbar_label = r"$ I_{\mathrm{\lambda}} (\lambda = 1500 \: \mathrm{\AA} \:)$"
         # cbar.set_label(
         #     label=cbar_units,
         #     labelpad=2,
@@ -238,13 +238,13 @@ with plt.style.context("dark_background"):
         cbar_ax.tick_params(axis="both", direction="in", which="both")
 
         # efficiency
-        props = dict(
-            boxstyle="round",
-            facecolor="black",
-            alpha=1,
-            linewidth=1,
-            edgecolor="white",
-        )
+        # props = dict(
+        #     boxstyle="round",
+        #     facecolor="black",
+        #     alpha=1,
+        #     linewidth=1,
+        #     edgecolor="white",
+        # )
 
         ax.text(
             0.075,
@@ -254,7 +254,7 @@ with plt.style.context("dark_background"):
             ha="left",
             va="top",
             color="white",
-            bbox=props,
+            # bbox=props,
             transform=ax.transAxes,
         )
 
@@ -266,7 +266,7 @@ with plt.style.context("dark_background"):
         plt.savefig(
             os.path.expanduser(
                 (
-                    "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"er
+                    "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
                     "gc_merger.png"
                 )
             ),
