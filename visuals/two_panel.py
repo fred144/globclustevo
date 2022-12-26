@@ -30,8 +30,8 @@ yt.enable_parallelism()
 # f3_snap_range = (1103, 1502)
 # f7_snap_range = (500, 500)
 # f3_snap_range = (500, 500)
-f7_snap_range = (1318, 1318)
-f3_snap_range = (1502, 1502)
+f7_snap_range = (670, 671)
+f3_snap_range = (837, 838)
 
 # fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
 # fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
