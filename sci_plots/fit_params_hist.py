@@ -60,9 +60,9 @@ _, f3_matched_nums = find_matching_time(
 f3_pro_ds = filter_snapshots(f3_prof_dir, f3_strt, f3_end, step)
 
 # sample the matched snapshots for plotting by indexing
-strt = 1200
-end = 1201
-st = end - strt
+strt = 1199  # 1204
+end = 1204  # 1205
+st = 1  # end - strt
 
 f7_pro_ds = filter_snapshots(f7_prof_dir, f7_strt, f7_end, step)[strt:end:st]
 f3_pro_ds = get_snapshots(f3_pro_ds, get_list=f3_matched_nums)[strt:end:st]
@@ -109,7 +109,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     #     continue
     f7_prof_data = np.loadtxt(os.path.join(f7, "info.txt"))
     f3_prof_data = np.loadtxt(os.path.join(f3, "info.txt"))
-
+    print(f7)
     # load the profiled BSCs data
     f7_t_myr = f7_prof_data[0, 0]
     f7_labels = f7_prof_data[:, 1]
@@ -156,8 +156,8 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     f3_tot_light = f3_prof_data[:, 17]
     f3_metal, f3_orig_mass = metal_lookup("../sim_log_files/fs035_ms10/logSFC", f3_bes)
 
-    f7_mask = (f7_mass > 250) & (f7_alpha < 5)  # & (f7_vir_rad < 10)
-    f3_mask = (f3_mass > 250) & (f3_alpha < 5)  # & (f3_vir_rad < 10)
+    f7_mask = (f7_mass >= 250) & (f7_alpha < 5)  # & (f7_vir_rad < 10)
+    f3_mask = (f3_mass >= 250) & (f3_alpha < 5)  # & (f3_vir_rad < 10)
 
     f7_vars = [
         f7_core_rad[f7_mask],
@@ -180,7 +180,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
     ]
 
     # hist_ranges = [(0, 2), (10, 800), (1.5, 5), (0, 1)]
-    num_bins = 15
+    num_bins = 16
     bins = [
         np.geomspace(f3_core_rad[f3_mask].min(), f3_core_rad[f3_mask].max(), num_bins),
         np.geomspace(f3_sig_0[f3_mask].min(), f3_sig_0[f3_mask].max(), num_bins),
@@ -220,7 +220,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 histtype="step",
                 hatch="xxx",
                 # edgecolor="white",
-                alpha=0.9,
+                alpha=1,
                 linewidth=1,
                 label=r"$0.35$",
                 density=True,
@@ -233,7 +233,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 histtype="step",
                 hatch="++",
                 # edgecolor="white",
-                alpha=0.9,
+                alpha=1,
                 linewidth=1,
                 label=r"$0.70$",
                 density=True,

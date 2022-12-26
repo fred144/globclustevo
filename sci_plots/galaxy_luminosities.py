@@ -23,7 +23,7 @@ import matplotlib.patches as patches
 from matplotlib import colors
 from modules.match_t_sims import find_matching_time, get_snapshots
 from mpl_toolkits.axes_grid1.inset_locator import mark_inset
-
+from scipy.ndimage.filters import gaussian_filter
 
 f7_strt = 113
 f7_end = 1110

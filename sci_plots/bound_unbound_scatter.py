@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import matplotlib.patches as patches
 from modules.match_t_sims import find_matching_time, get_snapshots
+import matplotlib as mpl
 
 runsavepath = "../rendering/luminosity/fs07_refine/gc_tracking"
 if not os.path.exists(runsavepath):
@@ -59,6 +60,7 @@ cmap = cm.get_cmap("Set3")
 cmap = cmap(np.linspace(0, 1, 11))
 bound_clr = "red"
 field_clr = "grey"
+mpl.rcParams["hatch.linewidth"] = 0.5
 #%%
 for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
     f7_t_myr, f7_redshift = np.loadtxt(f7_p2, max_rows=2)[0:2, 6]
@@ -126,7 +128,7 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         # add histogram of ages
         ax_f7 = ax[0].inset_axes([0.12, 0.12, 0.30, 0.30])
         ax_f7.patch.set_alpha(0.5)
-        bins = np.linspace(300, 619, 40)
+        bins = np.linspace(300, 619, 25)
 
         # f7_field_be, bin_edges = np.histogram(
         #     f7_field_be,
@@ -160,16 +162,44 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         #     drawstyle="steps-mid",
         # )
 
+        # ax_f7.hist(
+        #     [f7_bound_be, f7_field_be],
+        #     bins,
+        #     weights=[f7_bound_masses, f7_field_masses],
+        #     alpha=1,
+        #     color=[bound_clr, field_clr],
+        #     # edgecolor="white",
+        #     linewidth=0.5,
+        #     histtype="step",
+        #     hatch="/////"
+        #     # stacked=True,
+        # )
         ax_f7.hist(
-            [f7_bound_be, f7_field_be],
+            f7_field_be,
             bins,
-            weights=[f7_bound_masses, f7_field_masses],
+            weights=f7_field_masses,
             alpha=1,
-            color=[bound_clr, field_clr],
-            edgecolor="white",
-            linewidth=0.25,
-            stacked=True,
+            color=field_clr,
+            # edgecolor="white",
+            linewidth=0.5,
+            histtype="step",
+            hatch="\\\\\\\\\\\\\\",
+            # stacked=True,
         )
+
+        ax_f7.hist(
+            f7_bound_be,
+            bins,
+            weights=f7_bound_masses,
+            alpha=1,
+            color=bound_clr,
+            # edgecolor="white",
+            linewidth=0.5,
+            histtype="step",
+            hatch="//////",
+            # stacked=True,
+        )
+
         # ax_f7.hist(
         #     f7_bound_be,
         #     bins,
@@ -225,16 +255,29 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
         #     edgecolor="white",
         #     linewidth=0.5,
         # )
-
         ax_f3.hist(
-            [f3_bound_be, f3_field_be],
+            f3_field_be,
             bins,
-            weights=[f3_bound_masses, f3_field_masses],
+            weights=f3_field_masses,
             alpha=1,
-            color=[bound_clr, field_clr],
-            edgecolor="white",
-            linewidth=0.25,
-            stacked=True,
+            color=field_clr,
+            # edgecolor="white",
+            linewidth=0.5,
+            histtype="step",
+            hatch="\\\\\\\\\\\\\\",
+            # stacked=True,
+        )
+        ax_f3.hist(
+            f3_bound_be,
+            bins,
+            weights=f3_bound_masses,
+            alpha=1,
+            color=bound_clr,
+            # edgecolor="white",
+            linewidth=0.5,
+            histtype="step",
+            hatch="//////",
+            # stacked=True,
         )
 
         # ax_f3.axvline(x=f3_t_myr, ls="--", color="black", lw=1)

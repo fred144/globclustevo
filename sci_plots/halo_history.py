@@ -155,7 +155,9 @@ with plt.rc_context(
     )
 
     legend = ax[0].legend(
-        fontsize=12,
+        title_fontsize=12,
+        fontsize=11,
+        title=r"$\log_{10}(s)$"
         # loc="lower right"
     )
 

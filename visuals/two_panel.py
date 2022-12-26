@@ -24,14 +24,15 @@ from scipy.ndimage import gaussian_filter
 
 yt.enable_parallelism()
 
-# f7_snap_range = (599, 1296)
-# f3_snap_range = (179, 1469)
+f7_snap_range = (133, 1318)
+f3_snap_range = (179, 1499)
+
 # f7_snap_range = (924, 1318)
 # f3_snap_range = (1103, 1502)
 # f7_snap_range = (500, 500)
 # f3_snap_range = (500, 500)
-f7_snap_range = (670, 671)
-f3_snap_range = (837, 838)
+# f7_snap_range = (670, 671)
+# f3_snap_range = (837, 838)
 
 # fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
 # fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
@@ -139,7 +140,12 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     print("Reading", f3_gas)
     outnum_f7 = f7_gas.split("/")[-1].split("_")[-1]
     outnum_f3 = f3_gas.split("/")[-1].split("_")[-1]
+    # z 9.8 and 9.3 filter
+    if outnum_f7 != "00613" or outnum_f7 != "00939":
+
+        continue
     # read ramses data
+
     f7_info_file = os.path.join(f7_gas, "info_{}.txt".format(outnum_f7))
     f3_info_file = os.path.join(f3_gas, "info_{}.txt".format(outnum_f3))
     f7_ram_ds = yt.load(
@@ -148,6 +154,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         # extra_particle_fields=epf,
     )
     ad70 = f7_ram_ds.all_data()
+
     print("70 percent: gas density, surface density ")
     print(
         "mean",

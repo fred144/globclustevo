@@ -14,6 +14,7 @@ import matplotlib.font_manager as font_manager
 import matplotlib.patches as patches
 from scipy.optimize import curve_fit
 from modules.match_t_sims import find_matching_time, get_snapshots
+from scipy.ndimage.filters import gaussian_filter
 
 runsavepath = "../rendering/luminosity/fs07_refine/gc_tracking"
 if not os.path.exists(runsavepath):
@@ -61,7 +62,7 @@ fs035_ds = f3_halo[prof_start:prof_end:prof_step]
 
 profile_plot_bins = 20
 radius = 200
-star_bins = 1000
+star_bins = 800
 wavelength_angstrom = 1500
 pxl_area = (radius * 2 / star_bins) ** 2  # pc^2
 pc2_to_cm2 = 9.52140614e36
@@ -165,27 +166,27 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                 # plot the luminosity projection for 3 viewing angles
 
                 xy = ax[i, 0].imshow(
-                    xy_lums / pxl_area,
+                    gaussian_filter(xy_lums / pxl_area, sigma=4),
                     cmap="inferno",
-                    interpolation="gaussian",
+                    interpolation="antialiased",
                     origin="lower",
                     extent=[-radius, radius, -radius, radius],
                     norm=LogNorm(1e32, 5e34),
                 )
                 ax[i, 0].set_facecolor(cm.Greys_r(0))
                 xz = ax[i, 1].imshow(
-                    xz_lums / pxl_area,
+                    gaussian_filter(xz_lums / pxl_area, sigma=4),
                     cmap="inferno",
-                    interpolation="gaussian",
+                    interpolation="antialiased",
                     origin="lower",
                     extent=[-radius, radius, -radius, radius],
                     norm=LogNorm(1e32, 5e34),
                 )
                 ax[i, 1].set_facecolor(cm.Greys_r(0))
                 yz = ax[i, 2].imshow(
-                    yz_lums / pxl_area,
+                    gaussian_filter(yz_lums / pxl_area, sigma=4),
                     cmap="inferno",
-                    interpolation="gaussian",
+                    interpolation="antialiased",
                     origin="lower",
                     extent=[-radius, radius, -radius, radius],
                     norm=LogNorm(1e32, 5e34),

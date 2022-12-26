@@ -23,7 +23,7 @@ import matplotlib.font_manager as font_manager
 import matplotlib.patches as patches
 from matplotlib import colors
 from modules.match_t_sims import find_matching_time, get_snapshots
-
+from scipy.ndimage.filters import gaussian_filter
 
 f7_strt = 200
 f7_end = 1110
@@ -95,8 +95,13 @@ pxl_size = width[0] / star_lum_bin
 proj_r = width[0] / 2
 row_lims = [(-80, 80), (-150, 150), (-200, 200), (-200, 200)]
 
+cvals = [0, 0.25, 1, 1.75, 2.0, 4]
+cmapcolors = ["crimson", "magenta", "hotpink", "lime", "cyan"]
+norm = plt.Normalize(min(cvals), max(cvals))
+tuples = list(zip(map(norm, cvals), cmapcolors))
+star_cmap = mpl.colors.LinearSegmentedColormap.from_list("", tuples)
 
-star_cmap = "gist_rainbow"
+# star_cmap = "cool_r"  # "gist_rainbow"
 dens_cmap = "cubehelix"
 temp_cmap = "gist_heat"
 star_map = cm.get_cmap(star_cmap)
@@ -168,37 +173,37 @@ with plt.rc_context(
 
         # show projection plot
         dens_proj_f7 = ax[i, 0].imshow(
-            f7_dens,
+            gaussian_filter(f7_dens, sigma=3),
             extent=[-proj_r, proj_r, -proj_r, proj_r],
             cmap=dens_cmap,
             norm=LogNorm(dense_norm[0], dense_norm[1]),
             origin="lower",
-            interpolation="gaussian",
+            # interpolation="gaussian",
         )
         dens_proj_f3 = ax[i, 3].imshow(
-            f3_dens,
+            gaussian_filter(f3_dens, sigma=3),
             extent=[-proj_r, proj_r, -proj_r, proj_r],
             cmap=dens_cmap,
             norm=LogNorm(dense_norm[0], dense_norm[1]),
             origin="lower",
-            interpolation="gaussian",
+            # interpolation="gaussian",
         )
 
         temp_proj_f7 = ax[i, 1].imshow(
-            f7_temp,
+            gaussian_filter(f7_temp, sigma=3),
             extent=[-proj_r, proj_r, -proj_r, proj_r],
             cmap=temp_cmap,
             norm=LogNorm(temp_norm[0], temp_norm[1]),
             origin="lower",
-            interpolation="gaussian",
+            # interpolation="gaussian",
         )
         temp_proj_f3 = ax[i, 4].imshow(
-            f3_temp,
+            gaussian_filter(f3_temp, sigma=3),
             extent=[-proj_r, proj_r, -proj_r, proj_r],
             cmap=temp_cmap,
             norm=LogNorm(temp_norm[0], temp_norm[1]),
             origin="lower",
-            interpolation="gaussian",
+            # interpolation="gaussian",
         )
 
         # annotate with stars using a loop
