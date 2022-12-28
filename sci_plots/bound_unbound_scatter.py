@@ -442,11 +442,23 @@ for f7_p2, f7_ds, f3_p2, f3_ds in zip(fs070_p2, fs070_ds, fs035_p2, fs035_ds):
     plt.savefig(
         os.path.expanduser(
             (
-                "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+                "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/"
                 "bound_unbound_scatter.png"
             )
         ),
-        dpi=500,
+        dpi=300,
         bbox_inches="tight",
         pad_inches=0.05,
     )
+
+    # plt.savefig(
+    #     os.path.expanduser(
+    #         (
+    #             "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+    #             "bound_unbound_scatter.png"
+    #         )
+    #     ),
+    #     dpi=500,
+    #     bbox_inches="tight",
+    #     pad_inches=0.05,
+    # )

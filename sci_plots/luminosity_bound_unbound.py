@@ -165,18 +165,28 @@ with plt.rc_context(
 
     ax[0, 1].tick_params(axis="both", direction="in", which="both")
     ax[1, 1].tick_params(axis="both", direction="in", which="both")
-
     plt.savefig(
         os.path.expanduser(
             (
-                "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+                "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/"
                 "luminosity_bound_unbound.png"
             )
         ),
-        dpi=500,
+        dpi=300,
         bbox_inches="tight",
         pad_inches=0.05,
     )
+    # plt.savefig(
+    #     os.path.expanduser(
+    #         (
+    #             "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+    #             "luminosity_bound_unbound.png"
+    #         )
+    #     ),
+    #     dpi=500,
+    #     bbox_inches="tight",
+    #     pad_inches=0.05,
+    # )
 
 
 #%%

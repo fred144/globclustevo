@@ -514,10 +514,15 @@ with plt.rc_context(
     ax[0].tick_params(axis="both", direction="in", which="both")
 
     plt.subplots_adjust(hspace=0, wspace=0.32)
-
     plt.savefig(
-        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_mfunc.png",
-        dpi=500,
+        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/sfc_mfunc.png",
+        dpi=300,
         bbox_inches="tight",
         pad_inches=0.05,
     )
+    # plt.savefig(
+    #     "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_mfunc.png",
+    #     dpi=500,
+    #     bbox_inches="tight",
+    #     pad_inches=0.05,
+    # )

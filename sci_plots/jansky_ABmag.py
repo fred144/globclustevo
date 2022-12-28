@@ -753,11 +753,11 @@ with plt.style.context("dark_background"):
 plt.savefig(
     os.path.expanduser(
         (
-            "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+            "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/"
             "jansky_ABmag.png"
         )
     ),
-    dpi=500,
+    dpi=250,
     bbox_inches="tight",
     pad_inches=0.05,
 )

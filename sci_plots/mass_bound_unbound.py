@@ -227,18 +227,29 @@ with plt.rc_context(
     ax[1, 1].tick_params(axis="both", direction="in", which="both")
     # ax[2, 1].tick_params(axis="both", direction="in", which="both")
     # ax[3, 1].tick_params(axis="both", direction="in", which="both")
-
     plt.savefig(
         os.path.expanduser(
             (
-                "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+                "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/"
                 "mass_bound_unbound.png"
             )
         ),
-        dpi=500,
+        dpi=300,
         bbox_inches="tight",
         pad_inches=0.05,
     )
+
+    # plt.savefig(
+    #     os.path.expanduser(
+    #         (
+    #             "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+    #             "mass_bound_unbound.png"
+    #         )
+    #     ),
+    #     dpi=500,
+    #     bbox_inches="tight",
+    #     pad_inches=0.05,
+    # )
 
 
 #%%

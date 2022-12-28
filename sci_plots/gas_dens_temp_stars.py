@@ -385,11 +385,22 @@ plt.subplots_adjust(hspace=0, wspace=-0.1)
 plt.savefig(
     os.path.expanduser(
         (
-            "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+            "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/"
             "gas_dens_temp_stars.png"
         )
     ),
-    dpi=500,
+    dpi=250,
     bbox_inches="tight",
     pad_inches=0.05,
 )
+# plt.savefig(
+#     os.path.expanduser(
+#         (
+#             "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+#             "gas_dens_temp_stars.png"
+#         )
+#     ),
+#     dpi=500,
+#     bbox_inches="tight",
+#     pad_inches=0.05,
+# )

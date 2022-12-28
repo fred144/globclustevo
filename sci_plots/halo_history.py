@@ -179,9 +179,16 @@ with plt.rc_context(
     ax[1].tick_params(axis="both", direction="in", which="both")
 
     # legend.get_frame().set_alpha(0)
+
 plt.savefig(
-    "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/halo_history.png",
-    dpi=500,
+    "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/halo_history.png",
+    dpi=300,
     bbox_inches="tight",
     pad_inches=0.05,
 )
+# plt.savefig(
+#     "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/halo_history.png",
+#     dpi=500,
+#     bbox_inches="tight",
+#     pad_inches=0.05,
+# )

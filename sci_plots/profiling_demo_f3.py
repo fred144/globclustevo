@@ -362,7 +362,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         "\n"
                         r"$\alpha = {:.2f} $"
                         "\n"
-                        r"$\Sigma_0={}\:\left(\mathrm{{M_{{\odot}}{{pc^{{2}}}}}}\right)$"
+                        r"$\Sigma_0={}\:\left(\mathrm{{M_{{\odot}}{{pc^{{-2}}}}}}\right)$"
                         "\n"
                         r"$m_{{\mathrm{{core}}}} = {} \: \mathrm{{M}}_{{\odot}}$"
                         "\n"
@@ -512,17 +512,29 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                     # plt.subplots_adjust(hspace=0, wspace=-0.05)
 
 # plt.subplots_adjust(hspace=0)
+
 plt.savefig(
     os.path.expanduser(
         (
-            "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+            "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/"
             "profiling_demo_f3.png"
         )
     ),
-    dpi=500,
+    dpi=300,
     bbox_inches="tight",
     pad_inches=0.05,
 )
+# plt.savefig(
+#     os.path.expanduser(
+#         (
+#             "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+#             "profiling_demo_f3.png"
+#         )
+#     ),
+#     dpi=500,
+#     bbox_inches="tight",
+#     pad_inches=0.05,
+# )
 
 # grids
 # ax_prof_ins.grid(

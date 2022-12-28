@@ -60,7 +60,7 @@ _, f3_matched_nums = find_matching_time(
 f3_pro_ds = filter_snapshots(f3_prof_dir, f3_strt, f3_end, step)
 
 # sample the matched snapshots for plotting by indexing
-strt = 1199  # 1204
+strt = 1203  # 1204
 end = 1204  # 1205
 st = 1  # end - strt
 
@@ -364,14 +364,25 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
 plt.savefig(
     os.path.expanduser(
         (
-            "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+            "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/"
             "fit_params_hist.png"
         )
     ),
-    dpi=500,
+    dpi=300,
     bbox_inches="tight",
     pad_inches=0.05,
 )
+# plt.savefig(
+#     os.path.expanduser(
+#         (
+#             "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+#             "fit_params_hist.png"
+#         )
+#     ),
+#     dpi=500,
+#     bbox_inches="tight",
+#     pad_inches=0.05,
+# )
 # ax[0].hist(
 #     f7_core_rad,
 #     bins=bins,

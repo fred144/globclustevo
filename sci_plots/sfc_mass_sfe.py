@@ -214,8 +214,14 @@ with plt.rc_context(
     )
 
     plt.savefig(
-        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_mass_sfe.png",
-        dpi=400,
+        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/sfc_mass_sfe.png",
+        dpi=300,
         bbox_inches="tight",
         pad_inches=0.05,
     )
+    # plt.savefig(
+    #     "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_mass_sfe.png",
+    #     dpi=400,
+    #     bbox_inches="tight",
+    #     pad_inches=0.05,
+    # )

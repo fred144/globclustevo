@@ -262,15 +262,25 @@ with plt.style.context("dark_background"):
         ax.spines["bottom"].set_visible(False)
         ax.spines["top"].set_visible(False)
         ax.spines["left"].set_visible(False)
-
         plt.savefig(
             os.path.expanduser(
                 (
-                    "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+                    "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/"
                     "gc_merger.png"
                 )
             ),
-            dpi=500,
+            dpi=200,
             bbox_inches="tight",
             pad_inches=0.05,
         )
+        # plt.savefig(
+        #     os.path.expanduser(
+        #         (
+        #             "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+        #             "gc_merger.png"
+        #         )
+        #     ),
+        #     dpi=500,
+        #     bbox_inches="tight",
+        #     pad_inches=0.05,
+        # )

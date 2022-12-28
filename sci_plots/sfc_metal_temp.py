@@ -274,8 +274,14 @@ with plt.rc_context(
         # hist_ax.tick_params(axis="y", direction="in", which="both")
         hist_ax.tick_params(axis="x", direction="in", which="both")
     plt.savefig(
-        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_metal_temp.png",
-        dpi=400,
+        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/sfc_metal_temp.png",
+        dpi=300,
         bbox_inches="tight",
         pad_inches=0.05,
     )
+    # plt.savefig(
+    #     "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_metal_temp.png",
+    #     dpi=400,
+    #     bbox_inches="tight",
+    #     pad_inches=0.05,
+    # )

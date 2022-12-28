@@ -527,10 +527,15 @@ with plt.rc_context(
     ax[1].tick_params(axis="x", direction="in", which="both")
     ax[2].tick_params(axis="y", direction="in", which="both")
     ax[2].tick_params(axis="x", direction="in", which="both")
-
     plt.savefig(
-        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_sfr.png",
-        dpi=500,
+        "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/sfc_sfr.png",
+        dpi=300,
         bbox_inches="tight",
         pad_inches=0.05,
     )
+    # plt.savefig(
+    #     "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/sfc_sfr.png",
+    #     dpi=500,
+    #     bbox_inches="tight",
+    #     pad_inches=0.05,
+    # )

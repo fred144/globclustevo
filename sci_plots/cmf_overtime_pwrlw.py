@@ -494,15 +494,26 @@ if __name__ == "__main__":
             #     txt.set_ha("center")  # horizontal alignment of text item
             #     txt.set_x(-5)  # x-position
             #     txt.set_y(10)  # y-position
-
     plt.savefig(
         os.path.expanduser(
             (
-                "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+                "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/"
                 "cmf_overtime_pwrlw.png"
             )
         ),
-        dpi=500,
+        dpi=300,
         bbox_inches="tight",
         pad_inches=0.08,
     )
+
+    # plt.savefig(
+    #     os.path.expanduser(
+    #         (
+    #             "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+    #             "cmf_overtime_pwrlw.png"
+    #         )
+    #     ),
+    #     dpi=500,
+    #     bbox_inches="tight",
+    #     pad_inches=0.08,
+    # )

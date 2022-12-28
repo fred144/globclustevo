@@ -761,12 +761,22 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         cbar_ax.set_title(label="$\mathrm{t_{formation} \: (Myr)}$", fontsize=12)
 
         cbar.ax.tick_params(axis="x", direction="in", which="both", labelsize=7)
-
 plt.savefig(
     os.path.expanduser(
-        ("~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/" "gc_scatter.png")
+        (
+            "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/"
+            "gc_scatter.png"
+        )
     ),
-    dpi=500,
+    dpi=300,
     bbox_inches="tight",
     pad_inches=0.05,
 )
+# plt.savefig(
+#     os.path.expanduser(
+#         ("~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/" "gc_scatter.png")
+#     ),
+#     dpi=500,
+#     bbox_inches="tight",
+#     pad_inches=0.05,
+# )

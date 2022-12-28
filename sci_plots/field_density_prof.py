@@ -687,10 +687,19 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
 
             plt.savefig(
                 os.path.expanduser(
-                    "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+                    "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/"
                     "field_density_profile.png"
                 ),
-                dpi=500,
+                dpi=250,
                 bbox_inches="tight",
                 pad_inches=0.0,
             )
+            # plt.savefig(
+            #     os.path.expanduser(
+            #         "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+            #         "field_density_profile.png"
+            #     ),
+            #     dpi=500,
+            #     bbox_inches="tight",
+            #     pad_inches=0.0,
+            # )
