@@ -95,8 +95,8 @@ pxl_size = width[0] / star_lum_bin
 proj_r = width[0] / 2
 row_lims = [(-80, 80), (-150, 150), (-200, 200), (-200, 200)]
 
-cvals = [0, 0.25, 1, 1.75, 2.0, 4]
-cmapcolors = ["crimson", "magenta", "hotpink", "lime", "cyan"]
+cvals = [0.5, 1.7, 1.9, 2.1, 2.75, 4]
+cmapcolors = ["crimson", "magenta", "hotpink", "gold", "lime", "cyan"]
 norm = plt.Normalize(min(cvals), max(cvals))
 tuples = list(zip(map(norm, cvals), cmapcolors))
 star_cmap = mpl.colors.LinearSegmentedColormap.from_list("", tuples)

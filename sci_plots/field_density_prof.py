@@ -50,6 +50,9 @@ f7_halo_matched = get_snapshots(snapshot_file_list=f7_halo_ds, get_list=f7_match
 prof_start = 1240
 prof_end = 1241
 prof_step = 10
+# prof_start = 1236
+# prof_end = 1245
+# prof_step = 1
 
 fs070_p2 = f7_pop2_matched[prof_start:prof_end:prof_step]
 fs070_ds = f7_halo_matched[prof_start:prof_end:prof_step]
@@ -623,7 +626,7 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
             cbar.ax.xaxis.set_ticks_position("bottom")
             cbar.ax.xaxis.set_label_position("top")
             cbar_ax.tick_params(axis="both", direction="in", which="both")
-            cbar.ax.xaxis.set_tick_params(pad=2, labelsize=7)
+            cbar.ax.xaxis.set_tick_params(pad=3, labelsize=7)
             # tick label mod
             # fig.canvas.draw()
             # x_labels = [
