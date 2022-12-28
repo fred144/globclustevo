@@ -233,7 +233,7 @@ with plt.style.context("dark_background"):
         #     # fontproperties=leg_font,
         #     fontsize=12,
         # )
-        # cbar.ax.xaxis.set_tick_params(labelsize=10)
+        cbar.ax.xaxis.set_tick_params(labelsize=10, pad=4)
         cbar_ax.set_title(cbar_label + cbar_units, fontsize=14)
         cbar_ax.tick_params(axis="both", direction="in", which="both")
 
@@ -266,7 +266,7 @@ with plt.style.context("dark_background"):
         plt.savefig(
             os.path.expanduser(
                 (
-                    "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+                    "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
                     "gc_merger.png"
                 )
             ),

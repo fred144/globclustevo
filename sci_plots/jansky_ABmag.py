@@ -108,9 +108,10 @@ rad_per_arsec = np.pi / (180 * 60 * 60)
 for i, (f7, f3) in enumerate(zip(f7_sn_list, f3_sn_list)):
     luminosity_distance = lum_distnaces[i]
     angular_size_distance = luminosity_distance / (1 + redshifts[i]) ** 2
+    galaxy_angular_width = ((width / 1e6) / angular_size_distance) / rad_per_arsec
     print(
         "entire galaxy size",
-        ((width / 1e6) / angular_size_distance) / rad_per_arsec,
+        galaxy_angular_width,
         "at z = ",
         redshifts[i],
     )
@@ -322,7 +323,7 @@ with plt.style.context("dark_background"):
         f7_render = ax[0].imshow(
             high_jansky[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(6e-8, 8e-6),
+            norm=LogNorm(6e-8, 1e-5),
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -337,11 +338,23 @@ with plt.style.context("dark_background"):
             edgecolor="white",
             facecolor="white",
         )
-        ax[0].add_patch(scale)
+        ax[0].add_patch(scale)  # galaxy_angular_width
         ax[0].text(
             row_lims[0][0] * 0.55,
             row_lims[0][0] * 0.87,
             r"$\mathrm{{{:.0f} \: pc}}$".format(row_lims[0][1] * 0.5),
+            ha="center",
+            va="center",
+            color="white",
+            fontproperties=leg_font,
+        )
+        ax[0].text(
+            row_lims[0][0] * 0.55,
+            row_lims[0][0] * 0.72,
+            "${:.3f}$ "
+            "$\mathrm{{arcsec}}$".format(
+                ((row_lims[0][1] * 0.5) / width) * galaxy_angular_width
+            ),
             ha="center",
             va="center",
             color="white",
@@ -356,7 +369,7 @@ with plt.style.context("dark_background"):
                 "font.size": 8,
             }
         ):
-            cbar_ax = ax[0].inset_axes([0.55, 0.88, 0.40, 0.04])
+            cbar_ax = ax[0].inset_axes([0.50, 0.88, 0.45, 0.04])
 
             cbar = fig.colorbar(f7_render, cax=cbar_ax, pad=0, orientation="horizontal")
 
@@ -373,7 +386,7 @@ with plt.style.context("dark_background"):
             cbar.ax.xaxis.set_ticks_position("bottom")
             cbar.ax.xaxis.set_label_position("top")
             cbar_ax.tick_params(axis="both", direction="in", which="both")
-            cbar.ax.xaxis.set_tick_params(pad=2)
+            cbar.ax.xaxis.set_tick_params(pad=3)
 
         f7_zoom = ax[0].inset_axes([1, 0, 1, 1])
         f7_mag = f7_zoom.imshow(
@@ -427,7 +440,7 @@ with plt.style.context("dark_background"):
             cbar.ax.xaxis.set_ticks_position("bottom")
             cbar.ax.xaxis.set_label_position("top")
             cbar_ax.tick_params(direction="in")
-            cbar.ax.xaxis.set_tick_params(pad=2)
+            cbar.ax.xaxis.set_tick_params(pad=3)
 
         f7_zoom2_1 = f7_zoom.inset_axes([1, 0.5, 0.5, 0.5])
         f7_zoom2_1.imshow(
@@ -479,7 +492,7 @@ with plt.style.context("dark_background"):
         f3_render = ax[1].imshow(
             low_jansky[0],
             extent=[-proj_r, proj_r, -proj_r, proj_r],
-            norm=LogNorm(6e-8, 8e-6),
+            norm=LogNorm(6e-8, 1e-5),
             cmap="inferno",
             origin="lower",
             interpolation="gaussian",
@@ -698,7 +711,7 @@ with plt.style.context("dark_background"):
                 "font.size": 8,
             }
         ):
-            cbar_ax = f7_late_ax.inset_axes([0.55, 0.12, 0.40, 0.04])
+            cbar_ax = f7_late_ax.inset_axes([0.50, 0.12, 0.45, 0.04])
             cbar = fig.colorbar(
                 f7_late_render, cax=cbar_ax, pad=0, orientation="horizontal"
             )
@@ -715,7 +728,7 @@ with plt.style.context("dark_background"):
             cbar.ax.xaxis.set_ticks_position("bottom")
             cbar.ax.xaxis.set_label_position("top")
             cbar_ax.tick_params(axis="both", direction="in", which="both")
-            cbar.ax.xaxis.set_tick_params(pad=2)
+            cbar.ax.xaxis.set_tick_params(pad=3)
 
         ax[0].tick_params(axis="both", which="both", length=0)
         ax[1].tick_params(axis="both", which="both", length=0)

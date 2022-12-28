@@ -483,7 +483,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
                         #     fontproperties=leg_font,
                         #     fontsize=10,
                         # )
-                        cbar.ax.xaxis.set_tick_params(pad=2, labelsize=8)
+                        cbar.ax.xaxis.set_tick_params(pad=3, labelsize=8)
                         cbar_ax.set_title(
                             cbar_label, fontsize=11, fontproperties=leg_font
                         )
@@ -515,7 +515,7 @@ for idx, (p2, ds) in enumerate(zip(pop2, halo_ds)):
 plt.savefig(
     os.path.expanduser(
         (
-            "~/g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
+            "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/"
             "profiling_demo_f3.png"
         )
     ),
