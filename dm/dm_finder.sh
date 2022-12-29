@@ -16,13 +16,13 @@ module load openmpi
 source ~/py-virtual-envs/master/bin/activate
 
 
-#SCRIPT1="/lustre/fgarcia4/glob_clust_evo/dm/fs070_dm_halo_finder.py"
-SCRIPT2="/lustre/fgarcia4/glob_clust_evo/dm/fs035_dm_halo_finder.py"
+SCRIPT1="./fs070_dm_halo_finder.py"
+SCRIPT2="./fs035_dm_halo_finder.py"
 
 # source /homes/fgarcia4/py-virtual-envs/clean-install/bin/activate.csh
 # which python
 # for rockstar --mca btl ^openib
 
 # number of cores specified above
-#mpirun python3 $SCRIPT1  2>&1 
+mpirun python3 $SCRIPT1  2>&1 
 mpirun python3 $SCRIPT2  2>&1 

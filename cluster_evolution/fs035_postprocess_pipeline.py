@@ -36,7 +36,7 @@ simulation_run = "fs035_ms10"
 finder_profiler_run = "fof_best"
 processor_number = 0  # 0 means one process unparalleled
 start_step = 1469
-end_step = 1502
+end_step = 1502  # 1574 is the final, but they ~sink up at 1502, when fs07 is 1318
 step = 1
 absolute_start = 154
 

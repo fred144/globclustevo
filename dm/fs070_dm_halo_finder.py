@@ -1,6 +1,6 @@
 import sys
 
-sys.path.insert(1, "/homes/fgarcia4/py-virtual-envs/master/lib/python3.7/site-packages")
+# sys.path.insert(1, "/homes/fgarcia4/py-virtual-envs/master/lib/python3.7/site-packages")
 sys.path.append("..")  # makes sure that importing the modules work
 
 from modules.luminosity.lum_functions import unpack_pop_ii_data
@@ -22,16 +22,16 @@ cell_fields, epf = ram_fields()
 simulation_run = "fs07_refine"
 finder_profiler_run = "dm_hop"
 processor_number = 0  # 0 means one process unparalleled
-start_step = 113
-end_step = 1196
-step = 2
+start_step = 1195
+end_step = 1318
+step = 1
 
 
 print("=============================================================================")
 print("RUNING DM HALO FINDER")
 print("=============================================================================")
 datadir = os.path.expanduser(
-    "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
+    "/scratch/dt2/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}"  # lustre data path
 ).format(simulation_run)
 
 # datadir = os.path.expanduser(

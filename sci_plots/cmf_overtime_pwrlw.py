@@ -405,7 +405,7 @@ if __name__ == "__main__":
                 f7_theory_x,
                 f7_theory_y,
                 ls="--",
-                linewidth=1.25,
+                linewidth=2,
                 alpha=0.8,
                 color="black",
                 label=(r"$ \Gamma = {:.2f} $").format(f7_fit_params[0]),
