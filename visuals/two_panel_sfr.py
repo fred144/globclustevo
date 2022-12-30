@@ -8,6 +8,7 @@ sys.path.append("../")
 import numpy as np
 import os
 import glob
+from modules.luminosity.lum_functions import lum_look_up_table
 from modules.match_t_sims import find_matching_time, get_snapshots
 from modules.macros import filter_snapshots
 import matplotlib.pyplot as plt
@@ -17,21 +18,23 @@ import matplotlib.patches as patches
 from matplotlib import colors
 import misc_visuals
 import yt
-from modules.macros import filter_snapshots, ram_fields, t_myr_from_z
+from modules.macros import filter_snapshots, ram_fields, t_myr_from_z, code_age_to_myr
 from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 from scipy import interpolate
+from scipy.ndimage import gaussian_filter
 
 yt.enable_parallelism()
 
-# f7_snap_range = (599, 1296)
-# f3_snap_range = (179, 1469)
-f7_snap_range = (1142, 1318)
-f3_snap_range = (1318, 1502)
+f7_snap_range = (118, 1318)
+f3_snap_range = (179, 1499)
+# f7_snap_range = (1142, 1318)
+# f3_snap_range = (1318, 1502)
 # f7_snap_range = (500, 500)
 # f3_snap_range = (500, 500)
 
-# fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
-# fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
+# deprecated
+# # fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
+# # fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
 
 master_data_dir = "/scratch/dt2/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/"
 
@@ -54,7 +57,7 @@ fs035_snap_dir = filter_snapshots(
     1,
 )
 
-print(fs035_snap_dir)
+# print(fs035_snap_dir)
 fs070_pop2_f = filter_snapshots(
     "../particle_data/pop_2_data/fs07_refine", f7_snap_range[0], f7_snap_range[1], 1
 )
@@ -124,7 +127,7 @@ lum_alpha = 1
 cell_fields, epf = ram_fields()
 
 
-sequence_dir = "../rendering/gas_lum/two_panel_sfr"
+sequence_dir = "../rendering/gas_lum/two_panel_sfr_rev1"
 if not os.path.exists(sequence_dir):
     print("# Creating new sequence directory", sequence_dir)
     os.makedirs(sequence_dir)
@@ -149,42 +152,143 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         # extra_particle_fields=epf,
     )
     # post processed star data
-    f7_code_ctr = np.loadtxt(fs070_pop2_f[m_i], max_rows=5)[2:5, 6]
-    f7_t_myr = np.loadtxt(fs070_pop2_f[m_i], max_rows=2)[0, 6]
-    f7_redshift = np.loadtxt(fs070_pop2_f[m_i], max_rows=2)[1, 6]
-    f7_stars = np.vstack(
-        (
-            np.loadtxt(os.path.join(fs070_halo_f[m_i], "field_stars.txt")),
-            np.loadtxt(os.path.join(fs070_halo_f[m_i], "bound_stars.txt")),
+    try:
+        print("checking if post processed luminosity data exists")
+
+        f7_code_ctr = np.loadtxt(fs070_pop2_f[m_i], max_rows=5)[2:5, 6]
+        f7_pc_ctr = np.loadtxt(fs070_pop2_f[m_i], max_rows=10)[5:8, 6]
+        f7_t_myr = np.loadtxt(fs070_pop2_f[m_i], max_rows=2)[0, 6]
+        f7_redshift = np.loadtxt(fs070_pop2_f[m_i], max_rows=2)[1, 6]
+        f7_stars = np.vstack(
+            (
+                np.loadtxt(os.path.join(fs070_halo_f[m_i], "field_stars.txt")),
+                np.loadtxt(os.path.join(fs070_halo_f[m_i], "bound_stars.txt")),
+            )
         )
-    )
-    f3_code_ctr = np.loadtxt(fs035_pop2_f[m_i], max_rows=5)[2:5, 6]
-    f3_t_myr = np.loadtxt(fs035_pop2_f[m_i], max_rows=2)[0, 6]
-    f3_redshift = np.loadtxt(fs035_pop2_f[m_i], max_rows=2)[1, 6]
-    f3_stars = np.vstack(
-        (
-            np.loadtxt(os.path.join(fs035_halo_f[m_i], "field_stars.txt")),
-            np.loadtxt(os.path.join(fs035_halo_f[m_i], "bound_stars.txt")),
+        f3_code_ctr = np.loadtxt(fs035_pop2_f[m_i], max_rows=5)[2:5, 6]
+        f3_pc_ctr = np.loadtxt(fs035_pop2_f[m_i], max_rows=10)[5:8, 6]
+        f3_t_myr = np.loadtxt(fs035_pop2_f[m_i], max_rows=2)[0, 6]
+        f3_redshift = np.loadtxt(fs035_pop2_f[m_i], max_rows=2)[1, 6]
+        f3_stars = np.vstack(
+            (
+                np.loadtxt(os.path.join(fs035_halo_f[m_i], "field_stars.txt")),
+                np.loadtxt(os.path.join(fs035_halo_f[m_i], "bound_stars.txt")),
+            )
         )
-    )
-    f7_star_ids = f7_stars[:, 0]
-    f7_star_lums = f7_stars[:, 2]
-    f7_x = f7_stars[:, 3]
-    f7_y = f7_stars[:, 4]
-    f7_z = f7_stars[:, 5]
-    f3_star_lums = f3_stars[:, 2]
-    f3_x = f3_stars[:, 3]
-    f3_y = f3_stars[:, 4]
-    f3_z = f3_stars[:, 5]
+        # note these coords are centered based on the CoM of stars only in pc
+        f7_star_lums = f7_stars[:, 2]
+        f3_star_lums = f3_stars[:, 2]
+        f7_x = f7_stars[:, 3]
+        f7_y = f7_stars[:, 4]
+        f7_z = f7_stars[:, 5]
+        f3_x = f3_stars[:, 3]
+        f3_y = f3_stars[:, 4]
+        f3_z = f3_stars[:, 5]
+        print("making sphere")
+        # make a sphere centered on the star center of mass as a starting point
+        f7_sphere = f7_ram_ds.sphere(f7_code_ctr, (plt_wdth / 2, "pc"))
+        f3_sphere = f3_ram_ds.sphere(f3_code_ctr, (plt_wdth / 2, "pc"))
+
+        print("finding CoM")
+        # calculate center of mass with the gas; code units
+        f7_com = f7_sphere.quantities.center_of_mass(
+            use_gas=True, use_particles=True, particle_type="star"
+        )
+        f3_com = f3_sphere.quantities.center_of_mass(
+            use_gas=True, use_particles=True, particle_type="star"
+        )
+
+        # recenter by getting the true particle positions again and recentering
+        f7_x = (f7_x + f7_pc_ctr[0]) - np.array(f7_com[0].to("pc"))
+        f7_y = (f7_y + f7_pc_ctr[1]) - np.array(f7_com[1].to("pc"))
+        f7_z = (f7_z + f7_pc_ctr[2]) - np.array(f7_com[2].to("pc"))
+
+        f3_x = (f3_x + f3_pc_ctr[0]) - np.array(f3_com[0].to("pc"))
+        f3_y = (f3_y + f3_pc_ctr[1]) - np.array(f3_com[1].to("pc"))
+        f3_z = (f3_z + f3_pc_ctr[2]) - np.array(f3_com[2].to("pc"))
+
+    except:
+        print("does not exist, creating luminosity tables")
+        f7_current_hubble = f7_ram_ds.hubble_constant
+        f7_ad = f7_ram_ds.all_data()
+        f7_t_myr = float(f7_ram_ds.current_time.in_units("Myr"))
+        f7_redshift = float(f7_ram_ds.current_redshift)
+        f3_current_hubble = f3_ram_ds.hubble_constant
+        f3_ad = f3_ram_ds.all_data()
+        f3_t_myr = float(f3_ram_ds.current_time.in_units("Myr"))
+        f3_redshift = float(f3_ram_ds.current_redshift)
+
+        # find CoM of the system, starting from the most dense gas coord
+        f7_sphere = f7_ram_ds.sphere("max", (plt_wdth / 2, "pc"))
+        f3_sphere = f3_ram_ds.sphere("max", (plt_wdth / 2, "pc"))
+        # return CoM in code units
+        f7_com = f7_sphere.quantities.center_of_mass(
+            use_gas=True, use_particles=True, particle_type="star"
+        )
+
+        f3_com = f3_sphere.quantities.center_of_mass(
+            use_gas=True, use_particles=True, particle_type="star"
+        )
+
+        # recenter the stars based on the CoM
+        f7_x = np.array((f7_ad["star", "particle_position_x"] - f7_com[0]).to("pc"))
+        f7_y = np.array((f7_ad["star", "particle_position_y"] - f7_com[1]).to("pc"))
+        f7_z = np.array((f7_ad["star", "particle_position_z"] - f7_com[3]).to("pc"))
+        f7_be_star = f7_ad["star", "particle_birth_epoch"]
+
+        f7_unique_birth_epochs = code_age_to_myr(
+            f7_ad["star", "particle_birth_epoch"], f7_current_hubble, unique_age=True
+        )
+        # calculate the age of the universe when the first star was born
+        # using the logSFC as a reference point for redshift when the first star
+        # was born. Every age is relative to this. Due to our mods of ramses.
+        f7_birth_start = np.round_(
+            float(f7_ram_ds.cosmology.t_from_z(f7_series[0, 2]).in_units("Myr")), 0
+        )
+        # all the birth epochs of the stars
+        f7_converted_unfiltered = code_age_to_myr(
+            f7_ad["star", "particle_birth_epoch"], f7_current_hubble, unique_age=False
+        )
+        f7_abs_birth_epochs = np.round(f7_converted_unfiltered + f7_birth_start, 3)  #!
+        f7_current_ages = np.round(f7_t_myr, 3) - np.round(f7_abs_birth_epochs, 3)
+        f7_star_lums = lum_look_up_table(
+            stellar_ages=f7_current_ages,
+            table_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
+            column_idx=1,
+            log=True,
+        )
+        ###
+        f3_x = (f3_ad["star", "particle_position_x"] - f3_com[0]).to("pc")
+        f3_y = (f3_ad["star", "particle_position_y"] - f3_com[1]).to("pc")
+        f3_z = (f3_ad["star", "particle_position_z"] - f3_com[3]).to("pc")
+        f3_be_star = f3_ad["star", "particle_birth_epoch"]
+        f3_unique_birth_epochs = code_age_to_myr(
+            f3_ad["star", "particle_birth_epoch"], f3_current_hubble, unique_age=True
+        )
+        f3_birth_start = np.round_(
+            float(f3_ram_ds.cosmology.t_from_z(f3_series[0, 2]).in_units("Myr")), 0
+        )
+        f3_converted_unfiltered = code_age_to_myr(
+            f3_ad["star", "particle_birth_epoch"], f3_current_hubble, unique_age=False
+        )
+        f3_abs_birth_epochs = np.round(f3_converted_unfiltered + f3_birth_start, 3)  #!
+        f3_current_ages = np.round(f3_t_myr, 3) - np.round(f3_abs_birth_epochs, 3)
+        f3_star_lums = lum_look_up_table(
+            stellar_ages=f3_current_ages,
+            table_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
+            column_idx=1,
+            log=True,
+        )
+
     # get the projected densities
     print("Integrating Gas")
     f7_gas = yt.ProjectionPlot(
-        f7_ram_ds, "z", ("gas", "density"), width=(plt_wdth, "pc"), center=f7_code_ctr
+        f7_ram_ds, "z", ("gas", "density"), width=(plt_wdth, "pc"), center=f7_com
     )
     f7_gas_frb = f7_gas.data_source.to_frb((plt_wdth, "pc"), star_bins)
     f7_gas_array = np.array(f7_gas_frb["gas", "density"])
     f3_gas = yt.ProjectionPlot(
-        f3_ram_ds, "z", ("gas", "density"), width=(plt_wdth, "pc"), center=f3_code_ctr
+        f3_ram_ds, "z", ("gas", "density"), width=(plt_wdth, "pc"), center=f3_com
     )
     f3_gas_frb = f3_gas.data_source.to_frb((plt_wdth, "pc"), star_bins)
     f3_gas_array = np.array(f3_gas_frb["gas", "density"])
@@ -333,22 +437,22 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
             ax[0].text(
                 0.78,
                 0.95,
-                r"$f_* = 0.70$",
+                r"$\mathrm{high - SFE}$",
                 ha="left",
                 va="top",
                 color="white",
                 transform=ax[0].transAxes,
-                bbox=box_style,
+                # bbox=box_style,
             )
             ax[1].text(
                 0.78,
                 0.95,
-                r"$f_* = 0.35$",
+                r"$\mathrm{low - SFE}$",
                 ha="left",
                 va="top",
                 color="white",
                 transform=ax[1].transAxes,
-                bbox=box_style,
+                # bbox=box_style,
             )
             # zoom in axes and sfr
             with plt.style.context("dark_background"):
@@ -440,32 +544,46 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                         alpha=gas_alpha,
                     )
 
-                    scale_ins = patches.Rectangle(
-                        xy=(0, 1.1 * (inset_width / 2)),
-                        width=inset_width / 2,
-                        height=1,
-                        linewidth=0,
+                    # scale_ins = patches.Rectangle(
+                    #     xy=(0, 0.7 * (inset_width / 2)),
+                    #     width=inset_width / 2,
+                    #     height=1,
+                    #     linewidth=0,
+                    #     edgecolor="white",
+                    #     facecolor="white",
+                    #     clip_on=False,
+                    #     alpha=0.6,
+                    # )
+                    # f7_inset.text(
+                    #     inset_width / 4,
+                    #     0.9 * (inset_width / 2),
+                    #     r"$\mathrm{{{:.0f} \: pc}}$".format(inset_width / 2),
+                    #     ha="center",
+                    #     va="center",
+                    #     color="white",
+                    #     alpha=0.6,
+                    # )
+
+                    # f7_inset.add_patch(scale_ins)
+
+                    mark_inset(
+                        ax[0],
+                        f7_inset,
+                        loc1=2,
+                        loc2=2,
                         edgecolor="white",
-                        facecolor="white",
-                        clip_on=False,
+                        alpha=0.2,
+                        ls="--",
                     )
-                    f7_inset.text(
-                        inset_width / 4,
-                        1.3 * (inset_width / 2),
-                        r"$\mathrm{{{:.0f} \: pc}}$".format(inset_width / 2),
-                        ha="center",
-                        va="center",
-                        color="white",
+                    mark_inset(
+                        ax[1],
+                        f3_inset,
+                        loc1=3,
+                        loc2=3,
+                        edgecolor="white",
+                        alpha=0.2,
+                        ls="--",
                     )
-
-                    f7_inset.add_patch(scale_ins)
-
-                    # mark_inset(
-                    #     ax[0], f7_inset, loc1=2, loc2=4, edgecolor="white", alpha=0.4
-                    # )
-                    # mark_inset(
-                    #     ax[1], f3_inset, loc1=2, loc2=4, edgecolor="white", alpha=0.4
-                    # )
 
                     # time series line plots
                     totm_series = ax[0].inset_axes([0.56, 0.10, 0.40, 0.2])
@@ -605,10 +723,10 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                 f7_lum_image, cax=lums_cbar_ax, pad=-1, orientation="horizontal"
             )
             lums_cbar.set_label(
-                label=r"$\log \: \mathrm{\lambda = 1500 \: \AA \:}$"
-                # r"$\mathrm{Surface\:Brightness}$"
-                # r"$\mathrm{Integrated\:Brightness}$"
-                r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$" "\n",
+                label=r"$\mathrm{\log\:Surface\:Brightness,\:}$"
+                r"$\mathrm{\lambda = 1500\:\AA\:}$"
+                r"$\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$"
+                "\n",
                 fontsize=12,
                 labelpad=5,
             )
