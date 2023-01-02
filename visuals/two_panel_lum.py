@@ -19,11 +19,12 @@ from scipy.ndimage import gaussian_filter
 
 yt.enable_parallelism()
 
-# f7_snap_range = (599, 1296)
-# f3_snap_range = (179, 1469)
 
-f7_snap_range = (500, 500)
-f3_snap_range = (500, 500)
+# start 118,179
+f7_snap_range = (118, 1318)
+f3_snap_range = (154, 1499)
+# f7_snap_range = (500, 500)
+# f3_snap_range = (500, 500)
 
 # fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
 # fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
@@ -103,10 +104,13 @@ if not os.path.exists(sequence_dir):
 #%%
 
 for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
+
     print("Reading", f7_gas)
     print("Reading", f3_gas)
     outnum_f7 = f7_gas.split("/")[-1].split("_")[-1]
     outnum_f3 = f3_gas.split("/")[-1].split("_")[-1]
+    if int(outnum_f3) == 1102:
+        continue
     # read ramses data
     f7_info_file = os.path.join(f7_gas, "info_{}.txt".format(outnum_f7))
     f3_info_file = os.path.join(f3_gas, "info_{}.txt".format(outnum_f3))
@@ -407,7 +411,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                     )
 
                     scale_ins = patches.Rectangle(
-                        xy=(0, 1 * (inset_width / 2)),
+                        xy=(0, 0.99 * (inset_width / 2)),
                         width=inset_width / 2,
                         height=1,
                         linewidth=0,
@@ -578,18 +582,18 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                         title="UV Luminosity",
                         title_fontsize=8,
                     )
-                    f3_leg = time_series_ax_f3.legend(
-                        loc="upper center",
-                        ncol=3,
-                        fontsize=8,
-                        bbox_to_anchor=(0.5, 1.40),
-                        columnspacing=0.5,
-                        title="UV Luminosity",
-                        title_fontsize=8,
-                    )
+                    # f3_leg = time_series_ax_f3.legend(
+                    #     loc="upper center",
+                    #     ncol=3,
+                    #     fontsize=8,
+                    #     bbox_to_anchor=(0.5, 1.40),
+                    #     columnspacing=0.5,
+                    #     title="UV Luminosity",
+                    #     title_fontsize=8,
+                    # )
 
                     f7_leg.get_frame().set_alpha(0)
-                    f3_leg.get_frame().set_alpha(0)
+                    # f3_leg.get_frame().set_alpha(0)
 
             # declar the color bar axes
             dens_cbar_ax = ax[1].inset_axes([0, -0.035, 1, 0.035])
