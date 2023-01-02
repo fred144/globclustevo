@@ -25,12 +25,15 @@ f7_snap_range = (118, 1318)
 f3_snap_range = (154, 1499)
 # f7_snap_range = (500, 500)
 # f3_snap_range = (500, 500)
+master_data_dir = (
+    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+)
 
-# fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
-# fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
+fs070_dir = os.path.join(master_data_dir, "fs07_refine")
+fs035_dir = os.path.join(master_data_dir, "fs035_ms10")
 
-fs070_dir = os.path.relpath("../../cosm_test_data/refine")
-fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+# fs070_dir = os.path.relpath("../../cosm_test_data/refine")
+# fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 
 fs070_snap_dir = filter_snapshots(
     fs070_dir,
