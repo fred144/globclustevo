@@ -3,7 +3,9 @@ import sys
 sys.path.append("../")
 import numpy as np
 import os
-import glob
+
+# import glob
+from modules.luminosity.lum_functions import lum_look_up_table
 from modules.match_t_sims import find_matching_time, get_snapshots
 from modules.macros import filter_snapshots
 import matplotlib.pyplot as plt
@@ -11,9 +13,10 @@ from matplotlib.colors import LogNorm
 import matplotlib.cm as cm
 import matplotlib.patches as patches
 from matplotlib import colors
-import misc_visuals
+
+# import misc_visuals
 import yt
-from modules.macros import filter_snapshots, ram_fields
+from modules.macros import filter_snapshots, ram_fields, code_age_to_myr
 from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 from scipy.ndimage import gaussian_filter
 
@@ -119,34 +122,135 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     f3_info_file = os.path.join(f3_gas, "info_{}.txt".format(outnum_f3))
     f7_ram_ds = yt.load(f7_info_file, fields=cell_fields, extra_particle_fields=epf)
     f3_ram_ds = yt.load(f3_info_file, fields=cell_fields, extra_particle_fields=epf)
-    # post processed star data
-    f7_code_ctr = np.loadtxt(fs070_pop2_f[m_i], max_rows=5)[2:5, 6]
-    f7_t_myr = np.loadtxt(fs070_pop2_f[m_i], max_rows=2)[0, 6]
-    f7_redshift = np.loadtxt(fs070_pop2_f[m_i], max_rows=2)[1, 6]
-    f7_stars = np.vstack(
-        (
-            np.loadtxt(os.path.join(fs070_halo_f[m_i], "field_stars.txt")),
-            np.loadtxt(os.path.join(fs070_halo_f[m_i], "bound_stars.txt")),
+    # post processed star data try:
+    try:
+        print("checking if post processed luminosity data exists")
+
+        f7_code_ctr = np.loadtxt(fs070_pop2_f[m_i], max_rows=5)[2:5, 6]
+        f7_pc_ctr = np.loadtxt(fs070_pop2_f[m_i], max_rows=10)[5:8, 6]
+        f7_t_myr = np.loadtxt(fs070_pop2_f[m_i], max_rows=2)[0, 6]
+        f7_redshift = np.loadtxt(fs070_pop2_f[m_i], max_rows=2)[1, 6]
+        f7_stars = np.vstack(
+            (
+                np.loadtxt(os.path.join(fs070_halo_f[m_i], "field_stars.txt")),
+                np.loadtxt(os.path.join(fs070_halo_f[m_i], "bound_stars.txt")),
+            )
         )
-    )
-    f3_code_ctr = np.loadtxt(fs035_pop2_f[m_i], max_rows=5)[2:5, 6]
-    f3_t_myr = np.loadtxt(fs035_pop2_f[m_i], max_rows=2)[0, 6]
-    f3_redshift = np.loadtxt(fs035_pop2_f[m_i], max_rows=2)[1, 6]
-    f3_stars = np.vstack(
-        (
-            np.loadtxt(os.path.join(fs035_halo_f[m_i], "field_stars.txt")),
-            np.loadtxt(os.path.join(fs035_halo_f[m_i], "bound_stars.txt")),
+        f3_code_ctr = np.loadtxt(fs035_pop2_f[m_i], max_rows=5)[2:5, 6]
+        f3_pc_ctr = np.loadtxt(fs035_pop2_f[m_i], max_rows=10)[5:8, 6]
+        f3_t_myr = np.loadtxt(fs035_pop2_f[m_i], max_rows=2)[0, 6]
+        f3_redshift = np.loadtxt(fs035_pop2_f[m_i], max_rows=2)[1, 6]
+        f3_stars = np.vstack(
+            (
+                np.loadtxt(os.path.join(fs035_halo_f[m_i], "field_stars.txt")),
+                np.loadtxt(os.path.join(fs035_halo_f[m_i], "bound_stars.txt")),
+            )
         )
-    )
-    f7_star_ids = f7_stars[:, 0]
-    f7_star_lums = f7_stars[:, 2]
-    f7_x = f7_stars[:, 3]
-    f7_y = f7_stars[:, 4]
-    f7_z = f7_stars[:, 5]
-    f3_star_lums = f3_stars[:, 2]
-    f3_x = f3_stars[:, 3]
-    f3_y = f3_stars[:, 4]
-    f3_z = f3_stars[:, 5]
+        # note these coords are centered based on the CoM of stars only in pc
+        f7_star_lums = f7_stars[:, 2]
+        f3_star_lums = f3_stars[:, 2]
+        f7_x = f7_stars[:, 3]
+        f7_y = f7_stars[:, 4]
+        f7_z = f7_stars[:, 5]
+        f3_x = f3_stars[:, 3]
+        f3_y = f3_stars[:, 4]
+        f3_z = f3_stars[:, 5]
+        # print("making sphere")
+        # make a sphere centered on the star center of mass as a starting point
+        # f7_sphere = f7_ram_ds.sphere(f7_code_ctr, (plt_wdth / 2, "pc"))
+        # f3_sphere = f3_ram_ds.sphere(f3_code_ctr, (plt_wdth / 2, "pc"))
+
+        print("finding CoM")
+        # calculate center of mass with the gas; code units
+        f7_com = f7_code_ctr
+        f3_com = f3_code_ctr
+        # f7_com = f7_sphere.quantities.center_of_mass(
+        #     use_gas=False, use_particles=True, particle_type="star"
+        # )
+        # f3_com = f3_sphere.quantities.center_of_mass(
+        #     use_gas=False, use_particles=True, particle_type="star"
+        # )
+
+        # recenter by getting the true particle positions again and recentering
+        # f7_x = (f7_x + f7_pc_ctr[0]) - np.array(f7_com[0].to("pc"))
+        # f7_y = (f7_y + f7_pc_ctr[1]) - np.array(f7_com[1].to("pc"))
+        # f7_z = (f7_z + f7_pc_ctr[2]) - np.array(f7_com[2].to("pc"))
+
+        # f3_x = (f3_x + f3_pc_ctr[0]) - np.array(f3_com[0].to("pc"))
+        # f3_y = (f3_y + f3_pc_ctr[1]) - np.array(f3_com[1].to("pc"))
+        # f3_z = (f3_z + f3_pc_ctr[2]) - np.array(f3_com[2].to("pc"))
+    except:
+        print("does not exist, creating luminosity tables")
+        f7_current_hubble = f7_ram_ds.hubble_constant
+        f7_ad = f7_ram_ds.all_data()
+        f7_t_myr = float(f7_ram_ds.current_time.in_units("Myr"))
+        f7_redshift = float(f7_ram_ds.current_redshift)
+        f3_current_hubble = f3_ram_ds.hubble_constant
+        f3_ad = f3_ram_ds.all_data()
+        f3_t_myr = float(f3_ram_ds.current_time.in_units("Myr"))
+        f3_redshift = float(f3_ram_ds.current_redshift)
+
+        # find CoM of the system, starting from the most dense gas coord
+        f7_sphere = f7_ram_ds.sphere("max", (plt_wdth / 2, "pc"))
+        f3_sphere = f3_ram_ds.sphere("max", (plt_wdth / 2, "pc"))
+        # return CoM in code units
+        f7_com = f7_sphere.quantities.center_of_mass(
+            use_gas=True, use_particles=True, particle_type="star"
+        )
+
+        f3_com = f3_sphere.quantities.center_of_mass(
+            use_gas=True, use_particles=True, particle_type="star"
+        )
+
+        # recenter the stars based on the CoM
+        f7_x = np.array((f7_ad["star", "particle_position_x"] - f7_com[0]).to("pc"))
+        f7_y = np.array((f7_ad["star", "particle_position_y"] - f7_com[1]).to("pc"))
+        f7_z = np.array((f7_ad["star", "particle_position_z"] - f7_com[3]).to("pc"))
+        f7_be_star = f7_ad["star", "particle_birth_epoch"]
+
+        f7_unique_birth_epochs = code_age_to_myr(
+            f7_ad["star", "particle_birth_epoch"], f7_current_hubble, unique_age=True
+        )
+        # calculate the age of the universe when the first star was born
+        # using the logSFC as a reference point for redshift when the first star
+        # was born. Every age is relative to this. Due to our mods of ramses.
+        f7_birth_start = np.round_(
+            float(f7_ram_ds.cosmology.t_from_z(f7_series[0, 2]).in_units("Myr")), 0
+        )
+        # all the birth epochs of the stars
+        f7_converted_unfiltered = code_age_to_myr(
+            f7_ad["star", "particle_birth_epoch"], f7_current_hubble, unique_age=False
+        )
+        f7_abs_birth_epochs = np.round(f7_converted_unfiltered + f7_birth_start, 3)  #!
+        f7_current_ages = np.round(f7_t_myr, 3) - np.round(f7_abs_birth_epochs, 3)
+        f7_star_lums = lum_look_up_table(
+            stellar_ages=f7_current_ages,
+            table_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
+            column_idx=1,
+            log=True,
+        )
+        ###
+        f3_x = (f3_ad["star", "particle_position_x"] - f3_com[0]).to("pc")
+        f3_y = (f3_ad["star", "particle_position_y"] - f3_com[1]).to("pc")
+        f3_z = (f3_ad["star", "particle_position_z"] - f3_com[3]).to("pc")
+        f3_be_star = f3_ad["star", "particle_birth_epoch"]
+        f3_unique_birth_epochs = code_age_to_myr(
+            f3_ad["star", "particle_birth_epoch"], f3_current_hubble, unique_age=True
+        )
+        f3_birth_start = np.round_(
+            float(f3_ram_ds.cosmology.t_from_z(f3_series[0, 2]).in_units("Myr")), 0
+        )
+        f3_converted_unfiltered = code_age_to_myr(
+            f3_ad["star", "particle_birth_epoch"], f3_current_hubble, unique_age=False
+        )
+        f3_abs_birth_epochs = np.round(f3_converted_unfiltered + f3_birth_start, 3)  #!
+        f3_current_ages = np.round(f3_t_myr, 3) - np.round(f3_abs_birth_epochs, 3)
+        f3_star_lums = lum_look_up_table(
+            stellar_ages=f3_current_ages,
+            table_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
+            column_idx=1,
+            log=True,
+        )
     # get the projected densities
     print("Integrating Gas")
     f7_gas = yt.ProjectionPlot(
