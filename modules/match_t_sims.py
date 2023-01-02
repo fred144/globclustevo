@@ -81,6 +81,7 @@ def get_snapshots(snapshot_file_list, get_list, verbose=True):
     filter_list = list(map(str, list(get_list)))
     filter_list = [f.zfill(5) for f in filter_list]
     filtered_lst = []
+    not_found = []
     # print(filter_list)
     for num in filter_list:
         # print(num)
@@ -89,10 +90,15 @@ def get_snapshots(snapshot_file_list, get_list, verbose=True):
             if num in file:
                 # print(file)
                 filtered_lst.append(file)
+                found = True
                 break
+
+        if found is False:
+            not_found.append(num)
+
     if len(filtered_lst) != len(filter_list) and verbose is True:
         print("> Filter done, but missing some snapshots requested")
-        print(filtered_lst)
+        print(not_found)
     return filtered_lst
 
 

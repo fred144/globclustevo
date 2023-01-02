@@ -176,7 +176,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         # recenter the stars based on the CoM
         f7_x = np.array((f7_ad["star", "particle_position_x"] - f7_com[0]).to("pc"))
         f7_y = np.array((f7_ad["star", "particle_position_y"] - f7_com[1]).to("pc"))
-        f7_z = np.array((f7_ad["star", "particle_position_z"] - f7_com[3]).to("pc"))
+        f7_z = np.array((f7_ad["star", "particle_position_z"] - f7_com[2]).to("pc"))
         f7_be_star = f7_ad["star", "particle_birth_epoch"]
 
         f7_unique_birth_epochs = code_age_to_myr(
@@ -196,6 +196,28 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         f7_current_ages = np.round(f7_t_myr, 3) - np.round(f7_abs_birth_epochs, 3)
         f7_star_lums = lum_look_up_table(
             stellar_ages=f7_current_ages,
+            table_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
+            column_idx=1,
+            log=True,
+        )
+        ###
+        f3_x = (f3_ad["star", "particle_position_x"] - f3_com[0]).to("pc")
+        f3_y = (f3_ad["star", "particle_position_y"] - f3_com[1]).to("pc")
+        f3_z = (f3_ad["star", "particle_position_z"] - f3_com[2]).to("pc")
+        f3_be_star = f3_ad["star", "particle_birth_epoch"]
+        f3_unique_birth_epochs = code_age_to_myr(
+            f3_ad["star", "particle_birth_epoch"], f3_current_hubble, unique_age=True
+        )
+        f3_birth_start = np.round_(
+            float(f3_ram_ds.cosmology.t_from_z(f3_series[0, 2]).in_units("Myr")), 0
+        )
+        f3_converted_unfiltered = code_age_to_myr(
+            f3_ad["star", "particle_birth_epoch"], f3_current_hubble, unique_age=False
+        )
+        f3_abs_birth_epochs = np.round(f3_converted_unfiltered + f3_birth_start, 3)  #!
+        f3_current_ages = np.round(f3_t_myr, 3) - np.round(f3_abs_birth_epochs, 3)
+        f3_star_lums = lum_look_up_table(
+            stellar_ages=f3_current_ages,
             table_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
             column_idx=1,
             log=True,

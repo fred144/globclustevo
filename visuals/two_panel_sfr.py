@@ -235,7 +235,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         # recenter the stars based on the CoM
         f7_x = np.array((f7_ad["star", "particle_position_x"] - f7_com[0]).to("pc"))
         f7_y = np.array((f7_ad["star", "particle_position_y"] - f7_com[1]).to("pc"))
-        f7_z = np.array((f7_ad["star", "particle_position_z"] - f7_com[3]).to("pc"))
+        f7_z = np.array((f7_ad["star", "particle_position_z"] - f7_com[2]).to("pc"))
         f7_be_star = f7_ad["star", "particle_birth_epoch"]
 
         f7_unique_birth_epochs = code_age_to_myr(
@@ -262,7 +262,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         ###
         f3_x = (f3_ad["star", "particle_position_x"] - f3_com[0]).to("pc")
         f3_y = (f3_ad["star", "particle_position_y"] - f3_com[1]).to("pc")
-        f3_z = (f3_ad["star", "particle_position_z"] - f3_com[3]).to("pc")
+        f3_z = (f3_ad["star", "particle_position_z"] - f3_com[2]).to("pc")
         f3_be_star = f3_ad["star", "particle_birth_epoch"]
         f3_unique_birth_epochs = code_age_to_myr(
             f3_ad["star", "particle_birth_epoch"], f3_current_hubble, unique_age=True
