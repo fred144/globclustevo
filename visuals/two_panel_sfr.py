@@ -23,7 +23,7 @@ from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 from scipy import interpolate
 from scipy.ndimage import gaussian_filter
 
-#yt.enable_parallelism()
+# yt.enable_parallelism()
 # start 118,179
 f7_snap_range = (924, 1318)
 f3_snap_range = (1103, 1499)
@@ -36,7 +36,9 @@ f3_snap_range = (1103, 1499)
 # # fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
 # # fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
 
-master_data_dir = "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+master_data_dir = (
+    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+)
 
 fs070_dir = os.path.join(master_data_dir, "fs07_refine")
 fs035_dir = os.path.join(master_data_dir, "fs035_ms10")
