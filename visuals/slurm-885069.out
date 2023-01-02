@@ -1,0 +1,7 @@
+/var/spool/slurmd/job885069/slurm_script: line 10: /home/fgarcia4/.profile: No such file or directory
+import: unable to open X server `' @ error/import.c/ImportImageCommand/358.
+/scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/visuals/two_panel_sfr.py: line 3: syntax error near unexpected token `"../"'
+/scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/visuals/two_panel_sfr.py: line 3: `sys.path.append("../")'
+slurmstepd: error: *** JOB 885069 ON compute-b5-9 CANCELLED AT 2022-12-31T00:23:33 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 885069.0 ON compute-b5-9 CANCELLED AT 2022-12-31T00:23:33 DUE TO TIME LIMIT ***

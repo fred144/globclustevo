@@ -13,7 +13,7 @@
 export LANG=en_US
 module load gcc
 module load openmpi
-source ~/py-virtual-envs/master/bin/activate
+source ~/sratch/master/bin/activate
 
 
 SCRIPT1="./fs070_dm_halo_finder.py"

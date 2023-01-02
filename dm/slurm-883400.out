@@ -1,0 +1,70 @@
+/var/spool/slurmd/job883400/slurm_script: line 10: /home/fgarcia4/.profile: No such file or directory
+Loading gcc/9.4.0
+  ERROR: gcc/9.4.0 cannot be loaded due to a conflict.
+    HINT: Might try "module unload intel" first.
+
+
+**** ERROR *****:
+
+Compiler Mismatch
+
+Package openmpi does not appear to be built for
+currently loaded compiler intel
+
+Please open a ticket at hpcc-help@umd.edu if you need it built for this compiler.
+
+
+
+
+
+Loading openmpi/gcc/9.4.0/zen2/4.1.1
+  ERROR: Module evaluation aborted
+/var/spool/slurmd/job883400/slurm_script: line 16: /home/fgarcia4/sratch/master/bin/activate: No such file or directory
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+=============================================================================
+RUNING DM HALO FINDER
+=============================================================================
+Traceback (most recent call last):
+  File "./fs070_dm_halo_finder.py", line 41, in <module>
+    local_snapshots = filter_snapshots(datadir, start_step, end_step, step)
+  File "/scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/dm/../modules/macros.py", line 106, in filter_snapshots
+    files = sorted(os.listdir(folder_path))
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/dt2/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine'
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+=============================================================================
+Warning: particle_families are modified at /site-packages/yt/frontends/ramses
+=============================================================================
+=============================================================================
+RUNING DM HALO FINDER
+=============================================================================
+Traceback (most recent call last):
+  File "./fs035_dm_halo_finder.py", line 40, in <module>
+    local_snapshots = filter_snapshots(datadir, start_step, end_step, step)
+  File "/scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/dm/../modules/macros.py", line 106, in filter_snapshots
+    files = sorted(os.listdir(folder_path))
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/dt2/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10'

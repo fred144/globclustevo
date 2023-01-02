@@ -136,16 +136,17 @@ if not os.path.exists(sequence_dir):
 #%%
 
 for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
-    print("Reading", f7_gas)
-    print("Reading", f3_gas)
     outnum_f7 = f7_gas.split("/")[-1].split("_")[-1]
     outnum_f3 = f3_gas.split("/")[-1].split("_")[-1]
     # z 9.8 and 9.3 filter
-    if outnum_f7 != "00613" or outnum_f7 != "00939":
-
+    #print(int(outnum_f7))
+    if int(outnum_f7) != 939:
         continue
+    else:
+        pass
     # read ramses data
-
+    print("Reading", f7_gas)
+    print("Reading", f3_gas)
     f7_info_file = os.path.join(f7_gas, "info_{}.txt".format(outnum_f7))
     f3_info_file = os.path.join(f3_gas, "info_{}.txt".format(outnum_f3))
     f7_ram_ds = yt.load(
