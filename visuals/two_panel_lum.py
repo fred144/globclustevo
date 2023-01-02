@@ -194,12 +194,16 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         )
         f7_abs_birth_epochs = np.round(f7_converted_unfiltered + f7_birth_start, 3)  #!
         f7_current_ages = np.round(f7_t_myr, 3) - np.round(f7_abs_birth_epochs, 3)
-        f7_star_lums = lum_look_up_table(
-            stellar_ages=f7_current_ages,
-            table_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
-            column_idx=1,
-            log=True,
+        f7_star_lums = (
+            lum_look_up_table(
+                stellar_ages=f7_current_ages,
+                table_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
+                column_idx=1,
+                log=True,
+            )
+            * 1e-5
         )
+
         ###
         f3_x = (f3_ad["star", "particle_position_x"] - f3_com[0]).to("pc")
         f3_y = (f3_ad["star", "particle_position_y"] - f3_com[1]).to("pc")
@@ -216,11 +220,14 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         )
         f3_abs_birth_epochs = np.round(f3_converted_unfiltered + f3_birth_start, 3)  #!
         f3_current_ages = np.round(f3_t_myr, 3) - np.round(f3_abs_birth_epochs, 3)
-        f3_star_lums = lum_look_up_table(
-            stellar_ages=f3_current_ages,
-            table_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
-            column_idx=1,
-            log=True,
+        f3_star_lums = (
+            lum_look_up_table(
+                stellar_ages=f3_current_ages,
+                table_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
+                column_idx=1,
+                log=True,
+            )
+            * 1e-5
         )
     # get the projected densities
     print("Integrating Gas")
