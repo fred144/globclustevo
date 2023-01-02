@@ -600,6 +600,18 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
                     )
                     time_series_ax_f7.plot(
                         f7_series[:, 0][~f7_time_mask],
+                        f7_lum_field[~f7_time_mask],
+                        alpha=0.5,
+                        color="grey",
+                    )
+                    time_series_ax_f3.plot(
+                        f3_series[:, 0][~f3_time_mask],
+                        f3_lum_field[~f3_time_mask],
+                        alpha=0.5,
+                        color="grey",
+                    )
+                    time_series_ax_f7.plot(
+                        f7_series[:, 0][~f7_time_mask],
                         f7_lum_bound[~f7_time_mask],
                         alpha=0.5,
                         color="grey",
