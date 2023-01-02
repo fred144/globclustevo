@@ -160,10 +160,10 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         # f7_sphere = f7_ram_ds.sphere(f7_code_ctr, (plt_wdth / 2, "pc"))
         # f3_sphere = f3_ram_ds.sphere(f3_code_ctr, (plt_wdth / 2, "pc"))
 
-        print("finding CoM")
+        # print("finding CoM")
         # calculate center of mass with the gas; code units
-        f7_com = f7_code_ctr
-        f3_com = f3_code_ctr
+        # f7_com = f7_code_ctr
+        # f3_com = f3_code_ctr
         # f7_com = f7_sphere.quantities.center_of_mass(
         #     use_gas=False, use_particles=True, particle_type="star"
         # )
@@ -254,12 +254,12 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     # get the projected densities
     print("Integrating Gas")
     f7_gas = yt.ProjectionPlot(
-        f7_ram_ds, "z", ("gas", "density"), width=(plt_wdth, "pc"), center=f7_code_ctr
+        f7_ram_ds, "z", ("gas", "density"), width=(plt_wdth, "pc"), center=f7_com
     )
     f7_gas_frb = f7_gas.data_source.to_frb((plt_wdth, "pc"), star_bins)
     f7_gas_array = np.array(f7_gas_frb["gas", "density"])
     f3_gas = yt.ProjectionPlot(
-        f3_ram_ds, "z", ("gas", "density"), width=(plt_wdth, "pc"), center=f3_code_ctr
+        f3_ram_ds, "z", ("gas", "density"), width=(plt_wdth, "pc"), center=f3_com
     )
     f3_gas_frb = f3_gas.data_source.to_frb((plt_wdth, "pc"), star_bins)
     f3_gas_array = np.array(f3_gas_frb["gas", "density"])
