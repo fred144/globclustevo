@@ -45,8 +45,8 @@ fs070_snap_dir = filter_snapshots(
 )
 fs035_snap_dir = filter_snapshots(
     fs035_dir,
-    f7_snap_range[0],
-    f7_snap_range[1],
+    f3_snap_range[0],
+    f3_snap_range[1],
     1,
 )
 
