@@ -87,6 +87,7 @@ def get_snapshots(snapshot_file_list, get_list, verbose=True):
         # print(num)
         for file in snapshot_file_list:
             # print(snapshot_file_list)
+            found = False
             if num in file:
                 # print(file)
                 filtered_lst.append(file)
