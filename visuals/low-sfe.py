@@ -229,6 +229,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
             # along (x,y,z) axis
             r = R.from_rotvec(rotation_angle * np.array([0, 1, 0]))
             rotation_matrix = r.as_matrix()
+            rotation_vector = r.as_rotvec()
             # rotate stars
             rotated_star_positions = np.dot(star_positions, rotation_matrix)
             lums, _, _ = np.histogram2d(
@@ -256,11 +257,12 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
             # # for i in cam.iter_rotate(np.pi, 10):
             # #     im = sc.render()
             # #     sc.save("rotation_%04i.png" % i)
+            print(rotation_vector)
             gas = yt.off_axis_projection(
                 data_source=ram_ds,
                 center=code_ctr,
                 normal_vector=np.dot(np.array([0.0, 0.0, 1.0]), rotation_matrix),
-                # north_vector=np.array([1.0, 0.0, 0.0]),
+                north_vector=np.array([0.0, 1.0, 0.0]),
                 width=ram_ds.arr(plt_wdth, "pc").to("code_length"),
                 resolution=star_bins,
                 item=("gas", "density"),
@@ -274,7 +276,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
             # )
 
             # gas_frb = gas.data_source.to_frb((plt_wdth, "pc"), star_bins)
-            gas_array = gas
+            gas_array = gas.T
 
             fig, ax = plt.subplots(
                 figsize=(7, 7),
