@@ -16,6 +16,7 @@ from modules.macros import filter_snapshots, ram_fields
 import matplotlib
 import matplotlib.patheffects as patheffects
 from scipy.spatial.transform import Rotation as R
+from yt.visualization.volume_rendering.api import Scene
 
 yt.enable_parallelism()
 plt.rcParams.update(
@@ -33,7 +34,49 @@ plt.rcParams.update(
 plt.style.use("dark_background")
 
 
-def draw_frame(gas, luminosity, axis_object, figure_object):
+#%%
+
+strt = 500
+end = 500
+step = 1
+efficiency = 0.35
+sim_run = "fs035_ms10"
+
+master_data_dir = (
+    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+)
+snap_dir = os.path.join(master_data_dir, sim_run)
+# snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
+pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
+snapshots = filter_snapshots(snap_dir, strt, end, 1)
+
+sequence_dir = "../rendering/gas_lum/{}/lowsfe".format(sim_run)
+if not os.path.exists(sequence_dir):
+    print("# Creating new sequence directory", sequence_dir)
+    os.makedirs(sequence_dir)
+
+
+pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
+halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
+
+plt_wdth = 400
+star_bins = 2000
+pxl_size = (plt_wdth / star_bins) ** 2  # pc
+lum_range = (3e33, 3e36)  # (2e32, 5e35)
+gas_alpha = 0.5
+lum_alpha = 1
+cell_fields, epf = ram_fields()
+cmap = cm.get_cmap("Set2")
+cmap = cmap(np.linspace(0, 1, 8))
+
+rotation_interval = np.linspace(0, 2, 20) * np.pi
+pause_and_rotate = [
+    500,
+]
+
+
+def draw_frame(gas, luminosity, ax, fig):
 
     # clean up edges
     ax.set_xticklabels([])
@@ -152,44 +195,6 @@ def draw_frame(gas, luminosity, axis_object, figure_object):
     # ax_inset.set_alpha(0)
 
 
-#%%
-
-strt = 500
-end = 500
-step = 1
-efficiency = 0.35
-sim_run = "fs035_ms10"
-# snap_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}".format(sim_run)
-master_data_dir = (
-    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
-)
-snap_dir = os.path.join(master_data_dir, sim_run)
-# snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
-halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
-pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
-snapshots = filter_snapshots(snap_dir, strt, end, 1)
-
-sequence_dir = "../rendering/gas_lum/{}/lowsfe".format(sim_run)
-if not os.path.exists(sequence_dir):
-    print("# Creating new sequence directory", sequence_dir)
-    os.makedirs(sequence_dir)
-
-
-pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
-halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
-
-plt_wdth = 400
-star_bins = 2000
-pxl_size = (plt_wdth / star_bins) ** 2  # pc
-lum_range = (3e33, 3e36)  # (2e32, 5e35)
-gas_alpha = 0.5
-lum_alpha = 1
-cell_fields, epf = ram_fields()
-cmap = cm.get_cmap("Set2")
-cmap = cmap(np.linspace(0, 1, 8))
-
-rotation_interval = np.linspace(0, 2, 20) * np.pi
-pause_and_rotate = [500]
 for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
     output_num_string = h_ds.split("/")[-1].split("_")[-1]
 
@@ -215,9 +220,9 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
     y = stars[:, 4]
     z = stars[:, 5]
 
-    if idx in pause_and_rotate:
+    if int(output_num_string) in pause_and_rotate:
         # reset the star positions every loop
-        print("Rotatin View")
+        print("Rotating View")
         for rot_idx, rotation_angle in enumerate(rotation_interval):
             print(rotation_angle)
             star_positions = stars[:, 3:6]
@@ -238,27 +243,48 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
                 ],
             )
             lums = lums.T
-            gas = yt.ProjectionPlot(
-                ram_ds,
-                "z",
-                ("gas", "density"),
-                width=(plt_wdth, "pc"),
+
+            # cam = sc.add_camera()
+            # # rotate the camera by pi / 4 radians:
+            # cam.rotate(np.pi / 4.0)
+            # rotate the camera about the y-axis instead of cam.north_vector:
+            # cam.rotate(rotation_angle, np.array([0.0, 1.0, 0.0]))
+            # sc = yt.create_scene(ram_ds)
+            # cam = sc.add_camera(ram_ds, lens_type="parallel")
+            # cam.focus = code_ctr
+            # cam.rotate(rotation_angle, np.array([0.0, 1.0, 0.0]))
+            # # for i in cam.iter_rotate(np.pi, 10):
+            # #     im = sc.render()
+            # #     sc.save("rotation_%04i.png" % i)
+            gas = yt.off_axis_projection(
+                data_source=ram_ds,
                 center=code_ctr,
+                normal_vector=np.dot(np.array([0.0, 0.0, 1.0]), rotation_matrix),
+                # north_vector=np.array([1.0, 0.0, 0.0]),
+                width=ram_ds.arr(plt_wdth, "pc").to("code_length"),
+                resolution=star_bins,
+                item=("gas", "density"),
             )
-            gas_frb = gas.data_source.to_frb((plt_wdth, "pc"), star_bins)
-            gas_array = np.array(gas_frb["gas", "density"])
+
+            #     ram_ds,
+            #     "z",
+            #     ("gas", "density"),
+            #     width=(plt_wdth, "pc"),
+            #     center=code_ctr,
+            # )
+
+            # gas_frb = gas.data_source.to_frb((plt_wdth, "pc"), star_bins)
+            gas_array = gas
 
             fig, ax = plt.subplots(
                 figsize=(7, 7),
                 dpi=400,
                 facecolor=cm.Greys_r(0),
             )
-            draw_frame(
-                gas=gas_array, luminosity=lums, axis_object=ax, figure_object=fig
-            )
+            draw_frame(gas=gas_array, luminosity=lums, ax=ax, fig=fig)
             output_path = os.path.join(
                 sequence_dir,
-                "lowsfe_{}_{}.png".format(output_num_string, str(rot_idx).zfill(3)),
+                "testlowsfe_{}_{}.png".format(output_num_string, str(rot_idx).zfill(3)),
             )
             plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
             # plt.close()
@@ -290,7 +316,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
         dpi=400,
         facecolor=cm.Greys_r(0),
     )
-    draw_frame(gas=gas_array, luminosity=lums, axis_object=ax, figure_object=fig)
+    draw_frame(gas_array, lums, ax, fig)
 
     output_path = os.path.join(sequence_dir, "lowsfe_{}.png".format(output_num_string))
     # plt.show()
