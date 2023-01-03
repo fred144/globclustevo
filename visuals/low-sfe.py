@@ -258,15 +258,27 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
             # #     im = sc.render()
             # #     sc.save("rotation_%04i.png" % i)
             print(rotation_vector)
-            gas = yt.off_axis_projection(
-                data_source=ram_ds,
+            gas = yt.OffAxisProjectionPlot(
+                ram_ds,
+                np.dot(np.array([0.0, 0.0, 1.0]), rotation_matrix),
+                fields=("gas", "density"),
                 center=code_ctr,
-                normal_vector=np.dot(np.array([0.0, 0.0, 1.0]), rotation_matrix),
                 north_vector=np.array([0.0, 1.0, 0.0]),
-                width=ram_ds.arr(plt_wdth, "pc").to("code_length"),
-                resolution=star_bins,
-                item=("gas", "density"),
+                width=(400, "pc"),
+                # resolution=2000,
             )
+            # gas = yt.ProjectionPlot(
+            #     ram_ds,
+            #     np.dot(np.array([0.0, 0.0, 1.0]), rotation_matrix),
+            #     ("gas", "density"),
+            #     width=(plt_wdth, "pc"),
+            #     center=code_ctr,
+            # north_vector=np.array([0.0, 1.0, 0.0]),
+            # normal_vector=np.dot(np.array([0.0, 0.0, 1.0]), rotation_matrix),
+            # )
+            gas_frb = gas.to_fits_data()
+            # gas_frb = gas.data_source.to_frb((plt_wdth, "pc"), star_bins)
+            # gas_array = np.array(gas_frb["gas", "density"])
 
             #     ram_ds,
             #     "z",
@@ -276,7 +288,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
             # )
 
             # gas_frb = gas.data_source.to_frb((plt_wdth, "pc"), star_bins)
-            gas_array = gas.T
+            gas_array = np.array(gas_frb[0].data)  # .T
 
             fig, ax = plt.subplots(
                 figsize=(7, 7),
@@ -286,11 +298,11 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
             draw_frame(gas=gas_array, luminosity=lums, ax=ax, fig=fig)
             output_path = os.path.join(
                 sequence_dir,
-                "testlowsfe_{}_{}.png".format(output_num_string, str(rot_idx).zfill(3)),
+                "lowsfe_{}_{}.png".format(output_num_string, str(rot_idx).zfill(3)),
             )
             plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
             # plt.close()
-
+    #%%
     lums, _, _ = np.histogram2d(
         x,
         y,
