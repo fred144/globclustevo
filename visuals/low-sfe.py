@@ -160,7 +160,11 @@ step = 1
 efficiency = 0.35
 sim_run = "fs035_ms10"
 # snap_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/{}".format(sim_run)
-snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+master_data_dir = (
+    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+)
+snap_dir = os.path.join(master_data_dir, sim_run)
+# snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
 pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
 snapshots = filter_snapshots(snap_dir, strt, end, 1)
@@ -217,10 +221,6 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
         for rot_idx, rotation_angle in enumerate(rotation_interval):
             print(rotation_angle)
             star_positions = stars[:, 3:6]
-            x_to_rotate = x
-            y_to_rotate_y = y
-            z_to_rotate_z = z
-
             # along (x,y,z) axis
             r = R.from_rotvec(rotation_angle * np.array([0, 1, 0]))
             rotation_matrix = r.as_matrix()
