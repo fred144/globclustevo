@@ -23,8 +23,8 @@ yt.enable_parallelism()
 
 
 # start 118,179
-f7_snap_range = (118, 1318)
-f3_snap_range = (154, 1499)
+f7_snap_range = (501, 1318)
+f3_snap_range = (656, 1499)
 # f7_snap_range = (500, 500)
 # f3_snap_range = (500, 500)
 master_data_dir = (
