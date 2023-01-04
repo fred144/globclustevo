@@ -174,12 +174,11 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
 # plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
 
 #%%
-strt = 499
-end = 500
+strt = 450
+end = 450
 step = 1
 efficiency = 0.35
 sim_run = "fs035_ms10"
-
 master_data_dir = (
     "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
 )
@@ -189,7 +188,7 @@ halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
 pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
 snapshots = filter_snapshots(snap_dir, strt, end, 1)
 
-sequence_dir = "../rendering/gas_lum/{}/lowsfe".format(sim_run)
+sequence_dir = "../rendering/gas_lum/{}/lowsfe_static_00450".format(sim_run)
 if not os.path.exists(sequence_dir):
     print("# Creating new sequence directory", sequence_dir)
     os.makedirs(sequence_dir)
@@ -198,9 +197,9 @@ if not os.path.exists(sequence_dir):
 pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
 halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
 
-plt_wdth = 400
+static_plt_wdth = 460
 star_bins = 2000
-pxl_size = (plt_wdth / star_bins) ** 2  # pc
+pxl_size = (static_plt_wdth / star_bins) ** 2  # pc
 lum_range = (3e33, 3e36)  # (2e32, 5e35)
 gas_alpha = 0.5
 lum_alpha = 1
@@ -208,11 +207,23 @@ cell_fields, epf = ram_fields()
 cmap = cm.get_cmap("Set2")
 cmap = cmap(np.linspace(0, 1, 8))
 
-rotation_interval = np.linspace(0, 2, 20) * np.pi
+total_pan_frames = 800
+num_rots = 4
+rotation_interval = (
+    np.linspace(0, 2 * num_rots, total_pan_frames, endpoint=False) * np.pi
+)
+zoom_interval = np.concatenate(
+    [
+        static_plt_wdth * np.ones(int(total_pan_frames / 4)),
+        np.linspace(static_plt_wdth, 150, int(total_pan_frames / 4)),
+        150 * np.ones(int(total_pan_frames / 4)),
+        np.linspace(150, static_plt_wdth, int(total_pan_frames / 4)),
+    ]
+)
 pause_and_rotate = [
-    500,
+    450,
 ]
-
+#%%
 
 for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
     output_num_string = h_ds.split("/")[-1].split("_")[-1]
@@ -243,6 +254,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
         # reset the star positions every loop
         print("Rotating View")
         for rot_idx, rotation_angle in enumerate(rotation_interval):
+            plt_wdth = zoom_interval[rot_idx]
             star_positions = stars[:, 3:6]
             # along (x,y,z) axis
             r = R.from_rotvec(rotation_angle * np.array([0, 1, 0]))
@@ -321,8 +333,9 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
             )
             plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
             print(">Saved:", output_path)
-            # plt.close()
+            plt.close()
     else:
+        plt_wdth = static_plt_wdth
         lums, _, _ = np.histogram2d(
             x,
             y,
@@ -362,5 +375,6 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
             bbox_inches="tight",
             pad_inches=0.05,
         )
-        # plt.close("all")
+
         print(">Saved:", output_path)
+        plt.close()
