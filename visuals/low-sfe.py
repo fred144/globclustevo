@@ -174,18 +174,17 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
 # plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
 
 #%%
-
-strt = 500
+strt = 499
 end = 500
 step = 1
 efficiency = 0.35
 sim_run = "fs035_ms10"
 
-# master_data_dir = (
-#     "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
-# )
-# snap_dir = os.path.join(master_data_dir, sim_run)
-snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+master_data_dir = (
+    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+)
+snap_dir = os.path.join(master_data_dir, sim_run)
+# snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
 pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
 snapshots = filter_snapshots(snap_dir, strt, end, 1)
