@@ -23,60 +23,21 @@ plt.rcParams.update(
     {
         "font.family": "serif",
         "mathtext.fontset": "cm",
-        "xtick.labelsize": 8,
-        "ytick.labelsize": 8,
-        "font.size": 10,
+        "xtick.labelsize": 4,
+        "ytick.labelsize": 4,
+        "font.size": 6,
         "xtick.direction": "in",
         "ytick.direction": "in",
     }
 )
-
 plt.style.use("dark_background")
 
 
-#%%
-
-strt = 500
-end = 500
-step = 1
-efficiency = 0.35
-sim_run = "fs035_ms10"
-
-master_data_dir = (
-    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
-)
-snap_dir = os.path.join(master_data_dir, sim_run)
-# snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
-halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
-pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
-snapshots = filter_snapshots(snap_dir, strt, end, 1)
-
-sequence_dir = "../rendering/gas_lum/{}/lowsfe".format(sim_run)
-if not os.path.exists(sequence_dir):
-    print("# Creating new sequence directory", sequence_dir)
-    os.makedirs(sequence_dir)
-
-
-pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
-halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
-
-plt_wdth = 400
-star_bins = 2000
-pxl_size = (plt_wdth / star_bins) ** 2  # pc
-lum_range = (3e33, 3e36)  # (2e32, 5e35)
-gas_alpha = 0.5
-lum_alpha = 1
-cell_fields, epf = ram_fields()
-cmap = cm.get_cmap("Set2")
-cmap = cmap(np.linspace(0, 1, 8))
-
-rotation_interval = np.linspace(0, 2, 20) * np.pi
-pause_and_rotate = [
-    500,
-]
-
-
-def draw_frame(gas, luminosity, ax, fig):
+def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=2000):
+    lum_range = (3e33, 3e36)
+    pxl_size = (wdth / star_bins) ** 2
+    lum_alpha = 1
+    gas_alpha = 0.5
 
     # clean up edges
     ax.set_xticklabels([])
@@ -85,11 +46,11 @@ def draw_frame(gas, luminosity, ax, fig):
     ax.yaxis.set_ticks_position("none")
     # luminosity
     lum = ax.imshow(
-        lums / pxl_size,
+        luminosity / pxl_size,
         cmap="inferno",
         # interpolation="gaussian",
         origin="lower",
-        extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
+        extent=[-wdth / 2, wdth / 2, -wdth / 2, wdth / 2],
         norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
         alpha=lum_alpha,
     )
@@ -100,25 +61,25 @@ def draw_frame(gas, luminosity, ax, fig):
         cmap="cubehelix",
         interpolation="gaussian",
         origin="lower",
-        extent=[-plt_wdth / 2, plt_wdth / 2, -plt_wdth / 2, plt_wdth / 2],
+        extent=[-wdth / 2, wdth / 2, -wdth / 2, wdth / 2],
         norm=LogNorm(0.008, 0.32),
         alpha=gas_alpha,
     )
 
     # add scale
     scale = patches.Rectangle(
-        xy=(plt_wdth / 2 * 0.335, -plt_wdth / 2 * 1.08),
-        width=plt_wdth / 2 * 0.5,
-        height=0.03 * plt_wdth / 2,
+        xy=(wdth / 2 * 0.335, -wdth / 2 * 0.9),
+        width=wdth / 2 * 0.5,
+        height=0.03 * wdth / 2,
         linewidth=0,
         edgecolor="white",
         facecolor="white",
         clip_on=False,
     )
     ax.text(
-        plt_wdth / 2 * 0.6,
-        -plt_wdth / 2 * 1.12,
-        r"$\mathrm{{{:.0f}\:pc}}$".format(plt_wdth / 2 * 0.5),
+        wdth / 2 * 0.6,
+        -wdth / 2 * 0.95,
+        r"$\mathrm{{{:.0f}\:pc}}$".format(wdth / 2 * 0.5),
         ha="center",
         va="center",
         color="white",
@@ -128,27 +89,28 @@ def draw_frame(gas, luminosity, ax, fig):
     ax.add_patch(scale)
 
     # add the luminosity color bar
-    lum_cbar_ax = ax.inset_axes([0, -0.11, 0.6, 0.05])
+    lum_cbar_ax = ax.inset_axes([0.05, 0.10, 0.36, 0.026])
     lum_cbar = fig.colorbar(lum, cax=lum_cbar_ax, pad=-1, orientation="horizontal")
     lum_cbar.ax.xaxis.set_ticks_position("bottom")
     lum_cbar.ax.xaxis.set_label_position("bottom")
-    lum_cbar.ax.xaxis.set_tick_params(pad=-13)
+    lum_cbar.ax.xaxis.set_tick_params(pad=-7)
     lum_cbar_ax.set_title(
         r"$\mathrm{\log\:Surface\:Brightness},$"
+        # "\n"
         r"$\mathrm{\lambda = 1500 \: \AA \:}$"
         r"$\:\mathrm{\left(erg\:\:s^{-1}\:\AA^{-1}\:pc^{-2}\right)}$",
-        fontsize=10,
+        fontsize=6,
     )
     fig.canvas.draw()
     x_labels = [i.get_text().replace("10^", "") for i in lum_cbar_ax.get_xticklabels()]
     lum_cbar_ax.set_xticklabels(
         x_labels,
-        path_effects=[patheffects.withStroke(linewidth=1.2, foreground="black")],
+        path_effects=[patheffects.withStroke(linewidth=1, foreground="black")],
     )
     # add the gas color bar
-    gas_cbar_ax = ax.inset_axes([0, -0.18, 0.6, 0.05])
+    gas_cbar_ax = ax.inset_axes([0.05, 0.06, 0.36, 0.026])
     gas_cbar = fig.colorbar(gas, cax=gas_cbar_ax, pad=0, orientation="horizontal")
-    gas_cbar.ax.xaxis.set_tick_params(pad=-13)
+    gas_cbar.ax.xaxis.set_tick_params(pad=-7)
     gas_cbar.set_label(
         label=r"$\mathrm{\log\:Gas\:Density\:(g \: cm^{-2})}$",
         labelpad=1,
@@ -157,13 +119,13 @@ def draw_frame(gas, luminosity, ax, fig):
     x_labels = [i.get_text().replace("10^", "") for i in gas_cbar_ax.get_xticklabels()]
     gas_cbar_ax.set_xticklabels(
         x_labels,
-        path_effects=[patheffects.withStroke(linewidth=1.2, foreground="black")],
+        path_effects=[patheffects.withStroke(linewidth=1, foreground="black")],
     )
 
     # add time and redshift
     ax.text(
-        0.7,
-        -0.10,
+        0.05,
+        0.95,
         (
             "$\mathrm{{low-SFE\: (35 \%)}}$"
             "\n"
@@ -193,6 +155,58 @@ def draw_frame(gas, luminosity, ax, fig):
     # ax_inset = ax.inset_axes([0.03, 0.03, 0.15, 0.15])
     # misc_visuals.xy_ax_indicator(ax_inset)
     # ax_inset.set_alpha(0)
+
+
+fig, ax = plt.subplots(
+    figsize=(7, 7),
+    dpi=400,
+    facecolor=cm.Greys_r(0),
+)
+draw_frame(gas_array, lums, ax, fig, plt_wdth, t_myr, redshift)
+output_path = os.path.join(
+    sequence_dir,
+    "lowsfe_{}_{}.png".format(output_num_string, str(rot_idx).zfill(3)),
+)
+plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
+
+#%%
+
+strt = 500
+end = 500
+step = 1
+efficiency = 0.35
+sim_run = "fs035_ms10"
+
+# master_data_dir = (
+#     "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+# )
+# snap_dir = os.path.join(master_data_dir, sim_run)
+snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
+pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
+snapshots = filter_snapshots(snap_dir, strt, end, 1)
+
+sequence_dir = "../rendering/gas_lum/{}/lowsfe".format(sim_run)
+if not os.path.exists(sequence_dir):
+    print("# Creating new sequence directory", sequence_dir)
+    os.makedirs(sequence_dir)
+
+
+pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
+halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
+
+plt_wdth = 500
+star_bins = 2000
+pxl_size = (plt_wdth / star_bins) ** 2  # pc
+lum_range = (3e33, 3e36)  # (2e32, 5e35)
+gas_alpha = 0.5
+lum_alpha = 1
+cell_fields, epf = ram_fields()
+cmap = cm.get_cmap("Set2")
+cmap = cmap(np.linspace(0, 1, 8))
+
+rotation_interval = np.linspace(0, 2, 20) * np.pi
+pause_and_rotate = []
 
 
 for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
@@ -264,7 +278,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
                 fields=("gas", "density"),
                 center=code_ctr,
                 north_vector=np.array([0.0, 1.0, 0.0]),
-                width=(400, "pc"),
+                width=(plt_wdth, "pc"),
                 # resolution=2000,
             )
             # gas = yt.ProjectionPlot(
@@ -295,7 +309,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
                 dpi=400,
                 facecolor=cm.Greys_r(0),
             )
-            draw_frame(gas=gas_array, luminosity=lums, ax=ax, fig=fig)
+            draw_frame(gas_array, lums, ax, fig, plt_wdth, t_myr, redshift)
             output_path = os.path.join(
                 sequence_dir,
                 "lowsfe_{}_{}.png".format(output_num_string, str(rot_idx).zfill(3)),
@@ -330,7 +344,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
         dpi=400,
         facecolor=cm.Greys_r(0),
     )
-    draw_frame(gas_array, lums, ax, fig)
+    draw_frame(gas_array, lums, ax, fig, plt_wdth, t_myr, redshift)
 
     output_path = os.path.join(sequence_dir, "lowsfe_{}.png".format(output_num_string))
     # plt.show()
