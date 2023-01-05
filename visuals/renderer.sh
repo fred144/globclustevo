@@ -15,13 +15,16 @@ export LANG=en_US
 #module unload intel-mpi
 #module load gcc
 #module load openmpi
+module load python
+module load gcc
+module load openmpi
 source ~/scratch/master/bin/activate
 
 
 #SCRIPT="/lustre/fgarcia4/glob_clust_evo/visuals/fs070_gas_panel_projection.py"
-SCRIPT= "/scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/visuals/two_panel_sfr.py"
-cd /scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/visuals/
+SCRIPT= "/scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/visuals/low-sfe.py"
+#cd /scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/visuals/
 
 # number of cores specified above
 #mpirun python3 $SCRIPT  2>&1 
-mpirun python3 $SCRIPT  2>&1 
+mpirun $SCRIPT  2>&1 
