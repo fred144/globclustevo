@@ -253,14 +253,14 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
     if int(output_num_string) in pause_and_rotate:
         # reset the star positions every loop
         print("Rotating View")
-        for rot_idx, rotation_angle in enumerate(rotation_interval):
+        for rot_idx, rotation_angle in enumerate(rotation_interval[254:], start=253):
             plt_wdth = zoom_interval[rot_idx]
             star_positions = stars[:, 3:6]
             # along (x,y,z) axis
             r = R.from_rotvec(rotation_angle * np.array([0, 1, 0]))
             rotation_matrix = r.as_matrix()
-            rotation_vector = r.as_rotvec()
-            print("rotation vector", rotation_vector, "of", rotation_interval[-1])
+            # rotation_vector = r.as_rotvec()
+            print("rotation angle", rotation_angle, "of", rotation_interval[-1])
             # rotate stars
             rotated_star_positions = np.dot(star_positions, rotation_matrix)
             lums, _, _ = np.histogram2d(
