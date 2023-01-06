@@ -1,0 +1,3 @@
+Loading python/zen2/3.8.12
+  Loading requirement: matplotlib/3.4.3/zen2
+/var/spool/slurmd/job905100/slurm_script: line 19: /scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/visuals/low-sfe.py: Permission denied
