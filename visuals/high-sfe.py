@@ -58,7 +58,7 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
 
     # three panels gas density
     gas = ax.imshow(
-        gaussian_filter(gas_array, sigma=5),
+        gaussian_filter(gas_array, sigma=4),
         cmap="cubehelix",
         # interpolation="gaussian",
         origin="lower",
@@ -131,7 +131,7 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
         0.05,
         0.96,
         (
-            "$\mathrm{{low-SFE\: (35 \%)}}$"
+            "$\mathrm{{high-SFE\: (70 \%)}}$"
             "\n"
             r"$\mathrm{{t = {:.2f} \: Myr}}$"
             "\n"
@@ -174,38 +174,35 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
 # plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
 
 #%%
-strt = 450
-end = 450
+strt = 419
+end = 419
 step = 1
-efficiency = 0.35
-sim_run = "fs035_ms10"
-# master_data_dir = (
-#     "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
-# )
-# snap_dir = os.path.join(master_data_dir, sim_run)
-snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+# efficiency = 0.70
+sim_run = "fs07_refine"
+master_data_dir = (
+    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+)
+snap_dir = os.path.join(master_data_dir, sim_run)
+# snap_dir = os.path.relpath("../../cosm_test_data/fs07_refine/")
+
 halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
 pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
 snapshots = filter_snapshots(snap_dir, strt, end, 1)
-
-sequence_dir = "../rendering/gas_lum/{}/lowsfe_static_00450".format(sim_run)
+sequence_dir = "../rendering/gas_lum/{}/highsfe_static_00419".format(sim_run)
 if not os.path.exists(sequence_dir):
     print("# Creating new sequence directory", sequence_dir)
     os.makedirs(sequence_dir)
-
-
 pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
 halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
 
 static_plt_wdth = 460
+zoom_plt_wdth = 160
 star_bins = 2000
 pxl_size = (static_plt_wdth / star_bins) ** 2  # pc
 lum_range = (3e33, 3e36)  # (2e32, 5e35)
 gas_alpha = 0.5
 lum_alpha = 1
 cell_fields, epf = ram_fields()
-cmap = cm.get_cmap("Set2")
-cmap = cmap(np.linspace(0, 1, 8))
 
 total_pan_frames = 800
 num_rots = 4
@@ -214,14 +211,14 @@ rotation_interval = (
 )
 zoom_interval = np.concatenate(
     [
-        static_plt_wdth * np.ones(int(total_pan_frames / 4)),
-        np.linspace(static_plt_wdth, 150, int(total_pan_frames / 4)),
-        150 * np.ones(int(total_pan_frames / 4)),
-        np.linspace(150, static_plt_wdth, int(total_pan_frames / 4)),
+        zoom_plt_wdth * np.ones(int(total_pan_frames / 4)),
+        np.linspace(static_plt_wdth, zoom_plt_wdth, int(total_pan_frames / 4)),
+        zoom_plt_wdth * np.ones(int(total_pan_frames / 4)),
+        np.linspace(zoom_plt_wdth, static_plt_wdth, int(total_pan_frames / 4)),
     ]
 )
 pause_and_rotate = [
-    450,
+    419,
 ]
 #%%
 
@@ -263,6 +260,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
             rotation_matrix = r.as_matrix()
             # rotation_vector = r.as_rotvec()
             print("rotation angle", rotation_angle, "of", rotation_interval[-1])
+            print("frame", rot_idx, "of", 800)
             # rotate stars
             rotated_star_positions = np.dot(star_positions, rotation_matrix)
             lums, _, _ = np.histogram2d(
@@ -331,7 +329,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
             draw_frame(gas_array, lums, ax, fig, plt_wdth, t_myr, redshift)
             output_path = os.path.join(
                 sequence_dir,
-                "lowsfe_{}_{}.png".format(output_num_string, str(rot_idx).zfill(3)),
+                "highsfe_{}_{}.png".format(output_num_string, str(rot_idx).zfill(3)),
             )
             plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
             print(">Saved:", output_path)
@@ -368,7 +366,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
         draw_frame(gas_array, lums, ax, fig, plt_wdth, t_myr, redshift)
 
         output_path = os.path.join(
-            sequence_dir, "lowsfe_{}.png".format(output_num_string)
+            sequence_dir, "highsfe_{}.png".format(output_num_string)
         )
         # plt.show()
         plt.savefig(
