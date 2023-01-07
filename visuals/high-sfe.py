@@ -174,8 +174,8 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
 # plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
 
 #%%
-strt = 419
-end = 419
+strt = 471
+end = 471
 step = 1
 # efficiency = 0.70
 sim_run = "fs07_refine"
@@ -188,7 +188,7 @@ snap_dir = os.path.join(master_data_dir, sim_run)
 halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
 pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
 snapshots = filter_snapshots(snap_dir, strt, end, 1)
-sequence_dir = "../rendering/gas_lum/{}/highsfe_static_00419".format(sim_run)
+sequence_dir = "../rendering/gas_lum/{}/highsfe_static_00471".format(sim_run)
 if not os.path.exists(sequence_dir):
     print("# Creating new sequence directory", sequence_dir)
     os.makedirs(sequence_dir)
@@ -218,7 +218,7 @@ zoom_interval = np.concatenate(
     ]
 )
 pause_and_rotate = [
-    419,
+    471,
 ]
 #%%
 
