@@ -16,7 +16,7 @@ module load openmpi
 # activate py environment
 source ~/scratch/master/bin/activate
  
-SCRIPT="/scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/visuals/low-sfe.py"
+SCRIPT="/scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/visuals/high-sfe.py"
 # also tried
 # cd /scratch/zt1/project/ricotti-prj/user/fgarcia4/globclustevo/visuals/
 # SCRIPT = "./low-sfe.py"
