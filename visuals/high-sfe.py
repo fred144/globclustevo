@@ -58,7 +58,7 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
 
     # three panels gas density
     gas = ax.imshow(
-        gaussian_filter(gas_array, sigma=4),
+        gaussian_filter(gas_array, sigma=5),
         cmap="cubehelix",
         # interpolation="gaussian",
         origin="lower",
