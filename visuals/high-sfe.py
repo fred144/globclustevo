@@ -180,7 +180,7 @@ step = 1
 # efficiency = 0.70
 sim_run = "fs07_refine"
 master_data_dir = (
-    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+    "/scratch/zt1/project/ricotti-prj/user/fgarcia4/sim_data/cluster_evolution/"
 )
 snap_dir = os.path.join(master_data_dir, sim_run)
 # snap_dir = os.path.relpath("../../cosm_test_data/fs07_refine/")
