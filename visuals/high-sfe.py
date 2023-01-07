@@ -211,7 +211,7 @@ rotation_interval = (
 )
 zoom_interval = np.concatenate(
     [
-        zoom_plt_wdth * np.ones(int(total_pan_frames / 4)),
+        static_plt_wdth * np.ones(int(total_pan_frames / 4)),
         np.linspace(static_plt_wdth, zoom_plt_wdth, int(total_pan_frames / 4)),
         zoom_plt_wdth * np.ones(int(total_pan_frames / 4)),
         np.linspace(zoom_plt_wdth, static_plt_wdth, int(total_pan_frames / 4)),
