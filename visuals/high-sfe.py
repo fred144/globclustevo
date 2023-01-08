@@ -251,7 +251,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
         # reset the star positions every loop
         print("Rotating View")
         for rot_idx, (rotation_angle, plt_wdth) in enumerate(
-            zip(rotation_interval[242:], zoom_interval[242:]), start=242
+            zip(rotation_interval[479:], zoom_interval[479:]), start=479
         ):
             # plt_wdth = zoom_interval[rot_idx]
             star_positions = stars[:, 3:6]
