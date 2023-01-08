@@ -88,7 +88,7 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
         fontsize=8,
         alpha=0.8,
         # fontproperties=leg_font,
-        # fontsize=14,
+        # fontsize=14
     )
     ax.add_patch(scale)
 
@@ -251,7 +251,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
         # reset the star positions every loop
         print("Rotating View")
         for rot_idx, (rotation_angle, plt_wdth) in enumerate(
-            zip(rotation_interval[479:], zoom_interval[479:]), start=479
+            zip(rotation_interval[721:], zoom_interval[721:]), start=721
         ):
             # plt_wdth = zoom_interval[rot_idx]
             star_positions = stars[:, 3:6]
