@@ -174,21 +174,21 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
 # plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
 
 #%%
-strt = 450
-end = 450
+strt = 567
+end = 567
 step = 1
 efficiency = 0.35
 sim_run = "fs035_ms10"
-# master_data_dir = (
-#     "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
-# )
-# snap_dir = os.path.join(master_data_dir, sim_run)
-snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+master_data_dir = (
+    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+)
+snap_dir = os.path.join(master_data_dir, sim_run)
+# snap_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
 pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
 snapshots = filter_snapshots(snap_dir, strt, end, 1)
 
-sequence_dir = "../rendering/gas_lum/{}/lowsfe_static_00450".format(sim_run)
+sequence_dir = "../rendering/gas_lum/{}/lowsfe_butterfly".format(sim_run)
 if not os.path.exists(sequence_dir):
     print("# Creating new sequence directory", sequence_dir)
     os.makedirs(sequence_dir)
@@ -198,6 +198,7 @@ pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
 halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
 
 static_plt_wdth = 460
+zoom_plt_wdth = 160
 star_bins = 2000
 pxl_size = (static_plt_wdth / star_bins) ** 2  # pc
 lum_range = (3e33, 3e36)  # (2e32, 5e35)
@@ -215,13 +216,13 @@ rotation_interval = (
 zoom_interval = np.concatenate(
     [
         static_plt_wdth * np.ones(int(total_pan_frames / 4)),
-        np.linspace(static_plt_wdth, 150, int(total_pan_frames / 4)),
-        150 * np.ones(int(total_pan_frames / 4)),
-        np.linspace(150, static_plt_wdth, int(total_pan_frames / 4)),
+        np.linspace(static_plt_wdth, zoom_plt_wdth, int(total_pan_frames / 4)),
+        zoom_plt_wdth * np.ones(int(total_pan_frames / 4)),
+        np.linspace(zoom_plt_wdth, static_plt_wdth, int(total_pan_frames / 4)),
     ]
 )
 pause_and_rotate = [
-    450,
+    567,
 ]
 #%%
 
