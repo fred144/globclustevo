@@ -174,16 +174,16 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
 # plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
 
 #%%
-strt = 471
-end = 471
+strt = 500
+end = 500
 step = 1
 # efficiency = 0.70
 sim_run = "fs07_refine"
-master_data_dir = (
-    "/scratch/zt1/project/ricotti-prj/user/fgarcia4/sim_data/cluster_evolution/"
-)
-snap_dir = os.path.join(master_data_dir, sim_run)
-# snap_dir = os.path.relpath("../../cosm_test_data/fs07_refine/")
+# master_data_dir = (
+#     "/scratch/zt1/project/ricotti-prj/user/fgarcia4/sim_data/cluster_evolution/"
+# )
+# snap_dir = os.path.join(master_data_dir, sim_run)
+snap_dir = os.path.relpath("../../cosm_test_data/refine/")
 
 halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
 pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)

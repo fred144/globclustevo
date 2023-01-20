@@ -1,0 +1,22 @@
+2023-01-15 21:17:54,414 - spyder.plugins.ipythonconsole.utils.kernelspec - INFO - Kernel command: ['/home/fabg/cosmology/bin/python', '-m', 'spyder_kernels.console', '-f', '{connection_file}']
+2023-01-15 22:30:13,412 - traitlets - INFO - KernelRestarter: restarting kernel (1/5), keep random ports
+2023-01-15 22:30:14,082 - spyder.plugins.ipythonconsole.utils.kernelspec - INFO - Kernel command: ['/home/fabg/cosmology/bin/python', '-m', 'spyder_kernels.console', '-f', '{connection_file}']
+2023-01-15 22:30:14,568 - traitlets - WARNING - kernel restarted
+2023-01-15 23:01:36,744 - traitlets - INFO - KernelRestarter: restarting kernel (1/5), keep random ports
+2023-01-15 23:01:36,757 - spyder.plugins.ipythonconsole.utils.kernelspec - INFO - Kernel command: ['/home/fabg/cosmology/bin/python', '-m', 'spyder_kernels.console', '-f', '{connection_file}']
+2023-01-15 23:01:36,776 - traitlets - WARNING - kernel restarted
+2023-01-15 23:09:36,862 - traitlets - INFO - KernelRestarter: restarting kernel (1/5), keep random ports
+2023-01-15 23:09:37,472 - spyder.plugins.ipythonconsole.utils.kernelspec - INFO - Kernel command: ['/home/fabg/cosmology/bin/python', '-m', 'spyder_kernels.console', '-f', '{connection_file}']
+2023-01-15 23:09:37,694 - traitlets - WARNING - kernel restarted
+2023-01-15 23:18:52,850 - spyder.plugins.completion.providers.languageserver.provider - INFO - Shutting down LSP manager...
+2023-01-15 23:18:52,853 - spyder.plugins.completion.providers.languageserver.provider - INFO - Stopping LSP client for python...
+2023-01-15 23:18:52,854 - spyder.plugins.completion.providers.languageserver.client - INFO - Stopping python client...
+2023-01-18 21:28:16,712 - spyder.plugins.ipythonconsole.utils.kernelspec - INFO - Kernel command: ['/home/fabg/cosmology/bin/python', '-m', 'spyder_kernels.console', '-f', '{connection_file}']
+2023-01-18 21:38:25,419 - spyder.plugins.ipythonconsole.utils.kernelspec - INFO - Kernel command: ['/home/fabg/cosmology/bin/python', '-m', 'spyder_kernels.console', '-f', '{connection_file}']
+2023-01-18 23:16:06,822 - spyder.plugins.ipythonconsole.utils.kernelspec - INFO - Kernel command: ['/home/fabg/cosmology/bin/python', '-m', 'spyder_kernels.console', '-f', '{connection_file}']
+2023-01-18 23:16:06,883 - spyder.plugins.ipythonconsole.utils.kernelspec - INFO - Kernel command: ['/home/fabg/cosmology/bin/python', '-m', 'spyder_kernels.console', '-f', '{connection_file}']
+2023-01-18 23:16:06,934 - spyder.plugins.ipythonconsole.utils.kernelspec - INFO - Kernel command: ['/home/fabg/cosmology/bin/python', '-m', 'spyder_kernels.console', '-f', '{connection_file}']
+2023-01-18 23:16:06,950 - spyder.plugins.ipythonconsole.utils.kernelspec - INFO - Kernel command: ['/home/fabg/cosmology/bin/python', '-m', 'spyder_kernels.console', '-f', '{connection_file}']
+2023-01-18 23:48:58,360 - spyder.plugins.completion.providers.languageserver.provider - INFO - Shutting down LSP manager...
+2023-01-18 23:48:58,361 - spyder.plugins.completion.providers.languageserver.provider - INFO - Stopping LSP client for python...
+2023-01-18 23:48:58,361 - spyder.plugins.completion.providers.languageserver.client - INFO - Stopping python client...
