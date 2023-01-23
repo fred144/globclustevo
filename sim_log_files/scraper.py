@@ -92,7 +92,7 @@ def snap_shot_info(sim_output_abs_dir, save_path):
     np.savetxt(fname=save_path, X=np.atleast_2d(tot_masses), header=header)
 
 
-lustre = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution"
+lustre = "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
 
 for path, subdirs, files in os.walk(lustre):
     # path is lustre simulation run names, and output directories
