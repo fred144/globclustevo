@@ -123,12 +123,12 @@ cell_fields, epf = ram_fields()
 # norm = plt.Normalize(min(cvals), max(cvals))
 # tuples = list(zip(map(norm, cvals), cmapcolors))
 # star_cmap = mpl.colors.LinearSegmentedColormap.from_list("", tuples)
-star_cmap = "viridis"
-star_map = cm.get_cmap(star_cmap)
+
+star_map = cm.get_cmap("viridis")
 star_t_range = (355, 675)
 # .5 Myr intervals
 evenly_spaced_times = np.arange(star_t_range[0], star_t_range[1], 0.25)
-cmap = star_map(np.linspace(0, 1, evenly_spaced_times.size))
+star_cmap = star_map(np.linspace(0, 1, evenly_spaced_times.size))
 # dense_norm = (0.007, 0.35)
 temp_norm = (6e2, 6e4)
 
@@ -704,7 +704,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         norm=mpl.colors.Normalize(star_t_range[0], star_t_range[1]),
         # ticks = [340,405,470],
         orientation="horizontal",
-        cmap=star_cmap,
+        cmap="viridis"
     )
     star_cb.ax.xaxis.set_tick_params(pad=-9)
     star_cbar_ax.set_title(
