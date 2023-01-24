@@ -66,7 +66,7 @@ flux = zshifted_flux_jy(
     d_lum,
 )
 #%% construct what the galaxy would look like in the sky at a given redshift
-gal_size = ang_size(150, d_lum, z)
+gal_size = ang_size(200, d_lum, z)
 bins = 1000
 arsec_per_pixel = (2 * gal_size) / bins
 
@@ -118,7 +118,7 @@ hdu.writeto("new2.fits", overwrite=True)
 image_path = path.join("./new2.fits")
 # make a grid of the source plane, without lensing
 # techincally should be 0.0001
-scale = 0.005  # arsec per pixel in the image
+scale = 0.0001  # arsec per pixel in the image
 galaxy_image = al.Array2D.from_fits(file_path=image_path, pixel_scales=scale)
 source_plane_grid_2d = al.Grid2D.uniform(
     shape_native=galaxy_image.shape_native,
@@ -128,7 +128,7 @@ source_plane_grid_2d = al.Grid2D.uniform(
 # construct detector viewing plane
 # we can downsample the resolution to show realistic image detection.
 detector_arcsec_per_pxl = 0.01
-reco_image_fov = 2  # arcsec on one side
+reco_image_fov = 4  # arcsec on one side
 num_pix = int(reco_image_fov / detector_arcsec_per_pxl)
 image_plane_grid_2d = al.Grid2D.uniform(
     shape_native=(num_pix, num_pix),
@@ -138,7 +138,7 @@ image_plane_grid_2d = al.Grid2D.uniform(
 # available profiles, including DM pyautolens.readthedocs.io/en/latest/api/mass.html
 # =============================================================================
 lens = al.Galaxy(
-    redshift=0.5, mass=al.mp.IsothermalSph(centre=(0.0, 0.0), einstein_radius=0.1)
+    redshift=0.5, mass=al.mp.IsothermalSph(centre=(0.0, 0.0), einstein_radius=20)
 )
 # =============================================================================
 # source properties (the image loaded to be lensed)

@@ -25,17 +25,17 @@ yt.enable_parallelism()
 # start 118,179
 f7_snap_range = (1183, 1318)
 f3_snap_range = (1362, 1499)
-# f7_snap_range = (500, 500)
-# f3_snap_range = (500, 500)
-master_data_dir = (
-    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
-)
+f7_snap_range = (500, 500)
+f3_snap_range = (500, 500)
+# master_data_dir = (
+#     "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+# )
 
-fs070_dir = os.path.join(master_data_dir, "fs07_refine")
-fs035_dir = os.path.join(master_data_dir, "fs035_ms10")
+# fs070_dir = os.path.join(master_data_dir, "fs07_refine")
+# fs035_dir = os.path.join(master_data_dir, "fs035_ms10")
 
-# fs070_dir = os.path.relpath("../../cosm_test_data/refine")
-# fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+fs070_dir = os.path.relpath("../../cosm_test_data/refine")
+fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 
 fs070_snap_dir = filter_snapshots(
     fs070_dir,
@@ -229,6 +229,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
             )
             * 1e-5
         )
+
     # get the projected densities
     print("Integrating Gas")
     f7_gas = yt.ProjectionPlot(

@@ -24,26 +24,26 @@ from scipy.ndimage import gaussian_filter
 
 yt.enable_parallelism()
 
-f7_snap_range = (133, 1318)
-f3_snap_range = (179, 1499)
+# f7_snap_range = (133, 1318)
+# f3_snap_range = (179, 1499)
 
 # f7_snap_range = (924, 1318)
 # f3_snap_range = (1103, 1502)
-# f7_snap_range = (500, 500)
-# f3_snap_range = (500, 500)
+f7_snap_range = (500, 500)
+f3_snap_range = (500, 500)
 # f7_snap_range = (670, 671)
 # f3_snap_range = (837, 838)
 
 # fs070_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs07_refine"
 # fs035_dir = "/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/fs035_ms10"
 
-master_data_dir = "/scratch/dt2/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/"
+# master_data_dir = "/scratch/dt2/lustre/fgarcia4/ramses/dwarf/data/cluster_evolution/"
 
-fs070_dir = os.path.join(master_data_dir, "fs07_refine")
-fs035_dir = os.path.join(master_data_dir, "fs035_ms10")
+# fs070_dir = os.path.join(master_data_dir, "fs07_refine")
+# fs035_dir = os.path.join(master_data_dir, "fs035_ms10")
 
-# fs070_dir = os.path.relpath("../../cosm_test_data/refine")
-# fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+fs070_dir = os.path.relpath("../../cosm_test_data/refine")
+fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 
 fs070_snap_dir = filter_snapshots(
     fs070_dir,
@@ -139,11 +139,11 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     outnum_f7 = f7_gas.split("/")[-1].split("_")[-1]
     outnum_f3 = f3_gas.split("/")[-1].split("_")[-1]
     # z 9.8 and 9.3 filter
-    #print(int(outnum_f7))
-    if int(outnum_f7) != 939:
-        continue
-    else:
-        pass
+    # print(int(outnum_f7))
+    # if int(outnum_f7) != 939:
+    #     continue
+    # else:
+    #     pass
     # read ramses data
     print("Reading", f7_gas)
     print("Reading", f3_gas)
@@ -156,56 +156,56 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     )
     ad70 = f7_ram_ds.all_data()
 
-    print("70 percent: gas density, surface density ")
-    print(
-        "mean",
-        np.mean(ad70["gas", "density"].to("Msun/pc**3")),
-        np.mean(
-            ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
-            * ad70["gas", "mass"].to("Msun") ** (1 / 3)
-        ),
-    )
-    print(
-        "median",
-        np.median(ad70["gas", "density"].to("Msun/pc**3")),
-        np.median(
-            ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
-            * ad70["gas", "mass"].to("Msun") ** (1 / 3)
-        ),
-    )
-    print(
-        "max",
-        np.max(ad70["gas", "density"].to("Msun/pc**3")),
-        np.max(
-            ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
-            * ad70["gas", "mass"].to("Msun") ** (1 / 3)
-        ),
-    )
-    print(
-        "min",
-        np.min(ad70["gas", "density"].to("Msun/pc**3")),
-        np.min(
-            ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
-            * ad70["gas", "mass"].to("Msun") ** (1 / 3)
-        ),
-    )
-    print(
-        "std",
-        np.std(ad70["gas", "density"].to("Msun/pc**3")),
-        np.std(
-            ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
-            * ad70["gas", "mass"].to("Msun") ** (1 / 3)
-        ),
-    )
-    print(
-        "75 percentile",
-        np.percentile(ad70["gas", "density"].to("Msun/pc**3"), 75),
-        np.percentile(
-            ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
-            * ad70["gas", "mass"].to("Msun") ** (1 / 3),
-            75,
-        ),
-    )
+    # print("70 percent: gas density, surface density ")
+    # print(
+    #     "mean",
+    #     np.mean(ad70["gas", "density"].to("Msun/pc**3")),
+    #     np.mean(
+    #         ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+    #         * ad70["gas", "mass"].to("Msun") ** (1 / 3)
+    #     ),
+    # )
+    # print(
+    #     "median",
+    #     np.median(ad70["gas", "density"].to("Msun/pc**3")),
+    #     np.median(
+    #         ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+    #         * ad70["gas", "mass"].to("Msun") ** (1 / 3)
+    #     ),
+    # )
+    # print(
+    #     "max",
+    #     np.max(ad70["gas", "density"].to("Msun/pc**3")),
+    #     np.max(
+    #         ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+    #         * ad70["gas", "mass"].to("Msun") ** (1 / 3)
+    #     ),
+    # )
+    # print(
+    #     "min",
+    #     np.min(ad70["gas", "density"].to("Msun/pc**3")),
+    #     np.min(
+    #         ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+    #         * ad70["gas", "mass"].to("Msun") ** (1 / 3)
+    #     ),
+    # )
+    # print(
+    #     "std",
+    #     np.std(ad70["gas", "density"].to("Msun/pc**3")),
+    #     np.std(
+    #         ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+    #         * ad70["gas", "mass"].to("Msun") ** (1 / 3)
+    #     ),
+    # )
+    # print(
+    #     "75 percentile",
+    #     np.percentile(ad70["gas", "density"].to("Msun/pc**3"), 75),
+    #     np.percentile(
+    #         ad70["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+    #         * ad70["gas", "mass"].to("Msun") ** (1 / 3),
+    #         75,
+    #     ),
+    # )
 
     f3_ram_ds = yt.load(
         f3_info_file,
@@ -213,56 +213,56 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         # extra_particle_fields=epf,
     )
     ad35 = f3_ram_ds.all_data()
-    print("35 percent: gas density, surface density ")
-    print(
-        "mean",
-        np.mean(ad35["gas", "density"].to("Msun/pc**3")),
-        np.mean(
-            ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
-            * ad35["gas", "mass"].to("Msun") ** (1 / 3)
-        ),
-    )
-    print(
-        "median",
-        np.median(ad35["gas", "density"].to("Msun/pc**3")),
-        np.median(
-            ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
-            * ad35["gas", "mass"].to("Msun") ** (1 / 3)
-        ),
-    )
-    print(
-        "max",
-        np.max(ad35["gas", "density"].to("Msun/pc**3")),
-        np.max(
-            ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
-            * ad35["gas", "mass"].to("Msun") ** (1 / 3)
-        ),
-    )
-    print(
-        "min",
-        np.min(ad35["gas", "density"].to("Msun/pc**3")),
-        np.min(
-            ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
-            * ad35["gas", "mass"].to("Msun") ** (1 / 3)
-        ),
-    )
-    print(
-        "std",
-        np.std(ad35["gas", "density"].to("Msun/pc**3")),
-        np.std(
-            ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
-            * ad35["gas", "mass"].to("Msun") ** (1 / 3)
-        ),
-    )
-    print(
-        "75 percentile",
-        np.percentile(ad35["gas", "density"].to("Msun/pc**3"), 75),
-        np.percentile(
-            ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
-            * ad35["gas", "mass"].to("Msun") ** (1 / 3),
-            75,
-        ),
-    )
+    # print("35 percent: gas density, surface density ")
+    # print(
+    #     "mean",
+    #     np.mean(ad35["gas", "density"].to("Msun/pc**3")),
+    #     np.mean(
+    #         ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+    #         * ad35["gas", "mass"].to("Msun") ** (1 / 3)
+    #     ),
+    # )
+    # print(
+    #     "median",
+    #     np.median(ad35["gas", "density"].to("Msun/pc**3")),
+    #     np.median(
+    #         ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+    #         * ad35["gas", "mass"].to("Msun") ** (1 / 3)
+    #     ),
+    # )
+    # print(
+    #     "max",
+    #     np.max(ad35["gas", "density"].to("Msun/pc**3")),
+    #     np.max(
+    #         ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+    #         * ad35["gas", "mass"].to("Msun") ** (1 / 3)
+    #     ),
+    # )
+    # print(
+    #     "min",
+    #     np.min(ad35["gas", "density"].to("Msun/pc**3")),
+    #     np.min(
+    #         ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+    #         * ad35["gas", "mass"].to("Msun") ** (1 / 3)
+    #     ),
+    # )
+    # print(
+    #     "std",
+    #     np.std(ad35["gas", "density"].to("Msun/pc**3")),
+    #     np.std(
+    #         ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+    #         * ad35["gas", "mass"].to("Msun") ** (1 / 3)
+    #     ),
+    # )
+    # print(
+    #     "75 percentile",
+    #     np.percentile(ad35["gas", "density"].to("Msun/pc**3"), 75),
+    #     np.percentile(
+    #         ad35["gas", "density"].to("Msun/pc**3") ** (2 / 3)
+    #         * ad35["gas", "mass"].to("Msun") ** (1 / 3),
+    #         75,
+    #     ),
+    # )
     # post processed star data
     f7_code_ctr = np.loadtxt(fs070_pop2_f[m_i], max_rows=5)[2:5, 6]
     f7_t_myr = np.loadtxt(fs070_pop2_f[m_i], max_rows=2)[0, 6]
