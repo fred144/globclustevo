@@ -1,6 +1,6 @@
 import sys
 
-sys.path.insert(1, "/home/fgarcia4/.local/lib/python3.8/site-packages")
+
 sys.path.append("../")
 import numpy as np
 import os
@@ -8,6 +8,9 @@ import glob
 from modules.luminosity.lum_functions import lum_look_up_table
 from modules.match_t_sims import find_matching_time, get_snapshots
 from modules.macros import filter_snapshots
+from scipy.ndimage import gaussian_filter
+
+sys.path.insert(1, "/home/fgarcia4/.local/lib/python3.8/site-packages")
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
 import matplotlib.cm as cm
@@ -17,8 +20,6 @@ import misc_visuals
 import yt
 from modules.macros import filter_snapshots, ram_fields, t_myr_from_z, code_age_to_myr
 from mpl_toolkits.axes_grid1.inset_locator import mark_inset
-from scipy import interpolate
-from scipy.ndimage import gaussian_filter
 import matplotlib as mpl
 
 
