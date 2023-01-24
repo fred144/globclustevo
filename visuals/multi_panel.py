@@ -2,6 +2,8 @@ import sys
 
 
 sys.path.append("../")
+
+sys.path.insert(1, "/home/fgarcia4/.local/lib/python3.8/site-packages")
 import numpy as np
 import os
 import glob
@@ -10,7 +12,6 @@ from modules.match_t_sims import find_matching_time, get_snapshots
 from modules.macros import filter_snapshots
 from scipy.ndimage import gaussian_filter
 
-sys.path.insert(1, "/home/fgarcia4/.local/lib/python3.8/site-packages")
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
 import matplotlib.cm as cm
@@ -19,7 +20,7 @@ from matplotlib import colors
 import misc_visuals
 import yt
 from modules.macros import filter_snapshots, ram_fields, t_myr_from_z, code_age_to_myr
-from mpl_toolkits.axes_grid1.inset_locator import mark_inset
+# from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 import matplotlib as mpl
 
 
@@ -362,11 +363,11 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     f7_inset = ax.inset_axes([1.0, 0.4, 0.40, 0.40])
     f3_inset = ax1.inset_axes([-0.4, 0.4, 0.40, 0.40])
 
-    mark_inset(ax, f7_inset, loc1=2, loc2=2, edgecolor="white", alpha=0.1, lw=0.8)
-    mark_inset(ax1, f3_inset, loc1=1, loc2=1, edgecolor="white", alpha=0.1, lw=0.8)
+    # mark_inset(ax, f7_inset, loc1=2, loc2=2, edgecolor="white", alpha=0.1, lw=0.8)
+    # mark_inset(ax1, f3_inset, loc1=1, loc2=1, edgecolor="white", alpha=0.1, lw=0.8)
 
-    mark_inset(ax, f7_temp, loc1=3, loc2=3, edgecolor="white", alpha=0.1, lw=0.8)
-    mark_inset(ax1, f3_temp, loc1=4, loc2=4, edgecolor="white", alpha=0.1, lw=0.8)
+    # mark_inset(ax, f7_temp, loc1=3, loc2=3, edgecolor="white", alpha=0.1, lw=0.8)
+    # mark_inset(ax1, f3_temp, loc1=4, loc2=4, edgecolor="white", alpha=0.1, lw=0.8)
 
     # f7_inset.xaxis.set_ticks_position("none")
     # f7_inset.yaxis.set_ticks_position("none")
