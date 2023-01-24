@@ -1,5 +1,6 @@
 import sys
 
+sys.path.insert(1, "/home/fgarcia4/.local/lib/python3.8/site-packages")
 sys.path.append("../")
 import numpy as np
 import os
@@ -44,6 +45,9 @@ f3_snap_range = (154, 1502)
 # f7_snap_range = (500, 500)
 # f3_snap_range = (500, 500)
 
+# fs070_dir = os.path.relpath("../../cosm_test_data/refine")
+# fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+
 master_data_dir = (
     "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
 )
@@ -51,8 +55,6 @@ master_data_dir = (
 fs070_dir = os.path.join(master_data_dir, "fs07_refine")
 fs035_dir = os.path.join(master_data_dir, "fs035_ms10")
 
-# fs070_dir = os.path.relpath("../../cosm_test_data/refine")
-# fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 
 fs070_snap_dir = filter_snapshots(
     fs070_dir,
@@ -186,7 +188,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         f7_current_ages = f7_stars[:, 1]
         f3_current_ages = f3_stars[:, 1]
         f7_star_bes = f7_t_myr - f7_current_ages
-        f3_star_bes = f7_t_myr - f3_current_ages
+        f3_star_bes = f3_t_myr - f3_current_ages
         f7_rounded_times = np.round_(f7_current_ages, 1)
         f3_rounded_times = np.round_(f3_current_ages, 1)
         f7_unique_birth_times = np.unique(f7_rounded_times)
@@ -704,7 +706,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         norm=mpl.colors.Normalize(star_t_range[0], star_t_range[1]),
         # ticks = [340,405,470],
         orientation="horizontal",
-        cmap="viridis"
+        cmap="viridis",
     )
     star_cb.ax.xaxis.set_tick_params(pad=-9)
     star_cbar_ax.set_title(
