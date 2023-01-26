@@ -3,6 +3,7 @@ import sys
 
 sys.path.append("../")
 
+
 sys.path.insert(1, "/home/fgarcia4/.local/lib/python3.8/site-packages")
 import numpy as np
 import os
@@ -12,6 +13,7 @@ from modules.match_t_sims import find_matching_time, get_snapshots
 from modules.macros import filter_snapshots
 from scipy.ndimage import gaussian_filter
 
+
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
 import matplotlib.cm as cm
@@ -20,6 +22,7 @@ from matplotlib import colors
 import misc_visuals
 import yt
 from modules.macros import filter_snapshots, ram_fields, t_myr_from_z, code_age_to_myr
+
 # from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 import matplotlib as mpl
 
@@ -41,21 +44,21 @@ plt.rcParams.update(
 plt.style.use("dark_background")
 
 
-f7_snap_range = (118, 1318)
-f3_snap_range = (154, 1502)
+# f7_snap_range = (118, 1318)
+# f3_snap_range = (154, 1502)
 
-# f7_snap_range = (500, 500)
-# f3_snap_range = (500, 500)
+f7_snap_range = (500, 500)
+f3_snap_range = (500, 500)
 
-# fs070_dir = os.path.relpath("../../cosm_test_data/refine")
-# fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
+fs070_dir = os.path.relpath("../../cosm_test_data/refine")
+fs035_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 
-master_data_dir = (
-    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
-)
+# master_data_dir = (
+#     "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+# )
 
-fs070_dir = os.path.join(master_data_dir, "fs07_refine")
-fs035_dir = os.path.join(master_data_dir, "fs035_ms10")
+# fs070_dir = os.path.join(master_data_dir, "fs07_refine")
+# fs035_dir = os.path.join(master_data_dir, "fs035_ms10")
 
 
 fs070_snap_dir = filter_snapshots(
@@ -129,9 +132,9 @@ cell_fields, epf = ram_fields()
 # star_cmap = mpl.colors.LinearSegmentedColormap.from_list("", tuples)
 
 star_map = cm.get_cmap("viridis")
-star_t_range = (355, 675)
+star_t_range = (355, 662)
 # .5 Myr intervals
-evenly_spaced_times = np.arange(star_t_range[0], star_t_range[1], 0.25)
+evenly_spaced_times = np.arange(star_t_range[0], star_t_range[1], 0.5)
 star_cmap = star_map(np.linspace(0, 1, evenly_spaced_times.size))
 # dense_norm = (0.007, 0.35)
 temp_norm = (6e2, 6e4)
@@ -191,8 +194,8 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         f3_current_ages = f3_stars[:, 1]
         f7_star_bes = f7_t_myr - f7_current_ages
         f3_star_bes = f3_t_myr - f3_current_ages
-        f7_rounded_times = np.round_(f7_current_ages, 1)
-        f3_rounded_times = np.round_(f3_current_ages, 1)
+        f7_rounded_times = np.round_(f7_star_bes, 1)
+        f3_rounded_times = np.round_(f3_star_bes, 1)
         f7_unique_birth_times = np.unique(f7_rounded_times)
         f3_unique_birth_times = np.unique(f3_rounded_times)
     except:
@@ -275,8 +278,8 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
             * 1e-5
         )
 
-        f7_rounded_times = np.round_(f7_current_ages, 1)
-        f3_rounded_times = np.round_(f3_current_ages, 1)
+        f7_rounded_times = np.round_(f7_abs_birth_epochs, 1)
+        f3_rounded_times = np.round_(f3_abs_birth_epochs, 1)
         f7_unique_birth_times = np.unique(f7_rounded_times)
         f3_unique_birth_times = np.unique(f3_rounded_times)
 
@@ -647,7 +650,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         filtered_x = f7_x[mask]
         filtered_y = f7_y[mask]
         idx_of_nearest_c = np.argmin(np.abs(evenly_spaced_times - unique_age))
-        color = cmap[idx_of_nearest_c]
+        color = star_cmap[idx_of_nearest_c]
         color = color.reshape(1, -1)
         f7_temp.scatter(
             filtered_x,
@@ -663,7 +666,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         filtered_x = f3_x[mask]
         filtered_y = f3_y[mask]
         idx_of_nearest_c = np.argmin(np.abs(evenly_spaced_times - unique_age))
-        color = cmap[idx_of_nearest_c]
+        color = star_cmap[idx_of_nearest_c]
         color = color.reshape(1, -1)
         f3_temp.scatter(
             filtered_x,
