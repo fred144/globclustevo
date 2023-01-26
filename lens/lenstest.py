@@ -20,7 +20,7 @@ from scipy.interpolate import griddata
 sys.path.append("../")
 from modules.luminosity.lum_functions import lum_look_up_table
 
-
+#%%
 def lum_to_appmag_ab(lum, lum_dist, redshft):
     """
     Convert point luminosity to point absolute magnitude as detected
@@ -115,10 +115,10 @@ hdu.writeto("new2.fits", overwrite=True)
 #%% use pyAutolense
 
 # read in the fits file
-image_path = path.join("./new2.fits")
+image_path = path.join("./galaxy_image.fits")
 # make a grid of the source plane, without lensing
 # techincally should be 0.0001
-scale = 0.0001  # arsec per pixel in the image
+scale = 0.05  # arsec per pixel in the image
 galaxy_image = al.Array2D.from_fits(file_path=image_path, pixel_scales=scale)
 source_plane_grid_2d = al.Grid2D.uniform(
     shape_native=galaxy_image.shape_native,
@@ -128,7 +128,7 @@ source_plane_grid_2d = al.Grid2D.uniform(
 # construct detector viewing plane
 # we can downsample the resolution to show realistic image detection.
 detector_arcsec_per_pxl = 0.01
-reco_image_fov = 4  # arcsec on one side
+reco_image_fov = 2  # arcsec on one side
 num_pix = int(reco_image_fov / detector_arcsec_per_pxl)
 image_plane_grid_2d = al.Grid2D.uniform(
     shape_native=(num_pix, num_pix),
@@ -137,8 +137,15 @@ image_plane_grid_2d = al.Grid2D.uniform(
 # galaxy doing the lensing
 # available profiles, including DM pyautolens.readthedocs.io/en/latest/api/mass.html
 # =============================================================================
+# lens = al.Galaxy(
+#     redshift=0.5, mass=al.mp.IsothermalSph(centre=(0.0, 0.0), einstein_radius=20)
+# )
+
 lens = al.Galaxy(
-    redshift=0.5, mass=al.mp.IsothermalSph(centre=(0.0, 0.0), einstein_radius=20)
+    redshift=0.566,
+    mass=al.mp.NFW(
+        centre=(0.0, 0.0), ell_comps=(-15, 15), kappa_s=3e12, scale_radius=6
+    ),
 )
 # =============================================================================
 # source properties (the image loaded to be lensed)
