@@ -14,15 +14,17 @@ import autolens.plot as aplt
 import autolens as al
 from astropy.io import fits
 from os import path
+import os
 from scipy.interpolate import griddata
+import matplotlib.patches as patches
 
 plt.rcParams.update(
     {
         "font.family": "serif",
         "mathtext.fontset": "cm",
-        "xtick.labelsize": 5.5,
-        "ytick.labelsize": 5.5,
-        "font.size": 7,
+        "xtick.labelsize": 7,
+        "ytick.labelsize": 7,
+        "font.size": 8,
         "xtick.direction": "in",
         "ytick.direction": "in",
         "ytick.right": True,
@@ -189,12 +191,13 @@ lensed_image = al.Array2D.no_mask(
 # array_2d_plotter = aplt.Array2DPlotter(array=lensed_image)
 # array_2d_plotter.figure_2d()
 #%%
-fig, ax = plt.subplots(1, 2, figsize=(8, 4), dpi=200)
+fig, ax = plt.subplots(1, 2, figsize=(9, 4.5), dpi=400)
 
 transform = np.reshape(
     lensed_image, (-1, int(reco_image_fov / detector_arcsec_per_pxl))
 )
-
+low_scale = -2.5
+high_scale = 2.5
 # transform=transform[1000:,1000:]
 
 # im = ax[0].imshow(
@@ -215,7 +218,7 @@ im = ax[1].imshow(
         where=(transform != 0),
         out=np.full_like(transform, -15),
     )
-    + 6,
+    + 9,
     extent=[
         -reco_image_fov / 2,
         reco_image_fov / 2,
@@ -223,12 +226,11 @@ im = ax[1].imshow(
         reco_image_fov / 2,
     ],
     cmap="inferno",
-    vmin=-5,
-    vmax=-1,
+    vmin=low_scale,
+    vmax=high_scale,
 )
-fig.colorbar(im, ax=ax, label="log Flux [$\mu$Jy]")
 # ax[1].set(xlabel='arcsec ({:.2f} " / pixel)'.format(detector_arcsec_per_pxl), ylabel="arcsec")
-ax[1].set(xlabel="arcsec", ylabel="arcsec")
+# ax[1].set(xlabel="arcsec", ylabel="arcsec")
 ax[1].set_facecolor("black")
 # ax[1].set(
 #     xlabel='arcsec ({:.2f} " / pixel)'.format(detector_arcsec_per_pxl), ylabel="arcsec"
@@ -244,7 +246,7 @@ im = ax[0].imshow(
         where=(transform1 != 0),
         out=np.full_like(transform1, -15),
     )
-    + 6,
+    + 9,
     extent=[
         -source_fov / 2,
         source_fov / 2,
@@ -252,11 +254,84 @@ im = ax[0].imshow(
         source_fov / 2,
     ],
     cmap="inferno",
-    vmin=-5,
-    vmax=-1,
+    vmin=low_scale,
+    vmax=high_scale,
 )
 
-ax[0].set(xlabel="arcsec", ylabel="arcsec")
+# ax[0].set(xlabel="arcsec", ylabel="arcsec")
 ax[0].set_facecolor("black")
 
-plt.show()
+lum_cbar_ax = ax[0].inset_axes([0.08, 0.08, 0.5, 0.05])
+lum_cbar = fig.colorbar(im, cax=lum_cbar_ax, pad=0, orientation="horizontal")
+lum_cbar.ax.xaxis.set_tick_params(pad=3)
+lum_cbar_ax.set_title(
+    r"$\mathrm{\log_{10}\:Flux\:Pixel^{-1}\:(nJy)}$",
+    fontsize=8,
+    pad=5,
+)
+# add some scale bar
+scalebar = patches.Rectangle(
+    xy=(-0.2, 0.2),
+    width=0.1,
+    height=0.005,
+    linewidth=0,
+    edgecolor="white",
+    facecolor="white",
+)
+ax[0].text(
+    -0.15,
+    0.22,
+    r"$\mathrm{{0.1\:arcsec}}}$",
+    ha="center",
+    va="center",
+    color="white",
+    # fontproperties=leg_font,
+)
+ax[0].text(
+    -0.15,
+    0.18,
+    r"$\mathrm{{{:.0f}\:pixels}}$".format(transform1.shape[0] * (0.1 / source_fov)),
+    ha="center",
+    va="center",
+    color="white",
+    # fontproperties=leg_font,
+)
+ax[0].add_patch(scalebar)
+
+# lensed image scale bar
+scalebar = patches.Rectangle(
+    xy=(-0.75, 0.78),
+    width=0.5,
+    height=0.020,
+    linewidth=0,
+    edgecolor="white",
+    facecolor="white",
+)
+ax[1].text(
+    -0.5,
+    0.85,
+    r"$\mathrm{{0.5\:arcsec}}}$",
+    ha="center",
+    va="center",
+    color="white",
+)
+ax[1].text(
+    -0.5,
+    0.72,
+    r"$\mathrm{{{:.0f}\:pixels}}$".format(transform.shape[0] * (0.5 / reco_image_fov)),
+    ha="center",
+    va="center",
+    color="white",
+)
+ax[1].add_patch(scalebar)
+ax[1].set_xticklabels([])
+ax[1].set_yticklabels([])
+ax[0].set_xticklabels([])
+ax[0].set_yticklabels([])
+fig.subplots_adjust(wspace=-0.01, hspace=0)
+plt.savefig(
+    os.path.expanduser("./lensed_and_source"),
+    dpi=400,
+    bbox_inches="tight",
+    pad_inches=0.05,
+)
