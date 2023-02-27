@@ -121,21 +121,22 @@ star_bins = 2000
 pxl_size = (plt_wdth / star_bins) ** 2  # pc
 lum_range = (2e33, 3e36)  # (2e32, 5e35)
 gas_range = (0.008, 0.30)
+star_t_range = (355, 662)
 gas_alpha = 0.5
 lum_alpha = 1
 cell_fields, epf = ram_fields()
 
-# cvals = [0.5, 1.7, 1.9, 2.1, 2.75, 4]
-# cmapcolors = ["crimson", "magenta", "hotpink", "gold", "lime", "cyan"]
-# norm = plt.Normalize(min(cvals), max(cvals))
-# tuples = list(zip(map(norm, cvals), cmapcolors))
-# star_cmap = mpl.colors.LinearSegmentedColormap.from_list("", tuples)
+cvals = [0.5, 1.7, 1.9, 2.1, 2.75, 4]
+cmapcolors = ["crimson", "magenta", "hotpink", "gold", "lime", "cyan"]
+norm = plt.Normalize(min(cvals), max(cvals))
+tuples = list(zip(map(norm, cvals), cmapcolors))
+star_cmap = mpl.colors.LinearSegmentedColormap.from_list("", tuples)
 
-star_map = cm.get_cmap("viridis")
-star_t_range = (355, 662)
+# star_map = cm.get_cmap("viridis")
+
 # .5 Myr intervals
 evenly_spaced_times = np.arange(star_t_range[0], star_t_range[1], 0.5)
-star_cmap = star_map(np.linspace(0, 1, evenly_spaced_times.size))
+cmap = star_cmap(np.linspace(0, 1, evenly_spaced_times.size))
 # dense_norm = (0.007, 0.35)
 temp_norm = (6e2, 6e4)
 
@@ -650,7 +651,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         filtered_x = f7_x[mask]
         filtered_y = f7_y[mask]
         idx_of_nearest_c = np.argmin(np.abs(evenly_spaced_times - unique_age))
-        color = star_cmap[idx_of_nearest_c]
+        color = cmap[idx_of_nearest_c]
         color = color.reshape(1, -1)
         f7_temp.scatter(
             filtered_x,
@@ -666,7 +667,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         filtered_x = f3_x[mask]
         filtered_y = f3_y[mask]
         idx_of_nearest_c = np.argmin(np.abs(evenly_spaced_times - unique_age))
-        color = star_cmap[idx_of_nearest_c]
+        color = cmap[idx_of_nearest_c]
         color = color.reshape(1, -1)
         f3_temp.scatter(
             filtered_x,
