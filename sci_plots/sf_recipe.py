@@ -65,7 +65,7 @@ redshift = float(post_ds.current_redshift)
 current_hubble = post_ds.hubble_constant
 #%%
 sfc_kazu_radii = np.abs(
-    post_ad.arr(post_ad["SFC", "particle_metallicity"], "code_length").to("pc")
+    pre_ds.arr(pre_ad["SFC", "particle_metallicity"], "code_length").to("pc")
 )
 
 sfc_ages = code_age_to_myr(
