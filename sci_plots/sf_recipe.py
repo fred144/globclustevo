@@ -168,7 +168,7 @@ lum = ax.imshow(
 )
 
 gas_im = ax.imshow(
-    gaussian_filter(gas_array, sigma=3),
+    gaussian_filter(gas_array, sigma=5),
     cmap="cubehelix",
     interpolation="gaussian",
     origin="lower",
@@ -283,7 +283,7 @@ sf_ax.text(
 )
 
 sf_ax.text(
-    0.60,
+    0.65,
     0.55,
     (r"$\mathrm{{r_{{MC}} }}$"),
     ha="left",
