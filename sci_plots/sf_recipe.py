@@ -12,7 +12,7 @@ from modules.luminosity.lum_functions import lum_look_up_table
 from modules.match_t_sims import find_matching_time, get_snapshots
 from modules.macros import filter_snapshots
 from scipy.ndimage import gaussian_filter
-
+from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
@@ -32,16 +32,27 @@ plt.rcParams.update(
     {
         "font.family": "serif",
         "mathtext.fontset": "cm",
-        "xtick.labelsize": 5.5,
-        "ytick.labelsize": 5.5,
-        "font.size": 7,
+        "xtick.labelsize": 8,
+        "ytick.labelsize": 8,
+        "font.size": 8,
         "xtick.direction": "in",
         "ytick.direction": "in",
         "ytick.right": True,
         "xtick.top": True,
     }
 )
+plt.style.use("dark_background")
+main_plt_width = (200, "pc")
+star_bins = 1000
+gas_alpha = 0.5
+pxl_size = (main_plt_width[0] / star_bins) ** 2
 
+lum_range = (3e33, 3e36)
+gas_range = (0.008, 0.6)
+
+lum_alpha = 1
+gas_alpha = 0.5
+#%%
 main_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 
 cell_fields, epf = ram_fields()
@@ -60,14 +71,236 @@ post_ds = yt.load(
 pre_ad = pre_ds.all_data()
 post_ad = post_ds.all_data()
 
+
 t_myr = float(post_ds.current_time.in_units("Myr"))
 redshift = float(post_ds.current_redshift)
 current_hubble = post_ds.hubble_constant
-#%%
+
 sfc_kazu_radii = np.abs(
-    pre_ds.arr(pre_ad["SFC", "particle_metallicity"], "code_length").to("pc")
+    post_ds.arr(post_ad["SFC", "particle_metallicity"], "code_length").to("pc")
 )
 
-sfc_ages = code_age_to_myr(
+sfc_rel_ages = code_age_to_myr(
     post_ad["SFC", "particle_birth_epoch"], current_hubble, unique_age=False
 )
+
+x_pop2 = post_ad["star", "particle_position_x"]
+y_pop2 = post_ad["star", "particle_position_y"]
+z_pop2 = post_ad["star", "particle_position_z"]
+
+youngest = np.argmax(sfc_rel_ages)
+sfc_code_ctr = np.array(
+    [
+        post_ad["SFC", "particle_position_x"][youngest],
+        post_ad["SFC", "particle_position_y"][youngest],
+        post_ad["SFC", "particle_position_z"][youngest],
+    ]
+)
+
+# center based on star position distribution
+x_center = np.mean(x_pop2.to("pc"))
+y_center = np.mean(y_pop2.to("pc"))
+z_center = np.mean(z_pop2.to("pc"))
+sfc_x = post_ds.arr(sfc_code_ctr[0], "code_length").to("pc")
+sfc_y = post_ds.arr(sfc_code_ctr[1], "code_length").to("pc")
+sfc_z = post_ds.arr(sfc_code_ctr[2], "code_length").to("pc")
+
+
+# find CoM of the cloud before sfc,
+sphere = pre_ds.sphere(sfc_code_ctr, (10, "pc"))
+# return CoM in code units
+pre_center = sphere.quantities.center_of_mass(use_gas=True).to("pc")
+
+
+#%% draw full frame
+
+gas = yt.ProjectionPlot(
+    pre_ds, "z", ("gas", "density"), width=main_plt_width, center=pre_center
+)
+gas_frb = gas.data_source.to_frb(main_plt_width, star_bins)
+gas_array = np.array(gas_frb["gas", "density"])
+
+#
+sf_gas = yt.ProjectionPlot(
+    post_ds, "z", ("gas", "density"), width=main_plt_width, center=sfc_code_ctr
+)
+sf_gas_frb = sf_gas.data_source.to_frb(main_plt_width, star_bins)
+sf_gas_array = np.array(sf_gas_frb["gas", "density"])
+
+
+pre_star_dir = "../halo_data/fs035_ms10/fof_best/info_00560"
+field_stars = np.loadtxt(os.path.join(pre_star_dir, "field_stars.txt"))
+bound_stars = np.loadtxt(os.path.join(pre_star_dir, "bound_stars.txt"))
+stars = np.vstack((field_stars, bound_stars))
+star_lums = stars[:, 2]
+# x = stars[:, 3] + float(x_center)
+# y = stars[:, 4] + float(y_center)
+
+# x = x - float(pre_center[0])
+# y = y - float(pre_center[1])
+lums, _, _ = np.histogram2d(
+    (pre_ad["star", "particle_position_x"] - pre_center[0]).to("pc"),
+    (pre_ad["star", "particle_position_y"] - pre_center[1]).to("pc"),
+    bins=star_bins,
+    weights=star_lums,
+    normed=False,
+    range=[
+        [-main_plt_width[0] / 2, main_plt_width[0] / 2],
+        [-main_plt_width[0] / 2, main_plt_width[0] / 2],
+    ],
+)
+lums = lums.T
+#%%
+
+fig, ax = plt.subplots(figsize=(4, 4), dpi=400)
+lum = ax.imshow(
+    lums / pxl_size,
+    cmap="inferno",
+    origin="lower",
+    extent=[
+        -main_plt_width[0] / 2,
+        main_plt_width[0] / 2,
+        -main_plt_width[0] / 2,
+        main_plt_width[0] / 2,
+    ],
+    norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
+    alpha=lum_alpha,
+)
+
+gas_im = ax.imshow(
+    gaussian_filter(gas_array, sigma=3),
+    cmap="cubehelix",
+    interpolation="gaussian",
+    origin="lower",
+    extent=[
+        -main_plt_width[0] / 2,
+        main_plt_width[0] / 2,
+        -main_plt_width[0] / 2,
+        main_plt_width[0] / 2,
+    ],
+    norm=LogNorm(gas_range[0], gas_range[1]),
+    alpha=gas_alpha,
+)
+
+zoom_ax = ax.inset_axes([1, 0.5, 0.5, 0.5])
+lum = zoom_ax.imshow(
+    lums / pxl_size,
+    cmap="inferno",
+    # interpolation="gaussian",
+    origin="lower",
+    extent=[
+        -main_plt_width[0] / 2,
+        main_plt_width[0] / 2,
+        -main_plt_width[0] / 2,
+        main_plt_width[0] / 2,
+    ],
+    norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
+    alpha=lum_alpha,
+)
+gas_im = zoom_ax.imshow(
+    gas_array,
+    cmap="cubehelix",
+    # interpolation="gaussian",
+    origin="lower",
+    extent=[
+        -main_plt_width[0] / 2,
+        main_plt_width[0] / 2,
+        -main_plt_width[0] / 2,
+        main_plt_width[0] / 2,
+    ],
+    norm=LogNorm(gas_range[0], gas_range[1]),
+    alpha=gas_alpha,
+)
+zoom_ax.set(xlim=(-10, 10), ylim=(-10, 10))
+mark_inset(ax, zoom_ax, loc1=2, loc2=2, edgecolor="white", alpha=0.5, lw=0.8, ls="--")
+
+sf_ax = zoom_ax.inset_axes([0, -1, 1, 1])
+sf_im = sf_ax.imshow(
+    sf_gas_array,
+    cmap="cubehelix",
+    # interpolation="gaussian",
+    origin="lower",
+    extent=[
+        -main_plt_width[0] / 2,
+        main_plt_width[0] / 2,
+        -main_plt_width[0] / 2,
+        main_plt_width[0] / 2,
+    ],
+    norm=LogNorm(gas_range[0], gas_range[1]),
+    alpha=gas_alpha,
+)
+sf_ax.scatter(x_pop2.to("pc") - sfc_x, y_pop2.to("pc") - sfc_y, color="tab:cyan", s=1)
+
+
+sf_ax.set(xlim=(-2.6, 2.6), ylim=(-2.6, 2.6))
+
+mark_inset(
+    zoom_ax, sf_ax, loc1=1, loc2=2, edgecolor="white", alpha=0.5, lw=0.8, ls="--"
+)
+
+zoom_ax.set_xticklabels([])
+zoom_ax.set_yticklabels([])
+sf_ax.set_xticklabels([])
+sf_ax.set_yticklabels([])
+ax.xaxis.set_ticks_position("none")
+ax.yaxis.set_ticks_position("none")
+ax.set_xticklabels([])
+ax.set_yticklabels([])
+# import numpy as np
+# import matplotlib.pyplot as plt
+# import matplotlib.animation as animation
+# fig, ax = plt.subplots()
+# ax.scatter([1,2, 1.5], [2, 1, 1.5])
+
+cir = plt.Circle((0, 0), float(sfc_kazu_radii[youngest]), color="white", fill=False)
+sf_ax.set_aspect("equal", adjustable="datalim")
+sf_ax.add_patch(cir)
+sf_ax.plot(
+    np.linspace(0, sfc_kazu_radii[youngest], 10), np.zeros(10), ls=":", color="white"
+)
+# sf_ax.scatter(0, 0, marker="+", color="red", alpha=1, lw=1)
+
+ax.text(
+    0.05,
+    0.95,
+    (r"$\mathrm{{t = {:.2f} \: Myr}}$" "\n" r"$\mathrm{{z = {:.2f} }}$").format(
+        float(pre_ds.current_time.in_units("Myr")), pre_ds.current_redshift
+    ),
+    ha="left",
+    va="top",
+    color="white",
+    transform=ax.transAxes,
+)
+
+sf_ax.text(
+    0.05,
+    0.95,
+    (r"$\mathrm{{t = {:.2f} \: Myr}}$").format(float(t_myr)),
+    ha="left",
+    va="top",
+    color="white",
+    transform=sf_ax.transAxes,
+)
+
+sf_ax.text(
+    0.60,
+    0.55,
+    (r"$\mathrm{{r_{{MC}} }}$"),
+    ha="left",
+    va="center",
+    color="white",
+    transform=sf_ax.transAxes,
+)
+
+# plt.show()
+# gas.annotate_particles(plt_wdth, ptype="star", p_size=15.0, marker="o", col="r")
+
+# gas.save(
+#     "test.jpg",
+#     mpl_kwargs={
+#         "bbox_inches": "tight",
+#         "dpi": 300,
+#         "pad_inches": 0.1
+#         # 'facecolor': 'black'
+#     },
+# )
