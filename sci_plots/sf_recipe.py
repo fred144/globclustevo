@@ -48,7 +48,7 @@ gas_alpha = 0.5
 pxl_size = (main_plt_width[0] / star_bins) ** 2
 
 lum_range = (3e33, 3e36)
-gas_range = (0.008, 0.6)
+gas_range = (0.008, 0.5)
 
 lum_alpha = 1
 gas_alpha = 0.5
@@ -197,6 +197,19 @@ lum = zoom_ax.imshow(
     norm=LogNorm(vmin=lum_range[0], vmax=lum_range[1]),
     alpha=lum_alpha,
 )
+ax.text(
+    0.05,
+    0.95,
+    (r"$\mathrm{{t = {:.1f} \: Myr}}$" "\n" r"$\mathrm{{z = {:.1f} }}$").format(
+        float(pre_ds.current_time.in_units("Myr")), pre_ds.current_redshift
+    ),
+    ha="left",
+    va="top",
+    color="white",
+    transform=ax.transAxes,
+)
+
+
 gas_im = zoom_ax.imshow(
     gas_array,
     cmap="cubehelix",
@@ -229,14 +242,91 @@ sf_im = sf_ax.imshow(
     norm=LogNorm(gas_range[0], gas_range[1]),
     alpha=gas_alpha,
 )
-sf_ax.scatter(x_pop2.to("pc") - sfc_x, y_pop2.to("pc") - sfc_y, color="tab:cyan", s=1)
-
-
+sf_ax.scatter(x_pop2.to("pc") - sfc_x, y_pop2.to("pc") - sfc_y, color="tab:cyan", s=0.5)
 sf_ax.set(xlim=(-2.6, 2.6), ylim=(-2.6, 2.6))
+scale = patches.Rectangle(
+    xy=(-2.6, -3.3),
+    width=5.2,
+    height=0.25,
+    linewidth=0,
+    edgecolor="white",
+    facecolor="white",
+)
+zoom_ax.text(
+    0,
+    -4.5,
+    r"$\mathrm{{5.2 \:pc}}$",
+    ha="center",
+    va="center",
+    color="white",
+    # fontproperties=leg_font,
+)
+zoom_ax.add_patch(scale)
 
 mark_inset(
     zoom_ax, sf_ax, loc1=1, loc2=2, edgecolor="white", alpha=0.5, lw=0.8, ls="--"
 )
+
+cir = plt.Circle((0, 0), float(sfc_kazu_radii[youngest]), color="white", fill=False)
+sf_ax.set_aspect("equal", adjustable="datalim")
+sf_ax.add_patch(cir)
+# sf_ax.plot(
+#     np.linspace(0, sfc_kazu_radii[youngest], 10), np.zeros(10), ls=":", color="white"
+# )
+sf_ax.arrow(
+    -float(sfc_kazu_radii[youngest]),
+    0,
+    float(sfc_kazu_radii[youngest]),
+    0,
+    lw=0.5,
+    color="white",
+    length_includes_head=True,
+    head_width=0.1,
+)
+
+sf_ax.arrow(
+    0,
+    0,
+    -float(sfc_kazu_radii[youngest]),
+    0,
+    lw=0.5,
+    color="white",
+    length_includes_head=True,
+    head_width=0.1,
+)
+sf_ax.text(
+    0.05,
+    0.95,
+    (r"$\mathrm{{t = {:.1f} \: Myr}}$").format(float(t_myr)),
+    ha="left",
+    va="top",
+    color="white",
+    transform=sf_ax.transAxes,
+)
+
+sf_ax.text(
+    0.28,
+    0.48,
+    (r"$\mathrm{{{:.1f} \: pc}}$").format(float(sfc_kazu_radii[youngest])),
+    ha="center",
+    va="top",
+    color="white",
+    transform=sf_ax.transAxes,
+)
+
+sf_ax.text(
+    0.28,
+    0.55,
+    (r"$\mathrm{{R_{{MC}} }}$"),
+    ha="center",
+    va="center",
+    color="white",
+    transform=sf_ax.transAxes,
+)
+gas_cbar_ax = ax.inset_axes([0.05, 0.08, 0.45, 0.04])
+gas_cbar = fig.colorbar(gas_im, cax=gas_cbar_ax, pad=0, orientation="horizontal")
+gas_cbar.ax.tick_params(labelsize=7)
+gas_cbar_ax.set_title(label=r"$\mathrm{Gas\:Density\:(g \: cm^{-2})}$", fontsize=8)
 
 zoom_ax.set_xticklabels([])
 zoom_ax.set_yticklabels([])
@@ -246,61 +336,10 @@ ax.xaxis.set_ticks_position("none")
 ax.yaxis.set_ticks_position("none")
 ax.set_xticklabels([])
 ax.set_yticklabels([])
-# import numpy as np
-# import matplotlib.pyplot as plt
-# import matplotlib.animation as animation
-# fig, ax = plt.subplots()
-# ax.scatter([1,2, 1.5], [2, 1, 1.5])
 
-cir = plt.Circle((0, 0), float(sfc_kazu_radii[youngest]), color="white", fill=False)
-sf_ax.set_aspect("equal", adjustable="datalim")
-sf_ax.add_patch(cir)
-sf_ax.plot(
-    np.linspace(0, sfc_kazu_radii[youngest], 10), np.zeros(10), ls=":", color="white"
+plt.savefig(
+    "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/sf_recipe.png",
+    dpi=300,
+    bbox_inches="tight",
+    pad_inches=0.0,
 )
-# sf_ax.scatter(0, 0, marker="+", color="red", alpha=1, lw=1)
-
-ax.text(
-    0.05,
-    0.95,
-    (r"$\mathrm{{t = {:.2f} \: Myr}}$" "\n" r"$\mathrm{{z = {:.2f} }}$").format(
-        float(pre_ds.current_time.in_units("Myr")), pre_ds.current_redshift
-    ),
-    ha="left",
-    va="top",
-    color="white",
-    transform=ax.transAxes,
-)
-
-sf_ax.text(
-    0.05,
-    0.95,
-    (r"$\mathrm{{t = {:.2f} \: Myr}}$").format(float(t_myr)),
-    ha="left",
-    va="top",
-    color="white",
-    transform=sf_ax.transAxes,
-)
-
-sf_ax.text(
-    0.65,
-    0.55,
-    (r"$\mathrm{{r_{{MC}} }}$"),
-    ha="left",
-    va="center",
-    color="white",
-    transform=sf_ax.transAxes,
-)
-
-# plt.show()
-# gas.annotate_particles(plt_wdth, ptype="star", p_size=15.0, marker="o", col="r")
-
-# gas.save(
-#     "test.jpg",
-#     mpl_kwargs={
-#         "bbox_inches": "tight",
-#         "dpi": 300,
-#         "pad_inches": 0.1
-#         # 'facecolor': 'black'
-#     },
-# )
