@@ -36,6 +36,7 @@ with open(sfc_file) as f:
 #%%
 import matplotlib.pyplot as plt
 
+plt.style.use("default")
 plt.rcParams.update(
     {
         "font.family": "serif",

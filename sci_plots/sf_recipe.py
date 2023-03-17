@@ -13,6 +13,7 @@ from modules.match_t_sims import find_matching_time, get_snapshots
 from modules.macros import filter_snapshots
 from scipy.ndimage import gaussian_filter
 from mpl_toolkits.axes_grid1.inset_locator import mark_inset
+import cmyt
 
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
@@ -169,7 +170,7 @@ lum = ax.imshow(
 
 gas_im = ax.imshow(
     gaussian_filter(gas_array, sigma=5),
-    cmap="cubehelix",
+    cmap="cmyt.dusk",
     interpolation="gaussian",
     origin="lower",
     extent=[
@@ -212,7 +213,7 @@ ax.text(
 
 gas_im = zoom_ax.imshow(
     gas_array,
-    cmap="cubehelix",
+    cmap="cmyt.dusk",
     # interpolation="gaussian",
     origin="lower",
     extent=[
@@ -230,7 +231,7 @@ mark_inset(ax, zoom_ax, loc1=2, loc2=2, edgecolor="white", alpha=0.5, lw=0.8, ls
 sf_ax = zoom_ax.inset_axes([0, -1, 1, 1])
 sf_im = sf_ax.imshow(
     sf_gas_array,
-    cmap="cubehelix",
+    cmap="cmyt.dusk",
     # interpolation="gaussian",
     origin="lower",
     extent=[
