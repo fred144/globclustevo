@@ -36,31 +36,31 @@ plt.rcParams.update(
         "mathtext.fontset": "cm",
         "xtick.labelsize": 5,
         "ytick.labelsize": 5,
-        "font.size": 6,
+        "font.size": 5,
         "xtick.direction": "in",
         "ytick.direction": "in",
         "ytick.right": True,
         "xtick.top": True,
-        "xtick.major.size": 0.2,
+        "xtick.major.size": 1,
     }
 )
 plt.style.use("dark_background")
 
 
 f7_snap_range = (113, 1318)
-f3_snap_range = (154, 1502)
+f3_snap_range = (500, 1502)
 
 # f7_snap_range = (113, 113)
 # f3_snap_range = (500, 500)
 # f7_dir = os.path.relpath("../../cosm_test_data/refine")
-# f3_dir = os.path.relpath("../../cosm_test_data/f3_ms10/")
+# f3_dir = os.path.relpath("../../cosm_test_data/fs035_ms10/")
 
 master_data_dir = (
     "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
 )
 
 f7_dir = os.path.join(master_data_dir, "fs07_refine")
-f3_dir = os.path.join(master_data_dir, "f3_ms10")
+f3_dir = os.path.join(master_data_dir, "fs035_ms10")
 
 f7_snap_dir = filter_snapshots(
     f7_dir,
@@ -79,7 +79,7 @@ f7_pop2_f = filter_snapshots(
     "../particle_data/pop_2_data/fs07_refine", f7_snap_range[0], f7_snap_range[1], 1
 )
 f3_pop2_f = filter_snapshots(
-    "../particle_data/pop_2_data/f3_ms10", f3_snap_range[0], f3_snap_range[1], 1
+    "../particle_data/pop_2_data/fs035_ms10", f3_snap_range[0], f3_snap_range[1], 1
 )
 f3_pop2_f, f3_matched_with_f7_nums, f7_nums = find_matching_time(
     sequence=f7_pop2_f, look_up_sequence=f3_pop2_f, orig_seq_out_num=True
@@ -100,7 +100,7 @@ f7_halo_f = get_snapshots(
 )
 f3_halo_f = get_snapshots(
     snapshot_file_list=filter_snapshots(
-        r"../halo_data/f3_ms10/fof_best", f3_snap_range[0], f3_snap_range[1], 1
+        r"../halo_data/fs035_ms10/fof_best", f3_snap_range[0], f3_snap_range[1], 1
     ),
     get_list=f3_nums,
 )
@@ -110,7 +110,7 @@ f3_snap_f = get_snapshots(f3_snap_dir, get_list=f3_nums)
 
 f7_series = np.loadtxt("../sci_plots/fof_time_series/fs07_refine_fof_best_113_1318.txt")
 f7_series = f7_series[f7_series[:, 3] > 30]
-f3_series = np.loadtxt("../sci_plots/fof_time_series/f3_ms10_fof_best_154_1502.txt")
+f3_series = np.loadtxt("../sci_plots/fof_time_series/fs035_ms10_fof_best_154_1502.txt")
 f3_series = f3_series[f3_series[:, 3] > 30]
 
 cmap = cm.get_cmap("Set2")
@@ -126,7 +126,7 @@ lum_alpha = 1
 cell_fields, epf = ram_fields()
 
 
-sequence_dir = "../rendering/gas_lum/dense_temp/high_sfe"
+sequence_dir = "../rendering/gas_lum/dense_temp/low_sfe"
 if not os.path.exists(sequence_dir):
     print("# Creating new sequence directory", sequence_dir)
     os.makedirs(sequence_dir)
@@ -258,21 +258,24 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     ncolors = 256
     gas_cmap_arr = plt.get_cmap("cubehelix")(range(ncolors))
     # dictate alphas manually
-    gas_cmap_arr[:120, -1] = np.linspace(0.0, 0.8, gas_cmap_arr[:120, -1].size)
-    gas_cmap_arr[120:, -1] = np.ones(gas_cmap_arr[120:, -1].size) * 0.8
+    # decide which part of the cmap is increasing in alpha
+    # the final transparencey is dictatted by
+    final_trans_gas = 0.65
+    gas_cmap_arr[:150, -1] = np.linspace(0.0, final_trans_gas, gas_cmap_arr[:150, -1].size)
+    gas_cmap_arr[150:, -1] = np.ones(gas_cmap_arr[150:, -1].size) * final_trans_gas
     gascmap = LinearSegmentedColormap.from_list(
         name="cubehelix_alpha", colors=gas_cmap_arr
     )
-
-    temp_cmap_arr = plt.get_cmap("cmyt.dusk")(range(ncolors))
-    temp_cmap_arr[:200, -1] = np.linspace(0.0, 0.8, temp_cmap_arr[:200, -1].size)
-    temp_cmap_arr[200:, -1] = np.ones(temp_cmap_arr[200:, -1].size) * 0.8
+    final_trans_tem = 0.65
+    temp_cmap_arr = plt.get_cmap("gnuplot2")(range(ncolors))
+    temp_cmap_arr[:200, -1] = np.linspace(0.0, final_trans_tem, temp_cmap_arr[:200, -1].size)
+    temp_cmap_arr[200:, -1] = np.ones(temp_cmap_arr[200:, -1].size) * final_trans_tem
     tempcmap = LinearSegmentedColormap.from_list(
         name="dusk_alpha", colors=temp_cmap_arr
     )
     # # register this new colormap with matplotlib
     # plt.colormaps.register(cmap=map_object)
-
+    
     fig, ax = plt.subplots(
         nrows=1,
         ncols=1,
@@ -344,7 +347,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     lum_cbar.ax.xaxis.set_tick_params(pad=2)
     lum_cbar.set_label(
         r"$\mathrm{\log\:UV\:SB}$" r"$\:\mathrm{\left(erg\:\:s^{-1}\:pc^{-2}\right)}$",
-        labelpad=-14,
+        labelpad=-15,
     )
 
     gas_cbar_ax = ax.inset_axes([0.35, 0.05, 0.30, 0.028], alpha=0.8)
@@ -359,7 +362,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     )
     gas_cbar.ax.xaxis.set_tick_params(pad=2)
     gas_cbar.set_label(
-        label=r"$\mathrm{\log\:Gas\:Density\:\left(g \: cm^{-2}\right)}$", labelpad=-14
+        label=r"$\mathrm{\log\:Gas\:Density\:\left(g \: cm^{-2}\right)}$", labelpad=-15
     )
 
     temp_cbar_ax = ax.inset_axes([0.65, 0.05, 0.30, 0.028], alpha=0.8)
@@ -373,7 +376,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         pad=0,
     )
     temp_cbar.ax.xaxis.set_tick_params(pad=2)
-    temp_cbar.set_label(label=r"$\mathrm{\log\:Gas\:Temperature\:(K)}$", labelpad=-14)
+    temp_cbar.set_label(label=r"$\mathrm{\log\:Gas\:Temperature\:(K)}$", labelpad=-15)
 
     # clean up edges
     ax.set(
@@ -421,7 +424,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     ax.text(
         0.95,
         0.95,
-        r"$\mathrm{high-SFE\:(70\%)}$",
+        r"$\mathrm{low-SFE\:(35\%)}$",
         ha="right",
         va="center",
         color="white",
@@ -432,8 +435,8 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
     ax.axis("off")
     output_path = os.path.join(
         sequence_dir,
-        "render_{}_{}_{}.png".format(
-            outnum_f3, outnum_f3, str(np.round(f3_redshift, 3)).replace(".", "_")
+        "render_{}_{}.png".format(
+            outnum_f3, str(np.round(f3_redshift, 3)).replace(".", "_")
         ),
     )
     plt.savefig(
