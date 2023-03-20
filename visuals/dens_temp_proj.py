@@ -47,7 +47,7 @@ plt.rcParams.update(
 plt.style.use("dark_background")
 
 
-f7_snap_range = (118, 1318)
+f7_snap_range = (113, 1365)
 f3_snap_range = (154, 1502)
 
 # f7_snap_range = (113, 113)
