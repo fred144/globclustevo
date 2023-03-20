@@ -114,6 +114,7 @@ def filter_snapshots(folder_path, start_snap: int, end_snap: int, sampling=1):
 
         return abs_paths
     except:
+        print(folder_path)
         print("!!!Either the start or end snapshot does not exist!!!")
 
 
