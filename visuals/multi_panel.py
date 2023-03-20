@@ -12,7 +12,7 @@ from modules.luminosity.lum_functions import lum_look_up_table
 from modules.match_t_sims import find_matching_time, get_snapshots
 from modules.macros import filter_snapshots
 from scipy.ndimage import gaussian_filter
-
+import cmyt
 
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
@@ -25,8 +25,14 @@ from modules.macros import filter_snapshots, ram_fields, t_myr_from_z, code_age_
 
 # from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 import matplotlib as mpl
+from matplotlib.colors import LinearSegmentedColormap
+
+lum_range = (2e33, 3e36)  # (2e32, 5e35)
+gas_range = (0.008, 0.30)
+temp_range = (6e3, 6e5)
 
 
+#%%
 yt.enable_parallelism()
 plt.rcParams.update(
     {
@@ -119,8 +125,7 @@ plt_wdth = 400
 
 star_bins = 2000
 pxl_size = (plt_wdth / star_bins) ** 2  # pc
-lum_range = (2e33, 3e36)  # (2e32, 5e35)
-gas_range = (0.008, 0.30)
+
 star_t_range = (355, 662)
 gas_alpha = 0.5
 lum_alpha = 1
@@ -138,7 +143,7 @@ star_cmap = mpl.colors.LinearSegmentedColormap.from_list("", tuples)
 evenly_spaced_times = np.arange(star_t_range[0], star_t_range[1], 0.5)
 cmap = star_cmap(np.linspace(0, 1, evenly_spaced_times.size))
 # dense_norm = (0.007, 0.35)
-temp_norm = (6e2, 6e4)
+
 
 sequence_dir = "../rendering/gas_lum/multi_panel"
 if not os.path.exists(sequence_dir):
@@ -346,7 +351,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
         ],
     )
     f3_lums = f3_lums.T
-    #%%
+
     inset_width = 80
     fig, ax = plt.subplots(
         nrows=1,
@@ -613,7 +618,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
             ),
             5,
         ),
-        cmap="gist_heat",
+        cmap="cmyt.dusk",
         origin="lower",
         extent=[
             -plt_wdth / 2,
@@ -633,7 +638,7 @@ for m_i, (f7_gas, f3_gas) in enumerate(zip(f7_snap_f, f3_snap_f)):
             ),
             5,
         ),
-        cmap="gist_heat",
+        cmap="cmyt.dusk",
         origin="lower",
         extent=[
             -plt_wdth / 2,
