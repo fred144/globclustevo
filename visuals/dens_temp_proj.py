@@ -48,7 +48,7 @@ plt.style.use("dark_background")
 
 
 f7_snap_range = (113, 1318)
-f3_snap_range = (500, 1502)
+f3_snap_range = (523, 1502)
 
 # f7_snap_range = (113, 113)
 # f3_snap_range = (500, 500)

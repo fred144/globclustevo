@@ -11,5 +11,66 @@ If you are not interested in CUDA-aware support, then run with
 in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
 of libcuda.so.1 to get passed this issue.
 --------------------------------------------------------------------------
-yt : [ERROR    ] 2023-01-02 00:58:29,499 Could not enable parallelism: only one mpi process is running. To remedy this, launch the Python interpreter as
+yt : [ERROR    ] 2023-03-20 15:50:46,895 Could not enable parallelism: only one mpi process is running. To remedy this, launch the Python interpreter as
   mpirun -n <X> python3 <yourscript>.py  # with X > 1 
+[login-2:2563802:0:2563802] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:2563802) ====
+ 0 0x0000000000012ce0 __funlockfile()  :0
+ 1 0x000000000008f775 __GI_fseek()  :0
+ 2 0x000000000000ab88 __pyx_f_2yt_9utilities_20cython_fortran_utils_11FortranFile_seek()  /project/yt/utilities/cython_fortran_utils.c:4700
+ 3 0x00000000000082d6 __pyx_pf_2yt_9utilities_20cython_fortran_utils_11FortranFile_16seek()  /project/yt/utilities/cython_fortran_utils.c:4822
+ 4 0x00000000000082d6 __pyx_pw_2yt_9utilities_20cython_fortran_utils_11FortranFile_17seek()  /project/yt/utilities/cython_fortran_utils.c:4802
+ 5 0x00000000000a9f3e method_vectorcall_VARARGS_KEYWORDS()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/descrobject.c:332
+ 6 0x0000000000071a9d _PyObject_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/./Include/cpython/abstract.h:127
+ 7 0x0000000000071a9d call_function()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:4963
+ 8 0x00000000000765b4 _PyEval_EvalFrameDefault()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:3486
+ 9 0x0000000000070731 function_code_fastcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:284
+10 0x00000000000a8ed5 _PyObject_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/./Include/cpython/abstract.h:127
+11 0x00000000000a8ed5 _PyObject_FastCall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/./Include/cpython/abstract.h:147
+12 0x00000000000a8ed5 property_descr_get()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/descrobject.c:1496
+13 0x00000000000eceed _PyObject_GenericGetAttrWithDict()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/object.c:1254
+14 0x00000000000740ce _PyEval_EvalFrameDefault()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:2966
+15 0x00000000000740ce _PyEval_EvalFrameDefault()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:2967
+16 0x0000000000070731 function_code_fastcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:284
+17 0x0000000000071a9d _PyObject_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/./Include/cpython/abstract.h:127
+18 0x0000000000071a9d call_function()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:4963
+19 0x00000000000765b4 _PyEval_EvalFrameDefault()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:3486
+20 0x000000000018897e _PyEval_EvalCodeWithName()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:4298
+21 0x000000000009f310 _PyFunction_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:436
+22 0x00000000000a1087 _PyObject_FastCallDict()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:96
+23 0x00000000000a11ad _PyObject_Call_Prepend()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:888
+24 0x000000000010b892 slot_tp_init()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/typeobject.c:6790
+25 0x000000000010b892 slot_tp_init()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/typeobject.c:6795
+26 0x0000000000101dc5 type_call()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/typeobject.c:994
+27 0x000000000009f580 _PyObject_MakeTpCall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:159
+28 0x0000000000071b23 _PyObject_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/./Include/cpython/abstract.h:125
+29 0x0000000000071b23 _PyObject_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/./Include/cpython/abstract.h:115
+30 0x0000000000071b23 call_function()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:4963
+31 0x0000000000075643 _PyEval_EvalFrameDefault()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:3500
+32 0x000000000018897e _PyEval_EvalCodeWithName()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:4298
+33 0x000000000009f310 _PyFunction_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:436
+34 0x0000000000071a9d _PyObject_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/./Include/cpython/abstract.h:127
+35 0x0000000000071a9d call_function()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:4963
+36 0x0000000000075643 _PyEval_EvalFrameDefault()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:3500
+37 0x000000000018897e _PyEval_EvalCodeWithName()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:4298
+38 0x000000000009f310 _PyFunction_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:436
+39 0x0000000000071a9d _PyObject_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/./Include/cpython/abstract.h:127
+40 0x0000000000071a9d call_function()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:4963
+41 0x00000000000765b4 _PyEval_EvalFrameDefault()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:3486
+42 0x0000000000070731 function_code_fastcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:284
+43 0x0000000000071a9d _PyObject_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/./Include/cpython/abstract.h:127
+44 0x0000000000071a9d call_function()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:4963
+45 0x00000000000765b4 _PyEval_EvalFrameDefault()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:3486
+46 0x0000000000070731 function_code_fastcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:284
+47 0x00000000000a2b02 _PyObject_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/./Include/cpython/abstract.h:127
+48 0x00000000000a2b02 method_vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/classobject.c:60
+49 0x0000000000071a9d _PyObject_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/./Include/cpython/abstract.h:127
+50 0x0000000000071a9d call_function()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:4963
+51 0x0000000000079855 _PyEval_EvalFrameDefault()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:3469
+52 0x000000000018897e _PyEval_EvalCodeWithName()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Python/ceval.c:4298
+53 0x000000000009f310 _PyFunction_Vectorcall()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:436
+54 0x00000000000a1015 _PyObject_FastCallDict()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:104
+55 0x00000000000a11ad _PyObject_Call_Prepend()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/call.c:888
+56 0x000000000010b892 slot_tp_init()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/typeobject.c:6790
+57 0x000000000010b892 slot_tp_init()  /tmp/devspackswinst/spack-stage/spack-stage-python-3.8.12-m4izbfupod72qgxj4xogsl2vmivojcew/spack-src/Objects/typeobject.c:6795
+=================================
