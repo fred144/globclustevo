@@ -138,7 +138,7 @@ with plt.rc_context(
         )
         * 100,
         c=np.log10(n_hydrogen_fs070),
-        label=r"0.70",
+        label=r"$f_{*} = 0.70 $",
         cmap=cmap,
         marker="o",
         edgecolors="black",
@@ -154,7 +154,7 @@ with plt.rc_context(
         )
         * 100,
         c=np.log10(n_hydrogen_fs035),
-        label=r"0.35",
+        label=r"$f_{*} = 0.35 $",
         cmap=cmap,
         marker="P",
         edgecolors="black",
@@ -203,10 +203,9 @@ with plt.rc_context(
     ax.tick_params(axis="y", direction="in", which="both")
     ax.tick_params(axis="x", direction="in", which="both")
     # manual legend, want to customize colors
-    f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"$0.70$")
-    f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"$0.35$")
+    f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"$f_{*} = 0.70 $")
+    f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"$f_{*} = 0.35 $")
     ax.legend(
-        title="$\mathrm{SFE} \: (f_{*})$",
         loc="lower right",
         title_fontsize=12,
         fontsize=12,

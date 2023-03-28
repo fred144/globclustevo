@@ -176,10 +176,10 @@ with plt.rc_context(
     ax.set_xlim(1e-4, 8e-3)
     ax.set_ylim(2e3, 5e4)
     # manual legend, want to customize colors
-    f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"$0.70$")
-    f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"$0.35$")
+    f70 = mlines.Line2D([], [], color="k", marker="o", ls="", label=r"$f_{*} = 0.70$")
+    f35 = mlines.Line2D([], [], color="k", marker="P", ls="", label=r"$f_{*} = 0.35$")
     ax.legend(
-        title="$\mathrm{SFE} \: (f_{*})$",
+        # title="$\mathrm{SFE} \: (f_{*})$",
         loc="upper right",
         title_fontsize=12,
         fontsize=12,
