@@ -103,10 +103,10 @@ def get_snapshots(snapshot_file_list, get_list, verbose=True):
     return filtered_lst
 
 
-fs070 = filter_snapshots("../particle_data/pop_2_data/fs07_refine", 113, 1000, 1)
-fs035 = filter_snapshots("../particle_data/pop_2_data/fs035_ms10", 154, 917, 1)
-_, f7_matched_nums = find_matching_time(fs035, fs070)
-f7_generic = get_snapshots(
-    filter_snapshots("../halo_data/fs07_refine/fof_best", 113, 917, 1),
-    f7_matched_nums,
-)
+# fs070 = filter_snapshots("../particle_data/pop_2_data/fs07_refine", 113, 1000, 1)
+# fs035 = filter_snapshots("../particle_data/pop_2_data/fs035_ms10", 154, 917, 1)
+# _, f7_matched_nums = find_matching_time(fs035, fs070)
+# f7_generic = get_snapshots(
+#     filter_snapshots("../halo_data/fs07_refine/fof_best", 113, 917, 1),
+#     f7_matched_nums,
+# )

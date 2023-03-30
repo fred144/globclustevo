@@ -763,5 +763,5 @@ plt.savefig(
     ),
     dpi=250,
     bbox_inches="tight",
-    pad_inches=0.05,
+    pad_inches=0.00,
 )
