@@ -723,7 +723,8 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             ls="-",
             label=r"$f_{*} = 0.70$",
             alpha=0.8,
-            markeredgewidth=0,
+            markeredgewidth=0.5,
+            markeredgecolor="k",
         )
         f35 = mlines.Line2D(
             [],
@@ -733,7 +734,8 @@ for sn, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
             ls="--",
             label=r"$f_{*} = 0.35$",
             alpha=0.8,
-            markeredgecolor="none",
+            markeredgewidth=0.5,
+            markeredgecolor="k",
         )
         sfe_legend = fig.legend(
             loc=(0.063, 0.55),

@@ -222,7 +222,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 # edgecolor="white",
                 alpha=1,
                 linewidth=1,
-                label=r"$0.35$",
+                label=r"$f_{{*}} = 0.35$",
                 density=True,
             )
 
@@ -235,7 +235,7 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
                 # edgecolor="white",
                 alpha=1,
                 linewidth=1,
-                label=r"$0.70$",
+                label=r"$f_{{*}} = 0.70$",
                 density=True,
             )
             if i == 2:
@@ -307,8 +307,8 @@ for i, (f7, f3) in enumerate(zip(f7_pro_ds, f3_pro_ds)):
         # ax[0].set_ylabel(r"$\mathrm{Number\:\:of\:\:BSCs}$")
 
         leg = ax[1].legend(
-            title="$\mathrm{{SFE}} \: (f_{{*}}), \mathrm{{t}} = {:.0f}$".format(
-                f3_t_myr
+            title="$z = {:.2f}, \mathrm{{t}} = {:.0f}$".format(
+                z_from_t_myr(f3_t_myr), f3_t_myr
             ),
             loc="upper center",
             ncol=2,

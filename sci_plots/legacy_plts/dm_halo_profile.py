@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append("..")
+sys.path.append("../../")
 from matplotlib import cm
 import matplotlib.pyplot as plt
 import numpy as np
@@ -22,20 +22,20 @@ def nav_fre_whi(r, rho_0, r_scale):
     return rho
 
 
-fs070 = filter_snapshots("../particle_data/pop_2_data/fs07_refine", 115, 1195, 1)
-fs035 = filter_snapshots("../particle_data/pop_2_data/fs035_ms10", 154, 1364, 1)
+fs070 = filter_snapshots("../../particle_data/pop_2_data/fs07_refine", 115, 1195, 1)
+fs035 = filter_snapshots("../../particle_data/pop_2_data/fs035_ms10", 154, 1364, 1)
 # find matching fs = 0.35 snapshots in terms of time to fs = 0.70
 # smaller goes fist
 # in general, use the simulation with more snapshots as a lookup table and match
 # the ones with less
 _, f7_matched_nums = find_matching_time(sequence=fs035, look_up_sequence=fs070)
 
-fs070_dat_dir = r"../dm/fs07_refine/dm_hop"
-fs035_dat_dir = r"../dm/fs035_ms10/dm_hop"
+fs070_dat_dir = r"../../../g_drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/dm/fs070/dm_hop"
+fs035_dat_dir = r"../../../g_drive/Research/AstrophysicsSimulation/DesktopEnvironment/data_globular_cluster/dm/fs035_ms10/dm_hop"
 
 samp_strt = 1
 samp_end = 200
-step = 10
+step = 200
 
 fs035_matched = filter_snapshots(fs035_dat_dir, 154, 1364, 1)[samp_strt:samp_end:step]
 fs070_matched = get_snapshots(
@@ -49,8 +49,8 @@ plt_rad = 2000  # pc
 pxl_size = (plt_rad * 2 / bins) ** 2
 profile_plot_bins = 25
 
-f3_series = np.loadtxt("../dm/fs035_ms10/dm_hop/fs035_dm_halo_evo.txt")
-f7_series = np.loadtxt("../dm/fs07_refine/dm_hop/fs070_dm_halo_evo.txt")
+f3_series = np.loadtxt("../dm_data/fs035_dm_halo_evo.txt")
+f7_series = np.loadtxt("../dm_data/fs070_dm_halo_evo.txt")
 eff = [0.35, 0.70]
 
 

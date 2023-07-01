@@ -10,13 +10,14 @@ from yt.funcs import mylog
 import warnings
 
 mylog.setLevel(40)
-warnings.simplefilter(action = "ignore", category = RuntimeWarning)
+warnings.simplefilter(action="ignore", category=RuntimeWarning)
+
 
 def snap_shot_info(sim_output_abs_dir, save_path):
     output_name = os.path.basename(os.path.normpath(sim_output_abs_dir))
     info_file_name = "info_" + output_name[7:] + ".txt"
-    
-    infofile = os.path.abspath(os.path.join(sim_output_abs_dir,info_file_name))
+
+    infofile = os.path.abspath(os.path.join(sim_output_abs_dir, info_file_name))
     print("# Reading in", infofile)
 
     # read fields explicitly, not recognized by YT from this ver of RAMSES
@@ -87,12 +88,14 @@ def snap_shot_info(sim_output_abs_dir, save_path):
         "latest_output:{} \t z \t\t SimTime[Myr] \t DM[Msun] \t pop2[Msun] \t pop3[Msun]"
         " \t SN[Msun] \t Dead[Msun] \t BH[Msun] \t Gas [Msun]"
     ).format(output_name[7:])
-    
-    save_path = os.path.join(save_path,"latest_sim_stats.txt")
+
+    save_path = os.path.join(save_path, "latest_sim_stats.txt")
     np.savetxt(fname=save_path, X=np.atleast_2d(tot_masses), header=header)
 
 
-lustre = "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+lustre = (
+    "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+)
 
 for path, subdirs, files in os.walk(lustre):
     # path is lustre simulation run names, and output directories
@@ -100,39 +103,34 @@ for path, subdirs, files in os.walk(lustre):
         # if it is a log file and not from old runs
         if "log" in file_name and "old" not in path:
             # full path to log files
-            full_path_to_files = os.path.join(path, file_name) 
-            
+            full_path_to_files = os.path.join(path, file_name)
+
             # get simulation run names; e.g., fs07_refine, fs035_ms10
             # last entry of directory abs path is the directory/ simulation run itself
             sim_name = os.path.basename(os.path.dirname(full_path_to_files))
             save_folder_name = "./" + sim_name
-            
+
             # folder for saving in the script directory
             if not os.path.exists(save_folder_name):
                 print("# Creating new directory:", save_folder_name)
                 os.makedirs(save_folder_name)
-            
-            # copy over the log file 
+
+            # copy over the log file
             shutil.copy(src=full_path_to_files, dst=save_folder_name)
 
             print("# Copied: ", full_path_to_files)
-            
-# get latest sim results 
+
+# get latest sim results
 sim_runs = [x for x in os.listdir(lustre) if "old" not in x]
 
-for simrun in sim_runs: 
-    sim_folder = os.path.join(lustre,  simrun) 
-    output_folders = sorted(os.listdir(sim_folder) )
+for simrun in sim_runs:
+    sim_folder = os.path.join(lustre, simrun)
+    output_folders = sorted(os.listdir(sim_folder))
     output_folders = [x for x in output_folders if "output_" in x]
-    latest_snapshots_abs_dir = os.path.join(sim_folder,output_folders[-1])
-    # get the run name 
+    latest_snapshots_abs_dir = os.path.join(sim_folder, output_folders[-1])
+    # get the run name
     run_name = os.path.split(os.path.split(latest_snapshots_abs_dir)[0])[1]
     # save path based on the simulation run name
     save_path = "./" + run_name
     print("# Saving latest results for", run_name)
     snap_shot_info(latest_snapshots_abs_dir, save_path)
-
-
-    
-
-    

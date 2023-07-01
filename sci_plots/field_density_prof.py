@@ -504,8 +504,8 @@ for eff_p2, eff_ds in zip(zip(fs070_p2, fs035_p2), zip(fs070_ds, fs035_ds)):
                         xscale="log",
                         xlim=(0.2, radius * 1.55),
                         ylim=(3e-1, 2.5e2),
-                        ylabel=r"$\mathrm{\log\; \Sigma (r) \:\:(M_{\odot}\:pc^{-2})}$",
-                        xlabel=r"$ \mathrm{\log\;  r \:(pc)}$",
+                        ylabel=r"$\mathrm{\log_{10}\; \Sigma (r) \:\:(M_{\odot}\:pc^{-2})}$",
+                        xlabel=r"$ \mathrm{\log_{10}\;  r \:(pc)}$",
                     )
 
                 col0_fit.set(

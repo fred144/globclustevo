@@ -283,6 +283,8 @@ with plt.rc_context(
         "xtick.labelsize": 10,
         "ytick.labelsize": 10,
         "font.size": 12,
+        "xtick.direction": "in",
+        "ytick.direction": "in",
     }
 ):
     cmap = cm.get_cmap("Set2")
@@ -328,18 +330,20 @@ with plt.rc_context(
     ax[0].plot(
         fs035_interp_points,
         np.log10(fs035_interp(fs035_interp_points)),
-        label=r"$0.35$",
+        label=r"$f_{*} = 0.35$",
         color=fs35_color,
         linewidth=4,
         alpha=0.8,
+        zorder=-3,
     )
     ax[0].plot(
         fs070_interp_points,
         np.log10(fs070_interp(fs070_interp_points)),
-        label=r"$0.70$",
+        label=r"$f_{*} = 0.70$",
         color=fs70_color,
         linewidth=4,
         alpha=0.8,
+        zorder=-3,
     )
 
     # fs035_interp = np.interp(
@@ -356,19 +360,23 @@ with plt.rc_context(
     # ax[0].scatter(fs070_interp_points, fs070_interp, label=r"0.70", s=1)
 
     # ax[0].set_yscale("log")
-    ax[0].set_ylabel(r"$\mathrm{\log\:M_{*}}\:(\mathrm{M}_{\odot})$ ", labelpad=20)
+    ax[0].set_ylabel(r"$\mathrm{\log_{10}\:M_{*}}\:(\mathrm{M}_{\odot})$ ", labelpad=20)
     ax[0].legend(
-        title="$\mathrm{SFE} \: (f_{*})$",
+        # title="$\mathrm{SFE} \: (f_{*})$",
         loc="lower right",
         fontsize=12,
     )
 
     # plot the star formation rates, or the derivatives of the lines
     sfr_fs035 = np.gradient(fs035_interp(fs035_interp_points)) / (bin_width_myr * 1e6)
-    ax[1].plot(fs035_interp_points, sfr_fs035, color=fs35_color, lw=1.5, alpha=0.8)
+    ax[1].plot(
+        fs035_interp_points, sfr_fs035, color=fs35_color, zorder=-3, lw=1.5, alpha=0.8
+    )
 
     sfr_fs07 = np.gradient(fs070_interp(fs070_interp_points)) / (bin_width_myr * 1e6)
-    ax[1].plot(fs070_interp_points, sfr_fs07, color=fs70_color, lw=1.5, alpha=0.8)
+    ax[1].plot(
+        fs070_interp_points, sfr_fs07, color=fs70_color, zorder=-3, lw=1.5, alpha=0.8
+    )
 
     ax[2].set_xlabel("$\mathrm{t } \:(\mathrm{Myr})$")
     ax[1].set_ylabel(
@@ -492,20 +500,20 @@ with plt.rc_context(
     #     # ls=":",
     # )
 
-    ax[2].set_xlim(right=t_myr_fs070.max())
+    ax[2].set_xlim(right=662)
     # ax[2].set_xlim(415, 450)
     # ax[2].set_yscale("log")
-    ax[2].set_ylabel(r"$\mathrm{\log (M_{*} / M_{halo})}$", labelpad=10)
+    ax[2].set_ylabel(r"$\mathrm{\log_{10} (M_{*} / M_{halo})}$   ", labelpad=11)
 
     # the limits are controlled by 0.70 efficiency
     # add a twin axis
-    plt.xlim(left=np.min(t_myr_fs070), right=np.max(t_myr_fs070))
+    plt.xlim(left=np.min(t_myr_fs070), right=662)
 
     ax1_twin = ax[0].twiny()
     ax1_twin.plot(
         fs070_interp_points,
         np.log10(fs070_interp(fs070_interp_points)),
-        # label=r"$0.70$",
+        label=r"$f_{*} = 0.70$",
         color="w",
         linewidth=0,
         alpha=0.8,
@@ -521,12 +529,12 @@ with plt.rc_context(
 
     ax1_twin.tick_params(axis="y", direction="in", which="both")
     ax1_twin.tick_params(axis="x", direction="in", which="both")
-    ax[0].tick_params(axis="y", direction="in", which="both")
-    ax[0].tick_params(axis="x", direction="in", which="both")
-    ax[1].tick_params(axis="y", direction="in", which="both")
-    ax[1].tick_params(axis="x", direction="in", which="both")
-    ax[2].tick_params(axis="y", direction="in", which="both")
-    ax[2].tick_params(axis="x", direction="in", which="both")
+    # ax[0].tick_params(axis="y", direction="in", which="both")
+    # ax[0].tick_params(axis="x", direction="in", which="both")
+    # ax[1].tick_params(axis="y", direction="in", which="both")
+    # ax[1].tick_params(axis="x", direction="in", which="both")
+    # ax[2].tick_params(axis="y", direction="in", which="both")
+    # ax[2].tick_params(axis="x", direction="in", which="both")
     plt.savefig(
         "../../g_drive/Research/AstrophysicsSimulation/sci_plots/final/lowres/sfc_sfr.png",
         dpi=300,

@@ -468,13 +468,10 @@ with plt.rc_context(
         alpha=0.8,
         color=fs35_color,
         label=r"$\mu = {:.2f}$".format(np.mean(r_pc_cloud_fs035)),
+        zorder=-3,
     )
     ax[2].fill_between(
-        bin_ctrs,
-        f3_count,
-        step="mid",
-        alpha=0.4,
-        color=fs35_color,
+        bin_ctrs, f3_count, step="mid", alpha=0.4, color=fs35_color, zorder=-3
     )
     ax[2].plot(
         bin_ctrs,
@@ -483,6 +480,7 @@ with plt.rc_context(
         linewidth=2.5,
         alpha=0.8,
         color=fs70_color,
+        zorder=-3,
         label=r"$\mu = {:.2f}$".format(np.mean(r_pc_cloud_fs070)),
     )
     ax[2].fill_between(
@@ -490,6 +488,7 @@ with plt.rc_context(
         f7_count,
         step="mid",
         alpha=0.4,
+        zorder=-3,
         color=fs70_color,
     )
     ax[2].set(

@@ -20,7 +20,7 @@ from scipy.interpolate import griddata
 sys.path.append("../")
 from modules.luminosity.lum_functions import lum_look_up_table
 
-#%%
+
 def lum_to_appmag_ab(lum, lum_dist, redshft):
     """
     Convert point luminosity to point absolute magnitude as detected
@@ -49,10 +49,10 @@ def zshifted_flux_jy(lum, lum_dis, wav_angs=1500):
 
 # let's grab the star cluster data
 particle_data = np.loadtxt(
-    "../particle_data/pop_2_data/fs07_refine/pos_00471_474_01_myr.txt"
+    "../particle_data/pop_2_data/fs035_ms10/pos_00445_435_49_myr.txt"
 )
-d_lum = 108591e6  # pc
-z = 10.25
+d_lum = 117103e6  # pc
+z = 10.9
 
 x_viewed = ang_size(particle_data[:, 2], d_lum, z)
 y_viewed = ang_size(particle_data[:, 3], d_lum, z)
@@ -65,7 +65,9 @@ flux = zshifted_flux_jy(
     ),
     d_lum,
 )
-#%% construct what the galaxy would look like in the sky at a given redshift
+
+
+# construct what the galaxy would look like in the sky at a given redshift
 gal_size = ang_size(200, d_lum, z)
 bins = 1000
 arsec_per_pixel = (2 * gal_size) / bins
@@ -82,6 +84,10 @@ lums, xedges, yedges = np.histogram2d(
     normed=False,
     range=[[-gal_size, gal_size], [-gal_size, gal_size]],
 )
+
+hdu = fits.PrimaryHDU(lums.T)
+hdu.writeto("./galaxy_image_lowsfe.fits", overwrite=True)
+#%%
 xcenters = (xedges[:-1] + xedges[1:]) / 2
 ycenters = (yedges[:-1] + yedges[1:]) / 2
 # plt.imshow()
@@ -110,12 +116,11 @@ fig.colorbar(a, ax=ax[1], label="log Flux Jansky")
 ax[0].set(xlabel='arcsec ({:.4f} " / pixel)'.format(arsec_per_pixel), ylabel="arcsec")
 ax[1].set(xlabel='arcsec ({:.4f} " / pixel)'.format(arsec_per_pixel), ylabel="arcsec")
 
-hdu = fits.PrimaryHDU(lums.T)
-hdu.writeto("new2.fits", overwrite=True)
+
 #%% use pyAutolense
 
 # read in the fits file
-image_path = path.join("./galaxy_image.fits")
+image_path = path.join("./galaxy_image_lowsfe.fits")
 # make a grid of the source plane, without lensing
 # techincally should be 0.0001
 scale = 0.05  # arsec per pixel in the image
@@ -149,7 +154,7 @@ lens = al.Galaxy(
 )
 # =============================================================================
 # source properties (the image loaded to be lensed)
-source = al.Galaxy(redshift=10.25)
+source = al.Galaxy(redshift=10.9)
 # run the ray tracing
 tracer = al.Tracer.from_galaxies(galaxies=[lens, source])
 traced_image_plane_grid_2d = tracer.traced_grid_2d_list_from(grid=image_plane_grid_2d)[

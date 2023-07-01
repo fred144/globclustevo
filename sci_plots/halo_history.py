@@ -146,8 +146,8 @@ with plt.rc_context(
     ax[0].set(
         # yscale="log",
         # xscale="log",
-        xlabel=r"$\mathrm{ \log \: M_{halo} \: \left( \: M_{\odot} \right) }$",
-        ylabel=r"$\mathrm{\log \: ( M_* / M_{halo} } )  $",
+        xlabel=r"$\mathrm{ \log_{10} \: M_{halo} \: \left( \: M_{\odot} \right) }$",
+        ylabel=r"$\mathrm{\log_{10} \: ( M_* / M_{halo} } )  $",
         xlim=(
             np.log10(f3_dm_mass.min()),
             np.log10(f3_dm_mass.max()),
@@ -170,7 +170,7 @@ with plt.rc_context(
     ax[1].invert_xaxis()
     ax[1].set(
         xlabel="$\mathrm{z}$",
-        ylabel=r"$\mathrm{\log \: M_{halo} \left( \: M_{\odot} \right)}$",
+        ylabel=r"$\mathrm{\log_{10} \: M_{halo} \left( \: M_{\odot} \right)}$",
         xlim=(
             z_from_t_myr(f7_time).max(),
             z_from_t_myr(f7_time).min(),
