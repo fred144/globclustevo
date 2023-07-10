@@ -300,6 +300,10 @@ with plt.style.context("dark_background"):
             "xtick.labelsize": 6,
             "ytick.labelsize": 6,
             "font.size": 7,
+            "xtick.direction": "in",
+            "ytick.direction": "in",
+            "ytick.right": True,
+            "xtick.top": True,
         }
     ):
         fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(4, 8), dpi=200)
@@ -759,5 +763,5 @@ plt.savefig(
     ),
     dpi=250,
     bbox_inches="tight",
-    pad_inches=0.05,
+    pad_inches=0.00,
 )

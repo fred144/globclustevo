@@ -18,6 +18,8 @@ import matplotlib.patheffects as patheffects
 from scipy.spatial.transform import Rotation as R
 from yt.visualization.volume_rendering.api import Scene
 from scipy.ndimage import gaussian_filter
+from modules.macros import filter_snapshots, ram_fields, t_myr_from_z, code_age_to_myr
+from modules.luminosity.lum_functions import lum_look_up_table
 
 yt.enable_parallelism()
 plt.rcParams.update(
@@ -88,7 +90,7 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
         fontsize=8,
         alpha=0.8,
         # fontproperties=leg_font,
-        # fontsize=14
+        # fontsize=14,
     )
     ax.add_patch(scale)
 
@@ -131,12 +133,13 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
         0.05,
         0.96,
         (
-            "$\mathrm{{high-SFE\: (70 \%)}}$"
+            "$\mathrm{{ \rm {}}}$"
             "\n"
             r"$\mathrm{{t = {:.2f} \: Myr}}$"
             "\n"
             r"$\mathrm{{z = {:.2f} }}$"
         ).format(
+            sim_run,
             t_myr,
             redshift,
         ),
@@ -177,23 +180,29 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
 strt = 500
 end = 500
 step = 1
-# efficiency = 0.70
-sim_run = "fs07_refine"
-# master_data_dir = (
-#     "/scratch/zt1/project/ricotti-prj/user/fgarcia4/sim_data/cluster_evolution/"
-# )
-# snap_dir = os.path.join(master_data_dir, sim_run)
-snap_dir = os.path.relpath("../../cosm_test_data/refine/")
-
-halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
-pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
+efficiency = 0.70
+# sim_run = "fs07_refine"
+sim_run = "CC-Fiducial"
+master_data_dir = (
+    "/scratch/zt1/project/ricotti-prj/user/ricotti/GC-Fred/"
+    # "/afs/shell.umd.edu/project/ricotti-prj/user/fgarcia4/dwarf/data/cluster_evolution/"
+)
+snap_dir = os.path.join(master_data_dir, sim_run)
+# snap_dir = os.path.relpath("../../cosm_test_data/refine/")
+# halo_data_directory = r"../halo_data/{}/fof_best".format(sim_run)
+# pop2_data_directory = r"../particle_data/pop_2_data/{}".format(sim_run)
 snapshots = filter_snapshots(snap_dir, strt, end, 1)
-sequence_dir = "../rendering/gas_lum/{}/highsfe_static_00471".format(sim_run)
+log_sfc = os.path.join(snap_dir, "logSFC")
+log_sfc = np.loadtxt(log_sfc)
+
+sequence_dir = "../rendering/gas_lum/{}/static".format(sim_run)
 if not os.path.exists(sequence_dir):
     print("# Creating new sequence directory", sequence_dir)
     os.makedirs(sequence_dir)
-pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
-halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
+
+
+# pop2 = filter_snapshots(pop2_data_directory, strt, end, step)
+# halo_ds = filter_snapshots(halo_data_directory, strt, end, step)
 
 static_plt_wdth = 460
 zoom_plt_wdth = 160
@@ -203,6 +212,8 @@ lum_range = (3e33, 3e36)  # (2e32, 5e35)
 gas_alpha = 0.5
 lum_alpha = 1
 cell_fields, epf = ram_fields()
+cmap = cm.get_cmap("Set2")
+cmap = cmap(np.linspace(0, 1, 8))
 
 total_pan_frames = 800
 num_rots = 4
@@ -218,35 +229,72 @@ zoom_interval = np.concatenate(
     ]
 )
 pause_and_rotate = [
-    471,
+    500,
 ]
 #%%
 
-for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
-    output_num_string = h_ds.split("/")[-1].split("_")[-1]
-    if int(output_num_string) == 1102:
-        continue
+for idx, sn in enumerate(snapshots):
+    output_num_string = sn.split("/")[-1].split("_")[-1]
+
     info_file = os.path.join(sn, "info_{}.txt".format(output_num_string))
     ram_ds = yt.load(info_file, fields=cell_fields, extra_particle_fields=epf)
 
     # here we will use post-processed particle data from the profiler,
     # in case we want luminosities too.
-    code_ctr = np.loadtxt(p2, max_rows=5)[2:5, 6]
-    t_myr = np.loadtxt(p2, max_rows=2)[0, 6]
-    redshift = np.loadtxt(p2, max_rows=2)[1, 6]
-    print(t_myr, redshift)
-    field_stars = np.loadtxt(os.path.join(h_ds, "field_stars.txt"))
-    bound_stars = np.loadtxt(os.path.join(h_ds, "bound_stars.txt"))
-    stars = np.vstack((field_stars, bound_stars))
-    star_ids = stars[:, 0]
-    star_lums = stars[:, 2]
-    star_masses = stars[:, 6]
-    star_ages = stars[:, 1]  # Myr
-    star_bes = t_myr - star_ages
-    x = stars[:, 3]
-    y = stars[:, 4]
-    z = stars[:, 5]
+    # code_ctr = np.loadtxt(p2, max_rows=5)[2:5, 6]
+    # t_myr = np.loadtxt(p2, max_rows=2)[0, 6]
+    # redshift = np.loadtxt(p2, max_rows=2)[1, 6]
+    # print(t_myr, redshift)
+    # field_stars = np.loadtxt(os.path.join(h_ds, "field_stars.txt"))
+    # bound_stars = np.loadtxt(os.path.join(h_ds, "bound_stars.txt"))
+    # stars = np.vstack((field_stars, bound_stars))
+    # star_ids = stars[:, 0]
+    # star_lums = stars[:, 2]
+    # star_masses = stars[:, 6]
+    # star_ages = stars[:, 1]  # Myr
+    # star_bes = t_myr - star_ages
+    # x = stars[:, 3]
+    # y = stars[:, 4]
+    # z = stars[:, 5]
+    current_hubble = ram_ds.hubble_constant
+    ad = ram_ds.all_data()
+    t_myr = float(ram_ds.current_time.in_units("Myr"))
+    redshift = float(ram_ds.current_redshift)
 
+    x_com = np.mean(ad["star", "particle_position_x"])
+    y_com = np.mean(ad["star", "particle_position_y"])
+    z_com = np.mean(ad["star", "particle_position_z"])
+
+    code_ctr = [x_com, y_com, z_com]
+
+    x = np.array((ad["star", "particle_position_x"] - x_com).to("pc"))
+    y = np.array((ad["star", "particle_position_y"] - y_com).to("pc"))
+    z = np.array((ad["star", "particle_position_z"] - z_com).to("pc"))
+    #%%
+    be_star = ad["star", "particle_birth_epoch"]
+    unique_birth_epochs = code_age_to_myr(
+        ad["star", "particle_birth_epoch"], current_hubble, unique_age=True
+    )
+
+    birth_start = np.round_(
+        float(ram_ds.cosmology.t_from_z(log_sfc[0, 2]).in_units("Myr")), 0
+    )
+    # all the birth epochs of the stars
+    converted_unfiltered = code_age_to_myr(
+        ad["star", "particle_birth_epoch"], current_hubble, unique_age=False
+    )
+    abs_birth_epochs = np.round(converted_unfiltered + birth_start, 3)  #!
+    current_ages = np.round(t_myr, 3) - np.round(abs_birth_epochs, 3)
+    star_lums = (
+        lum_look_up_table(
+            stellar_ages=current_ages,
+            table_link="../particle_data/luminosity_look_up_tables/l1500_inst_e.txt",
+            column_idx=1,
+            log=True,
+        )
+        * 1e-5
+    )
+    #%%
     if int(output_num_string) in pause_and_rotate:
         # reset the star positions every loop
         print("Rotating View")
@@ -254,13 +302,14 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
             zip(rotation_interval[0:], zoom_interval[0:]), start=0
         ):
             # plt_wdth = zoom_interval[rot_idx]
-            star_positions = stars[:, 3:6]
+
+            # star_positions = stars[:, 3:6]
+            star_positions = np.vstack((x, y, z)).T
             # along (x,y,z) axis
             r = R.from_rotvec(rotation_angle * np.array([0, 1, 0]))
             rotation_matrix = r.as_matrix()
             # rotation_vector = r.as_rotvec()
             print("rotation angle", rotation_angle, "of", rotation_interval[-1])
-            print("frame", rot_idx, "of", 800)
             # rotate stars
             rotated_star_positions = np.dot(star_positions, rotation_matrix)
             lums, _, _ = np.histogram2d(
@@ -329,7 +378,9 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
             draw_frame(gas_array, lums, ax, fig, plt_wdth, t_myr, redshift)
             output_path = os.path.join(
                 sequence_dir,
-                "highsfe_{}_{}.png".format(output_num_string, str(rot_idx).zfill(3)),
+                "{}_{}_{}.png".format(
+                    sim_run, output_num_string, str(rot_idx).zfill(3)
+                ),
             )
             plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
             print(">Saved:", output_path)
@@ -366,7 +417,7 @@ for idx, (sn, p2, h_ds) in enumerate(zip(snapshots, pop2, halo_ds)):
         draw_frame(gas_array, lums, ax, fig, plt_wdth, t_myr, redshift)
 
         output_path = os.path.join(
-            sequence_dir, "highsfe_{}.png".format(output_num_string)
+            sequence_dir, "lowsfe_{}.png".format(output_num_string)
         )
         # plt.show()
         plt.savefig(
