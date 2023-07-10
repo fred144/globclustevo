@@ -133,7 +133,7 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
         0.05,
         0.96,
         (
-            "$\mathrm{{ \rm {}}}$"
+            r"$\mathrm{{ \rm {}}}$"
             "\n"
             r"$\mathrm{{t = {:.2f} \: Myr}}$"
             "\n"
@@ -177,8 +177,8 @@ def draw_frame(gas_array, luminosity, ax, fig, wdth, t_myr, redshift, star_bins=
 # plt.savefig(output_path, dpi=300, bbox_inches="tight", pad_inches=0.05)
 
 #%%
-strt = 500
-end = 500
+strt = 323 
+end = 323
 step = 1
 efficiency = 0.70
 # sim_run = "fs07_refine"
@@ -229,7 +229,7 @@ zoom_interval = np.concatenate(
     ]
 )
 pause_and_rotate = [
-    500,
+    323,
 ]
 #%%
 
