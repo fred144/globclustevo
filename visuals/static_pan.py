@@ -299,7 +299,7 @@ for idx, sn in enumerate(snapshots):
         # reset the star positions every loop
         print("Rotating View")
         for rot_idx, (rotation_angle, plt_wdth) in enumerate(
-            zip(rotation_interval[245:], zoom_interval[245:]), start=245
+            zip(rotation_interval[728:], zoom_interval[728:]), start=728
         ):
             # plt_wdth = zoom_interval[rot_idx]
 
